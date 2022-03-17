@@ -38,40 +38,40 @@
             this.button1 = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.dropdownSystemManagement = new System.Windows.Forms.ToolStripMenuItem();
-            this.KiêmTratoolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolCheckEmployeeInformation = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator7 = new System.Windows.Forms.ToolStripSeparator();
-            this.cậpNhậtNhânViênToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolUpdateStaff = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.tạoTàiKhoảnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolCreateAccount = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.đổiMậtKhẩuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolChangePassword = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
-            this.đăngNhậpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.dropdownUpdate = new System.Windows.Forms.ToolStripMenuItem();
-            this.cậpNhậtSáchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cậpNhậtToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator8 = new System.Windows.Forms.ToolStripSeparator();
-            this.cậpNhậtTácGiảToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cậpNhậtLĩnhVựcToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cậpNhậtNhàXuấtBảnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
-            this.cậpNhậtThôngTinMượnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolLogin = new System.Windows.Forms.ToolStripMenuItem();
             this.dropdownInformation = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator11 = new System.Windows.Forms.ToolStripSeparator();
-            this.tácGiảToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.nhàXuấtBảnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.lĩnhVựcToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolAuthor = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolPublishingCompany = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolField = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator14 = new System.Windows.Forms.ToolStripSeparator();
-            this.sáchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.độcGiảToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolBook = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolReaders = new System.Windows.Forms.ToolStripMenuItem();
             this.dropdownSearch = new System.Windows.Forms.ToolStripMenuItem();
-            this.tìmKiếmSáchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolBookSearch = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
-            this.tìmKiếmĐGToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolRoadSearch = new System.Windows.Forms.ToolStripMenuItem();
+            this.dropdownUpdate = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolBookUpdates = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolUpdateReaders = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator8 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolAuthorUpdate = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolUpdateField = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolPublisherUpdate = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolUpdateBorrowingInformation = new System.Windows.Forms.ToolStripMenuItem();
             this.dropdownReport = new System.Windows.Forms.ToolStripMenuItem();
-            this.tìnhTrạngSáchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolBookStatus = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
-            this.sốĐộcGiảToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolReadersStatus = new System.Windows.Forms.ToolStripMenuItem();
             this.buttonHelp = new System.Windows.Forms.ToolStripMenuItem();
             this.buttonExit = new System.Windows.Forms.ToolStripMenuItem();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
@@ -89,7 +89,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.label10 = new System.Windows.Forms.Label();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.groupBox1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.groupBox4.SuspendLayout();
@@ -97,7 +97,7 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox1.BackColor = System.Drawing.Color.White;
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.textBox2);
@@ -107,7 +107,7 @@
             this.groupBox1.ForeColor = System.Drawing.SystemColors.Highlight;
             this.groupBox1.Location = new System.Drawing.Point(373, 103);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(266, 456);
+            this.groupBox1.Size = new System.Drawing.Size(266, 240);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Log in to the system";
@@ -166,9 +166,9 @@
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.dropdownSystemManagement,
-            this.dropdownUpdate,
             this.dropdownInformation,
             this.dropdownSearch,
+            this.dropdownUpdate,
             this.dropdownReport,
             this.buttonHelp,
             this.buttonExit});
@@ -181,189 +181,104 @@
             // 
             // dropdownSystemManagement
             // 
+            this.dropdownSystemManagement.BackColor = System.Drawing.Color.White;
             this.dropdownSystemManagement.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.KiêmTratoolStripMenuItem1,
+            this.toolCheckEmployeeInformation,
             this.toolStripSeparator7,
-            this.cậpNhậtNhânViênToolStripMenuItem,
+            this.toolUpdateStaff,
             this.toolStripSeparator1,
-            this.tạoTàiKhoảnToolStripMenuItem,
+            this.toolCreateAccount,
             this.toolStripSeparator2,
-            this.đổiMậtKhẩuToolStripMenuItem,
+            this.toolChangePassword,
             this.toolStripSeparator3,
-            this.đăngNhậpToolStripMenuItem});
+            this.toolLogin});
             this.dropdownSystemManagement.Enabled = false;
             this.dropdownSystemManagement.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.dropdownSystemManagement.Image = global::QuanLyThuVien2.Properties.Resources.system;
             this.dropdownSystemManagement.Name = "dropdownSystemManagement";
-            this.dropdownSystemManagement.Size = new System.Drawing.Size(195, 29);
+            this.dropdownSystemManagement.Size = new System.Drawing.Size(219, 29);
             this.dropdownSystemManagement.Text = "System Management";
             // 
-            // KiêmTratoolStripMenuItem1
+            // toolCheckEmployeeInformation
             // 
-            this.KiêmTratoolStripMenuItem1.Enabled = false;
-            this.KiêmTratoolStripMenuItem1.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.KiêmTratoolStripMenuItem1.Name = "KiêmTratoolStripMenuItem1";
-            this.KiêmTratoolStripMenuItem1.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.K)));
-            this.KiêmTratoolStripMenuItem1.Size = new System.Drawing.Size(404, 34);
-            this.KiêmTratoolStripMenuItem1.Text = "Check Employee Information";
-            this.KiêmTratoolStripMenuItem1.Click += new System.EventHandler(this.KiêmTratoolStripMenuItem1_Click);
+            this.toolCheckEmployeeInformation.Enabled = false;
+            this.toolCheckEmployeeInformation.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.toolCheckEmployeeInformation.Name = "toolCheckEmployeeInformation";
+            this.toolCheckEmployeeInformation.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.K)));
+            this.toolCheckEmployeeInformation.Size = new System.Drawing.Size(404, 34);
+            this.toolCheckEmployeeInformation.Text = "Check Employee Information";
+            this.toolCheckEmployeeInformation.Click += new System.EventHandler(this.KiêmTratoolStripMenuItem1_Click);
             // 
             // toolStripSeparator7
             // 
             this.toolStripSeparator7.Name = "toolStripSeparator7";
             this.toolStripSeparator7.Size = new System.Drawing.Size(401, 6);
             // 
-            // cậpNhậtNhânViênToolStripMenuItem
+            // toolUpdateStaff
             // 
-            this.cậpNhậtNhânViênToolStripMenuItem.Enabled = false;
-            this.cậpNhậtNhânViênToolStripMenuItem.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.cậpNhậtNhânViênToolStripMenuItem.Name = "cậpNhậtNhânViênToolStripMenuItem";
-            this.cậpNhậtNhânViênToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.V)));
-            this.cậpNhậtNhânViênToolStripMenuItem.Size = new System.Drawing.Size(404, 34);
-            this.cậpNhậtNhânViênToolStripMenuItem.Text = "Update Staff";
-            this.cậpNhậtNhânViênToolStripMenuItem.Click += new System.EventHandler(this.cậpNhậtNhânViênToolStripMenuItem_Click);
+            this.toolUpdateStaff.Enabled = false;
+            this.toolUpdateStaff.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.toolUpdateStaff.Name = "toolUpdateStaff";
+            this.toolUpdateStaff.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.V)));
+            this.toolUpdateStaff.Size = new System.Drawing.Size(404, 34);
+            this.toolUpdateStaff.Text = "Update Staff";
+            this.toolUpdateStaff.Click += new System.EventHandler(this.cậpNhậtNhânViênToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
             this.toolStripSeparator1.Size = new System.Drawing.Size(401, 6);
             // 
-            // tạoTàiKhoảnToolStripMenuItem
+            // toolCreateAccount
             // 
-            this.tạoTàiKhoảnToolStripMenuItem.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.tạoTàiKhoảnToolStripMenuItem.Name = "tạoTàiKhoảnToolStripMenuItem";
-            this.tạoTàiKhoảnToolStripMenuItem.Size = new System.Drawing.Size(404, 34);
-            this.tạoTàiKhoảnToolStripMenuItem.Text = "Create Account";
-            this.tạoTàiKhoảnToolStripMenuItem.Click += new System.EventHandler(this.tạoTàiKhoảnToolStripMenuItem_Click);
+            this.toolCreateAccount.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.toolCreateAccount.Name = "toolCreateAccount";
+            this.toolCreateAccount.Size = new System.Drawing.Size(404, 34);
+            this.toolCreateAccount.Text = "Create Account";
+            this.toolCreateAccount.Click += new System.EventHandler(this.tạoTàiKhoảnToolStripMenuItem_Click);
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
             this.toolStripSeparator2.Size = new System.Drawing.Size(401, 6);
             // 
-            // đổiMậtKhẩuToolStripMenuItem
+            // toolChangePassword
             // 
-            this.đổiMậtKhẩuToolStripMenuItem.Enabled = false;
-            this.đổiMậtKhẩuToolStripMenuItem.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.đổiMậtKhẩuToolStripMenuItem.Name = "đổiMậtKhẩuToolStripMenuItem";
-            this.đổiMậtKhẩuToolStripMenuItem.Size = new System.Drawing.Size(404, 34);
-            this.đổiMậtKhẩuToolStripMenuItem.Text = "Change Password";
-            this.đổiMậtKhẩuToolStripMenuItem.Click += new System.EventHandler(this.đổiMậtKhẩuToolStripMenuItem_Click);
+            this.toolChangePassword.Enabled = false;
+            this.toolChangePassword.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.toolChangePassword.Name = "toolChangePassword";
+            this.toolChangePassword.Size = new System.Drawing.Size(404, 34);
+            this.toolChangePassword.Text = "Change Password";
+            this.toolChangePassword.Click += new System.EventHandler(this.đổiMậtKhẩuToolStripMenuItem_Click);
             // 
             // toolStripSeparator3
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
             this.toolStripSeparator3.Size = new System.Drawing.Size(401, 6);
             // 
-            // đăngNhậpToolStripMenuItem
+            // toolLogin
             // 
-            this.đăngNhậpToolStripMenuItem.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.đăngNhậpToolStripMenuItem.Name = "đăngNhậpToolStripMenuItem";
-            this.đăngNhậpToolStripMenuItem.Size = new System.Drawing.Size(404, 34);
-            this.đăngNhậpToolStripMenuItem.Text = "Log in";
-            this.đăngNhậpToolStripMenuItem.Click += new System.EventHandler(this.đăngNhậpToolStripMenuItem_Click);
-            // 
-            // dropdownUpdate
-            // 
-            this.dropdownUpdate.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.cậpNhậtSáchToolStripMenuItem,
-            this.cậpNhậtToolStripMenuItem1,
-            this.toolStripSeparator8,
-            this.cậpNhậtTácGiảToolStripMenuItem,
-            this.cậpNhậtLĩnhVựcToolStripMenuItem,
-            this.cậpNhậtNhàXuấtBảnToolStripMenuItem,
-            this.toolStripSeparator4,
-            this.cậpNhậtThôngTinMượnToolStripMenuItem});
-            this.dropdownUpdate.Enabled = false;
-            this.dropdownUpdate.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.dropdownUpdate.Name = "dropdownUpdate";
-            this.dropdownUpdate.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
-            this.dropdownUpdate.Size = new System.Drawing.Size(86, 29);
-            this.dropdownUpdate.Text = "Update";
-            // 
-            // cậpNhậtSáchToolStripMenuItem
-            // 
-            this.cậpNhậtSáchToolStripMenuItem.Enabled = false;
-            this.cậpNhậtSáchToolStripMenuItem.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.cậpNhậtSáchToolStripMenuItem.Name = "cậpNhậtSáchToolStripMenuItem";
-            this.cậpNhậtSáchToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
-            this.cậpNhậtSáchToolStripMenuItem.Size = new System.Drawing.Size(425, 34);
-            this.cậpNhậtSáchToolStripMenuItem.Text = "Book Updates";
-            this.cậpNhậtSáchToolStripMenuItem.Click += new System.EventHandler(this.cậpNhậtSáchToolStripMenuItem_Click);
-            // 
-            // cậpNhậtToolStripMenuItem1
-            // 
-            this.cậpNhậtToolStripMenuItem1.Enabled = false;
-            this.cậpNhậtToolStripMenuItem1.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.cậpNhậtToolStripMenuItem1.Name = "cậpNhậtToolStripMenuItem1";
-            this.cậpNhậtToolStripMenuItem1.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.D)));
-            this.cậpNhậtToolStripMenuItem1.Size = new System.Drawing.Size(425, 34);
-            this.cậpNhậtToolStripMenuItem1.Text = "Update Readers";
-            this.cậpNhậtToolStripMenuItem1.Click += new System.EventHandler(this.cậpNhậtToolStripMenuItem1_Click);
-            // 
-            // toolStripSeparator8
-            // 
-            this.toolStripSeparator8.Name = "toolStripSeparator8";
-            this.toolStripSeparator8.Size = new System.Drawing.Size(422, 6);
-            // 
-            // cậpNhậtTácGiảToolStripMenuItem
-            // 
-            this.cậpNhậtTácGiảToolStripMenuItem.Enabled = false;
-            this.cậpNhậtTácGiảToolStripMenuItem.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.cậpNhậtTácGiảToolStripMenuItem.Name = "cậpNhậtTácGiảToolStripMenuItem";
-            this.cậpNhậtTácGiảToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.T)));
-            this.cậpNhậtTácGiảToolStripMenuItem.Size = new System.Drawing.Size(425, 34);
-            this.cậpNhậtTácGiảToolStripMenuItem.Text = "Author Update";
-            this.cậpNhậtTácGiảToolStripMenuItem.Click += new System.EventHandler(this.cậpNhậtTácGiảToolStripMenuItem_Click);
-            // 
-            // cậpNhậtLĩnhVựcToolStripMenuItem
-            // 
-            this.cậpNhậtLĩnhVựcToolStripMenuItem.Enabled = false;
-            this.cậpNhậtLĩnhVựcToolStripMenuItem.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.cậpNhậtLĩnhVựcToolStripMenuItem.Name = "cậpNhậtLĩnhVựcToolStripMenuItem";
-            this.cậpNhậtLĩnhVựcToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.L)));
-            this.cậpNhậtLĩnhVựcToolStripMenuItem.Size = new System.Drawing.Size(425, 34);
-            this.cậpNhậtLĩnhVựcToolStripMenuItem.Text = "Update Field";
-            this.cậpNhậtLĩnhVựcToolStripMenuItem.Click += new System.EventHandler(this.cậpNhậtLĩnhVựcToolStripMenuItem_Click);
-            // 
-            // cậpNhậtNhàXuấtBảnToolStripMenuItem
-            // 
-            this.cậpNhậtNhàXuấtBảnToolStripMenuItem.Enabled = false;
-            this.cậpNhậtNhàXuấtBảnToolStripMenuItem.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.cậpNhậtNhàXuấtBảnToolStripMenuItem.Name = "cậpNhậtNhàXuấtBảnToolStripMenuItem";
-            this.cậpNhậtNhàXuấtBảnToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.N)));
-            this.cậpNhậtNhàXuấtBảnToolStripMenuItem.Size = new System.Drawing.Size(425, 34);
-            this.cậpNhậtNhàXuấtBảnToolStripMenuItem.Text = "Publisher Update";
-            this.cậpNhậtNhàXuấtBảnToolStripMenuItem.Click += new System.EventHandler(this.cậpNhậtNhàXuấtBảnToolStripMenuItem_Click);
-            // 
-            // toolStripSeparator4
-            // 
-            this.toolStripSeparator4.Name = "toolStripSeparator4";
-            this.toolStripSeparator4.Size = new System.Drawing.Size(422, 6);
-            // 
-            // cậpNhậtThôngTinMượnToolStripMenuItem
-            // 
-            this.cậpNhậtThôngTinMượnToolStripMenuItem.Enabled = false;
-            this.cậpNhậtThôngTinMượnToolStripMenuItem.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.cậpNhậtThôngTinMượnToolStripMenuItem.Name = "cậpNhậtThôngTinMượnToolStripMenuItem";
-            this.cậpNhậtThôngTinMượnToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.M)));
-            this.cậpNhậtThôngTinMượnToolStripMenuItem.Size = new System.Drawing.Size(425, 34);
-            this.cậpNhậtThôngTinMượnToolStripMenuItem.Text = "Update Borrowing Information";
-            this.cậpNhậtThôngTinMượnToolStripMenuItem.Click += new System.EventHandler(this.cậpNhậtThôngTinMượnToolStripMenuItem_Click);
+            this.toolLogin.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.toolLogin.Name = "toolLogin";
+            this.toolLogin.Size = new System.Drawing.Size(404, 34);
+            this.toolLogin.Text = "Log in";
+            this.toolLogin.Click += new System.EventHandler(this.đăngNhậpToolStripMenuItem_Click);
             // 
             // dropdownInformation
             // 
             this.dropdownInformation.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripSeparator11,
-            this.tácGiảToolStripMenuItem,
-            this.nhàXuấtBảnToolStripMenuItem,
-            this.lĩnhVựcToolStripMenuItem,
+            this.toolAuthor,
+            this.toolPublishingCompany,
+            this.toolField,
             this.toolStripSeparator14,
-            this.sáchToolStripMenuItem,
-            this.độcGiảToolStripMenuItem});
+            this.toolBook,
+            this.toolReaders});
             this.dropdownInformation.Enabled = false;
             this.dropdownInformation.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.dropdownInformation.Image = global::QuanLyThuVien2.Properties.Resources.information;
             this.dropdownInformation.Name = "dropdownInformation";
-            this.dropdownInformation.Size = new System.Drawing.Size(122, 29);
+            this.dropdownInformation.Size = new System.Drawing.Size(146, 29);
             this.dropdownInformation.Text = "Information";
             // 
             // toolStripSeparator11
@@ -371,139 +286,232 @@
             this.toolStripSeparator11.Name = "toolStripSeparator11";
             this.toolStripSeparator11.Size = new System.Drawing.Size(272, 6);
             // 
-            // tácGiảToolStripMenuItem
+            // toolAuthor
             // 
-            this.tácGiảToolStripMenuItem.Enabled = false;
-            this.tácGiảToolStripMenuItem.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.tácGiảToolStripMenuItem.Name = "tácGiảToolStripMenuItem";
-            this.tácGiảToolStripMenuItem.Size = new System.Drawing.Size(275, 34);
-            this.tácGiảToolStripMenuItem.Text = "Author";
-            this.tácGiảToolStripMenuItem.Click += new System.EventHandler(this.tácGiảToolStripMenuItem_Click);
+            this.toolAuthor.Enabled = false;
+            this.toolAuthor.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.toolAuthor.Name = "toolAuthor";
+            this.toolAuthor.Size = new System.Drawing.Size(275, 34);
+            this.toolAuthor.Text = "Author";
+            this.toolAuthor.Click += new System.EventHandler(this.tácGiảToolStripMenuItem_Click);
             // 
-            // nhàXuấtBảnToolStripMenuItem
+            // toolPublishingCompany
             // 
-            this.nhàXuấtBảnToolStripMenuItem.Enabled = false;
-            this.nhàXuấtBảnToolStripMenuItem.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.nhàXuấtBảnToolStripMenuItem.Name = "nhàXuấtBảnToolStripMenuItem";
-            this.nhàXuấtBảnToolStripMenuItem.Size = new System.Drawing.Size(275, 34);
-            this.nhàXuấtBảnToolStripMenuItem.Text = "Publishing company";
-            this.nhàXuấtBảnToolStripMenuItem.Click += new System.EventHandler(this.nhàXuấtBảnToolStripMenuItem_Click);
+            this.toolPublishingCompany.Enabled = false;
+            this.toolPublishingCompany.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.toolPublishingCompany.Name = "toolPublishingCompany";
+            this.toolPublishingCompany.Size = new System.Drawing.Size(275, 34);
+            this.toolPublishingCompany.Text = "Publishing company";
+            this.toolPublishingCompany.Click += new System.EventHandler(this.nhàXuấtBảnToolStripMenuItem_Click);
             // 
-            // lĩnhVựcToolStripMenuItem
+            // toolField
             // 
-            this.lĩnhVựcToolStripMenuItem.Enabled = false;
-            this.lĩnhVựcToolStripMenuItem.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.lĩnhVựcToolStripMenuItem.Name = "lĩnhVựcToolStripMenuItem";
-            this.lĩnhVựcToolStripMenuItem.Size = new System.Drawing.Size(275, 34);
-            this.lĩnhVựcToolStripMenuItem.Text = "Field";
-            this.lĩnhVựcToolStripMenuItem.Click += new System.EventHandler(this.lĩnhVựcToolStripMenuItem_Click);
+            this.toolField.Enabled = false;
+            this.toolField.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.toolField.Name = "toolField";
+            this.toolField.Size = new System.Drawing.Size(275, 34);
+            this.toolField.Text = "Field";
+            this.toolField.Click += new System.EventHandler(this.lĩnhVựcToolStripMenuItem_Click);
             // 
             // toolStripSeparator14
             // 
             this.toolStripSeparator14.Name = "toolStripSeparator14";
             this.toolStripSeparator14.Size = new System.Drawing.Size(272, 6);
             // 
-            // sáchToolStripMenuItem
+            // toolBook
             // 
-            this.sáchToolStripMenuItem.Enabled = false;
-            this.sáchToolStripMenuItem.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.sáchToolStripMenuItem.Name = "sáchToolStripMenuItem";
-            this.sáchToolStripMenuItem.Size = new System.Drawing.Size(275, 34);
-            this.sáchToolStripMenuItem.Text = "Book";
-            this.sáchToolStripMenuItem.Click += new System.EventHandler(this.sáchToolStripMenuItem_Click);
+            this.toolBook.Enabled = false;
+            this.toolBook.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.toolBook.Name = "toolBook";
+            this.toolBook.Size = new System.Drawing.Size(275, 34);
+            this.toolBook.Text = "Book";
+            this.toolBook.Click += new System.EventHandler(this.sáchToolStripMenuItem_Click);
             // 
-            // độcGiảToolStripMenuItem
+            // toolReaders
             // 
-            this.độcGiảToolStripMenuItem.Enabled = false;
-            this.độcGiảToolStripMenuItem.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.độcGiảToolStripMenuItem.Name = "độcGiảToolStripMenuItem";
-            this.độcGiảToolStripMenuItem.Size = new System.Drawing.Size(275, 34);
-            this.độcGiảToolStripMenuItem.Text = "Readers";
-            this.độcGiảToolStripMenuItem.Click += new System.EventHandler(this.độcGiảToolStripMenuItem_Click);
+            this.toolReaders.Enabled = false;
+            this.toolReaders.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.toolReaders.Name = "toolReaders";
+            this.toolReaders.Size = new System.Drawing.Size(275, 34);
+            this.toolReaders.Text = "Readers";
+            this.toolReaders.Click += new System.EventHandler(this.độcGiảToolStripMenuItem_Click);
             // 
             // dropdownSearch
             // 
             this.dropdownSearch.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tìmKiếmSáchToolStripMenuItem,
+            this.toolBookSearch,
             this.toolStripSeparator5,
-            this.tìmKiếmĐGToolStripMenuItem});
+            this.toolRoadSearch});
             this.dropdownSearch.Enabled = false;
             this.dropdownSearch.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.dropdownSearch.Image = global::QuanLyThuVien2.Properties.Resources.search;
             this.dropdownSearch.Name = "dropdownSearch";
-            this.dropdownSearch.Size = new System.Drawing.Size(80, 29);
+            this.dropdownSearch.Size = new System.Drawing.Size(104, 29);
             this.dropdownSearch.Text = "Search";
             this.dropdownSearch.Click += new System.EventHandler(this.tìmKiếmToolStripMenuItem_Click);
             // 
-            // tìmKiếmSáchToolStripMenuItem
+            // toolBookSearch
             // 
-            this.tìmKiếmSáchToolStripMenuItem.Enabled = false;
-            this.tìmKiếmSáchToolStripMenuItem.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.tìmKiếmSáchToolStripMenuItem.Name = "tìmKiếmSáchToolStripMenuItem";
-            this.tìmKiếmSáchToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.F)));
-            this.tìmKiếmSáchToolStripMenuItem.Size = new System.Drawing.Size(275, 34);
-            this.tìmKiếmSáchToolStripMenuItem.Text = "Book Search";
-            this.tìmKiếmSáchToolStripMenuItem.Click += new System.EventHandler(this.tìmKiếmSáchToolStripMenuItem_Click);
+            this.toolBookSearch.Enabled = false;
+            this.toolBookSearch.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.toolBookSearch.Name = "toolBookSearch";
+            this.toolBookSearch.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.F)));
+            this.toolBookSearch.Size = new System.Drawing.Size(275, 34);
+            this.toolBookSearch.Text = "Book Search";
+            this.toolBookSearch.Click += new System.EventHandler(this.tìmKiếmSáchToolStripMenuItem_Click);
             // 
             // toolStripSeparator5
             // 
             this.toolStripSeparator5.Name = "toolStripSeparator5";
             this.toolStripSeparator5.Size = new System.Drawing.Size(272, 6);
             // 
-            // tìmKiếmĐGToolStripMenuItem
+            // toolRoadSearch
             // 
-            this.tìmKiếmĐGToolStripMenuItem.Enabled = false;
-            this.tìmKiếmĐGToolStripMenuItem.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.tìmKiếmĐGToolStripMenuItem.Name = "tìmKiếmĐGToolStripMenuItem";
-            this.tìmKiếmĐGToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.G)));
-            this.tìmKiếmĐGToolStripMenuItem.Size = new System.Drawing.Size(275, 34);
-            this.tìmKiếmĐGToolStripMenuItem.Text = "Road Search";
-            this.tìmKiếmĐGToolStripMenuItem.Click += new System.EventHandler(this.tìmKiếmĐGToolStripMenuItem_Click);
+            this.toolRoadSearch.Enabled = false;
+            this.toolRoadSearch.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.toolRoadSearch.Name = "toolRoadSearch";
+            this.toolRoadSearch.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.G)));
+            this.toolRoadSearch.Size = new System.Drawing.Size(275, 34);
+            this.toolRoadSearch.Text = "Road Search";
+            this.toolRoadSearch.Click += new System.EventHandler(this.tìmKiếmĐGToolStripMenuItem_Click);
+            // 
+            // dropdownUpdate
+            // 
+            this.dropdownUpdate.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolBookUpdates,
+            this.toolUpdateReaders,
+            this.toolStripSeparator8,
+            this.toolAuthorUpdate,
+            this.toolUpdateField,
+            this.toolPublisherUpdate,
+            this.toolStripSeparator4,
+            this.toolUpdateBorrowingInformation});
+            this.dropdownUpdate.Enabled = false;
+            this.dropdownUpdate.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.dropdownUpdate.Image = global::QuanLyThuVien2.Properties.Resources.update;
+            this.dropdownUpdate.Name = "dropdownUpdate";
+            this.dropdownUpdate.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
+            this.dropdownUpdate.Size = new System.Drawing.Size(110, 29);
+            this.dropdownUpdate.Text = "Update";
+            // 
+            // toolBookUpdates
+            // 
+            this.toolBookUpdates.Enabled = false;
+            this.toolBookUpdates.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.toolBookUpdates.Name = "toolBookUpdates";
+            this.toolBookUpdates.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
+            this.toolBookUpdates.Size = new System.Drawing.Size(425, 34);
+            this.toolBookUpdates.Text = "Book Updates";
+            this.toolBookUpdates.Click += new System.EventHandler(this.cậpNhậtSáchToolStripMenuItem_Click);
+            // 
+            // toolUpdateReaders
+            // 
+            this.toolUpdateReaders.Enabled = false;
+            this.toolUpdateReaders.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.toolUpdateReaders.Name = "toolUpdateReaders";
+            this.toolUpdateReaders.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.D)));
+            this.toolUpdateReaders.Size = new System.Drawing.Size(425, 34);
+            this.toolUpdateReaders.Text = "Update Readers";
+            this.toolUpdateReaders.Click += new System.EventHandler(this.cậpNhậtToolStripMenuItem1_Click);
+            // 
+            // toolStripSeparator8
+            // 
+            this.toolStripSeparator8.Name = "toolStripSeparator8";
+            this.toolStripSeparator8.Size = new System.Drawing.Size(422, 6);
+            // 
+            // toolAuthorUpdate
+            // 
+            this.toolAuthorUpdate.Enabled = false;
+            this.toolAuthorUpdate.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.toolAuthorUpdate.Name = "toolAuthorUpdate";
+            this.toolAuthorUpdate.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.T)));
+            this.toolAuthorUpdate.Size = new System.Drawing.Size(425, 34);
+            this.toolAuthorUpdate.Text = "Author Update";
+            this.toolAuthorUpdate.Click += new System.EventHandler(this.cậpNhậtTácGiảToolStripMenuItem_Click);
+            // 
+            // toolUpdateField
+            // 
+            this.toolUpdateField.Enabled = false;
+            this.toolUpdateField.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.toolUpdateField.Name = "toolUpdateField";
+            this.toolUpdateField.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.L)));
+            this.toolUpdateField.Size = new System.Drawing.Size(425, 34);
+            this.toolUpdateField.Text = "Update Field";
+            this.toolUpdateField.Click += new System.EventHandler(this.cậpNhậtLĩnhVựcToolStripMenuItem_Click);
+            // 
+            // toolPublisherUpdate
+            // 
+            this.toolPublisherUpdate.Enabled = false;
+            this.toolPublisherUpdate.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.toolPublisherUpdate.Name = "toolPublisherUpdate";
+            this.toolPublisherUpdate.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.N)));
+            this.toolPublisherUpdate.Size = new System.Drawing.Size(425, 34);
+            this.toolPublisherUpdate.Text = "Publisher Update";
+            this.toolPublisherUpdate.Click += new System.EventHandler(this.cậpNhậtNhàXuấtBảnToolStripMenuItem_Click);
+            // 
+            // toolStripSeparator4
+            // 
+            this.toolStripSeparator4.Name = "toolStripSeparator4";
+            this.toolStripSeparator4.Size = new System.Drawing.Size(422, 6);
+            // 
+            // toolUpdateBorrowingInformation
+            // 
+            this.toolUpdateBorrowingInformation.Enabled = false;
+            this.toolUpdateBorrowingInformation.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.toolUpdateBorrowingInformation.Name = "toolUpdateBorrowingInformation";
+            this.toolUpdateBorrowingInformation.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.M)));
+            this.toolUpdateBorrowingInformation.Size = new System.Drawing.Size(425, 34);
+            this.toolUpdateBorrowingInformation.Text = "Update Borrowing Information";
+            this.toolUpdateBorrowingInformation.Click += new System.EventHandler(this.cậpNhậtThôngTinMượnToolStripMenuItem_Click);
             // 
             // dropdownReport
             // 
             this.dropdownReport.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tìnhTrạngSáchToolStripMenuItem,
+            this.toolBookStatus,
             this.toolStripSeparator6,
-            this.sốĐộcGiảToolStripMenuItem});
+            this.toolReadersStatus});
             this.dropdownReport.Enabled = false;
             this.dropdownReport.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.dropdownReport.Image = global::QuanLyThuVien2.Properties.Resources.report;
             this.dropdownReport.Name = "dropdownReport";
-            this.dropdownReport.Size = new System.Drawing.Size(81, 29);
+            this.dropdownReport.Size = new System.Drawing.Size(105, 29);
             this.dropdownReport.Text = "Report";
             // 
-            // tìnhTrạngSáchToolStripMenuItem
+            // toolBookStatus
             // 
-            this.tìnhTrạngSáchToolStripMenuItem.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.tìnhTrạngSáchToolStripMenuItem.Name = "tìnhTrạngSáchToolStripMenuItem";
-            this.tìnhTrạngSáchToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
-            this.tìnhTrạngSáchToolStripMenuItem.Text = "Book Status";
-            this.tìnhTrạngSáchToolStripMenuItem.Click += new System.EventHandler(this.tìnhTrạngSáchToolStripMenuItem_Click);
+            this.toolBookStatus.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.toolBookStatus.Name = "toolBookStatus";
+            this.toolBookStatus.Size = new System.Drawing.Size(270, 34);
+            this.toolBookStatus.Text = "Book Status";
+            this.toolBookStatus.Click += new System.EventHandler(this.tìnhTrạngSáchToolStripMenuItem_Click);
             // 
             // toolStripSeparator6
             // 
             this.toolStripSeparator6.Name = "toolStripSeparator6";
             this.toolStripSeparator6.Size = new System.Drawing.Size(267, 6);
             // 
-            // sốĐộcGiảToolStripMenuItem
+            // toolReadersStatus
             // 
-            this.sốĐộcGiảToolStripMenuItem.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.sốĐộcGiảToolStripMenuItem.Name = "sốĐộcGiảToolStripMenuItem";
-            this.sốĐộcGiảToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
-            this.sốĐộcGiảToolStripMenuItem.Text = "Readers Status";
-            this.sốĐộcGiảToolStripMenuItem.Click += new System.EventHandler(this.sốĐộcGiảToolStripMenuItem_Click);
+            this.toolReadersStatus.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.toolReadersStatus.Name = "toolReadersStatus";
+            this.toolReadersStatus.Size = new System.Drawing.Size(270, 34);
+            this.toolReadersStatus.Text = "Readers Status";
+            this.toolReadersStatus.Click += new System.EventHandler(this.sốĐộcGiảToolStripMenuItem_Click);
             // 
             // buttonHelp
             // 
             this.buttonHelp.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.buttonHelp.Image = global::QuanLyThuVien2.Properties.Resources.help;
             this.buttonHelp.Name = "buttonHelp";
-            this.buttonHelp.Size = new System.Drawing.Size(65, 29);
+            this.buttonHelp.Size = new System.Drawing.Size(89, 29);
             this.buttonHelp.Text = "Help";
             // 
             // buttonExit
             // 
             this.buttonExit.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.buttonExit.Image = global::QuanLyThuVien2.Properties.Resources.exit;
             this.buttonExit.Name = "buttonExit";
-            this.buttonExit.Size = new System.Drawing.Size(55, 29);
+            this.buttonExit.Size = new System.Drawing.Size(79, 29);
             this.buttonExit.Text = "Exit";
             this.buttonExit.Click += new System.EventHandler(this.thoátToolStripMenuItem1_Click);
             // 
@@ -571,23 +579,19 @@
             // 
             // groupBox4
             // 
-            this.groupBox4.Controls.Add(this.label10);
             this.groupBox4.Controls.Add(this.label4);
-            this.groupBox4.Location = new System.Drawing.Point(12, 27);
+            this.groupBox4.Location = new System.Drawing.Point(12, 28);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(960, 70);
             this.groupBox4.TabIndex = 6;
             this.groupBox4.TabStop = false;
             // 
-            // label10
+            // dateTimePicker1
             // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(570, 40);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(30, 19);
-            this.label10.TabIndex = 5;
-            this.label10.Text = "C#";
+            this.dateTimePicker1.Location = new System.Drawing.Point(0, 526);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(982, 30);
+            this.dateTimePicker1.TabIndex = 7;
             // 
             // Main
             // 
@@ -595,8 +599,10 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.BackgroundImage = global::QuanLyThuVien2.Properties.Resources.Backgroundmain;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(982, 564);
+            this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.menuStrip1);
@@ -630,22 +636,22 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem dropdownSystemManagement;
-        private System.Windows.Forms.ToolStripMenuItem cậpNhậtNhânViênToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem toolUpdateStaff;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
-        private System.Windows.Forms.ToolStripMenuItem tạoTàiKhoảnToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem toolCreateAccount;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
-        private System.Windows.Forms.ToolStripMenuItem đổiMậtKhẩuToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem toolChangePassword;
         private System.Windows.Forms.ToolStripMenuItem dropdownUpdate;
-        private System.Windows.Forms.ToolStripMenuItem cậpNhậtSáchToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem cậpNhậtToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem toolBookUpdates;
+        private System.Windows.Forms.ToolStripMenuItem toolUpdateReaders;
         private System.Windows.Forms.ToolStripMenuItem dropdownInformation;
         private System.Windows.Forms.ToolStripMenuItem dropdownSearch;
         private System.Windows.Forms.ToolStripMenuItem dropdownReport;
         private System.Windows.Forms.ToolStripMenuItem buttonHelp;
         private System.Windows.Forms.ToolStripMenuItem buttonExit;
-        private System.Windows.Forms.ToolStripMenuItem tìnhTrạngSáchToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem toolBookStatus;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator6;
-        private System.Windows.Forms.ToolStripMenuItem sốĐộcGiảToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem toolReadersStatus;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Timer timer2;
         private System.Windows.Forms.Timer timer3;
@@ -660,31 +666,31 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator8;
-        private System.Windows.Forms.ToolStripMenuItem cậpNhậtTácGiảToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem cậpNhậtLĩnhVựcToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem toolAuthorUpdate;
+        private System.Windows.Forms.ToolStripMenuItem toolUpdateField;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator11;
-        private System.Windows.Forms.ToolStripMenuItem tácGiảToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem nhàXuấtBảnToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem lĩnhVựcToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem toolAuthor;
+        private System.Windows.Forms.ToolStripMenuItem toolPublishingCompany;
+        private System.Windows.Forms.ToolStripMenuItem toolField;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator14;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ToolStripMenuItem sáchToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem độcGiảToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem toolBook;
+        private System.Windows.Forms.ToolStripMenuItem toolReaders;
         //b private System.Windows.Forms.MonthCalendar monthCalendar1;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
-        private System.Windows.Forms.ToolStripMenuItem đăngNhậpToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem toolLogin;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.ToolStripMenuItem tìmKiếmĐGToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem cậpNhậtNhàXuấtBảnToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem toolRoadSearch;
+        private System.Windows.Forms.ToolStripMenuItem toolPublisherUpdate;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
-        private System.Windows.Forms.ToolStripMenuItem cậpNhậtThôngTinMượnToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem tìmKiếmSáchToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem toolUpdateBorrowingInformation;
+        private System.Windows.Forms.ToolStripMenuItem toolBookSearch;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
-        private System.Windows.Forms.ToolStripMenuItem KiêmTratoolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem toolCheckEmployeeInformation;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator7;
-       //b  private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        //b  private System.Windows.Forms.GroupBox groupBox3;
     }
 }
 
