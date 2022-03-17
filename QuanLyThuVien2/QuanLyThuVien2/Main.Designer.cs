@@ -37,7 +37,7 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.quảnLyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.dropdownSystemManagement = new System.Windows.Forms.ToolStripMenuItem();
             this.KiêmTratoolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator7 = new System.Windows.Forms.ToolStripSeparator();
             this.cậpNhậtNhânViênToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -47,7 +47,7 @@
             this.đổiMậtKhẩuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.đăngNhậpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cậpNhậtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.dropdownUpdate = new System.Windows.Forms.ToolStripMenuItem();
             this.cậpNhậtSáchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cậpNhậtToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator8 = new System.Windows.Forms.ToolStripSeparator();
@@ -56,7 +56,7 @@
             this.cậpNhậtNhàXuấtBảnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.cậpNhậtThôngTinMượnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.mượnSáchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.dropdownInformation = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator11 = new System.Windows.Forms.ToolStripSeparator();
             this.tácGiảToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nhàXuấtBảnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -64,23 +64,22 @@
             this.toolStripSeparator14 = new System.Windows.Forms.ToolStripSeparator();
             this.sáchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.độcGiảToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.tìmKiếmToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.dropdownSearch = new System.Windows.Forms.ToolStripMenuItem();
             this.tìmKiếmSáchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
             this.tìmKiếmĐGToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.báoCáoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.dropdownReport = new System.Windows.Forms.ToolStripMenuItem();
             this.tìnhTrạngSáchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
             this.sốĐộcGiảToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.trợGiúpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.thoátToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.buttonHelp = new System.Windows.Forms.ToolStripMenuItem();
+            this.buttonExit = new System.Windows.Forms.ToolStripMenuItem();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.timer3 = new System.Windows.Forms.Timer(this.components);
             this.timer4 = new System.Windows.Forms.Timer(this.components);
             this.timer5 = new System.Windows.Forms.Timer(this.components);
             this.timer6 = new System.Windows.Forms.Timer(this.components);
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -88,13 +87,11 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.label10 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -168,13 +165,13 @@
             this.menuStrip1.BackColor = System.Drawing.SystemColors.Window;
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.quảnLyToolStripMenuItem,
-            this.cậpNhậtToolStripMenuItem,
-            this.mượnSáchToolStripMenuItem,
-            this.tìmKiếmToolStripMenuItem,
-            this.báoCáoToolStripMenuItem,
-            this.trợGiúpToolStripMenuItem,
-            this.thoátToolStripMenuItem1});
+            this.dropdownSystemManagement,
+            this.dropdownUpdate,
+            this.dropdownInformation,
+            this.dropdownSearch,
+            this.dropdownReport,
+            this.buttonHelp,
+            this.buttonExit});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(8, 2, 0, 2);
@@ -182,9 +179,9 @@
             this.menuStrip1.TabIndex = 2;
             this.menuStrip1.Text = "menuStrip1";
             // 
-            // quảnLyToolStripMenuItem
+            // dropdownSystemManagement
             // 
-            this.quảnLyToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.dropdownSystemManagement.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.KiêmTratoolStripMenuItem1,
             this.toolStripSeparator7,
             this.cậpNhậtNhânViênToolStripMenuItem,
@@ -194,11 +191,11 @@
             this.đổiMậtKhẩuToolStripMenuItem,
             this.toolStripSeparator3,
             this.đăngNhậpToolStripMenuItem});
-            this.quảnLyToolStripMenuItem.Enabled = false;
-            this.quảnLyToolStripMenuItem.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.quảnLyToolStripMenuItem.Name = "quảnLyToolStripMenuItem";
-            this.quảnLyToolStripMenuItem.Size = new System.Drawing.Size(195, 29);
-            this.quảnLyToolStripMenuItem.Text = "System Management";
+            this.dropdownSystemManagement.Enabled = false;
+            this.dropdownSystemManagement.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.dropdownSystemManagement.Name = "dropdownSystemManagement";
+            this.dropdownSystemManagement.Size = new System.Drawing.Size(195, 29);
+            this.dropdownSystemManagement.Text = "System Management";
             // 
             // KiêmTratoolStripMenuItem1
             // 
@@ -265,9 +262,9 @@
             this.đăngNhậpToolStripMenuItem.Text = "Log in";
             this.đăngNhậpToolStripMenuItem.Click += new System.EventHandler(this.đăngNhậpToolStripMenuItem_Click);
             // 
-            // cậpNhậtToolStripMenuItem
+            // dropdownUpdate
             // 
-            this.cậpNhậtToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.dropdownUpdate.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.cậpNhậtSáchToolStripMenuItem,
             this.cậpNhậtToolStripMenuItem1,
             this.toolStripSeparator8,
@@ -276,12 +273,12 @@
             this.cậpNhậtNhàXuấtBảnToolStripMenuItem,
             this.toolStripSeparator4,
             this.cậpNhậtThôngTinMượnToolStripMenuItem});
-            this.cậpNhậtToolStripMenuItem.Enabled = false;
-            this.cậpNhậtToolStripMenuItem.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.cậpNhậtToolStripMenuItem.Name = "cậpNhậtToolStripMenuItem";
-            this.cậpNhậtToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
-            this.cậpNhậtToolStripMenuItem.Size = new System.Drawing.Size(86, 29);
-            this.cậpNhậtToolStripMenuItem.Text = "Update";
+            this.dropdownUpdate.Enabled = false;
+            this.dropdownUpdate.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.dropdownUpdate.Name = "dropdownUpdate";
+            this.dropdownUpdate.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
+            this.dropdownUpdate.Size = new System.Drawing.Size(86, 29);
+            this.dropdownUpdate.Text = "Update";
             // 
             // cậpNhậtSáchToolStripMenuItem
             // 
@@ -353,9 +350,9 @@
             this.cậpNhậtThôngTinMượnToolStripMenuItem.Text = "Update Borrowing Information";
             this.cậpNhậtThôngTinMượnToolStripMenuItem.Click += new System.EventHandler(this.cậpNhậtThôngTinMượnToolStripMenuItem_Click);
             // 
-            // mượnSáchToolStripMenuItem
+            // dropdownInformation
             // 
-            this.mượnSáchToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.dropdownInformation.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripSeparator11,
             this.tácGiảToolStripMenuItem,
             this.nhàXuấtBảnToolStripMenuItem,
@@ -363,11 +360,11 @@
             this.toolStripSeparator14,
             this.sáchToolStripMenuItem,
             this.độcGiảToolStripMenuItem});
-            this.mượnSáchToolStripMenuItem.Enabled = false;
-            this.mượnSáchToolStripMenuItem.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.mượnSáchToolStripMenuItem.Name = "mượnSáchToolStripMenuItem";
-            this.mượnSáchToolStripMenuItem.Size = new System.Drawing.Size(122, 29);
-            this.mượnSáchToolStripMenuItem.Text = "Information";
+            this.dropdownInformation.Enabled = false;
+            this.dropdownInformation.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.dropdownInformation.Name = "dropdownInformation";
+            this.dropdownInformation.Size = new System.Drawing.Size(122, 29);
+            this.dropdownInformation.Text = "Information";
             // 
             // toolStripSeparator11
             // 
@@ -424,18 +421,18 @@
             this.độcGiảToolStripMenuItem.Text = "Readers";
             this.độcGiảToolStripMenuItem.Click += new System.EventHandler(this.độcGiảToolStripMenuItem_Click);
             // 
-            // tìmKiếmToolStripMenuItem
+            // dropdownSearch
             // 
-            this.tìmKiếmToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.dropdownSearch.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tìmKiếmSáchToolStripMenuItem,
             this.toolStripSeparator5,
             this.tìmKiếmĐGToolStripMenuItem});
-            this.tìmKiếmToolStripMenuItem.Enabled = false;
-            this.tìmKiếmToolStripMenuItem.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.tìmKiếmToolStripMenuItem.Name = "tìmKiếmToolStripMenuItem";
-            this.tìmKiếmToolStripMenuItem.Size = new System.Drawing.Size(80, 29);
-            this.tìmKiếmToolStripMenuItem.Text = "Search";
-            this.tìmKiếmToolStripMenuItem.Click += new System.EventHandler(this.tìmKiếmToolStripMenuItem_Click);
+            this.dropdownSearch.Enabled = false;
+            this.dropdownSearch.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.dropdownSearch.Name = "dropdownSearch";
+            this.dropdownSearch.Size = new System.Drawing.Size(80, 29);
+            this.dropdownSearch.Text = "Search";
+            this.dropdownSearch.Click += new System.EventHandler(this.tìmKiếmToolStripMenuItem_Click);
             // 
             // tìmKiếmSáchToolStripMenuItem
             // 
@@ -462,17 +459,17 @@
             this.tìmKiếmĐGToolStripMenuItem.Text = "Road Search";
             this.tìmKiếmĐGToolStripMenuItem.Click += new System.EventHandler(this.tìmKiếmĐGToolStripMenuItem_Click);
             // 
-            // báoCáoToolStripMenuItem
+            // dropdownReport
             // 
-            this.báoCáoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.dropdownReport.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tìnhTrạngSáchToolStripMenuItem,
             this.toolStripSeparator6,
             this.sốĐộcGiảToolStripMenuItem});
-            this.báoCáoToolStripMenuItem.Enabled = false;
-            this.báoCáoToolStripMenuItem.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.báoCáoToolStripMenuItem.Name = "báoCáoToolStripMenuItem";
-            this.báoCáoToolStripMenuItem.Size = new System.Drawing.Size(81, 29);
-            this.báoCáoToolStripMenuItem.Text = "Report";
+            this.dropdownReport.Enabled = false;
+            this.dropdownReport.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.dropdownReport.Name = "dropdownReport";
+            this.dropdownReport.Size = new System.Drawing.Size(81, 29);
+            this.dropdownReport.Text = "Report";
             // 
             // tìnhTrạngSáchToolStripMenuItem
             // 
@@ -495,34 +492,20 @@
             this.sốĐộcGiảToolStripMenuItem.Text = "Readers Status";
             this.sốĐộcGiảToolStripMenuItem.Click += new System.EventHandler(this.sốĐộcGiảToolStripMenuItem_Click);
             // 
-            // trợGiúpToolStripMenuItem
+            // buttonHelp
             // 
-            this.trợGiúpToolStripMenuItem.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.trợGiúpToolStripMenuItem.Name = "trợGiúpToolStripMenuItem";
-            this.trợGiúpToolStripMenuItem.Size = new System.Drawing.Size(65, 29);
-            this.trợGiúpToolStripMenuItem.Text = "Help";
+            this.buttonHelp.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.buttonHelp.Name = "buttonHelp";
+            this.buttonHelp.Size = new System.Drawing.Size(65, 29);
+            this.buttonHelp.Text = "Help";
             // 
-            // thoátToolStripMenuItem1
+            // buttonExit
             // 
-            this.thoátToolStripMenuItem1.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.thoátToolStripMenuItem1.Name = "thoátToolStripMenuItem1";
-            this.thoátToolStripMenuItem1.Size = new System.Drawing.Size(55, 29);
-            this.thoátToolStripMenuItem1.Text = "Exit";
-            this.thoátToolStripMenuItem1.Click += new System.EventHandler(this.thoátToolStripMenuItem1_Click);
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.label9);
-            this.groupBox2.Controls.Add(this.label8);
-            this.groupBox2.Controls.Add(this.label7);
-            this.groupBox2.Controls.Add(this.label6);
-            this.groupBox2.Controls.Add(this.label5);
-            this.groupBox2.Controls.Add(this.label1);
-            this.groupBox2.Location = new System.Drawing.Point(12, 103);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(355, 456);
-            this.groupBox2.TabIndex = 3;
-            this.groupBox2.TabStop = false;
+            this.buttonExit.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.buttonExit.Name = "buttonExit";
+            this.buttonExit.Size = new System.Drawing.Size(55, 29);
+            this.buttonExit.Text = "Exit";
+            this.buttonExit.Click += new System.EventHandler(this.thoátToolStripMenuItem1_Click);
             // 
             // label9
             // 
@@ -579,14 +562,6 @@
             this.label4.TabIndex = 4;
             this.label4.Text = "Library Management";
             // 
-            // groupBox3
-            // 
-            this.groupBox3.Location = new System.Drawing.Point(645, 103);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(327, 456);
-            this.groupBox3.TabIndex = 5;
-            this.groupBox3.TabStop = false;
-            // 
             // panel1
             // 
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -610,9 +585,9 @@
             this.label10.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.Location = new System.Drawing.Point(570, 40);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(49, 19);
+            this.label10.Size = new System.Drawing.Size(30, 19);
             this.label10.TabIndex = 5;
-            this.label10.Text = "T.H.C";
+            this.label10.Text = "C#";
             // 
             // Main
             // 
@@ -623,8 +598,6 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(982, 564);
             this.Controls.Add(this.groupBox4);
-            this.Controls.Add(this.groupBox3);
-            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.menuStrip1);
             this.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -640,8 +613,6 @@
             this.groupBox1.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
             this.ResumeLayout(false);
@@ -658,20 +629,20 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem quảnLyToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem dropdownSystemManagement;
         private System.Windows.Forms.ToolStripMenuItem cậpNhậtNhânViênToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripMenuItem tạoTàiKhoảnToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.ToolStripMenuItem đổiMậtKhẩuToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem cậpNhậtToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem dropdownUpdate;
         private System.Windows.Forms.ToolStripMenuItem cậpNhậtSáchToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cậpNhậtToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem mượnSáchToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem tìmKiếmToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem báoCáoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem trợGiúpToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem thoátToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem dropdownInformation;
+        private System.Windows.Forms.ToolStripMenuItem dropdownSearch;
+        private System.Windows.Forms.ToolStripMenuItem dropdownReport;
+        private System.Windows.Forms.ToolStripMenuItem buttonHelp;
+        private System.Windows.Forms.ToolStripMenuItem buttonExit;
         private System.Windows.Forms.ToolStripMenuItem tìnhTrạngSáchToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator6;
         private System.Windows.Forms.ToolStripMenuItem sốĐộcGiảToolStripMenuItem;
@@ -681,7 +652,7 @@
         private System.Windows.Forms.Timer timer4;
         private System.Windows.Forms.Timer timer5;
         private System.Windows.Forms.Timer timer6;
-        private System.Windows.Forms.GroupBox groupBox2;
+        //b private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
@@ -703,7 +674,6 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
         private System.Windows.Forms.ToolStripMenuItem đăngNhậpToolStripMenuItem;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.ToolStripMenuItem tìmKiếmĐGToolStripMenuItem;
@@ -714,6 +684,7 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
         private System.Windows.Forms.ToolStripMenuItem KiêmTratoolStripMenuItem1;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator7;
+       //b  private System.Windows.Forms.GroupBox groupBox3;
     }
 }
 
