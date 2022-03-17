@@ -47,13 +47,13 @@ namespace QuanLyThuVien2
                     Quyen = Convert.ToString(Q);
                     if (Quyen == "user")
                     {
-                        quảnLyToolStripMenuItem.Enabled = true;
-                        tìmKiếmToolStripMenuItem.Enabled = true;
+                        dropdownSystemManagement.Enabled = true;
+                        dropdownSearch.Enabled = true;
                         tìmKiếmSáchToolStripMenuItem.Enabled = true;
                         tìmKiếmĐGToolStripMenuItem.Enabled = true;
-                        cậpNhậtToolStripMenuItem.Enabled = true;
-                        mượnSáchToolStripMenuItem.Enabled = true;
-                        báoCáoToolStripMenuItem.Enabled = true;
+                        dropdownUpdate.Enabled = true;
+                        dropdownInformation.Enabled = true;
+                        dropdownReport.Enabled = true;
                         cậpNhậtSáchToolStripMenuItem.Enabled = true;
                         cậpNhậtTácGiảToolStripMenuItem.Enabled = true;
                         cậpNhậtToolStripMenuItem1.Enabled = true;
@@ -71,14 +71,14 @@ namespace QuanLyThuVien2
                     }
                     if (Quyen == "admin")
                     {
-                        quảnLyToolStripMenuItem.Enabled = true;
-                        tìmKiếmToolStripMenuItem.Enabled = true;
+                        dropdownSystemManagement.Enabled = true;
+                        dropdownSearch.Enabled = true;
                         tìmKiếmSáchToolStripMenuItem.Enabled = true;
                         KiêmTratoolStripMenuItem1.Enabled = true;
                         tìmKiếmĐGToolStripMenuItem.Enabled = true;
-                        cậpNhậtToolStripMenuItem.Enabled = true;
-                        mượnSáchToolStripMenuItem.Enabled = true;
-                        báoCáoToolStripMenuItem.Enabled = true;
+                        dropdownUpdate.Enabled = true;
+                        dropdownInformation.Enabled = true;
+                        dropdownReport.Enabled = true;
                         cậpNhậtSáchToolStripMenuItem.Enabled = true;
                         cậpNhậtTácGiảToolStripMenuItem.Enabled = true;
                         cậpNhậtToolStripMenuItem1.Enabled = true;
@@ -182,8 +182,8 @@ namespace QuanLyThuVien2
 
         private void đổiMậtKhẩuToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            //b DoiMatKhau doimatkhau = new DoiMatKhau();
-            //b doimatkhau.Show();
+            ChangePassword doimatkhau = new ChangePassword();
+            doimatkhau.Show();
         }
 
         private void cậpNhậtThôngTinMượnToolStripMenuItem_Click(object sender, EventArgs e)
@@ -194,8 +194,8 @@ namespace QuanLyThuVien2
 
         private void tạoTàiKhoảnToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            //b TaoTaiKhoan TAO = new TaoTaiKhoan();
-            //b TAO.Show();
+            Register TAO = new Register();
+            TAO.Show();
         }
 
         private void tìnhTrạngSáchToolStripMenuItem_Click(object sender, EventArgs e)
@@ -348,14 +348,14 @@ namespace QuanLyThuVien2
         private void đăngNhậpToolStripMenuItem_Click(object sender, EventArgs e)
         {
             groupBox1.Enabled = true;
-            quảnLyToolStripMenuItem.Enabled = false;
-            tìmKiếmToolStripMenuItem.Enabled = false;
+            dropdownSystemManagement.Enabled = false;
+            dropdownSearch.Enabled = false;
             tìmKiếmSáchToolStripMenuItem.Enabled = false;
             KiêmTratoolStripMenuItem1.Enabled = false;
             tìmKiếmĐGToolStripMenuItem.Enabled = false;
-            cậpNhậtToolStripMenuItem.Enabled = false;
-            mượnSáchToolStripMenuItem.Enabled = false;
-            báoCáoToolStripMenuItem.Enabled = false;
+            dropdownUpdate.Enabled = false;
+            dropdownInformation.Enabled = false;
+            dropdownReport.Enabled = false;
             cậpNhậtSáchToolStripMenuItem.Enabled = false;
             cậpNhậtTácGiảToolStripMenuItem.Enabled = false;
             cậpNhậtToolStripMenuItem1.Enabled = false;
