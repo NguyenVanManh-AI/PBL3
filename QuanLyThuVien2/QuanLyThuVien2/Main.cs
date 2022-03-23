@@ -97,6 +97,8 @@ namespace QuanLyThuVien2
                     textBox1.Text = "";
                     textBox2.Text = "";
                     groupBox1.Enabled = false;
+                    groupBox1.Visible = false;
+                    btSI.Visible = false;
                 }
             }
         }
@@ -120,7 +122,7 @@ namespace QuanLyThuVien2
             try
             {
                 Con = new SqlConnection();
-                Con.ConnectionString = @"Server =DESKTOP-QCOSLTK\VANMANH; " + "database=Library2; Integrated Security = true";
+                Con.ConnectionString = @"Server =21AK22-COM\QUOC;" + "database=Library; Integrated Security = true";
                 Con.Open();
             }
             catch { MessageBox.Show("Unable to connect !!! :(( "); }
@@ -229,6 +231,11 @@ namespace QuanLyThuVien2
         private void label3_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btSI_Click(object sender, EventArgs e)
+        {
+            groupBox1.Visible = true;
         }
 
         private void lĩnhVựcToolStripMenuItem_Click(object sender, EventArgs e)
