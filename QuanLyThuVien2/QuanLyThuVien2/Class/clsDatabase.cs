@@ -11,7 +11,7 @@ namespace QuanLyThuVien2.Class
     class clsDatabase
     {
         //Khai báo các chuỗi kết nối và các đối tượng
-        string strConnect = @"Data Source=DESKTOP-QCOSLTK\VANMANH;Initial Catalog=Library2;Integrated Security=True";
+        string strConnect = @"Data Source=LAPTOP-R0QH577D\SQLEXPRESS;Initial Catalog=Library22;User Id=sa;pwd=123456";
         SqlConnection sqlCon;
         SqlCommand sqlCom;
         SqlDataReader sqlRea;

@@ -53,6 +53,12 @@
       <DependentUpon>ChangePassword.cs</DependentUpon>
     </Compile>
     <Compile Include="Class\clsDatabase.cs" />
+    <Compile Include="KiemTraTTNVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KiemTraTTNVien.Designer.cs">
+      <DependentUpon>KiemTraTTNVien.cs</DependentUpon>
+    </Compile>
     <Compile Include="Main.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -69,6 +75,9 @@
     </Compile>
     <EmbeddedResource Include="ChangePassword.resx">
       <DependentUpon>ChangePassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KiemTraTTNVien.resx">
+      <DependentUpon>KiemTraTTNVien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>

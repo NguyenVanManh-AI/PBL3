@@ -11,3 +11,17 @@ C:\Users\LAPTOP KIM ANH\source\repos\QuanLyThuVien2\QuanLyThuVien2\obj\Debug\Qua
 C:\Users\LAPTOP KIM ANH\source\repos\QuanLyThuVien2\QuanLyThuVien2\obj\Debug\QuanLyThuVien2.Main.resources
 C:\Users\LAPTOP KIM ANH\source\repos\QuanLyThuVien2\QuanLyThuVien2\obj\Debug\QuanLyThuVien2.ChangePassword.resources
 C:\Users\LAPTOP KIM ANH\source\repos\QuanLyThuVien2\QuanLyThuVien2\obj\Debug\QuanLyThuVien2.Register.resources
+E:\PBL3\TaiLieuPBL#\QuanLyThuVien2\QuanLyThuVien2\bin\Debug\QuanLyThuVien2.exe.config
+E:\PBL3\TaiLieuPBL#\QuanLyThuVien2\QuanLyThuVien2\bin\Debug\QuanLyThuVien2.exe
+E:\PBL3\TaiLieuPBL#\QuanLyThuVien2\QuanLyThuVien2\bin\Debug\QuanLyThuVien2.pdb
+E:\PBL3\TaiLieuPBL#\QuanLyThuVien2\QuanLyThuVien2\obj\Debug\QuanLyThuVien2.csproj.AssemblyReference.cache
+E:\PBL3\TaiLieuPBL#\QuanLyThuVien2\QuanLyThuVien2\obj\Debug\QuanLyThuVien2.csproj.SuggestedBindingRedirects.cache
+E:\PBL3\TaiLieuPBL#\QuanLyThuVien2\QuanLyThuVien2\obj\Debug\QuanLyThuVien2.ChangePassword.resources
+E:\PBL3\TaiLieuPBL#\QuanLyThuVien2\QuanLyThuVien2\obj\Debug\QuanLyThuVien2.Main.resources
+E:\PBL3\TaiLieuPBL#\QuanLyThuVien2\QuanLyThuVien2\obj\Debug\QuanLyThuVien2.Properties.Resources.resources
+E:\PBL3\TaiLieuPBL#\QuanLyThuVien2\QuanLyThuVien2\obj\Debug\QuanLyThuVien2.Register.resources
+E:\PBL3\TaiLieuPBL#\QuanLyThuVien2\QuanLyThuVien2\obj\Debug\QuanLyThuVien2.csproj.GenerateResource.cache
+E:\PBL3\TaiLieuPBL#\QuanLyThuVien2\QuanLyThuVien2\obj\Debug\QuanLyThuVien2.csproj.CoreCompileInputs.cache
+E:\PBL3\TaiLieuPBL#\QuanLyThuVien2\QuanLyThuVien2\obj\Debug\QuanLyThuVien2.exe
+E:\PBL3\TaiLieuPBL#\QuanLyThuVien2\QuanLyThuVien2\obj\Debug\QuanLyThuVien2.pdb
+E:\PBL3\TaiLieuPBL#\QuanLyThuVien2\QuanLyThuVien2\obj\Debug\QuanLyThuVien2.KiemTraTTNVien.resources
