@@ -105,7 +105,7 @@
             this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.groupBox1.Location = new System.Drawing.Point(373, 103);
+            this.groupBox1.Location = new System.Drawing.Point(355, 103);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(266, 240);
             this.groupBox1.TabIndex = 1;
@@ -163,6 +163,7 @@
             // menuStrip1
             // 
             this.menuStrip1.BackColor = System.Drawing.SystemColors.Window;
+            this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.dropdownSystemManagement,
@@ -221,7 +222,7 @@
             this.toolUpdateStaff.Name = "toolUpdateStaff";
             this.toolUpdateStaff.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.V)));
             this.toolUpdateStaff.Size = new System.Drawing.Size(404, 34);
-            this.toolUpdateStaff.Text = "Update Staff";
+            this.toolUpdateStaff.Text = "Update information";
             this.toolUpdateStaff.Click += new System.EventHandler(this.cậpNhậtNhânViênToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
@@ -481,20 +482,20 @@
             // 
             this.toolBookStatus.ForeColor = System.Drawing.Color.DodgerBlue;
             this.toolBookStatus.Name = "toolBookStatus";
-            this.toolBookStatus.Size = new System.Drawing.Size(270, 34);
+            this.toolBookStatus.Size = new System.Drawing.Size(229, 34);
             this.toolBookStatus.Text = "Book Status";
             this.toolBookStatus.Click += new System.EventHandler(this.tìnhTrạngSáchToolStripMenuItem_Click);
             // 
             // toolStripSeparator6
             // 
             this.toolStripSeparator6.Name = "toolStripSeparator6";
-            this.toolStripSeparator6.Size = new System.Drawing.Size(267, 6);
+            this.toolStripSeparator6.Size = new System.Drawing.Size(226, 6);
             // 
             // toolReadersStatus
             // 
             this.toolReadersStatus.ForeColor = System.Drawing.Color.DodgerBlue;
             this.toolReadersStatus.Name = "toolReadersStatus";
-            this.toolReadersStatus.Size = new System.Drawing.Size(270, 34);
+            this.toolReadersStatus.Size = new System.Drawing.Size(229, 34);
             this.toolReadersStatus.Text = "Readers Status";
             this.toolReadersStatus.Click += new System.EventHandler(this.sốĐộcGiảToolStripMenuItem_Click);
             // 
@@ -564,7 +565,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Times New Roman", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label4.Location = new System.Drawing.Point(318, 18);
+            this.label4.Location = new System.Drawing.Point(333, 18);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(423, 55);
             this.label4.TabIndex = 4;

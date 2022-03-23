@@ -32,7 +32,7 @@ namespace QuanLyThuVien2
         }
         private void button1_Click(object sender, EventArgs e)
         {
-            TenDN = textBox1.Text;
+            TenDN = textBox1.Text; // tên người dùng 
             MatKhau = textBox2.Text;
             if (TenDN != "")
             {
@@ -158,8 +158,8 @@ namespace QuanLyThuVien2
 
         private void cậpNhậtNhânViênToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            //b capnhatnhanvien cnnhanvien = new capnhatnhanvien();
-            //b cnnhanvien.Show();
+            capnhatnhanvien cnnhanvien = new capnhatnhanvien();
+            cnnhanvien.Show();
         }
 
         private void cậpNhậtTácGiảToolStripMenuItem_Click(object sender, EventArgs e)
