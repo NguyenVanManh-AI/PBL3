@@ -18,7 +18,7 @@ namespace QuanLyThuVien2
         Class.clsDatabase cls = new QuanLyThuVien2.Class.clsDatabase();
         private void capnhatnhanvien_Load(object sender, EventArgs e)
         {
-            cls.LoadData2DataGridView(dataGridView1, "select * from tblNhanVien where TAIKHOAN='" + Main.TenDN + "'");
+            cls.LoadData2DataGridView(dataGridView1, "select TENNV,DIACHI,DIENTHOAI,EMAIL,ChucVu,Tuoi from tblNhanVien where TAIKHOAN='" + Main.TenDN + "'");
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -36,18 +36,18 @@ namespace QuanLyThuVien2
                 string strUpdate = "update tblNhanVien set TENNV='" + txtNHANVIEN.Text + "',DIACHI='" + txtDiaChi.Text + "',DIENTHOAI='" + txtSoDienThoai.Text + "',EMAIL='" + txtEmail.Text + "',ChucVu='" + textChhucVu.Text + "',Tuoi='" + textTuoi.Text + "' where TAIKHOAN='" + Main.TenDN + "'";
                 cls.ThucThiSQLTheoKetNoi(strUpdate);
             }
-            cls.LoadData2DataGridView(dataGridView1, "select * from tblNhanVien where TAIKHOAN='" + Main.TenDN + "'");
+            cls.LoadData2DataGridView(dataGridView1, "select TENNV,DIACHI,DIENTHOAI,EMAIL,ChucVu,Tuoi from tblNhanVien where TAIKHOAN='" + Main.TenDN + "'");
             MessageBox.Show("Sửa thành công");
         }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            txtNHANVIEN.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
-            txtDiaChi.Text = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
-            txtSoDienThoai.Text = dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString();
-            txtEmail.Text = dataGridView1.Rows[e.RowIndex].Cells[6].Value.ToString();
-            textChhucVu.Text = dataGridView1.Rows[e.RowIndex].Cells[7].Value.ToString();
-            textTuoi.Text = dataGridView1.Rows[e.RowIndex].Cells[8].Value.ToString();
+            txtNHANVIEN.Text = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
+            txtDiaChi.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
+            txtSoDienThoai.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
+            txtEmail.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
+            textChhucVu.Text = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
+            textTuoi.Text = dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString();
             
         }
 
