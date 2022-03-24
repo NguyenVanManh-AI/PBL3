@@ -25,3 +25,16 @@ C:\GIT\PBL3\QuanLyThuVien2\QuanLyThuVien2\obj\Debug\QuanLyThuVien2.csproj.CoreCo
 C:\GIT\PBL3\QuanLyThuVien2\QuanLyThuVien2\obj\Debug\QuanLyThuVien2.exe
 C:\GIT\PBL3\QuanLyThuVien2\QuanLyThuVien2\obj\Debug\QuanLyThuVien2.pdb
 C:\GIT\PBL3\QuanLyThuVien2\QuanLyThuVien2\obj\Debug\QuanLyThuVien2.SignIn.resources
+C:\Users\LAPTOP KIM ANH\Downloads\Kì 4\PBL 3 CN phần mềm\PBL3\PBL3\QuanLyThuVien2\QuanLyThuVien2\obj\Debug\QuanLyThuVien2.csproj.AssemblyReference.cache
+C:\Users\LAPTOP KIM ANH\Downloads\Kì 4\PBL 3 CN phần mềm\PBL3\PBL3\QuanLyThuVien2\QuanLyThuVien2\obj\Debug\QuanLyThuVien2.csproj.SuggestedBindingRedirects.cache
+C:\Users\LAPTOP KIM ANH\Downloads\Kì 4\PBL 3 CN phần mềm\PBL3\PBL3\QuanLyThuVien2\QuanLyThuVien2\obj\Debug\QuanLyThuVien2.exe
+C:\Users\LAPTOP KIM ANH\Downloads\Kì 4\PBL 3 CN phần mềm\PBL3\PBL3\QuanLyThuVien2\QuanLyThuVien2\obj\Debug\QuanLyThuVien2.pdb
+C:\Users\LAPTOP KIM ANH\Downloads\Kì 4\PBL 3 CN phần mềm\PBL3\PBL3\QuanLyThuVien2\QuanLyThuVien2\bin\Debug\QuanLyThuVien2.exe.config
+C:\Users\LAPTOP KIM ANH\Downloads\Kì 4\PBL 3 CN phần mềm\PBL3\PBL3\QuanLyThuVien2\QuanLyThuVien2\bin\Debug\QuanLyThuVien2.exe
+C:\Users\LAPTOP KIM ANH\Downloads\Kì 4\PBL 3 CN phần mềm\PBL3\PBL3\QuanLyThuVien2\QuanLyThuVien2\bin\Debug\QuanLyThuVien2.pdb
+C:\Users\LAPTOP KIM ANH\Downloads\Kì 4\PBL 3 CN phần mềm\PBL3\PBL3\QuanLyThuVien2\QuanLyThuVien2\obj\Debug\QuanLyThuVien2.ChangePassword.resources
+C:\Users\LAPTOP KIM ANH\Downloads\Kì 4\PBL 3 CN phần mềm\PBL3\PBL3\QuanLyThuVien2\QuanLyThuVien2\obj\Debug\QuanLyThuVien2.Main.resources
+C:\Users\LAPTOP KIM ANH\Downloads\Kì 4\PBL 3 CN phần mềm\PBL3\PBL3\QuanLyThuVien2\QuanLyThuVien2\obj\Debug\QuanLyThuVien2.Properties.Resources.resources
+C:\Users\LAPTOP KIM ANH\Downloads\Kì 4\PBL 3 CN phần mềm\PBL3\PBL3\QuanLyThuVien2\QuanLyThuVien2\obj\Debug\QuanLyThuVien2.Register.resources
+C:\Users\LAPTOP KIM ANH\Downloads\Kì 4\PBL 3 CN phần mềm\PBL3\PBL3\QuanLyThuVien2\QuanLyThuVien2\obj\Debug\QuanLyThuVien2.csproj.GenerateResource.cache
+C:\Users\LAPTOP KIM ANH\Downloads\Kì 4\PBL 3 CN phần mềm\PBL3\PBL3\QuanLyThuVien2\QuanLyThuVien2\obj\Debug\QuanLyThuVien2.csproj.CoreCompileInputs.cache

@@ -53,12 +53,6 @@
       <DependentUpon>ChangePassword.cs</DependentUpon>
     </Compile>
     <Compile Include="Class\clsDatabase.cs" />
-    <Compile Include="SignIn.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="SignIn.Designer.cs">
-      <DependentUpon>SignIn.cs</DependentUpon>
-    </Compile>
     <Compile Include="Main.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -91,9 +85,6 @@
     </Compile>
     <EmbeddedResource Include="Register.resx">
       <DependentUpon>Register.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="SignIn.resx">
-      <DependentUpon>SignIn.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
