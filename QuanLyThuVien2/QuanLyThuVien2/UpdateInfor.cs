@@ -24,20 +24,20 @@ namespace QuanLyThuVien2
         private void button5_Click(object sender, EventArgs e)
         {
             if (txtSoDienThoai.Text.Length - 1 <= 0)
-                MessageBox.Show("Số điện thoại không thể nhỏ hơn 0 số");
+                MessageBox.Show("Phone number cannot be less than 0 digits");
             else
                 if (txtSoDienThoai.Text.Length - 1 > 12)
-                MessageBox.Show("Số điện thoại không thể lớn hơn 12 số");
+                MessageBox.Show("Phone number cannot be more than 12 numbers");
             else
-                    if (textTuoi.Text.Length - 1 <= 18 && textTuoi.Text.Length - 1 > 55)
-                MessageBox.Show("sai tuổi");
+                    if (Convert.ToInt32(textTuoi.Text) <= 18 || Convert.ToInt32(textTuoi.Text) > 60)
+                MessageBox.Show("wrong age");
             else
             {
                 string strUpdate = "update tblNhanVien set TENNV='" + txtNHANVIEN.Text + "',DIACHI='" + txtDiaChi.Text + "',DIENTHOAI='" + txtSoDienThoai.Text + "',EMAIL='" + txtEmail.Text + "',ChucVu='" + textChhucVu.Text + "',Tuoi='" + textTuoi.Text + "' where TAIKHOAN='" + Main.TenDN + "'";
                 cls.ThucThiSQLTheoKetNoi(strUpdate);
             }
             cls.LoadData2DataGridView(dataGridView1, "select TENNV,DIACHI,DIENTHOAI,EMAIL,ChucVu,Tuoi from tblNhanVien where TAIKHOAN='" + Main.TenDN + "'");
-            MessageBox.Show("Sửa thành công");
+            MessageBox.Show("Successful fix");
         }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)

@@ -106,7 +106,7 @@
             this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.groupBox1.Location = new System.Drawing.Point(261, 104);
+            this.groupBox1.Location = new System.Drawing.Point(340, 104);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(266, 240);
             this.groupBox1.TabIndex = 1;
@@ -165,6 +165,7 @@
             // menuStrip1
             // 
             this.menuStrip1.BackColor = System.Drawing.SystemColors.Window;
+            this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.dropdownSystemManagement,
@@ -209,7 +210,7 @@
             this.toolCheckEmployeeInformation.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.K)));
             this.toolCheckEmployeeInformation.Size = new System.Drawing.Size(404, 34);
             this.toolCheckEmployeeInformation.Text = "Check Employee Information";
-            this.toolCheckEmployeeInformation.Click += new System.EventHandler(this.KiêmTratoolStripMenuItem1_Click);
+            this.toolCheckEmployeeInformation.Click += new System.EventHandler(this.KiemTraThongTinNguoiDung);
             // 
             // toolStripSeparator7
             // 
@@ -224,7 +225,7 @@
             this.toolUpdateStaff.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.V)));
             this.toolUpdateStaff.Size = new System.Drawing.Size(404, 34);
             this.toolUpdateStaff.Text = "Update Staff";
-            this.toolUpdateStaff.Click += new System.EventHandler(this.cậpNhậtNhânViênToolStripMenuItem_Click);
+            this.toolUpdateStaff.Click += new System.EventHandler(this.CapNhatThongTin);
             // 
             // toolStripSeparator1
             // 
@@ -237,7 +238,7 @@
             this.toolCreateAccount.Name = "toolCreateAccount";
             this.toolCreateAccount.Size = new System.Drawing.Size(404, 34);
             this.toolCreateAccount.Text = "Create Account";
-            this.toolCreateAccount.Click += new System.EventHandler(this.tạoTàiKhoảnToolStripMenuItem_Click);
+            this.toolCreateAccount.Click += new System.EventHandler(this.TaoTaiKhoan);
             // 
             // toolStripSeparator2
             // 
@@ -251,7 +252,7 @@
             this.toolChangePassword.Name = "toolChangePassword";
             this.toolChangePassword.Size = new System.Drawing.Size(404, 34);
             this.toolChangePassword.Text = "Change Password";
-            this.toolChangePassword.Click += new System.EventHandler(this.đổiMậtKhẩuToolStripMenuItem_Click);
+            this.toolChangePassword.Click += new System.EventHandler(this.DoiMatKhau);
             // 
             // toolStripSeparator3
             // 
@@ -265,7 +266,7 @@
             this.toolLogout.Name = "toolLogout";
             this.toolLogout.Size = new System.Drawing.Size(404, 34);
             this.toolLogout.Text = "Log out";
-            this.toolLogout.Click += new System.EventHandler(this.toolLogout_Click);
+            this.toolLogout.Click += new System.EventHandler(this.DangXuat);
             // 
             // dropdownInformation
             // 
@@ -598,12 +599,14 @@
             // 
             // btSI
             // 
+            this.btSI.BackColor = System.Drawing.Color.White;
+            this.btSI.ForeColor = System.Drawing.Color.DodgerBlue;
             this.btSI.Location = new System.Drawing.Point(26, 466);
             this.btSI.Name = "btSI";
             this.btSI.Size = new System.Drawing.Size(165, 34);
             this.btSI.TabIndex = 8;
             this.btSI.Text = "Sign Into your Account";
-            this.btSI.UseVisualStyleBackColor = true;
+            this.btSI.UseVisualStyleBackColor = false;
             this.btSI.Click += new System.EventHandler(this.btSI_Click);
             // 
             // Main
