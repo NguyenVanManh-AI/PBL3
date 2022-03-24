@@ -46,7 +46,7 @@
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.toolChangePassword = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolLogin = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolLogout = new System.Windows.Forms.ToolStripMenuItem();
             this.dropdownInformation = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator11 = new System.Windows.Forms.ToolStripSeparator();
             this.toolAuthor = new System.Windows.Forms.ToolStripMenuItem();
@@ -90,6 +90,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.btSI = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.groupBox4.SuspendLayout();
@@ -105,12 +106,13 @@
             this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.groupBox1.Location = new System.Drawing.Point(355, 103);
+            this.groupBox1.Location = new System.Drawing.Point(261, 104);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(266, 240);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Log in to the system";
+            this.groupBox1.Visible = false;
             // 
             // label3
             // 
@@ -163,7 +165,6 @@
             // menuStrip1
             // 
             this.menuStrip1.BackColor = System.Drawing.SystemColors.Window;
-            this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.dropdownSystemManagement,
@@ -192,7 +193,7 @@
             this.toolStripSeparator2,
             this.toolChangePassword,
             this.toolStripSeparator3,
-            this.toolLogin});
+            this.toolLogout});
             this.dropdownSystemManagement.Enabled = false;
             this.dropdownSystemManagement.ForeColor = System.Drawing.SystemColors.Highlight;
             this.dropdownSystemManagement.Image = global::QuanLyThuVien2.Properties.Resources.system;
@@ -222,7 +223,7 @@
             this.toolUpdateStaff.Name = "toolUpdateStaff";
             this.toolUpdateStaff.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.V)));
             this.toolUpdateStaff.Size = new System.Drawing.Size(404, 34);
-            this.toolUpdateStaff.Text = "Update information";
+            this.toolUpdateStaff.Text = "Update Staff";
             this.toolUpdateStaff.Click += new System.EventHandler(this.cậpNhậtNhânViênToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
@@ -257,13 +258,14 @@
             this.toolStripSeparator3.Name = "toolStripSeparator3";
             this.toolStripSeparator3.Size = new System.Drawing.Size(401, 6);
             // 
-            // toolLogin
+            // toolLogout
             // 
-            this.toolLogin.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.toolLogin.Name = "toolLogin";
-            this.toolLogin.Size = new System.Drawing.Size(404, 34);
-            this.toolLogin.Text = "Log in";
-            this.toolLogin.Click += new System.EventHandler(this.đăngNhậpToolStripMenuItem_Click);
+            this.toolLogout.Enabled = false;
+            this.toolLogout.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.toolLogout.Name = "toolLogout";
+            this.toolLogout.Size = new System.Drawing.Size(404, 34);
+            this.toolLogout.Text = "Log out";
+            this.toolLogout.Click += new System.EventHandler(this.toolLogout_Click);
             // 
             // dropdownInformation
             // 
@@ -565,7 +567,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Times New Roman", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label4.Location = new System.Drawing.Point(333, 18);
+            this.label4.Location = new System.Drawing.Point(318, 18);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(423, 55);
             this.label4.TabIndex = 4;
@@ -594,6 +596,16 @@
             this.dateTimePicker1.Size = new System.Drawing.Size(982, 30);
             this.dateTimePicker1.TabIndex = 7;
             // 
+            // btSI
+            // 
+            this.btSI.Location = new System.Drawing.Point(26, 466);
+            this.btSI.Name = "btSI";
+            this.btSI.Size = new System.Drawing.Size(165, 34);
+            this.btSI.TabIndex = 8;
+            this.btSI.Text = "Sign Into your Account";
+            this.btSI.UseVisualStyleBackColor = true;
+            this.btSI.Click += new System.EventHandler(this.btSI_Click);
+            // 
             // Main
             // 
             this.AcceptButton = this.button1;
@@ -603,6 +615,7 @@
             this.BackgroundImage = global::QuanLyThuVien2.Properties.Resources.Backgroundmain;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(982, 564);
+            this.Controls.Add(this.btSI);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox1);
@@ -679,7 +692,6 @@
         private System.Windows.Forms.ToolStripMenuItem toolReaders;
         //b private System.Windows.Forms.MonthCalendar monthCalendar1;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
-        private System.Windows.Forms.ToolStripMenuItem toolLogin;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.ToolStripMenuItem toolRoadSearch;
@@ -691,6 +703,8 @@
         private System.Windows.Forms.ToolStripMenuItem toolCheckEmployeeInformation;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator7;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.Button btSI;
+        private System.Windows.Forms.ToolStripMenuItem toolLogout;
         //b  private System.Windows.Forms.GroupBox groupBox3;
     }
 }

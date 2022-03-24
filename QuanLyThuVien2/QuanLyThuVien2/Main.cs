@@ -32,7 +32,7 @@ namespace QuanLyThuVien2
         }
         private void button1_Click(object sender, EventArgs e)
         {
-            TenDN = textBox1.Text; // tên người dùng 
+            TenDN = textBox1.Text;
             MatKhau = textBox2.Text;
             if (TenDN != "")
             {
@@ -68,6 +68,7 @@ namespace QuanLyThuVien2
                         toolCreateAccount.Enabled = false;
                         toolUpdateStaff.Enabled = true;
                         toolChangePassword.Enabled = true;
+                        toolLogout.Enabled = true;
                     }
                     if (Quyen == "admin")
                     {
@@ -93,10 +94,13 @@ namespace QuanLyThuVien2
                         toolCreateAccount.Enabled = true;
                         toolUpdateStaff.Enabled = true;
                         toolChangePassword.Enabled = true;
+                        toolLogout.Enabled = true;
                     }
                     textBox1.Text = "";
                     textBox2.Text = "";
                     groupBox1.Enabled = false;
+                    groupBox1.Visible = false;
+                    btSI.Visible = false;
                 }
             }
         }
@@ -120,7 +124,7 @@ namespace QuanLyThuVien2
             try
             {
                 Con = new SqlConnection();
-                Con.ConnectionString = @"Server =DESKTOP-QCOSLTK\VANMANH; " + "database=Library2; Integrated Security = true";
+                Con.ConnectionString = @"Server =DESKTOP-QCOSLTK\VANMANH;" + "database=Library2; Integrated Security = true";
                 Con.Open();
             }
             catch { MessageBox.Show("Unable to connect !!! :(( "); }
@@ -158,7 +162,7 @@ namespace QuanLyThuVien2
 
         private void cậpNhậtNhânViênToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            updateInfor cnnhanvien = new updateInfor();
+            UpdateInfor cnnhanvien = new UpdateInfor();
             cnnhanvien.Show();
         }
 
@@ -229,6 +233,18 @@ namespace QuanLyThuVien2
         private void label3_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btSI_Click(object sender, EventArgs e)
+        {
+            groupBox1.Visible = true;
+        }
+
+        private void toolLogout_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Main x = new Main();
+            x.Show();
         }
 
         private void lĩnhVựcToolStripMenuItem_Click(object sender, EventArgs e)
