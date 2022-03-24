@@ -68,6 +68,7 @@ namespace QuanLyThuVien2
                         toolCreateAccount.Enabled = false;
                         toolUpdateStaff.Enabled = true;
                         toolChangePassword.Enabled = true;
+                        toolLogout.Enabled = true;
                     }
                     if (Quyen == "admin")
                     {
@@ -93,6 +94,7 @@ namespace QuanLyThuVien2
                         toolCreateAccount.Enabled = true;
                         toolUpdateStaff.Enabled = true;
                         toolChangePassword.Enabled = true;
+                        toolLogout.Enabled = true;
                     }
                     textBox1.Text = "";
                     textBox2.Text = "";
@@ -236,6 +238,13 @@ namespace QuanLyThuVien2
         private void btSI_Click(object sender, EventArgs e)
         {
             groupBox1.Visible = true;
+        }
+
+        private void toolLogout_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Main x = new Main();
+            x.Show();
         }
 
         private void lĩnhVựcToolStripMenuItem_Click(object sender, EventArgs e)

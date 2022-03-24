@@ -91,6 +91,7 @@
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.btSI = new System.Windows.Forms.Button();
+            this.toolLogout = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.groupBox4.SuspendLayout();
@@ -193,7 +194,8 @@
             this.toolStripSeparator2,
             this.toolChangePassword,
             this.toolStripSeparator3,
-            this.toolLogin});
+            this.toolLogin,
+            this.toolLogout});
             this.dropdownSystemManagement.Enabled = false;
             this.dropdownSystemManagement.ForeColor = System.Drawing.SystemColors.Highlight;
             this.dropdownSystemManagement.Image = global::QuanLyThuVien2.Properties.Resources.system;
@@ -260,6 +262,7 @@
             // 
             // toolLogin
             // 
+            this.toolLogin.CheckOnClick = true;
             this.toolLogin.ForeColor = System.Drawing.Color.DodgerBlue;
             this.toolLogin.Name = "toolLogin";
             this.toolLogin.Size = new System.Drawing.Size(269, 22);
@@ -605,6 +608,15 @@
             this.btSI.UseVisualStyleBackColor = true;
             this.btSI.Click += new System.EventHandler(this.btSI_Click);
             // 
+            // toolLogout
+            // 
+            this.toolLogout.Enabled = false;
+            this.toolLogout.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.toolLogout.Name = "toolLogout";
+            this.toolLogout.Size = new System.Drawing.Size(269, 22);
+            this.toolLogout.Text = "Log out";
+            this.toolLogout.Click += new System.EventHandler(this.toolLogout_Click);
+            // 
             // Main
             // 
             this.AcceptButton = this.button1;
@@ -704,6 +716,7 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator7;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Button btSI;
+        private System.Windows.Forms.ToolStripMenuItem toolLogout;
         //b  private System.Windows.Forms.GroupBox groupBox3;
     }
 }
