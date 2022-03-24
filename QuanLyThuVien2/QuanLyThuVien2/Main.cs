@@ -124,7 +124,7 @@ namespace QuanLyThuVien2
             try
             {
                 Con = new SqlConnection();
-                Con.ConnectionString = @"Server =DESKTOP-QCOSLTK\VANMANH;" + "database=Library; Integrated Security = true";
+                Con.ConnectionString = @"Server =DESKTOP-QCOSLTK\VANMANH;" + "database=Library2; Integrated Security = true";
                 Con.Open();
             }
             catch { MessageBox.Show("Unable to connect !!! :(( "); }
@@ -162,8 +162,8 @@ namespace QuanLyThuVien2
 
         private void cậpNhậtNhânViênToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            //b capnhatnhanvien cnnhanvien = new capnhatnhanvien();
-            //b cnnhanvien.Show();
+            UpdateInfor cnnhanvien = new UpdateInfor();
+            cnnhanvien.Show();
         }
 
         private void cậpNhậtTácGiảToolStripMenuItem_Click(object sender, EventArgs e)
