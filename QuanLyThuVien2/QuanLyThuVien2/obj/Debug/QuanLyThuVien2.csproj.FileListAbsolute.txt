@@ -24,4 +24,3 @@ C:\GIT\PBL3\QuanLyThuVien2\QuanLyThuVien2\obj\Debug\QuanLyThuVien2.csproj.Genera
 C:\GIT\PBL3\QuanLyThuVien2\QuanLyThuVien2\obj\Debug\QuanLyThuVien2.csproj.CoreCompileInputs.cache
 C:\GIT\PBL3\QuanLyThuVien2\QuanLyThuVien2\obj\Debug\QuanLyThuVien2.exe
 C:\GIT\PBL3\QuanLyThuVien2\QuanLyThuVien2\obj\Debug\QuanLyThuVien2.pdb
-C:\GIT\PBL3\QuanLyThuVien2\QuanLyThuVien2\obj\Debug\QuanLyThuVien2.SignIn.resources
