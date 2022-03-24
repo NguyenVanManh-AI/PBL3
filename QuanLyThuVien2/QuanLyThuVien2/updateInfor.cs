@@ -9,9 +9,9 @@ using System.Windows.Forms;
 
 namespace QuanLyThuVien2
 {
-    public partial class capnhatnhanvien : Form
+    public partial class updateInfor : Form
     {
-        public capnhatnhanvien()
+        public updateInfor()
         {
             InitializeComponent();
         }

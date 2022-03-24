@@ -158,7 +158,7 @@ namespace QuanLyThuVien2
 
         private void cậpNhậtNhânViênToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            capnhatnhanvien cnnhanvien = new capnhatnhanvien();
+            updateInfor cnnhanvien = new updateInfor();
             cnnhanvien.Show();
         }
 
