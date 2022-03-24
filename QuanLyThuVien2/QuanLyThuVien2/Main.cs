@@ -97,6 +97,11 @@ namespace QuanLyThuVien2
                     textBox1.Text = "";
                     textBox2.Text = "";
                     groupBox1.Enabled = false;
+<<<<<<< HEAD
+=======
+                    groupBox1.Visible = false;
+                    btSI.Visible = false;
+>>>>>>> ad48fa245ac2b76b25068d1a0c7c7e42866259d2
                 }
             }
         }
@@ -120,7 +125,11 @@ namespace QuanLyThuVien2
             try
             {
                 Con = new SqlConnection();
+<<<<<<< HEAD
                 Con.ConnectionString = @"Server =DESKTOP-QCOSLTK\VANMANH; " + "database=Library2; Integrated Security = true";
+=======
+                Con.ConnectionString = @"Server =21AK22-COM\QUOC;" + "database=Library; Integrated Security = true";
+>>>>>>> ad48fa245ac2b76b25068d1a0c7c7e42866259d2
                 Con.Open();
             }
             catch { MessageBox.Show("Unable to connect !!! :(( "); }
@@ -231,6 +240,14 @@ namespace QuanLyThuVien2
 
         }
 
+<<<<<<< HEAD
+=======
+        private void btSI_Click(object sender, EventArgs e)
+        {
+            groupBox1.Visible = true;
+        }
+
+>>>>>>> ad48fa245ac2b76b25068d1a0c7c7e42866259d2
         private void lĩnhVựcToolStripMenuItem_Click(object sender, EventArgs e)
         {
             //b ttLinhVuc ttlv = new ttLinhVuc();
