@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CheckInfor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CheckInfor.Designer.cs">
+      <DependentUpon>CheckInfor.cs</DependentUpon>
+    </Compile>
     <Compile Include="UpdateInfor.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -73,6 +79,9 @@
     <Compile Include="Register.Designer.cs">
       <DependentUpon>Register.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="CheckInfor.resx">
+      <DependentUpon>CheckInfor.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UpdateInfor.resx">
       <DependentUpon>UpdateInfor.cs</DependentUpon>
     </EmbeddedResource>

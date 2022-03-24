@@ -143,6 +143,38 @@ namespace QuanLyThuVien2
             timer1.Start();
         }
 
+        
+        private void KiemTraThongTinNguoiDung(object sender, EventArgs e)
+        {
+            CheckInfor K = new CheckInfor();
+            K.Show();
+        }
+
+        private void CapNhatThongTin(object sender, EventArgs e)
+        {
+            UpdateInfor cnnhanvien = new UpdateInfor();
+            cnnhanvien.Show();
+        }
+
+        private void TaoTaiKhoan(object sender, EventArgs e)
+        {
+            Register TAO = new Register();
+            TAO.Show();
+        }
+
+        private void DoiMatKhau(object sender, EventArgs e)
+        {
+            ChangePassword doimatkhau = new ChangePassword();
+            doimatkhau.Show();
+        }
+
+        private void DangXuat(object sender, EventArgs e)
+        {
+            this.Hide();
+            Main x = new Main();
+            x.Show();
+        }
+
         private void cậpNhậtSáchToolStripMenuItem_Click(object sender, EventArgs e)
         {
             //b capnhatsach cnsach = new capnhatsach();
@@ -160,11 +192,7 @@ namespace QuanLyThuVien2
         {
         }
 
-        private void cậpNhậtNhânViênToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            UpdateInfor cnnhanvien = new UpdateInfor();
-            cnnhanvien.Show();
-        }
+        
 
         private void cậpNhậtTácGiảToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -184,11 +212,7 @@ namespace QuanLyThuVien2
             //b cnLV.Show();
         }
 
-        private void đổiMậtKhẩuToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            ChangePassword doimatkhau = new ChangePassword();
-            doimatkhau.Show();
-        }
+        
 
         private void cậpNhậtThôngTinMượnToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -196,11 +220,7 @@ namespace QuanLyThuVien2
             //b T.Show();
         }
 
-        private void tạoTàiKhoảnToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Register TAO = new Register();
-            TAO.Show();
-        }
+        
 
         private void tìnhTrạngSáchToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -239,13 +259,7 @@ namespace QuanLyThuVien2
         {
             groupBox1.Visible = true;
         }
-
-        private void toolLogout_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            Main x = new Main();
-            x.Show();
-        }
+        
 
         private void lĩnhVựcToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -400,11 +414,7 @@ namespace QuanLyThuVien2
             //b Dg.Show();
         }
 
-        private void KiêmTratoolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-            //b KiemTraTTNhanVien K = new KiemTraTTNhanVien();
-            //b K.Show();
-        }
+        
 
     }
 }
