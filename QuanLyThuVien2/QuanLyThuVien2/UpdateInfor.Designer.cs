@@ -47,6 +47,7 @@
             this.button5 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.btExitupdate = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -76,6 +77,7 @@
             this.dataGridView1.Size = new System.Drawing.Size(1128, 352);
             this.dataGridView1.TabIndex = 26;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // groupBox2
             // 
@@ -216,7 +218,7 @@
             // 
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.button5.Location = new System.Drawing.Point(45, 80);
+            this.button5.Location = new System.Drawing.Point(45, 53);
             this.button5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(112, 42);
@@ -239,6 +241,7 @@
             // groupBox3
             // 
             this.groupBox3.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox3.Controls.Add(this.btExitupdate);
             this.groupBox3.Controls.Add(this.button5);
             this.groupBox3.ForeColor = System.Drawing.Color.DodgerBlue;
             this.groupBox3.Location = new System.Drawing.Point(948, 91);
@@ -250,7 +253,20 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Feature edit";
             // 
-            // updateInfor
+            // btExitupdate
+            // 
+            this.btExitupdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btExitupdate.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.btExitupdate.Location = new System.Drawing.Point(45, 125);
+            this.btExitupdate.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btExitupdate.Name = "btExitupdate";
+            this.btExitupdate.Size = new System.Drawing.Size(112, 42);
+            this.btExitupdate.TabIndex = 23;
+            this.btExitupdate.Text = "Exit";
+            this.btExitupdate.UseVisualStyleBackColor = true;
+            this.btExitupdate.Click += new System.EventHandler(this.btExitupdate_Click);
+            // 
+            // UpdateInfor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -263,7 +279,7 @@
             this.Controls.Add(this.dataGridView1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.Name = "updateInfor";
+            this.Name = "UpdateInfor";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Update Information";
             this.Load += new System.EventHandler(this.capnhatnhanvien_Load);
@@ -297,5 +313,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textTuoi;
         private System.Windows.Forms.TextBox textChhucVu;
+        private System.Windows.Forms.Button btExitupdate;
     }
 }

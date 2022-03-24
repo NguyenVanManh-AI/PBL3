@@ -16,7 +16,7 @@ namespace QuanLyThuVien2
         {
             InitializeComponent();
         }
-        public static string TenDN, MatKhau, Quyen;
+        public static string TenDN, MatKhau, Quyen; // TenDN = tên đăng nhập 
         SqlCommand sqlCommand;
         public Object layGiaTri(string sql) //lay gia tri cua  cot dau tien trong bang 
         {
