@@ -46,6 +46,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="UpdateFieldInformation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateFieldInformation.Designer.cs">
+      <DependentUpon>UpdateFieldInformation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdatePublisherInformation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdatePublisherInformation.Designer.cs">
+      <DependentUpon>UpdatePublisherInformation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateAuthorInformation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateAuthorInformation.Designer.cs">
+      <DependentUpon>UpdateAuthorInformation.cs</DependentUpon>
+    </Compile>
     <Compile Include="CheckInfor.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -79,6 +97,15 @@
     <Compile Include="Register.Designer.cs">
       <DependentUpon>Register.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="UpdateFieldInformation.resx">
+      <DependentUpon>UpdateFieldInformation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdatePublisherInformation.resx">
+      <DependentUpon>UpdatePublisherInformation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateAuthorInformation.resx">
+      <DependentUpon>UpdateAuthorInformation.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CheckInfor.resx">
       <DependentUpon>CheckInfor.cs</DependentUpon>
     </EmbeddedResource>

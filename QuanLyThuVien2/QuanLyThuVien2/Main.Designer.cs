@@ -431,7 +431,7 @@
             this.toolAuthorUpdate.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.T)));
             this.toolAuthorUpdate.Size = new System.Drawing.Size(425, 34);
             this.toolAuthorUpdate.Text = "Author Update";
-            this.toolAuthorUpdate.Click += new System.EventHandler(this.cậpNhậtTácGiảToolStripMenuItem_Click);
+            this.toolAuthorUpdate.Click += new System.EventHandler(this.CapNhatThongTinTacGia);
             // 
             // toolUpdateField
             // 
@@ -441,7 +441,7 @@
             this.toolUpdateField.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.L)));
             this.toolUpdateField.Size = new System.Drawing.Size(425, 34);
             this.toolUpdateField.Text = "Update Field";
-            this.toolUpdateField.Click += new System.EventHandler(this.cậpNhậtLĩnhVựcToolStripMenuItem_Click);
+            this.toolUpdateField.Click += new System.EventHandler(this.CapNhatLinhVuc);
             // 
             // toolPublisherUpdate
             // 
@@ -451,7 +451,7 @@
             this.toolPublisherUpdate.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.N)));
             this.toolPublisherUpdate.Size = new System.Drawing.Size(425, 34);
             this.toolPublisherUpdate.Text = "Publisher Update";
-            this.toolPublisherUpdate.Click += new System.EventHandler(this.cậpNhậtNhàXuấtBảnToolStripMenuItem_Click);
+            this.toolPublisherUpdate.Click += new System.EventHandler(this.CapNhatNhaXuatBan);
             // 
             // toolStripSeparator4
             // 
