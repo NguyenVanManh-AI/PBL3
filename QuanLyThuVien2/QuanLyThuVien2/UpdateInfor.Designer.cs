@@ -31,6 +31,12 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UpdateInfor));
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.textTuoi = new System.Windows.Forms.TextBox();
             this.textChhucVu = new System.Windows.Forms.TextBox();
@@ -47,7 +53,7 @@
             this.button5 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.btExitupdate = new System.Windows.Forms.Button();
+            this.btCloseupdate = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -70,6 +76,13 @@
             // 
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.Window;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2,
+            this.Column3,
+            this.Column4,
+            this.Column5,
+            this.Column6});
             this.dataGridView1.Location = new System.Drawing.Point(24, 440);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dataGridView1.Name = "dataGridView1";
@@ -78,6 +91,54 @@
             this.dataGridView1.TabIndex = 26;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
+            // 
+            // Column1
+            // 
+            this.Column1.DataPropertyName = "TENNV";
+            this.Column1.HeaderText = "Staff\'s name";
+            this.Column1.MinimumWidth = 8;
+            this.Column1.Name = "Column1";
+            this.Column1.Width = 90;
+            // 
+            // Column2
+            // 
+            this.Column2.DataPropertyName = "DiaChi";
+            this.Column2.HeaderText = "Address";
+            this.Column2.MinimumWidth = 8;
+            this.Column2.Name = "Column2";
+            this.Column2.Width = 90;
+            // 
+            // Column3
+            // 
+            this.Column3.DataPropertyName = "DIENTHOAI";
+            this.Column3.HeaderText = "Number Phone";
+            this.Column3.MinimumWidth = 8;
+            this.Column3.Name = "Column3";
+            this.Column3.Width = 90;
+            // 
+            // Column4
+            // 
+            this.Column4.DataPropertyName = "EMAIL";
+            this.Column4.HeaderText = "Email";
+            this.Column4.MinimumWidth = 8;
+            this.Column4.Name = "Column4";
+            this.Column4.Width = 90;
+            // 
+            // Column5
+            // 
+            this.Column5.DataPropertyName = "ChucVu";
+            this.Column5.HeaderText = "Position";
+            this.Column5.MinimumWidth = 8;
+            this.Column5.Name = "Column5";
+            this.Column5.Width = 90;
+            // 
+            // Column6
+            // 
+            this.Column6.DataPropertyName = "Tuoi";
+            this.Column6.HeaderText = "Age";
+            this.Column6.MinimumWidth = 8;
+            this.Column6.Name = "Column6";
+            this.Column6.Width = 90;
             // 
             // groupBox2
             // 
@@ -216,6 +277,7 @@
             // 
             // button5
             // 
+            this.button5.BackColor = System.Drawing.Color.White;
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.ForeColor = System.Drawing.Color.DodgerBlue;
             this.button5.Location = new System.Drawing.Point(45, 53);
@@ -224,11 +286,12 @@
             this.button5.Size = new System.Drawing.Size(112, 42);
             this.button5.TabIndex = 22;
             this.button5.Text = "Edit";
-            this.button5.UseVisualStyleBackColor = true;
+            this.button5.UseVisualStyleBackColor = false;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // groupBox1
             // 
+            this.groupBox1.BackColor = System.Drawing.Color.Transparent;
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(24, 0);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -241,7 +304,7 @@
             // groupBox3
             // 
             this.groupBox3.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox3.Controls.Add(this.btExitupdate);
+            this.groupBox3.Controls.Add(this.btCloseupdate);
             this.groupBox3.Controls.Add(this.button5);
             this.groupBox3.ForeColor = System.Drawing.Color.DodgerBlue;
             this.groupBox3.Location = new System.Drawing.Point(948, 91);
@@ -253,18 +316,19 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Feature edit";
             // 
-            // btExitupdate
+            // btCloseupdate
             // 
-            this.btExitupdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btExitupdate.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.btExitupdate.Location = new System.Drawing.Point(45, 125);
-            this.btExitupdate.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btExitupdate.Name = "btExitupdate";
-            this.btExitupdate.Size = new System.Drawing.Size(112, 42);
-            this.btExitupdate.TabIndex = 23;
-            this.btExitupdate.Text = "Exit";
-            this.btExitupdate.UseVisualStyleBackColor = true;
-            this.btExitupdate.Click += new System.EventHandler(this.btExitupdate_Click);
+            this.btCloseupdate.BackColor = System.Drawing.Color.White;
+            this.btCloseupdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btCloseupdate.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.btCloseupdate.Location = new System.Drawing.Point(45, 125);
+            this.btCloseupdate.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btCloseupdate.Name = "btCloseupdate";
+            this.btCloseupdate.Size = new System.Drawing.Size(112, 42);
+            this.btCloseupdate.TabIndex = 23;
+            this.btCloseupdate.Text = "Close";
+            this.btCloseupdate.UseVisualStyleBackColor = false;
+            this.btCloseupdate.Click += new System.EventHandler(this.btExitupdate_Click);
             // 
             // UpdateInfor
             // 
@@ -297,6 +361,12 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.TextBox txtEmail;
@@ -313,6 +383,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textTuoi;
         private System.Windows.Forms.TextBox textChhucVu;
-        private System.Windows.Forms.Button btExitupdate;
+        private System.Windows.Forms.Button btCloseupdate;
     }
 }
