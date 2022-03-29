@@ -27,7 +27,7 @@ namespace QuanLyThuVien2
         {
             txtTenTaiKhoan.Text = dataGridView2.Rows[e.RowIndex].Cells[0].Value.ToString();
             txtPass.Text = dataGridView2.Rows[e.RowIndex].Cells[1].Value.ToString();
-            txtQuyen.Text = dataGridView2.Rows[e.RowIndex].Cells[2].Value.ToString();
+            comboBoxAr.Text = dataGridView2.Rows[e.RowIndex].Cells[2].Value.ToString();
             txtTenNhanVien.Text = dataGridView2.Rows[e.RowIndex].Cells[3].Value.ToString();
             txtDiaChi.Text = dataGridView2.Rows[e.RowIndex].Cells[4].Value.ToString();
             txtDienThoai.Text = dataGridView2.Rows[e.RowIndex].Cells[5].Value.ToString();
@@ -55,23 +55,26 @@ namespace QuanLyThuVien2
             //else
             //{
                 btnXoa.Enabled = true;
-            if (txtTenNhanVien.Text.Length - 1 == 0)
+            if (txtTenNhanVien.Text == "")
                 MessageBox.Show("Employee names cannot be left blank");
             else
                 if (txtPass.Text.Length - 1 == 0 || txtPass.Text.Length - 1 == 0)
                 MessageBox.Show("Password cannot be left blank");
+            //else
+            //        if (txtQuyen.Text.Length - 1 == 0)
+            //    MessageBox.Show("Permissions cannot be left blank");
             else
-                    if (txtQuyen.Text.Length - 1 == 0)
-                MessageBox.Show("Permissions cannot be left blank");
-            else
-                        if (txtDiaChi.Text.Length - 1 == 0)
+                 if (txtDiaChi.Text == "")
                 MessageBox.Show("The address cannot be left blank");
             else
-                            if (txtChucVu.Text.Length - 1 == 0)
+                            if (txtChucVu.Text == "")
                 MessageBox.Show("Position cannot be left blank");
             else
-                                if (txtTuoi.Text.Length - 1 == 0)
+                                if (txtTuoi.Text== "")
                 MessageBox.Show("Age cannot be left blank");
+            else
+                                if (txtEmail.Text == "")
+                MessageBox.Show("Email cannot be left blank");
             else
                                     if (txtDienThoai.Text.Length - 1 <= 0 || txtDienThoai.Text.Length - 1 > 12)
                 MessageBox.Show("Phone number must be longer than 12 digits and less than 0 digits");
@@ -80,7 +83,7 @@ namespace QuanLyThuVien2
                 MessageBox.Show("Wrong age");
             else
             {
-                string SQL = ("update tblNhanVien set MatKhau='" + txtPass.Text + "',QUYENHAN='" + txtQuyen.Text
+                string SQL = ("update tblNhanVien set MatKhau='" + txtPass.Text + "',QUYENHAN='" + comboBoxAr.Text
                     + "',TENNV='" + txtTenNhanVien.Text + "',DiaChi='" + txtDiaChi.Text + "',DIENTHOAI='"
                     + txtDienThoai.Text + "',EMAIL='" + txtEmail.Text + "',ChucVu='" + txtChucVu.Text + "',Tuoi='"
                     + txtTuoi.Text + "'where TaiKhoan='" + TenTK + "'");
@@ -95,7 +98,7 @@ namespace QuanLyThuVien2
         private void btnXoa_Click(object sender, EventArgs e)
         {
             string s = txtTenNhanVien.Text;
-            if (txtQuyen.Text == "admin")
+            if (comboBoxAr.Text == "admin")
                 MessageBox.Show("Can't delete admin account");
             else
             {
@@ -107,7 +110,7 @@ namespace QuanLyThuVien2
                     MessageBox.Show("Delete successfully");
                     txtTenTaiKhoan.Text = "";
                     txtPass.Text = "";
-                    txtQuyen.Text = "";
+                    comboBoxAr.Text = "";
                     txtTenNhanVien.Text = "";
                     txtDiaChi.Text = "";
                     txtDienThoai.Text = "";
@@ -127,7 +130,7 @@ namespace QuanLyThuVien2
         {
             txtTenTaiKhoan.Text = dataGridView2.Rows[e.RowIndex].Cells[0].Value.ToString();
             txtPass.Text = dataGridView2.Rows[e.RowIndex].Cells[1].Value.ToString();
-            txtQuyen.Text = dataGridView2.Rows[e.RowIndex].Cells[2].Value.ToString();
+            comboBoxAr.Text = dataGridView2.Rows[e.RowIndex].Cells[2].Value.ToString();
             txtTenNhanVien.Text = dataGridView2.Rows[e.RowIndex].Cells[3].Value.ToString();
             txtDiaChi.Text = dataGridView2.Rows[e.RowIndex].Cells[4].Value.ToString();
             txtDienThoai.Text = dataGridView2.Rows[e.RowIndex].Cells[5].Value.ToString();

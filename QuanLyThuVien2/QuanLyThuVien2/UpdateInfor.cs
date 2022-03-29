@@ -24,6 +24,7 @@ namespace QuanLyThuVien2
 
         private void button5_Click(object sender, EventArgs e)
         {
+            cls.LoadData2DataGridView(dataGridView1, "select TENNV , DIACHI , DIENTHOAI , EMAIL , ChucVu , Tuoi from tblNhanVien where TAIKHOAN='" + Main.TenDN + "'");
             if (txtSoDienThoai.Text.Length - 1 <= 0)
                 MessageBox.Show("Phone number cannot be less than 0 digits");
             else
@@ -34,16 +35,25 @@ namespace QuanLyThuVien2
                 {
                     if (Convert.ToInt32(textTuoi.Text) <= 18 || Convert.ToInt32(textTuoi.Text) > 60)
                         MessageBox.Show("wrong age");
+                    if (txtNHANVIEN.Text == "")
+                        MessageBox.Show("Staff's Name can't be left bank");
                     else
-                    {
-                        string strUpdate = "update tblNhanVien set TENNV='" + txtNHANVIEN.Text + "',DIACHI='" + txtDiaChi.Text + "',DIENTHOAI='" + txtSoDienThoai.Text + "',EMAIL='" + txtEmail.Text + "',ChucVu='" + textChhucVu.Text + "',Tuoi='" + textTuoi.Text + "' where TAIKHOAN='" + Main.TenDN + "'";
-                        cls.ThucThiSQLTheoKetNoi(strUpdate);
-                    }
-                }
-                    
+                        if (txtDiaChi.Text == "")
+                        MessageBox.Show("Address can't be left bank");
+                    else
+                        if (txtEmail.Text == "")
+                        MessageBox.Show("Email can't be left bank");
+                    else
+                        if (textChhucVu.Text == "")
+                        MessageBox.Show("Position can't be left bank");
+                    else
+                        {
+                            string strUpdate = "update tblNhanVien set TENNV='" + txtNHANVIEN.Text + "',DIACHI='" + txtDiaChi.Text + "',DIENTHOAI='" + txtSoDienThoai.Text + "',EMAIL='" + txtEmail.Text + "',ChucVu='" + textChhucVu.Text + "',Tuoi='" + textTuoi.Text + "' where TAIKHOAN='" + Main.TenDN + "'";
+                            cls.ThucThiSQLTheoKetNoi(strUpdate);
+                            MessageBox.Show("Edit Successful");
+                        }
+                }         
             }
-            cls.LoadData2DataGridView(dataGridView1, "select TENNV , DIACHI , DIENTHOAI , EMAIL , ChucVu , Tuoi from tblNhanVien where TAIKHOAN='" + Main.TenDN + "'");
-            MessageBox.Show("Edit Successful");
         }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)

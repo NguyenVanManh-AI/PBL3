@@ -69,6 +69,10 @@ namespace QuanLyThuVien2
                         toolUpdateStaff.Enabled = true;
                         toolChangePassword.Enabled = true;
                         toolLogout.Enabled = true;
+                        toolCreateAccount.Visible = false;
+                        toolCheckEmployeeInformation.Visible = false;
+
+
                     }
                     if (Quyen == "admin")
                     {
@@ -101,6 +105,8 @@ namespace QuanLyThuVien2
                     groupBox1.Enabled = false;
                     groupBox1.Visible = false;
                     btSI.Visible = false;
+                    menuStrip1.Visible = true;
+                    label4.Text = "Welcome to Library Management";
                 }
             }
         }
@@ -124,7 +130,7 @@ namespace QuanLyThuVien2
             try
             {
                 Con = new SqlConnection();
-                Con.ConnectionString = @"Server =DESKTOP-QCOSLTK\VANMANH;" + "database=Library2; Integrated Security = true";
+                Con.ConnectionString = @"Server =21AK22-COM\QUOC;" + "database=Library; Integrated Security = true";
                 Con.Open();
             }
             catch { MessageBox.Show("Unable to connect !!! :(( "); }
