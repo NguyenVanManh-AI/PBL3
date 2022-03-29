@@ -16,7 +16,7 @@ namespace QuanLyThuVien2
         {
             InitializeComponent();
         }
-        public static string TenDN, MatKhau, Quyen;
+        public static string TenDN, MatKhau, Quyen; // TenDN = tên đăng nhập 
         SqlCommand sqlCommand;
         public Object layGiaTri(string sql) //lay gia tri cua  cot dau tien trong bang 
         {
@@ -68,6 +68,7 @@ namespace QuanLyThuVien2
                         toolCreateAccount.Enabled = false;
                         toolUpdateStaff.Enabled = true;
                         toolChangePassword.Enabled = true;
+                        toolLogout.Enabled = true;
                     }
                     if (Quyen == "admin")
                     {
@@ -93,10 +94,13 @@ namespace QuanLyThuVien2
                         toolCreateAccount.Enabled = true;
                         toolUpdateStaff.Enabled = true;
                         toolChangePassword.Enabled = true;
+                        toolLogout.Enabled = true;
                     }
                     textBox1.Text = "";
                     textBox2.Text = "";
                     groupBox1.Enabled = false;
+                    groupBox1.Visible = false;
+                    btSI.Visible = false;
                 }
             }
         }
@@ -120,7 +124,7 @@ namespace QuanLyThuVien2
             try
             {
                 Con = new SqlConnection();
-                Con.ConnectionString = @"Server =DESKTOP-QCOSLTK\VANMANH; " + "database=Library2; Integrated Security = true";
+                Con.ConnectionString = @"Data Source=LAPTOP-R0QH577D\SQLEXPRESS;Database=Library222;User Id=sa;pwd=123456";
                 Con.Open();
             }
             catch { MessageBox.Show("Unable to connect !!! :(( "); }
@@ -139,6 +143,59 @@ namespace QuanLyThuVien2
             timer1.Start();
         }
 
+        
+        private void KiemTraThongTinNguoiDung(object sender, EventArgs e)
+        {
+            CheckInfor K = new CheckInfor();
+            K.Show();
+        }
+
+        private void CapNhatThongTin(object sender, EventArgs e)
+        {
+            UpdateInfor cnnhanvien = new UpdateInfor();
+            cnnhanvien.Show();
+        }
+
+        private void TaoTaiKhoan(object sender, EventArgs e)
+        {
+            Register TAO = new Register();
+            TAO.Show();
+        }
+
+        private void DoiMatKhau(object sender, EventArgs e)
+        {
+            ChangePassword doimatkhau = new ChangePassword();
+            doimatkhau.Show();
+        }
+
+        private void DangXuat(object sender, EventArgs e)
+        {
+            this.Hide();
+            Main x = new Main();
+            x.Show();
+        }
+
+        private void CapNhatThongTinTacGia(object sender, EventArgs e)
+        {
+            UpdateAuthorInformation CNTG = new UpdateAuthorInformation();
+            CNTG.Show();
+        }
+
+        private void CapNhatLinhVuc(object sender, EventArgs e)
+        {
+            UpdateFieldInformation cnLV = new UpdateFieldInformation();
+            cnLV.Show();
+        }
+
+        private void CapNhatNhaXuatBan(object sender, EventArgs e)
+        {
+            UpdatePublisherInformation cnNXB = new UpdatePublisherInformation();
+            cnNXB.Show();
+        }
+
+
+
+
         private void cậpNhậtSáchToolStripMenuItem_Click(object sender, EventArgs e)
         {
             //b capnhatsach cnsach = new capnhatsach();
@@ -156,35 +213,27 @@ namespace QuanLyThuVien2
         {
         }
 
-        private void cậpNhậtNhânViênToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            //b capnhatnhanvien cnnhanvien = new capnhatnhanvien();
-            //b cnnhanvien.Show();
-        }
+        
 
-        private void cậpNhậtTácGiảToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            //b capnhatTG cnTG = new capnhatTG();
-            //b cnTG.Show();
-        }
+        //private void cậpNhậtTácGiảToolStripMenuItem_Click(object sender, EventArgs e)
+        //{
+        //    capnhatTG cnTG = new capnhatTG();
+        //    cnTG.Show();
+        //}
 
-        private void cậpNhậtNhàXuấtBảnToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            //b capnhatNXB cnNXB = new capnhatNXB();
-            //b cnNXB.Show();
-        }
+        //private void cậpNhậtNhàXuấtBảnToolStripMenuItem_Click(object sender, EventArgs e)
+        //{
+        //    capnhatNXB cnNXB = new capnhatNXB();
+        //    cnNXB.Show();
+        //}
 
-        private void cậpNhậtLĩnhVựcToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            //b capnhatLv cnLV = new capnhatLv();
-            //b cnLV.Show();
-        }
+        //private void cậpNhậtLĩnhVựcToolStripMenuItem_Click(object sender, EventArgs e)
+        //{
+        //    capnhatLv cnLV = new capnhatLv();
+        //    cnLV.Show();
+        //}
 
-        private void đổiMậtKhẩuToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            ChangePassword doimatkhau = new ChangePassword();
-            doimatkhau.Show();
-        }
+        
 
         private void cậpNhậtThôngTinMượnToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -192,11 +241,7 @@ namespace QuanLyThuVien2
             //b T.Show();
         }
 
-        private void tạoTàiKhoảnToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Register TAO = new Register();
-            TAO.Show();
-        }
+        
 
         private void tìnhTrạngSáchToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -230,6 +275,14 @@ namespace QuanLyThuVien2
         {
 
         }
+
+        
+
+        private void btSI_Click(object sender, EventArgs e)
+        {
+            groupBox1.Visible = true;
+        }
+        
 
         private void lĩnhVựcToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -384,11 +437,7 @@ namespace QuanLyThuVien2
             //b Dg.Show();
         }
 
-        private void KiêmTratoolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-            //b KiemTraTTNhanVien K = new KiemTraTTNhanVien();
-            //b K.Show();
-        }
+        
 
     }
 }

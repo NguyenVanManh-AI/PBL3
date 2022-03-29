@@ -11,17 +11,29 @@ C:\Users\LAPTOP KIM ANH\source\repos\QuanLyThuVien2\QuanLyThuVien2\obj\Debug\Qua
 C:\Users\LAPTOP KIM ANH\source\repos\QuanLyThuVien2\QuanLyThuVien2\obj\Debug\QuanLyThuVien2.Main.resources
 C:\Users\LAPTOP KIM ANH\source\repos\QuanLyThuVien2\QuanLyThuVien2\obj\Debug\QuanLyThuVien2.ChangePassword.resources
 C:\Users\LAPTOP KIM ANH\source\repos\QuanLyThuVien2\QuanLyThuVien2\obj\Debug\QuanLyThuVien2.Register.resources
-E:\PBL3\TaiLieuPBL#\QuanLyThuVien2\QuanLyThuVien2\bin\Debug\QuanLyThuVien2.exe.config
-E:\PBL3\TaiLieuPBL#\QuanLyThuVien2\QuanLyThuVien2\bin\Debug\QuanLyThuVien2.exe
-E:\PBL3\TaiLieuPBL#\QuanLyThuVien2\QuanLyThuVien2\bin\Debug\QuanLyThuVien2.pdb
-E:\PBL3\TaiLieuPBL#\QuanLyThuVien2\QuanLyThuVien2\obj\Debug\QuanLyThuVien2.csproj.AssemblyReference.cache
-E:\PBL3\TaiLieuPBL#\QuanLyThuVien2\QuanLyThuVien2\obj\Debug\QuanLyThuVien2.csproj.SuggestedBindingRedirects.cache
-E:\PBL3\TaiLieuPBL#\QuanLyThuVien2\QuanLyThuVien2\obj\Debug\QuanLyThuVien2.ChangePassword.resources
-E:\PBL3\TaiLieuPBL#\QuanLyThuVien2\QuanLyThuVien2\obj\Debug\QuanLyThuVien2.Main.resources
-E:\PBL3\TaiLieuPBL#\QuanLyThuVien2\QuanLyThuVien2\obj\Debug\QuanLyThuVien2.Properties.Resources.resources
-E:\PBL3\TaiLieuPBL#\QuanLyThuVien2\QuanLyThuVien2\obj\Debug\QuanLyThuVien2.Register.resources
-E:\PBL3\TaiLieuPBL#\QuanLyThuVien2\QuanLyThuVien2\obj\Debug\QuanLyThuVien2.csproj.GenerateResource.cache
-E:\PBL3\TaiLieuPBL#\QuanLyThuVien2\QuanLyThuVien2\obj\Debug\QuanLyThuVien2.csproj.CoreCompileInputs.cache
-E:\PBL3\TaiLieuPBL#\QuanLyThuVien2\QuanLyThuVien2\obj\Debug\QuanLyThuVien2.exe
-E:\PBL3\TaiLieuPBL#\QuanLyThuVien2\QuanLyThuVien2\obj\Debug\QuanLyThuVien2.pdb
-E:\PBL3\TaiLieuPBL#\QuanLyThuVien2\QuanLyThuVien2\obj\Debug\QuanLyThuVien2.KiemTraTTNVien.resources
+C:\Users\LAPTOP KIM ANH\source\repos\QuanLyThuVien2\QuanLyThuVien2\obj\Debug\QuanLyThuVien2.updateInfor.resources
+C:\Users\LAPTOP KIM ANH\source\repos\QuanLyThuVien2\QuanLyThuVien2\obj\Debug\QuanLyThuVien2.CheckInfor.resources
+C:\Users\LAPTOP KIM ANH\source\repos\QuanLyThuVien2\QuanLyThuVien2\obj\Debug\QuanLyThuVien2.UpdateFieldInformation.resources
+C:\Users\LAPTOP KIM ANH\source\repos\QuanLyThuVien2\QuanLyThuVien2\obj\Debug\QuanLyThuVien2.UpdatePublisherInformation.resources
+C:\Users\LAPTOP KIM ANH\source\repos\QuanLyThuVien2\QuanLyThuVien2\obj\Debug\QuanLyThuVien2.UpdateAuthorInformation.resources
+C:\Users\ACER\Downloads\PBL3-main\QuanLyThuVien2\QuanLyThuVien2\bin\Debug\QuanLyThuVien2.exe.config
+C:\Users\ACER\Downloads\PBL3-main\QuanLyThuVien2\QuanLyThuVien2\bin\Debug\QuanLyThuVien2.exe
+C:\Users\ACER\Downloads\PBL3-main\QuanLyThuVien2\QuanLyThuVien2\bin\Debug\QuanLyThuVien2.pdb
+C:\Users\ACER\Downloads\PBL3-main\QuanLyThuVien2\QuanLyThuVien2\obj\Debug\QuanLyThuVien2.csproj.AssemblyReference.cache
+C:\Users\ACER\Downloads\PBL3-main\QuanLyThuVien2\QuanLyThuVien2\obj\Debug\QuanLyThuVien2.csproj.SuggestedBindingRedirects.cache
+C:\Users\ACER\Downloads\PBL3-main\QuanLyThuVien2\QuanLyThuVien2\obj\Debug\QuanLyThuVien2.UpdateFieldInformation.resources
+C:\Users\ACER\Downloads\PBL3-main\QuanLyThuVien2\QuanLyThuVien2\obj\Debug\QuanLyThuVien2.UpdatePublisherInformation.resources
+C:\Users\ACER\Downloads\PBL3-main\QuanLyThuVien2\QuanLyThuVien2\obj\Debug\QuanLyThuVien2.UpdateAuthorInformation.resources
+C:\Users\ACER\Downloads\PBL3-main\QuanLyThuVien2\QuanLyThuVien2\obj\Debug\QuanLyThuVien2.CheckInfor.resources
+C:\Users\ACER\Downloads\PBL3-main\QuanLyThuVien2\QuanLyThuVien2\obj\Debug\QuanLyThuVien2.UpdateInfor.resources
+C:\Users\ACER\Downloads\PBL3-main\QuanLyThuVien2\QuanLyThuVien2\obj\Debug\QuanLyThuVien2.ChangePassword.resources
+C:\Users\ACER\Downloads\PBL3-main\QuanLyThuVien2\QuanLyThuVien2\obj\Debug\QuanLyThuVien2.Main.resources
+C:\Users\ACER\Downloads\PBL3-main\QuanLyThuVien2\QuanLyThuVien2\obj\Debug\QuanLyThuVien2.Properties.Resources.resources
+C:\Users\ACER\Downloads\PBL3-main\QuanLyThuVien2\QuanLyThuVien2\obj\Debug\QuanLyThuVien2.Register.resources
+C:\Users\ACER\Downloads\PBL3-main\QuanLyThuVien2\QuanLyThuVien2\obj\Debug\QuanLyThuVien2.csproj.GenerateResource.cache
+C:\Users\ACER\Downloads\PBL3-main\QuanLyThuVien2\QuanLyThuVien2\obj\Debug\QuanLyThuVien2.csproj.CoreCompileInputs.cache
+C:\Users\ACER\Downloads\PBL3-main\QuanLyThuVien2\QuanLyThuVien2\obj\Debug\QuanLyThuVien2.exe
+C:\Users\ACER\Downloads\PBL3-main\QuanLyThuVien2\QuanLyThuVien2\obj\Debug\QuanLyThuVien2.pdb
+C:\Users\ACER\Downloads\PBL3-main\QuanLyThuVien2\QuanLyThuVien2\obj\Debug\QuanLyThuVien2.UpdateBorrowingInforamtion.resources
+C:\Users\ACER\Downloads\PBL3-main\QuanLyThuVien2\QuanLyThuVien2\obj\Debug\QuanLyThuVien2.UpdateReaders.resources
+C:\Users\ACER\Downloads\PBL3-main\QuanLyThuVien2\QuanLyThuVien2\obj\Debug\QuanLyThuVien2.UpdatesBook.resources
