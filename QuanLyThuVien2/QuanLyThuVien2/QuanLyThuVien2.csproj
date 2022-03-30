@@ -46,6 +46,28 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="UpdateFieldInformation.cs" />
+    <Compile Include="UpdateFieldInformation.Designer.cs">
+      <DependentUpon>UpdateFieldInformation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdatePublisherInformation.cs" />
+    <Compile Include="UpdatePublisherInformation.Designer.cs">
+      <DependentUpon>UpdatePublisherInformation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateAuthorInformation.cs" />
+    <Compile Include="UpdateAuthorInformation.Designer.cs">
+      <DependentUpon>UpdateAuthorInformation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CheckInfor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CheckInfor.Designer.cs">
+      <DependentUpon>CheckInfor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateInfor.cs" />
+    <Compile Include="UpdateInfor.Designer.cs">
+      <DependentUpon>UpdateInfor.cs</DependentUpon>
+    </Compile>
     <Compile Include="ChangePassword.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -67,6 +89,21 @@
     <Compile Include="Register.Designer.cs">
       <DependentUpon>Register.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="UpdateFieldInformation.resx">
+      <DependentUpon>UpdateFieldInformation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdatePublisherInformation.resx">
+      <DependentUpon>UpdatePublisherInformation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateAuthorInformation.resx">
+      <DependentUpon>UpdateAuthorInformation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CheckInfor.resx">
+      <DependentUpon>CheckInfor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateInfor.resx">
+      <DependentUpon>UpdateInfor.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ChangePassword.resx">
       <DependentUpon>ChangePassword.cs</DependentUpon>
     </EmbeddedResource>
