@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
     <Compile Include="UpdateBorrowingInforamtion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -76,6 +77,8 @@
     <Compile Include="CheckInfor.Designer.cs">
       <DependentUpon>CheckInfor.cs</DependentUpon>
     </Compile>
+=======
+>>>>>>> main
     <Compile Include="UpdateInfor.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -103,6 +106,7 @@
     <Compile Include="Register.Designer.cs">
       <DependentUpon>Register.cs</DependentUpon>
     </Compile>
+<<<<<<< HEAD
     <Compile Include="UpdateReaders.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -127,6 +131,8 @@
     <EmbeddedResource Include="CheckInfor.resx">
       <DependentUpon>CheckInfor.cs</DependentUpon>
     </EmbeddedResource>
+=======
+>>>>>>> main
     <EmbeddedResource Include="UpdateInfor.resx">
       <DependentUpon>UpdateInfor.cs</DependentUpon>
     </EmbeddedResource>

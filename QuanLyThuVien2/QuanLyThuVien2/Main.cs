@@ -85,10 +85,13 @@ namespace QuanLyThuVien2
                         toolUpdateStaff.Enabled = true;
                         toolChangePassword.Enabled = true;
                         toolLogout.Enabled = true;
+<<<<<<< HEAD
                         toolCreateAccount.Visible = false;
                         toolCheckEmployeeInformation.Visible = false;
 
 
+=======
+>>>>>>> main
                     }
                     if (Quyen == "admin")
                     {
@@ -121,8 +124,11 @@ namespace QuanLyThuVien2
                     groupBox1.Enabled = false;
                     groupBox1.Visible = false;
                     btSI.Visible = false;
+<<<<<<< HEAD
                     menuStrip1.Visible = true;
                     label4.Text = "Welcome to Library Management";
+=======
+>>>>>>> main
                 }
             }
         }
@@ -257,8 +263,13 @@ namespace QuanLyThuVien2
 
         private void CapNhatThongTinMuon(object sender, EventArgs e)
         {
+<<<<<<< HEAD
             UpdateBorrowingInforamtion ttmuon = new UpdateBorrowingInforamtion();
             ttmuon.Show();
+=======
+            UpdateInfor cnnhanvien = new UpdateInfor();
+            cnnhanvien.Show();
+>>>>>>> main
         }
 
 
@@ -296,13 +307,25 @@ namespace QuanLyThuVien2
 
         }
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> main
         private void btSI_Click(object sender, EventArgs e)
         {
             groupBox1.Visible = true;
         }
 
+<<<<<<< HEAD
+=======
+        private void toolLogout_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Main x = new Main();
+            x.Show();
+        }
+>>>>>>> main
 
         private void lĩnhVựcToolStripMenuItem_Click(object sender, EventArgs e)
         {

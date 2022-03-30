@@ -31,12 +31,15 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UpdateInfor));
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+<<<<<<< HEAD
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+=======
+>>>>>>> main
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.textTuoi = new System.Windows.Forms.TextBox();
             this.textChhucVu = new System.Windows.Forms.TextBox();
@@ -53,7 +56,10 @@
             this.button5 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+<<<<<<< HEAD
             this.btCloseupdate = new System.Windows.Forms.Button();
+=======
+>>>>>>> main
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -76,6 +82,7 @@
             // 
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.Window;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+<<<<<<< HEAD
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column2,
@@ -83,6 +90,8 @@
             this.Column4,
             this.Column5,
             this.Column6});
+=======
+>>>>>>> main
             this.dataGridView1.Location = new System.Drawing.Point(24, 440);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dataGridView1.Name = "dataGridView1";
@@ -90,6 +99,7 @@
             this.dataGridView1.Size = new System.Drawing.Size(1128, 352);
             this.dataGridView1.TabIndex = 26;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
+<<<<<<< HEAD
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // Column1
@@ -139,6 +149,8 @@
             this.Column6.MinimumWidth = 8;
             this.Column6.Name = "Column6";
             this.Column6.Width = 90;
+=======
+>>>>>>> main
             // 
             // groupBox2
             // 
@@ -277,21 +289,34 @@
             // 
             // button5
             // 
+<<<<<<< HEAD
             this.button5.BackColor = System.Drawing.Color.White;
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.ForeColor = System.Drawing.Color.DodgerBlue;
             this.button5.Location = new System.Drawing.Point(45, 53);
+=======
+            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.button5.Location = new System.Drawing.Point(45, 80);
+>>>>>>> main
             this.button5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(112, 42);
             this.button5.TabIndex = 22;
             this.button5.Text = "Edit";
+<<<<<<< HEAD
             this.button5.UseVisualStyleBackColor = false;
+=======
+            this.button5.UseVisualStyleBackColor = true;
+>>>>>>> main
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // groupBox1
             // 
+<<<<<<< HEAD
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
+=======
+>>>>>>> main
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(24, 0);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -304,7 +329,10 @@
             // groupBox3
             // 
             this.groupBox3.BackColor = System.Drawing.Color.Transparent;
+<<<<<<< HEAD
             this.groupBox3.Controls.Add(this.btCloseupdate);
+=======
+>>>>>>> main
             this.groupBox3.Controls.Add(this.button5);
             this.groupBox3.ForeColor = System.Drawing.Color.DodgerBlue;
             this.groupBox3.Location = new System.Drawing.Point(948, 91);
@@ -316,6 +344,7 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Feature edit";
             // 
+<<<<<<< HEAD
             // btCloseupdate
             // 
             this.btCloseupdate.BackColor = System.Drawing.Color.White;
@@ -331,6 +360,9 @@
             this.btCloseupdate.Click += new System.EventHandler(this.btExitupdate_Click);
             // 
             // UpdateInfor
+=======
+            // updateInfor
+>>>>>>> main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -343,7 +375,11 @@
             this.Controls.Add(this.dataGridView1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+<<<<<<< HEAD
             this.Name = "UpdateInfor";
+=======
+            this.Name = "updateInfor";
+>>>>>>> main
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Update Information";
             this.Load += new System.EventHandler(this.capnhatnhanvien_Load);
@@ -361,12 +397,15 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dataGridView1;
+<<<<<<< HEAD
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
+=======
+>>>>>>> main
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.TextBox txtEmail;
@@ -383,6 +422,9 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textTuoi;
         private System.Windows.Forms.TextBox textChhucVu;
+<<<<<<< HEAD
         private System.Windows.Forms.Button btCloseupdate;
+=======
+>>>>>>> main
     }
 }
