@@ -7,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
+// mã hóa mật khẩu 
+using System.Security.Cryptography;
+
 namespace QuanLyThuVien2
 {
     public partial class ChangePassword : Form
@@ -23,6 +26,15 @@ namespace QuanLyThuVien2
 
         private void button1_Click(object sender, EventArgs e)
         {
+            byte[] temp = ASCIIEncoding.ASCII.GetBytes(textBox1.Text);
+            byte[] hasData = new MD5CryptoServiceProvider().ComputeHash(temp);
+
+            string hasPass = "";
+
+            foreach (byte item in hasData)
+            {
+                hasPass += item;
+            }
             if (textBox2.Text.Length - 1 < 5)//kiểm tra mật khẩu mới xem co lờn hơn 6 ký tụ ko
                 MessageBox.Show("the new password is too short");
             else
@@ -32,13 +44,23 @@ namespace QuanLyThuVien2
                     if (textBox2.Text != textBox3.Text)//kiểm tra mật khẩu mới và xác nhận mk co trung nha
                 MessageBox.Show("The new password does not match, please re-enter it");
             else
-                        if (textBox1.Text != Main.MatKhau)//kiểm tra mật khẩu cũ
+                        if (hasPass != Main.checkMatKhau)//kiểm tra mật khẩu cũ
+
                 MessageBox.Show("The old password is wrong, please re - enter the password");
             else
             {
                 try//thục hiên cau lệnh để thay đổi mật khẩu
                 {
-                    string strUpdate = "Update tblNhanVien set MATKHAU='" + textBox2.Text + "'where MATKHAU='" + textBox1.Text + "'";
+                    byte[] temp2 = ASCIIEncoding.ASCII.GetBytes(textBox2.Text);
+                    byte[] hasData2 = new MD5CryptoServiceProvider().ComputeHash(temp2);
+
+                    string hasPass2 = "";
+
+                    foreach (byte item in hasData2)
+                    {
+                        hasPass2 += item;
+                    }
+                    string strUpdate = "Update tblNhanVien set MATKHAU='" + hasPass2 + "'where MATKHAU='" + Main.checkMatKhau + "'";
                     cls.ThucThiSQLTheoKetNoi(strUpdate);
                     MessageBox.Show("Change password successfully");
                 }
