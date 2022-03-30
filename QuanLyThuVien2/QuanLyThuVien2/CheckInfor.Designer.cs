@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CheckInfor));
-            this.btnThoat = new System.Windows.Forms.Button();
+            this.btClose = new System.Windows.Forms.Button();
             this.btnSua = new System.Windows.Forms.Button();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.btnXoa = new System.Windows.Forms.Button();
@@ -41,6 +41,15 @@
             this.txtTenNhanVien = new System.Windows.Forms.TextBox();
             this.txtPass = new System.Windows.Forms.TextBox();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label11 = new System.Windows.Forms.Label();
             this.txtTenTaiKhoan = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
@@ -64,8 +73,9 @@
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // btnThoat
+            // btClose
             // 
+<<<<<<< HEAD
             this.btnThoat.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThoat.Location = new System.Drawing.Point(23, 135);
             this.btnThoat.Name = "btnThoat";
@@ -74,22 +84,40 @@
             this.btnThoat.Text = "Exit";
             this.btnThoat.UseVisualStyleBackColor = true;
             this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
+=======
+            this.btClose.BackColor = System.Drawing.Color.White;
+            this.btClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btClose.Location = new System.Drawing.Point(35, 208);
+            this.btClose.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btClose.Name = "btClose";
+            this.btClose.Size = new System.Drawing.Size(112, 35);
+            this.btClose.TabIndex = 2;
+            this.btClose.Text = "Close";
+            this.btClose.UseVisualStyleBackColor = false;
+            this.btClose.Click += new System.EventHandler(this.btnThoat_Click);
+>>>>>>> 19b1773e776b07bac8486b8c7b8403effba0bcee
             // 
             // btnSua
             // 
+            this.btnSua.BackColor = System.Drawing.Color.White;
             this.btnSua.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSua.Location = new System.Drawing.Point(23, 34);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(75, 23);
             this.btnSua.TabIndex = 0;
+<<<<<<< HEAD
             this.btnSua.Text = "Update";
             this.btnSua.UseVisualStyleBackColor = true;
+=======
+            this.btnSua.Text = "Edit";
+            this.btnSua.UseVisualStyleBackColor = false;
+>>>>>>> 19b1773e776b07bac8486b8c7b8403effba0bcee
             this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // groupBox4
             // 
             this.groupBox4.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox4.Controls.Add(this.btnThoat);
+            this.groupBox4.Controls.Add(this.btClose);
             this.groupBox4.Controls.Add(this.btnXoa);
             this.groupBox4.Controls.Add(this.btnSua);
             this.groupBox4.ForeColor = System.Drawing.Color.DodgerBlue;
@@ -102,13 +130,14 @@
             // 
             // btnXoa
             // 
+            this.btnXoa.BackColor = System.Drawing.Color.White;
             this.btnXoa.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXoa.Location = new System.Drawing.Point(23, 86);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(75, 23);
             this.btnXoa.TabIndex = 1;
             this.btnXoa.Text = "Delete";
-            this.btnXoa.UseVisualStyleBackColor = true;
+            this.btnXoa.UseVisualStyleBackColor = false;
             this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // txtTuoi
@@ -164,6 +193,16 @@
             // 
             this.dataGridView2.BackgroundColor = System.Drawing.SystemColors.Window;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2,
+            this.Column3,
+            this.Column4,
+            this.Column5,
+            this.Column6,
+            this.Column7,
+            this.Column8,
+            this.Column9});
             this.dataGridView2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dataGridView2.GridColor = System.Drawing.SystemColors.AppWorkspace;
             this.dataGridView2.Location = new System.Drawing.Point(3, 81);
@@ -173,6 +212,78 @@
             this.dataGridView2.TabIndex = 2;
             this.dataGridView2.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellClick);
             this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellClick);
+            // 
+            // Column1
+            // 
+            this.Column1.DataPropertyName = "TaiKhoan";
+            this.Column1.HeaderText = "User name";
+            this.Column1.MinimumWidth = 8;
+            this.Column1.Name = "Column1";
+            this.Column1.Width = 90;
+            // 
+            // Column2
+            // 
+            this.Column2.DataPropertyName = "MatKhau";
+            this.Column2.HeaderText = "Password";
+            this.Column2.MinimumWidth = 8;
+            this.Column2.Name = "Column2";
+            this.Column2.Width = 90;
+            // 
+            // Column3
+            // 
+            this.Column3.DataPropertyName = "QUYENHAN";
+            this.Column3.HeaderText = "Access Rights";
+            this.Column3.MinimumWidth = 8;
+            this.Column3.Name = "Column3";
+            this.Column3.Width = 90;
+            // 
+            // Column4
+            // 
+            this.Column4.DataPropertyName = "TENNV";
+            this.Column4.HeaderText = "Staff\'s name";
+            this.Column4.MinimumWidth = 8;
+            this.Column4.Name = "Column4";
+            this.Column4.Width = 90;
+            // 
+            // Column5
+            // 
+            this.Column5.DataPropertyName = "DiaChi";
+            this.Column5.HeaderText = "Address";
+            this.Column5.MinimumWidth = 8;
+            this.Column5.Name = "Column5";
+            this.Column5.Width = 90;
+            // 
+            // Column6
+            // 
+            this.Column6.DataPropertyName = "DIENTHOAI";
+            this.Column6.HeaderText = "Number Phone";
+            this.Column6.MinimumWidth = 8;
+            this.Column6.Name = "Column6";
+            this.Column6.Width = 90;
+            // 
+            // Column7
+            // 
+            this.Column7.DataPropertyName = "EMAIL";
+            this.Column7.HeaderText = "Email";
+            this.Column7.MinimumWidth = 8;
+            this.Column7.Name = "Column7";
+            this.Column7.Width = 90;
+            // 
+            // Column8
+            // 
+            this.Column8.DataPropertyName = "ChucVu";
+            this.Column8.HeaderText = "Position";
+            this.Column8.MinimumWidth = 8;
+            this.Column8.Name = "Column8";
+            this.Column8.Width = 90;
+            // 
+            // Column9
+            // 
+            this.Column9.DataPropertyName = "Tuoi";
+            this.Column9.HeaderText = "Age";
+            this.Column9.MinimumWidth = 8;
+            this.Column9.Name = "Column9";
+            this.Column9.Width = 90;
             // 
             // label11
             // 
@@ -387,7 +498,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Button btnThoat;
+        private System.Windows.Forms.Button btClose;
         private System.Windows.Forms.Button btnSua;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.Button btnXoa;
@@ -399,6 +510,15 @@
         private System.Windows.Forms.TextBox txtTenNhanVien;
         private System.Windows.Forms.TextBox txtPass;
         private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;//++
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox txtTenTaiKhoan;
         private System.Windows.Forms.Label label9;

@@ -13,6 +13,7 @@ C:\Users\LAPTOP KIM ANH\source\repos\QuanLyThuVien2\QuanLyThuVien2\obj\Debug\Qua
 C:\Users\LAPTOP KIM ANH\source\repos\QuanLyThuVien2\QuanLyThuVien2\obj\Debug\QuanLyThuVien2.Register.resources
 C:\Users\LAPTOP KIM ANH\source\repos\QuanLyThuVien2\QuanLyThuVien2\obj\Debug\QuanLyThuVien2.updateInfor.resources
 C:\Users\LAPTOP KIM ANH\source\repos\QuanLyThuVien2\QuanLyThuVien2\obj\Debug\QuanLyThuVien2.CheckInfor.resources
+<<<<<<< HEAD
 C:\GIT\PBL3\QuanLyThuVien2\QuanLyThuVien2\bin\Debug\QuanLyThuVien2.exe.config
 C:\GIT\PBL3\QuanLyThuVien2\QuanLyThuVien2\bin\Debug\QuanLyThuVien2.exe
 C:\GIT\PBL3\QuanLyThuVien2\QuanLyThuVien2\bin\Debug\QuanLyThuVien2.pdb
@@ -28,3 +29,8 @@ C:\GIT\PBL3\QuanLyThuVien2\QuanLyThuVien2\obj\Debug\QuanLyThuVien2.csproj.Genera
 C:\GIT\PBL3\QuanLyThuVien2\QuanLyThuVien2\obj\Debug\QuanLyThuVien2.csproj.CoreCompileInputs.cache
 C:\GIT\PBL3\QuanLyThuVien2\QuanLyThuVien2\obj\Debug\QuanLyThuVien2.exe
 C:\GIT\PBL3\QuanLyThuVien2\QuanLyThuVien2\obj\Debug\QuanLyThuVien2.pdb
+=======
+C:\Users\LAPTOP KIM ANH\source\repos\QuanLyThuVien2\QuanLyThuVien2\obj\Debug\QuanLyThuVien2.UpdateFieldInformation.resources
+C:\Users\LAPTOP KIM ANH\source\repos\QuanLyThuVien2\QuanLyThuVien2\obj\Debug\QuanLyThuVien2.UpdatePublisherInformation.resources
+C:\Users\LAPTOP KIM ANH\source\repos\QuanLyThuVien2\QuanLyThuVien2\obj\Debug\QuanLyThuVien2.UpdateAuthorInformation.resources
+>>>>>>> 19b1773e776b07bac8486b8c7b8403effba0bcee

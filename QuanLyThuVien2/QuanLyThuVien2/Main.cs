@@ -181,6 +181,27 @@ namespace QuanLyThuVien2
             x.Show();
         }
 
+        private void CapNhatThongTinTacGia(object sender, EventArgs e)
+        {
+            UpdateAuthorInformation CNTG = new UpdateAuthorInformation();
+            CNTG.Show();
+        }
+
+        private void CapNhatLinhVuc(object sender, EventArgs e)
+        {
+            UpdateFieldInformation cnLV = new UpdateFieldInformation();
+            cnLV.Show();
+        }
+
+        private void CapNhatNhaXuatBan(object sender, EventArgs e)
+        {
+            UpdatePublisherInformation cnNXB = new UpdatePublisherInformation();
+            cnNXB.Show();
+        }
+
+
+
+
         private void cậpNhậtSáchToolStripMenuItem_Click(object sender, EventArgs e)
         {
             //b capnhatsach cnsach = new capnhatsach();
@@ -200,23 +221,23 @@ namespace QuanLyThuVien2
 
         
 
-        private void cậpNhậtTácGiảToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            //b capnhatTG cnTG = new capnhatTG();
-            //b cnTG.Show();
-        }
+        //private void cậpNhậtTácGiảToolStripMenuItem_Click(object sender, EventArgs e)
+        //{
+        //    capnhatTG cnTG = new capnhatTG();
+        //    cnTG.Show();
+        //}
 
-        private void cậpNhậtNhàXuấtBảnToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            //b capnhatNXB cnNXB = new capnhatNXB();
-            //b cnNXB.Show();
-        }
+        //private void cậpNhậtNhàXuấtBảnToolStripMenuItem_Click(object sender, EventArgs e)
+        //{
+        //    capnhatNXB cnNXB = new capnhatNXB();
+        //    cnNXB.Show();
+        //}
 
-        private void cậpNhậtLĩnhVựcToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            //b capnhatLv cnLV = new capnhatLv();
-            //b cnLV.Show();
-        }
+        //private void cậpNhậtLĩnhVựcToolStripMenuItem_Click(object sender, EventArgs e)
+        //{
+        //    capnhatLv cnLV = new capnhatLv();
+        //    cnLV.Show();
+        //}
 
         
 
@@ -260,6 +281,8 @@ namespace QuanLyThuVien2
         {
 
         }
+
+        
 
         private void btSI_Click(object sender, EventArgs e)
         {
