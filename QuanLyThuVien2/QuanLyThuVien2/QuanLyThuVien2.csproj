@@ -46,15 +46,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="UpdateFieldInformation.cs" />
+    <Compile Include="UpdateFieldInformation.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="UpdateFieldInformation.Designer.cs">
       <DependentUpon>UpdateFieldInformation.cs</DependentUpon>
     </Compile>
-    <Compile Include="UpdatePublisherInformation.cs" />
+    <Compile Include="UpdatePublisherInformation.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="UpdatePublisherInformation.Designer.cs">
       <DependentUpon>UpdatePublisherInformation.cs</DependentUpon>
     </Compile>
-    <Compile Include="UpdateAuthorInformation.cs" />
+    <Compile Include="UpdateAuthorInformation.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="UpdateAuthorInformation.Designer.cs">
       <DependentUpon>UpdateAuthorInformation.cs</DependentUpon>
     </Compile>
@@ -64,7 +70,9 @@
     <Compile Include="CheckInfor.Designer.cs">
       <DependentUpon>CheckInfor.cs</DependentUpon>
     </Compile>
-    <Compile Include="UpdateInfor.cs" />
+    <Compile Include="UpdateInfor.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="UpdateInfor.Designer.cs">
       <DependentUpon>UpdateInfor.cs</DependentUpon>
     </Compile>
