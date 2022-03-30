@@ -75,16 +75,14 @@
             // 
             // btClose
             // 
-<<<<<<< HEAD
-            this.btnThoat.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThoat.Location = new System.Drawing.Point(23, 135);
-            this.btnThoat.Name = "btnThoat";
-            this.btnThoat.Size = new System.Drawing.Size(75, 23);
-            this.btnThoat.TabIndex = 2;
-            this.btnThoat.Text = "Exit";
-            this.btnThoat.UseVisualStyleBackColor = true;
-            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
-=======
+            //this.btnThoat.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            //this.btnThoat.Location = new System.Drawing.Point(23, 135);
+            //this.btnThoat.Name = "btnThoat";
+            //this.btnThoat.Size = new System.Drawing.Size(75, 23);
+            //this.btnThoat.TabIndex = 2;
+            //this.btnThoat.Text = "Exit";
+            //this.btnThoat.UseVisualStyleBackColor = true;
+            //this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             this.btClose.BackColor = System.Drawing.Color.White;
             this.btClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btClose.Location = new System.Drawing.Point(35, 208);
@@ -95,7 +93,6 @@
             this.btClose.Text = "Close";
             this.btClose.UseVisualStyleBackColor = false;
             this.btClose.Click += new System.EventHandler(this.btnThoat_Click);
->>>>>>> 19b1773e776b07bac8486b8c7b8403effba0bcee
             // 
             // btnSua
             // 
@@ -105,13 +102,10 @@
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(75, 23);
             this.btnSua.TabIndex = 0;
-<<<<<<< HEAD
             this.btnSua.Text = "Update";
             this.btnSua.UseVisualStyleBackColor = true;
-=======
             this.btnSua.Text = "Edit";
             this.btnSua.UseVisualStyleBackColor = false;
->>>>>>> 19b1773e776b07bac8486b8c7b8403effba0bcee
             this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // groupBox4

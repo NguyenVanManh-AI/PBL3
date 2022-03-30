@@ -75,9 +75,7 @@
             // 
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.Window;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-<<<<<<< HEAD
             this.dataGridView1.Location = new System.Drawing.Point(16, 286);
-=======
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column2,
@@ -87,7 +85,6 @@
             this.Column6});
             this.dataGridView1.Location = new System.Drawing.Point(24, 440);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
->>>>>>> 19b1773e776b07bac8486b8c7b8403effba0bcee
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.Size = new System.Drawing.Size(752, 229);
@@ -273,13 +270,10 @@
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(75, 27);
             this.button5.TabIndex = 22;
-<<<<<<< HEAD
             this.button5.Text = "Update";
             this.button5.UseVisualStyleBackColor = true;
-=======
             this.button5.Text = "Edit";
             this.button5.UseVisualStyleBackColor = false;
->>>>>>> 19b1773e776b07bac8486b8c7b8403effba0bcee
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // groupBox1
@@ -307,17 +301,16 @@
             // 
             // btCloseupdate
             // 
-<<<<<<< HEAD
-            this.btExitupdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btExitupdate.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.btExitupdate.Location = new System.Drawing.Point(30, 81);
-            this.btExitupdate.Name = "btExitupdate";
-            this.btExitupdate.Size = new System.Drawing.Size(75, 27);
-            this.btExitupdate.TabIndex = 23;
-            this.btExitupdate.Text = "Exit";
-            this.btExitupdate.UseVisualStyleBackColor = true;
-            this.btExitupdate.Click += new System.EventHandler(this.btExitupdate_Click);
-=======
+            //this.btExitupdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            //this.btExitupdate.ForeColor = System.Drawing.Color.DodgerBlue;
+            //this.btExitupdate.Location = new System.Drawing.Point(30, 81);
+            //this.btExitupdate.Name = "btExitupdate";
+            //this.btExitupdate.Size = new System.Drawing.Size(75, 27);
+            //this.btExitupdate.TabIndex = 23;
+            //this.btExitupdate.Text = "Exit";
+            //this.btExitupdate.UseVisualStyleBackColor = true;
+            //this.btExitupdate.Click += new System.EventHandler(this.btExitupdate_Click);
+            //btUpdate
             this.btCloseupdate.BackColor = System.Drawing.Color.White;
             this.btCloseupdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btCloseupdate.ForeColor = System.Drawing.Color.DodgerBlue;
@@ -329,7 +322,6 @@
             this.btCloseupdate.Text = "Close";
             this.btCloseupdate.UseVisualStyleBackColor = false;
             this.btCloseupdate.Click += new System.EventHandler(this.btExitupdate_Click);
->>>>>>> 19b1773e776b07bac8486b8c7b8403effba0bcee
             // 
             // UpdateInfor
             // 
