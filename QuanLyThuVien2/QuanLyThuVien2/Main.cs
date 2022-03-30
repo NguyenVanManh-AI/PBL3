@@ -8,6 +8,9 @@ using System.Text;
 using System.Data.SqlClient;
 using System.Windows.Forms;
 
+// mã hóa mật khẩu 
+using System.Security.Cryptography;
+
 namespace QuanLyThuVien2
 {
     public partial class Main : Form
@@ -16,7 +19,7 @@ namespace QuanLyThuVien2
         {
             InitializeComponent();
         }
-        public static string TenDN, MatKhau, Quyen; // TenDN = tên đăng nhập 
+        public static string TenDN, MatKhau, Quyen , checkMatKhau; // TenDN = tên đăng nhập 
         SqlCommand sqlCommand;
         public Object layGiaTri(string sql) //lay gia tri cua  cot dau tien trong bang 
         {
@@ -34,9 +37,22 @@ namespace QuanLyThuVien2
         {
             TenDN = textBox1.Text;
             MatKhau = textBox2.Text;
+
+            byte[] temp = ASCIIEncoding.ASCII.GetBytes(textBox2.Text);
+            byte[] hasData = new MD5CryptoServiceProvider().ComputeHash(temp);
+
+            string hasPass = "";
+
+            foreach (byte item in hasData)
+            {
+                hasPass += item;
+            }
+            // MessageBox.Show(hasPass);
+
+            checkMatKhau = hasPass;
             if (TenDN != "")
             {
-                object Q = layGiaTri("select QuyenHan from tblNhanVien where TaiKhoan='" + TenDN + "' and MatKhau='" + MatKhau + "'");
+                object Q = layGiaTri("select QuyenHan from tblNhanVien where TaiKhoan='" + TenDN + "' and MatKhau='" + hasPass + "'");
                 if (Q == null)
                 {
                     MessageBox.Show("Wrong account :((");
@@ -69,6 +85,10 @@ namespace QuanLyThuVien2
                         toolUpdateStaff.Enabled = true;
                         toolChangePassword.Enabled = true;
                         toolLogout.Enabled = true;
+                        toolCreateAccount.Visible = false;
+                        toolCheckEmployeeInformation.Visible = false;
+
+
                     }
                     if (Quyen == "admin")
                     {
@@ -101,6 +121,8 @@ namespace QuanLyThuVien2
                     groupBox1.Enabled = false;
                     groupBox1.Visible = false;
                     btSI.Visible = false;
+                    menuStrip1.Visible = true;
+                    label4.Text = "Welcome to Library Management";
                 }
             }
         }
@@ -143,7 +165,7 @@ namespace QuanLyThuVien2
             timer1.Start();
         }
 
-        
+
         private void KiemTraThongTinNguoiDung(object sender, EventArgs e)
         {
             CheckInfor K = new CheckInfor();
@@ -194,18 +216,16 @@ namespace QuanLyThuVien2
         }
 
 
-
-
-        private void cậpNhậtSáchToolStripMenuItem_Click(object sender, EventArgs e)
+        private void CapNhatSach(object sender, EventArgs e)
         {
-            //b capnhatsach cnsach = new capnhatsach();
-            //b cnsach.Show();
+            UpdatesBook cnsach = new UpdatesBook();
+            cnsach.Show();
         }
 
-        private void cậpNhậtToolStripMenuItem1_Click(object sender, EventArgs e)
+        private void CapNhatNguoiDoc(object sender, EventArgs e)
         {
-            //b capnhatdocgia cndocgia = new capnhatdocgia();
-            //b cndocgia.Show();
+            UpdateReaders cndocgia = new UpdateReaders();
+            cndocgia.Show();
 
         }
 
@@ -213,7 +233,7 @@ namespace QuanLyThuVien2
         {
         }
 
-        
+
 
         //private void cậpNhậtTácGiảToolStripMenuItem_Click(object sender, EventArgs e)
         //{
@@ -233,15 +253,15 @@ namespace QuanLyThuVien2
         //    cnLV.Show();
         //}
 
-        
 
-        private void cậpNhậtThôngTinMượnToolStripMenuItem_Click(object sender, EventArgs e)
+
+        private void CapNhatThongTinMuon(object sender, EventArgs e)
         {
-            //b thongtinmuon T = new thongtinmuon();
-            //b T.Show();
+            UpdateBorrowingInforamtion ttmuon = new UpdateBorrowingInforamtion();
+            ttmuon.Show();
         }
 
-        
+
 
         private void tìnhTrạngSáchToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -276,13 +296,13 @@ namespace QuanLyThuVien2
 
         }
 
-        
+
 
         private void btSI_Click(object sender, EventArgs e)
         {
             groupBox1.Visible = true;
         }
-        
+
 
         private void lĩnhVựcToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -437,7 +457,7 @@ namespace QuanLyThuVien2
             //b Dg.Show();
         }
 
-        
+
 
     }
 }

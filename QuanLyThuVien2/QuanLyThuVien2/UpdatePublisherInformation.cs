@@ -227,7 +227,7 @@ namespace QuanLyThuVien2
             }
 
         }
-
+        // chỉ cho nhập từ 0 đến 9 
         private void txtSODIENTHOAI_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar >= '0' && e.KeyChar <= '9')

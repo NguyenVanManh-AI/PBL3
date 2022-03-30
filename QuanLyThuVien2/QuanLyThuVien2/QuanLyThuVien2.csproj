@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="UpdateBorrowingInforamtion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateBorrowingInforamtion.Designer.cs">
+      <DependentUpon>UpdateBorrowingInforamtion.cs</DependentUpon>
+    </Compile>
     <Compile Include="UpdateFieldInformation.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -96,6 +102,18 @@
     </Compile>
     <Compile Include="Register.Designer.cs">
       <DependentUpon>Register.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateReaders.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateReaders.Designer.cs">
+      <DependentUpon>UpdateReaders.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdatesBook.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdatesBook.Designer.cs">
+      <DependentUpon>UpdatesBook.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="UpdateFieldInformation.resx">
       <DependentUpon>UpdateFieldInformation.cs</DependentUpon>
