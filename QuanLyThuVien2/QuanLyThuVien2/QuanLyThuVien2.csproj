@@ -47,12 +47,15 @@
   </ItemGroup>
   <ItemGroup>
 <<<<<<< HEAD
+<<<<<<< HEAD
     <Compile Include="UpdateBorrowingInforamtion.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="UpdateBorrowingInforamtion.Designer.cs">
       <DependentUpon>UpdateBorrowingInforamtion.cs</DependentUpon>
     </Compile>
+=======
+>>>>>>> aeada7609291a07fc93389c96bc5cc05f4583939
     <Compile Include="UpdateFieldInformation.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -77,8 +80,11 @@
     <Compile Include="CheckInfor.Designer.cs">
       <DependentUpon>CheckInfor.cs</DependentUpon>
     </Compile>
+<<<<<<< HEAD
 =======
 >>>>>>> main
+=======
+>>>>>>> aeada7609291a07fc93389c96bc5cc05f4583939
     <Compile Include="UpdateInfor.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -107,6 +113,7 @@
       <DependentUpon>Register.cs</DependentUpon>
     </Compile>
 <<<<<<< HEAD
+<<<<<<< HEAD
     <Compile Include="UpdateReaders.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -119,6 +126,8 @@
     <Compile Include="UpdatesBook.Designer.cs">
       <DependentUpon>UpdatesBook.cs</DependentUpon>
     </Compile>
+=======
+>>>>>>> aeada7609291a07fc93389c96bc5cc05f4583939
     <EmbeddedResource Include="UpdateFieldInformation.resx">
       <DependentUpon>UpdateFieldInformation.cs</DependentUpon>
     </EmbeddedResource>
@@ -131,8 +140,11 @@
     <EmbeddedResource Include="CheckInfor.resx">
       <DependentUpon>CheckInfor.cs</DependentUpon>
     </EmbeddedResource>
+<<<<<<< HEAD
 =======
 >>>>>>> main
+=======
+>>>>>>> aeada7609291a07fc93389c96bc5cc05f4583939
     <EmbeddedResource Include="UpdateInfor.resx">
       <DependentUpon>UpdateInfor.cs</DependentUpon>
     </EmbeddedResource>
