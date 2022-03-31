@@ -46,7 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-<<<<<<< HEAD
+    <Compile Include="ForgotPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ForgotPassword.Designer.cs">
+      <DependentUpon>ForgotPassword.cs</DependentUpon>
+    </Compile>
     <Compile Include="UpdateBorrowingInforamtion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -77,8 +82,6 @@
     <Compile Include="CheckInfor.Designer.cs">
       <DependentUpon>CheckInfor.cs</DependentUpon>
     </Compile>
-=======
->>>>>>> main
     <Compile Include="UpdateInfor.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -106,7 +109,6 @@
     <Compile Include="Register.Designer.cs">
       <DependentUpon>Register.cs</DependentUpon>
     </Compile>
-<<<<<<< HEAD
     <Compile Include="UpdateReaders.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -119,6 +121,9 @@
     <Compile Include="UpdatesBook.Designer.cs">
       <DependentUpon>UpdatesBook.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ForgotPassword.resx">
+      <DependentUpon>ForgotPassword.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UpdateFieldInformation.resx">
       <DependentUpon>UpdateFieldInformation.cs</DependentUpon>
     </EmbeddedResource>
@@ -131,8 +136,6 @@
     <EmbeddedResource Include="CheckInfor.resx">
       <DependentUpon>CheckInfor.cs</DependentUpon>
     </EmbeddedResource>
-=======
->>>>>>> main
     <EmbeddedResource Include="UpdateInfor.resx">
       <DependentUpon>UpdateInfor.cs</DependentUpon>
     </EmbeddedResource>
