@@ -85,10 +85,25 @@ namespace QuanLyThuVien2
                         toolUpdateStaff.Enabled = true;
                         toolChangePassword.Enabled = true;
                         toolLogout.Enabled = true;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> aeada7609291a07fc93389c96bc5cc05f4583939
+>>>>>>> main
                         toolCreateAccount.Visible = false;
                         toolCheckEmployeeInformation.Visible = false;
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> main
+=======
+>>>>>>> aeada7609291a07fc93389c96bc5cc05f4583939
+>>>>>>> main
                     }
                     if (Quyen == "admin")
                     {
@@ -121,8 +136,21 @@ namespace QuanLyThuVien2
                     groupBox1.Enabled = false;
                     groupBox1.Visible = false;
                     btSI.Visible = false;
+<<<<<<< HEAD
                     menuStrip1.Visible = true;
                     label4.Text = "Welcome to Library Management";
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+                    menuStrip1.Visible = true;
+                    label4.Text = "Welcome to Library Management";
+=======
+>>>>>>> main
+=======
+                    menuStrip1.Visible = true;
+                    label4.Text = "Welcome to Library Management";
+>>>>>>> aeada7609291a07fc93389c96bc5cc05f4583939
+>>>>>>> main
                 }
             }
         }
@@ -146,7 +174,7 @@ namespace QuanLyThuVien2
             try
             {
                 Con = new SqlConnection();
-                Con.ConnectionString = @"Server =DESKTOP-QCOSLTK\VANMANH;" + "database=Library2; Integrated Security = true";
+                Con.ConnectionString = @"Server =21AK22-COM\QUOC;" + "database=Library; Integrated Security = true";
                 Con.Open();
             }
             catch { MessageBox.Show("Unable to connect !!! :(( "); }
@@ -233,7 +261,11 @@ namespace QuanLyThuVien2
         {
         }
 
+<<<<<<< HEAD
 
+=======
+        
+>>>>>>> aeada7609291a07fc93389c96bc5cc05f4583939
 
         //private void cậpNhậtTácGiảToolStripMenuItem_Click(object sender, EventArgs e)
         //{
@@ -303,13 +335,42 @@ namespace QuanLyThuVien2
 
         }
 
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> main
+=======
+        
+
+>>>>>>> aeada7609291a07fc93389c96bc5cc05f4583939
+>>>>>>> main
         private void btSI_Click(object sender, EventArgs e)
         {
             groupBox1.Visible = true;
         }
+<<<<<<< HEAD
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+        private void toolLogout_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Main x = new Main();
+            x.Show();
+        }
+>>>>>>> main
+=======
+        
+>>>>>>> aeada7609291a07fc93389c96bc5cc05f4583939
+>>>>>>> main
 
         private void lĩnhVựcToolStripMenuItem_Click(object sender, EventArgs e)
         {

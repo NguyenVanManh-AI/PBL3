@@ -54,7 +54,11 @@ namespace QuanLyThuVien2
             //}
             //else
             //{
+<<<<<<< HEAD
             btnXoa.Enabled = true;
+=======
+                btnXoa.Enabled = true;
+>>>>>>> aeada7609291a07fc93389c96bc5cc05f4583939
             if (txtTenNhanVien.Text == "")
                 MessageBox.Show("Employee names cannot be left blank");
             else
@@ -70,7 +74,11 @@ namespace QuanLyThuVien2
                             if (txtChucVu.Text == "")
                 MessageBox.Show("Position cannot be left blank");
             else
+<<<<<<< HEAD
                                 if (txtTuoi.Text == "")
+=======
+                                if (txtTuoi.Text== "")
+>>>>>>> aeada7609291a07fc93389c96bc5cc05f4583939
                 MessageBox.Show("Age cannot be left blank");
             else
                                 if (txtEmail.Text == "")
