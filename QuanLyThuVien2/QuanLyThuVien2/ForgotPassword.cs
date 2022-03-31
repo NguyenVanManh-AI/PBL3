@@ -29,7 +29,7 @@ namespace QuanLyThuVien2
         }
 
         SqlCommand sqlCommand;
-         
+        string passwordText = "strongtech2908"; // 1 
         public Object layGiaTri(string sql) //lay gia tri cua  cot dau tien trong bang 
         {
             sqlCommand = new SqlCommand();
@@ -50,10 +50,9 @@ namespace QuanLyThuVien2
             cls.KetNoi();
         }
 
-        string fromText = "strongtechmaster@gmail.com";
-        string passwordText = "strongtech2908";
-        //string toText = "nguyenvanmanh2001it1@gmail.com";
-        // string codeText = "2908";
+        string fromText = "strongtechmaster@gmail.com"; // 2 
+       
+         
 
         public string codeText;
 
@@ -72,7 +71,8 @@ namespace QuanLyThuVien2
             object strForgot = layGiaTri("select EMAIL from tblNhanVien where TaiKhoan='" + username.Text + "'");
             EmailUser = Convert.ToString(strForgot);
 
-            MessageBox.Show(EmailUser);
+            //MessageBox.Show("Gửi đến Mail : "+ EmailUser);
+            MessageBox.Show("Gửi đến Mail : " + EmailUser.Substring(0, (EmailUser.Length-10)/3) +"*********"+ EmailUser.Substring((EmailUser.Length - 10)*2/ 3));
 
             codeText = Convert.ToString(RandomNumber(1000, 9999));
 
@@ -101,7 +101,7 @@ namespace QuanLyThuVien2
             try
             {
                 Con = new SqlConnection();
-                Con.ConnectionString = @"Server =DESKTOP-QCOSLTK\VANMANH;" + "database=Library2; Integrated Security = true";
+                Con.ConnectionString = @"Server =DESKTOP-QCOSLTK\VANMANH;" + "database=Library2; Integrated Security = true"; // 3 
                 Con.Open();
             }
             catch {   }
