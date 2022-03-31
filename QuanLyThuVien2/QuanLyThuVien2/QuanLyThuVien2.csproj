@@ -47,7 +47,16 @@
   </ItemGroup>
   <ItemGroup>
 <<<<<<< HEAD
+    <Compile Include="ForgotPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ForgotPassword.Designer.cs">
+      <DependentUpon>ForgotPassword.cs</DependentUpon>
+    </Compile>
+=======
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> main
     <Compile Include="UpdateBorrowingInforamtion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -82,9 +91,12 @@
     </Compile>
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 >>>>>>> main
 =======
 >>>>>>> aeada7609291a07fc93389c96bc5cc05f4583939
+>>>>>>> main
     <Compile Include="UpdateInfor.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -113,7 +125,10 @@
       <DependentUpon>Register.cs</DependentUpon>
     </Compile>
 <<<<<<< HEAD
+=======
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> main
     <Compile Include="UpdateReaders.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -126,8 +141,14 @@
     <Compile Include="UpdatesBook.Designer.cs">
       <DependentUpon>UpdatesBook.cs</DependentUpon>
     </Compile>
+<<<<<<< HEAD
+    <EmbeddedResource Include="ForgotPassword.resx">
+      <DependentUpon>ForgotPassword.cs</DependentUpon>
+    </EmbeddedResource>
+=======
 =======
 >>>>>>> aeada7609291a07fc93389c96bc5cc05f4583939
+>>>>>>> main
     <EmbeddedResource Include="UpdateFieldInformation.resx">
       <DependentUpon>UpdateFieldInformation.cs</DependentUpon>
     </EmbeddedResource>
@@ -142,9 +163,12 @@
     </EmbeddedResource>
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 >>>>>>> main
 =======
 >>>>>>> aeada7609291a07fc93389c96bc5cc05f4583939
+>>>>>>> main
     <EmbeddedResource Include="UpdateInfor.resx">
       <DependentUpon>UpdateInfor.cs</DependentUpon>
     </EmbeddedResource>

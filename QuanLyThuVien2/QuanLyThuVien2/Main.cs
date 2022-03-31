@@ -86,18 +86,24 @@ namespace QuanLyThuVien2
                         toolChangePassword.Enabled = true;
                         toolLogout.Enabled = true;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> aeada7609291a07fc93389c96bc5cc05f4583939
+>>>>>>> main
                         toolCreateAccount.Visible = false;
                         toolCheckEmployeeInformation.Visible = false;
 
 
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 >>>>>>> main
 =======
 >>>>>>> aeada7609291a07fc93389c96bc5cc05f4583939
+>>>>>>> main
                     }
                     if (Quyen == "admin")
                     {
@@ -131,6 +137,10 @@ namespace QuanLyThuVien2
                     groupBox1.Visible = false;
                     btSI.Visible = false;
 <<<<<<< HEAD
+                    menuStrip1.Visible = true;
+                    label4.Text = "Welcome to Library Management";
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
                     menuStrip1.Visible = true;
                     label4.Text = "Welcome to Library Management";
@@ -140,6 +150,7 @@ namespace QuanLyThuVien2
                     menuStrip1.Visible = true;
                     label4.Text = "Welcome to Library Management";
 >>>>>>> aeada7609291a07fc93389c96bc5cc05f4583939
+>>>>>>> main
                 }
             }
         }
@@ -278,13 +289,8 @@ namespace QuanLyThuVien2
 
         private void CapNhatThongTinMuon(object sender, EventArgs e)
         {
-<<<<<<< HEAD
             UpdateBorrowingInforamtion ttmuon = new UpdateBorrowingInforamtion();
             ttmuon.Show();
-=======
-            UpdateInfor cnnhanvien = new UpdateInfor();
-            cnnhanvien.Show();
->>>>>>> main
         }
 
 
@@ -317,11 +323,22 @@ namespace QuanLyThuVien2
 
         }
 
+        private void ForgotPassword_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            ForgotPassword fg = new ForgotPassword();
+            fg.Show();
+        }
+         
+
         private void label3_Click(object sender, EventArgs e)
         {
 
         }
 
+<<<<<<< HEAD
+
+
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -332,12 +349,15 @@ namespace QuanLyThuVien2
         
 
 >>>>>>> aeada7609291a07fc93389c96bc5cc05f4583939
+>>>>>>> main
         private void btSI_Click(object sender, EventArgs e)
         {
             groupBox1.Visible = true;
         }
 <<<<<<< HEAD
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
         private void toolLogout_Click(object sender, EventArgs e)
@@ -350,6 +370,7 @@ namespace QuanLyThuVien2
 =======
         
 >>>>>>> aeada7609291a07fc93389c96bc5cc05f4583939
+>>>>>>> main
 
         private void lĩnhVựcToolStripMenuItem_Click(object sender, EventArgs e)
         {

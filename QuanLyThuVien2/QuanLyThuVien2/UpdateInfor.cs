@@ -19,6 +19,10 @@ namespace QuanLyThuVien2
         private void capnhatnhanvien_Load(object sender, EventArgs e)
         {
 <<<<<<< HEAD
+            cls.LoadData2DataGridView(dataGridView1, "select TENNV , DIACHI , DIENTHOAI , EMAIL , ChucVu , Tuoi  from tblNhanVien where TAIKHOAN='" + Main.TenDN + "'");
+
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
             cls.LoadData2DataGridView(dataGridView1, "select TENNV , DIACHI , DIENTHOAI , EMAIL , ChucVu , Tuoi  from tblNhanVien where TAIKHOAN='" + Main.TenDN + "'");
 
@@ -29,6 +33,7 @@ namespace QuanLyThuVien2
             cls.LoadData2DataGridView(dataGridView1, "select TENNV , DIACHI , DIENTHOAI , EMAIL , ChucVu , Tuoi  from tblNhanVien where TAIKHOAN='" + Main.TenDN + "'");
 
 >>>>>>> aeada7609291a07fc93389c96bc5cc05f4583939
+>>>>>>> main
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -36,9 +41,12 @@ namespace QuanLyThuVien2
             cls.LoadData2DataGridView(dataGridView1, "select TENNV , DIACHI , DIENTHOAI , EMAIL , ChucVu , Tuoi from tblNhanVien where TAIKHOAN='" + Main.TenDN + "'");
             if (txtSoDienThoai.Text.Length - 1 <= 0)
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> aeada7609291a07fc93389c96bc5cc05f4583939
+>>>>>>> main
                 MessageBox.Show("Phone number cannot be less than 0 digits");
             else
             {
@@ -70,6 +78,8 @@ namespace QuanLyThuVien2
 <<<<<<< HEAD
             cls.LoadData2DataGridView(dataGridView1, "select TENNV , DIACHI , DIENTHOAI , EMAIL , ChucVu , Tuoi from tblNhanVien where TAIKHOAN='" + Main.TenDN + "'");
             MessageBox.Show("Edit Successful");
+<<<<<<< HEAD
+=======
 =======
                 MessageBox.Show("Số điện thoại không thể nhỏ hơn 0 số");
             else
@@ -88,6 +98,7 @@ namespace QuanLyThuVien2
 >>>>>>> main
 =======
 >>>>>>> aeada7609291a07fc93389c96bc5cc05f4583939
+>>>>>>> main
         }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -109,9 +120,12 @@ namespace QuanLyThuVien2
             //MessageBox.Show("Xóa thành công");
         }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> aeada7609291a07fc93389c96bc5cc05f4583939
+>>>>>>> main
 
         private void btExitupdate_Click(object sender, EventArgs e)
         {
@@ -119,8 +133,11 @@ namespace QuanLyThuVien2
         }
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 >>>>>>> main
 =======
 >>>>>>> aeada7609291a07fc93389c96bc5cc05f4583939
+>>>>>>> main
     }
 }

@@ -32,9 +32,12 @@
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> aeada7609291a07fc93389c96bc5cc05f4583939
+>>>>>>> main
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -43,9 +46,12 @@
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 >>>>>>> main
 =======
 >>>>>>> aeada7609291a07fc93389c96bc5cc05f4583939
+>>>>>>> main
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.textTuoi = new System.Windows.Forms.TextBox();
             this.textChhucVu = new System.Windows.Forms.TextBox();
@@ -63,6 +69,9 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
 <<<<<<< HEAD
+            this.btCloseupdate = new System.Windows.Forms.Button();
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
             this.btCloseupdate = new System.Windows.Forms.Button();
 =======
@@ -70,6 +79,7 @@
 =======
             this.btCloseupdate = new System.Windows.Forms.Button();
 >>>>>>> aeada7609291a07fc93389c96bc5cc05f4583939
+>>>>>>> main
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -92,11 +102,14 @@
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.Window;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
             this.dataGridView1.Location = new System.Drawing.Point(16, 286);
 =======
 >>>>>>> aeada7609291a07fc93389c96bc5cc05f4583939
+>>>>>>> main
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column2,
@@ -106,9 +119,12 @@
             this.Column6});
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 >>>>>>> main
 =======
 >>>>>>> aeada7609291a07fc93389c96bc5cc05f4583939
+>>>>>>> main
             this.dataGridView1.Location = new System.Drawing.Point(24, 440);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
 >>>>>>> 19b1773e776b07bac8486b8c7b8403effba0bcee
@@ -118,9 +134,12 @@
             this.dataGridView1.TabIndex = 26;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> aeada7609291a07fc93389c96bc5cc05f4583939
+>>>>>>> main
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // Column1
@@ -172,9 +191,12 @@
             this.Column6.Width = 90;
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 >>>>>>> main
 =======
 >>>>>>> aeada7609291a07fc93389c96bc5cc05f4583939
+>>>>>>> main
             // 
             // groupBox2
             // 
@@ -300,16 +322,14 @@
             // button5
             // 
 <<<<<<< HEAD
+=======
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> main
             this.button5.BackColor = System.Drawing.Color.White;
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.ForeColor = System.Drawing.Color.DodgerBlue;
             this.button5.Location = new System.Drawing.Point(45, 53);
-=======
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.button5.Location = new System.Drawing.Point(45, 80);
->>>>>>> main
             this.button5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
 =======
             this.button5.BackColor = System.Drawing.Color.White;
@@ -322,8 +342,9 @@
             this.button5.TabIndex = 22;
 <<<<<<< HEAD
             this.button5.Text = "Edit";
-<<<<<<< HEAD
             this.button5.UseVisualStyleBackColor = false;
+<<<<<<< HEAD
+=======
 =======
             this.button5.UseVisualStyleBackColor = true;
 >>>>>>> main
@@ -336,10 +357,14 @@
             this.button5.UseVisualStyleBackColor = false;
 >>>>>>> 19b1773e776b07bac8486b8c7b8403effba0bcee
 >>>>>>> aeada7609291a07fc93389c96bc5cc05f4583939
+>>>>>>> main
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // groupBox1
             // 
+<<<<<<< HEAD
+            this.groupBox1.BackColor = System.Drawing.Color.Transparent;
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
@@ -348,6 +373,7 @@
 =======
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
 >>>>>>> aeada7609291a07fc93389c96bc5cc05f4583939
+>>>>>>> main
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(16, 0);
             this.groupBox1.Name = "groupBox1";
@@ -359,6 +385,9 @@
             // 
             this.groupBox3.BackColor = System.Drawing.Color.Transparent;
 <<<<<<< HEAD
+            this.groupBox3.Controls.Add(this.btCloseupdate);
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
             this.groupBox3.Controls.Add(this.btCloseupdate);
 =======
@@ -366,6 +395,7 @@
 =======
             this.groupBox3.Controls.Add(this.btCloseupdate);
 >>>>>>> aeada7609291a07fc93389c96bc5cc05f4583939
+>>>>>>> main
             this.groupBox3.Controls.Add(this.button5);
             this.groupBox3.ForeColor = System.Drawing.Color.DodgerBlue;
             this.groupBox3.Location = new System.Drawing.Point(632, 59);
@@ -376,9 +406,12 @@
             this.groupBox3.Text = "Feature edit";
             // 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> aeada7609291a07fc93389c96bc5cc05f4583939
+>>>>>>> main
             // btCloseupdate
             // 
 <<<<<<< HEAD
@@ -408,10 +441,13 @@
             // UpdateInfor
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
             // updateInfor
 >>>>>>> main
 =======
 >>>>>>> aeada7609291a07fc93389c96bc5cc05f4583939
+>>>>>>> main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -425,14 +461,16 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
 <<<<<<< HEAD
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-<<<<<<< HEAD
             this.Name = "UpdateInfor";
+<<<<<<< HEAD
+=======
 =======
             this.Name = "updateInfor";
 >>>>>>> main
 =======
             this.Name = "UpdateInfor";
 >>>>>>> aeada7609291a07fc93389c96bc5cc05f4583939
+>>>>>>> main
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Update Information";
             this.Load += new System.EventHandler(this.capnhatnhanvien_Load);
@@ -451,9 +489,12 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dataGridView1;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> aeada7609291a07fc93389c96bc5cc05f4583939
+>>>>>>> main
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
@@ -462,9 +503,12 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 >>>>>>> main
 =======
 >>>>>>> aeada7609291a07fc93389c96bc5cc05f4583939
+>>>>>>> main
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.TextBox txtEmail;
@@ -482,6 +526,9 @@
         private System.Windows.Forms.TextBox textTuoi;
         private System.Windows.Forms.TextBox textChhucVu;
 <<<<<<< HEAD
+        private System.Windows.Forms.Button btCloseupdate;
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
         private System.Windows.Forms.Button btCloseupdate;
 =======
@@ -489,5 +536,6 @@
 =======
         private System.Windows.Forms.Button btCloseupdate;
 >>>>>>> aeada7609291a07fc93389c96bc5cc05f4583939
+>>>>>>> main
     }
 }
