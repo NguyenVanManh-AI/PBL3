@@ -108,19 +108,7 @@
             this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.SystemColors.Highlight;
-<<<<<<< HEAD
             this.groupBox1.Location = new System.Drawing.Point(340, 104);
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-            this.groupBox1.Location = new System.Drawing.Point(340, 104);
-=======
-            this.groupBox1.Location = new System.Drawing.Point(261, 104);
->>>>>>> main
-=======
-            this.groupBox1.Location = new System.Drawing.Point(340, 104);
->>>>>>> aeada7609291a07fc93389c96bc5cc05f4583939
->>>>>>> main
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(266, 280);
             this.groupBox1.TabIndex = 1;
@@ -291,27 +279,9 @@
             this.toolLogout.Enabled = false;
             this.toolLogout.ForeColor = System.Drawing.Color.DodgerBlue;
             this.toolLogout.Name = "toolLogout";
-<<<<<<< HEAD
             this.toolLogout.Size = new System.Drawing.Size(404, 34);
             this.toolLogout.Text = "Log out";
             this.toolLogout.Click += new System.EventHandler(this.DangXuat);
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-            this.toolLogout.Size = new System.Drawing.Size(269, 22);
-            this.toolLogout.Text = "Log out";
-            this.toolLogout.Click += new System.EventHandler(this.DangXuat);
-=======
-            this.toolLogout.Size = new System.Drawing.Size(404, 34);
-            this.toolLogout.Text = "Log out";
-            this.toolLogout.Click += new System.EventHandler(this.toolLogout_Click);
->>>>>>> main
-=======
-            this.toolLogout.Size = new System.Drawing.Size(269, 22);
-            this.toolLogout.Text = "Log out";
-            this.toolLogout.Click += new System.EventHandler(this.DangXuat);
->>>>>>> aeada7609291a07fc93389c96bc5cc05f4583939
->>>>>>> main
             // 
             // dropdownInformation
             // 
@@ -530,56 +500,20 @@
             // 
             this.toolBookStatus.ForeColor = System.Drawing.Color.DodgerBlue;
             this.toolBookStatus.Name = "toolBookStatus";
-<<<<<<< HEAD
             this.toolBookStatus.Size = new System.Drawing.Size(229, 34);
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-            this.toolBookStatus.Size = new System.Drawing.Size(150, 22);
-=======
-            this.toolBookStatus.Size = new System.Drawing.Size(229, 34);
->>>>>>> main
-=======
-            this.toolBookStatus.Size = new System.Drawing.Size(150, 22);
->>>>>>> aeada7609291a07fc93389c96bc5cc05f4583939
->>>>>>> main
             this.toolBookStatus.Text = "Book Status";
             this.toolBookStatus.Click += new System.EventHandler(this.tìnhTrạngSáchToolStripMenuItem_Click);
             // 
             // toolStripSeparator6
             // 
             this.toolStripSeparator6.Name = "toolStripSeparator6";
-<<<<<<< HEAD
             this.toolStripSeparator6.Size = new System.Drawing.Size(226, 6);
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-            this.toolStripSeparator6.Size = new System.Drawing.Size(147, 6);
-=======
-            this.toolStripSeparator6.Size = new System.Drawing.Size(226, 6);
->>>>>>> main
-=======
-            this.toolStripSeparator6.Size = new System.Drawing.Size(147, 6);
->>>>>>> aeada7609291a07fc93389c96bc5cc05f4583939
->>>>>>> main
             // 
             // toolReadersStatus
             // 
             this.toolReadersStatus.ForeColor = System.Drawing.Color.DodgerBlue;
             this.toolReadersStatus.Name = "toolReadersStatus";
-<<<<<<< HEAD
             this.toolReadersStatus.Size = new System.Drawing.Size(229, 34);
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-            this.toolReadersStatus.Size = new System.Drawing.Size(150, 22);
-=======
-            this.toolReadersStatus.Size = new System.Drawing.Size(229, 34);
->>>>>>> main
-=======
-            this.toolReadersStatus.Size = new System.Drawing.Size(150, 22);
->>>>>>> aeada7609291a07fc93389c96bc5cc05f4583939
->>>>>>> main
             this.toolReadersStatus.Text = "Readers Status";
             this.toolReadersStatus.Click += new System.EventHandler(this.sốĐộcGiảToolStripMenuItem_Click);
             // 
@@ -681,43 +615,16 @@
             // 
             // btSI
             // 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> aeada7609291a07fc93389c96bc5cc05f4583939
->>>>>>> main
             this.btSI.BackColor = System.Drawing.Color.White;
             this.btSI.BackgroundImage = global::QuanLyThuVien2.Properties.Resources.Backgroundmain;
             this.btSI.ForeColor = System.Drawing.Color.DodgerBlue;
             this.btSI.Image = global::QuanLyThuVien2.Properties.Resources.Backgroundmain;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> main
-=======
->>>>>>> aeada7609291a07fc93389c96bc5cc05f4583939
->>>>>>> main
             this.btSI.Location = new System.Drawing.Point(26, 466);
             this.btSI.Name = "btSI";
             this.btSI.Size = new System.Drawing.Size(165, 34);
             this.btSI.TabIndex = 8;
             this.btSI.Text = "Sign Into your Account";
-<<<<<<< HEAD
             this.btSI.UseVisualStyleBackColor = false;
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-            this.btSI.UseVisualStyleBackColor = false;
-=======
-            this.btSI.UseVisualStyleBackColor = true;
->>>>>>> main
-=======
-            this.btSI.UseVisualStyleBackColor = false;
->>>>>>> aeada7609291a07fc93389c96bc5cc05f4583939
->>>>>>> main
             this.btSI.Click += new System.EventHandler(this.btSI_Click);
             // 
             // Main
