@@ -122,10 +122,10 @@
             this.linkLabel1.LinkColor = System.Drawing.Color.DodgerBlue;
             this.linkLabel1.Location = new System.Drawing.Point(51, 234);
             this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(160, 23);
+            this.linkLabel1.Size = new System.Drawing.Size(282, 23);
             this.linkLabel1.TabIndex = 5;
             this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Forgot password";
+            this.linkLabel1.Text = "Forgot password ? Click here .";
             this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.ForgotPassword_LinkClicked);
             // 
             // label3
