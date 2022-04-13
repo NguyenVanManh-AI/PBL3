@@ -29,7 +29,7 @@ namespace QuanLyThuVien2
         }
 
         SqlCommand sqlCommand;
-        string passwordText = "strongtech2908"; // 1 
+        string passwordText = "Ngocquoc0705@"; // 1 
         public Object layGiaTri(string sql) //lay gia tri cua  cot dau tien trong bang 
         {
             sqlCommand = new SqlCommand();
@@ -50,7 +50,7 @@ namespace QuanLyThuVien2
             cls.KetNoi();
         }
 
-        string fromText = "strongtechmaster@gmail.com"; // 2 
+        string fromText = "quocseoweb0705@gmail.com"; // 2 
        
          
 
@@ -101,7 +101,7 @@ namespace QuanLyThuVien2
             try
             {
                 Con = new SqlConnection();
-                Con.ConnectionString = @"Server =DESKTOP-QCOSLTK\VANMANH;" + "database=Library2; Integrated Security = true"; // 3 
+                Con.ConnectionString = @"Server =21AK22-COM\QUOC;" + "database=Library; Integrated Security = true"; // 3 
                 Con.Open();
             }
             catch {   }
