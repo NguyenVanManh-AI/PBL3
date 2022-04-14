@@ -194,7 +194,6 @@
             this.menuStrip1.Size = new System.Drawing.Size(982, 32);
             this.menuStrip1.TabIndex = 2;
             this.menuStrip1.Text = "menuStrip1";
-            this.menuStrip1.Visible = false;
             // 
             // dropdownSystemManagement
             // 
@@ -728,11 +727,8 @@
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Button btSI;
         private System.Windows.Forms.ToolStripMenuItem toolLogout;
-<<<<<<< HEAD
-=======
         private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.ToolStripMenuItem dropdownSystemManagement;
->>>>>>> 0d758d741d99f3dffd29c59aab5db2e520ae6933
         //b  private System.Windows.Forms.GroupBox groupBox3;
     }
 }

@@ -19,11 +19,7 @@ namespace QuanLyThuVien2
         {
             InitializeComponent();
         }
-<<<<<<< HEAD
-        public static string TenDN, MatKhau, Quyen; // TenDN = tên đăng nhập 
-=======
         public static string TenDN, MatKhau, Quyen , checkMatKhau; // TenDN = tên đăng nhập 
->>>>>>> 0d758d741d99f3dffd29c59aab5db2e520ae6933
         SqlCommand sqlCommand;
         public Object layGiaTri(string sql) //lay gia tri cua  cot dau tien trong bang 
         {
@@ -125,14 +121,10 @@ namespace QuanLyThuVien2
                     groupBox1.Enabled = false;
                     groupBox1.Visible = false;
                     btSI.Visible = false;
-<<<<<<< HEAD
-                    menuStrip1.Visible = true;
-=======
                     dropdownSystemManagement.Visible = true;
                     dropdownInformation.Visible = true;
                     dropdownUpdate.Visible = true;
                     dropdownSearch.Visible = true;
->>>>>>> 0d758d741d99f3dffd29c59aab5db2e520ae6933
                     label4.Text = "Welcome to Library Management";
                 }
             }
@@ -176,65 +168,8 @@ namespace QuanLyThuVien2
             timer1.Start();
         }
 
-<<<<<<< HEAD
-        
-        private void KiemTraThongTinNguoiDung(object sender, EventArgs e)
-        {
-            CheckInfor K = new CheckInfor();
-            K.Show();
-        }
-
-        private void CapNhatThongTin(object sender, EventArgs e)
-        {
-            UpdateInfor cnnhanvien = new UpdateInfor();
-            cnnhanvien.Show();
-        }
-
-        private void TaoTaiKhoan(object sender, EventArgs e)
-        {
-            Register TAO = new Register();
-            TAO.Show();
-        }
-
-        private void DoiMatKhau(object sender, EventArgs e)
-        {
-            ChangePassword doimatkhau = new ChangePassword();
-            doimatkhau.Show();
-        }
-
-        private void DangXuat(object sender, EventArgs e)
-        {
-            this.Hide();
-            Main x = new Main();
-            x.Show();
-        }
-
-        private void CapNhatThongTinTacGia(object sender, EventArgs e)
-        {
-            UpdateAuthorInformation CNTG = new UpdateAuthorInformation();
-            CNTG.Show();
-        }
-
-        private void CapNhatLinhVuc(object sender, EventArgs e)
-        {
-            UpdateFieldInformation cnLV = new UpdateFieldInformation();
-            cnLV.Show();
-        }
-
-        private void CapNhatNhaXuatBan(object sender, EventArgs e)
-        {
-            UpdatePublisherInformation cnNXB = new UpdatePublisherInformation();
-            cnNXB.Show();
-        }
-
-
-
-
-        private void cậpNhậtSáchToolStripMenuItem_Click(object sender, EventArgs e)
-=======
 
         private void KiemTraThongTinNguoiDung(object sender, EventArgs e)
->>>>>>> 0d758d741d99f3dffd29c59aab5db2e520ae6933
         {
             CheckInfor K = new CheckInfor();
             K.Show();
@@ -301,37 +236,6 @@ namespace QuanLyThuVien2
         {
         }
 
-<<<<<<< HEAD
-        
-
-        //private void cậpNhậtTácGiảToolStripMenuItem_Click(object sender, EventArgs e)
-        //{
-        //    capnhatTG cnTG = new capnhatTG();
-        //    cnTG.Show();
-        //}
-
-        //private void cậpNhậtNhàXuấtBảnToolStripMenuItem_Click(object sender, EventArgs e)
-        //{
-        //    capnhatNXB cnNXB = new capnhatNXB();
-        //    cnNXB.Show();
-        //}
-
-        //private void cậpNhậtLĩnhVựcToolStripMenuItem_Click(object sender, EventArgs e)
-        //{
-        //    capnhatLv cnLV = new capnhatLv();
-        //    cnLV.Show();
-        //}
-
-        
-
-        private void cậpNhậtThôngTinMượnToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            //b thongtinmuon T = new thongtinmuon();
-            //b T.Show();
-        }
-
-        
-=======
 
 
         //private void cậpNhậtTácGiảToolStripMenuItem_Click(object sender, EventArgs e)
@@ -361,7 +265,6 @@ namespace QuanLyThuVien2
         }
 
 
->>>>>>> 0d758d741d99f3dffd29c59aab5db2e520ae6933
 
         private void tìnhTrạngSáchToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -403,17 +306,12 @@ namespace QuanLyThuVien2
 
         }
 
-<<<<<<< HEAD
-        
-=======
 
->>>>>>> 0d758d741d99f3dffd29c59aab5db2e520ae6933
 
         private void btSI_Click(object sender, EventArgs e)
         {
             groupBox1.Visible = true;
         }
-        
 
 
         private void lĩnhVựcToolStripMenuItem_Click(object sender, EventArgs e)
@@ -569,11 +467,7 @@ namespace QuanLyThuVien2
             //b Dg.Show();
         }
 
-<<<<<<< HEAD
-        
-=======
 
->>>>>>> 0d758d741d99f3dffd29c59aab5db2e520ae6933
 
     }
 }
