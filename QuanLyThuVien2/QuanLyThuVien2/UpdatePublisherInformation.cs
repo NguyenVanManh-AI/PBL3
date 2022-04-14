@@ -31,6 +31,17 @@ namespace QuanLyThuVien2
             return false;
         }
 
+        public static bool hasSpecialCharSDT(string input)
+        {
+            string specialChar = @"~!@#$%^&*()_+`-=[]\{}|;':,./<>?qưertyuiopasdfghjklzxcvbnm";
+            foreach (var item in specialChar)
+            {
+                if (input.Contains(item)) return true;
+            }
+
+            return false;
+        }
+
         public int bug = 0 , numberEdit = 0 , numberUndo = 0;
         string manxb;
         private void btAdd_Click(object sender, EventArgs e)
@@ -194,6 +205,11 @@ namespace QuanLyThuVien2
                 if (DiaChiNhaXuatBan.Text == "")
                 {
                     MessageBox.Show("Địa chỉ Nhà Xuất Bản không được để trống !");
+                    bug2++;
+                }
+                if (hasSpecialCharSDT(SDTNhaXuatBan.Text))
+                {
+                    MessageBox.Show("Số điện thoại chỉ được chứa Kí tự số và Không được chứa kí tự số hoặc kí tự đặc biệt gồm : ~!@#$%^&*()_+`-=[]{}|;':,./<>? !");
                     bug2++;
                 }
                 if (SDTNhaXuatBan.Text == "")

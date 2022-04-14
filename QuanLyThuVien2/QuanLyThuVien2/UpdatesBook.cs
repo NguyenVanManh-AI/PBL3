@@ -20,7 +20,7 @@ namespace QuanLyThuVien2
         Class.clsDatabase cls = new QuanLyThuVien2.Class.clsDatabase();
         public static bool hasSpecialChar(string input)
         {
-            string specialChar = @"~!@#$%^&*()_+`1234567890-=[]\{}|;':,./<>?";
+            string specialChar = @"123456789";
             foreach (var item in specialChar)
             {
                 if (input.Contains(item)) return true;
@@ -29,91 +29,104 @@ namespace QuanLyThuVien2
             return false;
         }
 
+        public int numberUndo = 0;
 
-        int dem = 0;
         string masach;
         private void Sua_Click(object sender, EventArgs e)
         {
-            //if (dem == 0)
-            //{
-            //    masach = txtMASACH.Text;
-            //    dem = 1;
-            //    button1.Enabled = false;
-            //    button3.Enabled = false;
-            //}
 
             if (txtMASACH.Text != "")
             {
                 if (txtTENSACH.Text != "")
 
                 {
-                    if (hasSpecialChar(txtTENSACH.Text))
+                    if (txtNAMXB.Text != "")
                     {
-                        MessageBox.Show("Tên sách không được chứa ký tự đặc biệt");
-
-
-                    }
-
-                    else
-                    {
-                        if (txtNAMXB.Text != "")
+                        if (!hasSpecialChar(txtNAMXB.Text))
                         {
+                            MessageBox.Show("Năm xuất bản chỉ được chứa ký tự số");
+                        }
+                        else
+                        {
+
                             if (txtSOTRANG.Text != "")
                             {
-                                if (txtSOLUONG.Text != "")
+                                if (!hasSpecialChar(txtSOTRANG.Text))
                                 {
-                                    if (txtsachhong.Text != "")
-                                    {
-                                        if (maskedTextBox1.Text != "")
-                                        {
-                                            try
-                                            {
-                                                string strUpdate = "Update tblSach set MASACH='" + txtMASACH.Text + "',TENSACH= N'" + txtTENSACH.Text + "',MATG='" + cboMATG.Text + "',MANXB='" + cboMANXB.Text + "',MaLv='" + cboMALv.Text + "',NAMXB='" + txtNAMXB.Text + "',SOTRANG='" + txtSOTRANG.Text + "',SOLUONG='" + txtSOLUONG.Text + "',SOSACHHONG='" + txtsachhong.Text + "',NGAYNHAP='" + maskedTextBox1.Text + "',GHICHU='" + txtGHICHU.Text + "' where MASACH='" + masach + "'";
-                                                cls.ThucThiSQLTheoPKN(strUpdate);
-                                                cls.LoadData2DataGridView(dataGridView1, "select * from tblSach");
-                                                //button1.Enabled = true;
-                                                //button3.Enabled = true;
-                                                //dem = 0;
-                                                MessageBox.Show("Sửa thành công");
-                                                txtMASACH.Text = "";
-                                                txtTENSACH.Text = "";
-                                                txtNAMXB.Text = "";
-                                                txtSOTRANG.Text = "";
-                                                txtSOLUONG.Text = "";
-                                                txtsachhong.Text = "";
-                                                maskedTextBox1.Text = "";
-                                                txtGHICHU.Text = "";
-                                                cboMALv.Text = "";
-                                                cbotenLV.Text = "";
-                                                cboMATG.Text = "";
-                                                cbotenTG.Text = "";
-                                                cboMANXB.Text = "";
-                                                cbotenNXB.Text = "";
-
-                                            }
-                                            catch { }
-                                        }
-                                        else { MessageBox.Show("Ngày nhập không được để trống"); }
-                                    }
-                                    else
-                                    {
-                                        MessageBox.Show("Số sách hỏng không được để trống");
-                                    }
+                                    MessageBox.Show("Số trang chỉ được chứa ký tự số");
 
                                 }
                                 else
                                 {
-                                    MessageBox.Show("Số lượng sách không được bỏ trống");
+                                    if (txtSOLUONG.Text != "")
+                                    {
+                                        if (!hasSpecialChar(txtSOLUONG.Text))
+                                        {
+                                            MessageBox.Show("Số lượng chỉ được chứa ký tự số");
+                                        }
+                                        else
+                                        {
+                                            if (txtsachhong.Text != "")
+                                            {
+                                                if (!hasSpecialChar(txtsachhong.Text))
+                                                {
+                                                    MessageBox.Show("Số sách hỏng chỉ được chứa ký tự số");
+                                                }
+                                                else
+                                                {
+                                                    if (maskedTextBox1.Text != "")
+                                                    {
+
+                                                        try
+                                                        {
+                                                            string strUpdate = "Update tblSach set MASACH='" + txtMASACH.Text + "',TENSACH= N'" + txtTENSACH.Text + "',MATG='" + cboMATG.Text + "',MANXB='" + cboMANXB.Text + "',MaLv='" + cboMALv.Text + "',NAMXB='" + txtNAMXB.Text + "',SOTRANG='" + txtSOTRANG.Text + "',SOLUONG='" + txtSOLUONG.Text + "',SOSACHHONG='" + txtsachhong.Text + "',NGAYNHAP='" + maskedTextBox1.Text + "',GHICHU='" + txtGHICHU.Text + "' where MASACH='" + masach + "'";
+                                                            cls.ThucThiSQLTheoPKN(strUpdate);
+                                                            cls.LoadData2DataGridView(dataGridView1, "select * from tblSach");
+                                                            MessageBox.Show("Sửa thành công");
+                                                            txtMASACH.Text = "";
+                                                            txtTENSACH.Text = "";
+                                                            txtNAMXB.Text = "";
+                                                            txtSOTRANG.Text = "";
+                                                            txtSOLUONG.Text = "";
+                                                            txtsachhong.Text = "";
+                                                            maskedTextBox1.Text = "";
+                                                            txtGHICHU.Text = "";
+                                                            cboMALv.Text = "";
+                                                            cbotenLV.Text = "";
+                                                            cboMATG.Text = "";
+                                                            cbotenTG.Text = "";
+                                                            cboMANXB.Text = "";
+                                                            cbotenNXB.Text = "";
+                                                            numberUndo = 0;
+
+                                                        }
+                                                        catch { }
+                                                    }
+                                                    else { MessageBox.Show("Ngày nhập không được để trống"); }
+                                                }
+                                            }
+                                            else
+                                            {
+                                                MessageBox.Show("Số sách hỏng không được để trống");
+                                            }
+                                        }
+                                    }
+                                    else
+                                    {
+                                        MessageBox.Show("Số lượng sách không được bỏ trống");
+                                    }
                                 }
+
                             }
                             else
                             {
                                 MessageBox.Show("Số trang không được để trống");
                             }
                         }
-                        else { MessageBox.Show("Năm xuất bản không được để trống"); }
-
                     }
+                    else { MessageBox.Show("Năm xuất bản không được để trống"); }
+
+
                 }
                 else
                 {
@@ -205,58 +218,96 @@ namespace QuanLyThuVien2
                 if (txtTENSACH.Text != "")
 
                 {
-                    if (hasSpecialChar(txtTENSACH.Text))
+                    if (txtNAMXB.Text != "")
                     {
-                        MessageBox.Show("Tên sách không được chứa ký tự đặc biệt");
-
-                    }
-
-                    else
-                    {
-                        if (txtNAMXB.Text != "")
+                        if (!hasSpecialChar(txtNAMXB.Text))
                         {
+                            MessageBox.Show("Năm xuất bản chỉ được chứa ký tự số");
+                        }
+                        else
+                        {
+
                             if (txtSOTRANG.Text != "")
                             {
-                                if (txtSOLUONG.Text != "")
+                                if (!hasSpecialChar(txtSOTRANG.Text))
                                 {
-                                    if (txtsachhong.Text != "")
-                                    {
-
-
-                                        if (maskedTextBox1.Text != "")
-                                        {
-                                            try
-                                            {
-                                                string strInsert = "Insert Into tblSach(MASACH,TENSACH,MATG,MANXB,MALv,NAMXB,SOTRANG,SOLUONG,SOSACHHONG,NGAYNHAP,GHICHU) values ('" + txtMASACH.Text
-                                                    + "',N'" + txtTENSACH.Text + "','" + cboMATG.Text + "','" + cboMANXB.Text + "','"
-                                                    + cboMALv.Text + "','" + txtNAMXB.Text + "','" + txtSOTRANG.Text + "','" + txtSOLUONG.Text
-                                                    + "','" + txtsachhong.Text + "','" + maskedTextBox1.Text + "','" + txtGHICHU.Text + "')";
-                                                cls.ThucThiSQLTheoPKN(strInsert);
-                                                cls.LoadData2DataGridView(dataGridView1, "select * from tblSach");
-                                            }
-                                            catch { MessageBox.Show("Trùng mã"); };
-                                        }
-                                        else { MessageBox.Show("Ngày nhập không được để trống"); }
-                                    }
-                                    else
-                                    {
-                                        MessageBox.Show("Số sách hỏng không được để trống");
-                                    }
+                                    MessageBox.Show("Số trang chỉ được chứa ký tự số");
 
                                 }
                                 else
                                 {
-                                    MessageBox.Show("Số lượng sách không được bỏ trống");
+                                    if (txtSOLUONG.Text != "")
+                                    {
+                                        if (!hasSpecialChar(txtSOLUONG.Text))
+                                        {
+                                            MessageBox.Show("Số lượng chỉ được chứa ký tự số");
+                                        }
+                                        else
+                                        {
+                                            if (txtsachhong.Text != "")
+                                            {
+                                                if (!hasSpecialChar(txtsachhong.Text))
+                                                {
+                                                    MessageBox.Show("Số sách hỏng chỉ được chứa ký tự số");
+                                                }
+                                                else
+                                                {
+                                                    if (maskedTextBox1.Text != "")
+                                                    {
+
+                                                        try
+                                                        {
+                                                            string strInsert = "Insert Into tblSach(MASACH,TENSACH,MATG,MANXB,MALv,NAMXB,SOTRANG,SOLUONG,SOSACHHONG,NGAYNHAP,GHICHU) values ('" + txtMASACH.Text
+                                                        + "',N'" + txtTENSACH.Text + "','" + cboMATG.Text + "','" + cboMANXB.Text + "','"
+                                                        + cboMALv.Text + "','" + txtNAMXB.Text + "','" + txtSOTRANG.Text + "','" + txtSOLUONG.Text
+                                                         + "','" + txtsachhong.Text + "','" + maskedTextBox1.Text + "','" + txtGHICHU.Text + "')";
+                                                            cls.ThucThiSQLTheoPKN(strInsert);
+                                                            cls.LoadData2DataGridView(dataGridView1, "select * from tblSach");
+                                                            MessageBox.Show("Bạn đã thêm thành công");
+                                                            txtMASACH.Text = "";
+                                                            txtTENSACH.Text = "";
+                                                            txtNAMXB.Text = "";
+                                                            txtSOTRANG.Text = "";
+                                                            txtSOLUONG.Text = "";
+                                                            txtsachhong.Text = "";
+                                                            maskedTextBox1.Text = "";
+                                                            txtGHICHU.Text = "";
+                                                            cboMALv.Text = "";
+                                                            cbotenLV.Text = "";
+                                                            cboMATG.Text = "";
+                                                            cbotenTG.Text = "";
+                                                            cboMANXB.Text = "";
+                                                            cbotenNXB.Text = "";
+                                                            numberUndo = 0;
+
+                                                        }
+                                                        catch { }
+                                                    }
+                                                    else { MessageBox.Show("Ngày nhập không được để trống"); }
+                                                }
+                                            }
+                                            else
+                                            {
+                                                MessageBox.Show("Số sách hỏng không được để trống");
+                                            }
+                                        }
+                                    }
+                                    else
+                                    {
+                                        MessageBox.Show("Số lượng sách không được bỏ trống");
+                                    }
                                 }
+
                             }
                             else
                             {
                                 MessageBox.Show("Số trang không được để trống");
                             }
                         }
-                        else { MessageBox.Show("Năm xuất bản không được để trống"); }
-
                     }
+                    else { MessageBox.Show("Năm xuất bản không được để trống"); }
+
+
                 }
                 else
                 {
@@ -276,6 +327,17 @@ namespace QuanLyThuVien2
             {
                 if (MessageBox.Show("Bạn có muốn xóa không?(Y/N)", "Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
+                    undoMS = txtMASACH.Text;
+                    undoTS = txtTENSACH.Text;
+                    undoMaLV = cboMALv.Text;
+                    undoNXB = txtNAMXB.Text;
+                    undoST = txtSOTRANG.Text;
+                    undoSL = txtSOLUONG.Text;
+                    undoSSH = txtsachhong.Text;
+                    undoGHICHU = txtGHICHU.Text;
+                    undoNN = maskedTextBox1.Text;
+                    undoMaNXB = cboMANXB.Text;
+                    undoMaTG = cboMATG.Text;
                     string strDelete = "Delete from tblSach where MASACH='" + txtMASACH.Text + "'";
                     cls.ThucThiSQLTheoKetNoi(strDelete);
                     cls.LoadData2DataGridView(dataGridView1, "select * from tblSach");
@@ -294,12 +356,31 @@ namespace QuanLyThuVien2
                     cbotenTG.Text = "";
                     cboMANXB.Text = "";
                     cbotenNXB.Text = "";
+                    numberUndo = 1;
                 }
             }
             catch { }
 
         }
 
-
+        private void Thoat_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+        public string undoMS, undoTS, undoMaLV, undoNXB, undoST, undoSL, undoSSH, undoGHICHU, undoNN, undoMaNXB, undoMaTG;
+        private void Undo_Click(object sender, EventArgs e)
+        {
+            if (numberUndo == 1)
+            {
+                string strInsert = "Insert Into tblSach(MASACH,TENSACH,MATG,MANXB,MALv,NAMXB,SOTRANG,SOLUONG,SOSACHHONG,NGAYNHAP,GHICHU) values ('" + undoMS
+                                                        + "',N'" + undoTS + "','" + undoMaTG + "','" + undoMaNXB + "','"
+                                                        + undoMaLV + "','" + undoNXB + "','" + undoST + "','" + undoSL
+                                                         + "','" + undoSSH + "','" + undoNN + "','" + undoGHICHU + "')";
+                cls.ThucThiSQLTheoPKN(strInsert);
+                cls.LoadData2DataGridView(dataGridView1, "select * from tblSach");
+                MessageBox.Show("Hoàn tác thành công !");
+                numberUndo = 0;
+            }
+        }
     }
 }

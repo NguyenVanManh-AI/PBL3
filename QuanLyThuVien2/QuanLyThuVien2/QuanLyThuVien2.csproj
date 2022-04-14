@@ -52,6 +52,36 @@
     <Compile Include="ForgotPassword.Designer.cs">
       <DependentUpon>ForgotPassword.cs</DependentUpon>
     </Compile>
+    <Compile Include="InforAuthors.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InforAuthors.Designer.cs">
+      <DependentUpon>InforAuthors.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InforBooks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InforBooks.Designer.cs">
+      <DependentUpon>InforBooks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InforFields.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InforFields.Designer.cs">
+      <DependentUpon>InforFields.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InforPublishers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InforPublishers.Designer.cs">
+      <DependentUpon>InforPublishers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InforReaders.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InforReaders.Designer.cs">
+      <DependentUpon>InforReaders.cs</DependentUpon>
+    </Compile>
     <Compile Include="UpdateBorrowingInforamtion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -124,6 +154,24 @@
     <EmbeddedResource Include="ForgotPassword.resx">
       <DependentUpon>ForgotPassword.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="InforAuthors.resx">
+      <DependentUpon>InforAuthors.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InforBooks.resx">
+      <DependentUpon>InforBooks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InforFields.resx">
+      <DependentUpon>InforFields.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InforPublishers.resx">
+      <DependentUpon>InforPublishers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InforReaders.resx">
+      <DependentUpon>InforReaders.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateBorrowingInforamtion.resx">
+      <DependentUpon>UpdateBorrowingInforamtion.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UpdateFieldInformation.resx">
       <DependentUpon>UpdateFieldInformation.cs</DependentUpon>
     </EmbeddedResource>
@@ -160,6 +208,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UpdateReaders.resx">
       <DependentUpon>UpdateReaders.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdatesBook.resx">
+      <DependentUpon>UpdatesBook.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

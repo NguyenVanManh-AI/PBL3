@@ -280,12 +280,36 @@ namespace QuanLyThuVien2
             //b ttTG.Show();
         }
 
-        private void nhàXuấtBảnToolStripMenuItem_Click(object sender, EventArgs e)
+        private void ThongTinTacGia(object sender, EventArgs e)
         {
-            //b ttNXB ttnxb = new ttNXB();
-            //b ttnxb.Show();
+            InforAuthors authors = new InforAuthors();
+            authors.Show();
         }
 
+        private void ThongTinNhaXuatban(object sender, EventArgs e)
+        {
+            InforPublishers publishers = new InforPublishers();
+            publishers.Show();
+        }
+
+        private void ThongTinLinhVuc(object sender, EventArgs e)
+        {
+            InforFields fields = new InforFields();
+            fields.Show();
+        }
+
+        private void ThongTinSach(object sender, EventArgs e)
+        {
+            InforBooks books = new InforBooks();
+            books.Show();
+        }
+
+
+        private void ThongTinNguoiDoc(object sender, EventArgs e)
+        {
+            InforReaders readers = new InforReaders();
+            readers.Show();
+        }
         private void label2_Click(object sender, EventArgs e)
         {
 
@@ -309,25 +333,7 @@ namespace QuanLyThuVien2
         {
             groupBox1.Visible = true;
         }
-
-
-        private void lĩnhVựcToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            //b ttLinhVuc ttlv = new ttLinhVuc();
-            //b ttlv.Show();
-        }
-
-        private void sáchToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            //b ttSach ttsach = new ttSach();
-            //b ttsach.Show();
-        }
-
-        private void độcGiảToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            //b ttDocgia ttDG = new ttDocgia();
-            //b ttDG.Show();
-        }
+       
 
         /*b 
         private void timer1_Tick(object sender, EventArgs e)
