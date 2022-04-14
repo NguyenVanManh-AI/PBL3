@@ -377,7 +377,7 @@
             this.toolBookSearch.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.F)));
             this.toolBookSearch.Size = new System.Drawing.Size(275, 34);
             this.toolBookSearch.Text = "Book Search";
-            this.toolBookSearch.Click += new System.EventHandler(this.tìmKiếmSáchToolStripMenuItem_Click);
+            this.toolBookSearch.Click += new System.EventHandler(this.TimKiemSach);
             // 
             // toolStripSeparator5
             // 
@@ -392,7 +392,7 @@
             this.toolRoadSearch.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.G)));
             this.toolRoadSearch.Size = new System.Drawing.Size(275, 34);
             this.toolRoadSearch.Text = "Road Search";
-            this.toolRoadSearch.Click += new System.EventHandler(this.tìmKiếmĐGToolStripMenuItem_Click);
+            this.toolRoadSearch.Click += new System.EventHandler(this.TimKiemDocGia);
             // 
             // dropdownUpdate
             // 
@@ -500,22 +500,22 @@
             // 
             this.toolBookStatus.ForeColor = System.Drawing.Color.DodgerBlue;
             this.toolBookStatus.Name = "toolBookStatus";
-            this.toolBookStatus.Size = new System.Drawing.Size(229, 34);
+            this.toolBookStatus.Size = new System.Drawing.Size(270, 34);
             this.toolBookStatus.Text = "Book Status";
-            this.toolBookStatus.Click += new System.EventHandler(this.tìnhTrạngSáchToolStripMenuItem_Click);
+            this.toolBookStatus.Click += new System.EventHandler(this.BaoCaoTinhTrangSach);
             // 
             // toolStripSeparator6
             // 
             this.toolStripSeparator6.Name = "toolStripSeparator6";
-            this.toolStripSeparator6.Size = new System.Drawing.Size(226, 6);
+            this.toolStripSeparator6.Size = new System.Drawing.Size(267, 6);
             // 
             // toolReadersStatus
             // 
             this.toolReadersStatus.ForeColor = System.Drawing.Color.DodgerBlue;
             this.toolReadersStatus.Name = "toolReadersStatus";
-            this.toolReadersStatus.Size = new System.Drawing.Size(229, 34);
+            this.toolReadersStatus.Size = new System.Drawing.Size(270, 34);
             this.toolReadersStatus.Text = "Readers Status";
-            this.toolReadersStatus.Click += new System.EventHandler(this.sốĐộcGiảToolStripMenuItem_Click);
+            this.toolReadersStatus.Click += new System.EventHandler(this.BaoCaoDocGia);
             // 
             // buttonHelp
             // 
@@ -532,7 +532,7 @@
             this.buttonExit.Name = "buttonExit";
             this.buttonExit.Size = new System.Drawing.Size(79, 29);
             this.buttonExit.Text = "Exit";
-            this.buttonExit.Click += new System.EventHandler(this.thoátToolStripMenuItem1_Click);
+            this.buttonExit.Click += new System.EventHandler(this.ThoatChuongTrinh);
             // 
             // label9
             // 
