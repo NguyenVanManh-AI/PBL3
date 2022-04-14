@@ -191,7 +191,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(8, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(982, 32);
+            this.menuStrip1.Size = new System.Drawing.Size(982, 33);
             this.menuStrip1.TabIndex = 2;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -212,7 +212,11 @@
             this.dropdownSystemManagement.ForeColor = System.Drawing.SystemColors.Highlight;
             this.dropdownSystemManagement.Image = global::QuanLyThuVien2.Properties.Resources.system;
             this.dropdownSystemManagement.Name = "dropdownSystemManagement";
+<<<<<<< HEAD
+            this.dropdownSystemManagement.Size = new System.Drawing.Size(219, 29);
+=======
             this.dropdownSystemManagement.Size = new System.Drawing.Size(155, 28);
+>>>>>>> main
             this.dropdownSystemManagement.Text = "System Management";
             this.dropdownSystemManagement.Visible = false;
             // 
@@ -296,7 +300,11 @@
             this.dropdownInformation.ForeColor = System.Drawing.SystemColors.Highlight;
             this.dropdownInformation.Image = global::QuanLyThuVien2.Properties.Resources.information;
             this.dropdownInformation.Name = "dropdownInformation";
+<<<<<<< HEAD
+            this.dropdownInformation.Size = new System.Drawing.Size(146, 29);
+=======
             this.dropdownInformation.Size = new System.Drawing.Size(106, 28);
+>>>>>>> main
             this.dropdownInformation.Text = "Information";
             this.dropdownInformation.Visible = false;
             // 
@@ -312,7 +320,7 @@
             this.toolAuthor.Name = "toolAuthor";
             this.toolAuthor.Size = new System.Drawing.Size(183, 22);
             this.toolAuthor.Text = "Author";
-            this.toolAuthor.Click += new System.EventHandler(this.tácGiảToolStripMenuItem_Click);
+            this.toolAuthor.Click += new System.EventHandler(this.ThongTinTacGia);
             // 
             // toolPublishingCompany
             // 
@@ -321,7 +329,7 @@
             this.toolPublishingCompany.Name = "toolPublishingCompany";
             this.toolPublishingCompany.Size = new System.Drawing.Size(183, 22);
             this.toolPublishingCompany.Text = "Publishing company";
-            this.toolPublishingCompany.Click += new System.EventHandler(this.nhàXuấtBảnToolStripMenuItem_Click);
+            this.toolPublishingCompany.Click += new System.EventHandler(this.ThongTinNhaXuatban);
             // 
             // toolField
             // 
@@ -330,7 +338,7 @@
             this.toolField.Name = "toolField";
             this.toolField.Size = new System.Drawing.Size(183, 22);
             this.toolField.Text = "Field";
-            this.toolField.Click += new System.EventHandler(this.lĩnhVựcToolStripMenuItem_Click);
+            this.toolField.Click += new System.EventHandler(this.ThongTinLinhVuc);
             // 
             // toolStripSeparator14
             // 
@@ -344,7 +352,7 @@
             this.toolBook.Name = "toolBook";
             this.toolBook.Size = new System.Drawing.Size(183, 22);
             this.toolBook.Text = "Book";
-            this.toolBook.Click += new System.EventHandler(this.sáchToolStripMenuItem_Click);
+            this.toolBook.Click += new System.EventHandler(this.ThongTinSach);
             // 
             // toolReaders
             // 
@@ -353,7 +361,7 @@
             this.toolReaders.Name = "toolReaders";
             this.toolReaders.Size = new System.Drawing.Size(183, 22);
             this.toolReaders.Text = "Readers";
-            this.toolReaders.Click += new System.EventHandler(this.độcGiảToolStripMenuItem_Click);
+            this.toolReaders.Click += new System.EventHandler(this.ThongTinNguoiDoc);
             // 
             // dropdownSearch
             // 
@@ -365,7 +373,11 @@
             this.dropdownSearch.ForeColor = System.Drawing.SystemColors.Highlight;
             this.dropdownSearch.Image = global::QuanLyThuVien2.Properties.Resources.search;
             this.dropdownSearch.Name = "dropdownSearch";
+<<<<<<< HEAD
+            this.dropdownSearch.Size = new System.Drawing.Size(104, 29);
+=======
             this.dropdownSearch.Size = new System.Drawing.Size(78, 28);
+>>>>>>> main
             this.dropdownSearch.Text = "Search";
             this.dropdownSearch.Visible = false;
             this.dropdownSearch.Click += new System.EventHandler(this.tìmKiếmToolStripMenuItem_Click);
@@ -411,7 +423,11 @@
             this.dropdownUpdate.Image = global::QuanLyThuVien2.Properties.Resources.update;
             this.dropdownUpdate.Name = "dropdownUpdate";
             this.dropdownUpdate.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
+<<<<<<< HEAD
+            this.dropdownUpdate.Size = new System.Drawing.Size(110, 29);
+=======
             this.dropdownUpdate.Size = new System.Drawing.Size(81, 28);
+>>>>>>> main
             this.dropdownUpdate.Text = "Update";
             this.dropdownUpdate.Visible = false;
             // 
@@ -495,7 +511,11 @@
             this.dropdownReport.ForeColor = System.Drawing.SystemColors.Highlight;
             this.dropdownReport.Image = global::QuanLyThuVien2.Properties.Resources.report;
             this.dropdownReport.Name = "dropdownReport";
+<<<<<<< HEAD
+            this.dropdownReport.Size = new System.Drawing.Size(105, 29);
+=======
             this.dropdownReport.Size = new System.Drawing.Size(78, 28);
+>>>>>>> main
             this.dropdownReport.Text = "Report";
             // 
             // toolBookStatus
@@ -524,7 +544,11 @@
             this.buttonHelp.ForeColor = System.Drawing.SystemColors.Highlight;
             this.buttonHelp.Image = global::QuanLyThuVien2.Properties.Resources.help;
             this.buttonHelp.Name = "buttonHelp";
+<<<<<<< HEAD
+            this.buttonHelp.Size = new System.Drawing.Size(89, 29);
+=======
             this.buttonHelp.Size = new System.Drawing.Size(68, 28);
+>>>>>>> main
             this.buttonHelp.Text = "Help";
             // 
             // buttonExit
@@ -532,7 +556,11 @@
             this.buttonExit.ForeColor = System.Drawing.SystemColors.Highlight;
             this.buttonExit.Image = global::QuanLyThuVien2.Properties.Resources.exit;
             this.buttonExit.Name = "buttonExit";
+<<<<<<< HEAD
+            this.buttonExit.Size = new System.Drawing.Size(79, 29);
+=======
             this.buttonExit.Size = new System.Drawing.Size(62, 28);
+>>>>>>> main
             this.buttonExit.Text = "Exit";
             this.buttonExit.Click += new System.EventHandler(this.thoátToolStripMenuItem1_Click);
             // 
