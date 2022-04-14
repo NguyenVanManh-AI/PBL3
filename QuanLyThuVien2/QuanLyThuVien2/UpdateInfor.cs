@@ -73,19 +73,11 @@ namespace QuanLyThuVien2
         }
         private void button5_Click(object sender, EventArgs e)
         {
-<<<<<<< HEAD
             if (txtSoDienThoai.Text.Length < 3)
                 MessageBox.Show("Phone number cannot be less than 3 digits");
             else
             {
                 if (txtSoDienThoai.Text.Length > 12)
-=======
-            if (txtSoDienThoai.Text.Length  < 3)
-                MessageBox.Show("Phone number cannot be less than 3 digits");
-            else
-            {
-                if (txtSoDienThoai.Text.Length  > 12)
->>>>>>> main
                     MessageBox.Show("Phone number cannot be more than 12 numbers");
                 else
                 {
@@ -93,32 +85,19 @@ namespace QuanLyThuVien2
                         MessageBox.Show("Wrong age");
                     else
                     {
-<<<<<<< HEAD
                         if (Checkso(textTuoi.Text))
                             MessageBox.Show("Invalid Age!");
                         else
                         {
                             if (CheckTen(txtNHANVIEN.Text))
-=======
-                        if(Checkso(textTuoi.Text)) 
-                            MessageBox.Show("Invalid Age!");
-                        else
-                        {
-                            if(CheckTen(txtNHANVIEN.Text)) 
->>>>>>> main
                                 MessageBox.Show("Invalid Name!");
                             else
                             {
                                 if (Checkso(txtSoDienThoai.Text))
                                     MessageBox.Show("Invalid Phone Number!");
-<<<<<<< HEAD
                                 else
                                 {
                                     if (!isValidEmail(txtEmail.Text) && !VerifyEmail(txtEmail.Text))
-=======
-                                else {
-                                    if (!isValidEmail(txtEmail.Text) && !VerifyEmail(txtEmail.Text)) 
->>>>>>> main
                                         MessageBox.Show("Invalid Email!");
                                     else
                                     {
