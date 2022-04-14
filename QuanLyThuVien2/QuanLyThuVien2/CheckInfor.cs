@@ -46,6 +46,7 @@ namespace QuanLyThuVien2
         {
             //if (Dem == 0)
             //{
+<<<<<<< HEAD
                 TenTK = txtTenTaiKhoan.Text;
                 //btnSua.Enabled = false;
                 //Dem = 1;
@@ -55,6 +56,17 @@ namespace QuanLyThuVien2
             //else
             //{
                 btnXoa.Enabled = true;
+=======
+            TenTK = txtTenTaiKhoan.Text;
+            //btnSua.Enabled = false;
+            //Dem = 1;
+            //txtPass.Text = txtQuyen.Text = txtTenNhanVien.Text = txtDiaChi.Text
+            //  = txtDienThoai.Text = txtEmail.Text = txtChucVu.Text = txtTuoi.Text = "";
+            //}
+            //else
+            //{
+            btnXoa.Enabled = true;
+>>>>>>> 0d758d741d99f3dffd29c59aab5db2e520ae6933
             if (txtTenNhanVien.Text == "")
                 MessageBox.Show("Employee names cannot be left blank");
             else
@@ -70,7 +82,11 @@ namespace QuanLyThuVien2
                             if (txtChucVu.Text == "")
                 MessageBox.Show("Position cannot be left blank");
             else
+<<<<<<< HEAD
                                 if (txtTuoi.Text== "")
+=======
+                                if (txtTuoi.Text == "")
+>>>>>>> 0d758d741d99f3dffd29c59aab5db2e520ae6933
                 MessageBox.Show("Age cannot be left blank");
             else
                                 if (txtEmail.Text == "")
@@ -91,7 +107,11 @@ namespace QuanLyThuVien2
                 cls.LoadData2DataGridView(dataGridView2, "select*from tblNhanVien");
                 MessageBox.Show("Fixed successfully");
             }
+<<<<<<< HEAD
                 
+=======
+
+>>>>>>> 0d758d741d99f3dffd29c59aab5db2e520ae6933
             //}
         }
 

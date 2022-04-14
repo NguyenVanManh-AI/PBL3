@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
@@ -99,6 +100,7 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.White;
+            this.groupBox1.Controls.Add(this.linkLabel1);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.textBox2);
@@ -108,11 +110,23 @@
             this.groupBox1.ForeColor = System.Drawing.SystemColors.Highlight;
             this.groupBox1.Location = new System.Drawing.Point(340, 104);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(266, 240);
+            this.groupBox1.Size = new System.Drawing.Size(266, 280);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Log in to the system";
             this.groupBox1.Visible = false;
+            // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.LinkColor = System.Drawing.Color.DodgerBlue;
+            this.linkLabel1.Location = new System.Drawing.Point(51, 234);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(184, 16);
+            this.linkLabel1.TabIndex = 5;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "Forgot password ? Click here .";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.ForgotPassword_LinkClicked);
             // 
             // label3
             // 
@@ -201,6 +215,7 @@
             this.dropdownSystemManagement.Name = "dropdownSystemManagement";
             this.dropdownSystemManagement.Size = new System.Drawing.Size(155, 28);
             this.dropdownSystemManagement.Text = "System Management";
+            this.dropdownSystemManagement.Visible = false;
             // 
             // toolCheckEmployeeInformation
             // 
@@ -284,6 +299,7 @@
             this.dropdownInformation.Name = "dropdownInformation";
             this.dropdownInformation.Size = new System.Drawing.Size(106, 28);
             this.dropdownInformation.Text = "Information";
+            this.dropdownInformation.Visible = false;
             // 
             // toolStripSeparator11
             // 
@@ -352,6 +368,7 @@
             this.dropdownSearch.Name = "dropdownSearch";
             this.dropdownSearch.Size = new System.Drawing.Size(78, 28);
             this.dropdownSearch.Text = "Search";
+            this.dropdownSearch.Visible = false;
             this.dropdownSearch.Click += new System.EventHandler(this.tìmKiếmToolStripMenuItem_Click);
             // 
             // toolBookSearch
@@ -397,6 +414,7 @@
             this.dropdownUpdate.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
             this.dropdownUpdate.Size = new System.Drawing.Size(81, 28);
             this.dropdownUpdate.Text = "Update";
+            this.dropdownUpdate.Visible = false;
             // 
             // toolBookUpdates
             // 
@@ -406,7 +424,7 @@
             this.toolBookUpdates.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
             this.toolBookUpdates.Size = new System.Drawing.Size(281, 22);
             this.toolBookUpdates.Text = "Book Updates";
-            this.toolBookUpdates.Click += new System.EventHandler(this.cậpNhậtSáchToolStripMenuItem_Click);
+            this.toolBookUpdates.Click += new System.EventHandler(this.CapNhatSach);
             // 
             // toolUpdateReaders
             // 
@@ -416,7 +434,7 @@
             this.toolUpdateReaders.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.D)));
             this.toolUpdateReaders.Size = new System.Drawing.Size(281, 22);
             this.toolUpdateReaders.Text = "Update Readers";
-            this.toolUpdateReaders.Click += new System.EventHandler(this.cậpNhậtToolStripMenuItem1_Click);
+            this.toolUpdateReaders.Click += new System.EventHandler(this.CapNhatNguoiDoc);
             // 
             // toolStripSeparator8
             // 
@@ -466,7 +484,7 @@
             this.toolUpdateBorrowingInformation.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.M)));
             this.toolUpdateBorrowingInformation.Size = new System.Drawing.Size(281, 22);
             this.toolUpdateBorrowingInformation.Text = "Update Borrowing Information";
-            this.toolUpdateBorrowingInformation.Click += new System.EventHandler(this.cậpNhậtThôngTinMượnToolStripMenuItem_Click);
+            this.toolUpdateBorrowingInformation.Click += new System.EventHandler(this.CapNhatThongTinMuon);
             // 
             // dropdownReport
             // 
@@ -655,7 +673,6 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem dropdownSystemManagement;
         private System.Windows.Forms.ToolStripMenuItem toolUpdateStaff;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripMenuItem toolCreateAccount;
@@ -711,6 +728,11 @@
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Button btSI;
         private System.Windows.Forms.ToolStripMenuItem toolLogout;
+<<<<<<< HEAD
+=======
+        private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.ToolStripMenuItem dropdownSystemManagement;
+>>>>>>> 0d758d741d99f3dffd29c59aab5db2e520ae6933
         //b  private System.Windows.Forms.GroupBox groupBox3;
     }
 }

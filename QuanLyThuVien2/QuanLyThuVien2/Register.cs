@@ -7,6 +7,10 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
+// mã hóa mật khẩu 
+using System.Security.Cryptography;
+
+
 namespace QuanLyThuVien2
 {
     public partial class Register : Form
@@ -42,7 +46,17 @@ namespace QuanLyThuVien2
             {
                 try
                 {
-                    cls.ThucThiSQLTheoPKN("insert into tblNhanVien(TAIKHOAN,MATKHAU,QUYENHAN)values('" + textBox1.Text + "','" + textBox2.Text + "','user')");
+                    byte[] temp = ASCIIEncoding.ASCII.GetBytes(textBox2.Text);
+                    byte[] hasData = new MD5CryptoServiceProvider().ComputeHash(temp);
+
+                    string hasPass = "";
+
+                    foreach (byte item in hasData)
+                    {
+                        hasPass += item;
+                    }
+
+                    cls.ThucThiSQLTheoPKN("insert into tblNhanVien(TAIKHOAN,MATKHAU,QUYENHAN)values('" + textBox1.Text + "','" + hasPass + "','user')");
                     MessageBox.Show("Successful account creation, please update the account information");
                 }
                 catch { MessageBox.Show("Unable to create an account"); }

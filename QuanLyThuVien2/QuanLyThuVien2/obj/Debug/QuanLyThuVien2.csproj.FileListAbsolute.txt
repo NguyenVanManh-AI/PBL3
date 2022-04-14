@@ -14,21 +14,38 @@ C:\Users\LAPTOP KIM ANH\source\repos\QuanLyThuVien2\QuanLyThuVien2\obj\Debug\Qua
 C:\Users\LAPTOP KIM ANH\source\repos\QuanLyThuVien2\QuanLyThuVien2\obj\Debug\QuanLyThuVien2.updateInfor.resources
 C:\Users\LAPTOP KIM ANH\source\repos\QuanLyThuVien2\QuanLyThuVien2\obj\Debug\QuanLyThuVien2.CheckInfor.resources
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+C:\Users\LAPTOP KIM ANH\source\repos\QuanLyThuVien2\QuanLyThuVien2\obj\Debug\QuanLyThuVien2.UpdateFieldInformation.resources
+C:\Users\LAPTOP KIM ANH\source\repos\QuanLyThuVien2\QuanLyThuVien2\obj\Debug\QuanLyThuVien2.UpdatePublisherInformation.resources
+C:\Users\LAPTOP KIM ANH\source\repos\QuanLyThuVien2\QuanLyThuVien2\obj\Debug\QuanLyThuVien2.UpdateAuthorInformation.resources
+C:\Users\LAPTOP KIM ANH\source\repos\QuanLyThuVien2\QuanLyThuVien2\obj\Debug\QuanLyThuVien2.ForgotPassword.resources
+C:\Users\LAPTOP KIM ANH\source\repos\QuanLyThuVien2\QuanLyThuVien2\obj\Debug\QuanLyThuVien2.UpdateReaders.resources
+>>>>>>> 0d758d741d99f3dffd29c59aab5db2e520ae6933
 C:\GIT\PBL3\QuanLyThuVien2\QuanLyThuVien2\bin\Debug\QuanLyThuVien2.exe.config
 C:\GIT\PBL3\QuanLyThuVien2\QuanLyThuVien2\bin\Debug\QuanLyThuVien2.exe
 C:\GIT\PBL3\QuanLyThuVien2\QuanLyThuVien2\bin\Debug\QuanLyThuVien2.pdb
 C:\GIT\PBL3\QuanLyThuVien2\QuanLyThuVien2\obj\Debug\QuanLyThuVien2.csproj.AssemblyReference.cache
 C:\GIT\PBL3\QuanLyThuVien2\QuanLyThuVien2\obj\Debug\QuanLyThuVien2.csproj.SuggestedBindingRedirects.cache
+<<<<<<< HEAD
+=======
+C:\GIT\PBL3\QuanLyThuVien2\QuanLyThuVien2\obj\Debug\QuanLyThuVien2.ForgotPassword.resources
+C:\GIT\PBL3\QuanLyThuVien2\QuanLyThuVien2\obj\Debug\QuanLyThuVien2.UpdateFieldInformation.resources
+C:\GIT\PBL3\QuanLyThuVien2\QuanLyThuVien2\obj\Debug\QuanLyThuVien2.UpdatePublisherInformation.resources
+C:\GIT\PBL3\QuanLyThuVien2\QuanLyThuVien2\obj\Debug\QuanLyThuVien2.UpdateAuthorInformation.resources
+>>>>>>> 0d758d741d99f3dffd29c59aab5db2e520ae6933
 C:\GIT\PBL3\QuanLyThuVien2\QuanLyThuVien2\obj\Debug\QuanLyThuVien2.CheckInfor.resources
 C:\GIT\PBL3\QuanLyThuVien2\QuanLyThuVien2\obj\Debug\QuanLyThuVien2.UpdateInfor.resources
 C:\GIT\PBL3\QuanLyThuVien2\QuanLyThuVien2\obj\Debug\QuanLyThuVien2.ChangePassword.resources
 C:\GIT\PBL3\QuanLyThuVien2\QuanLyThuVien2\obj\Debug\QuanLyThuVien2.Main.resources
 C:\GIT\PBL3\QuanLyThuVien2\QuanLyThuVien2\obj\Debug\QuanLyThuVien2.Properties.Resources.resources
 C:\GIT\PBL3\QuanLyThuVien2\QuanLyThuVien2\obj\Debug\QuanLyThuVien2.Register.resources
+C:\GIT\PBL3\QuanLyThuVien2\QuanLyThuVien2\obj\Debug\QuanLyThuVien2.UpdateReaders.resources
 C:\GIT\PBL3\QuanLyThuVien2\QuanLyThuVien2\obj\Debug\QuanLyThuVien2.csproj.GenerateResource.cache
 C:\GIT\PBL3\QuanLyThuVien2\QuanLyThuVien2\obj\Debug\QuanLyThuVien2.csproj.CoreCompileInputs.cache
 C:\GIT\PBL3\QuanLyThuVien2\QuanLyThuVien2\obj\Debug\QuanLyThuVien2.exe
 C:\GIT\PBL3\QuanLyThuVien2\QuanLyThuVien2\obj\Debug\QuanLyThuVien2.pdb
+<<<<<<< HEAD
 =======
 C:\Users\LAPTOP KIM ANH\source\repos\QuanLyThuVien2\QuanLyThuVien2\obj\Debug\QuanLyThuVien2.UpdateFieldInformation.resources
 C:\Users\LAPTOP KIM ANH\source\repos\QuanLyThuVien2\QuanLyThuVien2\obj\Debug\QuanLyThuVien2.UpdatePublisherInformation.resources
@@ -37,3 +54,5 @@ C:\Users\LAPTOP KIM ANH\source\repos\QuanLyThuVien2\QuanLyThuVien2\obj\Debug\Qua
 C:\GIT\PBL3\QuanLyThuVien2\QuanLyThuVien2\obj\Debug\QuanLyThuVien2.UpdateFieldInformation.resources
 C:\GIT\PBL3\QuanLyThuVien2\QuanLyThuVien2\obj\Debug\QuanLyThuVien2.UpdatePublisherInformation.resources
 C:\GIT\PBL3\QuanLyThuVien2\QuanLyThuVien2\obj\Debug\QuanLyThuVien2.UpdateAuthorInformation.resources
+=======
+>>>>>>> 0d758d741d99f3dffd29c59aab5db2e520ae6933
