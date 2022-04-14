@@ -134,8 +134,8 @@ namespace QuanLyThuVien2
             else
                 e.Cancel = true;
         }
-
-        private void thoátToolStripMenuItem1_Click(object sender, EventArgs e)
+        
+        private void ThoatChuongTrinh(object sender, EventArgs e)
         {
             this.Close();
         }
@@ -234,50 +234,22 @@ namespace QuanLyThuVien2
         }
 
 
-
-        //private void cậpNhậtTácGiảToolStripMenuItem_Click(object sender, EventArgs e)
-        //{
-        //    capnhatTG cnTG = new capnhatTG();
-        //    cnTG.Show();
-        //}
-
-        //private void cậpNhậtNhàXuấtBảnToolStripMenuItem_Click(object sender, EventArgs e)
-        //{
-        //    capnhatNXB cnNXB = new capnhatNXB();
-        //    cnNXB.Show();
-        //}
-
-        //private void cậpNhậtLĩnhVựcToolStripMenuItem_Click(object sender, EventArgs e)
-        //{
-        //    capnhatLv cnLV = new capnhatLv();
-        //    cnLV.Show();
-        //}
-
-
-
         private void CapNhatThongTinMuon(object sender, EventArgs e)
         {
             UpdateBorrowingInforamtion ttmuon = new UpdateBorrowingInforamtion();
             ttmuon.Show();
         }
 
-
-
-        private void tìnhTrạngSáchToolStripMenuItem_Click(object sender, EventArgs e)
+        private void BaoCaoTinhTrangSach(object sender, EventArgs e)
         {
-            //b BCTinhTrangSach BCTTS = new BCTinhTrangSach();
-            //b BCTTS.Show();
+            ReportBookStatus reportBookStatus = new ReportBookStatus();
+            reportBookStatus.Show();
         }
 
-        private void sốĐộcGiảToolStripMenuItem_Click(object sender, EventArgs e)
+        private void BaoCaoDocGia(object sender, EventArgs e)
         {
-            //b BCDocGia BCDG = new BCDocGia();
-            //b BCDG.Show();
-        }
-        private void tácGiảToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            //b ttTacgia ttTG = new ttTacgia();
-            //b ttTG.Show();
+            ReportReaders reportReaders = new ReportReaders();
+            reportReaders.Show();
         }
 
         private void ThongTinTacGia(object sender, EventArgs e)
@@ -310,6 +282,19 @@ namespace QuanLyThuVien2
             InforReaders readers = new InforReaders();
             readers.Show();
         }
+
+        private void TimKiemSach(object sender, EventArgs e)
+        {
+            SearchBooks sbooks = new SearchBooks();
+            sbooks.Show();
+        }
+
+        private void TimKiemDocGia(object sender, EventArgs e)
+        {
+            SearchReaders sreaders = new SearchReaders();
+            sreaders.Show();
+        }
+
         private void label2_Click(object sender, EventArgs e)
         {
 
@@ -431,7 +416,34 @@ namespace QuanLyThuVien2
             }
         }
         */
-        private void đăngNhậpToolStripMenuItem_Click(object sender, EventArgs e)
+        //private void đăngNhậpToolStripMenuItem_Click(object sender, EventArgs e)
+        //{
+        //    groupBox1.Enabled = true;
+        //    dropdownSystemManagement.Enabled = false;
+        //    dropdownSearch.Enabled = false;
+        //    toolBookSearch.Enabled = false;
+        //    toolCheckEmployeeInformation.Enabled = false;
+        //    toolRoadSearch.Enabled = false;
+        //    dropdownUpdate.Enabled = false;
+        //    dropdownInformation.Enabled = false;
+        //    dropdownReport.Enabled = false;
+        //    toolBookUpdates.Enabled = false;
+        //    toolAuthorUpdate.Enabled = false;
+        //    toolUpdateReaders.Enabled = false;
+        //    toolUpdateField.Enabled = false;
+        //    toolPublisherUpdate.Enabled = false;
+        //    toolUpdateBorrowingInformation.Enabled = false;
+        //    toolAuthor.Enabled = false;
+        //    toolPublishingCompany.Enabled = false;
+        //    toolField.Enabled = false;
+        //    toolReaders.Enabled = false;
+        //    toolBook.Enabled = false;
+        //    toolCreateAccount.Enabled = false;
+        //    toolUpdateStaff.Enabled = false;
+        //    toolChangePassword.Enabled = false;
+        //}
+
+        private void DangNhapHeThong(object sender, EventArgs e)
         {
             groupBox1.Enabled = true;
             dropdownSystemManagement.Enabled = false;
@@ -458,17 +470,7 @@ namespace QuanLyThuVien2
             toolChangePassword.Enabled = false;
         }
 
-        private void tìmKiếmSáchToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            //b timkiem Sach = new timkiem();
-            //b Sach.Show();
-        }
 
-        private void tìmKiếmĐGToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            //b TimkiemDG Dg = new TimkiemDG();
-            //b Dg.Show();
-        }
 
 
 

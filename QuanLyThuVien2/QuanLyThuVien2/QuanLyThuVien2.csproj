@@ -82,6 +82,30 @@
     <Compile Include="InforReaders.Designer.cs">
       <DependentUpon>InforReaders.cs</DependentUpon>
     </Compile>
+    <Compile Include="ReportBookStatus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportBookStatus.Designer.cs">
+      <DependentUpon>ReportBookStatus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportReaders.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportReaders.Designer.cs">
+      <DependentUpon>ReportReaders.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SearchBooks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SearchBooks.Designer.cs">
+      <DependentUpon>SearchBooks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SearchReaders.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SearchReaders.Designer.cs">
+      <DependentUpon>SearchReaders.cs</DependentUpon>
+    </Compile>
     <Compile Include="UpdateBorrowingInforamtion.cs">
       <SubType>Form</SubType>
     </Compile>
