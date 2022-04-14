@@ -46,6 +46,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ForgotPassword.cs" />
+    <Compile Include="ForgotPassword.Designer.cs">
+      <DependentUpon>ForgotPassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateBorrowingInforamtion.cs" />
+    <Compile Include="UpdateBorrowingInforamtion.Designer.cs">
+      <DependentUpon>UpdateBorrowingInforamtion.cs</DependentUpon>
+    </Compile>
     <Compile Include="UpdateFieldInformation.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -97,6 +105,17 @@
     <Compile Include="Register.Designer.cs">
       <DependentUpon>Register.cs</DependentUpon>
     </Compile>
+    <Compile Include="UpdateReaders.cs" />
+    <Compile Include="UpdateReaders.Designer.cs">
+      <DependentUpon>UpdateReaders.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdatesBook.cs" />
+    <Compile Include="UpdatesBook.Designer.cs">
+      <DependentUpon>UpdatesBook.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="ForgotPassword.resx">
+      <DependentUpon>ForgotPassword.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UpdateFieldInformation.resx">
       <DependentUpon>UpdateFieldInformation.cs</DependentUpon>
     </EmbeddedResource>
@@ -130,6 +149,9 @@
     </Compile>
     <EmbeddedResource Include="Register.resx">
       <DependentUpon>Register.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateReaders.resx">
+      <DependentUpon>UpdateReaders.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
