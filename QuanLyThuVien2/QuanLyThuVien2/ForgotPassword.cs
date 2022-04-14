@@ -66,33 +66,54 @@ namespace QuanLyThuVien2
         }
         private void SEND_Click(object sender, EventArgs e)
         {
-            Main mn = new Main();
+            if(username.Text == "")
+            {
+                MessageBox.Show("Hãy nhập Username !!!");
+            }
+            else if (newpassword.Text == "")
+            {
+                MessageBox.Show("Hãy nhập Password !!!");
+            }
+            else
+            {
+                Main mn = new Main();
 
-            object strForgot = layGiaTri("select EMAIL from tblNhanVien where TaiKhoan='" + username.Text + "'");
-            EmailUser = Convert.ToString(strForgot);
+                object strForgot = layGiaTri("select EMAIL from tblNhanVien where TaiKhoan='" + username.Text + "'");
+                EmailUser = Convert.ToString(strForgot);
 
-            //MessageBox.Show("Gửi đến Mail : "+ EmailUser);
-            MessageBox.Show("Gửi đến Mail : " + EmailUser.Substring(0, (EmailUser.Length-10)/3) +"*********"+ EmailUser.Substring((EmailUser.Length - 10)*2/ 3));
+                if(EmailUser == "")
+                {
+                    MessageBox.Show("Không tồn tại Username hoặc User chưa cập nhật email !!!");
+                }
+                else
+                {
+                    //MessageBox.Show("Gửi đến Mail : "+ EmailUser);
+                    MessageBox.Show("Gửi đến Mail : " + EmailUser.Substring(0, (EmailUser.Length - 10) / 3) + "*********" + EmailUser.Substring((EmailUser.Length - 10) * 2 / 3));
 
-            codeText = Convert.ToString(RandomNumber(1000, 9999));
+                    codeText = Convert.ToString(RandomNumber(1000, 9999));
 
-            // tạo một tin nhắn và thêm những thông tin cần thiết như: ai gửi, người nhận, tên tiêu đề, và có đôi lời gì cần nhắn nhủ
-            MailMessage mail = new MailMessage(fromText, EmailUser, codeText, "Send Verification Code to change password"); //
-            mail.IsBodyHtml = true;
-            //gửi tin nhắn
-            SmtpClient client = new SmtpClient("smtp.gmail.com");
-            client.Host = "smtp.gmail.com";
-            //ta không dùng cái mặc định đâu, mà sẽ dùng cái của riêng mình
-            client.UseDefaultCredentials = false;
-            client.Port = 587; //vì sử dụng Gmail nên mình dùng port 587
-                               // thêm vào credential vì SMTP server cần nó để biết được email + password của email đó mà bạn đang dùng
-            client.Credentials = new System.Net.NetworkCredential(fromText, passwordText);
-            client.EnableSsl = true; //vì ta cần thiết lập kết nối SSL với SMTP server nên cần gán nó bằng true
-            client.Send(mail);
-            MessageBox.Show("Đã gửi tin nhắn thành công!", "Thành Công", MessageBoxButtons.OK);
+                    // tạo một tin nhắn và thêm những thông tin cần thiết như: ai gửi, người nhận, tên tiêu đề, và có đôi lời gì cần nhắn nhủ
+                    MailMessage mail = new MailMessage(fromText, EmailUser, codeText, "Send Verification Code to change password"); //
+                    mail.IsBodyHtml = true;
+                    //gửi tin nhắn
+                    SmtpClient client = new SmtpClient("smtp.gmail.com");
+                    client.Host = "smtp.gmail.com";
+                    //ta không dùng cái mặc định đâu, mà sẽ dùng cái của riêng mình
+                    client.UseDefaultCredentials = false;
+                    client.Port = 587; //vì sử dụng Gmail nên mình dùng port 587
+                                       // thêm vào credential vì SMTP server cần nó để biết được email + password của email đó mà bạn đang dùng
+                    client.Credentials = new System.Net.NetworkCredential(fromText, passwordText);
+                    client.EnableSsl = true; //vì ta cần thiết lập kết nối SSL với SMTP server nên cần gán nó bằng true
+                    client.Send(mail);
+                    MessageBox.Show("Đã gửi tin nhắn thành công!", "Thành Công", MessageBoxButtons.OK);
 
-            verification.Enabled = true;
-            btOK.Enabled = true; 
+                    verification.Enabled = true;
+                    btOK.Enabled = true;
+                }
+
+                
+            }
+            
         }
 
         SqlConnection Con;
@@ -134,6 +155,7 @@ namespace QuanLyThuVien2
             {
                 MessageBox.Show("Mã xác nhận không đúng !!! ");
             }
+            Close();
         }
     }
 }

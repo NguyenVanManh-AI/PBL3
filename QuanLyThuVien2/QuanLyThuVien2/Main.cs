@@ -121,7 +121,10 @@ namespace QuanLyThuVien2
                     groupBox1.Enabled = false;
                     groupBox1.Visible = false;
                     btSI.Visible = false;
-                    menuStrip1.Visible = true;
+                    dropdownSystemManagement.Visible = true;
+                    dropdownInformation.Visible = true;
+                    dropdownUpdate.Visible = true;
+                    dropdownSearch.Visible = true;
                     label4.Text = "Welcome to Library Management";
                 }
             }
