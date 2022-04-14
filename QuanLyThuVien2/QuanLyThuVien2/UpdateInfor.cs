@@ -133,6 +133,7 @@ namespace QuanLyThuVien2
             //cls.ThucThiSQLTheoPKN(strDelete);
             //cls.LoadData2DataGridView(dataGridView1, "select * from tblNhanVien where TAIKHOAN='" + Main.TenDN + "'");
             //MessageBox.Show("Xóa thành công");
+            // Quoc 
         }
 
         private void btExitupdate_Click(object sender, EventArgs e)
