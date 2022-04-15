@@ -20,5 +20,10 @@ namespace QuanLyThuVien2
         {
             cls.LoadData2DataGridView(dataGridView1, "Select * from tblTacGia");
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

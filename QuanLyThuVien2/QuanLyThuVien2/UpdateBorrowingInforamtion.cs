@@ -82,7 +82,7 @@ namespace QuanLyThuVien2
                                         {
                                             string strInsert = "Insert Into tblMuon(MADG,MASACH,SOPHIEUMUON,NGAYMUON,NGAYTRA,XACNHANTRA,GHICHU) values ('" + cboDOCGIA.Text + "','" +
                                                 cboMASACH.Text + "','" + txtSOPHIEU.Text + "','" + mktNGAYMUON.Text + "','" +
-                                                mktNGAYTRA.Text + "','" + cboXACNHAN.Text + "','" + txtGHICHU.Text + "')";
+                                                mktNGAYTRA.Text + "','" + cboXACNHAN.Text + "','" + txtGHICHU.Text + "')"; 
                                             cls.ThucThiSQLTheoPKN(strInsert);
                                             cls.LoadData2DataGridView(dataGridView1, "select * from tblMuon");
                                             MessageBox.Show("Thêm thành công");

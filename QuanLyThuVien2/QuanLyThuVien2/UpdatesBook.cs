@@ -29,6 +29,18 @@ namespace QuanLyThuVien2
             return false;
         }
 
+        public static bool hasSpecialChar2(string input)
+        {
+            string specialChar = @"0123456789";
+            foreach (var item in specialChar)
+            {
+                if (input.Contains(item)) return true;
+            }
+
+            return false;
+        }
+
+
         public int numberUndo = 0;
 
         string masach;
@@ -68,7 +80,7 @@ namespace QuanLyThuVien2
                                         {
                                             if (txtsachhong.Text != "")
                                             {
-                                                if (!hasSpecialChar(txtsachhong.Text))
+                                                if (!hasSpecialChar2(txtsachhong.Text))
                                                 {
                                                     MessageBox.Show("Số sách hỏng chỉ được chứa ký tự số");
                                                 }
@@ -246,7 +258,7 @@ namespace QuanLyThuVien2
                                         {
                                             if (txtsachhong.Text != "")
                                             {
-                                                if (!hasSpecialChar(txtsachhong.Text))
+                                                if (!hasSpecialChar2(txtsachhong.Text))
                                                 {
                                                     MessageBox.Show("Số sách hỏng chỉ được chứa ký tự số");
                                                 }

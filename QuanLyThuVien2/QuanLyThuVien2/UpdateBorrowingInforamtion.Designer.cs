@@ -88,8 +88,8 @@
             // 
             this.cboXACNHAN.FormattingEnabled = true;
             this.cboXACNHAN.Items.AddRange(new object[] {
-            "Đã Trả",
-            "Chưa Trả"});
+            "Da Tra",
+            "Chua Tra"});
             this.cboXACNHAN.Location = new System.Drawing.Point(684, 24);
             this.cboXACNHAN.Margin = new System.Windows.Forms.Padding(4);
             this.cboXACNHAN.Name = "cboXACNHAN";

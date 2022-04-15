@@ -52,6 +52,12 @@
     <Compile Include="ForgotPassword.Designer.cs">
       <DependentUpon>ForgotPassword.cs</DependentUpon>
     </Compile>
+    <Compile Include="Help.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Help.Designer.cs">
+      <DependentUpon>Help.cs</DependentUpon>
+    </Compile>
     <Compile Include="InforAuthors.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -178,6 +184,9 @@
     <EmbeddedResource Include="ForgotPassword.resx">
       <DependentUpon>ForgotPassword.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Help.resx">
+      <DependentUpon>Help.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="InforAuthors.resx">
       <DependentUpon>InforAuthors.cs</DependentUpon>
     </EmbeddedResource>
@@ -192,6 +201,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="InforReaders.resx">
       <DependentUpon>InforReaders.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportBookStatus.resx">
+      <DependentUpon>ReportBookStatus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportReaders.resx">
+      <DependentUpon>ReportReaders.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SearchBooks.resx">
+      <DependentUpon>SearchBooks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SearchReaders.resx">
+      <DependentUpon>SearchReaders.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UpdateBorrowingInforamtion.resx">
       <DependentUpon>UpdateBorrowingInforamtion.cs</DependentUpon>

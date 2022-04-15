@@ -29,8 +29,8 @@ namespace QuanLyThuVien2
         {
             if (radioButton1.Checked)
             {
-                cls.LoadData2DataGridView(dataGridView2, "select*from tblSach where SOSACHHONG>0");
-                cls.LoadData2Label(lb1, "select sum(SOSACHHONG) from tblSach");
+                cls.LoadData2DataGridView(dataGridView2, "select * from tblSach where SOSACHHONG > 0");
+                //cls.LoadData2Label(lb1, "select sum(SOSACHHONG) from tblSach");
             }
             if (radioButton3.Checked)
             {
@@ -48,6 +48,11 @@ namespace QuanLyThuVien2
             lb1.Visible = true;
             label4.Visible = true;
             label5.Visible = true;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }
