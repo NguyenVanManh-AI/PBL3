@@ -30,8 +30,16 @@ namespace QuanLyThuVien2
             if (radioButton2.Checked)
             {
 
-                cls.LoadData2DataGridView(dataGridView2, "select * from tblDocGia where MADG not in (select MADG from tblMuon)");
+                //cls.LoadData2DataGridView(dataGridView2, "select * from tblDocGia where MADG not in (select MADG from tblMuon)");
+                cls.LoadData2DataGridView(dataGridView1, "select * from tblDocGia where MADG not in (select MADG from tblMuon)");
+                // không cần phải dùng đến 2 bảng 
+
             }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

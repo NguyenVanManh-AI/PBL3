@@ -276,6 +276,11 @@ namespace QuanLyThuVien2
             books.Show();
         }
 
+        private void buttonHelp_Click(object sender, EventArgs e)
+        {
+            Help hl = new Help();
+            hl.Show();
+        }
 
         private void ThongTinNguoiDoc(object sender, EventArgs e)
         {
