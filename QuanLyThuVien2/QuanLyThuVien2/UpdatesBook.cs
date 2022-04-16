@@ -380,6 +380,13 @@ namespace QuanLyThuVien2
             Close();
         }
         public string undoMS, undoTS, undoMaLV, undoNXB, undoST, undoSL, undoSSH, undoGHICHU, undoNN, undoMaNXB, undoMaTG;
+
+        private void btSearch_Click(object sender, EventArgs e)
+        {
+            SearchBooks sb = new SearchBooks();
+            sb.Show();
+        }
+
         private void Undo_Click(object sender, EventArgs e)
         {
             if (numberUndo == 1)

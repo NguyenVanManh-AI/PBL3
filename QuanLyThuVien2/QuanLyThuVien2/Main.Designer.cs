@@ -92,6 +92,7 @@
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.btSI = new System.Windows.Forms.Button();
+            this.updateLoanSlipToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.groupBox4.SuspendLayout();
@@ -404,7 +405,8 @@
             this.toolUpdateField,
             this.toolPublisherUpdate,
             this.toolStripSeparator4,
-            this.toolUpdateBorrowingInformation});
+            this.toolUpdateBorrowingInformation,
+            this.updateLoanSlipToolStripMenuItem});
             this.dropdownUpdate.Enabled = false;
             this.dropdownUpdate.ForeColor = System.Drawing.SystemColors.Highlight;
             this.dropdownUpdate.Image = global::QuanLyThuVien2.Properties.Resources.update;
@@ -628,6 +630,14 @@
             this.btSI.UseVisualStyleBackColor = false;
             this.btSI.Click += new System.EventHandler(this.btSI_Click);
             // 
+            // updateLoanSlipToolStripMenuItem
+            // 
+            this.updateLoanSlipToolStripMenuItem.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.updateLoanSlipToolStripMenuItem.Name = "updateLoanSlipToolStripMenuItem";
+            this.updateLoanSlipToolStripMenuItem.Size = new System.Drawing.Size(425, 34);
+            this.updateLoanSlipToolStripMenuItem.Text = "Update Loan Slip";
+            this.updateLoanSlipToolStripMenuItem.Click += new System.EventHandler(this.CapnhatPhieuMuon);
+            // 
             // Main
             // 
             this.AcceptButton = this.button1;
@@ -728,6 +738,7 @@
         private System.Windows.Forms.Button btSI;
         private System.Windows.Forms.ToolStripMenuItem toolLogout;
         private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.ToolStripMenuItem updateLoanSlipToolStripMenuItem;
         //b  private System.Windows.Forms.GroupBox groupBox3;
     }
 }

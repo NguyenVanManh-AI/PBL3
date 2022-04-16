@@ -19,7 +19,7 @@ namespace QuanLyThuVien2
 
         private void KiemTraTTNVien_Load(object sender, EventArgs e)
         {
-            cls.LoadData2DataGridView(dataGridView2, "select*from tblNhanVien");
+            cls.LoadData2DataGridView(dataGridView2, "select * from tblNhanVien");
         }
         Class.clsDatabase cls = new QuanLyThuVien2.Class.clsDatabase();
 

@@ -63,6 +63,7 @@
             this.txtNote = new System.Windows.Forms.TextBox();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.button1 = new System.Windows.Forms.Button();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -349,6 +350,7 @@
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox2.Controls.Add(this.button1);
             this.groupBox2.Controls.Add(this.btnUndo);
             this.groupBox2.Controls.Add(this.btnThoat);
             this.groupBox2.Controls.Add(this.btnThem);
@@ -368,10 +370,10 @@
             // 
             this.btnUndo.BackColor = System.Drawing.Color.White;
             this.btnUndo.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUndo.Location = new System.Drawing.Point(171, 207);
+            this.btnUndo.Location = new System.Drawing.Point(171, 208);
             this.btnUndo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnUndo.Name = "btnUndo";
-            this.btnUndo.Size = new System.Drawing.Size(100, 31);
+            this.btnUndo.Size = new System.Drawing.Size(112, 31);
             this.btnUndo.TabIndex = 13;
             this.btnUndo.Text = "Undo";
             this.btnUndo.UseVisualStyleBackColor = false;
@@ -381,10 +383,10 @@
             // 
             this.btnThoat.BackColor = System.Drawing.Color.White;
             this.btnThoat.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThoat.Location = new System.Drawing.Point(106, 137);
+            this.btnThoat.Location = new System.Drawing.Point(171, 137);
             this.btnThoat.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnThoat.Name = "btnThoat";
-            this.btnThoat.Size = new System.Drawing.Size(100, 31);
+            this.btnThoat.Size = new System.Drawing.Size(112, 40);
             this.btnThoat.TabIndex = 13;
             this.btnThoat.Text = "Close";
             this.btnThoat.UseVisualStyleBackColor = false;
@@ -461,6 +463,19 @@
             this.dataGridView1.TabIndex = 18;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.White;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(32, 137);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(112, 40);
+            this.button1.TabIndex = 14;
+            this.button1.Text = "Search";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.btnSearch_Click);
+            // 
             // UpdateReaders
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -522,5 +537,6 @@
         private System.Windows.Forms.Button btnThoat;
         private System.Windows.Forms.Button btnUndo;
         private System.Windows.Forms.TextBox txtNote;
+        private System.Windows.Forms.Button button1;
     }
 }

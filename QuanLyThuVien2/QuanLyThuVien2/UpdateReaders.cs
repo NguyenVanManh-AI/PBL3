@@ -313,6 +313,12 @@ namespace QuanLyThuVien2
 
         public string undoMDG, undoHT, undoNS, undoGT, undoLOP, undoDIACHI, undoEMAIL, undoGHICHU;
 
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            SearchReaders srd = new SearchReaders();
+            srd.Show();
+        }
+
         private void btnUndo_Click(object sender, EventArgs e)
         {
             if (numberUndo == 1)

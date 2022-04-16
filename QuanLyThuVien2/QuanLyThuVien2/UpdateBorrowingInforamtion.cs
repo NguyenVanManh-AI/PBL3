@@ -38,7 +38,7 @@ namespace QuanLyThuVien2
             {
                 cboDOCGIA.Text = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
                 cboMASACH.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
-                txtSOPHIEU.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
+                cboPhieuMuon.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
                 mktNGAYMUON.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
                 mktNGAYTRA.Text = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
                 cboXACNHAN.Text = dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString();
@@ -56,6 +56,8 @@ namespace QuanLyThuVien2
             cls.LoadData2DataGridView(dataGridView1, "select * from tblMuon");
             cls.LoadData2Combobox(cboDOCGIA, "select MADG from tblDocGia");
             cls.LoadData2Combobox(cboMASACH, "Select MASACH from tblSach");
+            cls.LoadData2Combobox(cboPhieuMuon, "Select id from tblPhieuMuon");
+            //cls.LoadData2Combobox(cboMAPHIEUMUON, "Select MAPHIEUMUON from tblPhieuMuon where idDocGia = cboDOCGIA.text");
         }
 
         private void Them_Click(object sender, EventArgs e)
@@ -64,9 +66,9 @@ namespace QuanLyThuVien2
             {
                 if (cboMASACH.Text != "")
                 {
-                    if (txtSOPHIEU.Text != "")
+                    if (cboPhieuMuon.Text != "")
                     {
-                        if (!hasSpecialChar(txtSOPHIEU.Text))
+                        if (!hasSpecialChar(cboPhieuMuon.Text))
                         {
                             MessageBox.Show("Số phiếu mượn chỉ được chứa ký tự số");
                         }
@@ -81,15 +83,20 @@ namespace QuanLyThuVien2
                                         try
                                         {
                                             string strInsert = "Insert Into tblMuon(MADG,MASACH,SOPHIEUMUON,NGAYMUON,NGAYTRA,XACNHANTRA,GHICHU) values ('" + cboDOCGIA.Text + "','" +
-                                                cboMASACH.Text + "','" + txtSOPHIEU.Text + "','" + mktNGAYMUON.Text + "','" +
+                                                cboMASACH.Text + "','" + cboPhieuMuon.Text + "','" + mktNGAYMUON.Text + "','" +
                                                 mktNGAYTRA.Text + "','" + cboXACNHAN.Text + "','" + txtGHICHU.Text + "')"; 
                                             cls.ThucThiSQLTheoPKN(strInsert);
+
+                                            strInsert = "UPDATE tblPhieuMuon SET MASACH = " + cboMASACH.Text + " WHERE MADG =  "+ cboDOCGIA.Text + " AND id = "+ cboPhieuMuon.Text + "; ";
+
+                                            cls.ThucThiSQLTheoPKN(strInsert);
+
                                             cls.LoadData2DataGridView(dataGridView1, "select * from tblMuon");
                                             MessageBox.Show("Thêm thành công");
                                             cboMASACH.Text = "";
                                             cboDOCGIA.Text = "";
                                             txtGHICHU.Text = "";
-                                            txtSOPHIEU.Text = "";
+                                            cboPhieuMuon.Text = "";
                                             mktNGAYMUON.Text = "";
                                             mktNGAYTRA.Text = "";
                                             cboXACNHAN.Text = "";
@@ -119,9 +126,9 @@ namespace QuanLyThuVien2
             {
                 if (cboMASACH.Text != "")
                 {
-                    if (txtSOPHIEU.Text != "")
+                    if (cboPhieuMuon.Text != "")
                     {
-                        if (!hasSpecialChar(txtSOPHIEU.Text))
+                        if (!hasSpecialChar(cboPhieuMuon.Text))
                         {
                             MessageBox.Show("Số phiếu mượn chỉ được chứa ký tự số");
                         }
@@ -136,7 +143,7 @@ namespace QuanLyThuVien2
 
                                         try
                                         {
-                                            string strUpdate = "Update tblMuon set MADG='" + cboDOCGIA.Text + "',MASACH='" + cboMASACH.Text + "',SOPHIEUMUON='" + txtSOPHIEU.Text
+                                            string strUpdate = "Update tblMuon set MADG='" + cboDOCGIA.Text + "',MASACH='" + cboMASACH.Text + "',SOPHIEUMUON='" + cboPhieuMuon.Text
                                                 + "',NGAYMUON='" + mktNGAYMUON.Text + "',NGAYTRA='" + mktNGAYTRA.Text
                                                 + "',XACNHANTRA='" + cboXACNHAN.Text + "',GHICHU='" + txtGHICHU.Text + "' where MADG='" + madg + "'";
 
@@ -147,7 +154,7 @@ namespace QuanLyThuVien2
                                             cboMASACH.Text = "";
                                             cboDOCGIA.Text = "";
                                             txtGHICHU.Text = "";
-                                            txtSOPHIEU.Text = "";
+                                            cboPhieuMuon.Text = "";
                                             mktNGAYMUON.Text = "";
                                             mktNGAYTRA.Text = "";
                                             cboXACNHAN.Text = "";
@@ -183,7 +190,7 @@ namespace QuanLyThuVien2
                 {
                     undoMDG = cboDOCGIA.Text;
                     undoMS = cboMASACH.Text;
-                    undoSPM = txtSOPHIEU.Text;
+                    undoSPM = cboPhieuMuon.Text;
                     undoNM = mktNGAYMUON.Text;
                     undoNT = mktNGAYTRA.Text;
                     undoXN = cboXACNHAN.Text;
@@ -195,12 +202,11 @@ namespace QuanLyThuVien2
                     cboMASACH.Text = "";
                     cboDOCGIA.Text = "";
                     txtGHICHU.Text = "";
-                    txtSOPHIEU.Text = "";
+                    cboPhieuMuon.Text = "";
                     mktNGAYMUON.Text = "";
                     mktNGAYTRA.Text = "";
                     cboXACNHAN.Text = "";
                     numberUndo = 1;
-
                 }
             }
             catch { }
@@ -211,6 +217,13 @@ namespace QuanLyThuVien2
             Close();
         }
         public string undoMDG, undoMS, undoSPM, undoNM, undoNT, undoXN, undoGHICHU;
+
+        private void cboDOCGIA_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //MessageBox.Show(cboDOCGIA.Text);
+            cls.LoadData2Combobox(cboPhieuMuon, "Select id from tblPhieuMuon WHERE MADG = "+ cboDOCGIA.Text);
+        }
+
         private void Undo_Click(object sender, EventArgs e)
         {
             if (numberUndo == 1)

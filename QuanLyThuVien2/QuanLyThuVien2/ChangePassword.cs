@@ -8,7 +8,7 @@ using System.Text;
 using System.Windows.Forms;
 
 // mã hóa mật khẩu 
-using System.Security.Cryptography;
+using System.Security.Cryptography; /// + 
 
 namespace QuanLyThuVien2
 {
