@@ -76,6 +76,7 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txtGHICHU = new System.Windows.Forms.TextBox();
+            this.btSearch = new System.Windows.Forms.Button();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -367,6 +368,7 @@
             // groupBox3
             // 
             this.groupBox3.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox3.Controls.Add(this.btSearch);
             this.groupBox3.Controls.Add(this.Them);
             this.groupBox3.Controls.Add(this.Thoat);
             this.groupBox3.Controls.Add(this.Sua);
@@ -399,7 +401,7 @@
             // 
             this.Thoat.BackColor = System.Drawing.Color.White;
             this.Thoat.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Thoat.Location = new System.Drawing.Point(110, 123);
+            this.Thoat.Location = new System.Drawing.Point(203, 127);
             this.Thoat.Margin = new System.Windows.Forms.Padding(4);
             this.Thoat.Name = "Thoat";
             this.Thoat.Size = new System.Drawing.Size(112, 32);
@@ -610,6 +612,19 @@
             this.txtGHICHU.Size = new System.Drawing.Size(277, 79);
             this.txtGHICHU.TabIndex = 33;
             // 
+            // btSearch
+            // 
+            this.btSearch.BackColor = System.Drawing.Color.White;
+            this.btSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btSearch.Location = new System.Drawing.Point(25, 127);
+            this.btSearch.Margin = new System.Windows.Forms.Padding(4);
+            this.btSearch.Name = "btSearch";
+            this.btSearch.Size = new System.Drawing.Size(112, 32);
+            this.btSearch.TabIndex = 26;
+            this.btSearch.Text = "Search";
+            this.btSearch.UseVisualStyleBackColor = false;
+            this.btSearch.Click += new System.EventHandler(this.btSearch_Click);
+            // 
             // UpdatesBook
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -684,5 +699,6 @@
         private System.Windows.Forms.TextBox txtGHICHU;
         private System.Windows.Forms.Button Thoat;
         private System.Windows.Forms.Button Undo;
+        private System.Windows.Forms.Button btSearch;
     }
 }

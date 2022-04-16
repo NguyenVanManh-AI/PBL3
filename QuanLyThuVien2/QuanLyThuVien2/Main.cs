@@ -239,7 +239,11 @@ namespace QuanLyThuVien2
             UpdateBorrowingInforamtion ttmuon = new UpdateBorrowingInforamtion();
             ttmuon.Show();
         }
-
+        private void CapnhatPhieuMuon(object sender, EventArgs e)
+        {
+            UpdateLoanSlip updateLoan = new UpdateLoanSlip();
+            updateLoan.Show();
+        }
         private void BaoCaoTinhTrangSach(object sender, EventArgs e)
         {
             ReportBookStatus reportBookStatus = new ReportBookStatus();
@@ -281,6 +285,8 @@ namespace QuanLyThuVien2
             Help hl = new Help();
             hl.Show();
         }
+
+        
 
         private void ThongTinNguoiDoc(object sender, EventArgs e)
         {

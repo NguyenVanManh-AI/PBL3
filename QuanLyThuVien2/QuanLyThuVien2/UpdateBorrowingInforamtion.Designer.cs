@@ -32,7 +32,6 @@
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cboXACNHAN = new System.Windows.Forms.ComboBox();
-            this.txtSOPHIEU = new System.Windows.Forms.TextBox();
             this.mktNGAYTRA = new System.Windows.Forms.MaskedTextBox();
             this.mktNGAYMUON = new System.Windows.Forms.MaskedTextBox();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -60,6 +59,7 @@
             this.cboMASACH = new System.Windows.Forms.ComboBox();
             this.cboDOCGIA = new System.Windows.Forms.ComboBox();
             this.txtGHICHU = new System.Windows.Forms.TextBox();
+            this.cboPhieuMuon = new System.Windows.Forms.ComboBox();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -95,14 +95,6 @@
             this.cboXACNHAN.Name = "cboXACNHAN";
             this.cboXACNHAN.Size = new System.Drawing.Size(202, 28);
             this.cboXACNHAN.TabIndex = 15;
-            // 
-            // txtSOPHIEU
-            // 
-            this.txtSOPHIEU.Location = new System.Drawing.Point(311, 100);
-            this.txtSOPHIEU.Margin = new System.Windows.Forms.Padding(4);
-            this.txtSOPHIEU.Name = "txtSOPHIEU";
-            this.txtSOPHIEU.Size = new System.Drawing.Size(148, 26);
-            this.txtSOPHIEU.TabIndex = 12;
             // 
             // mktNGAYTRA
             // 
@@ -378,11 +370,11 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox1.Controls.Add(this.cboPhieuMuon);
             this.groupBox1.Controls.Add(this.cboMASACH);
             this.groupBox1.Controls.Add(this.cboDOCGIA);
             this.groupBox1.Controls.Add(this.txtGHICHU);
             this.groupBox1.Controls.Add(this.cboXACNHAN);
-            this.groupBox1.Controls.Add(this.txtSOPHIEU);
             this.groupBox1.Controls.Add(this.mktNGAYTRA);
             this.groupBox1.Controls.Add(this.mktNGAYMUON);
             this.groupBox1.Controls.Add(this.label6);
@@ -419,6 +411,7 @@
             this.cboDOCGIA.Name = "cboDOCGIA";
             this.cboDOCGIA.Size = new System.Drawing.Size(277, 28);
             this.cboDOCGIA.TabIndex = 17;
+            this.cboDOCGIA.SelectedIndexChanged += new System.EventHandler(this.cboDOCGIA_SelectedIndexChanged);
             // 
             // txtGHICHU
             // 
@@ -428,6 +421,14 @@
             this.txtGHICHU.Name = "txtGHICHU";
             this.txtGHICHU.Size = new System.Drawing.Size(275, 159);
             this.txtGHICHU.TabIndex = 16;
+            // 
+            // cboPhieuMuon
+            // 
+            this.cboPhieuMuon.FormattingEnabled = true;
+            this.cboPhieuMuon.Location = new System.Drawing.Point(278, 104);
+            this.cboPhieuMuon.Name = "cboPhieuMuon";
+            this.cboPhieuMuon.Size = new System.Drawing.Size(181, 28);
+            this.cboPhieuMuon.TabIndex = 18;
             // 
             // UpdateBorrowingInforamtion
             // 
@@ -459,7 +460,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.ComboBox cboXACNHAN;
-        private System.Windows.Forms.TextBox txtSOPHIEU;
         private System.Windows.Forms.MaskedTextBox mktNGAYTRA;
         private System.Windows.Forms.MaskedTextBox mktNGAYMUON;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
@@ -487,5 +487,6 @@
         private System.Windows.Forms.ComboBox cboDOCGIA;
         private System.Windows.Forms.Button Undo;
         private System.Windows.Forms.Button Thoat;
+        private System.Windows.Forms.ComboBox cboPhieuMuon;
     }
 }
