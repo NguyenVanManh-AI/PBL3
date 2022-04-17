@@ -47,7 +47,14 @@
             this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.Column1a = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2a = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3a = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -59,15 +66,6 @@
             this.Column9a = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column10a = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column11a = new System.Windows.Forms.DataGridViewTextBoxColumn();
-
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.label7 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
@@ -196,7 +194,6 @@
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.Size = new System.Drawing.Size(1140, 337);
             this.dataGridView1.TabIndex = 1;
-
             // 
             // Column1
             // 
@@ -245,7 +242,6 @@
             this.Column6.MinimumWidth = 8;
             this.Column6.Name = "Column6";
             this.Column6.Width = 90;
-
             // 
             // Column7
             // 
@@ -254,7 +250,6 @@
             this.Column7.MinimumWidth = 8;
             this.Column7.Name = "Column7";
             this.Column7.Width = 90;
-
             // 
             // Column8
             // 
@@ -263,7 +258,6 @@
             this.Column8.MinimumWidth = 8;
             this.Column8.Name = "Column8";
             this.Column8.Width = 90;
-
             // 
             // Column9
             // 
@@ -272,7 +266,6 @@
             this.Column9.MinimumWidth = 8;
             this.Column9.Name = "Column9";
             this.Column9.Width = 90;
-
             // 
             // Column10
             // 
@@ -281,7 +274,6 @@
             this.Column10.MinimumWidth = 8;
             this.Column10.Name = "Column10";
             this.Column10.Width = 90;
-
             // 
             // Column11
             // 
@@ -290,7 +282,6 @@
             this.Column11.MinimumWidth = 8;
             this.Column11.Name = "Column11";
             this.Column11.Width = 90;
-
             // 
             // groupBox1
             // 
@@ -337,13 +328,13 @@
             // 
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
-            "MASACH",
-            "TENSACH",
-            "MATG",
-            "MANXB",
-            "MaLv",
-            "NAMXB",
-            "NGAYNHAP"});
+            "Mã Sách",
+            "Tên Sách",
+            "Mã Tác Giả",
+            "Mã Nhà Xuất Bản",
+            "Mã Lĩnh Vực",
+            "Năm Xuất Bản",
+            "Ngày Nhập"});
             this.comboBox1.Location = new System.Drawing.Point(237, 48);
             this.comboBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.comboBox1.Name = "comboBox1";
@@ -400,8 +391,6 @@
             this.dataGridView2.RowHeadersWidth = 62;
             this.dataGridView2.Size = new System.Drawing.Size(1146, 266);
             this.dataGridView2.TabIndex = 5;
-
-
             // 
             // Column1a
             // 
@@ -411,7 +400,7 @@
             this.Column1a.Name = "Column1a";
             this.Column1a.Width = 90;
             // 
-            // Column2
+            // Column2a
             // 
             this.Column2a.DataPropertyName = "TENSACH";
             this.Column2a.HeaderText = "Book Title";
@@ -450,7 +439,6 @@
             this.Column6a.MinimumWidth = 8;
             this.Column6a.Name = "Column6a";
             this.Column6a.Width = 90;
-
             // 
             // Column7a
             // 
@@ -459,7 +447,6 @@
             this.Column7a.MinimumWidth = 8;
             this.Column7a.Name = "Column7a";
             this.Column7a.Width = 90;
-
             // 
             // Column8a
             // 
@@ -468,7 +455,6 @@
             this.Column8a.MinimumWidth = 8;
             this.Column8a.Name = "Column8a";
             this.Column8a.Width = 90;
-
             // 
             // Column9a
             // 
@@ -477,7 +463,6 @@
             this.Column9a.MinimumWidth = 8;
             this.Column9a.Name = "Column9a";
             this.Column9a.Width = 90;
-
             // 
             // Column10a
             // 
@@ -486,7 +471,6 @@
             this.Column10a.MinimumWidth = 8;
             this.Column10a.Name = "Column10a";
             this.Column10a.Width = 90;
-
             // 
             // Column11a
             // 
@@ -495,7 +479,6 @@
             this.Column11a.MinimumWidth = 8;
             this.Column11a.Name = "Column11a";
             this.Column11a.Width = 90;
-
             // 
             // label7
             // 
