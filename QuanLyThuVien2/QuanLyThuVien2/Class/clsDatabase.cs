@@ -18,6 +18,7 @@ namespace QuanLyThuVien2.Class
         SqlDataAdapter sqlAdap;
         DataSet ds = new DataSet();
         DataTable dt = new DataTable("DB");
+        DataTable dt3 = new DataTable("DB");
 
         //Phương thức kết nối tới CSDL SQL Server
         public void KetNoi()
@@ -102,6 +103,15 @@ namespace QuanLyThuVien2.Class
         public void LoadData1Datagirdview(DataGridView DG, string sql, string Bang)
         {
 
+        }
+
+        public void LoadData3DataGridView(DataGridView dg3, string strSelect3)
+        {
+            dt3.Clear();
+            //Fill vào DataTable
+            sqlAdap = new SqlDataAdapter(strSelect3, strConnect);
+            sqlAdap.Fill(dt3);
+            dg3.DataSource = dt3;
         }
     }
 }

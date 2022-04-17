@@ -54,6 +54,14 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label10 = new System.Windows.Forms.Label();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.Column1a = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2a = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3a = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4a = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5a = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6a = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column7a = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column8a = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
@@ -69,14 +77,6 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.Column1a = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2a = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3a = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4a = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5a = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6a = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column7a = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column8a = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox5.SuspendLayout();
@@ -280,12 +280,12 @@
             // 
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
-            "MADG",
-            "HOTEN",
-            "NGAYSINH",
-            "GIOITINH",
-            "LOP",
-            "DIACHI"});
+            "Mã Đọc Giả",
+            "Họ Tên",
+            "Ngày Sinh",
+            "Giới Tính",
+            "Lớp",
+            "Địa Chỉ"});
             this.comboBox1.Location = new System.Drawing.Point(248, 37);
             this.comboBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.comboBox1.Name = "comboBox1";
@@ -379,7 +379,6 @@
             this.dataGridView2.RowHeadersWidth = 62;
             this.dataGridView2.Size = new System.Drawing.Size(1152, 304);
             this.dataGridView2.TabIndex = 0;
-
             // 
             // Column1a
             // 
@@ -387,7 +386,7 @@
             this.Column1a.HeaderText = "Reader code";
             this.Column1a.MinimumWidth = 8;
             this.Column1a.Name = "Column1a";
-            this.Column1a.Width = 90;
+            this.Column1a.Width = 150;
             // 
             // Column2a
             // 
@@ -395,7 +394,7 @@
             this.Column2a.HeaderText = "Name";
             this.Column2a.MinimumWidth = 8;
             this.Column2a.Name = "Column2a";
-            this.Column2a.Width = 90;
+            this.Column2a.Width = 150;
             // 
             // Column3a
             // 
@@ -403,7 +402,7 @@
             this.Column3a.HeaderText = "Date of birth";
             this.Column3a.MinimumWidth = 8;
             this.Column3a.Name = "Column3a";
-            this.Column3a.Width = 90;
+            this.Column3a.Width = 150;
             // 
             // Column4a
             // 
@@ -411,7 +410,7 @@
             this.Column4a.HeaderText = "Gender";
             this.Column4a.MinimumWidth = 8;
             this.Column4a.Name = "Column4a";
-            this.Column4a.Width = 90;
+            this.Column4a.Width = 150;
             // 
             // Column5a
             // 
@@ -419,7 +418,7 @@
             this.Column5a.HeaderText = "Class";
             this.Column5a.MinimumWidth = 8;
             this.Column5a.Name = "Column5a";
-            this.Column5a.Width = 90;
+            this.Column5a.Width = 150;
             // 
             // Column6a
             // 
@@ -427,17 +426,15 @@
             this.Column6a.HeaderText = "Address";
             this.Column6a.MinimumWidth = 8;
             this.Column6a.Name = "Column6a";
-            this.Column6a.Width = 90;
-
+            this.Column6a.Width = 150;
             // 
             // Column7a
             // 
             this.Column7a.DataPropertyName = "EMAIL";
             this.Column7a.HeaderText = "Email";
             this.Column7a.MinimumWidth = 8;
-            this.Column7a.Name = "Colum7a";
-            this.Column7a.Width = 90;
-
+            this.Column7a.Name = "Column7a";
+            this.Column7a.Width = 150;
             // 
             // Column8a
             // 
@@ -445,8 +442,7 @@
             this.Column8a.HeaderText = "Note";
             this.Column8a.MinimumWidth = 8;
             this.Column8a.Name = "Column8a";
-            this.Column8a.Width = 90;
-
+            this.Column8a.Width = 150;
             // 
             // groupBox1
             // 
@@ -613,54 +609,6 @@
             this.label4.Size = new System.Drawing.Size(105, 20);
             this.label4.TabIndex = 0;
             this.label4.Text = "Reader code";
-            // 
-            // Column1a
-            // 
-            this.Column1a.MinimumWidth = 8;
-            this.Column1a.Name = "Column1a";
-            this.Column1a.Width = 150;
-            // 
-            // Column2a
-            // 
-            this.Column2a.MinimumWidth = 8;
-            this.Column2a.Name = "Column2a";
-            this.Column2a.Width = 150;
-            // 
-            // Column3a
-            // 
-            this.Column3a.MinimumWidth = 8;
-            this.Column3a.Name = "Column3a";
-            this.Column3a.Width = 150;
-            // 
-            // Column4a
-            // 
-            this.Column4a.MinimumWidth = 8;
-            this.Column4a.Name = "Column4a";
-            this.Column4a.Width = 150;
-            // 
-            // Column5a
-            // 
-            this.Column5a.MinimumWidth = 8;
-            this.Column5a.Name = "Column5a";
-            this.Column5a.Width = 150;
-            // 
-            // Column6a
-            // 
-            this.Column6a.MinimumWidth = 8;
-            this.Column6a.Name = "Column6a";
-            this.Column6a.Width = 150;
-            // 
-            // Column7a
-            // 
-            this.Column7a.MinimumWidth = 8;
-            this.Column7a.Name = "Column7a";
-            this.Column7a.Width = 150;
-            // 
-            // Column8a
-            // 
-            this.Column8a.MinimumWidth = 8;
-            this.Column8a.Name = "Column8a";
-            this.Column8a.Width = 150;
             // 
             // SearchReaders
             // 

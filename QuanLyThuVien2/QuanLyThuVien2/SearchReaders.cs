@@ -24,7 +24,14 @@ namespace QuanLyThuVien2
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Cls.LoadData2DataGridView(dataGridView1, "select*from tblDocGia where " + comboBox1.Text + " like'%" + textBox1.Text + "%'");
+            string s = "";
+            if (comboBox1.Text == "Mã Đọc Giả") s = "MADG";
+            if (comboBox1.Text == "Họ Tên") s = "HOTEN";
+            if (comboBox1.Text == "Ngày Sinh") s = "NGAYSINH";
+            if (comboBox1.Text == "Giới Tính") s = "GIOITINH";
+            if (comboBox1.Text == "Lớp") s = "LOP";
+            if (comboBox1.Text == "Địa Chỉ") s = "DIACHI";
+            Cls.LoadData2DataGridView(dataGridView1, "select*from tblDocGia where " + s + " like'%" + textBox1.Text + "%'");
         }
 
         private void button3_Click(object sender, EventArgs e)
