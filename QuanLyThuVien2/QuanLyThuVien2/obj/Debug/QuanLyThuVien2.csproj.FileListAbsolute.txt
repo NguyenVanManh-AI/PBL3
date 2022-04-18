@@ -31,3 +31,4 @@ C:\Users\LAPTOP KIM ANH\source\repos\QuanLyThuVien2\QuanLyThuVien2\obj\Debug\Qua
 C:\Users\LAPTOP KIM ANH\source\repos\QuanLyThuVien2\QuanLyThuVien2\obj\Debug\QuanLyThuVien2.ReportReaders.resources
 C:\Users\LAPTOP KIM ANH\source\repos\QuanLyThuVien2\QuanLyThuVien2\obj\Debug\QuanLyThuVien2.Help.resources
 C:\Users\LAPTOP KIM ANH\source\repos\QuanLyThuVien2\QuanLyThuVien2\obj\Debug\QuanLyThuVien2.UpdateLoanSlip.resources
+C:\Users\LAPTOP KIM ANH\source\repos\QuanLyThuVien2\QuanLyThuVien2\obj\Debug\QuanLyThuVien2.SearchLoanSlip.resources

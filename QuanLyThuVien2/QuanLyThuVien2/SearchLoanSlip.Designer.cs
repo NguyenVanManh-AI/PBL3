@@ -1,6 +1,6 @@
 ﻿namespace QuanLyThuVien2
 {
-    partial class UpdateLoanSlip
+    partial class SearchLoanSlip
     {
         /// <summary>
         /// Required designer variable.
@@ -28,18 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UpdateLoanSlip));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SearchLoanSlip));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Column1a = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2a = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3a = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.add = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.cboDOCGIA = new System.Windows.Forms.ComboBox();
-            this.cboReaderCode2 = new System.Windows.Forms.ComboBox();
-            this.btnShowDetail = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -69,126 +59,31 @@
             this.Column27 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column28 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column29 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cboPhieuMuonCode = new System.Windows.Forms.ComboBox();
+            this.txtReaderCode = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtLoanCode = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.btnShow = new System.Windows.Forms.Button();
-            this.btnDelete = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
-            this.cboMASACH = new System.Windows.Forms.ComboBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtBookCode = new System.Windows.Forms.TextBox();
             this.btnSearch = new System.Windows.Forms.Button();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtReaderName = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtClass = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txtReaderAddress = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txtReaderDateofbirth = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.btnClose = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
-            this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // dataGridView1
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1a,
-            this.Column2a,
-            this.Column3a});
-            this.dataGridView1.Location = new System.Drawing.Point(12, 319);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 62;
-            this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(577, 289);
-            this.dataGridView1.TabIndex = 0;
-            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
-            // 
-            // Column1a
-            // 
-            this.Column1a.DataPropertyName = "MADG";
-            this.Column1a.HeaderText = "Readers code";
-            this.Column1a.MinimumWidth = 8;
-            this.Column1a.Name = "Column1a";
-            this.Column1a.Width = 90;
-            // 
-            // Column2a
-            // 
-            this.Column2a.DataPropertyName = "MAPHIEUMUON";
-            this.Column2a.HeaderText = "Loan coupon code";
-            this.Column2a.MinimumWidth = 8;
-            this.Column2a.Name = "Column2a";
-            this.Column2a.Width = 90;
-            // 
-            // Column3a
-            // 
-            this.Column3a.DataPropertyName = "MASACH";
-            this.Column3a.HeaderText = "Book code";
-            this.Column3a.MinimumWidth = 8;
-            this.Column3a.Name = "Column3a";
-            this.Column3a.Width = 90;
-            // 
-            // add
-            // 
-            this.add.BackColor = System.Drawing.Color.White;
-            this.add.Location = new System.Drawing.Point(347, 28);
-            this.add.Name = "add";
-            this.add.Size = new System.Drawing.Size(98, 38);
-            this.add.TabIndex = 1;
-            this.add.Text = "Add";
-            this.add.UseVisualStyleBackColor = false;
-            this.add.Click += new System.EventHandler(this.add_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(6, 37);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(101, 20);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Reader code";
-            // 
-            // cboDOCGIA
-            // 
-            this.cboDOCGIA.FormattingEnabled = true;
-            this.cboDOCGIA.Location = new System.Drawing.Point(126, 34);
-            this.cboDOCGIA.Name = "cboDOCGIA";
-            this.cboDOCGIA.Size = new System.Drawing.Size(199, 28);
-            this.cboDOCGIA.TabIndex = 4;
-            // 
-            // cboReaderCode2
-            // 
-            this.cboReaderCode2.FormattingEnabled = true;
-            this.cboReaderCode2.Location = new System.Drawing.Point(113, 40);
-            this.cboReaderCode2.Name = "cboReaderCode2";
-            this.cboReaderCode2.Size = new System.Drawing.Size(199, 28);
-            this.cboReaderCode2.TabIndex = 5;
-            this.cboReaderCode2.SelectedIndexChanged += new System.EventHandler(this.cboReaderCode2_SelectedIndexChanged);
-            // 
-            // btnShowDetail
-            // 
-            this.btnShowDetail.BackColor = System.Drawing.Color.White;
-            this.btnShowDetail.Location = new System.Drawing.Point(204, 25);
-            this.btnShowDetail.Name = "btnShowDetail";
-            this.btnShowDetail.Size = new System.Drawing.Size(127, 38);
-            this.btnShowDetail.TabIndex = 6;
-            this.btnShowDetail.Text = "ShowDetail";
-            this.btnShowDetail.UseVisualStyleBackColor = false;
-            this.btnShowDetail.Click += new System.EventHandler(this.btnShowDetail_Click);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(6, 49);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(101, 20);
-            this.label2.TabIndex = 7;
-            this.label2.Text = "Reader code";
-            // 
-            // dataGridView2
-            // 
-            this.dataGridView2.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column2,
             this.Column3,
@@ -218,13 +113,12 @@
             this.Column27,
             this.Column28,
             this.Column29});
-            this.dataGridView2.Location = new System.Drawing.Point(12, 343);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.RowHeadersWidth = 62;
-            this.dataGridView2.RowTemplate.Height = 28;
-            this.dataGridView2.Size = new System.Drawing.Size(1227, 306);
-            this.dataGridView2.TabIndex = 10;
-            this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
+            this.dataGridView1.Location = new System.Drawing.Point(12, 301);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 62;
+            this.dataGridView1.RowTemplate.Height = 28;
+            this.dataGridView1.Size = new System.Drawing.Size(1231, 370);
+            this.dataGridView1.TabIndex = 0;
             // 
             // Column1
             // 
@@ -465,154 +359,198 @@
             this.Column29.ReadOnly = true;
             this.Column29.Width = 125;
             // 
-            // cboPhieuMuonCode
+            // txtReaderCode
             // 
-            this.cboPhieuMuonCode.FormattingEnabled = true;
-            this.cboPhieuMuonCode.Location = new System.Drawing.Point(465, 41);
-            this.cboPhieuMuonCode.Name = "cboPhieuMuonCode";
-            this.cboPhieuMuonCode.Size = new System.Drawing.Size(199, 28);
-            this.cboPhieuMuonCode.TabIndex = 11;
-            this.cboPhieuMuonCode.SelectedIndexChanged += new System.EventHandler(this.cboPhieuMuonCode_SelectedIndexChanged);
+            this.txtReaderCode.Location = new System.Drawing.Point(40, 65);
+            this.txtReaderCode.Name = "txtReaderCode";
+            this.txtReaderCode.Size = new System.Drawing.Size(189, 26);
+            this.txtReaderCode.TabIndex = 1;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Location = new System.Drawing.Point(36, 29);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(112, 20);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Readers Code";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Location = new System.Drawing.Point(292, 29);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(144, 20);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "Loan coupon Code";
+            // 
+            // txtLoanCode
+            // 
+            this.txtLoanCode.Location = new System.Drawing.Point(296, 65);
+            this.txtLoanCode.Name = "txtLoanCode";
+            this.txtLoanCode.Size = new System.Drawing.Size(189, 26);
+            this.txtLoanCode.TabIndex = 4;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(318, 49);
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Location = new System.Drawing.Point(534, 29);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(141, 20);
-            this.label3.TabIndex = 12;
-            this.label3.Text = "Loan coupon code";
+            this.label3.Size = new System.Drawing.Size(88, 20);
+            this.label3.TabIndex = 5;
+            this.label3.Text = "Book Code";
             // 
-            // btnShow
+            // txtBookCode
             // 
-            this.btnShow.BackColor = System.Drawing.Color.White;
-            this.btnShow.Location = new System.Drawing.Point(19, 25);
-            this.btnShow.Name = "btnShow";
-            this.btnShow.Size = new System.Drawing.Size(114, 38);
-            this.btnShow.TabIndex = 13;
-            this.btnShow.Text = "Show";
-            this.btnShow.UseVisualStyleBackColor = false;
-            this.btnShow.Click += new System.EventHandler(this.btnShow_Click);
+            this.txtBookCode.Location = new System.Drawing.Point(538, 65);
+            this.txtBookCode.Name = "txtBookCode";
+            this.txtBookCode.Size = new System.Drawing.Size(189, 26);
+            this.txtBookCode.TabIndex = 6;
             // 
-            // btnDelete
+            // btnSearch
             // 
-            this.btnDelete.BackColor = System.Drawing.Color.White;
-            this.btnDelete.Location = new System.Drawing.Point(19, 148);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(127, 38);
-            this.btnDelete.TabIndex = 14;
-            this.btnDelete.Text = "Delete";
-            this.btnDelete.UseVisualStyleBackColor = false;
-            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            this.btnSearch.BackColor = System.Drawing.Color.White;
+            this.btnSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSearch.Location = new System.Drawing.Point(896, 172);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(131, 39);
+            this.btnSearch.TabIndex = 7;
+            this.btnSearch.Text = "SEARCH";
+            this.btnSearch.UseVisualStyleBackColor = false;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Location = new System.Drawing.Point(660, 24);
+            this.label4.Location = new System.Drawing.Point(770, 29);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(78, 20);
-            this.label4.TabIndex = 19;
-            this.label4.Text = "MASACH";
+            this.label4.Size = new System.Drawing.Size(108, 20);
+            this.label4.TabIndex = 8;
+            this.label4.Text = "Reader Name";
             // 
-            // cboMASACH
+            // txtReaderName
             // 
-            this.cboMASACH.FormattingEnabled = true;
-            this.cboMASACH.Location = new System.Drawing.Point(754, 18);
-            this.cboMASACH.Name = "cboMASACH";
-            this.cboMASACH.Size = new System.Drawing.Size(199, 28);
-            this.cboMASACH.TabIndex = 20;
+            this.txtReaderName.Location = new System.Drawing.Point(774, 65);
+            this.txtReaderName.Name = "txtReaderName";
+            this.txtReaderName.Size = new System.Drawing.Size(189, 26);
+            this.txtReaderName.TabIndex = 9;
             // 
-            // button1
+            // label5
             // 
-            this.button1.BackColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(111, 87);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(127, 38);
-            this.button1.TabIndex = 21;
-            this.button1.Text = "Close";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Location = new System.Drawing.Point(991, 29);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(48, 20);
+            this.label5.TabIndex = 10;
+            this.label5.Text = "Class";
             // 
-            // groupBox1
+            // txtClass
             // 
-            this.groupBox1.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox1.Controls.Add(this.btnSearch);
-            this.groupBox1.Controls.Add(this.button1);
-            this.groupBox1.Controls.Add(this.btnDelete);
-            this.groupBox1.Controls.Add(this.btnShowDetail);
-            this.groupBox1.Controls.Add(this.btnShow);
-            this.groupBox1.Location = new System.Drawing.Point(715, 82);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(360, 210);
-            this.groupBox1.TabIndex = 25;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Feature";
+            this.txtClass.Location = new System.Drawing.Point(995, 65);
+            this.txtClass.Name = "txtClass";
+            this.txtClass.Size = new System.Drawing.Size(189, 26);
+            this.txtClass.TabIndex = 11;
             // 
-            // btnSearch
+            // label6
             // 
-            this.btnSearch.BackColor = System.Drawing.Color.White;
-            this.btnSearch.Location = new System.Drawing.Point(204, 148);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(127, 38);
-            this.btnSearch.TabIndex = 22;
-            this.btnSearch.Text = "Search";
-            this.btnSearch.UseVisualStyleBackColor = false;
-            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click_1);
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Location = new System.Drawing.Point(36, 136);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(125, 20);
+            this.label6.TabIndex = 12;
+            this.label6.Text = "Reader Address";
             // 
-            // groupBox2
+            // txtReaderAddress
             // 
-            this.groupBox2.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox2.Controls.Add(this.label2);
-            this.groupBox2.Controls.Add(this.cboReaderCode2);
-            this.groupBox2.Controls.Add(this.label3);
-            this.groupBox2.Controls.Add(this.cboPhieuMuonCode);
-            this.groupBox2.Location = new System.Drawing.Point(26, 129);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(683, 122);
-            this.groupBox2.TabIndex = 26;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Form Feature";
+            this.txtReaderAddress.Location = new System.Drawing.Point(40, 178);
+            this.txtReaderAddress.Name = "txtReaderAddress";
+            this.txtReaderAddress.Size = new System.Drawing.Size(189, 26);
+            this.txtReaderAddress.TabIndex = 13;
             // 
-            // groupBox3
+            // label7
             // 
-            this.groupBox3.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox3.Controls.Add(this.cboDOCGIA);
-            this.groupBox3.Controls.Add(this.add);
-            this.groupBox3.Controls.Add(this.label1);
-            this.groupBox3.Location = new System.Drawing.Point(26, 24);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(464, 83);
-            this.groupBox3.TabIndex = 27;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Form Add";
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.Transparent;
+            this.label7.Location = new System.Drawing.Point(292, 136);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(154, 20);
+            this.label7.TabIndex = 14;
+            this.label7.Text = "Reader Date of birth";
             // 
-            // UpdateLoanSlip
+            // txtReaderDateofbirth
+            // 
+            this.txtReaderDateofbirth.Location = new System.Drawing.Point(296, 178);
+            this.txtReaderDateofbirth.Name = "txtReaderDateofbirth";
+            this.txtReaderDateofbirth.Size = new System.Drawing.Size(189, 26);
+            this.txtReaderDateofbirth.TabIndex = 15;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.Transparent;
+            this.label8.Location = new System.Drawing.Point(534, 136);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(105, 20);
+            this.label8.TabIndex = 16;
+            this.label8.Text = "Reader Email";
+            // 
+            // txtEmail
+            // 
+            this.txtEmail.Location = new System.Drawing.Point(538, 178);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(189, 26);
+            this.txtEmail.TabIndex = 17;
+            // 
+            // btnClose
+            // 
+            this.btnClose.BackColor = System.Drawing.Color.White;
+            this.btnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClose.Location = new System.Drawing.Point(1053, 172);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(131, 39);
+            this.btnClose.TabIndex = 18;
+            this.btnClose.Text = "CLOSE";
+            this.btnClose.UseVisualStyleBackColor = false;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
+            // SearchLoanSlip
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::QuanLyThuVien2.Properties.Resources.Backgroundmain;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1392, 679);
-            this.Controls.Add(this.groupBox3);
-            this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.cboMASACH);
+            this.ClientSize = new System.Drawing.Size(1395, 683);
+            this.Controls.Add(this.btnClose);
+            this.Controls.Add(this.txtEmail);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.txtReaderDateofbirth);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.txtReaderAddress);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.txtClass);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.txtReaderName);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.dataGridView2);
+            this.Controls.Add(this.btnSearch);
+            this.Controls.Add(this.txtBookCode);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.txtLoanCode);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.txtReaderCode);
             this.Controls.Add(this.dataGridView1);
             this.ForeColor = System.Drawing.Color.DodgerBlue;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "UpdateLoanSlip";
-            this.Text = "Update Loan Slip";
-            this.Load += new System.EventHandler(this.UpdateLoanSlip_Load);
+            this.Name = "SearchLoanSlip";
+            this.Text = "Search Loan Slip";
+            this.Load += new System.EventHandler(this.SearchLoanSlip_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -621,16 +559,6 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1a;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2a;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3a;
-        private System.Windows.Forms.Button add;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox cboDOCGIA;
-        private System.Windows.Forms.ComboBox cboReaderCode2;
-        private System.Windows.Forms.Button btnShowDetail;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
@@ -660,18 +588,23 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column27;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column28;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column29;
-
-
-        private System.Windows.Forms.ComboBox cboPhieuMuonCode;
+        private System.Windows.Forms.TextBox txtReaderCode;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox txtLoanCode;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button btnShow;
-        private System.Windows.Forms.Button btnDelete;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ComboBox cboMASACH;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.TextBox txtBookCode;
         private System.Windows.Forms.Button btnSearch;
-        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox txtReaderName;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox txtClass;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox txtReaderAddress;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox txtReaderDateofbirth;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox txtEmail;
+        private System.Windows.Forms.Button btnClose;
     }
 }

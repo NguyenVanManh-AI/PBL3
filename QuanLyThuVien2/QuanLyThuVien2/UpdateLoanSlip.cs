@@ -23,6 +23,8 @@ namespace QuanLyThuVien2
         Class.clsDatabase cls = new QuanLyThuVien2.Class.clsDatabase();
         string undoMADG = "", undoMAPHIEUMUON = "";
         int numberUndo = 0;
+
+        string editMADG, editMAPHIEUMUON;
         //private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         //{
         //    try
@@ -58,7 +60,7 @@ namespace QuanLyThuVien2
 
         private void add_Click(object sender, EventArgs e)
         {
-            btnEdit.Enabled = true;
+            //btnEdit.Enabled = true;
             btnDelete.Enabled = true;
             numberUndo = 0;
             cls.LoadData3DataGridView(dataGridView1, "select DISTINCT MADG , MAPHIEUMUON , MASACH  from tblPhieuMuon ORDER BY MADG , MAPHIEUMUON , MASACH");
@@ -74,12 +76,12 @@ namespace QuanLyThuVien2
                 string strInsert = "Insert Into tblPhieuMuon(MADG,MAPHIEUMUON) values (" + cboDOCGIA.Text + ",(SELECT MAX(MAPHIEUMUON)FROM tblPhieuMuON)+1)";
                 cls.ThucThiSQLTheoPKN(strInsert);
                 //cls.LoadData2DataGridView(dataGridView1, "SELECT * FROM tblPhieuMuon AS pm Left JOIN tblDocGia AS dg ON dg.MADG = pm.MADG Left JOIN tblSach AS sa ON pm.MASACH = sa.MASACH ORDER BY pm.MADG");
+                MessageBox.Show("Thêm phiếu mượn sách thành công !!!");
             }
             cls.LoadData3DataGridView(dataGridView1, "select DISTINCT MADG , MAPHIEUMUON , MASACH  from tblPhieuMuon ORDER BY MADG , MAPHIEUMUON , MASACH");
             cls.LoadData2Combobox(cboReaderCode2, "select DISTINCT MADG from tblPhieuMuon");
             cboReaderCode2.Items.Add("All");
 
-            MessageBox.Show("Thêm phiếu mượn sách thành công !!!");
 
 
 
@@ -89,13 +91,14 @@ namespace QuanLyThuVien2
         private void btnShowDetail_Click(object sender, EventArgs e)
         {
             btnDelete.Enabled = false;
-            btnEdit.Enabled = false;
+            //btnEdit.Enabled = false;
             numberUndo = 0;
             dataGridView1.Hide();
             dataGridView2.Show();
 
             if (cboReaderCode2.Text == "")
             {
+                cls.LoadData2DataGridView(dataGridView2, "SELECT * FROM tblPhieuMuon AS pm Left JOIN tblDocGia AS dg ON dg.MADG = pm.MADG Left JOIN tblSach AS sa ON pm.MASACH = sa.MASACH Left JOIN tblMuon AS m ON pm.MAPHIEUMUON = m.SOPHIEUMUON AND pm.MASACH = m.MASACH AND pm.MADG = m.MADG ORDER BY pm.MADG , pm.MAPHIEUMUON , pm.MASACH");
                 MessageBox.Show("Hãy chọn mã người đọc !!!");
             }
             else
@@ -126,7 +129,7 @@ namespace QuanLyThuVien2
 
         private void btnShow_Click(object sender, EventArgs e)
         {
-            btnEdit.Enabled = true;
+            //btnEdit.Enabled = true;
             btnDelete.Enabled = true;
             numberUndo = 0;
             dataGridView2.Hide();
@@ -143,10 +146,11 @@ namespace QuanLyThuVien2
             cboPhieuMuonCode.Text = "";
             if(cboReaderCode2.Text == "All")
             {
-
+                cboPhieuMuonCode.Enabled = false;
             }
             else
             {
+                cboPhieuMuonCode.Enabled = true;
                 cls.LoadData2Combobox(cboPhieuMuonCode, "Select DISTINCT MAPHIEUMUON from tblPhieuMuon WHERE MADG = " + cboReaderCode2.Text);
             }
         }
@@ -165,6 +169,10 @@ namespace QuanLyThuVien2
             cboMASACH.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
             undoMADG = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString(); 
             undoMAPHIEUMUON = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
+
+            editMADG = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
+            editMAPHIEUMUON = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
+
         }
 
         private void cboPhieuMuonCode_SelectedIndexChanged(object sender, EventArgs e)
@@ -176,38 +184,49 @@ namespace QuanLyThuVien2
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-
-            //MessageBox.Show(cboMASACH.Items.Count.ToString());
-            //MessageBox.Show(cboMASACH.Items[0].ToString());
-            if (cboMASACH.Items[0].ToString() == "")
+            if(cboReaderCode2.Text == "" || cboPhieuMuonCode.Text == "")
             {
-                string strInsert = "DELETE FROM tblPhieuMuon WHERE MADG = "+ cboReaderCode2.Text + " AND MAPHIEUMUON = " + cboPhieuMuonCode.Text;
-                cls.ThucThiSQLTheoPKN(strInsert);
-                numberUndo = 1;
-                MessageBox.Show("Đã xóa phiếu mượn sách !!!");
+                MessageBox.Show("Hãy chọn một hàng để xóa !!!");
+            }
+            else if (cboReaderCode2.Text == "0" || cboPhieuMuonCode.Text == "0")
+            {
+
             }
             else
             {
-                if (MessageBox.Show("Phiếu mượn sách đang được sử dụng!!! Bạn có muốn xóa không ??? ", "Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                //MessageBox.Show(cboMASACH.Items.Count.ToString());
+                //MessageBox.Show(cboMASACH.Items[0].ToString());
+                if (cboMASACH.Items[0].ToString() == "")
                 {
-                    string strdelete = "DELETE FROM tblPhieuMuon WHERE MADG = " + cboReaderCode2.Text + " AND MAPHIEUMUON = " + cboPhieuMuonCode.Text;
-                    cls.ThucThiSQLTheoPKN(strdelete);
-
-                    strdelete = "DELETE FROM tblMuon WHERE MADG = " + cboReaderCode2.Text + " AND SOPHIEUMUON = " + cboPhieuMuonCode.Text;
-                    cls.ThucThiSQLTheoPKN(strdelete);
-
+                    string strInsert = "DELETE FROM tblPhieuMuon WHERE MADG = " + cboReaderCode2.Text + " AND MAPHIEUMUON = " + cboPhieuMuonCode.Text;
+                    cls.ThucThiSQLTheoPKN(strInsert);
                     numberUndo = 1;
+                    MessageBox.Show("Đã xóa phiếu mượn sách !!!");
+                }
+                else
+                {
+                    if (MessageBox.Show("Phiếu mượn sách đang được sử dụng!!! Bạn có muốn xóa không ??? ", "Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    {
+                        string strdelete = "DELETE FROM tblPhieuMuon WHERE MADG = " + cboReaderCode2.Text + " AND MAPHIEUMUON = " + cboPhieuMuonCode.Text;
+                        cls.ThucThiSQLTheoPKN(strdelete);
+
+                        strdelete = "DELETE FROM tblMuon WHERE MADG = " + cboReaderCode2.Text + " AND SOPHIEUMUON = " + cboPhieuMuonCode.Text;
+                        cls.ThucThiSQLTheoPKN(strdelete);
+
+                        numberUndo = 1;
+                    }
+
                 }
 
+                // load lại 
+                cls.LoadData3DataGridView(dataGridView1, "select DISTINCT MADG , MAPHIEUMUON , MASACH  from tblPhieuMuon ORDER BY MADG , MAPHIEUMUON , MASACH");
+                cboReaderCode2.Text = "";
+                cboPhieuMuonCode.Text = "";
+                cls.LoadData2Combobox(cboReaderCode2, "select DISTINCT MADG from tblPhieuMuon");
+                cboReaderCode2.Items.Add("All");
+                cls.LoadData2DataGridView(dataGridView2, "SELECT * FROM tblPhieuMuon AS pm Left JOIN tblDocGia AS dg ON dg.MADG = pm.MADG Left JOIN tblSach AS sa ON pm.MASACH = sa.MASACH Left JOIN tblMuon AS m ON pm.MAPHIEUMUON = m.SOPHIEUMUON AND pm.MASACH = m.MASACH AND pm.MADG = m.MADG ORDER BY pm.MADG , pm.MAPHIEUMUON , pm.MASACH");
             }
-
-            // load lại 
-            cls.LoadData3DataGridView(dataGridView1, "select DISTINCT MADG , MAPHIEUMUON , MASACH  from tblPhieuMuon ORDER BY MADG , MAPHIEUMUON , MASACH");
-            cboReaderCode2.Text = "";
-            cboPhieuMuonCode.Text = "";
-            cls.LoadData2Combobox(cboReaderCode2, "select DISTINCT MADG from tblPhieuMuon");
-            cboReaderCode2.Items.Add("All");
-            cls.LoadData2DataGridView(dataGridView2, "SELECT * FROM tblPhieuMuon AS pm Left JOIN tblDocGia AS dg ON dg.MADG = pm.MADG Left JOIN tblSach AS sa ON pm.MASACH = sa.MASACH Left JOIN tblMuon AS m ON pm.MAPHIEUMUON = m.SOPHIEUMUON AND pm.MASACH = m.MASACH AND pm.MADG = m.MADG ORDER BY pm.MADG , pm.MAPHIEUMUON , pm.MASACH");
+            
 
 
         }
@@ -220,6 +239,19 @@ namespace QuanLyThuVien2
         private void btnEdit_Click(object sender, EventArgs e)
         {
             numberUndo = 0;
+            string strUpdate = "Update tblPhieuMuon set MADG = " + cboReaderCode2.Text + " , MAPHIEUMUON = " + cboPhieuMuonCode.Text + " WHERE MADG =  " + editMADG + " AND MAPHIEUMUON = " + editMAPHIEUMUON ;
+            cls.ThucThiSQLTheoPKN(strUpdate);
+
+                   strUpdate = "Update tblMuon set MADG      = " + cboReaderCode2.Text + " , SOPHIEUMUON = " + cboPhieuMuonCode.Text + " WHERE MADG =  " + editMADG + " AND SOPHIEUMUON = " + editMAPHIEUMUON;
+            cls.ThucThiSQLTheoPKN(strUpdate);
+
+            MessageBox.Show("Chỉnh sửa thành công !!!");
+        }
+
+        private void btnSearch_Click_1(object sender, EventArgs e)
+        {
+            SearchLoanSlip sll = new SearchLoanSlip();
+            sll.Show();
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
