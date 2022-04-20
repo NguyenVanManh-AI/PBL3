@@ -153,10 +153,14 @@ namespace QuanLyThuVien2
             textChhucVu.Text = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
             textTuoi.Text = dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString();
 <<<<<<< HEAD
+<<<<<<< HEAD
             
 =======
 
 >>>>>>> 15d612f1ceaf65821eedefa0f7945c906334bdd2
+=======
+
+>>>>>>> main
         }
 
         private void button4_Click(object sender, EventArgs e)

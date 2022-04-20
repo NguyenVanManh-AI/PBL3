@@ -54,7 +54,10 @@
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.btUndo = new System.Windows.Forms.Button();
             this.btClose = new System.Windows.Forms.Button();
+<<<<<<< HEAD
             this.btSearch = new System.Windows.Forms.Button();
+=======
+>>>>>>> main
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -205,6 +208,10 @@
             this.SDTNhaXuatBan.Name = "SDTNhaXuatBan";
             this.SDTNhaXuatBan.Size = new System.Drawing.Size(186, 20);
             this.SDTNhaXuatBan.TabIndex = 4;
+<<<<<<< HEAD
+=======
+            //this.SDTNhaXuatBan.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSODIENTHOAI_KeyPress);
+>>>>>>> main
             // 
             // label6
             // 
@@ -307,6 +314,22 @@
             this.btUndo.Click += new System.EventHandler(this.btUndo_Click);
             // 
             // btClose
+<<<<<<< HEAD
+=======
+            // 
+            this.btClose.BackColor = System.Drawing.Color.White;
+            this.btClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btClose.Location = new System.Drawing.Point(190, 92);
+            this.btClose.Margin = new System.Windows.Forms.Padding(4);
+            this.btClose.Name = "btClose";
+            this.btClose.Size = new System.Drawing.Size(112, 33);
+            this.btClose.TabIndex = 21;
+            this.btClose.Text = "Close";
+            this.btClose.UseVisualStyleBackColor = false;
+            this.btClose.Click += new System.EventHandler(this.btClose_Click);
+            // 
+            // UpdatePublisherInformation
+>>>>>>> main
             // 
             this.btClose.BackColor = System.Drawing.Color.White;
             this.btClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -341,6 +364,10 @@
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.groupBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+<<<<<<< HEAD
+=======
+            this.Margin = new System.Windows.Forms.Padding(4);
+>>>>>>> main
             this.Name = "UpdatePublisherInformation";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Update Publisher Information";

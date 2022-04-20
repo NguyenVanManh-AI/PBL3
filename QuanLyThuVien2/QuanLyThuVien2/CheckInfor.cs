@@ -25,7 +25,11 @@ namespace QuanLyThuVien2
 
         private void KiemTraTTNVien_Load(object sender, EventArgs e)
         {
+<<<<<<< HEAD
             cls.LoadData2DataGridView(dataGridView2, "select taikhoan,quyenhan,tennv,diachi,dienthoai,email,chucvu,tuoi from tblNhanVien");
+=======
+            cls.LoadData2DataGridView(dataGridView2, "select * from tblNhanVien");
+>>>>>>> main
         }
         Class.clsDatabase cls = new QuanLyThuVien2.Class.clsDatabase();
 

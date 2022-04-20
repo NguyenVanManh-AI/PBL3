@@ -152,10 +152,14 @@ namespace QuanLyThuVien2
             {
                 Con = new SqlConnection();
 <<<<<<< HEAD
+<<<<<<< HEAD
                 Con.ConnectionString = @"Server =DESKTOP-QCOSLTK\VANMANH;" + "database=Library2; Integrated Security = true";
 =======
                 Con.ConnectionString = @"Server =21AK22-COM\QUOC;" + "database=Library; Integrated Security = true";
 >>>>>>> 15d612f1ceaf65821eedefa0f7945c906334bdd2
+=======
+                Con.ConnectionString = @"Server =DESKTOP-QCOSLTK\VANMANH;" + "database=Library2; Integrated Security = true";
+>>>>>>> main
                 Con.Open();
             }
             catch { MessageBox.Show("Unable to connect !!! :(( "); }
@@ -261,7 +265,10 @@ namespace QuanLyThuVien2
         {
             ReportBookStatus reportBookStatus = new ReportBookStatus();
             reportBookStatus.Show();
+<<<<<<< HEAD
 >>>>>>> 15d612f1ceaf65821eedefa0f7945c906334bdd2
+=======
+>>>>>>> main
         }
 
         private void BaoCaoDocGia(object sender, EventArgs e)

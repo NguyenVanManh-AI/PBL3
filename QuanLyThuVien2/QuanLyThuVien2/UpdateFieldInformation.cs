@@ -20,10 +20,10 @@ namespace QuanLyThuVien2
         {
             cls.LoadData2DataGridView(dataGridView1, "select *from tblLinhVuc");
         }
-        public int bug = 0 , nundo = 0 ;
+        public int bug = 0, nundo = 0;
         public int numberEdit = 0;
         public string MaLVText = "";
-        
+
         private void btAdd_Click(object sender, EventArgs e)
         {
             if (MaLinhVuc.Text == "")
@@ -64,10 +64,11 @@ namespace QuanLyThuVien2
                             GhiChuLinhVuc.Text = "";
                             numberEdit = 0;
                         }
-                        catch {
+                        catch
+                        {
                             MessageBox.Show("Mã Lĩnh Vực Đã tồn tại !");
                         };
-                        
+
                     }
                 }
             }
@@ -76,8 +77,8 @@ namespace QuanLyThuVien2
 
         }
 
-        public string undoMLV , undoTLV, undoGCLV; 
-     
+        public string undoMLV, undoTLV, undoGCLV;
+
         private void btDelete_Click(object sender, EventArgs e)
         {
             if (MaLinhVuc.Text == "")
@@ -113,7 +114,7 @@ namespace QuanLyThuVien2
 
         private void btUndo_Click(object sender, EventArgs e)
         {
-            if(nundo == 1)
+            if (nundo == 1)
             {
                 string strInsert = "Insert Into tblLinhVuc(MaLv,TenLv,GhiChu) values ('" + undoMLV + "','" + undoTLV + "','" + undoGCLV + "')";
                 cls.ThucThiSQLTheoPKN(strInsert);
@@ -121,12 +122,12 @@ namespace QuanLyThuVien2
                 MessageBox.Show("Hoàn tác thành công");
                 nundo = 0;
             }
-            
+
         }
 
         private void MaLinhVuc_TextChanged(object sender, EventArgs e)
         {
-             
+
         }
 
         string MALV;
@@ -134,6 +135,12 @@ namespace QuanLyThuVien2
         private void btClose_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            SearchField search = new SearchField();
+            search.Show();
         }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -151,12 +158,12 @@ namespace QuanLyThuVien2
             catch { };
         }
         // int dem = 0;
-        
+
 
         public int bug2 = 0;
         private void btEdit_Click(object sender, EventArgs e)
         {
-            if(numberEdit == 0)
+            if (numberEdit == 0)
             {
                 MessageBox.Show("Hãy chọn một hàng dữ liệu đễ chỉnh sửa !");
             }
@@ -201,7 +208,7 @@ namespace QuanLyThuVien2
                     catch { MessageBox.Show("Không thể sửa - Mã Lĩnh vực đã tồn tại !!!"); };
                 }
             }
-            
+
         }
 
     }

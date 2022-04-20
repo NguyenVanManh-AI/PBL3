@@ -12,10 +12,14 @@ namespace QuanLyThuVien2.Class
     {
         //Khai báo các chuỗi kết nối và các đối tượng
 <<<<<<< HEAD
+<<<<<<< HEAD
         string strConnect = @"Data Source=DESKTOP-QCOSLTK\VANMANH;Initial Catalog=Library2;Integrated Security=True";
 =======
         public string strConnect = @"Data Source=21AK22-COM\QUOC;Initial Catalog=Library;Integrated Security=True";
 >>>>>>> 15d612f1ceaf65821eedefa0f7945c906334bdd2
+=======
+        string strConnect = @"Data Source=DESKTOP-QCOSLTK\VANMANH;Initial Catalog=Library2;Integrated Security=True";
+>>>>>>> main
         SqlConnection sqlCon;
         SqlCommand sqlCom;
         SqlDataReader sqlRea;

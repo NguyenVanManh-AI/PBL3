@@ -54,12 +54,15 @@
     <Compile Include="ForgotPassword.Designer.cs">
       <DependentUpon>ForgotPassword.cs</DependentUpon>
     </Compile>
+<<<<<<< HEAD
     <Compile Include="SearchStaff.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="SearchStaff.Designer.cs">
       <DependentUpon>SearchStaff.cs</DependentUpon>
     </Compile>
+=======
+>>>>>>> main
     <Compile Include="Help.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -108,12 +111,30 @@
     <Compile Include="ReportReaders.Designer.cs">
       <DependentUpon>ReportReaders.cs</DependentUpon>
     </Compile>
+<<<<<<< HEAD
+=======
+    <Compile Include="SearchAuthor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SearchAuthor.Designer.cs">
+      <DependentUpon>SearchAuthor.cs</DependentUpon>
+    </Compile>
+>>>>>>> main
     <Compile Include="SearchBooks.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="SearchBooks.Designer.cs">
       <DependentUpon>SearchBooks.cs</DependentUpon>
     </Compile>
+<<<<<<< HEAD
+=======
+    <Compile Include="SearchField.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SearchField.Designer.cs">
+      <DependentUpon>SearchField.cs</DependentUpon>
+    </Compile>
+>>>>>>> main
     <Compile Include="SearchLoanSlip.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -240,9 +261,12 @@
     <EmbeddedResource Include="SearchReaders.resx">
       <DependentUpon>SearchReaders.cs</DependentUpon>
     </EmbeddedResource>
+<<<<<<< HEAD
     <EmbeddedResource Include="SearchStaff.resx">
       <DependentUpon>SearchStaff.cs</DependentUpon>
     </EmbeddedResource>
+=======
+>>>>>>> main
     <EmbeddedResource Include="UpdateBorrowingInforamtion.resx">
       <DependentUpon>UpdateBorrowingInforamtion.cs</DependentUpon>
     </EmbeddedResource>
