@@ -46,11 +46,83 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="UpdateReaders.cs">
+    <Compile Include="ForgotPassword.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UpdateReaders.Designer.cs">
-      <DependentUpon>UpdateReaders.cs</DependentUpon>
+    <Compile Include="ForgotPassword.Designer.cs">
+      <DependentUpon>ForgotPassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Help.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Help.Designer.cs">
+      <DependentUpon>Help.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InforAuthors.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InforAuthors.Designer.cs">
+      <DependentUpon>InforAuthors.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InforBooks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InforBooks.Designer.cs">
+      <DependentUpon>InforBooks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InforFields.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InforFields.Designer.cs">
+      <DependentUpon>InforFields.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InforPublishers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InforPublishers.Designer.cs">
+      <DependentUpon>InforPublishers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InforReaders.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InforReaders.Designer.cs">
+      <DependentUpon>InforReaders.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportBookStatus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportBookStatus.Designer.cs">
+      <DependentUpon>ReportBookStatus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportReaders.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportReaders.Designer.cs">
+      <DependentUpon>ReportReaders.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SearchAuthor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SearchAuthor.Designer.cs">
+      <DependentUpon>SearchAuthor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SearchBooks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SearchBooks.Designer.cs">
+      <DependentUpon>SearchBooks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SearchField.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SearchField.Designer.cs">
+      <DependentUpon>SearchField.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SearchReaders.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SearchReaders.Designer.cs">
+      <DependentUpon>SearchReaders.cs</DependentUpon>
     </Compile>
     <Compile Include="UpdateBorrowingInforamtion.cs">
       <SubType>Form</SubType>
@@ -63,6 +135,12 @@
     </Compile>
     <Compile Include="UpdateFieldInformation.Designer.cs">
       <DependentUpon>UpdateFieldInformation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateLoanSlip.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateLoanSlip.Designer.cs">
+      <DependentUpon>UpdateLoanSlip.cs</DependentUpon>
     </Compile>
     <Compile Include="UpdatePublisherInformation.cs">
       <SubType>Form</SubType>
@@ -109,17 +187,65 @@
     <Compile Include="Register.Designer.cs">
       <DependentUpon>Register.cs</DependentUpon>
     </Compile>
+    <Compile Include="UpdateReaders.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateReaders.Designer.cs">
+      <DependentUpon>UpdateReaders.cs</DependentUpon>
+    </Compile>
     <Compile Include="UpdatesBook.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="UpdatesBook.Designer.cs">
       <DependentUpon>UpdatesBook.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ForgotPassword.resx">
+      <DependentUpon>ForgotPassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Help.resx">
+      <DependentUpon>Help.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InforAuthors.resx">
+      <DependentUpon>InforAuthors.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InforBooks.resx">
+      <DependentUpon>InforBooks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InforFields.resx">
+      <DependentUpon>InforFields.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InforPublishers.resx">
+      <DependentUpon>InforPublishers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InforReaders.resx">
+      <DependentUpon>InforReaders.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportBookStatus.resx">
+      <DependentUpon>ReportBookStatus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportReaders.resx">
+      <DependentUpon>ReportReaders.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SearchAuthor.resx">
+      <DependentUpon>SearchAuthor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SearchBooks.resx">
+      <DependentUpon>SearchBooks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SearchField.resx">
+      <DependentUpon>SearchField.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SearchReaders.resx">
+      <DependentUpon>SearchReaders.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UpdateBorrowingInforamtion.resx">
       <DependentUpon>UpdateBorrowingInforamtion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UpdateFieldInformation.resx">
       <DependentUpon>UpdateFieldInformation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateLoanSlip.resx">
+      <DependentUpon>UpdateLoanSlip.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UpdatePublisherInformation.resx">
       <DependentUpon>UpdatePublisherInformation.cs</DependentUpon>

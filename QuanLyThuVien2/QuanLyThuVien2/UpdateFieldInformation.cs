@@ -136,6 +136,12 @@ namespace QuanLyThuVien2
             Close();
         }
 
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            SearchField search = new SearchField();
+            search.Show();
+        }
+
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             try

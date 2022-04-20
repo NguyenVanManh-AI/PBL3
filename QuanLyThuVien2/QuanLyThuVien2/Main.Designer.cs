@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
@@ -91,6 +92,7 @@
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.btSI = new System.Windows.Forms.Button();
+            this.updateLoanSlipToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.groupBox4.SuspendLayout();
@@ -99,6 +101,7 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.White;
+            this.groupBox1.Controls.Add(this.linkLabel1);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.textBox2);
@@ -108,11 +111,23 @@
             this.groupBox1.ForeColor = System.Drawing.SystemColors.Highlight;
             this.groupBox1.Location = new System.Drawing.Point(340, 104);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(266, 240);
+            this.groupBox1.Size = new System.Drawing.Size(266, 280);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Log in to the system";
             this.groupBox1.Visible = false;
+            // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.LinkColor = System.Drawing.Color.DodgerBlue;
+            this.linkLabel1.Location = new System.Drawing.Point(51, 234);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(282, 23);
+            this.linkLabel1.TabIndex = 5;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "Forgot password ? Click here .";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.ForgotPassword_LinkClicked);
             // 
             // label3
             // 
@@ -120,7 +135,7 @@
             this.label3.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(8, 147);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(88, 16);
+            this.label3.Size = new System.Drawing.Size(105, 19);
             this.label3.TabIndex = 4;
             this.label3.Text = "    Password ";
             this.label3.Click += new System.EventHandler(this.label3_Click);
@@ -131,7 +146,7 @@
             this.label2.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(8, 98);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(91, 16);
+            this.label2.Size = new System.Drawing.Size(108, 19);
             this.label2.TabIndex = 3;
             this.label2.Text = "    User name";
             this.label2.Click += new System.EventHandler(this.label2_Click);
@@ -141,14 +156,14 @@
             this.textBox2.Location = new System.Drawing.Point(99, 140);
             this.textBox2.Name = "textBox2";
             this.textBox2.PasswordChar = '*';
-            this.textBox2.Size = new System.Drawing.Size(147, 26);
+            this.textBox2.Size = new System.Drawing.Size(147, 30);
             this.textBox2.TabIndex = 2;
             // 
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(99, 91);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(147, 26);
+            this.textBox1.Size = new System.Drawing.Size(147, 30);
             this.textBox1.TabIndex = 1;
             // 
             // button1
@@ -165,6 +180,7 @@
             // menuStrip1
             // 
             this.menuStrip1.BackColor = System.Drawing.SystemColors.Window;
+            this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.dropdownSystemManagement,
@@ -176,9 +192,11 @@
             this.buttonExit});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(982, 32);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(8, 2, 0, 2);
+            this.menuStrip1.Size = new System.Drawing.Size(982, 33);
             this.menuStrip1.TabIndex = 2;
             this.menuStrip1.Text = "menuStrip1";
+            this.menuStrip1.Visible = false;
             // 
             // dropdownSystemManagement
             // 
@@ -197,7 +215,7 @@
             this.dropdownSystemManagement.ForeColor = System.Drawing.SystemColors.Highlight;
             this.dropdownSystemManagement.Image = global::QuanLyThuVien2.Properties.Resources.system;
             this.dropdownSystemManagement.Name = "dropdownSystemManagement";
-            this.dropdownSystemManagement.Size = new System.Drawing.Size(186, 28);
+            this.dropdownSystemManagement.Size = new System.Drawing.Size(219, 29);
             this.dropdownSystemManagement.Text = "System Management";
             // 
             // toolCheckEmployeeInformation
@@ -206,14 +224,14 @@
             this.toolCheckEmployeeInformation.ForeColor = System.Drawing.Color.DodgerBlue;
             this.toolCheckEmployeeInformation.Name = "toolCheckEmployeeInformation";
             this.toolCheckEmployeeInformation.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.K)));
-            this.toolCheckEmployeeInformation.Size = new System.Drawing.Size(334, 26);
+            this.toolCheckEmployeeInformation.Size = new System.Drawing.Size(404, 34);
             this.toolCheckEmployeeInformation.Text = "Check Employee Information";
             this.toolCheckEmployeeInformation.Click += new System.EventHandler(this.KiemTraThongTinNguoiDung);
             // 
             // toolStripSeparator7
             // 
             this.toolStripSeparator7.Name = "toolStripSeparator7";
-            this.toolStripSeparator7.Size = new System.Drawing.Size(331, 6);
+            this.toolStripSeparator7.Size = new System.Drawing.Size(401, 6);
             // 
             // toolUpdateStaff
             // 
@@ -221,48 +239,48 @@
             this.toolUpdateStaff.ForeColor = System.Drawing.Color.DodgerBlue;
             this.toolUpdateStaff.Name = "toolUpdateStaff";
             this.toolUpdateStaff.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.V)));
-            this.toolUpdateStaff.Size = new System.Drawing.Size(334, 26);
+            this.toolUpdateStaff.Size = new System.Drawing.Size(404, 34);
             this.toolUpdateStaff.Text = "Update Staff";
             this.toolUpdateStaff.Click += new System.EventHandler(this.CapNhatThongTin);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(331, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(401, 6);
             // 
             // toolCreateAccount
             // 
             this.toolCreateAccount.ForeColor = System.Drawing.Color.DodgerBlue;
             this.toolCreateAccount.Name = "toolCreateAccount";
-            this.toolCreateAccount.Size = new System.Drawing.Size(334, 26);
+            this.toolCreateAccount.Size = new System.Drawing.Size(404, 34);
             this.toolCreateAccount.Text = "Create Account";
             this.toolCreateAccount.Click += new System.EventHandler(this.TaoTaiKhoan);
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(331, 6);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(401, 6);
             // 
             // toolChangePassword
             // 
             this.toolChangePassword.Enabled = false;
             this.toolChangePassword.ForeColor = System.Drawing.Color.DodgerBlue;
             this.toolChangePassword.Name = "toolChangePassword";
-            this.toolChangePassword.Size = new System.Drawing.Size(334, 26);
+            this.toolChangePassword.Size = new System.Drawing.Size(404, 34);
             this.toolChangePassword.Text = "Change Password";
             this.toolChangePassword.Click += new System.EventHandler(this.DoiMatKhau);
             // 
             // toolStripSeparator3
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(331, 6);
+            this.toolStripSeparator3.Size = new System.Drawing.Size(401, 6);
             // 
             // toolLogout
             // 
             this.toolLogout.Enabled = false;
             this.toolLogout.ForeColor = System.Drawing.Color.DodgerBlue;
             this.toolLogout.Name = "toolLogout";
-            this.toolLogout.Size = new System.Drawing.Size(334, 26);
+            this.toolLogout.Size = new System.Drawing.Size(404, 34);
             this.toolLogout.Text = "Log out";
             this.toolLogout.Click += new System.EventHandler(this.DangXuat);
             // 
@@ -280,63 +298,63 @@
             this.dropdownInformation.ForeColor = System.Drawing.SystemColors.Highlight;
             this.dropdownInformation.Image = global::QuanLyThuVien2.Properties.Resources.information;
             this.dropdownInformation.Name = "dropdownInformation";
-            this.dropdownInformation.Size = new System.Drawing.Size(125, 28);
+            this.dropdownInformation.Size = new System.Drawing.Size(146, 29);
             this.dropdownInformation.Text = "Information";
             // 
             // toolStripSeparator11
             // 
             this.toolStripSeparator11.Name = "toolStripSeparator11";
-            this.toolStripSeparator11.Size = new System.Drawing.Size(222, 6);
+            this.toolStripSeparator11.Size = new System.Drawing.Size(272, 6);
             // 
             // toolAuthor
             // 
             this.toolAuthor.Enabled = false;
             this.toolAuthor.ForeColor = System.Drawing.Color.DodgerBlue;
             this.toolAuthor.Name = "toolAuthor";
-            this.toolAuthor.Size = new System.Drawing.Size(225, 26);
+            this.toolAuthor.Size = new System.Drawing.Size(275, 34);
             this.toolAuthor.Text = "Author";
-            this.toolAuthor.Click += new System.EventHandler(this.tácGiảToolStripMenuItem_Click);
+            this.toolAuthor.Click += new System.EventHandler(this.ThongTinTacGia);
             // 
             // toolPublishingCompany
             // 
             this.toolPublishingCompany.Enabled = false;
             this.toolPublishingCompany.ForeColor = System.Drawing.Color.DodgerBlue;
             this.toolPublishingCompany.Name = "toolPublishingCompany";
-            this.toolPublishingCompany.Size = new System.Drawing.Size(225, 26);
+            this.toolPublishingCompany.Size = new System.Drawing.Size(275, 34);
             this.toolPublishingCompany.Text = "Publishing company";
-            this.toolPublishingCompany.Click += new System.EventHandler(this.nhàXuấtBảnToolStripMenuItem_Click);
+            this.toolPublishingCompany.Click += new System.EventHandler(this.ThongTinNhaXuatban);
             // 
             // toolField
             // 
             this.toolField.Enabled = false;
             this.toolField.ForeColor = System.Drawing.Color.DodgerBlue;
             this.toolField.Name = "toolField";
-            this.toolField.Size = new System.Drawing.Size(225, 26);
+            this.toolField.Size = new System.Drawing.Size(275, 34);
             this.toolField.Text = "Field";
-            this.toolField.Click += new System.EventHandler(this.lĩnhVựcToolStripMenuItem_Click);
+            this.toolField.Click += new System.EventHandler(this.ThongTinLinhVuc);
             // 
             // toolStripSeparator14
             // 
             this.toolStripSeparator14.Name = "toolStripSeparator14";
-            this.toolStripSeparator14.Size = new System.Drawing.Size(222, 6);
+            this.toolStripSeparator14.Size = new System.Drawing.Size(272, 6);
             // 
             // toolBook
             // 
             this.toolBook.Enabled = false;
             this.toolBook.ForeColor = System.Drawing.Color.DodgerBlue;
             this.toolBook.Name = "toolBook";
-            this.toolBook.Size = new System.Drawing.Size(225, 26);
+            this.toolBook.Size = new System.Drawing.Size(275, 34);
             this.toolBook.Text = "Book";
-            this.toolBook.Click += new System.EventHandler(this.sáchToolStripMenuItem_Click);
+            this.toolBook.Click += new System.EventHandler(this.ThongTinSach);
             // 
             // toolReaders
             // 
             this.toolReaders.Enabled = false;
             this.toolReaders.ForeColor = System.Drawing.Color.DodgerBlue;
             this.toolReaders.Name = "toolReaders";
-            this.toolReaders.Size = new System.Drawing.Size(225, 26);
+            this.toolReaders.Size = new System.Drawing.Size(275, 34);
             this.toolReaders.Text = "Readers";
-            this.toolReaders.Click += new System.EventHandler(this.độcGiảToolStripMenuItem_Click);
+            this.toolReaders.Click += new System.EventHandler(this.ThongTinNguoiDoc);
             // 
             // dropdownSearch
             // 
@@ -348,7 +366,7 @@
             this.dropdownSearch.ForeColor = System.Drawing.SystemColors.Highlight;
             this.dropdownSearch.Image = global::QuanLyThuVien2.Properties.Resources.search;
             this.dropdownSearch.Name = "dropdownSearch";
-            this.dropdownSearch.Size = new System.Drawing.Size(91, 28);
+            this.dropdownSearch.Size = new System.Drawing.Size(104, 29);
             this.dropdownSearch.Text = "Search";
             this.dropdownSearch.Click += new System.EventHandler(this.tìmKiếmToolStripMenuItem_Click);
             // 
@@ -358,14 +376,14 @@
             this.toolBookSearch.ForeColor = System.Drawing.Color.DodgerBlue;
             this.toolBookSearch.Name = "toolBookSearch";
             this.toolBookSearch.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.F)));
-            this.toolBookSearch.Size = new System.Drawing.Size(227, 26);
+            this.toolBookSearch.Size = new System.Drawing.Size(288, 34);
             this.toolBookSearch.Text = "Book Search";
-            this.toolBookSearch.Click += new System.EventHandler(this.tìmKiếmSáchToolStripMenuItem_Click);
+            this.toolBookSearch.Click += new System.EventHandler(this.TimKiemSach);
             // 
             // toolStripSeparator5
             // 
             this.toolStripSeparator5.Name = "toolStripSeparator5";
-            this.toolStripSeparator5.Size = new System.Drawing.Size(224, 6);
+            this.toolStripSeparator5.Size = new System.Drawing.Size(285, 6);
             // 
             // toolRoadSearch
             // 
@@ -373,9 +391,9 @@
             this.toolRoadSearch.ForeColor = System.Drawing.Color.DodgerBlue;
             this.toolRoadSearch.Name = "toolRoadSearch";
             this.toolRoadSearch.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.G)));
-            this.toolRoadSearch.Size = new System.Drawing.Size(227, 26);
-            this.toolRoadSearch.Text = "Road Search";
-            this.toolRoadSearch.Click += new System.EventHandler(this.tìmKiếmĐGToolStripMenuItem_Click);
+            this.toolRoadSearch.Size = new System.Drawing.Size(288, 34);
+            this.toolRoadSearch.Text = "Reader Search";
+            this.toolRoadSearch.Click += new System.EventHandler(this.TimKiemDocGia);
             // 
             // dropdownUpdate
             // 
@@ -387,13 +405,14 @@
             this.toolUpdateField,
             this.toolPublisherUpdate,
             this.toolStripSeparator4,
-            this.toolUpdateBorrowingInformation});
+            this.toolUpdateBorrowingInformation,
+            this.updateLoanSlipToolStripMenuItem});
             this.dropdownUpdate.Enabled = false;
             this.dropdownUpdate.ForeColor = System.Drawing.SystemColors.Highlight;
             this.dropdownUpdate.Image = global::QuanLyThuVien2.Properties.Resources.update;
             this.dropdownUpdate.Name = "dropdownUpdate";
             this.dropdownUpdate.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
-            this.dropdownUpdate.Size = new System.Drawing.Size(96, 28);
+            this.dropdownUpdate.Size = new System.Drawing.Size(110, 29);
             this.dropdownUpdate.Text = "Update";
             // 
             // toolBookUpdates
@@ -402,9 +421,9 @@
             this.toolBookUpdates.ForeColor = System.Drawing.Color.DodgerBlue;
             this.toolBookUpdates.Name = "toolBookUpdates";
             this.toolBookUpdates.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
-            this.toolBookUpdates.Size = new System.Drawing.Size(351, 26);
+            this.toolBookUpdates.Size = new System.Drawing.Size(425, 34);
             this.toolBookUpdates.Text = "Book Updates";
-            this.toolBookUpdates.Click += new System.EventHandler(this.cậpNhậtSáchToolStripMenuItem_Click);
+            this.toolBookUpdates.Click += new System.EventHandler(this.CapNhatSach);
             // 
             // toolUpdateReaders
             // 
@@ -412,14 +431,14 @@
             this.toolUpdateReaders.ForeColor = System.Drawing.Color.DodgerBlue;
             this.toolUpdateReaders.Name = "toolUpdateReaders";
             this.toolUpdateReaders.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.D)));
-            this.toolUpdateReaders.Size = new System.Drawing.Size(351, 26);
+            this.toolUpdateReaders.Size = new System.Drawing.Size(425, 34);
             this.toolUpdateReaders.Text = "Update Readers";
-            this.toolUpdateReaders.Click += new System.EventHandler(this.cậpNhậtToolStripMenuItem1_Click);
+            this.toolUpdateReaders.Click += new System.EventHandler(this.CapNhatNguoiDoc);
             // 
             // toolStripSeparator8
             // 
             this.toolStripSeparator8.Name = "toolStripSeparator8";
-            this.toolStripSeparator8.Size = new System.Drawing.Size(348, 6);
+            this.toolStripSeparator8.Size = new System.Drawing.Size(422, 6);
             // 
             // toolAuthorUpdate
             // 
@@ -427,7 +446,7 @@
             this.toolAuthorUpdate.ForeColor = System.Drawing.Color.DodgerBlue;
             this.toolAuthorUpdate.Name = "toolAuthorUpdate";
             this.toolAuthorUpdate.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.T)));
-            this.toolAuthorUpdate.Size = new System.Drawing.Size(351, 26);
+            this.toolAuthorUpdate.Size = new System.Drawing.Size(425, 34);
             this.toolAuthorUpdate.Text = "Author Update";
             this.toolAuthorUpdate.Click += new System.EventHandler(this.CapNhatThongTinTacGia);
             // 
@@ -437,7 +456,7 @@
             this.toolUpdateField.ForeColor = System.Drawing.Color.DodgerBlue;
             this.toolUpdateField.Name = "toolUpdateField";
             this.toolUpdateField.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.L)));
-            this.toolUpdateField.Size = new System.Drawing.Size(351, 26);
+            this.toolUpdateField.Size = new System.Drawing.Size(425, 34);
             this.toolUpdateField.Text = "Update Field";
             this.toolUpdateField.Click += new System.EventHandler(this.CapNhatLinhVuc);
             // 
@@ -447,14 +466,14 @@
             this.toolPublisherUpdate.ForeColor = System.Drawing.Color.DodgerBlue;
             this.toolPublisherUpdate.Name = "toolPublisherUpdate";
             this.toolPublisherUpdate.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.N)));
-            this.toolPublisherUpdate.Size = new System.Drawing.Size(351, 26);
+            this.toolPublisherUpdate.Size = new System.Drawing.Size(425, 34);
             this.toolPublisherUpdate.Text = "Publisher Update";
             this.toolPublisherUpdate.Click += new System.EventHandler(this.CapNhatNhaXuatBan);
             // 
             // toolStripSeparator4
             // 
             this.toolStripSeparator4.Name = "toolStripSeparator4";
-            this.toolStripSeparator4.Size = new System.Drawing.Size(348, 6);
+            this.toolStripSeparator4.Size = new System.Drawing.Size(422, 6);
             // 
             // toolUpdateBorrowingInformation
             // 
@@ -462,9 +481,9 @@
             this.toolUpdateBorrowingInformation.ForeColor = System.Drawing.Color.DodgerBlue;
             this.toolUpdateBorrowingInformation.Name = "toolUpdateBorrowingInformation";
             this.toolUpdateBorrowingInformation.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.M)));
-            this.toolUpdateBorrowingInformation.Size = new System.Drawing.Size(351, 26);
+            this.toolUpdateBorrowingInformation.Size = new System.Drawing.Size(425, 34);
             this.toolUpdateBorrowingInformation.Text = "Update Borrowing Information";
-            this.toolUpdateBorrowingInformation.Click += new System.EventHandler(this.cậpNhậtThôngTinMượnToolStripMenuItem_Click);
+            this.toolUpdateBorrowingInformation.Click += new System.EventHandler(this.CapNhatThongTinMuon);
             // 
             // dropdownReport
             // 
@@ -476,46 +495,47 @@
             this.dropdownReport.ForeColor = System.Drawing.SystemColors.Highlight;
             this.dropdownReport.Image = global::QuanLyThuVien2.Properties.Resources.report;
             this.dropdownReport.Name = "dropdownReport";
-            this.dropdownReport.Size = new System.Drawing.Size(92, 28);
+            this.dropdownReport.Size = new System.Drawing.Size(105, 29);
             this.dropdownReport.Text = "Report";
             // 
             // toolBookStatus
             // 
             this.toolBookStatus.ForeColor = System.Drawing.Color.DodgerBlue;
             this.toolBookStatus.Name = "toolBookStatus";
-            this.toolBookStatus.Size = new System.Drawing.Size(189, 26);
+            this.toolBookStatus.Size = new System.Drawing.Size(229, 34);
             this.toolBookStatus.Text = "Book Status";
-            this.toolBookStatus.Click += new System.EventHandler(this.tìnhTrạngSáchToolStripMenuItem_Click);
+            this.toolBookStatus.Click += new System.EventHandler(this.BaoCaoTinhTrangSach);
             // 
             // toolStripSeparator6
             // 
             this.toolStripSeparator6.Name = "toolStripSeparator6";
-            this.toolStripSeparator6.Size = new System.Drawing.Size(186, 6);
+            this.toolStripSeparator6.Size = new System.Drawing.Size(226, 6);
             // 
             // toolReadersStatus
             // 
             this.toolReadersStatus.ForeColor = System.Drawing.Color.DodgerBlue;
             this.toolReadersStatus.Name = "toolReadersStatus";
-            this.toolReadersStatus.Size = new System.Drawing.Size(189, 26);
+            this.toolReadersStatus.Size = new System.Drawing.Size(229, 34);
             this.toolReadersStatus.Text = "Readers Status";
-            this.toolReadersStatus.Click += new System.EventHandler(this.sốĐộcGiảToolStripMenuItem_Click);
+            this.toolReadersStatus.Click += new System.EventHandler(this.BaoCaoDocGia);
             // 
             // buttonHelp
             // 
             this.buttonHelp.ForeColor = System.Drawing.SystemColors.Highlight;
             this.buttonHelp.Image = global::QuanLyThuVien2.Properties.Resources.help;
             this.buttonHelp.Name = "buttonHelp";
-            this.buttonHelp.Size = new System.Drawing.Size(79, 28);
+            this.buttonHelp.Size = new System.Drawing.Size(89, 29);
             this.buttonHelp.Text = "Help";
+            this.buttonHelp.Click += new System.EventHandler(this.buttonHelp_Click);
             // 
             // buttonExit
             // 
             this.buttonExit.ForeColor = System.Drawing.SystemColors.Highlight;
             this.buttonExit.Image = global::QuanLyThuVien2.Properties.Resources.exit;
             this.buttonExit.Name = "buttonExit";
-            this.buttonExit.Size = new System.Drawing.Size(71, 28);
+            this.buttonExit.Size = new System.Drawing.Size(79, 29);
             this.buttonExit.Text = "Exit";
-            this.buttonExit.Click += new System.EventHandler(this.thoátToolStripMenuItem1_Click);
+            this.buttonExit.Click += new System.EventHandler(this.ThoatChuongTrinh);
             // 
             // label9
             // 
@@ -566,11 +586,11 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Times New Roman", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label4.Location = new System.Drawing.Point(318, 18);
+            this.label4.Location = new System.Drawing.Point(264, 18);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(354, 46);
+            this.label4.Size = new System.Drawing.Size(594, 55);
             this.label4.TabIndex = 4;
-            this.label4.Text = "Library Management";
+            this.label4.Text = "Login to Library Management";
             // 
             // panel1
             // 
@@ -581,10 +601,11 @@
             // 
             // groupBox4
             // 
+            this.groupBox4.BackColor = System.Drawing.SystemColors.Window;
             this.groupBox4.Controls.Add(this.label4);
-            this.groupBox4.Location = new System.Drawing.Point(12, 28);
+            this.groupBox4.Location = new System.Drawing.Point(12, 35);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(960, 70);
+            this.groupBox4.Size = new System.Drawing.Size(960, 63);
             this.groupBox4.TabIndex = 6;
             this.groupBox4.TabStop = false;
             // 
@@ -592,13 +613,15 @@
             // 
             this.dateTimePicker1.Location = new System.Drawing.Point(0, 526);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(982, 26);
+            this.dateTimePicker1.Size = new System.Drawing.Size(982, 30);
             this.dateTimePicker1.TabIndex = 7;
             // 
             // btSI
             // 
             this.btSI.BackColor = System.Drawing.Color.White;
+            this.btSI.BackgroundImage = global::QuanLyThuVien2.Properties.Resources.Backgroundmain;
             this.btSI.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.btSI.Image = global::QuanLyThuVien2.Properties.Resources.Backgroundmain;
             this.btSI.Location = new System.Drawing.Point(26, 466);
             this.btSI.Name = "btSI";
             this.btSI.Size = new System.Drawing.Size(165, 34);
@@ -607,12 +630,20 @@
             this.btSI.UseVisualStyleBackColor = false;
             this.btSI.Click += new System.EventHandler(this.btSI_Click);
             // 
+            // updateLoanSlipToolStripMenuItem
+            // 
+            this.updateLoanSlipToolStripMenuItem.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.updateLoanSlipToolStripMenuItem.Name = "updateLoanSlipToolStripMenuItem";
+            this.updateLoanSlipToolStripMenuItem.Size = new System.Drawing.Size(425, 34);
+            this.updateLoanSlipToolStripMenuItem.Text = "Update Loan Slip";
+            this.updateLoanSlipToolStripMenuItem.Click += new System.EventHandler(this.CapnhatPhieuMuon);
+            // 
             // Main
             // 
             this.AcceptButton = this.button1;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.BackgroundImage = global::QuanLyThuVien2.Properties.Resources.Backgroundmain;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(982, 564);
@@ -706,6 +737,8 @@
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Button btSI;
         private System.Windows.Forms.ToolStripMenuItem toolLogout;
+        private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.ToolStripMenuItem updateLoanSlipToolStripMenuItem;
         //b  private System.Windows.Forms.GroupBox groupBox3;
     }
 }

@@ -8,6 +8,9 @@ using System.Text;
 using System.Data.SqlClient;
 using System.Windows.Forms;
 
+// mã hóa mật khẩu 
+using System.Security.Cryptography;
+
 namespace QuanLyThuVien2
 {
     public partial class Main : Form
@@ -16,7 +19,7 @@ namespace QuanLyThuVien2
         {
             InitializeComponent();
         }
-        public static string TenDN, MatKhau, Quyen; // TenDN = tên đăng nhập 
+        public static string TenDN, MatKhau, Quyen , checkMatKhau; // TenDN = tên đăng nhập 
         SqlCommand sqlCommand;
         public Object layGiaTri(string sql) //lay gia tri cua  cot dau tien trong bang 
         {
@@ -34,9 +37,22 @@ namespace QuanLyThuVien2
         {
             TenDN = textBox1.Text;
             MatKhau = textBox2.Text;
+
+            byte[] temp = ASCIIEncoding.ASCII.GetBytes(textBox2.Text);
+            byte[] hasData = new MD5CryptoServiceProvider().ComputeHash(temp);
+
+            string hasPass = "";
+
+            foreach (byte item in hasData)
+            {
+                hasPass += item;
+            }
+            // MessageBox.Show(hasPass);
+
+            checkMatKhau = hasPass;
             if (TenDN != "")
             {
-                object Q = layGiaTri("select QuyenHan from tblNhanVien where TaiKhoan='" + TenDN + "' and MatKhau='" + MatKhau + "'");
+                object Q = layGiaTri("select QuyenHan from tblNhanVien where TaiKhoan='" + TenDN + "' and MatKhau='" + hasPass + "'");
                 if (Q == null)
                 {
                     MessageBox.Show("Wrong account :((");
@@ -69,6 +85,10 @@ namespace QuanLyThuVien2
                         toolUpdateStaff.Enabled = true;
                         toolChangePassword.Enabled = true;
                         toolLogout.Enabled = true;
+                        toolCreateAccount.Visible = false;
+                        toolCheckEmployeeInformation.Visible = false;
+
+
                     }
                     if (Quyen == "admin")
                     {
@@ -101,6 +121,8 @@ namespace QuanLyThuVien2
                     groupBox1.Enabled = false;
                     groupBox1.Visible = false;
                     btSI.Visible = false;
+                    menuStrip1.Visible = true;
+                    label4.Text = "Welcome to Library Management";
                 }
             }
         }
@@ -112,8 +134,8 @@ namespace QuanLyThuVien2
             else
                 e.Cancel = true;
         }
-
-        private void thoátToolStripMenuItem1_Click(object sender, EventArgs e)
+        
+        private void ThoatChuongTrinh(object sender, EventArgs e)
         {
             this.Close();
         }
@@ -124,7 +146,7 @@ namespace QuanLyThuVien2
             try
             {
                 Con = new SqlConnection();
-                Con.ConnectionString = @"Data Source=LAPTOP-R0QH577D\SQLEXPRESS;Database=Library222;User Id=sa;pwd=123456";
+                Con.ConnectionString = @"Data Source=LAPTOP-R0QH577D\SQLEXPRESS;Database=Library22;User Id=sa;pwd=123456";
                 Con.Open();
             }
             catch { MessageBox.Show("Unable to connect !!! :(( "); }
@@ -143,7 +165,7 @@ namespace QuanLyThuVien2
             timer1.Start();
         }
 
-        
+
         private void KiemTraThongTinNguoiDung(object sender, EventArgs e)
         {
             CheckInfor K = new CheckInfor();
@@ -194,18 +216,16 @@ namespace QuanLyThuVien2
         }
 
 
-
-
-        private void cậpNhậtSáchToolStripMenuItem_Click(object sender, EventArgs e)
+        private void CapNhatSach(object sender, EventArgs e)
         {
-            //b capnhatsach cnsach = new capnhatsach();
-            //b cnsach.Show();
+            UpdatesBook cnsach = new UpdatesBook();
+            cnsach.Show();
         }
 
-        private void cậpNhậtToolStripMenuItem1_Click(object sender, EventArgs e)
+        private void CapNhatNguoiDoc(object sender, EventArgs e)
         {
-            //b capnhatdocgia cndocgia = new capnhatdocgia();
-            //b cndocgia.Show();
+            UpdateReaders cndocgia = new UpdateReaders();
+            cndocgia.Show();
 
         }
 
@@ -213,57 +233,77 @@ namespace QuanLyThuVien2
         {
         }
 
-        
 
-        //private void cậpNhậtTácGiảToolStripMenuItem_Click(object sender, EventArgs e)
-        //{
-        //    capnhatTG cnTG = new capnhatTG();
-        //    cnTG.Show();
-        //}
-
-        //private void cậpNhậtNhàXuấtBảnToolStripMenuItem_Click(object sender, EventArgs e)
-        //{
-        //    capnhatNXB cnNXB = new capnhatNXB();
-        //    cnNXB.Show();
-        //}
-
-        //private void cậpNhậtLĩnhVựcToolStripMenuItem_Click(object sender, EventArgs e)
-        //{
-        //    capnhatLv cnLV = new capnhatLv();
-        //    cnLV.Show();
-        //}
-
-        
-
-        private void cậpNhậtThôngTinMượnToolStripMenuItem_Click(object sender, EventArgs e)
+        private void CapNhatThongTinMuon(object sender, EventArgs e)
         {
-            //b thongtinmuon T = new thongtinmuon();
-            //b T.Show();
+            UpdateBorrowingInforamtion ttmuon = new UpdateBorrowingInforamtion();
+            ttmuon.Show();
+        }
+        private void CapnhatPhieuMuon(object sender, EventArgs e)
+        {
+            UpdateLoanSlip updateLoan = new UpdateLoanSlip();
+            updateLoan.Show();
+        }
+        private void BaoCaoTinhTrangSach(object sender, EventArgs e)
+        {
+            ReportBookStatus reportBookStatus = new ReportBookStatus();
+            reportBookStatus.Show();
+        }
+
+        private void BaoCaoDocGia(object sender, EventArgs e)
+        {
+            ReportReaders reportReaders = new ReportReaders();
+            reportReaders.Show();
+        }
+
+        private void ThongTinTacGia(object sender, EventArgs e)
+        {
+            InforAuthors authors = new InforAuthors();
+            authors.Show();
+        }
+
+        private void ThongTinNhaXuatban(object sender, EventArgs e)
+        {
+            InforPublishers publishers = new InforPublishers();
+            publishers.Show();
+        }
+
+        private void ThongTinLinhVuc(object sender, EventArgs e)
+        {
+            InforFields fields = new InforFields();
+            fields.Show();
+        }
+
+        private void ThongTinSach(object sender, EventArgs e)
+        {
+            InforBooks books = new InforBooks();
+            books.Show();
+        }
+
+        private void buttonHelp_Click(object sender, EventArgs e)
+        {
+            Help hl = new Help();
+            hl.Show();
         }
 
         
 
-        private void tìnhTrạngSáchToolStripMenuItem_Click(object sender, EventArgs e)
+        private void ThongTinNguoiDoc(object sender, EventArgs e)
         {
-            //b BCTinhTrangSach BCTTS = new BCTinhTrangSach();
-            //b BCTTS.Show();
+            InforReaders readers = new InforReaders();
+            readers.Show();
         }
 
-        private void sốĐộcGiảToolStripMenuItem_Click(object sender, EventArgs e)
+        private void TimKiemSach(object sender, EventArgs e)
         {
-            //b BCDocGia BCDG = new BCDocGia();
-            //b BCDG.Show();
-        }
-        private void tácGiảToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            //b ttTacgia ttTG = new ttTacgia();
-            //b ttTG.Show();
+            SearchBooks sbooks = new SearchBooks();
+            sbooks.Show();
         }
 
-        private void nhàXuấtBảnToolStripMenuItem_Click(object sender, EventArgs e)
+        private void TimKiemDocGia(object sender, EventArgs e)
         {
-            //b ttNXB ttnxb = new ttNXB();
-            //b ttnxb.Show();
+            SearchReaders sreaders = new SearchReaders();
+            sreaders.Show();
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -271,36 +311,25 @@ namespace QuanLyThuVien2
 
         }
 
+        private void ForgotPassword_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            ForgotPassword fg = new ForgotPassword();
+            fg.Show();
+        }
+         
+
         private void label3_Click(object sender, EventArgs e)
         {
 
         }
 
-        
+
 
         private void btSI_Click(object sender, EventArgs e)
         {
             groupBox1.Visible = true;
         }
-        
-
-        private void lĩnhVựcToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            //b ttLinhVuc ttlv = new ttLinhVuc();
-            //b ttlv.Show();
-        }
-
-        private void sáchToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            //b ttSach ttsach = new ttSach();
-            //b ttsach.Show();
-        }
-
-        private void độcGiảToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            //b ttDocgia ttDG = new ttDocgia();
-            //b ttDG.Show();
-        }
+       
 
         /*b 
         private void timer1_Tick(object sender, EventArgs e)
@@ -398,7 +427,34 @@ namespace QuanLyThuVien2
             }
         }
         */
-        private void đăngNhậpToolStripMenuItem_Click(object sender, EventArgs e)
+        //private void đăngNhậpToolStripMenuItem_Click(object sender, EventArgs e)
+        //{
+        //    groupBox1.Enabled = true;
+        //    dropdownSystemManagement.Enabled = false;
+        //    dropdownSearch.Enabled = false;
+        //    toolBookSearch.Enabled = false;
+        //    toolCheckEmployeeInformation.Enabled = false;
+        //    toolRoadSearch.Enabled = false;
+        //    dropdownUpdate.Enabled = false;
+        //    dropdownInformation.Enabled = false;
+        //    dropdownReport.Enabled = false;
+        //    toolBookUpdates.Enabled = false;
+        //    toolAuthorUpdate.Enabled = false;
+        //    toolUpdateReaders.Enabled = false;
+        //    toolUpdateField.Enabled = false;
+        //    toolPublisherUpdate.Enabled = false;
+        //    toolUpdateBorrowingInformation.Enabled = false;
+        //    toolAuthor.Enabled = false;
+        //    toolPublishingCompany.Enabled = false;
+        //    toolField.Enabled = false;
+        //    toolReaders.Enabled = false;
+        //    toolBook.Enabled = false;
+        //    toolCreateAccount.Enabled = false;
+        //    toolUpdateStaff.Enabled = false;
+        //    toolChangePassword.Enabled = false;
+        //}
+
+        private void DangNhapHeThong(object sender, EventArgs e)
         {
             groupBox1.Enabled = true;
             dropdownSystemManagement.Enabled = false;
@@ -425,19 +481,9 @@ namespace QuanLyThuVien2
             toolChangePassword.Enabled = false;
         }
 
-        private void tìmKiếmSáchToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            //b timkiem Sach = new timkiem();
-            //b Sach.Show();
-        }
 
-        private void tìmKiếmĐGToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            //b TimkiemDG Dg = new TimkiemDG();
-            //b Dg.Show();
-        }
 
-        
+
 
     }
 }

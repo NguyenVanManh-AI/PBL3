@@ -67,7 +67,7 @@ namespace QuanLyThuVien2
                 {
                     string strInsert = "Insert Into tblTacGia(MATG,TENTG,GIOITINH,DIACHI,GHICHU) values ('" + MaTacGia.Text + "','" + TenTacGia.Text + "','" + cboGioiTinh.Text + "','" + DiaChi.Text + "','" + txtNote.Text + "')";
                     cls.ThucThiSQLTheoPKN(strInsert);
-                    cls.LoadData2DataGridView(dataGridView1, "select * from tblTacGia");
+                    cls.LoadData2DataGridView(dataGridView1, "select *from tblTacGia");
                     MessageBox.Show("Thêm thành công");
                     numberEdit = 0;
                     MaTacGia.Text = "";
@@ -103,7 +103,7 @@ namespace QuanLyThuVien2
                         undoGT = cboGioiTinh.Text;
                         string strDelete = "Delete from tblTacGia where MATG='" + matg + "'";
                         cls.ThucThiSQLTheoKetNoi(strDelete);
-                        cls.LoadData2DataGridView(dataGridView1, "select * from tblTacGia");
+                        cls.LoadData2DataGridView(dataGridView1, "select *from tblTacGia");
                         MessageBox.Show("Xóa thành công !!!");
                         MaTacGia.Text = "";
                         TenTacGia.Text = "";
@@ -120,6 +120,12 @@ namespace QuanLyThuVien2
         private void btClose_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            SearchAuthor s = new SearchAuthor();
+            s.Show();
         }
 
         string matg;
@@ -186,7 +192,7 @@ namespace QuanLyThuVien2
                     {
                         string strUpdate = "Update tblTacGia set MATG='" + MaTacGia.Text + "',TENTG='" + TenTacGia.Text + "',GIOITINH='" + cboGioiTinh.Text + "',DIACHI='" + DiaChi.Text + "',GHICHU='" + txtNote.Text + "' where MATG='" + matg + "'";
                         cls.ThucThiSQLTheoPKN(strUpdate);
-                        cls.LoadData2DataGridView(dataGridView1, "select * from tblTacGia");
+                        cls.LoadData2DataGridView(dataGridView1, "select *from tblTacGia");
                         //btAdd.Enabled = true;
                         //btDelete.Enabled = true;
                         //dem = 0;
@@ -213,7 +219,7 @@ namespace QuanLyThuVien2
             {
                 string strInsert = "Insert Into tblTacGia(MATG,TENTG,GIOITINH,DIACHI,GHICHU) values ('" + undoMTG + "','" + undoTTG + "','" + undoGT + "','" + undoDC + "','" + undoNote + "')";
                 cls.ThucThiSQLTheoPKN(strInsert);
-                cls.LoadData2DataGridView(dataGridView1, "select * from tblTacGia");
+                cls.LoadData2DataGridView(dataGridView1, "select *from tblTacGia");
                 MessageBox.Show("Hoàn tác thành công !");
                 numberUndo = 0;
             }

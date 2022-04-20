@@ -54,6 +54,7 @@
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.btClose = new System.Windows.Forms.Button();
             this.btUndo = new System.Windows.Forms.Button();
+            this.btnSearch = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -88,7 +89,6 @@
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 62;
-            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(728, 539);
             this.dataGridView1.TabIndex = 22;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
@@ -257,7 +257,7 @@
             // 
             this.btDelete.BackColor = System.Drawing.Color.White;
             this.btDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btDelete.Location = new System.Drawing.Point(33, 109);
+            this.btDelete.Location = new System.Drawing.Point(33, 122);
             this.btDelete.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btDelete.Name = "btDelete";
             this.btDelete.Size = new System.Drawing.Size(88, 26);
@@ -306,6 +306,7 @@
             // groupBox3
             // 
             this.groupBox3.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox3.Controls.Add(this.btnSearch);
             this.groupBox3.Controls.Add(this.btClose);
             this.groupBox3.Controls.Add(this.btUndo);
             this.groupBox3.Controls.Add(this.btAdd);
@@ -325,7 +326,7 @@
             // 
             this.btClose.BackColor = System.Drawing.Color.White;
             this.btClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btClose.Location = new System.Drawing.Point(127, 74);
+            this.btClose.Location = new System.Drawing.Point(33, 77);
             this.btClose.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btClose.Name = "btClose";
             this.btClose.Size = new System.Drawing.Size(88, 26);
@@ -338,7 +339,7 @@
             // 
             this.btUndo.BackColor = System.Drawing.Color.White;
             this.btUndo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btUndo.Location = new System.Drawing.Point(224, 109);
+            this.btUndo.Location = new System.Drawing.Point(224, 122);
             this.btUndo.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btUndo.Name = "btUndo";
             this.btUndo.Size = new System.Drawing.Size(88, 26);
@@ -346,6 +347,19 @@
             this.btUndo.Text = "Undo";
             this.btUndo.UseVisualStyleBackColor = false;
             this.btUndo.Click += new System.EventHandler(this.btUndo_Click);
+            // 
+            // btnSearch
+            // 
+            this.btnSearch.BackColor = System.Drawing.Color.White;
+            this.btnSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSearch.Location = new System.Drawing.Point(224, 77);
+            this.btnSearch.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(88, 26);
+            this.btnSearch.TabIndex = 28;
+            this.btnSearch.Text = "Search";
+            this.btnSearch.UseVisualStyleBackColor = false;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // UpdateAuthorInformation
             // 
@@ -401,5 +415,6 @@
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Button btUndo;
         private System.Windows.Forms.Button btClose;
+        private System.Windows.Forms.Button btnSearch;
     }
 }
