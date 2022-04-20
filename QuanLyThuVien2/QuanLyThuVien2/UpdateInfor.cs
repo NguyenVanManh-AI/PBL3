@@ -73,11 +73,11 @@ namespace QuanLyThuVien2
         }
         private void button5_Click(object sender, EventArgs e)
         {
-            if (txtSoDienThoai.Text.Length  < 3)
+            if (txtSoDienThoai.Text.Length < 3)
                 MessageBox.Show("Phone number cannot be less than 3 digits");
             else
             {
-                if (txtSoDienThoai.Text.Length  > 12)
+                if (txtSoDienThoai.Text.Length > 12)
                     MessageBox.Show("Phone number cannot be more than 12 numbers");
                 else
                 {
@@ -85,18 +85,19 @@ namespace QuanLyThuVien2
                         MessageBox.Show("Wrong age");
                     else
                     {
-                        if(Checkso(textTuoi.Text)) 
+                        if (Checkso(textTuoi.Text))
                             MessageBox.Show("Invalid Age!");
                         else
                         {
-                            if(CheckTen(txtNHANVIEN.Text)) 
+                            if (CheckTen(txtNHANVIEN.Text))
                                 MessageBox.Show("Invalid Name!");
                             else
                             {
                                 if (Checkso(txtSoDienThoai.Text))
                                     MessageBox.Show("Invalid Phone Number!");
-                                else {
-                                    if (!isValidEmail(txtEmail.Text) && !VerifyEmail(txtEmail.Text)) 
+                                else
+                                {
+                                    if (!isValidEmail(txtEmail.Text) && !VerifyEmail(txtEmail.Text))
                                         MessageBox.Show("Invalid Email!");
                                     else
                                     {
@@ -124,7 +125,7 @@ namespace QuanLyThuVien2
             txtEmail.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
             textChhucVu.Text = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
             textTuoi.Text = dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString();
-            
+
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -133,7 +134,6 @@ namespace QuanLyThuVien2
             //cls.ThucThiSQLTheoPKN(strDelete);
             //cls.LoadData2DataGridView(dataGridView1, "select * from tblNhanVien where TAIKHOAN='" + Main.TenDN + "'");
             //MessageBox.Show("Xóa thành công");
-            // Quoc 
         }
 
         private void btExitupdate_Click(object sender, EventArgs e)

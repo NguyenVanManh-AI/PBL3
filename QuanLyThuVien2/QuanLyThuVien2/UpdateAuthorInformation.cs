@@ -34,7 +34,7 @@ namespace QuanLyThuVien2
             return false;
         }
 
-        public int bug = 0 , numberUndo = 0;
+        public int bug=0, numberUndo = 0;
          
 
         private void btAdd_Click(object sender, EventArgs e)

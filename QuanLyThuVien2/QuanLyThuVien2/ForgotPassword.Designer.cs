@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ForgotPassword));
             this.label1 = new System.Windows.Forms.Label();
             this.username = new System.Windows.Forms.TextBox();
             this.send = new System.Windows.Forms.Button();
@@ -137,6 +138,7 @@
             this.Controls.Add(this.send);
             this.Controls.Add(this.username);
             this.Controls.Add(this.label1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ForgotPassword";
             this.Text = "Forgot Password";
             this.Load += new System.EventHandler(this.Forgot_Load);

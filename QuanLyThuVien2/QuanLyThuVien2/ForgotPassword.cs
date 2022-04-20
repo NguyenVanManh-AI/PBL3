@@ -29,7 +29,7 @@ namespace QuanLyThuVien2
         }
 
         SqlCommand sqlCommand;
-        string passwordText = "Ngocquoc0705@"; // 1 
+        string passwordText = "strongtech2908"; // 1 
         public Object layGiaTri(string sql) //lay gia tri cua  cot dau tien trong bang 
         {
             sqlCommand = new SqlCommand();
@@ -50,7 +50,7 @@ namespace QuanLyThuVien2
             cls.KetNoi();
         }
 
-        string fromText = "quocseoweb0705@gmail.com"; // 2 
+        string fromText = "strongtechmaster@gmail.com"; // 2 
        
          
 

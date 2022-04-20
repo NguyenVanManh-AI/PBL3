@@ -21,7 +21,7 @@ namespace QuanLyThuVien2
         Class.clsDatabase cls = new QuanLyThuVien2.Class.clsDatabase();
         public static bool hasSpecialChar(string input)
         {
-            string specialChar = @"~!@#$%^&*()_+`1234567890-=[]\{}|;':,./<>?";
+            string specialChar = @"1234567890";
             foreach (var item in specialChar)
             {
                 if (input.Contains(item)) return true;
@@ -29,33 +29,40 @@ namespace QuanLyThuVien2
 
             return false;
         }
+        public int numberUndo = 0;
 
-
-
+        string madg;
+        string maphieumuon;
+        string masach;
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             try
             {
                 cboDOCGIA.Text = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
                 cboMASACH.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
-                txtSOPHIEU.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
+                cboPhieuMuon.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
                 mktNGAYMUON.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
                 mktNGAYTRA.Text = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
                 cboXACNHAN.Text = dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString();
                 txtGHICHU.Text = dataGridView1.Rows[e.RowIndex].Cells[6].Value.ToString();
-                madg = cboDOCGIA.Text;
+                madg = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
+                maphieumuon = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
+                masach = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
+
             }
             catch { };
         }
 
-        string madg;
+
 
 
         private void UpdateBorrowingInforamtion_Load(object sender, EventArgs e)
         {
-            cls.LoadData2DataGridView(dataGridView1, "select * from tblMuon");
+            cls.LoadData2DataGridView(dataGridView1, "select DISTINCT MADG , MASACH , SOPHIEUMUON , NGAYMUON , NGAYTRA , XACNHANTRA , GHICHU from tblMuon");
             cls.LoadData2Combobox(cboDOCGIA, "select MADG from tblDocGia");
             cls.LoadData2Combobox(cboMASACH, "Select MASACH from tblSach");
+            cls.LoadData2Combobox(cboPhieuMuon, "Select MAPHIEUMUON from tblPhieuMuon");
+            //cls.LoadData2Combobox(cboMAPHIEUMUON, "Select MAPHIEUMUON from tblPhieuMuon where idDocGia = cboDOCGIA.text");
         }
 
         private void Them_Click(object sender, EventArgs e)
@@ -64,30 +71,56 @@ namespace QuanLyThuVien2
             {
                 if (cboMASACH.Text != "")
                 {
-                    if (txtSOPHIEU.Text != "")
+                    if (cboPhieuMuon.Text != "")
                     {
-                        if (mktNGAYMUON.Text != "")
+                        if (!hasSpecialChar(cboPhieuMuon.Text))
                         {
-                            if (mktNGAYTRA.Text != "")
-                            {
-                                if (cboXACNHAN.Text != "")
-                                {
-                                    try
-                                    {
-                                        string strInsert = "Insert Into tblMuon(MADG,MASACH,SOPHIEUMUON,NGAYMUON,NGAYTRA,XACNHANTRA,GHICHU) values ('" + cboDOCGIA.Text + "','" +
-                                            cboMASACH.Text + "','" + txtSOPHIEU.Text + "','" + mktNGAYMUON.Text + "','" +
-                                            mktNGAYTRA.Text + "','" + cboXACNHAN.Text + "','" + txtGHICHU.Text + "')";
-                                        cls.ThucThiSQLTheoPKN(strInsert);
-                                        cls.LoadData2DataGridView(dataGridView1, "select * from tblMuon");
-                                        MessageBox.Show("Thêm thành công");
-                                    }
-                                    catch { MessageBox.Show("Trùng Mã"); };
-                                }
-                                else { MessageBox.Show("Thanh xác nhận không được để trống"); }
-                            }
-                            else { MessageBox.Show("Ngày trả không được để trống"); }
+                            MessageBox.Show("Số phiếu mượn chỉ được chứa ký tự số");
                         }
-                        else { MessageBox.Show("Ngày mượn kh được để trống"); }
+                        else
+                        {
+                            if (mktNGAYMUON.Text != "")
+                            {
+                                if (mktNGAYTRA.Text != "")
+                                {
+                                    if (cboXACNHAN.Text != "")
+                                    {
+                                        try
+                                        {
+                                            string strInsert = "Insert Into tblMuon(MADG,MASACH,SOPHIEUMUON,NGAYMUON,NGAYTRA,XACNHANTRA,GHICHU) values ('" + cboDOCGIA.Text + "','" +
+                                                cboMASACH.Text + "','" + cboPhieuMuon.Text + "','" + mktNGAYMUON.Text + "','" +
+                                                mktNGAYTRA.Text + "','" + cboXACNHAN.Text + "','" + txtGHICHU.Text + "')"; 
+                                            cls.ThucThiSQLTheoPKN(strInsert);
+
+                                            //strInsert = "UPDATE tblPhieuMuon SET MASACH = " + cboMASACH.Text + " WHERE MADG =  "+ cboDOCGIA.Text + " AND MAPHIEUMUON = "+ cboPhieuMuon.Text + "; ";
+                                            strInsert = "Insert Into tblPhieuMuon(MASACH, MADG, MAPHIEUMUON) values(" + cboMASACH.Text + "," + cboDOCGIA.Text + "," + cboPhieuMuon.Text + ")";
+                                            cls.ThucThiSQLTheoPKN(strInsert);
+
+                                            // để xóa cái hàng null mới lần đầu tạo đi 
+                                            strInsert = "DELETE FROM tblPhieuMuon WHERE MASACH IS NULL AND MADG = " + cboDOCGIA.Text + " AND MAPHIEUMUON = " + cboPhieuMuon.Text;
+                                            cls.ThucThiSQLTheoPKN(strInsert);
+
+
+
+                                            cls.LoadData2DataGridView(dataGridView1, "select DISTINCT MADG , MASACH , SOPHIEUMUON , NGAYMUON , NGAYTRA , XACNHANTRA , GHICHU from tblMuon");
+                                            MessageBox.Show("Thêm thành công");
+                                            cboMASACH.Text = "";
+                                            cboDOCGIA.Text = "";
+                                            txtGHICHU.Text = "";
+                                            cboPhieuMuon.Text = "";
+                                            mktNGAYMUON.Text = "";
+                                            mktNGAYTRA.Text = "";
+                                            cboXACNHAN.Text = "";
+                                            numberUndo = 0;
+                                        }
+                                        catch { MessageBox.Show("Trùng Mã"); };
+                                    }
+                                    else { MessageBox.Show("Thanh xác nhận không được để trống"); }
+                                }
+                                else { MessageBox.Show("Ngày trả không được để trống"); }
+                            }
+                            else { MessageBox.Show("Ngày mượn kh được để trống"); }
+                        }
                     }
                     else { MessageBox.Show("Số phiếu mượn không được để trống"); }
                 }
@@ -104,42 +137,62 @@ namespace QuanLyThuVien2
             {
                 if (cboMASACH.Text != "")
                 {
-                    if (txtSOPHIEU.Text != "")
+                    if (cboPhieuMuon.Text != "")
                     {
-                        if (mktNGAYMUON.Text != "")
+                        if (!hasSpecialChar(cboPhieuMuon.Text))
                         {
-                            if (mktNGAYTRA.Text != "")
+                            MessageBox.Show("Số phiếu mượn chỉ được chứa ký tự số");
+                        }
+                        else
+                        {
+                            if (mktNGAYMUON.Text != "")
                             {
-                                if (cboXACNHAN.Text != "")
+                                if (mktNGAYTRA.Text != "")
                                 {
-
-                                    try
+                                    if (cboXACNHAN.Text != "")
                                     {
-                                        string strUpdate = "Update tblMuon set MADG='" + cboDOCGIA.Text + "',MASACH='" + cboMASACH.Text + "',SOPHIEUMUON='" + txtSOPHIEU.Text
-                                            + "',NGAYMUON='" + mktNGAYMUON.Text + "',NGAYTRA='" + mktNGAYTRA.Text
-                                            + "',XACNHANTRA='" + cboXACNHAN.Text + "',GHICHU='" + txtGHICHU.Text + "' where MADG='" + madg + "'";
 
-                                        cls.ThucThiSQLTheoPKN(strUpdate);
-                                        cls.LoadData2DataGridView(dataGridView1, "select * from tblMuon");
+                                        try
+                                        {
+                                            string strUpdate = "Update tblMuon set MADG = " + cboDOCGIA.Text + " , MASACH = " + cboMASACH.Text + " , SOPHIEUMUON = " + cboPhieuMuon.Text
+                                               + " , NGAYMUON = '" + mktNGAYMUON.Text + "' , NGAYTRA = '" + mktNGAYTRA.Text
+                                                + "' , XACNHANTRA = '" + cboXACNHAN.Text + "' , GHICHU = '" + txtGHICHU.Text 
+                                                + "' WHERE MADG =  " + madg + " AND SOPHIEUMUON = " + maphieumuon + " AND MASACH = " + masach;
 
-                                        MessageBox.Show("Sửa thành công");
-                                        cboMASACH.Text = "";
-                                        cboDOCGIA.Text = "";
-                                        txtGHICHU.Text = "";
-                                        txtSOPHIEU.Text = "";
-                                        mktNGAYMUON.Text = "";
-                                        mktNGAYTRA.Text = "";
+                                            cls.ThucThiSQLTheoPKN(strUpdate);
+
+                                            MessageBox.Show("Sửa thành công1");
+                                            cls.LoadData2DataGridView(dataGridView1, "select DISTINCT MADG , MASACH , SOPHIEUMUON , NGAYMUON , NGAYTRA , XACNHANTRA , GHICHU from tblMuon");
+
+                                            strUpdate = "Update tblPhieuMuon set MADG = " + cboDOCGIA.Text + " , MASACH = " + cboMASACH.Text + " , MAPHIEUMUON = " + cboPhieuMuon.Text
+                                               + " WHERE MADG =  " + madg + " AND MAPHIEUMUON = " + maphieumuon + " AND MASACH = " + masach;
+                                            cls.ThucThiSQLTheoPKN(strUpdate);
+
+                                            //thêm vào là phải xóa null đi nếu có  
+                                            string strInsert = "DELETE FROM tblPhieuMuon WHERE MASACH IS NULL AND MADG = " + cboDOCGIA.Text + " AND MAPHIEUMUON = " + cboPhieuMuon.Text;
+                                            cls.ThucThiSQLTheoPKN(strInsert);
+
+                                            MessageBox.Show("Sửa thành công 2");
+                                            cboMASACH.Text = "";
+                                            cboDOCGIA.Text = "";
+                                            txtGHICHU.Text = "";
+                                            cboPhieuMuon.Text = "";
+                                            mktNGAYMUON.Text = "";
+                                            mktNGAYTRA.Text = "";
+                                            cboXACNHAN.Text = "";
+                                            numberUndo = 0;
+
+                                        }
+                                        catch { MessageBox.Show("Không thể sửa !!!"); };
+
 
                                     }
-                                    catch { MessageBox.Show("Không thể sửa !!!"); };
-
-
+                                    else { MessageBox.Show("Thanh xác nhận không được để trống"); }
                                 }
-                                else { MessageBox.Show("Thanh xác nhận không được để trống"); }
+                                else { MessageBox.Show("Ngày trả không được để trống"); }
                             }
-                            else { MessageBox.Show("Ngày trả không được để trống"); }
+                            else { MessageBox.Show("Ngày mượn kh được để trống"); }
                         }
-                        else { MessageBox.Show("Ngày mượn kh được để trống"); }
                     }
                     else { MessageBox.Show("Số phiếu mượn không được để trống"); }
                 }
@@ -157,25 +210,65 @@ namespace QuanLyThuVien2
             {
                 if (MessageBox.Show("Bạn có muốn xóa không?(Y/N)", "Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
-                    string strDelete = "Delete from tblMuon where MADG='" + cboDOCGIA.Text + "'";
+                    undoMDG = cboDOCGIA.Text;
+                    undoMS = cboMASACH.Text;
+                    undoSPM = cboPhieuMuon.Text;
+                    undoNM = mktNGAYMUON.Text;
+                    undoNT = mktNGAYTRA.Text;
+                    undoXN = cboXACNHAN.Text;
+                    undoGHICHU = txtGHICHU.Text;
+                    string strDelete = "Delete from tblMuon where MADG = " + cboDOCGIA.Text + " AND MASACH = " + cboMASACH.Text + " AND SOPHIEUMUON = " + cboPhieuMuon.Text;
                     cls.ThucThiSQLTheoKetNoi(strDelete);
-                    cls.LoadData2DataGridView(dataGridView1, "select * from tblMuon");
+                    strDelete = "Delete from tblPhieuMuon where MADG = " + cboDOCGIA.Text + " AND MASACH = " + cboMASACH.Text + " AND MAPHIEUMUON = " + cboPhieuMuon.Text;
+                    cls.ThucThiSQLTheoKetNoi(strDelete);
+                    cls.LoadData2DataGridView(dataGridView1, "select DISTINCT MADG , MASACH , SOPHIEUMUON , NGAYMUON , NGAYTRA , XACNHANTRA , GHICHU from tblMuon");
                     MessageBox.Show("Xóa thành công !!!");
                     cboMASACH.Text = "";
                     cboDOCGIA.Text = "";
                     txtGHICHU.Text = "";
-                    txtSOPHIEU.Text = "";
+                    cboPhieuMuon.Text = "";
                     mktNGAYMUON.Text = "";
                     mktNGAYTRA.Text = "";
+                    cboXACNHAN.Text = "";
+                    numberUndo = 1;
                 }
             }
             catch { }
         }
 
-        //private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        //{
-        //    cls.LoadData2Label(label9, "select count(*)from tblMuon where MASACH='" + comboBox1.Text + "'");
-        //}
+        private void Thoat_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+        public string undoMDG, undoMS, undoSPM, undoNM, undoNT, undoXN, undoGHICHU;
+
+        private void cboDOCGIA_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //MessageBox.Show(cboDOCGIA.Text);
+            cls.LoadData2Combobox(cboPhieuMuon, "Select DISTINCT MAPHIEUMUON from tblPhieuMuon WHERE MADG = " + cboDOCGIA.Text);
+            // lọc để không lặp MAPHIEUMUON
+            cboPhieuMuon.Text = "";
+            cboMASACH.Text = "";
+        }
+
+        private void Undo_Click(object sender, EventArgs e)
+        {
+            if (numberUndo == 1)
+            {
+                string strInsert = "Insert Into tblMuon(MADG,MASACH,SOPHIEUMUON,NGAYMUON,NGAYTRA,XACNHANTRA,GHICHU) values ('" + undoMDG + "','" +
+                                                undoMS + "','" + undoSPM + "','" + undoNM + "','" +
+                                                undoNT + "','" + undoXN + "','" + undoGHICHU + "')";
+                cls.ThucThiSQLTheoPKN(strInsert);
+
+                strInsert = "Insert Into tblPhieuMuon(MASACH, MADG, MAPHIEUMUON) values(" + undoMS + "," + undoMDG + "," + undoSPM + ")";
+                cls.ThucThiSQLTheoPKN(strInsert);
+
+                cls.LoadData2DataGridView(dataGridView1, "select DISTINCT MADG , MASACH , SOPHIEUMUON , NGAYMUON , NGAYTRA , XACNHANTRA , GHICHU from tblMuon");
+
+                MessageBox.Show("Hoàn tác thành công !");
+                numberUndo = 0;
+            }
+        }
     }
 
 }
