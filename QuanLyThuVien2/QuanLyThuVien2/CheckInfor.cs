@@ -5,8 +5,11 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
+using System.Text.RegularExpressions;
 using System.Windows.Forms;
+using System.Net;
+using System.Collections.Specialized;
+using System.Data.SqlClient;
 
 namespace QuanLyThuVien2
 {
@@ -16,18 +19,20 @@ namespace QuanLyThuVien2
         {
             InitializeComponent();
         }
+        public int numberUndo = 0;
+        public string undoAN = "", undoSN = "", undoAdr = "", undoPN = "", undoEm = "", undoAge = "", undoPs = "", undoTK = "", undoAr = "", pass = "";
+
 
         private void KiemTraTTNVien_Load(object sender, EventArgs e)
         {
-            cls.LoadData2DataGridView(dataGridView2, "select * from tblNhanVien");
+            cls.LoadData2DataGridView(dataGridView2, "select taikhoan,quyenhan,tennv,diachi,dienthoai,email,chucvu,tuoi from tblNhanVien");
         }
         Class.clsDatabase cls = new QuanLyThuVien2.Class.clsDatabase();
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             txtTenTaiKhoan.Text = dataGridView2.Rows[e.RowIndex].Cells[0].Value.ToString();
-            txtPass.Text = dataGridView2.Rows[e.RowIndex].Cells[1].Value.ToString();
-            comboBoxAr.Text = dataGridView2.Rows[e.RowIndex].Cells[2].Value.ToString();
+            txtAr.Text = dataGridView2.Rows[e.RowIndex].Cells[2].Value.ToString();
             txtTenNhanVien.Text = dataGridView2.Rows[e.RowIndex].Cells[3].Value.ToString();
             txtDiaChi.Text = dataGridView2.Rows[e.RowIndex].Cells[4].Value.ToString();
             txtDienThoai.Text = dataGridView2.Rows[e.RowIndex].Cells[5].Value.ToString();
@@ -37,10 +42,68 @@ namespace QuanLyThuVien2
         }
         string TenTK;
         // int Dem = 0;
+        SqlConnection Con = new SqlConnection();
+        public Object layGiaTri(string sql) //lay gia tri cua  cot dau tien trong bang 
+        {
+            SqlCommand sqlCommand = new SqlCommand();
+            sqlCommand.CommandText = sql;
+            sqlCommand.CommandType = CommandType.Text;
+            sqlCommand.Connection = Con;
+            Con.Close();
 
+            //CHi can lay ve gia tri cua mot truong thoi thi dung pt nao ? - ExecuteScalar
+            Object obj = sqlCommand.ExecuteScalar(); //neu co loi thi phai xem lai cua lenh SQL o ben kia
+            return obj;
+            //Ket qua de dau ? - de trong obj
+        }
 
+        public static bool isValidEmail(string inputEmail)
+        {
+            string strRegex = @"^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}" +
+                  @"\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\" +
+                  @".)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$";
+            Regex re = new Regex(strRegex);
+            if (re.IsMatch(inputEmail))
+                return (true);
+            else
+                return (false);
+        }
+        public bool VerifyEmail(string emailVerify)
+        {
+            using (WebClient webclient = new WebClient())
+            {
+                string url = "http://verify-email.org/";
+                NameValueCollection formData = new NameValueCollection();
+                formData["check"] = emailVerify;
+                byte[] responseBytes = webclient.UploadValues(url, "POST", formData);
+                string response = Encoding.ASCII.GetString(responseBytes);
+                if (response.Contains("Result: Ok"))
+                {
+                    return true;
+                }
+                return false;
+            }
+        }
+        public static bool Checkso(string input)
+        {
+            string specialChar = @"~!@#$%^&*()_+`qwertyuiopasdfghjklzxcvbnm-=[]\{}|;':,./<>?";
+            foreach (var item in specialChar)
+            {
+                if (input.Contains(item)) return true;
+            }
 
+            return false;
+        }
+        public static bool CheckTen(string input)
+        {
+            string specialChar = @"~!@#$%^&*()_+`1234567890-=[]\{}|;':,./<>?";
+            foreach (var item in specialChar)
+            {
+                if (input.Contains(item)) return true;
+            }
 
+            return false;
+        }
 
         private void btnSua_Click(object sender, EventArgs e)
         {
@@ -55,14 +118,15 @@ namespace QuanLyThuVien2
             //else
             //{
             btnXoa.Enabled = true;
+            undoSN = txtTenNhanVien.Text;
+            undoAdr = txtDiaChi.Text;
+            undoPN = txtDienThoai.Text;
+            undoEm = txtEmail.Text;
+            undoAge = txtTuoi.Text;
+            undoPs = txtChucVu.Text;
+
             if (txtTenNhanVien.Text == "")
                 MessageBox.Show("Employee names cannot be left blank");
-            else
-                if (txtPass.Text.Length - 1 == 0 || txtPass.Text.Length - 1 == 0)
-                MessageBox.Show("Password cannot be left blank");
-            //else
-            //        if (txtQuyen.Text.Length - 1 == 0)
-            //    MessageBox.Show("Permissions cannot be left blank");
             else
                  if (txtDiaChi.Text == "")
                 MessageBox.Show("The address cannot be left blank");
@@ -83,13 +147,14 @@ namespace QuanLyThuVien2
                 MessageBox.Show("Wrong age");
             else
             {
-                string SQL = ("update tblNhanVien set MatKhau='" + txtPass.Text + "',QUYENHAN='" + comboBoxAr.Text
+                string SQL = ("update tblNhanVien set QUYENHAN='" + txtAr.Text
                     + "',TENNV='" + txtTenNhanVien.Text + "',DiaChi='" + txtDiaChi.Text + "',DIENTHOAI='"
                     + txtDienThoai.Text + "',EMAIL='" + txtEmail.Text + "',ChucVu='" + txtChucVu.Text + "',Tuoi='"
                     + txtTuoi.Text + "'where TaiKhoan='" + TenTK + "'");
                 cls.ThucThiSQLTheoKetNoi(SQL);
                 cls.LoadData2DataGridView(dataGridView2, "select*from tblNhanVien");
                 MessageBox.Show("Fixed successfully");
+                numberUndo = 1;
             }
 
             //}
@@ -97,8 +162,29 @@ namespace QuanLyThuVien2
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
+            Con = new SqlConnection();
+            Con.ConnectionString = @"Server =DESKTOP-QCOSLTK\VANMANH;" + "database=Library; Integrated Security = true";
+            Con.Open();
+            SqlCommand sqlCommand = new SqlCommand();
+            sqlCommand.CommandText = "select matkhau from tblnhanvien where taikhoan='" + txtTenTaiKhoan.Text + "'";
+            sqlCommand.CommandType = CommandType.Text;
+            sqlCommand.Connection = Con;
+
+            //CHi can lay ve gia tri cua mot truong thoi thi dung pt nao ? - ExecuteScalar
+            Object obj = sqlCommand.ExecuteScalar();
+            //object Q = layGiaTri("select matkhau from tblnhanvien where taikhoan='" + txtTenTaiKhoan.Text+"'");
+            Con.Close();
+            pass = Convert.ToString(obj);
+            undoTK = txtTenTaiKhoan.Text;
+            undoAr = txtAr.Text;
+            undoSN = txtTenNhanVien.Text;
+            undoAdr = txtDiaChi.Text;
+            undoPN = txtDienThoai.Text;
+            undoEm = txtEmail.Text;
+            undoAge = txtTuoi.Text;
+            undoPs = txtChucVu.Text;
             string s = txtTenNhanVien.Text;
-            if (comboBoxAr.Text == "admin")
+            if (txtAr.Text == "admin")
                 MessageBox.Show("Can't delete admin account");
             else
             {
@@ -109,14 +195,14 @@ namespace QuanLyThuVien2
                     cls.LoadData2DataGridView(dataGridView2, "select*from tblNhanVien");
                     MessageBox.Show("Delete successfully");
                     txtTenTaiKhoan.Text = "";
-                    txtPass.Text = "";
-                    comboBoxAr.Text = "";
+                    txtAr.Text = "";
                     txtTenNhanVien.Text = "";
                     txtDiaChi.Text = "";
                     txtDienThoai.Text = "";
                     txtEmail.Text = "";
                     txtChucVu.Text = "";
                     txtTuoi.Text = "";
+                    numberUndo = 1;
                 }
             }
         }
@@ -129,19 +215,31 @@ namespace QuanLyThuVien2
         private void dataGridView2_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             txtTenTaiKhoan.Text = dataGridView2.Rows[e.RowIndex].Cells[0].Value.ToString();
-            txtPass.Text = dataGridView2.Rows[e.RowIndex].Cells[1].Value.ToString();
-            comboBoxAr.Text = dataGridView2.Rows[e.RowIndex].Cells[2].Value.ToString();
-            txtTenNhanVien.Text = dataGridView2.Rows[e.RowIndex].Cells[3].Value.ToString();
-            txtDiaChi.Text = dataGridView2.Rows[e.RowIndex].Cells[4].Value.ToString();
-            txtDienThoai.Text = dataGridView2.Rows[e.RowIndex].Cells[5].Value.ToString();
-            txtEmail.Text = dataGridView2.Rows[e.RowIndex].Cells[6].Value.ToString();
-            txtChucVu.Text = dataGridView2.Rows[e.RowIndex].Cells[7].Value.ToString();
-            txtTuoi.Text = dataGridView2.Rows[e.RowIndex].Cells[8].Value.ToString();
+            txtAr.Text = dataGridView2.Rows[e.RowIndex].Cells[1].Value.ToString();
+            txtTenNhanVien.Text = dataGridView2.Rows[e.RowIndex].Cells[2].Value.ToString();
+            txtDiaChi.Text = dataGridView2.Rows[e.RowIndex].Cells[3].Value.ToString();
+            txtDienThoai.Text = dataGridView2.Rows[e.RowIndex].Cells[4].Value.ToString();
+            txtEmail.Text = dataGridView2.Rows[e.RowIndex].Cells[5].Value.ToString();
+            txtChucVu.Text = dataGridView2.Rows[e.RowIndex].Cells[6].Value.ToString();
+            txtTuoi.Text = dataGridView2.Rows[e.RowIndex].Cells[7].Value.ToString();
         }
 
-        private void label5_Click(object sender, EventArgs e)
+        private void btSearch_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btUndo_Click(object sender, EventArgs e)
+        {
+            if (numberUndo == 1)
+            {
+                //string strInsert = "Insert into tblNhanVien(taikhoan,matkhau,quyenhan,tennv,diachi,dienthoai,email,chucvu,tuoi) values ('vanmanhav','vanmanhr22','user','','','','','','')";
+                string strInsert = "Insert into tblNhanVien(taikhoan,matkhau,quyenhan,tennv,diachi,dienthoai,email,chucvu,tuoi) values ('" + undoTK + "','" + pass + "','" + undoAr + "','" + undoSN + "','" + undoAdr + "','" + undoPN + "','" + undoEm + "','" + undoPs + "','" + undoAge + "')";
+                cls.ThucThiSQLTheoPKN(strInsert);
+                cls.LoadData2DataGridView(dataGridView2, "select * from tblNhanVien");
+                MessageBox.Show("Hoàn tác thành công !");
+                numberUndo = 0;
+            }
         }
     }
 }

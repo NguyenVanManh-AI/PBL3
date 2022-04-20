@@ -158,7 +158,6 @@
             this.textBox2.PasswordChar = '*';
             this.textBox2.Size = new System.Drawing.Size(147, 30);
             this.textBox2.TabIndex = 2;
-            this.textBox2.Text = "vanmanh39";
             // 
             // textBox1
             // 
@@ -166,7 +165,6 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(147, 30);
             this.textBox1.TabIndex = 1;
-            this.textBox1.Text = "vanmanh39";
             // 
             // button1
             // 
@@ -198,7 +196,6 @@
             this.menuStrip1.Size = new System.Drawing.Size(982, 33);
             this.menuStrip1.TabIndex = 2;
             this.menuStrip1.Text = "menuStrip1";
-            this.menuStrip1.Visible = false;
             // 
             // dropdownSystemManagement
             // 
@@ -219,6 +216,7 @@
             this.dropdownSystemManagement.Name = "dropdownSystemManagement";
             this.dropdownSystemManagement.Size = new System.Drawing.Size(219, 29);
             this.dropdownSystemManagement.Text = "System Management";
+            this.dropdownSystemManagement.Visible = false;
             // 
             // toolCheckEmployeeInformation
             // 
@@ -302,6 +300,7 @@
             this.dropdownInformation.Name = "dropdownInformation";
             this.dropdownInformation.Size = new System.Drawing.Size(146, 29);
             this.dropdownInformation.Text = "Information";
+            this.dropdownInformation.Visible = false;
             // 
             // toolStripSeparator11
             // 
@@ -370,6 +369,7 @@
             this.dropdownSearch.Name = "dropdownSearch";
             this.dropdownSearch.Size = new System.Drawing.Size(104, 29);
             this.dropdownSearch.Text = "Search";
+            this.dropdownSearch.Visible = false;
             this.dropdownSearch.Click += new System.EventHandler(this.tìmKiếmToolStripMenuItem_Click);
             // 
             // toolBookSearch
@@ -416,6 +416,7 @@
             this.dropdownUpdate.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
             this.dropdownUpdate.Size = new System.Drawing.Size(110, 29);
             this.dropdownUpdate.Text = "Update";
+            this.dropdownUpdate.Visible = false;
             // 
             // toolBookUpdates
             // 
