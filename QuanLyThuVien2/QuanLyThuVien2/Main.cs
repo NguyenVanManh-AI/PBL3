@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 // mã hóa mật khẩu 
 using System.Security.Cryptography;
-
+//abc
 namespace QuanLyThuVien2
 {
     public partial class Main : Form
@@ -19,7 +19,7 @@ namespace QuanLyThuVien2
         {
             InitializeComponent();
         }
-        public static string TenDN, MatKhau, Quyen , checkMatKhau; // TenDN = tên đăng nhập 
+        public static string TenDN, MatKhau, Quyen, checkMatKhau; // TenDN = tên đăng nhập 
         SqlCommand sqlCommand;
         public Object layGiaTri(string sql) //lay gia tri cua  cot dau tien trong bang 
         {
@@ -123,6 +123,11 @@ namespace QuanLyThuVien2
                     btSI.Visible = false;
                     menuStrip1.Visible = true;
                     label4.Text = "Welcome to Library Management";
+                    dropdownSystemManagement.Visible = true;
+                    dropdownUpdate.Visible = true;
+                    dropdownInformation.Visible = true;
+                    dropdownSearch.Visible = true;
+
                 }
             }
         }
@@ -134,7 +139,7 @@ namespace QuanLyThuVien2
             else
                 e.Cancel = true;
         }
-        
+
         private void ThoatChuongTrinh(object sender, EventArgs e)
         {
             this.Close();
@@ -286,7 +291,7 @@ namespace QuanLyThuVien2
             hl.Show();
         }
 
-        
+
 
         private void ThongTinNguoiDoc(object sender, EventArgs e)
         {
@@ -316,7 +321,7 @@ namespace QuanLyThuVien2
             ForgotPassword fg = new ForgotPassword();
             fg.Show();
         }
-         
+
 
         private void label3_Click(object sender, EventArgs e)
         {
@@ -329,7 +334,7 @@ namespace QuanLyThuVien2
         {
             groupBox1.Visible = true;
         }
-       
+
 
         /*b 
         private void timer1_Tick(object sender, EventArgs e)
