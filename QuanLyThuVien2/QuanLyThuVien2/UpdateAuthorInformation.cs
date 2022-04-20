@@ -34,8 +34,8 @@ namespace QuanLyThuVien2
             return false;
         }
 
-        public int bug = 0 , numberUndo = 0;
-         
+        public int bug = 0, numberUndo = 0;
+
 
         private void btAdd_Click(object sender, EventArgs e)
         {
@@ -83,7 +83,7 @@ namespace QuanLyThuVien2
         }
 
 
-        public string undoMTG, undoTTG, undoDC, undoNote , undoGT; 
+        public string undoMTG, undoTTG, undoDC, undoNote, undoGT;
         private void btDelete_Click(object sender, EventArgs e)
         {
             if (MaTacGia.Text == "")
@@ -114,12 +114,18 @@ namespace QuanLyThuVien2
                     catch { MessageBox.Show("Phải xóa những thông tin liên quan đến tác giả này trước"); };
                 }
             }
-            
+
         }
 
         private void btClose_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            SearchAuthor s = new SearchAuthor();
+            s.Show();
         }
 
         string matg;
@@ -139,12 +145,12 @@ namespace QuanLyThuVien2
             catch { };
         }
         // int dem = 0;
-        
+
 
         public int bug2 = 0;
         private void btEdit_Click(object sender, EventArgs e)
         {
-            if(numberEdit == 0)
+            if (numberEdit == 0)
             {
                 MessageBox.Show("Hãy chọn một hàng dữ liệu đễ chỉnh sửa !");
             }
@@ -203,13 +209,13 @@ namespace QuanLyThuVien2
                     // }
                 }
             }
-            
+
 
         }
 
         private void btUndo_Click(object sender, EventArgs e)
         {
-            if(numberUndo == 1)
+            if (numberUndo == 1)
             {
                 string strInsert = "Insert Into tblTacGia(MATG,TENTG,GIOITINH,DIACHI,GHICHU) values ('" + undoMTG + "','" + undoTTG + "','" + undoGT + "','" + undoDC + "','" + undoNote + "')";
                 cls.ThucThiSQLTheoPKN(strInsert);
@@ -217,7 +223,7 @@ namespace QuanLyThuVien2
                 MessageBox.Show("Hoàn tác thành công !");
                 numberUndo = 0;
             }
-            
+
         }
     }
 }

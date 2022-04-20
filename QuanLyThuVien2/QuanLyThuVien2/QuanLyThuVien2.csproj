@@ -100,11 +100,23 @@
     <Compile Include="ReportReaders.Designer.cs">
       <DependentUpon>ReportReaders.cs</DependentUpon>
     </Compile>
+    <Compile Include="SearchAuthor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SearchAuthor.Designer.cs">
+      <DependentUpon>SearchAuthor.cs</DependentUpon>
+    </Compile>
     <Compile Include="SearchBooks.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="SearchBooks.Designer.cs">
       <DependentUpon>SearchBooks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SearchField.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SearchField.Designer.cs">
+      <DependentUpon>SearchField.cs</DependentUpon>
     </Compile>
     <Compile Include="SearchLoanSlip.cs">
       <SubType>Form</SubType>
