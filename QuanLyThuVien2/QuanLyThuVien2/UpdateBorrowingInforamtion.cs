@@ -242,6 +242,11 @@ namespace QuanLyThuVien2
         }
         public string undoMDG, undoMS, undoSPM, undoNM, undoNT, undoXN, undoGHICHU;
 
+        private void btSearch_Click(object sender, EventArgs e)
+        {
+            cls.LoadData2DataGridView(dataGridView1, "select*from tblmuon where madg like'%" + cboDOCGIA.Text + "%'and masach like'%" + cboMASACH.Text + "%'and sophieumuon like'%" + cboPhieuMuon.Text + "%'and ngaymuon like'%" + mktNGAYMUON.Text + "%'and ngaytra like'%" + mktNGAYTRA.Text + "%'and xacnhantra like '%" + cboXACNHAN.Text+"%'");
+        }
+
         private void cboDOCGIA_SelectedIndexChanged(object sender, EventArgs e)
         {
             //MessageBox.Show(cboDOCGIA.Text);
