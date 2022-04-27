@@ -69,6 +69,7 @@
             this.toolPublisherUpdate = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.toolUpdateBorrowingInformation = new System.Windows.Forms.ToolStripMenuItem();
+            this.updateLoanSlipToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dropdownReport = new System.Windows.Forms.ToolStripMenuItem();
             this.toolBookStatus = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
@@ -92,7 +93,6 @@
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.btSI = new System.Windows.Forms.Button();
-            this.updateLoanSlipToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.groupBox4.SuspendLayout();
@@ -196,7 +196,6 @@
             this.menuStrip1.Size = new System.Drawing.Size(982, 33);
             this.menuStrip1.TabIndex = 2;
             this.menuStrip1.Text = "menuStrip1";
-            this.menuStrip1.Visible = false;
             // 
             // dropdownSystemManagement
             // 
@@ -217,6 +216,7 @@
             this.dropdownSystemManagement.Name = "dropdownSystemManagement";
             this.dropdownSystemManagement.Size = new System.Drawing.Size(219, 29);
             this.dropdownSystemManagement.Text = "System Management";
+            this.dropdownSystemManagement.Visible = false;
             // 
             // toolCheckEmployeeInformation
             // 
@@ -300,6 +300,7 @@
             this.dropdownInformation.Name = "dropdownInformation";
             this.dropdownInformation.Size = new System.Drawing.Size(146, 29);
             this.dropdownInformation.Text = "Information";
+            this.dropdownInformation.Visible = false;
             // 
             // toolStripSeparator11
             // 
@@ -368,6 +369,7 @@
             this.dropdownSearch.Name = "dropdownSearch";
             this.dropdownSearch.Size = new System.Drawing.Size(104, 29);
             this.dropdownSearch.Text = "Search";
+            this.dropdownSearch.Visible = false;
             this.dropdownSearch.Click += new System.EventHandler(this.tìmKiếmToolStripMenuItem_Click);
             // 
             // toolBookSearch
@@ -414,6 +416,7 @@
             this.dropdownUpdate.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
             this.dropdownUpdate.Size = new System.Drawing.Size(110, 29);
             this.dropdownUpdate.Text = "Update";
+            this.dropdownUpdate.Visible = false;
             // 
             // toolBookUpdates
             // 
@@ -484,6 +487,14 @@
             this.toolUpdateBorrowingInformation.Size = new System.Drawing.Size(425, 34);
             this.toolUpdateBorrowingInformation.Text = "Update Borrowing Information";
             this.toolUpdateBorrowingInformation.Click += new System.EventHandler(this.CapNhatThongTinMuon);
+            // 
+            // updateLoanSlipToolStripMenuItem
+            // 
+            this.updateLoanSlipToolStripMenuItem.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.updateLoanSlipToolStripMenuItem.Name = "updateLoanSlipToolStripMenuItem";
+            this.updateLoanSlipToolStripMenuItem.Size = new System.Drawing.Size(425, 34);
+            this.updateLoanSlipToolStripMenuItem.Text = "Update Loan Slip";
+            this.updateLoanSlipToolStripMenuItem.Click += new System.EventHandler(this.CapnhatPhieuMuon);
             // 
             // dropdownReport
             // 
@@ -629,14 +640,6 @@
             this.btSI.Text = "Sign Into your Account";
             this.btSI.UseVisualStyleBackColor = false;
             this.btSI.Click += new System.EventHandler(this.btSI_Click);
-            // 
-            // updateLoanSlipToolStripMenuItem
-            // 
-            this.updateLoanSlipToolStripMenuItem.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.updateLoanSlipToolStripMenuItem.Name = "updateLoanSlipToolStripMenuItem";
-            this.updateLoanSlipToolStripMenuItem.Size = new System.Drawing.Size(425, 34);
-            this.updateLoanSlipToolStripMenuItem.Text = "Update Loan Slip";
-            this.updateLoanSlipToolStripMenuItem.Click += new System.EventHandler(this.CapnhatPhieuMuon);
             // 
             // Main
             // 

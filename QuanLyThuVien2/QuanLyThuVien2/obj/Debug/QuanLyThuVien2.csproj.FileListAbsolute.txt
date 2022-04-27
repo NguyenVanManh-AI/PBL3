@@ -31,6 +31,7 @@ C:\Users\LAPTOP KIM ANH\source\repos\QuanLyThuVien2\QuanLyThuVien2\obj\Debug\Qua
 C:\Users\LAPTOP KIM ANH\source\repos\QuanLyThuVien2\QuanLyThuVien2\obj\Debug\QuanLyThuVien2.ReportReaders.resources
 C:\Users\LAPTOP KIM ANH\source\repos\QuanLyThuVien2\QuanLyThuVien2\obj\Debug\QuanLyThuVien2.Help.resources
 C:\Users\LAPTOP KIM ANH\source\repos\QuanLyThuVien2\QuanLyThuVien2\obj\Debug\QuanLyThuVien2.UpdateLoanSlip.resources
+C:\Users\LAPTOP KIM ANH\source\repos\QuanLyThuVien2\QuanLyThuVien2\obj\Debug\QuanLyThuVien2.SearchLoanSlip.resources
 E:\PBL3\PBL3-main\QuanLyThuVien2\QuanLyThuVien2\bin\Debug\QuanLyThuVien2.exe.config
 E:\PBL3\PBL3-main\QuanLyThuVien2\QuanLyThuVien2\bin\Debug\QuanLyThuVien2.exe
 E:\PBL3\PBL3-main\QuanLyThuVien2\QuanLyThuVien2\bin\Debug\QuanLyThuVien2.pdb
@@ -46,6 +47,7 @@ E:\PBL3\PBL3-main\QuanLyThuVien2\QuanLyThuVien2\obj\Debug\QuanLyThuVien2.InforRe
 E:\PBL3\PBL3-main\QuanLyThuVien2\QuanLyThuVien2\obj\Debug\QuanLyThuVien2.ReportBookStatus.resources
 E:\PBL3\PBL3-main\QuanLyThuVien2\QuanLyThuVien2\obj\Debug\QuanLyThuVien2.ReportReaders.resources
 E:\PBL3\PBL3-main\QuanLyThuVien2\QuanLyThuVien2\obj\Debug\QuanLyThuVien2.SearchBooks.resources
+E:\PBL3\PBL3-main\QuanLyThuVien2\QuanLyThuVien2\obj\Debug\QuanLyThuVien2.SearchLoanSlip.resources
 E:\PBL3\PBL3-main\QuanLyThuVien2\QuanLyThuVien2\obj\Debug\QuanLyThuVien2.SearchReaders.resources
 E:\PBL3\PBL3-main\QuanLyThuVien2\QuanLyThuVien2\obj\Debug\QuanLyThuVien2.UpdateBorrowingInforamtion.resources
 E:\PBL3\PBL3-main\QuanLyThuVien2\QuanLyThuVien2\obj\Debug\QuanLyThuVien2.UpdateFieldInformation.resources
@@ -64,5 +66,3 @@ E:\PBL3\PBL3-main\QuanLyThuVien2\QuanLyThuVien2\obj\Debug\QuanLyThuVien2.csproj.
 E:\PBL3\PBL3-main\QuanLyThuVien2\QuanLyThuVien2\obj\Debug\QuanLyThuVien2.csproj.CoreCompileInputs.cache
 E:\PBL3\PBL3-main\QuanLyThuVien2\QuanLyThuVien2\obj\Debug\QuanLyThuVien2.exe
 E:\PBL3\PBL3-main\QuanLyThuVien2\QuanLyThuVien2\obj\Debug\QuanLyThuVien2.pdb
-E:\PBL3\PBL3-main\QuanLyThuVien2\QuanLyThuVien2\obj\Debug\QuanLyThuVien2.SearchAuthor.resources
-E:\PBL3\PBL3-main\QuanLyThuVien2\QuanLyThuVien2\obj\Debug\QuanLyThuVien2.SearchField.resources

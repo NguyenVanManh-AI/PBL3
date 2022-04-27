@@ -99,7 +99,7 @@ namespace QuanLyThuVien2
                                     {
                                         if (!hasSpecialChar1(txtemail.Text))
                                         {
-                                            MessageBox.Show("địa chỉ Email phải có dạng ****@gmail.com ");
+                                            MessageBox.Show("địa chỉ Email phải có đuôi @gmail.com ");
                                         }
                                         else
                                         {
@@ -218,109 +218,98 @@ namespace QuanLyThuVien2
                 }
             }
         }
-        public int number = 0;
+
         private void btnSua_Click(object sender, EventArgs e)
 
         {
-            if (txtMADG.Text == "")
-            {
-                MessageBox.Show("Bạn hãy chọn 1 hàng dữ liệu để chỉnh sửa");
-             }
-            else
-            {
 
-
-                if (txtMADG.Text != "")
+            if (txtMADG.Text != "")
+            {
+                if (txtHOTEN.Text != "")
                 {
-                    if (txtHOTEN.Text != "")
+                    if (hasSpecialChar(txtHOTEN.Text))
                     {
-                        if (hasSpecialChar(txtHOTEN.Text))
+                        MessageBox.Show("Tên độc giả không được chứa ký tự đặc biệt");
+                    }
+                    else
+                    {
+                        if (txtLOP.Text != "")
                         {
-                            MessageBox.Show("Tên độc giả không được chứa ký tự đặc biệt");
-                        }
-                        else
-                        {
-                            if (txtLOP.Text != "")
+                            if (txtDIACHI.Text != "")
                             {
-                                if (txtDIACHI.Text != "")
+                                if (maskedTextBox1.Text != "")
                                 {
-                                    if (maskedTextBox1.Text != "")
+                                    if (txtemail.Text != "")
                                     {
-                                        if (txtemail.Text != "")
+                                        if (!hasSpecialChar1(txtemail.Text))
                                         {
-                                            if (!hasSpecialChar1(txtemail.Text))
-                                            {
-                                                MessageBox.Show("địa chỉ Email phải dạng ****@gmail.com ");
-                                            }
-                                            else
-                                            {
-                                                try
-                                                {
-                                                    string strUpdate = "Update tblDocGia set MADG='" + txtMADG.Text + "',HOTEN=N'" + txtHOTEN.Text + "',NGAYSINH='" + maskedTextBox1.Text
-                                                        + "',GIOITINH='" + cboGioiTinh.Text + "',LOP='"
-                                                        + txtLOP.Text + "',DIACHI=N'" + txtDIACHI.Text + "',EMAIL='" + txtemail.Text + "',GHICHU='" + txtNote.Text + "' where MADG='" + madg + "'";
-                                                    cls.ThucThiSQLTheoPKN(strUpdate);
-                                                    cls.LoadData2DataGridView(dataGridView1, "select * from tblDocGia");
-
-                                                    MessageBox.Show("Sửa thành công");
-                                                    txtMADG.Text = "";
-                                                    txtHOTEN.Text = "";
-                                                    maskedTextBox1.Text = "";
-                                                    txtLOP.Text = "";
-                                                    txtDIACHI.Text = "";
-                                                    txtemail.Text = "";
-                                                    txtNote.Text = "";
-                                                    numberUndo = 0;
-
-
-
-                                                }
-                                                catch { MessageBox.Show("Không thể sửa !!!"); };
-                                            }
+                                            MessageBox.Show("địa chỉ Email phải có @gmail.com ");
                                         }
                                         else
                                         {
-                                            MessageBox.Show("Email không được để trống");
+                                            try
+                                            {
+                                                string strUpdate = "Update tblDocGia set MADG='" + txtMADG.Text + "',HOTEN=N'" + txtHOTEN.Text + "',NGAYSINH='" + maskedTextBox1.Text
+                                                    + "',GIOITINH='" + cboGioiTinh.Text + "',LOP='"
+                                                    + txtLOP.Text + "',DIACHI=N'" + txtDIACHI.Text + "',EMAIL='" + txtemail.Text + "',GHICHU='" + txtNote.Text + "' where MADG='" + madg + "'";
+                                                cls.ThucThiSQLTheoPKN(strUpdate);
+                                                cls.LoadData2DataGridView(dataGridView1, "select * from tblDocGia");
+
+                                                MessageBox.Show("Sửa thành công");
+                                                txtMADG.Text = "";
+                                                txtHOTEN.Text = "";
+                                                maskedTextBox1.Text = "";
+                                                txtLOP.Text = "";
+                                                txtDIACHI.Text = "";
+                                                txtemail.Text = "";
+                                                txtNote.Text = "";
+                                                numberUndo = 0;
+
+
+                                            }
+                                            catch { MessageBox.Show("Không thể sửa !!!"); };
                                         }
                                     }
                                     else
                                     {
-                                        MessageBox.Show("Ngày sinh không được để trống");
+                                        MessageBox.Show("Email không được để trống");
                                     }
                                 }
                                 else
                                 {
-                                    MessageBox.Show("Địa chỉ không được để trống");
+                                    MessageBox.Show("Ngày sinh không được để trống");
                                 }
                             }
                             else
                             {
-                                MessageBox.Show("Lớp không được để trống");
+                                MessageBox.Show("Địa chỉ không được để trống");
                             }
                         }
+                        else
+                        {
+                            MessageBox.Show("Lớp không được để trống");
+                        }
                     }
-                    else
-                    {
-                        MessageBox.Show("Tên độc giả không được để trống");
-                    }
-
                 }
                 else
                 {
-                    MessageBox.Show("Mã độc giả khong được để trống");
+                    MessageBox.Show("Tên độc giả không được để trống");
                 }
 
-
-
-
-
-
-
-
             }
+            else
+            {
+                MessageBox.Show("Mã độc giả khong được để trống");
+            }
+
+
+
+
+
+
+
+
         }
-        
-        
 
         public string undoMDG, undoHT, undoNS, undoGT, undoLOP, undoDIACHI, undoEMAIL, undoGHICHU;
 
