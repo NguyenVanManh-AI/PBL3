@@ -163,7 +163,7 @@ namespace QuanLyThuVien2
         private void btnXoa_Click(object sender, EventArgs e)
         {
             Con = new SqlConnection();
-            Con.ConnectionString = @"Server =21AK22-COM\QUOC;" + "database=Library; Integrated Security = true";
+            Con.ConnectionString = @"Server =DESKTOP-QCOSLTK\VANMANH;" + "database=Library2; Integrated Security = true";
             Con.Open();
             SqlCommand sqlCommand = new SqlCommand();
             sqlCommand.CommandText = "select matkhau from tblnhanvien where taikhoan='" + txtTenTaiKhoan.Text + "'";
@@ -226,7 +226,7 @@ namespace QuanLyThuVien2
 
         private void btSearch_Click(object sender, EventArgs e)
         {
-            cls.LoadData2DataGridView(dataGridView2, "select * from tblNhanVien where taikhoan like '%"+txtTenTaiKhoan.Text+"%' and tennv like '%"+txtTenNhanVien.Text+"%' and diachi like '%"+txtDiaChi.Text+"%' and dienthoai like'%"+txtDienThoai.Text+"%' and email like '%"+txtEmail.Text+"%' and chucvu like '%"+txtChucVu.Text+"%' and tuoi like '%"+txtTuoi.Text+"%'");
+            cls.LoadData2DataGridView(dataGridView2, "select * from tblNhanVien where taikhoan like '%" + txtTenTaiKhoan.Text + "%' and tennv like '%" + txtTenNhanVien.Text + "%' and diachi like '%" + txtDiaChi.Text + "%' and dienthoai like'%" + txtDienThoai.Text + "%' and email like '%" + txtEmail.Text + "%' and chucvu like '%" + txtChucVu.Text + "%' and tuoi like '%" + txtTuoi.Text + "%'");
         }
 
         private void btUndo_Click(object sender, EventArgs e)

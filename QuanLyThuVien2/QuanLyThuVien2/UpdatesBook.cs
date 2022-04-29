@@ -383,8 +383,25 @@ namespace QuanLyThuVien2
 
         private void btSearch_Click(object sender, EventArgs e)
         {
-            SearchBooks sb = new SearchBooks();
-            sb.Show();
+            //SearchBooks sb = new SearchBooks();
+            //sb.Show();
+            cls.LoadData2DataGridView(dataGridView1, "select * from tblSach where MASACH like '%" + txtMASACH.Text + "%' AND TENSACH like '%" + txtTENSACH.Text + "%' AND NAMXB like '%" + txtNAMXB.Text + "%' AND SOLUONG like '%" + txtSOLUONG.Text + "%' AND MATG like '%" + cboMATG.Text + "%' AND MANXB like '%" + cboMANXB.Text + "%' AND MaLV like '%" + cboMALv.Text + "%'");
+            //  "%' AND NGAYNHAP like '%" + maskedTextBox1.Text + "%'");
+            txtMASACH.Text = "";
+            txtTENSACH.Text = "";
+            txtNAMXB.Text = "";
+            txtSOTRANG.Text = "";
+            txtSOLUONG.Text = "";
+            txtsachhong.Text = "";
+            maskedTextBox1.Text = "";
+            txtGHICHU.Text = "";
+            cboMALv.Text = "";
+            cbotenLV.Text = "";
+            cboMATG.Text = "";
+            cbotenTG.Text = "";
+            cboMANXB.Text = "";
+            cbotenNXB.Text = "";
+
         }
 
         private void Undo_Click(object sender, EventArgs e)

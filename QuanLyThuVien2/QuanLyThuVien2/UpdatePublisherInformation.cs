@@ -42,17 +42,17 @@ namespace QuanLyThuVien2
             return false;
         }
 
-        public int bug = 0 , numberEdit = 0 , numberUndo = 0;
+        public int bug = 0, numberEdit = 0, numberUndo = 0;
         string manxb;
         private void btAdd_Click(object sender, EventArgs e)
         {
             bug = 0;
-            if(MaNhaXuatBan.Text == "")
+            if (MaNhaXuatBan.Text == "")
             {
                 MessageBox.Show("Mã Nhà Xuất Bản không được để trống !");
                 bug++;
             }
-            if(TenNhaXuatBan.Text == "")
+            if (TenNhaXuatBan.Text == "")
             {
                 MessageBox.Show("Tên Nhà Xuất Bản không được để trống !");
                 bug++;
@@ -72,8 +72,8 @@ namespace QuanLyThuVien2
                 MessageBox.Show("Số điện thoại Nhà Xuất Bản không được để trống !");
                 bug++;
             }
-            if (bug == 0) 
-            { 
+            if (bug == 0)
+            {
                 try
                 {
                     string strInsert = "Insert Into tblNXB(MANXB,TENNXB,DIACHI,SODIENTHOAI,GHICHU) values ('" + MaNhaXuatBan.Text + "','" + TenNhaXuatBan.Text + "','" + DiaChiNhaXuatBan.Text + "','" + SDTNhaXuatBan.Text + "','" + txtNote.Text + "')";
@@ -90,7 +90,7 @@ namespace QuanLyThuVien2
                 }
                 catch { MessageBox.Show("Mã Nhà Xuất Bản đã tồn tại !"); };
             }
-            
+
         }
 
 
@@ -103,7 +103,7 @@ namespace QuanLyThuVien2
 
         private void btSearch_Click(object sender, EventArgs e)
         {
-            cls.LoadData2DataGridView(dataGridView1, "select * from tblnxb where manxb like'%" + MaNhaXuatBan.Text + "%'and tennxb like'%" + TenNhaXuatBan.Text + "%'and diachi like'%" + DiaChiNhaXuatBan.Text + "%'and sodienthoai like'%" + SDTNhaXuatBan.Text + "%'and ghichu like'%" + txtNote.Text+"%'");
+            cls.LoadData2DataGridView(dataGridView1, "select * from tblnxb where manxb like'%" + MaNhaXuatBan.Text + "%'and tennxb like'%" + TenNhaXuatBan.Text + "%'and diachi like'%" + DiaChiNhaXuatBan.Text + "%'and sodienthoai like'%" + SDTNhaXuatBan.Text + "%'and ghichu like'%" + txtNote.Text + "%'");
         }
 
         private void btUndo_Click(object sender, EventArgs e)
@@ -151,9 +151,9 @@ namespace QuanLyThuVien2
                     catch { MessageBox.Show("Phải xóa những thông tin liên quan đến nhà xuất bản này trước"); };
                 }
             }
-            
+
         }
-          
+
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             try
@@ -171,9 +171,9 @@ namespace QuanLyThuVien2
         }
 
         //int dem = 0;
-        
-         
-        public int bug2 = 0 ;
+
+
+        public int bug2 = 0;
         private void btEdit_Click(object sender, EventArgs e)
         {
             if (numberEdit == 0)

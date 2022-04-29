@@ -60,6 +60,7 @@
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.btSearch = new System.Windows.Forms.Button();
             this.Them = new System.Windows.Forms.Button();
             this.Thoat = new System.Windows.Forms.Button();
             this.Sua = new System.Windows.Forms.Button();
@@ -76,7 +77,6 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txtGHICHU = new System.Windows.Forms.TextBox();
-            this.btSearch = new System.Windows.Forms.Button();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -384,6 +384,19 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Feature";
             // 
+            // btSearch
+            // 
+            this.btSearch.BackColor = System.Drawing.Color.White;
+            this.btSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btSearch.Location = new System.Drawing.Point(25, 127);
+            this.btSearch.Margin = new System.Windows.Forms.Padding(4);
+            this.btSearch.Name = "btSearch";
+            this.btSearch.Size = new System.Drawing.Size(112, 32);
+            this.btSearch.TabIndex = 26;
+            this.btSearch.Text = "Search";
+            this.btSearch.UseVisualStyleBackColor = false;
+            this.btSearch.Click += new System.EventHandler(this.btSearch_Click);
+            // 
             // Them
             // 
             this.Them.BackColor = System.Drawing.Color.White;
@@ -611,19 +624,6 @@
             this.txtGHICHU.Name = "txtGHICHU";
             this.txtGHICHU.Size = new System.Drawing.Size(277, 79);
             this.txtGHICHU.TabIndex = 33;
-            // 
-            // btSearch
-            // 
-            this.btSearch.BackColor = System.Drawing.Color.White;
-            this.btSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btSearch.Location = new System.Drawing.Point(25, 127);
-            this.btSearch.Margin = new System.Windows.Forms.Padding(4);
-            this.btSearch.Name = "btSearch";
-            this.btSearch.Size = new System.Drawing.Size(112, 32);
-            this.btSearch.TabIndex = 26;
-            this.btSearch.Text = "Search";
-            this.btSearch.UseVisualStyleBackColor = false;
-            this.btSearch.Click += new System.EventHandler(this.btSearch_Click);
             // 
             // UpdatesBook
             // 

@@ -89,7 +89,7 @@ namespace QuanLyThuVien2
                                         {
                                             string strInsert = "Insert Into tblMuon(MADG,MASACH,SOPHIEUMUON,NGAYMUON,NGAYTRA,XACNHANTRA,GHICHU) values ('" + cboDOCGIA.Text + "','" +
                                                 cboMASACH.Text + "','" + cboPhieuMuon.Text + "','" + mktNGAYMUON.Text + "','" +
-                                                mktNGAYTRA.Text + "','" + cboXACNHAN.Text + "','" + txtGHICHU.Text + "')"; 
+                                                mktNGAYTRA.Text + "','" + cboXACNHAN.Text + "','" + txtGHICHU.Text + "')";
                                             cls.ThucThiSQLTheoPKN(strInsert);
 
                                             //strInsert = "UPDATE tblPhieuMuon SET MASACH = " + cboMASACH.Text + " WHERE MADG =  "+ cboDOCGIA.Text + " AND MAPHIEUMUON = "+ cboPhieuMuon.Text + "; ";
@@ -156,7 +156,7 @@ namespace QuanLyThuVien2
                                         {
                                             string strUpdate = "Update tblMuon set MADG = " + cboDOCGIA.Text + " , MASACH = " + cboMASACH.Text + " , SOPHIEUMUON = " + cboPhieuMuon.Text
                                                + " , NGAYMUON = '" + mktNGAYMUON.Text + "' , NGAYTRA = '" + mktNGAYTRA.Text
-                                                + "' , XACNHANTRA = '" + cboXACNHAN.Text + "' , GHICHU = '" + txtGHICHU.Text 
+                                                + "' , XACNHANTRA = '" + cboXACNHAN.Text + "' , GHICHU = '" + txtGHICHU.Text
                                                 + "' WHERE MADG =  " + madg + " AND SOPHIEUMUON = " + maphieumuon + " AND MASACH = " + masach;
 
                                             cls.ThucThiSQLTheoPKN(strUpdate);
@@ -244,7 +244,7 @@ namespace QuanLyThuVien2
 
         private void btSearch_Click(object sender, EventArgs e)
         {
-            cls.LoadData2DataGridView(dataGridView1, "select*from tblmuon where madg like'%" + cboDOCGIA.Text + "%'and masach like'%" + cboMASACH.Text + "%'and sophieumuon like'%" + cboPhieuMuon.Text + "%'and ngaymuon like'%" + mktNGAYMUON.Text + "%'and ngaytra like'%" + mktNGAYTRA.Text + "%'and xacnhantra like '%" + cboXACNHAN.Text+"%'");
+            cls.LoadData2DataGridView(dataGridView1, "select*from tblmuon where madg like'%" + cboDOCGIA.Text + "%'and masach like'%" + cboMASACH.Text + "%'and sophieumuon like'%" + cboPhieuMuon.Text + "%'and ngaymuon like'%" + mktNGAYMUON.Text + "%'and ngaytra like'%" + mktNGAYTRA.Text + "%'and xacnhantra like '%" + cboXACNHAN.Text + "%'");
         }
 
         private void cboDOCGIA_SelectedIndexChanged(object sender, EventArgs e)

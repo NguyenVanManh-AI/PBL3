@@ -124,8 +124,9 @@ namespace QuanLyThuVien2
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            SearchAuthor s = new SearchAuthor();
-            s.Show();
+            cls.LoadData2DataGridView(dataGridView1, "select * from tblTacGia where MATG like '%" + MaTacGia.Text + "%' AND TENTG like '%" +
+                TenTacGia.Text + "%' AND GIOITINH = '" + cboGioiTinh.Text + "' AND DIACHI like '%" + DiaChi.Text + "%'");
+
         }
 
         string matg;
