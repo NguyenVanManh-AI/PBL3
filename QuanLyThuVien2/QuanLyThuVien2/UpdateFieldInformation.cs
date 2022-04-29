@@ -139,8 +139,8 @@ namespace QuanLyThuVien2
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            SearchField search = new SearchField();
-            search.Show();
+            cls.LoadData2DataGridView(dataGridView1, "select * from tblLinhVuc where MaLv like '%" + MaLinhVuc.Text + "%' AND TenLv like '%" +
+                TenLinhVuc.Text + "%'");
         }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)

@@ -246,8 +246,8 @@ namespace QuanLyThuVien2
         }
         private void CapnhatPhieuMuon(object sender, EventArgs e)
         {
-            UpdateLoanSlip updateLoan = new UpdateLoanSlip();
-            updateLoan.Show();
+            LibraryCard library = new LibraryCard();
+            library.Show();
         }
         private void BaoCaoTinhTrangSach(object sender, EventArgs e)
         {

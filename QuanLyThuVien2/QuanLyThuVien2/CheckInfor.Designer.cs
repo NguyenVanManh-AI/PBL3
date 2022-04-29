@@ -32,6 +32,8 @@
             this.btClose = new System.Windows.Forms.Button();
             this.btnSua = new System.Windows.Forms.Button();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.btSearch = new System.Windows.Forms.Button();
+            this.btUndo = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
             this.txtTuoi = new System.Windows.Forms.TextBox();
             this.txtChucVu = new System.Windows.Forms.TextBox();
@@ -63,8 +65,6 @@
             this.groupBoxAr = new System.Windows.Forms.GroupBox();
             this.txtAr = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btUndo = new System.Windows.Forms.Button();
-            this.btSearch = new System.Windows.Forms.Button();
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -112,6 +112,30 @@
             this.groupBox4.TabIndex = 7;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Feature";
+            // 
+            // btSearch
+            // 
+            this.btSearch.BackColor = System.Drawing.Color.White;
+            this.btSearch.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btSearch.Location = new System.Drawing.Point(132, 48);
+            this.btSearch.Name = "btSearch";
+            this.btSearch.Size = new System.Drawing.Size(75, 22);
+            this.btSearch.TabIndex = 4;
+            this.btSearch.Text = "Search";
+            this.btSearch.UseVisualStyleBackColor = false;
+            this.btSearch.Click += new System.EventHandler(this.btSearch_Click);
+            // 
+            // btUndo
+            // 
+            this.btUndo.BackColor = System.Drawing.Color.White;
+            this.btUndo.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btUndo.Location = new System.Drawing.Point(132, 96);
+            this.btUndo.Name = "btUndo";
+            this.btUndo.Size = new System.Drawing.Size(75, 22);
+            this.btUndo.TabIndex = 3;
+            this.btUndo.Text = "Undo";
+            this.btUndo.UseVisualStyleBackColor = false;
+            this.btUndo.Click += new System.EventHandler(this.btUndo_Click);
             // 
             // btnXoa
             // 
@@ -182,10 +206,10 @@
             this.Column9});
             this.dataGridView2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dataGridView2.GridColor = System.Drawing.SystemColors.AppWorkspace;
-            this.dataGridView2.Location = new System.Drawing.Point(3, 81);
+            this.dataGridView2.Location = new System.Drawing.Point(3, 43);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.RowHeadersWidth = 51;
-            this.dataGridView2.Size = new System.Drawing.Size(907, 96);
+            this.dataGridView2.Size = new System.Drawing.Size(907, 134);
             this.dataGridView2.TabIndex = 2;
             this.dataGridView2.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellClick);
             this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellClick);
@@ -259,7 +283,7 @@
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label11.Location = new System.Drawing.Point(373, 37);
+            this.label11.Location = new System.Drawing.Point(372, 16);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(158, 24);
             this.label11.TabIndex = 1;
@@ -420,30 +444,6 @@
             this.groupBox1.Size = new System.Drawing.Size(913, 46);
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
-            // 
-            // btUndo
-            // 
-            this.btUndo.BackColor = System.Drawing.Color.White;
-            this.btUndo.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btUndo.Location = new System.Drawing.Point(132, 96);
-            this.btUndo.Name = "btUndo";
-            this.btUndo.Size = new System.Drawing.Size(75, 22);
-            this.btUndo.TabIndex = 3;
-            this.btUndo.Text = "Undo";
-            this.btUndo.UseVisualStyleBackColor = false;
-            this.btUndo.Click += new System.EventHandler(this.btUndo_Click);
-            // 
-            // btSearch
-            // 
-            this.btSearch.BackColor = System.Drawing.Color.White;
-            this.btSearch.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btSearch.Location = new System.Drawing.Point(132, 48);
-            this.btSearch.Name = "btSearch";
-            this.btSearch.Size = new System.Drawing.Size(75, 22);
-            this.btSearch.TabIndex = 4;
-            this.btSearch.Text = "Search";
-            this.btSearch.UseVisualStyleBackColor = false;
-            this.btSearch.Click += new System.EventHandler(this.btSearch_Click);
             // 
             // CheckInfor
             // 

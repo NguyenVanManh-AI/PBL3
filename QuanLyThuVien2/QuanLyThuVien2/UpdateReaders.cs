@@ -315,8 +315,11 @@ namespace QuanLyThuVien2
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            SearchReaders srd = new SearchReaders();
-            srd.Show();
+            //SearchReaders srd = new SearchReaders();
+            //srd.Show();
+            cls.LoadData2DataGridView(dataGridView1, "select * from tblDocGia where MADG like '%" + txtMADG.Text + "%' AND HOTEN like '%" + txtHOTEN.Text + "%' AND GIOITINH like '%" + cboGioiTinh.Text + "%' AND LOP like '%" + txtLOP.Text + "%' AND DIACHI like '%" + txtDIACHI.Text + "%' AND EMAIL like '%" + txtemail.Text + "%' AND GHICHU like '%" + txtNote.Text + "%'");
+            //or NGAYSINH = '" + maskedTextBox1.Text + "'
+
         }
 
         private void btnUndo_Click(object sender, EventArgs e)

@@ -63,6 +63,16 @@ namespace QuanLyThuVien2.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _1486485553_ago_arrow_arrow_left_back_previous_direction_left_81160 {
+            get {
+                object obj = ResourceManager.GetObject("1486485553-ago-arrow-arrow-left-back-previous-direction-left_81160", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Backgroundmain {
             get {
                 object obj = ResourceManager.GetObject("Backgroundmain", resourceCulture);

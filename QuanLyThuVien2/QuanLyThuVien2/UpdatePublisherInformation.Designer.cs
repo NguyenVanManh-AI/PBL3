@@ -54,6 +54,7 @@
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.btUndo = new System.Windows.Forms.Button();
             this.btClose = new System.Windows.Forms.Button();
+            this.btSearch = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -70,11 +71,10 @@
             this.Column3,
             this.Column4,
             this.Column5});
-            this.dataGridView1.Location = new System.Drawing.Point(12, 120);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
+            this.dataGridView1.Location = new System.Drawing.Point(8, 78);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 62;
-            this.dataGridView1.Size = new System.Drawing.Size(773, 669);
+            this.dataGridView1.Size = new System.Drawing.Size(515, 435);
             this.dataGridView1.TabIndex = 22;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
@@ -122,10 +122,9 @@
             // 
             this.btAdd.BackColor = System.Drawing.Color.White;
             this.btAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btAdd.Location = new System.Drawing.Point(28, 47);
-            this.btAdd.Margin = new System.Windows.Forms.Padding(4);
+            this.btAdd.Location = new System.Drawing.Point(19, 31);
             this.btAdd.Name = "btAdd";
-            this.btAdd.Size = new System.Drawing.Size(112, 33);
+            this.btAdd.Size = new System.Drawing.Size(75, 21);
             this.btAdd.TabIndex = 18;
             this.btAdd.Text = "Add";
             this.btAdd.UseVisualStyleBackColor = false;
@@ -135,10 +134,9 @@
             // 
             this.btDelete.BackColor = System.Drawing.Color.White;
             this.btDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btDelete.Location = new System.Drawing.Point(28, 133);
-            this.btDelete.Margin = new System.Windows.Forms.Padding(4);
+            this.btDelete.Location = new System.Drawing.Point(19, 86);
             this.btDelete.Name = "btDelete";
-            this.btDelete.Size = new System.Drawing.Size(112, 33);
+            this.btDelete.Size = new System.Drawing.Size(75, 21);
             this.btDelete.TabIndex = 20;
             this.btDelete.Text = "Delete";
             this.btDelete.UseVisualStyleBackColor = false;
@@ -148,10 +146,9 @@
             // 
             this.btEdit.BackColor = System.Drawing.Color.White;
             this.btEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btEdit.Location = new System.Drawing.Point(357, 47);
-            this.btEdit.Margin = new System.Windows.Forms.Padding(4);
+            this.btEdit.Location = new System.Drawing.Point(238, 31);
             this.btEdit.Name = "btEdit";
-            this.btEdit.Size = new System.Drawing.Size(112, 33);
+            this.btEdit.Size = new System.Drawing.Size(75, 21);
             this.btEdit.TabIndex = 19;
             this.btEdit.Text = "Edit";
             this.btEdit.UseVisualStyleBackColor = false;
@@ -159,10 +156,9 @@
             // 
             // DiaChiNhaXuatBan
             // 
-            this.DiaChiNhaXuatBan.Location = new System.Drawing.Point(192, 143);
-            this.DiaChiNhaXuatBan.Margin = new System.Windows.Forms.Padding(4);
+            this.DiaChiNhaXuatBan.Location = new System.Drawing.Point(128, 93);
             this.DiaChiNhaXuatBan.Name = "DiaChiNhaXuatBan";
-            this.DiaChiNhaXuatBan.Size = new System.Drawing.Size(277, 26);
+            this.DiaChiNhaXuatBan.Size = new System.Drawing.Size(186, 20);
             this.DiaChiNhaXuatBan.TabIndex = 3;
             // 
             // groupBox1
@@ -179,96 +175,84 @@
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.groupBox1.Location = new System.Drawing.Point(798, 120);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBox1.Location = new System.Drawing.Point(532, 78);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox1.Size = new System.Drawing.Size(492, 404);
+            this.groupBox1.Size = new System.Drawing.Size(328, 263);
             this.groupBox1.TabIndex = 16;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Enter information";
             // 
             // txtNote
             // 
-            this.txtNote.Location = new System.Drawing.Point(192, 241);
-            this.txtNote.Margin = new System.Windows.Forms.Padding(4);
+            this.txtNote.Location = new System.Drawing.Point(128, 157);
             this.txtNote.Name = "txtNote";
-            this.txtNote.Size = new System.Drawing.Size(277, 138);
+            this.txtNote.Size = new System.Drawing.Size(186, 91);
             this.txtNote.TabIndex = 5;
             this.txtNote.Text = "";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(125, 241);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Location = new System.Drawing.Point(83, 157);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(51, 20);
+            this.label7.Size = new System.Drawing.Size(36, 13);
             this.label7.TabIndex = 19;
             this.label7.Text = "Note :";
             // 
             // SDTNhaXuatBan
             // 
-            this.SDTNhaXuatBan.Location = new System.Drawing.Point(192, 180);
-            this.SDTNhaXuatBan.Margin = new System.Windows.Forms.Padding(4);
+            this.SDTNhaXuatBan.Location = new System.Drawing.Point(128, 117);
             this.SDTNhaXuatBan.Name = "SDTNhaXuatBan";
-            this.SDTNhaXuatBan.Size = new System.Drawing.Size(277, 26);
+            this.SDTNhaXuatBan.Size = new System.Drawing.Size(186, 20);
             this.SDTNhaXuatBan.TabIndex = 4;
-            //this.SDTNhaXuatBan.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSODIENTHOAI_KeyPress);
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(55, 186);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Location = new System.Drawing.Point(37, 121);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(121, 20);
+            this.label6.Size = new System.Drawing.Size(82, 13);
             this.label6.TabIndex = 17;
             this.label6.Text = "Phone number :";
             // 
             // TenNhaXuatBan
             // 
-            this.TenNhaXuatBan.Location = new System.Drawing.Point(192, 106);
-            this.TenNhaXuatBan.Margin = new System.Windows.Forms.Padding(4);
+            this.TenNhaXuatBan.Location = new System.Drawing.Point(128, 69);
             this.TenNhaXuatBan.Name = "TenNhaXuatBan";
-            this.TenNhaXuatBan.Size = new System.Drawing.Size(277, 26);
+            this.TenNhaXuatBan.Size = new System.Drawing.Size(186, 20);
             this.TenNhaXuatBan.TabIndex = 2;
             // 
             // MaNhaXuatBan
             // 
-            this.MaNhaXuatBan.Location = new System.Drawing.Point(192, 69);
-            this.MaNhaXuatBan.Margin = new System.Windows.Forms.Padding(4);
+            this.MaNhaXuatBan.Location = new System.Drawing.Point(128, 45);
             this.MaNhaXuatBan.Name = "MaNhaXuatBan";
-            this.MaNhaXuatBan.Size = new System.Drawing.Size(277, 26);
+            this.MaNhaXuatBan.Size = new System.Drawing.Size(186, 20);
             this.MaNhaXuatBan.TabIndex = 1;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(100, 146);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Location = new System.Drawing.Point(67, 95);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(76, 20);
+            this.label5.Size = new System.Drawing.Size(51, 13);
             this.label5.TabIndex = 2;
             this.label5.Text = "Address :";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(50, 112);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(33, 73);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(126, 20);
+            this.label4.Size = new System.Drawing.Size(85, 13);
             this.label4.TabIndex = 1;
             this.label4.Text = "Publisher name :";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(78, 75);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(52, 49);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(98, 20);
+            this.label3.Size = new System.Drawing.Size(67, 13);
             this.label3.TabIndex = 0;
             this.label3.Text = "Publisher id :";
             // 
@@ -277,10 +261,9 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label1.Location = new System.Drawing.Point(300, 34);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(200, 22);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(425, 36);
+            this.label1.Size = new System.Drawing.Size(278, 24);
             this.label1.TabIndex = 17;
             this.label1.Text = "Update Publisher Information";
             // 
@@ -288,28 +271,25 @@
             // 
             this.groupBox2.BackColor = System.Drawing.Color.Transparent;
             this.groupBox2.Controls.Add(this.label1);
-            this.groupBox2.Location = new System.Drawing.Point(12, 11);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBox2.Location = new System.Drawing.Point(8, 7);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox2.Size = new System.Drawing.Size(1152, 80);
+            this.groupBox2.Size = new System.Drawing.Size(768, 52);
             this.groupBox2.TabIndex = 23;
             this.groupBox2.TabStop = false;
             // 
             // groupBox3
             // 
             this.groupBox3.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox3.Controls.Add(this.btSearch);
             this.groupBox3.Controls.Add(this.btUndo);
             this.groupBox3.Controls.Add(this.btClose);
             this.groupBox3.Controls.Add(this.btAdd);
             this.groupBox3.Controls.Add(this.btEdit);
             this.groupBox3.Controls.Add(this.btDelete);
             this.groupBox3.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.groupBox3.Location = new System.Drawing.Point(798, 532);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBox3.Location = new System.Drawing.Point(532, 346);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox3.Size = new System.Drawing.Size(492, 217);
+            this.groupBox3.Size = new System.Drawing.Size(328, 141);
             this.groupBox3.TabIndex = 24;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Feature";
@@ -318,10 +298,9 @@
             // 
             this.btUndo.BackColor = System.Drawing.Color.White;
             this.btUndo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btUndo.Location = new System.Drawing.Point(357, 133);
-            this.btUndo.Margin = new System.Windows.Forms.Padding(4);
+            this.btUndo.Location = new System.Drawing.Point(238, 86);
             this.btUndo.Name = "btUndo";
-            this.btUndo.Size = new System.Drawing.Size(112, 33);
+            this.btUndo.Size = new System.Drawing.Size(75, 21);
             this.btUndo.TabIndex = 22;
             this.btUndo.Text = "Undo";
             this.btUndo.UseVisualStyleBackColor = false;
@@ -331,28 +310,38 @@
             // 
             this.btClose.BackColor = System.Drawing.Color.White;
             this.btClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btClose.Location = new System.Drawing.Point(190, 92);
-            this.btClose.Margin = new System.Windows.Forms.Padding(4);
+            this.btClose.Location = new System.Drawing.Point(128, 31);
             this.btClose.Name = "btClose";
-            this.btClose.Size = new System.Drawing.Size(112, 33);
+            this.btClose.Size = new System.Drawing.Size(75, 21);
             this.btClose.TabIndex = 21;
             this.btClose.Text = "Close";
             this.btClose.UseVisualStyleBackColor = false;
             this.btClose.Click += new System.EventHandler(this.btClose_Click);
             // 
+            // btSearch
+            // 
+            this.btSearch.BackColor = System.Drawing.Color.White;
+            this.btSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btSearch.Location = new System.Drawing.Point(128, 86);
+            this.btSearch.Name = "btSearch";
+            this.btSearch.Size = new System.Drawing.Size(75, 21);
+            this.btSearch.TabIndex = 23;
+            this.btSearch.Text = "Search";
+            this.btSearch.UseVisualStyleBackColor = false;
+            this.btSearch.Click += new System.EventHandler(this.btSearch_Click);
+            // 
             // UpdatePublisherInformation
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::QuanLyThuVien2.Properties.Resources.Backgroundmain;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1324, 793);
+            this.ClientSize = new System.Drawing.Size(883, 487);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.groupBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "UpdatePublisherInformation";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Update Publisher Information";
@@ -394,5 +383,6 @@
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Button btUndo;
         private System.Windows.Forms.Button btClose;
+        private System.Windows.Forms.Button btSearch;
     }
 }

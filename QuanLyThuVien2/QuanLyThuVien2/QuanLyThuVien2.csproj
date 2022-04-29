@@ -88,6 +88,12 @@
     <Compile Include="InforReaders.Designer.cs">
       <DependentUpon>InforReaders.cs</DependentUpon>
     </Compile>
+    <Compile Include="LibraryCard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LibraryCard.Designer.cs">
+      <DependentUpon>LibraryCard.cs</DependentUpon>
+    </Compile>
     <Compile Include="ReportBookStatus.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -226,6 +232,9 @@
     <EmbeddedResource Include="InforReaders.resx">
       <DependentUpon>InforReaders.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="LibraryCard.resx">
+      <DependentUpon>LibraryCard.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ReportBookStatus.resx">
       <DependentUpon>ReportBookStatus.cs</DependentUpon>
     </EmbeddedResource>
@@ -323,6 +332,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\exit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1486485553-ago-arrow-arrow-left-back-previous-direction-left_81160.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
