@@ -64,9 +64,9 @@ namespace QuanLyThuVien2
                     if (Quyen == "user")
                     {
                         dropdownSystemManagement.Enabled = true;
-                        dropdownSearch.Enabled = true;
-                        toolBookSearch.Enabled = true;
-                        toolRoadSearch.Enabled = true;
+                        //dropdownSearch.Enabled = true;
+                        //toolBookSearch.Enabled = true;
+                        //toolRoadSearch.Enabled = true;
                         dropdownUpdate.Enabled = true;
                         dropdownInformation.Enabled = true;
                         dropdownReport.Enabled = true;
@@ -93,10 +93,10 @@ namespace QuanLyThuVien2
                     if (Quyen == "admin")
                     {
                         dropdownSystemManagement.Enabled = true;
-                        dropdownSearch.Enabled = true;
-                        toolBookSearch.Enabled = true;
+                        //dropdownSearch.Enabled = true;
+                        //toolBookSearch.Enabled = true;
                         toolCheckEmployeeInformation.Enabled = true;
-                        toolRoadSearch.Enabled = true;
+                        //toolRoadSearch.Enabled = true;
                         dropdownUpdate.Enabled = true;
                         dropdownInformation.Enabled = true;
                         dropdownReport.Enabled = true;
@@ -126,7 +126,7 @@ namespace QuanLyThuVien2
                     dropdownSystemManagement.Visible = true;
                     dropdownUpdate.Visible = true;
                     dropdownInformation.Visible = true;
-                    dropdownSearch.Visible = true;
+                    //dropdownSearch.Visible = true;
 
                 }
             }
@@ -463,10 +463,10 @@ namespace QuanLyThuVien2
         {
             groupBox1.Enabled = true;
             dropdownSystemManagement.Enabled = false;
-            dropdownSearch.Enabled = false;
-            toolBookSearch.Enabled = false;
+            //dropdownSearch.Enabled = false;
+            //toolBookSearch.Enabled = false;
             toolCheckEmployeeInformation.Enabled = false;
-            toolRoadSearch.Enabled = false;
+            //toolRoadSearch.Enabled = false;
             dropdownUpdate.Enabled = false;
             dropdownInformation.Enabled = false;
             dropdownReport.Enabled = false;

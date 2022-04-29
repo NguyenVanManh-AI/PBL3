@@ -175,7 +175,7 @@ namespace QuanLyThuVien2
             txtAddress.Text = dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString();
             txtEmail.Text = dataGridView1.Rows[e.RowIndex].Cells[6].Value.ToString();
             cls.LoadData3DataGridView(dataGridView1, "select *  from tblDocGia ORDER BY MADG");
-            cls.LoadData2Combobox(cboLibraryCardcode, "select MAPHIEUMUON from tblPhieuMuon where MADG = " + txtReaderCode.Text + " ORDER BY MAPHIEUMUON ");
+            cls.LoadData2Combobox(cboLibraryCardcode, "select DISTINCT MAPHIEUMUON from tblPhieuMuon where MADG = " + txtReaderCode.Text + " ORDER BY MAPHIEUMUON ");
             cboLibraryCardcode.Items.Add("All");
 
 
@@ -283,7 +283,7 @@ namespace QuanLyThuVien2
                 MessageBox.Show("Thêm phiếu mượn sách thành công !!!");
 
                 cls.LoadData3DataGridView(dataGridView1, "select *  from tblDocGia ORDER BY MADG");
-                cls.LoadData2Combobox(cboLibraryCardcode, "select MAPHIEUMUON from tblPhieuMuon where MADG = " + txtReaderCode.Text + " ORDER BY MAPHIEUMUON ");
+                cls.LoadData2Combobox(cboLibraryCardcode, "select DISTINCT MAPHIEUMUON from tblPhieuMuon where MADG = " + txtReaderCode.Text + " ORDER BY MAPHIEUMUON ");
                 cboLibraryCardcode.Items.Add("All");
             }
             
@@ -308,7 +308,7 @@ namespace QuanLyThuVien2
             cls.LoadData3DataGridView(dataGridView1, "select *  from tblDocGia ORDER BY MADG");
             dataGridView1.Show();
             dataGridView2.Hide();
-            cls.LoadData2Combobox(cboLibraryCardcode, "select MAPHIEUMUON from tblPhieuMuon where MADG = " + 0 + " ORDER BY MAPHIEUMUON ");
+            cls.LoadData2Combobox(cboLibraryCardcode, "select MAPHIEUMUON from tblPhieuMuon where MADG = " + -1 + " ORDER BY MAPHIEUMUON ");
             txtReaderCode.Text = "";
             txtReadername.Text = "";
             txtEmail.Text = "";
@@ -316,6 +316,11 @@ namespace QuanLyThuVien2
             txtAddress.Text = "";
             cboLibraryCardcode.Text = "";
 
+
+        }
+
+        private void txtReaderCode_TextChanged(object sender, EventArgs e)
+        {
 
         }
 
