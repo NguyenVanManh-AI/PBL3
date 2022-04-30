@@ -56,10 +56,6 @@
             this.toolStripSeparator14 = new System.Windows.Forms.ToolStripSeparator();
             this.toolBook = new System.Windows.Forms.ToolStripMenuItem();
             this.toolReaders = new System.Windows.Forms.ToolStripMenuItem();
-            this.dropdownSearch = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolBookSearch = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolRoadSearch = new System.Windows.Forms.ToolStripMenuItem();
             this.dropdownUpdate = new System.Windows.Forms.ToolStripMenuItem();
             this.toolBookUpdates = new System.Windows.Forms.ToolStripMenuItem();
             this.toolUpdateReaders = new System.Windows.Forms.ToolStripMenuItem();
@@ -187,7 +183,6 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.dropdownSystemManagement,
             this.dropdownInformation,
-            this.dropdownSearch,
             this.dropdownUpdate,
             this.dropdownReport,
             this.buttonHelp,
@@ -358,46 +353,6 @@
             this.toolReaders.Size = new System.Drawing.Size(275, 34);
             this.toolReaders.Text = "Readers";
             this.toolReaders.Click += new System.EventHandler(this.ThongTinNguoiDoc);
-            // 
-            // dropdownSearch
-            // 
-            this.dropdownSearch.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolBookSearch,
-            this.toolStripSeparator5,
-            this.toolRoadSearch});
-            this.dropdownSearch.Enabled = false;
-            this.dropdownSearch.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.dropdownSearch.Image = global::QuanLyThuVien2.Properties.Resources.search;
-            this.dropdownSearch.Name = "dropdownSearch";
-            this.dropdownSearch.Size = new System.Drawing.Size(104, 29);
-            this.dropdownSearch.Text = "Search";
-            this.dropdownSearch.Visible = false;
-            this.dropdownSearch.Click += new System.EventHandler(this.tìmKiếmToolStripMenuItem_Click);
-            // 
-            // toolBookSearch
-            // 
-            this.toolBookSearch.Enabled = false;
-            this.toolBookSearch.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.toolBookSearch.Name = "toolBookSearch";
-            this.toolBookSearch.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.F)));
-            this.toolBookSearch.Size = new System.Drawing.Size(288, 34);
-            this.toolBookSearch.Text = "Book Search";
-            this.toolBookSearch.Click += new System.EventHandler(this.TimKiemSach);
-            // 
-            // toolStripSeparator5
-            // 
-            this.toolStripSeparator5.Name = "toolStripSeparator5";
-            this.toolStripSeparator5.Size = new System.Drawing.Size(285, 6);
-            // 
-            // toolRoadSearch
-            // 
-            this.toolRoadSearch.Enabled = false;
-            this.toolRoadSearch.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.toolRoadSearch.Name = "toolRoadSearch";
-            this.toolRoadSearch.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.G)));
-            this.toolRoadSearch.Size = new System.Drawing.Size(288, 34);
-            this.toolRoadSearch.Text = "Reader Search";
-            this.toolRoadSearch.Click += new System.EventHandler(this.TimKiemDocGia);
             // 
             // dropdownUpdate
             // 
@@ -696,7 +651,6 @@
         private System.Windows.Forms.ToolStripMenuItem toolBookUpdates;
         private System.Windows.Forms.ToolStripMenuItem toolUpdateReaders;
         private System.Windows.Forms.ToolStripMenuItem dropdownInformation;
-        private System.Windows.Forms.ToolStripMenuItem dropdownSearch;
         private System.Windows.Forms.ToolStripMenuItem dropdownReport;
         private System.Windows.Forms.ToolStripMenuItem buttonHelp;
         private System.Windows.Forms.ToolStripMenuItem buttonExit;
@@ -731,12 +685,9 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.ToolStripMenuItem toolRoadSearch;
         private System.Windows.Forms.ToolStripMenuItem toolPublisherUpdate;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
         private System.Windows.Forms.ToolStripMenuItem toolUpdateBorrowingInformation;
-        private System.Windows.Forms.ToolStripMenuItem toolBookSearch;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
         private System.Windows.Forms.ToolStripMenuItem toolCheckEmployeeInformation;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator7;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;

@@ -143,6 +143,16 @@ namespace QuanLyThuVien2
                 TenLinhVuc.Text + "%'");
         }
 
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void btnSearch2_Click(object sender, EventArgs e)
+        {
+            cls.LoadData2DataGridView(dataGridView1, "select * from tblLinhVuc where MaLv like '%" + txtSearch2.Text + "%' OR TenLv like '%" + txtSearch2.Text + "%'");
+        }
+
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             try

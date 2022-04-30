@@ -30,9 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UpdatesBook));
             this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cbotenNXB = new System.Windows.Forms.ComboBox();
-            this.cbotenTG = new System.Windows.Forms.ComboBox();
-            this.cbotenLV = new System.Windows.Forms.ComboBox();
             this.label13 = new System.Windows.Forms.Label();
             this.txtsachhong = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
@@ -59,12 +56,12 @@
             this.label9 = new System.Windows.Forms.Label();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.btSearch = new System.Windows.Forms.Button();
             this.Them = new System.Windows.Forms.Button();
-            this.Thoat = new System.Windows.Forms.Button();
             this.Sua = new System.Windows.Forms.Button();
-            this.Undo = new System.Windows.Forms.Button();
             this.Xoa = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
@@ -77,10 +74,18 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txtGHICHU = new System.Windows.Forms.TextBox();
+            this.txtSearch2 = new System.Windows.Forms.TextBox();
+            this.btnSearch2 = new System.Windows.Forms.Button();
+            this.Search = new System.Windows.Forms.GroupBox();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.txtTenLV = new System.Windows.Forms.TextBox();
+            this.txtTenTG = new System.Windows.Forms.TextBox();
+            this.txtTenNXB = new System.Windows.Forms.TextBox();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            this.Search.SuspendLayout();
             this.SuspendLayout();
             // 
             // Column10
@@ -92,32 +97,60 @@
             this.Column10.ReadOnly = true;
             this.Column10.Width = 125;
             // 
-            // cbotenNXB
+            // Column6
             // 
-            this.cbotenNXB.FormattingEnabled = true;
-            this.cbotenNXB.Location = new System.Drawing.Point(750, 101);
-            this.cbotenNXB.Margin = new System.Windows.Forms.Padding(4);
-            this.cbotenNXB.Name = "cbotenNXB";
-            this.cbotenNXB.Size = new System.Drawing.Size(147, 28);
-            this.cbotenNXB.TabIndex = 32;
+            this.Column6.DataPropertyName = "TenLv";
+            this.Column6.HeaderText = "Field Name";
+            this.Column6.MinimumWidth = 6;
+            this.Column6.Name = "Column6";
+            this.Column6.ReadOnly = true;
+            this.Column6.Width = 125;
+
             // 
-            // cbotenTG
+            // Column8
             // 
-            this.cbotenTG.FormattingEnabled = true;
-            this.cbotenTG.Location = new System.Drawing.Point(750, 61);
-            this.cbotenTG.Margin = new System.Windows.Forms.Padding(4);
-            this.cbotenTG.Name = "cbotenTG";
-            this.cbotenTG.Size = new System.Drawing.Size(147, 28);
-            this.cbotenTG.TabIndex = 31;
+            this.Column8.DataPropertyName = "TENTG";
+            this.Column8.HeaderText = "Author Name";
+            this.Column8.MinimumWidth = 6;
+            this.Column8.Name = "Column8";
+            this.Column8.ReadOnly = true;
+            this.Column8.Width = 125;
             // 
-            // cbotenLV
+            // Column7
             // 
-            this.cbotenLV.FormattingEnabled = true;
-            this.cbotenLV.Location = new System.Drawing.Point(750, 21);
-            this.cbotenLV.Margin = new System.Windows.Forms.Padding(4);
-            this.cbotenLV.Name = "cbotenLV";
-            this.cbotenLV.Size = new System.Drawing.Size(147, 28);
-            this.cbotenLV.TabIndex = 30;
+            this.Column7.DataPropertyName = "TENNXB";
+            this.Column7.HeaderText = "Publisher Name";
+            this.Column7.MinimumWidth = 6;
+            this.Column7.Name = "Column7";
+            this.Column7.ReadOnly = true;
+            this.Column7.Width = 125;
+            // 
+            // Column12
+            // 
+            this.Column12.DataPropertyName = "NAMXB";
+            this.Column12.HeaderText = "Publishing year";
+            this.Column12.MinimumWidth = 6;
+            this.Column12.Name = "Column12";
+            this.Column12.ReadOnly = true;
+            this.Column12.Width = 125;
+            // 
+            // Column13
+            // 
+            this.Column13.DataPropertyName = "SOTRANG";
+            this.Column13.HeaderText = "Number of pages";
+            this.Column13.MinimumWidth = 6;
+            this.Column13.Name = "Column13";
+            this.Column13.ReadOnly = true;
+            this.Column13.Width = 125;
+            // 
+            // Column14
+            // 
+            this.Column14.DataPropertyName = "SOLUONG";
+            this.Column14.HeaderText = "Quantity";
+            this.Column14.MinimumWidth = 6;
+            this.Column14.Name = "Column14";
+            this.Column14.ReadOnly = true;
+            this.Column14.Width = 125;
             // 
             // label13
             // 
@@ -180,33 +213,8 @@
             this.label11.Size = new System.Drawing.Size(105, 20);
             this.label11.TabIndex = 11;
             this.label11.Text = "Date Added";
-            // 
-            // Column8
-            // 
-            this.Column8.DataPropertyName = "SOLUONG";
-            this.Column8.HeaderText = "Quantity";
-            this.Column8.MinimumWidth = 6;
-            this.Column8.Name = "Column8";
-            this.Column8.ReadOnly = true;
-            this.Column8.Width = 125;
-            // 
-            // Column7
-            // 
-            this.Column7.DataPropertyName = "SOTRANG";
-            this.Column7.HeaderText = "Number of pages";
-            this.Column7.MinimumWidth = 6;
-            this.Column7.Name = "Column7";
-            this.Column7.ReadOnly = true;
-            this.Column7.Width = 125;
-            // 
-            // Column6
-            // 
-            this.Column6.DataPropertyName = "NAMXB";
-            this.Column6.HeaderText = "Publishing year";
-            this.Column6.MinimumWidth = 6;
-            this.Column6.Name = "Column6";
-            this.Column6.ReadOnly = true;
-            this.Column6.Width = 125;
+            
+            
             // 
             // Column5
             // 
@@ -235,6 +243,7 @@
             this.cboMATG.Name = "cboMATG";
             this.cboMATG.Size = new System.Drawing.Size(118, 28);
             this.cboMATG.TabIndex = 8;
+            this.cboMATG.SelectedIndexChanged += new System.EventHandler(this.cboMATG_SelectedIndexChanged_1);
             // 
             // cboMALv
             // 
@@ -245,6 +254,7 @@
             this.cboMALv.Name = "cboMALv";
             this.cboMALv.Size = new System.Drawing.Size(118, 28);
             this.cboMALv.TabIndex = 7;
+            this.cboMALv.SelectedIndexChanged += new System.EventHandler(this.cboMALv_SelectedIndexChanged_1);
             // 
             // cboMANXB
             // 
@@ -255,6 +265,7 @@
             this.cboMANXB.Name = "cboMANXB";
             this.cboMANXB.Size = new System.Drawing.Size(118, 28);
             this.cboMANXB.TabIndex = 9;
+            this.cboMANXB.SelectedIndexChanged += new System.EventHandler(this.cboMANXB_SelectedIndexChanged_1);
             // 
             // Column9
             // 
@@ -368,34 +379,18 @@
             // groupBox3
             // 
             this.groupBox3.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox3.Controls.Add(this.btSearch);
             this.groupBox3.Controls.Add(this.Them);
-            this.groupBox3.Controls.Add(this.Thoat);
             this.groupBox3.Controls.Add(this.Sua);
-            this.groupBox3.Controls.Add(this.Undo);
             this.groupBox3.Controls.Add(this.Xoa);
             this.groupBox3.ForeColor = System.Drawing.Color.DodgerBlue;
             this.groupBox3.Location = new System.Drawing.Point(951, 95);
             this.groupBox3.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox3.Size = new System.Drawing.Size(338, 262);
+            this.groupBox3.Size = new System.Drawing.Size(166, 262);
             this.groupBox3.TabIndex = 12;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Feature";
-            // 
-            // btSearch
-            // 
-            this.btSearch.BackColor = System.Drawing.Color.White;
-            this.btSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btSearch.Location = new System.Drawing.Point(25, 127);
-            this.btSearch.Margin = new System.Windows.Forms.Padding(4);
-            this.btSearch.Name = "btSearch";
-            this.btSearch.Size = new System.Drawing.Size(112, 32);
-            this.btSearch.TabIndex = 26;
-            this.btSearch.Text = "Search";
-            this.btSearch.UseVisualStyleBackColor = false;
-            this.btSearch.Click += new System.EventHandler(this.btSearch_Click);
             // 
             // Them
             // 
@@ -406,54 +401,28 @@
             this.Them.Name = "Them";
             this.Them.Size = new System.Drawing.Size(112, 32);
             this.Them.TabIndex = 23;
-            this.Them.Text = "Add";
+            this.Them.Text = "New";
             this.Them.UseVisualStyleBackColor = false;
             this.Them.Click += new System.EventHandler(this.Them_Click);
-            // 
-            // Thoat
-            // 
-            this.Thoat.BackColor = System.Drawing.Color.White;
-            this.Thoat.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Thoat.Location = new System.Drawing.Point(203, 127);
-            this.Thoat.Margin = new System.Windows.Forms.Padding(4);
-            this.Thoat.Name = "Thoat";
-            this.Thoat.Size = new System.Drawing.Size(112, 32);
-            this.Thoat.TabIndex = 24;
-            this.Thoat.Text = "Close";
-            this.Thoat.UseVisualStyleBackColor = false;
-            this.Thoat.Click += new System.EventHandler(this.Thoat_Click);
             // 
             // Sua
             // 
             this.Sua.BackColor = System.Drawing.Color.White;
             this.Sua.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Sua.Location = new System.Drawing.Point(203, 55);
+            this.Sua.Location = new System.Drawing.Point(25, 109);
             this.Sua.Margin = new System.Windows.Forms.Padding(4);
             this.Sua.Name = "Sua";
             this.Sua.Size = new System.Drawing.Size(112, 32);
             this.Sua.TabIndex = 24;
-            this.Sua.Text = "Edit";
+            this.Sua.Text = "Save";
             this.Sua.UseVisualStyleBackColor = false;
             this.Sua.Click += new System.EventHandler(this.Sua_Click);
-            // 
-            // Undo
-            // 
-            this.Undo.BackColor = System.Drawing.Color.White;
-            this.Undo.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Undo.Location = new System.Drawing.Point(203, 194);
-            this.Undo.Margin = new System.Windows.Forms.Padding(4);
-            this.Undo.Name = "Undo";
-            this.Undo.Size = new System.Drawing.Size(112, 32);
-            this.Undo.TabIndex = 25;
-            this.Undo.Text = "Undo";
-            this.Undo.UseVisualStyleBackColor = false;
-            this.Undo.Click += new System.EventHandler(this.Undo_Click);
             // 
             // Xoa
             // 
             this.Xoa.BackColor = System.Drawing.Color.White;
             this.Xoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Xoa.Location = new System.Drawing.Point(25, 194);
+            this.Xoa.Location = new System.Drawing.Point(25, 169);
             this.Xoa.Margin = new System.Windows.Forms.Padding(4);
             this.Xoa.Name = "Xoa";
             this.Xoa.Size = new System.Drawing.Size(112, 32);
@@ -488,14 +457,17 @@
             this.Column8,
             this.Column9,
             this.Column10,
-            this.Column11});
-            this.dataGridView1.Location = new System.Drawing.Point(27, 381);
+            this.Column11,
+            this.Column12,
+            this.Column13,
+            this.Column14});
+            this.dataGridView1.Location = new System.Drawing.Point(27, 473);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(1261, 400);
+            this.dataGridView1.Size = new System.Drawing.Size(1261, 308);
             this.dataGridView1.TabIndex = 10;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
@@ -580,10 +552,10 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox1.Controls.Add(this.txtTenNXB);
+            this.groupBox1.Controls.Add(this.txtTenTG);
+            this.groupBox1.Controls.Add(this.txtTenLV);
             this.groupBox1.Controls.Add(this.txtGHICHU);
-            this.groupBox1.Controls.Add(this.cbotenNXB);
-            this.groupBox1.Controls.Add(this.cbotenTG);
-            this.groupBox1.Controls.Add(this.cbotenLV);
             this.groupBox1.Controls.Add(this.label13);
             this.groupBox1.Controls.Add(this.txtsachhong);
             this.groupBox1.Controls.Add(this.label12);
@@ -625,12 +597,72 @@
             this.txtGHICHU.Size = new System.Drawing.Size(277, 79);
             this.txtGHICHU.TabIndex = 33;
             // 
+            // txtSearch2
+            // 
+            this.txtSearch2.Location = new System.Drawing.Point(171, 25);
+            this.txtSearch2.Name = "txtSearch2";
+            this.txtSearch2.Size = new System.Drawing.Size(726, 26);
+            this.txtSearch2.TabIndex = 13;
+            // 
+            // btnSearch2
+            // 
+            this.btnSearch2.BackColor = System.Drawing.Color.White;
+            this.btnSearch2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSearch2.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.btnSearch2.Location = new System.Drawing.Point(949, 19);
+            this.btnSearch2.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSearch2.Name = "btnSearch2";
+            this.btnSearch2.Size = new System.Drawing.Size(112, 32);
+            this.btnSearch2.TabIndex = 27;
+            this.btnSearch2.Text = "Search";
+            this.btnSearch2.UseVisualStyleBackColor = false;
+            this.btnSearch2.Click += new System.EventHandler(this.btnSearch2_Click);
+            // 
+            // Search
+            // 
+            this.Search.BackColor = System.Drawing.Color.Transparent;
+            this.Search.Controls.Add(this.txtSearch2);
+            this.Search.Controls.Add(this.btnSearch2);
+            this.Search.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.Search.Location = new System.Drawing.Point(27, 366);
+            this.Search.Name = "Search";
+            this.Search.Size = new System.Drawing.Size(1090, 81);
+            this.Search.TabIndex = 28;
+            this.Search.TabStop = false;
+            this.Search.Text = "Search";
+            // 
+            // txtTenLV
+            // 
+            this.txtTenLV.Location = new System.Drawing.Point(750, 21);
+            this.txtTenLV.Margin = new System.Windows.Forms.Padding(4);
+            this.txtTenLV.Name = "txtTenLV";
+            this.txtTenLV.Size = new System.Drawing.Size(147, 26);
+            this.txtTenLV.TabIndex = 34;
+            // 
+            // txtTenTG
+            // 
+            this.txtTenTG.Location = new System.Drawing.Point(750, 64);
+            this.txtTenTG.Margin = new System.Windows.Forms.Padding(4);
+            this.txtTenTG.Name = "txtTenTG";
+            this.txtTenTG.Size = new System.Drawing.Size(147, 26);
+            this.txtTenTG.TabIndex = 35;
+            // 
+            // txtTenNXB
+            // 
+            this.txtTenNXB.Location = new System.Drawing.Point(750, 103);
+            this.txtTenNXB.Margin = new System.Windows.Forms.Padding(4);
+            this.txtTenNXB.Name = "txtTenNXB";
+            this.txtTenNXB.Size = new System.Drawing.Size(147, 26);
+            this.txtTenNXB.TabIndex = 36;
+            // 
             // UpdatesBook
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::QuanLyThuVien2.Properties.Resources.Backgroundmain;
-            this.ClientSize = new System.Drawing.Size(1339, 796);
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(1374, 917);
+            this.Controls.Add(this.Search);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.groupBox2);
@@ -646,6 +678,8 @@
             this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.Search.ResumeLayout(false);
+            this.Search.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -653,9 +687,6 @@
         #endregion
 
         private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
-        private System.Windows.Forms.ComboBox cbotenNXB;
-        private System.Windows.Forms.ComboBox cbotenTG;
-        private System.Windows.Forms.ComboBox cbotenLV;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.TextBox txtsachhong;
         private System.Windows.Forms.Label label12;
@@ -667,6 +698,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column12;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column13;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column14;
         private System.Windows.Forms.ComboBox cboMATG;
         private System.Windows.Forms.ComboBox cboMALv;
         private System.Windows.Forms.ComboBox cboMANXB;
@@ -697,8 +731,12 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox txtGHICHU;
-        private System.Windows.Forms.Button Thoat;
-        private System.Windows.Forms.Button Undo;
-        private System.Windows.Forms.Button btSearch;
+        private System.Windows.Forms.TextBox txtSearch2;
+        private System.Windows.Forms.Button btnSearch2;
+        private System.Windows.Forms.GroupBox Search;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private System.Windows.Forms.TextBox txtTenNXB;
+        private System.Windows.Forms.TextBox txtTenTG;
+        private System.Windows.Forms.TextBox txtTenLV;
     }
 }
