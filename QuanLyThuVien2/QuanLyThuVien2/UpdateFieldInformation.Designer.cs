@@ -45,14 +45,15 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.btnSearch = new System.Windows.Forms.Button();
-            this.btClose = new System.Windows.Forms.Button();
-            this.btUndo = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.Search = new System.Windows.Forms.GroupBox();
+            this.txtSearch2 = new System.Windows.Forms.TextBox();
+            this.btnSearch2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
+            this.Search.SuspendLayout();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -63,13 +64,14 @@
             this.Column1,
             this.Column2,
             this.Column3});
-            this.dataGridView1.Location = new System.Drawing.Point(11, 91);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.dataGridView1.Location = new System.Drawing.Point(12, 99);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 62;
-            this.dataGridView1.Size = new System.Drawing.Size(586, 366);
+            this.dataGridView1.Size = new System.Drawing.Size(659, 264);
             this.dataGridView1.TabIndex = 22;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // Column1
             // 
@@ -99,12 +101,12 @@
             // 
             this.btAdd.BackColor = System.Drawing.Color.White;
             this.btAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btAdd.Location = new System.Drawing.Point(27, 22);
-            this.btAdd.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.btAdd.Location = new System.Drawing.Point(8, 28);
+            this.btAdd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btAdd.Name = "btAdd";
-            this.btAdd.Size = new System.Drawing.Size(96, 27);
+            this.btAdd.Size = new System.Drawing.Size(108, 34);
             this.btAdd.TabIndex = 18;
-            this.btAdd.Text = "Add";
+            this.btAdd.Text = "New";
             this.btAdd.UseVisualStyleBackColor = false;
             this.btAdd.Click += new System.EventHandler(this.btAdd_Click);
             // 
@@ -112,10 +114,10 @@
             // 
             this.btDelete.BackColor = System.Drawing.Color.White;
             this.btDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btDelete.Location = new System.Drawing.Point(27, 118);
-            this.btDelete.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.btDelete.Location = new System.Drawing.Point(240, 27);
+            this.btDelete.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btDelete.Name = "btDelete";
-            this.btDelete.Size = new System.Drawing.Size(96, 27);
+            this.btDelete.Size = new System.Drawing.Size(108, 34);
             this.btDelete.TabIndex = 20;
             this.btDelete.Text = "Delete";
             this.btDelete.UseVisualStyleBackColor = false;
@@ -125,12 +127,12 @@
             // 
             this.btEdit.BackColor = System.Drawing.Color.White;
             this.btEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btEdit.Location = new System.Drawing.Point(207, 22);
-            this.btEdit.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.btEdit.Location = new System.Drawing.Point(124, 27);
+            this.btEdit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btEdit.Name = "btEdit";
-            this.btEdit.Size = new System.Drawing.Size(96, 27);
+            this.btEdit.Size = new System.Drawing.Size(108, 34);
             this.btEdit.TabIndex = 19;
-            this.btEdit.Text = "Edit";
+            this.btEdit.Text = "Save";
             this.btEdit.UseVisualStyleBackColor = false;
             this.btEdit.Click += new System.EventHandler(this.btEdit_Click);
             // 
@@ -144,68 +146,68 @@
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.groupBox1.Location = new System.Drawing.Point(615, 90);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.groupBox1.Location = new System.Drawing.Point(692, 112);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.groupBox1.Size = new System.Drawing.Size(329, 201);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Size = new System.Drawing.Size(370, 251);
             this.groupBox1.TabIndex = 16;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Enter field information";
             // 
             // GhiChuLinhVuc
             // 
-            this.GhiChuLinhVuc.Location = new System.Drawing.Point(120, 98);
-            this.GhiChuLinhVuc.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.GhiChuLinhVuc.Location = new System.Drawing.Point(135, 122);
+            this.GhiChuLinhVuc.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.GhiChuLinhVuc.Name = "GhiChuLinhVuc";
-            this.GhiChuLinhVuc.Size = new System.Drawing.Size(194, 83);
+            this.GhiChuLinhVuc.Size = new System.Drawing.Size(218, 103);
             this.GhiChuLinhVuc.TabIndex = 3;
             this.GhiChuLinhVuc.Text = "";
             // 
             // TenLinhVuc
             // 
-            this.TenLinhVuc.Location = new System.Drawing.Point(120, 61);
-            this.TenLinhVuc.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.TenLinhVuc.Location = new System.Drawing.Point(135, 76);
+            this.TenLinhVuc.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.TenLinhVuc.Name = "TenLinhVuc";
-            this.TenLinhVuc.Size = new System.Drawing.Size(194, 22);
+            this.TenLinhVuc.Size = new System.Drawing.Size(218, 26);
             this.TenLinhVuc.TabIndex = 2;
             // 
             // MaLinhVuc
             // 
-            this.MaLinhVuc.Location = new System.Drawing.Point(120, 25);
-            this.MaLinhVuc.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.MaLinhVuc.Location = new System.Drawing.Point(135, 31);
+            this.MaLinhVuc.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaLinhVuc.Name = "MaLinhVuc";
-            this.MaLinhVuc.Size = new System.Drawing.Size(194, 22);
+            this.MaLinhVuc.Size = new System.Drawing.Size(218, 26);
             this.MaLinhVuc.TabIndex = 1;
             this.MaLinhVuc.TextChanged += new System.EventHandler(this.MaLinhVuc_TextChanged);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(45, 98);
+            this.label5.Location = new System.Drawing.Point(51, 122);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(42, 16);
+            this.label5.Size = new System.Drawing.Size(51, 20);
             this.label5.TabIndex = 2;
             this.label5.Text = "Note :";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(16, 67);
+            this.label4.Location = new System.Drawing.Point(18, 84);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(80, 16);
+            this.label4.Size = new System.Drawing.Size(95, 20);
             this.label4.TabIndex = 1;
             this.label4.Text = "Field name :";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(21, 29);
+            this.label3.Location = new System.Drawing.Point(24, 36);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(77, 16);
+            this.label3.Size = new System.Drawing.Size(90, 20);
             this.label3.TabIndex = 0;
             this.label3.Text = "Field code :";
             // 
@@ -214,96 +216,90 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label1.Location = new System.Drawing.Point(216, 27);
+            this.label1.Location = new System.Drawing.Point(243, 34);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(311, 32);
+            this.label1.Size = new System.Drawing.Size(361, 36);
             this.label1.TabIndex = 17;
             this.label1.Text = "Update Field Information";
             // 
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox2.Controls.Add(this.btnSearch);
-            this.groupBox2.Controls.Add(this.btClose);
-            this.groupBox2.Controls.Add(this.btUndo);
             this.groupBox2.Controls.Add(this.btAdd);
             this.groupBox2.Controls.Add(this.btEdit);
             this.groupBox2.Controls.Add(this.btDelete);
             this.groupBox2.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.groupBox2.Location = new System.Drawing.Point(613, 298);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.groupBox2.Location = new System.Drawing.Point(690, 372);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.groupBox2.Size = new System.Drawing.Size(331, 165);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Size = new System.Drawing.Size(372, 100);
             this.groupBox2.TabIndex = 23;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Feature";
-            // 
-            // btnSearch
-            // 
-            this.btnSearch.BackColor = System.Drawing.Color.White;
-            this.btnSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSearch.Location = new System.Drawing.Point(207, 69);
-            this.btnSearch.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(96, 27);
-            this.btnSearch.TabIndex = 23;
-            this.btnSearch.Text = "Search";
-            this.btnSearch.UseVisualStyleBackColor = false;
-            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
-            // 
-            // btClose
-            // 
-            this.btClose.BackColor = System.Drawing.Color.White;
-            this.btClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btClose.Location = new System.Drawing.Point(27, 69);
-            this.btClose.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.btClose.Name = "btClose";
-            this.btClose.Size = new System.Drawing.Size(96, 27);
-            this.btClose.TabIndex = 22;
-            this.btClose.Text = "Close";
-            this.btClose.UseVisualStyleBackColor = false;
-            this.btClose.Click += new System.EventHandler(this.btClose_Click);
-            // 
-            // btUndo
-            // 
-            this.btUndo.BackColor = System.Drawing.Color.White;
-            this.btUndo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btUndo.Location = new System.Drawing.Point(207, 118);
-            this.btUndo.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.btUndo.Name = "btUndo";
-            this.btUndo.Size = new System.Drawing.Size(96, 27);
-            this.btUndo.TabIndex = 21;
-            this.btUndo.Text = "Undo";
-            this.btUndo.UseVisualStyleBackColor = false;
-            this.btUndo.Click += new System.EventHandler(this.btUndo_Click);
             // 
             // groupBox3
             // 
             this.groupBox3.BackColor = System.Drawing.Color.Transparent;
             this.groupBox3.Controls.Add(this.label1);
-            this.groupBox3.Location = new System.Drawing.Point(11, 9);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.groupBox3.Location = new System.Drawing.Point(12, 11);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.groupBox3.Size = new System.Drawing.Size(884, 64);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox3.Size = new System.Drawing.Size(994, 80);
             this.groupBox3.TabIndex = 24;
             this.groupBox3.TabStop = false;
             // 
+            // Search
+            // 
+            this.Search.BackColor = System.Drawing.Color.Transparent;
+            this.Search.Controls.Add(this.btnSearch2);
+            this.Search.Controls.Add(this.txtSearch2);
+            this.Search.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.Search.Location = new System.Drawing.Point(12, 372);
+            this.Search.Name = "Search";
+            this.Search.Size = new System.Drawing.Size(659, 100);
+            this.Search.TabIndex = 25;
+            this.Search.TabStop = false;
+            this.Search.Text = "Search";
+            // 
+            // txtSearch2
+            // 
+            this.txtSearch2.Location = new System.Drawing.Point(20, 36);
+            this.txtSearch2.Margin = new System.Windows.Forms.Padding(4);
+            this.txtSearch2.Name = "txtSearch2";
+            this.txtSearch2.Size = new System.Drawing.Size(503, 26);
+            this.txtSearch2.TabIndex = 4;
+            // 
+            // btnSearch2
+            // 
+            this.btnSearch2.BackColor = System.Drawing.Color.White;
+            this.btnSearch2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSearch2.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.btnSearch2.Location = new System.Drawing.Point(531, 32);
+            this.btnSearch2.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSearch2.Name = "btnSearch2";
+            this.btnSearch2.Size = new System.Drawing.Size(108, 34);
+            this.btnSearch2.TabIndex = 24;
+            this.btnSearch2.Text = "Search";
+            this.btnSearch2.UseVisualStyleBackColor = false;
+            this.btnSearch2.Click += new System.EventHandler(this.btnSearch2_Click);
+            // 
             // UpdateFieldInformation
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::QuanLyThuVien2.Properties.Resources.Backgroundmain;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(958, 473);
+            this.ClientSize = new System.Drawing.Size(1078, 591);
+            this.Controls.Add(this.Search);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dataGridView1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "UpdateFieldInformation";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Update Field Information";
@@ -314,6 +310,8 @@
             this.groupBox2.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
+            this.Search.ResumeLayout(false);
+            this.Search.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -337,8 +335,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.Button btUndo;
-        private System.Windows.Forms.Button btClose;
-        private System.Windows.Forms.Button btnSearch;
+        private System.Windows.Forms.GroupBox Search;
+        private System.Windows.Forms.Button btnSearch2;
+        private System.Windows.Forms.TextBox txtSearch2;
     }
 }

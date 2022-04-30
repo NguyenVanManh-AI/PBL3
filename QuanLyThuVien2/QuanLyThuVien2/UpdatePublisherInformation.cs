@@ -105,6 +105,10 @@ namespace QuanLyThuVien2
         {
             cls.LoadData2DataGridView(dataGridView1, "select * from tblnxb where manxb like'%" + MaNhaXuatBan.Text + "%'and tennxb like'%" + TenNhaXuatBan.Text + "%'and diachi like'%" + DiaChiNhaXuatBan.Text + "%'and sodienthoai like'%" + SDTNhaXuatBan.Text + "%'and ghichu like'%" + txtNote.Text + "%'");
         }
+        private void btnSearch2_Click(object sender, EventArgs e)
+        {
+            cls.LoadData2DataGridView(dataGridView1, "select * from tblnxb where tennxb like'%" + txtSearch2.Text + "%' OR diachi like'%" + txtSearch2.Text + "%' OR sodienthoai like'%" + txtSearch2.Text + "%'");
+        }
 
         private void btUndo_Click(object sender, EventArgs e)
         {

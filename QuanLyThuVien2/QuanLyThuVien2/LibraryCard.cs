@@ -174,7 +174,7 @@ namespace QuanLyThuVien2
             txtClass.Text = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
             txtAddress.Text = dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString();
             txtEmail.Text = dataGridView1.Rows[e.RowIndex].Cells[6].Value.ToString();
-            cls.LoadData3DataGridView(dataGridView1, "select *  from tblDocGia ORDER BY MADG");
+            //cls.LoadData3DataGridView(dataGridView1, "select *  from tblDocGia ORDER BY MADG");
             cls.LoadData2Combobox(cboLibraryCardcode, "select DISTINCT MAPHIEUMUON from tblPhieuMuon where MADG = " + txtReaderCode.Text + " ORDER BY MAPHIEUMUON ");
             cboLibraryCardcode.Items.Add("All");
 
@@ -321,7 +321,13 @@ namespace QuanLyThuVien2
 
         private void txtReaderCode_TextChanged(object sender, EventArgs e)
         {
+        }
 
+        private void btnSearch2_Click(object sender, EventArgs e)
+        {
+            dataGridView2.Hide();
+            dataGridView1.Show();
+            cls.LoadData3DataGridView(dataGridView1, "select * from tblDocGia where MADG like '%" + txtSearch2.Text + "%' OR HOTEN like '%" + txtSearch2.Text + "%' OR LOP like '%" + txtSearch2.Text + "%' OR DIACHI like '%" + txtSearch2.Text + "%' OR EMAIL like '%" + txtSearch2.Text + "%'");
         }
 
         private void btnSearch_Click_2(object sender, EventArgs e)

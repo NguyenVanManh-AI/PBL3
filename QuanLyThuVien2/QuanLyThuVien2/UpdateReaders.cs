@@ -313,6 +313,11 @@ namespace QuanLyThuVien2
 
         public string undoMDG, undoHT, undoNS, undoGT, undoLOP, undoDIACHI, undoEMAIL, undoGHICHU;
 
+        private void btnSearch2_Click(object sender, EventArgs e)
+        {
+            cls.LoadData2DataGridView(dataGridView1, "select * from tblDocGia where HOTEN like '%" + txtSearch2.Text + "%' OR LOP like '%" + txtSearch2.Text + "%' OR DIACHI like '%" + txtSearch2.Text + "%' OR EMAIL like '%" + txtSearch2.Text + "%'");
+        }
+
         private void btnSearch_Click(object sender, EventArgs e)
         {
             //SearchReaders srd = new SearchReaders();

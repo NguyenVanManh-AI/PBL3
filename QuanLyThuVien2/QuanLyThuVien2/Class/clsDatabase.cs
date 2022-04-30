@@ -77,6 +77,22 @@ namespace QuanLyThuVien2.Class
             //Đóng kết nối
             NgatKetNoi();
         }
+        public void LoadData3Combobox(ComboBox cb, string strSelect)
+        {
+            //Kết nối
+            cb.Items.Clear();
+            KetNoi();
+            //Thực thi
+            sqlCom = new SqlCommand(strSelect, sqlCon);
+            sqlRea = sqlCom.ExecuteReader();
+            //Load dữ liệu vào Combobox
+            while (sqlRea.Read())
+            {
+                cb.Items.Add(sqlRea[0].ToString());
+            }
+            //Đóng kết nối
+            NgatKetNoi();
+        }
         public void LoadData2Label(Label lb, string strSelect)
         {
             lb.Text = "";

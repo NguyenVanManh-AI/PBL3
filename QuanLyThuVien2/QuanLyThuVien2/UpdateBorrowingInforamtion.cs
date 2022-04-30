@@ -58,7 +58,8 @@ namespace QuanLyThuVien2
 
         private void UpdateBorrowingInforamtion_Load(object sender, EventArgs e)
         {
-            cls.LoadData2DataGridView(dataGridView1, "select DISTINCT MADG , MASACH , SOPHIEUMUON , NGAYMUON , NGAYTRA , XACNHANTRA , GHICHU from tblMuon");
+            //cls.LoadData2DataGridView(dataGridView1, "select DISTINCT MADG , MASACH , SOPHIEUMUON , NGAYMUON , NGAYTRA , XACNHANTRA , GHICHU from tblMuon");
+            cls.LoadData2DataGridView(dataGridView1, "select m.*, dg.HOTEN, dg.LOP, dg.DIACHI, dg.EMAIL from tblMuon as m left join tblDocGia as dg on m.MADG = dg.MADG");
             cls.LoadData2Combobox(cboDOCGIA, "select MADG from tblDocGia");
             cls.LoadData2Combobox(cboMASACH, "Select MASACH from tblSach");
             cls.LoadData2Combobox(cboPhieuMuon, "Select MAPHIEUMUON from tblPhieuMuon");
@@ -102,7 +103,8 @@ namespace QuanLyThuVien2
 
 
 
-                                            cls.LoadData2DataGridView(dataGridView1, "select DISTINCT MADG , MASACH , SOPHIEUMUON , NGAYMUON , NGAYTRA , XACNHANTRA , GHICHU from tblMuon");
+                                            //cls.LoadData2DataGridView(dataGridView1, "select DISTINCT MADG , MASACH , SOPHIEUMUON , NGAYMUON , NGAYTRA , XACNHANTRA , GHICHU from tblMuon");
+                                            cls.LoadData2DataGridView(dataGridView1, "select m.*, dg.HOTEN, dg.LOP, dg.DIACHI, dg.EMAIL from tblMuon as m left join tblDocGia as dg on m.MADG = dg.MADG");
                                             MessageBox.Show("Thêm thành công");
                                             cboMASACH.Text = "";
                                             cboDOCGIA.Text = "";
@@ -162,8 +164,8 @@ namespace QuanLyThuVien2
                                             cls.ThucThiSQLTheoPKN(strUpdate);
 
                                             MessageBox.Show("Sửa thành công1");
-                                            cls.LoadData2DataGridView(dataGridView1, "select DISTINCT MADG , MASACH , SOPHIEUMUON , NGAYMUON , NGAYTRA , XACNHANTRA , GHICHU from tblMuon");
-
+                                            //cls.LoadData2DataGridView(dataGridView1, "select DISTINCT MADG , MASACH , SOPHIEUMUON , NGAYMUON , NGAYTRA , XACNHANTRA , GHICHU from tblMuon");
+                                            cls.LoadData2DataGridView(dataGridView1, "select m.*, dg.HOTEN, dg.LOP, dg.DIACHI, dg.EMAIL from tblMuon as m left join tblDocGia as dg on m.MADG = dg.MADG");
                                             strUpdate = "Update tblPhieuMuon set MADG = " + cboDOCGIA.Text + " , MASACH = " + cboMASACH.Text + " , MAPHIEUMUON = " + cboPhieuMuon.Text
                                                + " WHERE MADG =  " + madg + " AND MAPHIEUMUON = " + maphieumuon + " AND MASACH = " + masach;
                                             cls.ThucThiSQLTheoPKN(strUpdate);
@@ -221,7 +223,8 @@ namespace QuanLyThuVien2
                     cls.ThucThiSQLTheoKetNoi(strDelete);
                     strDelete = "Delete from tblPhieuMuon where MADG = " + cboDOCGIA.Text + " AND MASACH = " + cboMASACH.Text + " AND MAPHIEUMUON = " + cboPhieuMuon.Text;
                     cls.ThucThiSQLTheoKetNoi(strDelete);
-                    cls.LoadData2DataGridView(dataGridView1, "select DISTINCT MADG , MASACH , SOPHIEUMUON , NGAYMUON , NGAYTRA , XACNHANTRA , GHICHU from tblMuon");
+                    cls.LoadData2DataGridView(dataGridView1, "select m.*, dg.HOTEN, dg.LOP, dg.DIACHI, dg.EMAIL from tblMuon as m left join tblDocGia as dg on m.MADG = dg.MADG");
+                    //cls.LoadData2DataGridView(dataGridView1, "select DISTINCT MADG , MASACH , SOPHIEUMUON , NGAYMUON , NGAYTRA , XACNHANTRA , GHICHU from tblMuon");
                     MessageBox.Show("Xóa thành công !!!");
                     cboMASACH.Text = "";
                     cboDOCGIA.Text = "";
@@ -242,6 +245,11 @@ namespace QuanLyThuVien2
         }
         public string undoMDG, undoMS, undoSPM, undoNM, undoNT, undoXN, undoGHICHU;
 
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            cls.LoadData2DataGridView(dataGridView1, "select m.*, dg.HOTEN, dg.LOP, dg.DIACHI, dg.EMAIL from tblMuon as m left join tblDocGia as dg on m.MADG = dg.MADG where dg.HOTEN like '%" + txtSearch2.Text + "%' OR dg.DIACHI like '%" + txtSearch2.Text + "%' OR dg.LOP like '%" + txtSearch2.Text + "%' OR dg.EMAIL like '%" + txtSearch2.Text + "%'");
+        }
+        
         private void btSearch_Click(object sender, EventArgs e)
         {
             cls.LoadData2DataGridView(dataGridView1, "select*from tblmuon where madg like'%" + cboDOCGIA.Text + "%'and masach like'%" + cboMASACH.Text + "%'and sophieumuon like'%" + cboPhieuMuon.Text + "%'and ngaymuon like'%" + mktNGAYMUON.Text + "%'and ngaytra like'%" + mktNGAYTRA.Text + "%'and xacnhantra like '%" + cboXACNHAN.Text + "%'");

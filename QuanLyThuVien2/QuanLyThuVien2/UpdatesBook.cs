@@ -8,6 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+using System.Data.SqlClient; // + 
+
+
 namespace QuanLyThuVien2
 {
     public partial class UpdatesBook : Form
@@ -16,6 +19,24 @@ namespace QuanLyThuVien2
         {
             InitializeComponent();
         }
+
+        // + 
+        SqlCommand sqlCommand;
+        public Object layGiaTri(string sql) //lay gia tri cua  cot dau tien trong bang 
+        {
+            sqlCommand = new SqlCommand();
+            sqlCommand.CommandText = sql;
+            sqlCommand.CommandType = CommandType.Text;
+            sqlCommand.Connection = Con;
+
+            //CHi can lay ve gia tri cua mot truong thoi thi dung pt nao ? - ExecuteScalar
+            Object obj = sqlCommand.ExecuteScalar(); //neu co loi thi phai xem lai cua lenh SQL o ben kia
+            return obj;
+            //Ket qua de dau ? - de trong obj
+        }
+
+        SqlConnection Con;
+        // + 
 
         Class.clsDatabase cls = new QuanLyThuVien2.Class.clsDatabase();
         public static bool hasSpecialChar(string input)
@@ -40,6 +61,7 @@ namespace QuanLyThuVien2
             return false;
         }
 
+        
 
         public int numberUndo = 0;
 
@@ -93,7 +115,7 @@ namespace QuanLyThuVien2
                                                         {
                                                             string strUpdate = "Update tblSach set MASACH='" + txtMASACH.Text + "',TENSACH= N'" + txtTENSACH.Text + "',MATG='" + cboMATG.Text + "',MANXB='" + cboMANXB.Text + "',MaLv='" + cboMALv.Text + "',NAMXB='" + txtNAMXB.Text + "',SOTRANG='" + txtSOTRANG.Text + "',SOLUONG='" + txtSOLUONG.Text + "',SOSACHHONG='" + txtsachhong.Text + "',NGAYNHAP='" + maskedTextBox1.Text + "',GHICHU='" + txtGHICHU.Text + "' where MASACH='" + masach + "'";
                                                             cls.ThucThiSQLTheoPKN(strUpdate);
-                                                            cls.LoadData2DataGridView(dataGridView1, "select * from tblSach");
+                                                            cls.LoadData2DataGridView(dataGridView1, "select s.MASACH,s.TENSACH,s.MATG,s.MANXB,s.MaLv,lv.TenLv,nxb.TENNXB,tg.TENTG,s.NAMXB,s.SOTRANG,s.SOLUONG,s.SOSACHHONG,s.NGAYNHAP,s.GHICHU from tblSach as s left join tblLinhVuc as lv on s.MaLv = lv.MaLv left join tblNXB as nxb on s.MANXB = nxb.MANXB left join tblTacGia as tg on s.MATG = tg.MATG ");
                                                             MessageBox.Show("Sửa thành công");
                                                             txtMASACH.Text = "";
                                                             txtTENSACH.Text = "";
@@ -104,11 +126,15 @@ namespace QuanLyThuVien2
                                                             maskedTextBox1.Text = "";
                                                             txtGHICHU.Text = "";
                                                             cboMALv.Text = "";
-                                                            cbotenLV.Text = "";
+                                                            //cbotenLV.Text = "";
                                                             cboMATG.Text = "";
-                                                            cbotenTG.Text = "";
+                                                            //cbotenTG.Text = "";
                                                             cboMANXB.Text = "";
-                                                            cbotenNXB.Text = "";
+                                                            //cbotenNXB.Text = "";
+                                                            txtTenLV.Text = "";
+                                                            txtTenTG.Text = "";
+                                                            txtTenNXB.Text = "";
+
                                                             numberUndo = 0;
 
                                                         }
@@ -162,14 +188,27 @@ namespace QuanLyThuVien2
                 cboMATG.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
                 cboMANXB.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
                 cboMALv.Text = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
-                txtNAMXB.Text = dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString();
-                txtSOTRANG.Text = dataGridView1.Rows[e.RowIndex].Cells[6].Value.ToString();
-                txtSOLUONG.Text = dataGridView1.Rows[e.RowIndex].Cells[7].Value.ToString();
-                txtsachhong.Text = dataGridView1.Rows[e.RowIndex].Cells[8].Value.ToString();
-                maskedTextBox1.Text = dataGridView1.Rows[e.RowIndex].Cells[9].Value.ToString();
-                txtGHICHU.Text = dataGridView1.Rows[e.RowIndex].Cells[10].Value.ToString();
+                txtNAMXB.Text = dataGridView1.Rows[e.RowIndex].Cells[8].Value.ToString();
+                txtSOTRANG.Text = dataGridView1.Rows[e.RowIndex].Cells[9].Value.ToString();
+                txtSOLUONG.Text = dataGridView1.Rows[e.RowIndex].Cells[10].Value.ToString();
+                txtsachhong.Text = dataGridView1.Rows[e.RowIndex].Cells[11].Value.ToString();
+                maskedTextBox1.Text = dataGridView1.Rows[e.RowIndex].Cells[12].Value.ToString();
+                txtGHICHU.Text = dataGridView1.Rows[e.RowIndex].Cells[13].Value.ToString();
                 masach = txtMASACH.Text;
+                //cls.LoadData2Combobox(cbotenNXB, "select DISTINCT TENNXB from tblNXB where MANXB = " + cboMANXB.Text);
+                //cls.LoadData2Combobox(cbotenTG, "select DISTINCT TenTG from tblTacGia where MATG = " + cboMATG.Text);
+                //cls.LoadData2Combobox(cbotenLV, "select DISTINCT TenLv from tblLinhVuc where MaLv = " + cbotenLV.Text);
+                object Q = layGiaTri("select TENNXB from tblNXB where MANXB = '" + cboMANXB.Text + "'");
+                string giatri = Convert.ToString(Q);
+                txtTenNXB.Text = giatri;
 
+                Q = layGiaTri("select TenTG from tblTacGia where MATG = '" + cboMATG.Text + "'");
+                giatri = Convert.ToString(Q);
+                txtTenTG.Text = giatri;
+
+                Q = layGiaTri("select TenLv from tblLinhVuc where MaLv = '" + cboMALv.Text + "'");
+                giatri = Convert.ToString(Q);
+                txtTenLV.Text = giatri;
             }
             catch { };
         }
@@ -184,43 +223,51 @@ namespace QuanLyThuVien2
 
         private void cbotenLV_SelectedIndexChanged(object sender, EventArgs e)
         {
-            cboMALv.SelectedIndex = cbotenLV.SelectedIndex;
+            //cboMALv.SelectedIndex = cbotenLV.SelectedIndex;
         }
 
         private void cboMALv_SelectedIndexChanged(object sender, EventArgs e)
         {
-            cbotenLV.SelectedIndex = cboMALv.SelectedIndex;
+            //cbotenLV.SelectedIndex = cboMALv.SelectedIndex;
         }
 
         private void cbotenTG_SelectedIndexChanged(object sender, EventArgs e)
         {
-            cboMATG.SelectedIndex = cbotenTG.SelectedIndex;
+            //cboMATG.SelectedIndex = cbotenTG.SelectedIndex;
         }
 
         private void cboMATG_SelectedIndexChanged(object sender, EventArgs e)
         {
-            cbotenTG.SelectedIndex = cboMATG.SelectedIndex;
+            //cbotenTG.SelectedIndex = cboMATG.SelectedIndex;
         }
 
         private void cbotenNXB_SelectedIndexChanged(object sender, EventArgs e)
         {
-            cboMANXB.SelectedIndex = cbotenNXB.SelectedIndex;
+            //cboMANXB.SelectedIndex = cbotenNXB.SelectedIndex;
         }
 
         private void cboMANXB_SelectedIndexChanged(object sender, EventArgs e)
         {
-            cbotenNXB.SelectedIndex = cboMANXB.SelectedIndex;
+            //cbotenNXB.SelectedIndex = cboMANXB.SelectedIndex;
         }
 
         private void UpdatesBook_Load(object sender, EventArgs e)
         {
-            cls.LoadData2DataGridView(dataGridView1, "select * from tblSach");
+            try
+            {
+                Con = new SqlConnection();
+                Con.ConnectionString = @"Server =DESKTOP-QCOSLTK\VANMANH;" + "database=Library2; Integrated Security = true";
+                Con.Open();
+            }
+            catch { }
+
+            cls.LoadData2DataGridView(dataGridView1, "select s.MASACH,s.TENSACH,s.MATG,s.MANXB,s.MaLv,lv.TenLv,nxb.TENNXB,tg.TENTG,s.NAMXB,s.SOTRANG,s.SOLUONG,s.SOSACHHONG,s.NGAYNHAP,s.GHICHU from tblSach as s left join tblLinhVuc as lv on s.MaLv = lv.MaLv left join tblNXB as nxb on s.MANXB = nxb.MANXB left join tblTacGia as tg on s.MATG = tg.MATG ");
             cls.LoadData2Combobox(cboMATG, "select MATG from tblTacGia");
             cls.LoadData2Combobox(cboMANXB, "select MANXB from tblNXB");
             cls.LoadData2Combobox(cboMALv, "select MaLv from tblLinhVuc");
-            cls.LoadData2Combobox(cbotenLV, "select TenLv from tblLinhVuc");
-            cls.LoadData2Combobox(cbotenTG, "Select TENTG from tblTacGia");
-            cls.LoadData2Combobox(cbotenNXB, "Select TENNXB from tblNXB");
+            //cls.LoadData2Combobox(cbotenLV, "select TenLv from tblLinhVuc");
+            //cls.LoadData2Combobox(cbotenTG, "Select TENTG from tblTacGia");
+            //cls.LoadData2Combobox(cbotenNXB, "Select TENNXB from tblNXB");
         }
 
         private void Them_Click(object sender, EventArgs e)
@@ -273,8 +320,9 @@ namespace QuanLyThuVien2
                                                         + "',N'" + txtTENSACH.Text + "','" + cboMATG.Text + "','" + cboMANXB.Text + "','"
                                                         + cboMALv.Text + "','" + txtNAMXB.Text + "','" + txtSOTRANG.Text + "','" + txtSOLUONG.Text
                                                          + "','" + txtsachhong.Text + "','" + maskedTextBox1.Text + "','" + txtGHICHU.Text + "')";
+
                                                             cls.ThucThiSQLTheoPKN(strInsert);
-                                                            cls.LoadData2DataGridView(dataGridView1, "select * from tblSach");
+                                                            cls.LoadData2DataGridView(dataGridView1, "select s.MASACH,s.TENSACH,s.MATG,s.MANXB,s.MaLv,lv.TenLv,nxb.TENNXB,tg.TENTG,s.NAMXB,s.SOTRANG,s.SOLUONG,s.SOSACHHONG,s.NGAYNHAP,s.GHICHU from tblSach as s left join tblLinhVuc as lv on s.MaLv = lv.MaLv left join tblNXB as nxb on s.MANXB = nxb.MANXB left join tblTacGia as tg on s.MATG = tg.MATG ");
                                                             MessageBox.Show("Bạn đã thêm thành công");
                                                             txtMASACH.Text = "";
                                                             txtTENSACH.Text = "";
@@ -285,11 +333,14 @@ namespace QuanLyThuVien2
                                                             maskedTextBox1.Text = "";
                                                             txtGHICHU.Text = "";
                                                             cboMALv.Text = "";
-                                                            cbotenLV.Text = "";
+                                                            //cbotenLV.Text = "";
                                                             cboMATG.Text = "";
-                                                            cbotenTG.Text = "";
+                                                            //cbotenTG.Text = "";
                                                             cboMANXB.Text = "";
-                                                            cbotenNXB.Text = "";
+                                                            //cbotenNXB.Text = "";
+                                                            txtTenLV.Text = "";
+                                                            txtTenTG.Text = "";
+                                                            txtTenNXB.Text = "";
                                                             numberUndo = 0;
 
                                                         }
@@ -352,7 +403,7 @@ namespace QuanLyThuVien2
                     undoMaTG = cboMATG.Text;
                     string strDelete = "Delete from tblSach where MASACH='" + txtMASACH.Text + "'";
                     cls.ThucThiSQLTheoKetNoi(strDelete);
-                    cls.LoadData2DataGridView(dataGridView1, "select * from tblSach");
+                    cls.LoadData2DataGridView(dataGridView1, "select s.MASACH,s.TENSACH,s.MATG,s.MANXB,s.MaLv,lv.TenLv,nxb.TENNXB,tg.TENTG,s.NAMXB,s.SOTRANG,s.SOLUONG,s.SOSACHHONG,s.NGAYNHAP,s.GHICHU from tblSach as s left join tblLinhVuc as lv on s.MaLv = lv.MaLv left join tblNXB as nxb on s.MANXB = nxb.MANXB left join tblTacGia as tg on s.MATG = tg.MATG ");
                     MessageBox.Show("Xóa thành công !!!");
                     txtMASACH.Text = "";
                     txtTENSACH.Text = "";
@@ -363,11 +414,15 @@ namespace QuanLyThuVien2
                     maskedTextBox1.Text = "";
                     txtGHICHU.Text = "";
                     cboMALv.Text = "";
-                    cbotenLV.Text = "";
+                    //cbotenLV.Text = "";
                     cboMATG.Text = "";
-                    cbotenTG.Text = "";
+                    //cbotenTG.Text = "";
                     cboMANXB.Text = "";
-                    cbotenNXB.Text = "";
+                    //cbotenNXB.Text = "";
+                    txtTenLV.Text = "";
+                    txtTenTG.Text = "";
+                    txtTenNXB.Text = "";
+
                     numberUndo = 1;
                 }
             }
@@ -380,6 +435,32 @@ namespace QuanLyThuVien2
             Close();
         }
         public string undoMS, undoTS, undoMaLV, undoNXB, undoST, undoSL, undoSSH, undoGHICHU, undoNN, undoMaNXB, undoMaTG;
+
+        private void cboMANXB_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+            object Q = layGiaTri("select TENNXB from tblNXB where MANXB = '" + cboMANXB.Text + "'");
+            string giatri = Convert.ToString(Q);
+            txtTenNXB.Text = giatri;
+        }
+
+        private void cboMATG_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+            object Q = layGiaTri("select TenTG from tblTacGia where MATG = '" + cboMATG.Text + "'");
+            string giatri = Convert.ToString(Q);
+            txtTenTG.Text = giatri;
+        }
+
+        private void cboMALv_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+            object Q = layGiaTri("select TenLv from tblLinhVuc where MaLv = '" + cboMALv.Text + "'");
+            string giatri = Convert.ToString(Q);
+            txtTenLV.Text = giatri;
+        }
+
+        private void btnSearch2_Click(object sender, EventArgs e)
+        {
+            cls.LoadData2DataGridView(dataGridView1, "select s.MASACH,s.TENSACH,s.MATG,s.MANXB,s.MaLv,lv.TenLv,nxb.TENNXB,tg.TENTG,s.NAMXB,s.SOTRANG,s.SOLUONG,s.SOSACHHONG,s.NGAYNHAP,s.GHICHU from tblSach as s left join tblLinhVuc as lv on s.MaLv = lv.MaLv left join tblNXB as nxb on s.MANXB = nxb.MANXB left join tblTacGia as tg on s.MATG = tg.MATG where s.MaLv like '%" + txtSearch2.Text + "%' OR s.TENSACH like '%" + txtSearch2.Text + "%'  OR lv.TenLv like '%" + txtSearch2.Text + "%' OR tg.TENTG like '%" + txtSearch2.Text + "%' OR nxb.TENNXB like '%" + txtSearch2.Text + "%'");
+        }
 
         private void btSearch_Click(object sender, EventArgs e)
         {
@@ -396,11 +477,15 @@ namespace QuanLyThuVien2
             maskedTextBox1.Text = "";
             txtGHICHU.Text = "";
             cboMALv.Text = "";
-            cbotenLV.Text = "";
+            //cbotenLV.Text = "";
+            txtTenLV.Text = "";
             cboMATG.Text = "";
-            cbotenTG.Text = "";
+            //cbotenTG.Text = "";
+            txtTenTG.Text = "";
             cboMANXB.Text = "";
-            cbotenNXB.Text = "";
+            //cbotenNXB.Text = "";
+            txtTenNXB.Text = "";
+
 
         }
 
