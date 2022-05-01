@@ -41,9 +41,9 @@
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cboMATG = new System.Windows.Forms.ComboBox();
-            this.cboMALv = new System.Windows.Forms.ComboBox();
-            this.cboMANXB = new System.Windows.Forms.ComboBox();
+            this.cboTenTG = new System.Windows.Forms.ComboBox();
+            this.cboTenLv = new System.Windows.Forms.ComboBox();
+            this.cboTenNXB = new System.Windows.Forms.ComboBox();
             this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtNAMXB = new System.Windows.Forms.TextBox();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -73,14 +73,14 @@
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtMANXB = new System.Windows.Forms.TextBox();
+            this.txtMATG = new System.Windows.Forms.TextBox();
+            this.txtMALV = new System.Windows.Forms.TextBox();
             this.txtGHICHU = new System.Windows.Forms.TextBox();
             this.txtSearch2 = new System.Windows.Forms.TextBox();
             this.btnSearch2 = new System.Windows.Forms.Button();
             this.Search = new System.Windows.Forms.GroupBox();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.txtTenLV = new System.Windows.Forms.TextBox();
-            this.txtTenTG = new System.Windows.Forms.TextBox();
-            this.txtTenNXB = new System.Windows.Forms.TextBox();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -96,61 +96,6 @@
             this.Column10.Name = "Column10";
             this.Column10.ReadOnly = true;
             this.Column10.Width = 125;
-            // 
-            // Column6
-            // 
-            this.Column6.DataPropertyName = "TenLv";
-            this.Column6.HeaderText = "Field Name";
-            this.Column6.MinimumWidth = 6;
-            this.Column6.Name = "Column6";
-            this.Column6.ReadOnly = true;
-            this.Column6.Width = 125;
-
-            // 
-            // Column8
-            // 
-            this.Column8.DataPropertyName = "TENTG";
-            this.Column8.HeaderText = "Author Name";
-            this.Column8.MinimumWidth = 6;
-            this.Column8.Name = "Column8";
-            this.Column8.ReadOnly = true;
-            this.Column8.Width = 125;
-            // 
-            // Column7
-            // 
-            this.Column7.DataPropertyName = "TENNXB";
-            this.Column7.HeaderText = "Publisher Name";
-            this.Column7.MinimumWidth = 6;
-            this.Column7.Name = "Column7";
-            this.Column7.ReadOnly = true;
-            this.Column7.Width = 125;
-            // 
-            // Column12
-            // 
-            this.Column12.DataPropertyName = "NAMXB";
-            this.Column12.HeaderText = "Publishing year";
-            this.Column12.MinimumWidth = 6;
-            this.Column12.Name = "Column12";
-            this.Column12.ReadOnly = true;
-            this.Column12.Width = 125;
-            // 
-            // Column13
-            // 
-            this.Column13.DataPropertyName = "SOTRANG";
-            this.Column13.HeaderText = "Number of pages";
-            this.Column13.MinimumWidth = 6;
-            this.Column13.Name = "Column13";
-            this.Column13.ReadOnly = true;
-            this.Column13.Width = 125;
-            // 
-            // Column14
-            // 
-            this.Column14.DataPropertyName = "SOLUONG";
-            this.Column14.HeaderText = "Quantity";
-            this.Column14.MinimumWidth = 6;
-            this.Column14.Name = "Column14";
-            this.Column14.ReadOnly = true;
-            this.Column14.Width = 125;
             // 
             // label13
             // 
@@ -213,8 +158,33 @@
             this.label11.Size = new System.Drawing.Size(105, 20);
             this.label11.TabIndex = 11;
             this.label11.Text = "Date Added";
-            
-            
+            // 
+            // Column8
+            // 
+            this.Column8.DataPropertyName = "TENTG";
+            this.Column8.HeaderText = "Author Name";
+            this.Column8.MinimumWidth = 6;
+            this.Column8.Name = "Column8";
+            this.Column8.ReadOnly = true;
+            this.Column8.Width = 125;
+            // 
+            // Column7
+            // 
+            this.Column7.DataPropertyName = "TENNXB";
+            this.Column7.HeaderText = "Publisher Name";
+            this.Column7.MinimumWidth = 6;
+            this.Column7.Name = "Column7";
+            this.Column7.ReadOnly = true;
+            this.Column7.Width = 125;
+            // 
+            // Column6
+            // 
+            this.Column6.DataPropertyName = "TenLv";
+            this.Column6.HeaderText = "Field Name";
+            this.Column6.MinimumWidth = 6;
+            this.Column6.Name = "Column6";
+            this.Column6.ReadOnly = true;
+            this.Column6.Width = 125;
             // 
             // Column5
             // 
@@ -234,38 +204,38 @@
             this.Column4.ReadOnly = true;
             this.Column4.Width = 125;
             // 
-            // cboMATG
+            // cboTenTG
             // 
-            this.cboMATG.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboMATG.FormattingEnabled = true;
-            this.cboMATG.Location = new System.Drawing.Point(620, 61);
-            this.cboMATG.Margin = new System.Windows.Forms.Padding(4);
-            this.cboMATG.Name = "cboMATG";
-            this.cboMATG.Size = new System.Drawing.Size(118, 28);
-            this.cboMATG.TabIndex = 8;
-            this.cboMATG.SelectedIndexChanged += new System.EventHandler(this.cboMATG_SelectedIndexChanged_1);
+            this.cboTenTG.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboTenTG.FormattingEnabled = true;
+            this.cboTenTG.Location = new System.Drawing.Point(620, 61);
+            this.cboTenTG.Margin = new System.Windows.Forms.Padding(4);
+            this.cboTenTG.Name = "cboTenTG";
+            this.cboTenTG.Size = new System.Drawing.Size(194, 28);
+            this.cboTenTG.TabIndex = 8;
+            this.cboTenTG.SelectedIndexChanged += new System.EventHandler(this.cboMATG_SelectedIndexChanged_1);
             // 
-            // cboMALv
+            // cboTenLv
             // 
-            this.cboMALv.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboMALv.FormattingEnabled = true;
-            this.cboMALv.Location = new System.Drawing.Point(620, 21);
-            this.cboMALv.Margin = new System.Windows.Forms.Padding(4);
-            this.cboMALv.Name = "cboMALv";
-            this.cboMALv.Size = new System.Drawing.Size(118, 28);
-            this.cboMALv.TabIndex = 7;
-            this.cboMALv.SelectedIndexChanged += new System.EventHandler(this.cboMALv_SelectedIndexChanged_1);
+            this.cboTenLv.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboTenLv.FormattingEnabled = true;
+            this.cboTenLv.Location = new System.Drawing.Point(620, 21);
+            this.cboTenLv.Margin = new System.Windows.Forms.Padding(4);
+            this.cboTenLv.Name = "cboTenLv";
+            this.cboTenLv.Size = new System.Drawing.Size(194, 28);
+            this.cboTenLv.TabIndex = 7;
+            this.cboTenLv.SelectedIndexChanged += new System.EventHandler(this.cboMALv_SelectedIndexChanged_1);
             // 
-            // cboMANXB
+            // cboTenNXB
             // 
-            this.cboMANXB.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboMANXB.FormattingEnabled = true;
-            this.cboMANXB.Location = new System.Drawing.Point(620, 99);
-            this.cboMANXB.Margin = new System.Windows.Forms.Padding(4);
-            this.cboMANXB.Name = "cboMANXB";
-            this.cboMANXB.Size = new System.Drawing.Size(118, 28);
-            this.cboMANXB.TabIndex = 9;
-            this.cboMANXB.SelectedIndexChanged += new System.EventHandler(this.cboMANXB_SelectedIndexChanged_1);
+            this.cboTenNXB.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboTenNXB.FormattingEnabled = true;
+            this.cboTenNXB.Location = new System.Drawing.Point(620, 99);
+            this.cboTenNXB.Margin = new System.Windows.Forms.Padding(4);
+            this.cboTenNXB.Name = "cboTenNXB";
+            this.cboTenNXB.Size = new System.Drawing.Size(194, 28);
+            this.cboTenNXB.TabIndex = 9;
+            this.cboTenNXB.SelectedIndexChanged += new System.EventHandler(this.cboMANXB_SelectedIndexChanged_1);
             // 
             // Column9
             // 
@@ -343,9 +313,9 @@
             this.label8.Location = new System.Drawing.Point(472, 99);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(127, 20);
+            this.label8.Size = new System.Drawing.Size(132, 20);
             this.label8.TabIndex = 6;
-            this.label8.Text = "Publisher code";
+            this.label8.Text = "Publisher name";
             // 
             // label9
             // 
@@ -354,9 +324,9 @@
             this.label9.Location = new System.Drawing.Point(507, 28);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(92, 20);
+            this.label9.Size = new System.Drawing.Size(97, 20);
             this.label9.TabIndex = 5;
-            this.label9.Text = "Field code";
+            this.label9.Text = "Field name";
             // 
             // Column3
             // 
@@ -375,6 +345,33 @@
             this.Column11.Name = "Column11";
             this.Column11.ReadOnly = true;
             this.Column11.Width = 125;
+            // 
+            // Column12
+            // 
+            this.Column12.DataPropertyName = "NAMXB";
+            this.Column12.HeaderText = "Publishing year";
+            this.Column12.MinimumWidth = 6;
+            this.Column12.Name = "Column12";
+            this.Column12.ReadOnly = true;
+            this.Column12.Width = 125;
+            // 
+            // Column13
+            // 
+            this.Column13.DataPropertyName = "SOTRANG";
+            this.Column13.HeaderText = "Number of pages";
+            this.Column13.MinimumWidth = 6;
+            this.Column13.Name = "Column13";
+            this.Column13.ReadOnly = true;
+            this.Column13.Width = 125;
+            // 
+            // Column14
+            // 
+            this.Column14.DataPropertyName = "SOLUONG";
+            this.Column14.HeaderText = "Quantity";
+            this.Column14.MinimumWidth = 6;
+            this.Column14.Name = "Column14";
+            this.Column14.ReadOnly = true;
+            this.Column14.Width = 125;
             // 
             // groupBox3
             // 
@@ -438,9 +435,9 @@
             this.label10.Location = new System.Drawing.Point(492, 64);
             this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(107, 20);
+            this.label10.Size = new System.Drawing.Size(112, 20);
             this.label10.TabIndex = 4;
-            this.label10.Text = "Author code";
+            this.label10.Text = "Author name";
             // 
             // dataGridView1
             // 
@@ -552,9 +549,9 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox1.Controls.Add(this.txtTenNXB);
-            this.groupBox1.Controls.Add(this.txtTenTG);
-            this.groupBox1.Controls.Add(this.txtTenLV);
+            this.groupBox1.Controls.Add(this.txtMANXB);
+            this.groupBox1.Controls.Add(this.txtMATG);
+            this.groupBox1.Controls.Add(this.txtMALV);
             this.groupBox1.Controls.Add(this.txtGHICHU);
             this.groupBox1.Controls.Add(this.label13);
             this.groupBox1.Controls.Add(this.txtsachhong);
@@ -562,9 +559,9 @@
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.maskedTextBox1);
             this.groupBox1.Controls.Add(this.label11);
-            this.groupBox1.Controls.Add(this.cboMATG);
-            this.groupBox1.Controls.Add(this.cboMALv);
-            this.groupBox1.Controls.Add(this.cboMANXB);
+            this.groupBox1.Controls.Add(this.cboTenTG);
+            this.groupBox1.Controls.Add(this.cboTenLv);
+            this.groupBox1.Controls.Add(this.cboTenNXB);
             this.groupBox1.Controls.Add(this.txtNAMXB);
             this.groupBox1.Controls.Add(this.txtSOLUONG);
             this.groupBox1.Controls.Add(this.txtSOTRANG);
@@ -587,6 +584,30 @@
             this.groupBox1.TabIndex = 9;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Fill in all the information";
+            // 
+            // txtMANXB
+            // 
+            this.txtMANXB.Location = new System.Drawing.Point(822, 103);
+            this.txtMANXB.Margin = new System.Windows.Forms.Padding(4);
+            this.txtMANXB.Name = "txtMANXB";
+            this.txtMANXB.Size = new System.Drawing.Size(75, 26);
+            this.txtMANXB.TabIndex = 36;
+            // 
+            // txtMATG
+            // 
+            this.txtMATG.Location = new System.Drawing.Point(822, 64);
+            this.txtMATG.Margin = new System.Windows.Forms.Padding(4);
+            this.txtMATG.Name = "txtMATG";
+            this.txtMATG.Size = new System.Drawing.Size(75, 26);
+            this.txtMATG.TabIndex = 35;
+            // 
+            // txtMALV
+            // 
+            this.txtMALV.Location = new System.Drawing.Point(822, 21);
+            this.txtMALV.Margin = new System.Windows.Forms.Padding(4);
+            this.txtMALV.Name = "txtMALV";
+            this.txtMALV.Size = new System.Drawing.Size(75, 26);
+            this.txtMALV.TabIndex = 34;
             // 
             // txtGHICHU
             // 
@@ -630,30 +651,6 @@
             this.Search.TabIndex = 28;
             this.Search.TabStop = false;
             this.Search.Text = "Search";
-            // 
-            // txtTenLV
-            // 
-            this.txtTenLV.Location = new System.Drawing.Point(750, 21);
-            this.txtTenLV.Margin = new System.Windows.Forms.Padding(4);
-            this.txtTenLV.Name = "txtTenLV";
-            this.txtTenLV.Size = new System.Drawing.Size(147, 26);
-            this.txtTenLV.TabIndex = 34;
-            // 
-            // txtTenTG
-            // 
-            this.txtTenTG.Location = new System.Drawing.Point(750, 64);
-            this.txtTenTG.Margin = new System.Windows.Forms.Padding(4);
-            this.txtTenTG.Name = "txtTenTG";
-            this.txtTenTG.Size = new System.Drawing.Size(147, 26);
-            this.txtTenTG.TabIndex = 35;
-            // 
-            // txtTenNXB
-            // 
-            this.txtTenNXB.Location = new System.Drawing.Point(750, 103);
-            this.txtTenNXB.Margin = new System.Windows.Forms.Padding(4);
-            this.txtTenNXB.Name = "txtTenNXB";
-            this.txtTenNXB.Size = new System.Drawing.Size(147, 26);
-            this.txtTenNXB.TabIndex = 36;
             // 
             // UpdatesBook
             // 
@@ -701,9 +698,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column12;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column13;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column14;
-        private System.Windows.Forms.ComboBox cboMATG;
-        private System.Windows.Forms.ComboBox cboMALv;
-        private System.Windows.Forms.ComboBox cboMANXB;
+        private System.Windows.Forms.ComboBox cboTenTG;
+        private System.Windows.Forms.ComboBox cboTenLv;
+        private System.Windows.Forms.ComboBox cboTenNXB;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
         private System.Windows.Forms.TextBox txtNAMXB;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
@@ -735,8 +732,8 @@
         private System.Windows.Forms.Button btnSearch2;
         private System.Windows.Forms.GroupBox Search;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
-        private System.Windows.Forms.TextBox txtTenNXB;
-        private System.Windows.Forms.TextBox txtTenTG;
-        private System.Windows.Forms.TextBox txtTenLV;
+        private System.Windows.Forms.TextBox txtMANXB;
+        private System.Windows.Forms.TextBox txtMATG;
+        private System.Windows.Forms.TextBox txtMALV;
     }
 }

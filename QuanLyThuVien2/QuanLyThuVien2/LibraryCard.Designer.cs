@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LibraryCard));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Column1a = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2a = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -54,8 +55,8 @@
             this.btnAdd = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.txtSearch2 = new System.Windows.Forms.TextBox();
             this.btnSearch2 = new System.Windows.Forms.Button();
+            this.txtSearch2 = new System.Windows.Forms.TextBox();
             this.Column29 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column28 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column27 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -355,13 +356,6 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Search";
             // 
-            // txtSearch2
-            // 
-            this.txtSearch2.Location = new System.Drawing.Point(40, 47);
-            this.txtSearch2.Name = "txtSearch2";
-            this.txtSearch2.Size = new System.Drawing.Size(641, 26);
-            this.txtSearch2.TabIndex = 0;
-            // 
             // btnSearch2
             // 
             this.btnSearch2.BackColor = System.Drawing.Color.White;
@@ -373,6 +367,13 @@
             this.btnSearch2.Text = "Search";
             this.btnSearch2.UseVisualStyleBackColor = false;
             this.btnSearch2.Click += new System.EventHandler(this.btnSearch2_Click);
+            // 
+            // txtSearch2
+            // 
+            this.txtSearch2.Location = new System.Drawing.Point(40, 47);
+            this.txtSearch2.Name = "txtSearch2";
+            this.txtSearch2.Size = new System.Drawing.Size(641, 26);
+            this.txtSearch2.TabIndex = 0;
             // 
             // Column29
             // 
@@ -669,6 +670,7 @@
             this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.dataGridView1);
             this.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "LibraryCard";
             this.Text = "Library Card";
             this.Load += new System.EventHandler(this.UpdateLoanSlip_Load);

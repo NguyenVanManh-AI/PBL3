@@ -175,7 +175,7 @@ namespace QuanLyThuVien2
             txtAddress.Text = dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString();
             txtEmail.Text = dataGridView1.Rows[e.RowIndex].Cells[6].Value.ToString();
             //cls.LoadData3DataGridView(dataGridView1, "select *  from tblDocGia ORDER BY MADG");
-            cls.LoadData2Combobox(cboLibraryCardcode, "select DISTINCT MAPHIEUMUON from tblPhieuMuon where MADG = " + txtReaderCode.Text + " ORDER BY MAPHIEUMUON ");
+            cls.LoadData2Combobox(cboLibraryCardcode, "select DISTINCT MAPHIEUMUON from tblPhieuMuon where MADG = '" + txtReaderCode.Text + "' ORDER BY MAPHIEUMUON ");
             cboLibraryCardcode.Items.Add("All");
 
 
@@ -278,13 +278,13 @@ namespace QuanLyThuVien2
             }
             else
             {
-                string strInsert = "Insert Into tblPhieuMuon(MADG,MAPHIEUMUON) values (" + txtReaderCode.Text + ",(SELECT MAX(MAPHIEUMUON)FROM tblPhieuMuON)+1)";
+                string strInsert = "Insert Into tblPhieuMuon(MADG,MAPHIEUMUON) values ('" + txtReaderCode.Text + "',(SELECT MAX(MAPHIEUMUON)FROM tblPhieuMuON)+1)";
                 cls.ThucThiSQLTheoPKN(strInsert);
                 //cls.LoadData2DataGridView(dataGridView1, "SELECT * FROM tblPhieuMuon AS pm Left JOIN tblDocGia AS dg ON dg.MADG = pm.MADG Left JOIN tblSach AS sa ON pm.MASACH = sa.MASACH ORDER BY pm.MADG");
                 MessageBox.Show("Thêm phiếu mượn sách thành công !!!");
 
                 cls.LoadData3DataGridView(dataGridView1, "select *  from tblDocGia ORDER BY MADG");
-                cls.LoadData2Combobox(cboLibraryCardcode, "select DISTINCT MAPHIEUMUON from tblPhieuMuon where MADG = " + txtReaderCode.Text + " ORDER BY MAPHIEUMUON ");
+                cls.LoadData2Combobox(cboLibraryCardcode, "select DISTINCT MAPHIEUMUON from tblPhieuMuon where MADG = '" + txtReaderCode.Text + "' ORDER BY MAPHIEUMUON ");
                 cboLibraryCardcode.Items.Add("All");
             }
             
@@ -294,7 +294,7 @@ namespace QuanLyThuVien2
         {
             if(cboLibraryCardcode.Text == "All")
             {
-                cls.LoadData2DataGridView(dataGridView2, "SELECT * FROM tblPhieuMuon AS pm Left JOIN tblDocGia AS dg ON dg.MADG = pm.MADG Left JOIN tblSach AS sa ON pm.MASACH = sa.MASACH Left JOIN tblMuon AS m ON pm.MAPHIEUMUON = m.SOPHIEUMUON AND pm.MASACH = m.MASACH AND pm.MADG = m.MADG WHERE pm.MADG = " + txtReaderCode.Text + " ORDER BY pm.MADG , pm.MAPHIEUMUON , pm.MASACH");
+                cls.LoadData2DataGridView(dataGridView2, "SELECT * FROM tblPhieuMuon AS pm Left JOIN tblDocGia AS dg ON dg.MADG = pm.MADG Left JOIN tblSach AS sa ON pm.MASACH = sa.MASACH Left JOIN tblMuon AS m ON pm.MAPHIEUMUON = m.SOPHIEUMUON AND pm.MASACH = m.MASACH AND pm.MADG = m.MADG WHERE pm.MADG = '" + txtReaderCode.Text + "' ORDER BY pm.MADG , pm.MAPHIEUMUON , pm.MASACH");
             }
             else
             {

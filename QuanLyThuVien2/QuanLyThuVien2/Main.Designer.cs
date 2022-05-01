@@ -56,16 +56,6 @@
             this.toolStripSeparator14 = new System.Windows.Forms.ToolStripSeparator();
             this.toolBook = new System.Windows.Forms.ToolStripMenuItem();
             this.toolReaders = new System.Windows.Forms.ToolStripMenuItem();
-            this.dropdownUpdate = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolBookUpdates = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolUpdateReaders = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator8 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolAuthorUpdate = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolUpdateField = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolPublisherUpdate = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolUpdateBorrowingInformation = new System.Windows.Forms.ToolStripMenuItem();
-            this.updateLoanSlipToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dropdownReport = new System.Windows.Forms.ToolStripMenuItem();
             this.toolBookStatus = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
@@ -89,9 +79,19 @@
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.btSI = new System.Windows.Forms.Button();
+            this.menuStrip2 = new System.Windows.Forms.MenuStrip();
+            this.toolBook2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator18 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolReader2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolAuthor2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolField2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolPublisher2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolBrrowing2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolLibrary2 = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.groupBox4.SuspendLayout();
+            this.menuStrip2.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -105,7 +105,7 @@
             this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.groupBox1.Location = new System.Drawing.Point(340, 104);
+            this.groupBox1.Location = new System.Drawing.Point(355, 145);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(266, 280);
             this.groupBox1.TabIndex = 1;
@@ -183,7 +183,6 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.dropdownSystemManagement,
             this.dropdownInformation,
-            this.dropdownUpdate,
             this.dropdownReport,
             this.buttonHelp,
             this.buttonExit});
@@ -354,112 +353,12 @@
             this.toolReaders.Text = "Readers";
             this.toolReaders.Click += new System.EventHandler(this.ThongTinNguoiDoc);
             // 
-            // dropdownUpdate
-            // 
-            this.dropdownUpdate.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolBookUpdates,
-            this.toolUpdateReaders,
-            this.toolStripSeparator8,
-            this.toolAuthorUpdate,
-            this.toolUpdateField,
-            this.toolPublisherUpdate,
-            this.toolStripSeparator4,
-            this.toolUpdateBorrowingInformation,
-            this.updateLoanSlipToolStripMenuItem});
-            this.dropdownUpdate.Enabled = false;
-            this.dropdownUpdate.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.dropdownUpdate.Image = global::QuanLyThuVien2.Properties.Resources.update;
-            this.dropdownUpdate.Name = "dropdownUpdate";
-            this.dropdownUpdate.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
-            this.dropdownUpdate.Size = new System.Drawing.Size(110, 29);
-            this.dropdownUpdate.Text = "Update";
-            this.dropdownUpdate.Visible = false;
-            // 
-            // toolBookUpdates
-            // 
-            this.toolBookUpdates.Enabled = false;
-            this.toolBookUpdates.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.toolBookUpdates.Name = "toolBookUpdates";
-            this.toolBookUpdates.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
-            this.toolBookUpdates.Size = new System.Drawing.Size(425, 34);
-            this.toolBookUpdates.Text = "Book Updates";
-            this.toolBookUpdates.Click += new System.EventHandler(this.CapNhatSach);
-            // 
-            // toolUpdateReaders
-            // 
-            this.toolUpdateReaders.Enabled = false;
-            this.toolUpdateReaders.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.toolUpdateReaders.Name = "toolUpdateReaders";
-            this.toolUpdateReaders.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.D)));
-            this.toolUpdateReaders.Size = new System.Drawing.Size(425, 34);
-            this.toolUpdateReaders.Text = "Update Readers";
-            this.toolUpdateReaders.Click += new System.EventHandler(this.CapNhatNguoiDoc);
-            // 
-            // toolStripSeparator8
-            // 
-            this.toolStripSeparator8.Name = "toolStripSeparator8";
-            this.toolStripSeparator8.Size = new System.Drawing.Size(422, 6);
-            // 
-            // toolAuthorUpdate
-            // 
-            this.toolAuthorUpdate.Enabled = false;
-            this.toolAuthorUpdate.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.toolAuthorUpdate.Name = "toolAuthorUpdate";
-            this.toolAuthorUpdate.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.T)));
-            this.toolAuthorUpdate.Size = new System.Drawing.Size(425, 34);
-            this.toolAuthorUpdate.Text = "Author Update";
-            this.toolAuthorUpdate.Click += new System.EventHandler(this.CapNhatThongTinTacGia);
-            // 
-            // toolUpdateField
-            // 
-            this.toolUpdateField.Enabled = false;
-            this.toolUpdateField.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.toolUpdateField.Name = "toolUpdateField";
-            this.toolUpdateField.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.L)));
-            this.toolUpdateField.Size = new System.Drawing.Size(425, 34);
-            this.toolUpdateField.Text = "Update Field";
-            this.toolUpdateField.Click += new System.EventHandler(this.CapNhatLinhVuc);
-            // 
-            // toolPublisherUpdate
-            // 
-            this.toolPublisherUpdate.Enabled = false;
-            this.toolPublisherUpdate.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.toolPublisherUpdate.Name = "toolPublisherUpdate";
-            this.toolPublisherUpdate.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.N)));
-            this.toolPublisherUpdate.Size = new System.Drawing.Size(425, 34);
-            this.toolPublisherUpdate.Text = "Publisher Update";
-            this.toolPublisherUpdate.Click += new System.EventHandler(this.CapNhatNhaXuatBan);
-            // 
-            // toolStripSeparator4
-            // 
-            this.toolStripSeparator4.Name = "toolStripSeparator4";
-            this.toolStripSeparator4.Size = new System.Drawing.Size(422, 6);
-            // 
-            // toolUpdateBorrowingInformation
-            // 
-            this.toolUpdateBorrowingInformation.Enabled = false;
-            this.toolUpdateBorrowingInformation.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.toolUpdateBorrowingInformation.Name = "toolUpdateBorrowingInformation";
-            this.toolUpdateBorrowingInformation.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.M)));
-            this.toolUpdateBorrowingInformation.Size = new System.Drawing.Size(425, 34);
-            this.toolUpdateBorrowingInformation.Text = "Update Borrowing Information";
-            this.toolUpdateBorrowingInformation.Click += new System.EventHandler(this.CapNhatThongTinMuon);
-            // 
-            // updateLoanSlipToolStripMenuItem
-            // 
-            this.updateLoanSlipToolStripMenuItem.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.updateLoanSlipToolStripMenuItem.Name = "updateLoanSlipToolStripMenuItem";
-            this.updateLoanSlipToolStripMenuItem.Size = new System.Drawing.Size(425, 34);
-            this.updateLoanSlipToolStripMenuItem.Text = "Update Library Card";
-            this.updateLoanSlipToolStripMenuItem.Click += new System.EventHandler(this.CapnhatPhieuMuon);
-            // 
             // dropdownReport
             // 
             this.dropdownReport.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolBookStatus,
             this.toolStripSeparator6,
             this.toolReadersStatus});
-            this.dropdownReport.Enabled = false;
             this.dropdownReport.ForeColor = System.Drawing.SystemColors.Highlight;
             this.dropdownReport.Image = global::QuanLyThuVien2.Properties.Resources.report;
             this.dropdownReport.Name = "dropdownReport";
@@ -470,20 +369,20 @@
             // 
             this.toolBookStatus.ForeColor = System.Drawing.Color.DodgerBlue;
             this.toolBookStatus.Name = "toolBookStatus";
-            this.toolBookStatus.Size = new System.Drawing.Size(229, 34);
+            this.toolBookStatus.Size = new System.Drawing.Size(270, 34);
             this.toolBookStatus.Text = "Book Status";
             this.toolBookStatus.Click += new System.EventHandler(this.BaoCaoTinhTrangSach);
             // 
             // toolStripSeparator6
             // 
             this.toolStripSeparator6.Name = "toolStripSeparator6";
-            this.toolStripSeparator6.Size = new System.Drawing.Size(226, 6);
+            this.toolStripSeparator6.Size = new System.Drawing.Size(267, 6);
             // 
             // toolReadersStatus
             // 
             this.toolReadersStatus.ForeColor = System.Drawing.Color.DodgerBlue;
             this.toolReadersStatus.Name = "toolReadersStatus";
-            this.toolReadersStatus.Size = new System.Drawing.Size(229, 34);
+            this.toolReadersStatus.Size = new System.Drawing.Size(270, 34);
             this.toolReadersStatus.Text = "Readers Status";
             this.toolReadersStatus.Click += new System.EventHandler(this.BaoCaoDocGia);
             // 
@@ -571,7 +470,7 @@
             // 
             this.groupBox4.BackColor = System.Drawing.SystemColors.Window;
             this.groupBox4.Controls.Add(this.label4);
-            this.groupBox4.Location = new System.Drawing.Point(12, 35);
+            this.groupBox4.Location = new System.Drawing.Point(10, 69);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(960, 63);
             this.groupBox4.TabIndex = 6;
@@ -598,6 +497,92 @@
             this.btSI.UseVisualStyleBackColor = false;
             this.btSI.Click += new System.EventHandler(this.btSI_Click);
             // 
+            // menuStrip2
+            // 
+            this.menuStrip2.BackColor = System.Drawing.SystemColors.Window;
+            this.menuStrip2.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
+            this.menuStrip2.ImageScalingSize = new System.Drawing.Size(24, 24);
+            this.menuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolBook2,
+            this.toolReader2,
+            this.toolAuthor2,
+            this.toolField2,
+            this.toolPublisher2,
+            this.toolBrrowing2,
+            this.toolLibrary2});
+            this.menuStrip2.Location = new System.Drawing.Point(0, 33);
+            this.menuStrip2.Name = "menuStrip2";
+            this.menuStrip2.Padding = new System.Windows.Forms.Padding(8, 2, 0, 2);
+            this.menuStrip2.Size = new System.Drawing.Size(982, 33);
+            this.menuStrip2.TabIndex = 9;
+            this.menuStrip2.Text = "menuStrip2";
+            // 
+            // toolBook2
+            // 
+            this.toolBook2.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripSeparator18});
+            this.toolBook2.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.toolBook2.Image = global::QuanLyThuVien2.Properties.Resources.Google_Play_Books_icon;
+            this.toolBook2.Name = "toolBook2";
+            this.toolBook2.Size = new System.Drawing.Size(93, 29);
+            this.toolBook2.Text = "Book";
+            this.toolBook2.Click += new System.EventHandler(this.toolStripMenuItem21_Click);
+            // 
+            // toolStripSeparator18
+            // 
+            this.toolStripSeparator18.Name = "toolStripSeparator18";
+            this.toolStripSeparator18.Size = new System.Drawing.Size(267, 6);
+            // 
+            // toolReader2
+            // 
+            this.toolReader2.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.toolReader2.Image = global::QuanLyThuVien2.Properties.Resources._4213477;
+            this.toolReader2.Name = "toolReader2";
+            this.toolReader2.Size = new System.Drawing.Size(106, 29);
+            this.toolReader2.Text = "Reader";
+            this.toolReader2.Click += new System.EventHandler(this.toolStripMenuItem24_Click);
+            // 
+            // toolAuthor2
+            // 
+            this.toolAuthor2.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.toolAuthor2.Image = global::QuanLyThuVien2.Properties.Resources._1995562;
+            this.toolAuthor2.Name = "toolAuthor2";
+            this.toolAuthor2.Size = new System.Drawing.Size(107, 29);
+            this.toolAuthor2.Text = "Author";
+            this.toolAuthor2.Click += new System.EventHandler(this.toolStripMenuItem25_Click);
+            // 
+            // toolField2
+            // 
+            this.toolField2.Image = global::QuanLyThuVien2.Properties.Resources._126795;
+            this.toolField2.Name = "toolField2";
+            this.toolField2.Size = new System.Drawing.Size(89, 29);
+            this.toolField2.Text = "Field";
+            this.toolField2.Click += new System.EventHandler(this.toolStripMenuItem26_Click);
+            // 
+            // toolPublisher2
+            // 
+            this.toolPublisher2.Image = global::QuanLyThuVien2.Properties.Resources.printer;
+            this.toolPublisher2.Name = "toolPublisher2";
+            this.toolPublisher2.Size = new System.Drawing.Size(124, 29);
+            this.toolPublisher2.Text = "Publisher";
+            this.toolPublisher2.Click += new System.EventHandler(this.toolStripMenuItem27_Click);
+            // 
+            // toolBrrowing2
+            // 
+            this.toolBrrowing2.Image = global::QuanLyThuVien2.Properties.Resources._11718026221094093993;
+            this.toolBrrowing2.Name = "toolBrrowing2";
+            this.toolBrrowing2.Size = new System.Drawing.Size(134, 29);
+            this.toolBrrowing2.Text = "Borrowing";
+            this.toolBrrowing2.Click += new System.EventHandler(this.toolStripMenuItem28_Click);
+            // 
+            // toolLibrary2
+            // 
+            this.toolLibrary2.Image = global::QuanLyThuVien2.Properties.Resources.images;
+            this.toolLibrary2.Name = "toolLibrary2";
+            this.toolLibrary2.Size = new System.Drawing.Size(147, 29);
+            this.toolLibrary2.Text = "Library Card";
+            this.toolLibrary2.Click += new System.EventHandler(this.libraryCardToolStripMenuItem_Click);
+            // 
             // Main
             // 
             this.AcceptButton = this.button1;
@@ -607,6 +592,7 @@
             this.BackgroundImage = global::QuanLyThuVien2.Properties.Resources.Backgroundmain;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(982, 564);
+            this.Controls.Add(this.menuStrip2);
             this.Controls.Add(this.btSI);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.groupBox4);
@@ -627,6 +613,8 @@
             this.menuStrip1.PerformLayout();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
+            this.menuStrip2.ResumeLayout(false);
+            this.menuStrip2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -647,9 +635,6 @@
         private System.Windows.Forms.ToolStripMenuItem toolCreateAccount;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.ToolStripMenuItem toolChangePassword;
-        private System.Windows.Forms.ToolStripMenuItem dropdownUpdate;
-        private System.Windows.Forms.ToolStripMenuItem toolBookUpdates;
-        private System.Windows.Forms.ToolStripMenuItem toolUpdateReaders;
         private System.Windows.Forms.ToolStripMenuItem dropdownInformation;
         private System.Windows.Forms.ToolStripMenuItem dropdownReport;
         private System.Windows.Forms.ToolStripMenuItem buttonHelp;
@@ -670,9 +655,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator8;
-        private System.Windows.Forms.ToolStripMenuItem toolAuthorUpdate;
-        private System.Windows.Forms.ToolStripMenuItem toolUpdateField;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator11;
         private System.Windows.Forms.ToolStripMenuItem toolAuthor;
         private System.Windows.Forms.ToolStripMenuItem toolPublishingCompany;
@@ -685,16 +667,21 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.ToolStripMenuItem toolPublisherUpdate;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
-        private System.Windows.Forms.ToolStripMenuItem toolUpdateBorrowingInformation;
         private System.Windows.Forms.ToolStripMenuItem toolCheckEmployeeInformation;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator7;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Button btSI;
         private System.Windows.Forms.ToolStripMenuItem toolLogout;
         private System.Windows.Forms.LinkLabel linkLabel1;
-        private System.Windows.Forms.ToolStripMenuItem updateLoanSlipToolStripMenuItem;
+        private System.Windows.Forms.MenuStrip menuStrip2;
+        private System.Windows.Forms.ToolStripMenuItem toolBook2;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator18;
+        private System.Windows.Forms.ToolStripMenuItem toolReader2;
+        private System.Windows.Forms.ToolStripMenuItem toolAuthor2;
+        private System.Windows.Forms.ToolStripMenuItem toolField2;
+        private System.Windows.Forms.ToolStripMenuItem toolPublisher2;
+        private System.Windows.Forms.ToolStripMenuItem toolBrrowing2;
+        private System.Windows.Forms.ToolStripMenuItem toolLibrary2;
         //b  private System.Windows.Forms.GroupBox groupBox3;
     }
 }
