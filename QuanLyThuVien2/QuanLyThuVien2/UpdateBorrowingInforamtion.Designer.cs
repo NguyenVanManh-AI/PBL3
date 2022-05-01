@@ -59,17 +59,46 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.cboPhieuMuon = new System.Windows.Forms.ComboBox();
-            this.cboMASACH = new System.Windows.Forms.ComboBox();
-            this.cboDOCGIA = new System.Windows.Forms.ComboBox();
             this.txtGHICHU = new System.Windows.Forms.TextBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.btnSearch = new System.Windows.Forms.Button();
             this.txtSearch2 = new System.Windows.Forms.TextBox();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+
+
+            this.Column1a = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2a = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3a = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4a = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5a = new System.Windows.Forms.DataGridViewTextBoxColumn();
+
+            this.dataGridView3 = new System.Windows.Forms.DataGridView();
+            this.Column1b = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2b = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3b = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4b = new System.Windows.Forms.DataGridViewTextBoxColumn();
+
+            this.dataGridView4 = new System.Windows.Forms.DataGridView();
+            this.Column1c = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2c = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3c = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4c = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5c = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6c = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column7c = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column8c = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column9c = new System.Windows.Forms.DataGridViewTextBoxColumn();
+
+            this.txtReadercode = new System.Windows.Forms.TextBox();
+            this.txtBookcode = new System.Windows.Forms.TextBox();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
             this.SuspendLayout();
             // 
             // Column1
@@ -186,7 +215,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(28, 108);
+            this.label4.Location = new System.Drawing.Point(28, 72);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(219, 20);
@@ -317,7 +346,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(28, 69);
+            this.label3.Location = new System.Drawing.Point(28, 107);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(99, 20);
@@ -388,9 +417,9 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox1.Controls.Add(this.txtBookcode);
+            this.groupBox1.Controls.Add(this.txtReadercode);
             this.groupBox1.Controls.Add(this.cboPhieuMuon);
-            this.groupBox1.Controls.Add(this.cboMASACH);
-            this.groupBox1.Controls.Add(this.cboDOCGIA);
             this.groupBox1.Controls.Add(this.txtGHICHU);
             this.groupBox1.Controls.Add(this.cboXACNHAN);
             this.groupBox1.Controls.Add(this.mktNGAYTRA);
@@ -415,29 +444,11 @@
             // cboPhieuMuon
             // 
             this.cboPhieuMuon.FormattingEnabled = true;
-            this.cboPhieuMuon.Location = new System.Drawing.Point(278, 105);
+            this.cboPhieuMuon.Location = new System.Drawing.Point(278, 69);
             this.cboPhieuMuon.Name = "cboPhieuMuon";
             this.cboPhieuMuon.Size = new System.Drawing.Size(181, 28);
             this.cboPhieuMuon.TabIndex = 18;
-            // 
-            // cboMASACH
-            // 
-            this.cboMASACH.FormattingEnabled = true;
-            this.cboMASACH.Location = new System.Drawing.Point(182, 62);
-            this.cboMASACH.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.cboMASACH.Name = "cboMASACH";
-            this.cboMASACH.Size = new System.Drawing.Size(277, 28);
-            this.cboMASACH.TabIndex = 17;
-            // 
-            // cboDOCGIA
-            // 
-            this.cboDOCGIA.FormattingEnabled = true;
-            this.cboDOCGIA.Location = new System.Drawing.Point(182, 29);
-            this.cboDOCGIA.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.cboDOCGIA.Name = "cboDOCGIA";
-            this.cboDOCGIA.Size = new System.Drawing.Size(277, 28);
-            this.cboDOCGIA.TabIndex = 17;
-            this.cboDOCGIA.SelectedIndexChanged += new System.EventHandler(this.cboDOCGIA_SelectedIndexChanged);
+            this.cboPhieuMuon.SelectedIndexChanged += new System.EventHandler(this.cboPhieuMuon_SelectedIndexChanged);
             // 
             // txtGHICHU
             // 
@@ -481,6 +492,252 @@
             this.txtSearch2.Size = new System.Drawing.Size(854, 26);
             this.txtSearch2.TabIndex = 0;
             // 
+            // dataGridView2
+            // 
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1a,
+            this.Column2a,
+            this.Column3a,
+            this.Column4a,
+            this.Column5a});
+            this.dataGridView2.Location = new System.Drawing.Point(12, 463);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.RowHeadersWidth = 62;
+            this.dataGridView2.RowTemplate.Height = 28;
+            this.dataGridView2.Size = new System.Drawing.Size(932, 351);
+            this.dataGridView2.TabIndex = 10;
+            this.dataGridView2.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellClick);
+
+            // 
+            // Column1a
+            // 
+            this.Column1a.DataPropertyName = "MADG";
+            this.Column1a.HeaderText = "Reader code";
+            this.Column1a.MinimumWidth = 6;
+            this.Column1a.Name = "Column1a";
+            this.Column1a.ReadOnly = true;
+            this.Column1a.Width = 125;
+
+            // 
+            // Column2a
+            // 
+            this.Column2a.DataPropertyName = "HOTEN";
+            this.Column2a.HeaderText = "Name";
+            this.Column2a.MinimumWidth = 6;
+            this.Column2a.Name = "Column2a";
+            this.Column2a.ReadOnly = true;
+            this.Column2a.Width = 125;
+            // 
+            // Column3a
+            // 
+            this.Column3a.DataPropertyName = "LOP";
+            this.Column3a.HeaderText = "Class name";
+            this.Column3a.MinimumWidth = 6;
+            this.Column3a.Name = "Column3a";
+            this.Column3a.ReadOnly = true;
+            this.Column3a.Width = 125;
+            // 
+            // Column4a
+            // 
+            this.Column4a.DataPropertyName = "DIACHI";
+            this.Column4a.HeaderText = "Address";
+            this.Column4a.MinimumWidth = 6;
+            this.Column4a.Name = "Column4a";
+            this.Column4a.ReadOnly = true;
+            this.Column4a.Width = 125;
+            // 
+            // Column5a
+            // 
+            this.Column5a.DataPropertyName = "EMAIL";
+            this.Column5a.HeaderText = "Email";
+            this.Column5a.MinimumWidth = 6;
+            this.Column5a.Name = "Column5a";
+            this.Column5a.ReadOnly = true;
+            this.Column5a.Width = 125;
+
+            // 
+            // dataGridView3
+            // 
+            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView3.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1b,
+            this.Column2b,
+            this.Column3b,
+            this.Column4b});
+            this.dataGridView3.Location = new System.Drawing.Point(12, 488);
+            this.dataGridView3.Name = "dataGridView3";
+            this.dataGridView3.RowHeadersWidth = 62;
+            this.dataGridView3.RowTemplate.Height = 28;
+            this.dataGridView3.Size = new System.Drawing.Size(801, 304);
+            this.dataGridView3.TabIndex = 29;
+            this.dataGridView3.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView3_CellClick);
+            this.dataGridView3.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView3_CellContentClick);
+
+            // 
+            // Column1b
+            // 
+            this.Column1b.DataPropertyName = "MASACH";
+            this.Column1b.HeaderText = "Book code";
+            this.Column1b.MinimumWidth = 6;
+            this.Column1b.Name = "Column1b";
+            this.Column1b.ReadOnly = true;
+            this.Column1b.Width = 125;
+
+            // 
+            // Column2b
+            // 
+            this.Column2b.DataPropertyName = "TENSACH";
+            this.Column2b.HeaderText = "Book Name";
+            this.Column2b.MinimumWidth = 6;
+            this.Column2b.Name = "Column2b";
+            this.Column2b.ReadOnly = true;
+            this.Column2b.Width = 125;
+            // 
+            // Column3b
+            // 
+            this.Column3b.DataPropertyName = "TenLv";
+            this.Column3b.HeaderText = "Field Name";
+            this.Column3b.MinimumWidth = 6;
+            this.Column3b.Name = "Column3b";
+            this.Column3b.ReadOnly = true;
+            this.Column3b.Width = 125;
+            // 
+            // Column4b
+            // 
+            this.Column4b.DataPropertyName = "TENTG";
+            this.Column4b.HeaderText = "Author Name";
+            this.Column4b.MinimumWidth = 6;
+            this.Column4b.Name = "Column4b";
+            this.Column4b.ReadOnly = true;
+            this.Column4b.Width = 125;
+
+            // 
+            // dataGridView4
+            // 
+            this.dataGridView4.BackgroundColor = System.Drawing.Color.LawnGreen;
+            this.dataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView4.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1c,
+            this.Column2c,
+            this.Column3c,
+            this.Column4c,
+            this.Column5c,
+            this.Column6c,
+            this.Column7c,
+            this.Column8c,
+            this.Column9c});
+            this.dataGridView4.Location = new System.Drawing.Point(12, 478);
+            this.dataGridView4.Name = "dataGridView4";
+            this.dataGridView4.RowHeadersWidth = 62;
+            this.dataGridView4.RowTemplate.Height = 28;
+            this.dataGridView4.Size = new System.Drawing.Size(1232, 351);
+            this.dataGridView4.TabIndex = 10;
+            this.dataGridView4.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView4_CellClick);
+            this.dataGridView4.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView4_CellContentClick);
+
+
+            // 
+            // Column1c
+            // 
+            this.Column1c.DataPropertyName = "MADG";
+            this.Column1c.HeaderText = "Reader code";
+            this.Column1c.MinimumWidth = 6;
+            this.Column1c.Name = "Column1c";
+            this.Column1c.ReadOnly = true;
+            this.Column1c.Width = 125;
+
+            // 
+            // Column2c
+            // 
+            this.Column2c.DataPropertyName = "HOTEN";
+            this.Column2c.HeaderText = "Name";
+            this.Column2c.MinimumWidth = 6;
+            this.Column2c.Name = "Column2c";
+            this.Column2c.ReadOnly = true;
+            this.Column2c.Width = 125;
+            // 
+            // Column3c
+            // 
+            this.Column3c.DataPropertyName = "LOP";
+            this.Column3c.HeaderText = "Class name";
+            this.Column3c.MinimumWidth = 6;
+            this.Column3c.Name = "Column3c";
+            this.Column3c.ReadOnly = true;
+            this.Column3c.Width = 125;
+            // 
+            // Column4c
+            // 
+            this.Column4c.DataPropertyName = "DIACHI";
+            this.Column4c.HeaderText = "Address";
+            this.Column4c.MinimumWidth = 6;
+            this.Column4c.Name = "Column4c";
+            this.Column4c.ReadOnly = true;
+            this.Column4c.Width = 125;
+            // 
+            // Column5c
+            // 
+            this.Column5c.DataPropertyName = "EMAIL";
+            this.Column5c.HeaderText = "Email";
+            this.Column5c.MinimumWidth = 6;
+            this.Column5c.Name = "Column5c";
+            this.Column5c.ReadOnly = true;
+            this.Column5c.Width = 125;
+
+            // 
+            // Column6c
+            // 
+            this.Column6c.DataPropertyName = "MASACH";
+            this.Column6c.HeaderText = "Book code";
+            this.Column6c.MinimumWidth = 6;
+            this.Column6c.Name = "Column6c";
+            this.Column6c.ReadOnly = true;
+            this.Column6c.Width = 125;
+
+            // 
+            // Column7c
+            // 
+            this.Column7c.DataPropertyName = "TENSACH";
+            this.Column7c.HeaderText = "Book Name";
+            this.Column7c.MinimumWidth = 6;
+            this.Column7c.Name = "Column7c";
+            this.Column7c.ReadOnly = true;
+            this.Column7c.Width = 125;
+            // 
+            // Column8c
+            // 
+            this.Column8c.DataPropertyName = "TenLv";
+            this.Column8c.HeaderText = "Field Name";
+            this.Column8c.MinimumWidth = 6;
+            this.Column8c.Name = "Column8c";
+            this.Column8c.ReadOnly = true;
+            this.Column8c.Width = 125;
+            // 
+            // Column9c
+            // 
+            this.Column9c.DataPropertyName = "TENTG";
+            this.Column9c.HeaderText = "Author Name";
+            this.Column9c.MinimumWidth = 6;
+            this.Column9c.Name = "Column9c";
+            this.Column9c.ReadOnly = true;
+            this.Column9c.Width = 125;
+
+            // 
+            // txtReadercode
+            // 
+            this.txtReadercode.Location = new System.Drawing.Point(182, 27);
+            this.txtReadercode.Name = "txtReadercode";
+            this.txtReadercode.Size = new System.Drawing.Size(277, 26);
+            this.txtReadercode.TabIndex = 19;
+            this.txtReadercode.TextChanged += new System.EventHandler(this.txtReadercode_TextChanged);
+            // 
+            // txtBookcode
+            // 
+            this.txtBookcode.Location = new System.Drawing.Point(182, 107);
+            this.txtBookcode.Name = "txtBookcode";
+            this.txtBookcode.Size = new System.Drawing.Size(277, 26);
+            this.txtBookcode.TabIndex = 20;
+            // 
             // UpdateBorrowingInforamtion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -488,6 +745,9 @@
             this.BackgroundImage = global::QuanLyThuVien2.Properties.Resources.Backgroundmain;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1258, 804);
+            this.Controls.Add(this.dataGridView3);
+            this.Controls.Add(this.dataGridView4);
+            this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
@@ -506,6 +766,9 @@
             this.groupBox1.PerformLayout();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -542,11 +805,35 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox txtGHICHU;
-        private System.Windows.Forms.ComboBox cboMASACH;
-        private System.Windows.Forms.ComboBox cboDOCGIA;
         private System.Windows.Forms.ComboBox cboPhieuMuon;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.TextBox txtSearch2;
+        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1a;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2a;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3a;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4a;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5a;
+
+        private System.Windows.Forms.DataGridView dataGridView3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1b;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2b;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3b;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4b;
+
+        private System.Windows.Forms.DataGridView dataGridView4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1c;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2c;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3c;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4c;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5c;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column6c;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column7c;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column8c;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column9c;
+
+        private System.Windows.Forms.TextBox txtReadercode;
+        private System.Windows.Forms.TextBox txtBookcode;
     }
 }

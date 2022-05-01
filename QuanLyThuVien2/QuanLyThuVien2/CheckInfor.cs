@@ -25,20 +25,20 @@ namespace QuanLyThuVien2
 
         private void KiemTraTTNVien_Load(object sender, EventArgs e)
         {
-            cls.LoadData2DataGridView(dataGridView2, "select taikhoan,quyenhan,tennv,diachi,dienthoai,email,chucvu,tuoi from tblNhanVien");
+            cls.LoadData2DataGridView(dataGridView1, "select taikhoan,quyenhan,tennv,diachi,dienthoai,email,chucvu,tuoi from tblNhanVien");
         }
         Class.clsDatabase cls = new QuanLyThuVien2.Class.clsDatabase();
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            txtTenTaiKhoan.Text = dataGridView2.Rows[e.RowIndex].Cells[0].Value.ToString();
-            txtAr.Text = dataGridView2.Rows[e.RowIndex].Cells[2].Value.ToString();
-            txtTenNhanVien.Text = dataGridView2.Rows[e.RowIndex].Cells[3].Value.ToString();
-            txtDiaChi.Text = dataGridView2.Rows[e.RowIndex].Cells[4].Value.ToString();
-            txtDienThoai.Text = dataGridView2.Rows[e.RowIndex].Cells[5].Value.ToString();
-            txtEmail.Text = dataGridView2.Rows[e.RowIndex].Cells[6].Value.ToString();
-            txtChucVu.Text = dataGridView2.Rows[e.RowIndex].Cells[7].Value.ToString();
-            txtTuoi.Text = dataGridView2.Rows[e.RowIndex].Cells[8].Value.ToString();
+            txtTenTaiKhoan.Text = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
+            txtAr.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
+            txtTenNhanVien.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
+            txtDiaChi.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
+            txtDienThoai.Text = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
+            txtEmail.Text = dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString();
+            txtChucVu.Text = dataGridView1.Rows[e.RowIndex].Cells[6].Value.ToString();
+            txtTuoi.Text = dataGridView1.Rows[e.RowIndex].Cells[7].Value.ToString();
         }
         string TenTK;
         // int Dem = 0;
@@ -68,6 +68,30 @@ namespace QuanLyThuVien2
             else
                 return (false);
         }
+
+        private void btnSearch2_Click(object sender, EventArgs e)
+        {
+            cls.LoadData2DataGridView(dataGridView1, "select * from tblNhanVien where taikhoan like '%" + txtSearch2.Text + "%' OR QUYENHAN like '%" + txtSearch2.Text + "%' OR tennv like '%" + txtSearch2.Text + "%' OR diachi like '%" + txtSearch2.Text + "%' OR dienthoai like'%" + txtSearch2.Text + "%' OR email like '%" + txtSearch2.Text + "%' OR chucvu like '%" + txtSearch2.Text + "%' OR tuoi like '%" + txtSearch2.Text + "%'");
+            txtTenTaiKhoan.Text = "";
+            txtAr.Text = "";
+            txtTenNhanVien.Text = "";
+            txtDiaChi.Text = "";
+            txtDienThoai.Text = "";
+            txtEmail.Text = "";
+            txtChucVu.Text = "";
+            txtTuoi.Text = "";
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox2_Enter(object sender, EventArgs e)
+        {
+
+        }
+
         public bool VerifyEmail(string emailVerify)
         {
             using (WebClient webclient = new WebClient())
@@ -152,7 +176,7 @@ namespace QuanLyThuVien2
                     + txtDienThoai.Text + "',EMAIL='" + txtEmail.Text + "',ChucVu='" + txtChucVu.Text + "',Tuoi='"
                     + txtTuoi.Text + "'where TaiKhoan='" + TenTK + "'");
                 cls.ThucThiSQLTheoKetNoi(SQL);
-                cls.LoadData2DataGridView(dataGridView2, "select*from tblNhanVien");
+                cls.LoadData2DataGridView(dataGridView1, "select*from tblNhanVien");
                 MessageBox.Show("Fixed successfully");
                 numberUndo = 1;
             }
@@ -192,7 +216,7 @@ namespace QuanLyThuVien2
                 {
                     string SQL = ("delete from tblNhanVien where TaiKhoan='" + txtTenTaiKhoan.Text + "'");
                     cls.ThucThiSQLTheoKetNoi(SQL);
-                    cls.LoadData2DataGridView(dataGridView2, "select*from tblNhanVien");
+                    cls.LoadData2DataGridView(dataGridView1, "select*from tblNhanVien");
                     MessageBox.Show("Delete successfully");
                     txtTenTaiKhoan.Text = "";
                     txtAr.Text = "";
@@ -212,21 +236,11 @@ namespace QuanLyThuVien2
             Close();
         }
 
-        private void dataGridView2_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            txtTenTaiKhoan.Text = dataGridView2.Rows[e.RowIndex].Cells[0].Value.ToString();
-            txtAr.Text = dataGridView2.Rows[e.RowIndex].Cells[1].Value.ToString();
-            txtTenNhanVien.Text = dataGridView2.Rows[e.RowIndex].Cells[2].Value.ToString();
-            txtDiaChi.Text = dataGridView2.Rows[e.RowIndex].Cells[3].Value.ToString();
-            txtDienThoai.Text = dataGridView2.Rows[e.RowIndex].Cells[4].Value.ToString();
-            txtEmail.Text = dataGridView2.Rows[e.RowIndex].Cells[5].Value.ToString();
-            txtChucVu.Text = dataGridView2.Rows[e.RowIndex].Cells[6].Value.ToString();
-            txtTuoi.Text = dataGridView2.Rows[e.RowIndex].Cells[7].Value.ToString();
-        }
+         
 
         private void btSearch_Click(object sender, EventArgs e)
         {
-            cls.LoadData2DataGridView(dataGridView2, "select * from tblNhanVien where taikhoan like '%" + txtTenTaiKhoan.Text + "%' and tennv like '%" + txtTenNhanVien.Text + "%' and diachi like '%" + txtDiaChi.Text + "%' and dienthoai like'%" + txtDienThoai.Text + "%' and email like '%" + txtEmail.Text + "%' and chucvu like '%" + txtChucVu.Text + "%' and tuoi like '%" + txtTuoi.Text + "%'");
+            cls.LoadData2DataGridView(dataGridView1, "select * from tblNhanVien where taikhoan like '%" + txtTenTaiKhoan.Text + "%' and tennv like '%" + txtTenNhanVien.Text + "%' and diachi like '%" + txtDiaChi.Text + "%' and dienthoai like'%" + txtDienThoai.Text + "%' and email like '%" + txtEmail.Text + "%' and chucvu like '%" + txtChucVu.Text + "%' and tuoi like '%" + txtTuoi.Text + "%'");
         }
 
         private void btUndo_Click(object sender, EventArgs e)
@@ -236,7 +250,7 @@ namespace QuanLyThuVien2
                 //string strInsert = "Insert into tblNhanVien(taikhoan,matkhau,quyenhan,tennv,diachi,dienthoai,email,chucvu,tuoi) values ('vanmanhav','vanmanhr22','user','','','','','','')";
                 string strInsert = "Insert into tblNhanVien(taikhoan,matkhau,quyenhan,tennv,diachi,dienthoai,email,chucvu,tuoi) values ('" + undoTK + "','" + pass + "','" + undoAr + "','" + undoSN + "','" + undoAdr + "','" + undoPN + "','" + undoEm + "','" + undoPs + "','" + undoAge + "')";
                 cls.ThucThiSQLTheoPKN(strInsert);
-                cls.LoadData2DataGridView(dataGridView2, "select * from tblNhanVien");
+                cls.LoadData2DataGridView(dataGridView1, "select * from tblNhanVien");
                 MessageBox.Show("Hoàn tác thành công !");
                 numberUndo = 0;
             }

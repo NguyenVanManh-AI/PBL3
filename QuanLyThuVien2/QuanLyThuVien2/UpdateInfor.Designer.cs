@@ -53,7 +53,6 @@
             this.button5 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.btCloseupdate = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -280,12 +279,12 @@
             this.button5.BackColor = System.Drawing.Color.White;
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.button5.Location = new System.Drawing.Point(45, 53);
+            this.button5.Location = new System.Drawing.Point(42, 80);
             this.button5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(112, 42);
             this.button5.TabIndex = 22;
-            this.button5.Text = "Edit";
+            this.button5.Text = "Save";
             this.button5.UseVisualStyleBackColor = false;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
@@ -304,7 +303,6 @@
             // groupBox3
             // 
             this.groupBox3.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox3.Controls.Add(this.btCloseupdate);
             this.groupBox3.Controls.Add(this.button5);
             this.groupBox3.ForeColor = System.Drawing.Color.DodgerBlue;
             this.groupBox3.Location = new System.Drawing.Point(948, 91);
@@ -315,20 +313,6 @@
             this.groupBox3.TabIndex = 28;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Feature edit";
-            // 
-            // btCloseupdate
-            // 
-            this.btCloseupdate.BackColor = System.Drawing.Color.White;
-            this.btCloseupdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btCloseupdate.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.btCloseupdate.Location = new System.Drawing.Point(45, 125);
-            this.btCloseupdate.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btCloseupdate.Name = "btCloseupdate";
-            this.btCloseupdate.Size = new System.Drawing.Size(112, 42);
-            this.btCloseupdate.TabIndex = 23;
-            this.btCloseupdate.Text = "Close";
-            this.btCloseupdate.UseVisualStyleBackColor = false;
-            this.btCloseupdate.Click += new System.EventHandler(this.btExitupdate_Click);
             // 
             // UpdateInfor
             // 
@@ -383,6 +367,5 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textTuoi;
         private System.Windows.Forms.TextBox textChhucVu;
-        private System.Windows.Forms.Button btCloseupdate;
     }
 }

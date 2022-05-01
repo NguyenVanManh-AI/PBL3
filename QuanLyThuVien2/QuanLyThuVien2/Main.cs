@@ -61,21 +61,24 @@ namespace QuanLyThuVien2
                 {
                     MessageBox.Show("Logged in successfully ! :)) ");
                     Quyen = Convert.ToString(Q);
+
+                    menuStrip2.Show();
+
                     if (Quyen == "user")
                     {
                         dropdownSystemManagement.Enabled = true;
                         //dropdownSearch.Enabled = true;
                         //toolBookSearch.Enabled = true;
                         //toolRoadSearch.Enabled = true;
-                        dropdownUpdate.Enabled = true;
+                        //dropdownUpdate.Enabled = true; 
                         dropdownInformation.Enabled = true;
                         dropdownReport.Enabled = true;
-                        toolBookUpdates.Enabled = true;
-                        toolAuthorUpdate.Enabled = true;
-                        toolUpdateReaders.Enabled = true;
-                        toolUpdateField.Enabled = true;
-                        toolPublisherUpdate.Enabled = true;
-                        toolUpdateBorrowingInformation.Enabled = true;
+                        //toolBookUpdates.Enabled = true;
+                        //toolAuthorUpdate.Enabled = true;
+                        //toolUpdateReaders.Enabled = true;
+                        //toolUpdateField.Enabled = true;
+                        //toolPublisherUpdate.Enabled = true;
+                        //toolUpdateBorrowingInformation.Enabled = true;
                         toolAuthor.Enabled = true;
                         toolPublishingCompany.Enabled = true;
                         toolField.Enabled = true;
@@ -97,15 +100,15 @@ namespace QuanLyThuVien2
                         //toolBookSearch.Enabled = true;
                         toolCheckEmployeeInformation.Enabled = true;
                         //toolRoadSearch.Enabled = true;
-                        dropdownUpdate.Enabled = true;
+                        //dropdownUpdate.Enabled = true;
                         dropdownInformation.Enabled = true;
                         dropdownReport.Enabled = true;
-                        toolBookUpdates.Enabled = true;
-                        toolAuthorUpdate.Enabled = true;
-                        toolUpdateReaders.Enabled = true;
-                        toolUpdateField.Enabled = true;
-                        toolPublisherUpdate.Enabled = true;
-                        toolUpdateBorrowingInformation.Enabled = true;
+                        //toolBookUpdates.Enabled = true;
+                        //toolAuthorUpdate.Enabled = true;
+                        //toolUpdateReaders.Enabled = true;
+                        //toolUpdateField.Enabled = true;
+                        //toolPublisherUpdate.Enabled = true;
+                        //toolUpdateBorrowingInformation.Enabled = true;
                         toolAuthor.Enabled = true;
                         toolPublishingCompany.Enabled = true;
                         toolField.Enabled = true;
@@ -124,7 +127,7 @@ namespace QuanLyThuVien2
                     menuStrip1.Visible = true;
                     label4.Text = "Welcome to Library Management";
                     dropdownSystemManagement.Visible = true;
-                    dropdownUpdate.Visible = true;
+                    //dropdownUpdate.Visible = true;
                     dropdownInformation.Visible = true;
                     //dropdownSearch.Visible = true;
 
@@ -148,6 +151,7 @@ namespace QuanLyThuVien2
         SqlConnection Con;
         private void Main_Load(object sender, EventArgs e)
         {
+            menuStrip2.Hide();
             try
             {
                 Con = new SqlConnection();
@@ -291,7 +295,65 @@ namespace QuanLyThuVien2
             hl.Show();
         }
 
+        private void Sach(object sender, EventArgs e)
+        {
+            UpdatesBook updatesBook = new UpdatesBook();
+            updatesBook.Show();
+        }
 
+        private void NguoiDoc(object sender, EventArgs e)
+        {
+            UpdateReaders rd = new UpdateReaders();
+            rd.Show();
+        }
+
+        private void toolTacGia_Click(object sender, EventArgs e)
+        {
+            UpdateAuthorInformation updateAuthorInformation = new UpdateAuthorInformation();
+            updateAuthorInformation.Show();
+        }
+
+        private void toolStripMenuItem21_Click(object sender, EventArgs e)
+        {
+            UpdatesBook updatesBook = new UpdatesBook();
+            updatesBook.Show();
+        }
+
+        private void toolStripMenuItem24_Click(object sender, EventArgs e)
+        {
+            UpdateReaders rd = new UpdateReaders();
+            rd.Show();
+        }
+
+        private void toolStripMenuItem25_Click(object sender, EventArgs e)
+        {
+            UpdateAuthorInformation updateAuthorInformation = new UpdateAuthorInformation();
+            updateAuthorInformation.Show();
+        }
+
+        private void toolStripMenuItem26_Click(object sender, EventArgs e)
+        {
+            UpdateFieldInformation updateFieldInformation = new UpdateFieldInformation();
+            updateFieldInformation.Show();
+        }
+
+        private void toolStripMenuItem27_Click(object sender, EventArgs e)
+        {
+            UpdatePublisherInformation updatePublisherInformation = new UpdatePublisherInformation();
+            updatePublisherInformation.Show();
+        }
+
+        private void toolStripMenuItem28_Click(object sender, EventArgs e)
+        {
+            UpdateBorrowingInforamtion updateBorrowingInforamtion = new UpdateBorrowingInforamtion();
+            updateBorrowingInforamtion.Show();
+        }
+
+        private void libraryCardToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            LibraryCard library = new LibraryCard();
+            library.Show();
+        }
 
         private void ThongTinNguoiDoc(object sender, EventArgs e)
         {
@@ -467,15 +529,15 @@ namespace QuanLyThuVien2
             //toolBookSearch.Enabled = false;
             toolCheckEmployeeInformation.Enabled = false;
             //toolRoadSearch.Enabled = false;
-            dropdownUpdate.Enabled = false;
+            //dropdownUpdate.Enabled = false;
             dropdownInformation.Enabled = false;
             dropdownReport.Enabled = false;
-            toolBookUpdates.Enabled = false;
-            toolAuthorUpdate.Enabled = false;
-            toolUpdateReaders.Enabled = false;
-            toolUpdateField.Enabled = false;
-            toolPublisherUpdate.Enabled = false;
-            toolUpdateBorrowingInformation.Enabled = false;
+            //toolBookUpdates.Enabled = false;
+            //toolAuthorUpdate.Enabled = false;
+            //toolUpdateReaders.Enabled = false;
+            //toolUpdateField.Enabled = false;
+            //toolPublisherUpdate.Enabled = false;
+            //toolUpdateBorrowingInformation.Enabled = false;
             toolAuthor.Enabled = false;
             toolPublishingCompany.Enabled = false;
             toolField.Enabled = false;

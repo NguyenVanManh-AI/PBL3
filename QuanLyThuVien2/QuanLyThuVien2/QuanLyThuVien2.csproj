@@ -336,5 +336,26 @@
   <ItemGroup>
     <None Include="Resources\1486485553-ago-arrow-arrow-left-back-previous-direction-left_81160.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Google-Play-Books-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4213477.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1995562.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\126795.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\printer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\11718026221094093993.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
