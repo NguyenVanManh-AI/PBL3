@@ -79,6 +79,7 @@ namespace QuanLyThuVien2
         private void UpdateBorrowingInforamtion_Load(object sender, EventArgs e)
         {
 
+            dataGridView1.Show();
             dataGridView2.Hide();
             dataGridView3.Hide();
             dataGridView4.Hide();
@@ -333,6 +334,49 @@ namespace QuanLyThuVien2
         {
             cboPhieuMuon.Text = "";
             cls.LoadData2Combobox(cboPhieuMuon, "Select DISTINCT MAPHIEUMUON from tblPhieuMuon WHERE MADG = '" + txtReadercode.Text + "'");
+        }
+
+        private void txtSearch2_TextChanged(object sender, EventArgs e)
+        {
+            object Q = layGiaTri("SELECT MADG FROM tblDocGia  WHERE HOTEN like '%" + txtSearch2.Text + "%' OR LOP like '%" + txtSearch2.Text + "%' OR DIACHI like '%" + txtSearch2.Text + "%' OR EMAIL like '%" + txtSearch2.Text + "%'");
+            string NguoiDoc = Convert.ToString(Q);
+            //MessageBox.Show(NguoiDoc);
+
+            Q = layGiaTri("Select s.MASACH from tblSach as s left join tblLinhVuc as lv on s.MaLv = lv.MaLv left join tblTacGia as tg on s.MATG = tg.MATG  where s.TENSACH like '%" + txtSearch2.Text + "%' OR lv.TenLv like '%" + txtSearch2.Text + "%' OR tg.TENTG like '%" + txtSearch2.Text + "%'");
+            string Sach = Convert.ToString(Q);
+            //MessageBox.Show(Sach);
+
+            if (NguoiDoc == "" && Sach == "")
+            {
+
+                //MessageBox.Show("Không có nội dung liên quan đến cụm từ tìm kiếm !!!");
+
+            }
+            else if (NguoiDoc != "" && Sach == "")
+            {
+                dataGridView2.Show();
+                dataGridView1.Hide();
+                dataGridView3.Hide();
+                dataGridView4.Hide();
+                cls.LoadData3DataGridView(dataGridView2, "SELECT MADG,HOTEN,LOP,DIACHI,EMAIL FROM tblDocGia WHERE HOTEN like '%" + txtSearch2.Text + "%' OR LOP like '%" + txtSearch2.Text + "%' OR DIACHI like '%" + txtSearch2.Text + "%' OR EMAIL like '%" + txtSearch2.Text + "%'");
+            }
+            else if (NguoiDoc == "" && Sach != "")
+            {
+                dataGridView3.Show();
+                dataGridView1.Hide();
+                dataGridView2.Hide();
+                dataGridView4.Hide();
+                cls.LoadData4DataGridView(dataGridView3, "Select s.MASACH,s.TENSACH,lv.TenLv,tg.TENTG from tblSach as s left join tblLinhVuc as lv on s.MaLv = lv.MaLv left join tblTacGia as tg on s.MATG = tg.MATG  where s.TENSACH like '%" + txtSearch2.Text + "%' OR lv.TenLv like '%" + txtSearch2.Text + "%' OR tg.TENTG like '%" + txtSearch2.Text + "%'");
+            }
+            else
+            {
+                dataGridView4.Show();
+                dataGridView1.Hide();
+                dataGridView2.Hide();
+                dataGridView3.Hide();
+                cls.LoadData5DataGridView(dataGridView4, "select dg.MADG,dg.HOTEN,dg.LOP,dg.DIACHI,dg.EMAIL,s.MASACH,s.TENSACH,lv.TenLv,tg.TENTG from tblDocGia as dg full outer JOIN tblSach as s on 2=1 left join tblLinhVuc as lv on s.MaLv = lv.MaLv left join tblTacGia as tg on s.MATG = tg.MATG WHERE dg.HOTEN like '%" + txtSearch2.Text + "%' OR dg.LOP like '%" + txtSearch2.Text + "%' OR dg.DIACHI like '%" + txtSearch2.Text + "%' OR dg.EMAIL like '%" + txtSearch2.Text + "%'  OR s.TENSACH like '%" + txtSearch2.Text + "%' OR s.TENSACH like '%" + txtSearch2.Text + "%' OR lv.TenLv like '%" + txtSearch2.Text + "%' OR tg.TENTG like '%" + txtSearch2.Text + "%'");
+            }
+
         }
 
         private void dataGridView4_CellContentClick(object sender, DataGridViewCellEventArgs e)

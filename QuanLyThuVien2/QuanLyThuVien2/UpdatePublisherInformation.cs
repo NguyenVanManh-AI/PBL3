@@ -110,6 +110,11 @@ namespace QuanLyThuVien2
             cls.LoadData2DataGridView(dataGridView1, "select * from tblnxb where tennxb like'%" + txtSearch2.Text + "%' OR diachi like'%" + txtSearch2.Text + "%' OR sodienthoai like'%" + txtSearch2.Text + "%'");
         }
 
+        private void txtSearch2_TextChanged(object sender, EventArgs e)
+        {
+            cls.LoadData2DataGridView(dataGridView1, "select * from tblnxb where tennxb like'%" + txtSearch2.Text + "%' OR diachi like'%" + txtSearch2.Text + "%' OR sodienthoai like'%" + txtSearch2.Text + "%'");
+        }
+
         private void btUndo_Click(object sender, EventArgs e)
         {
             if (numberUndo == 1)

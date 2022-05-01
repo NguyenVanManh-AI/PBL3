@@ -369,20 +369,20 @@
             // 
             this.toolBookStatus.ForeColor = System.Drawing.Color.DodgerBlue;
             this.toolBookStatus.Name = "toolBookStatus";
-            this.toolBookStatus.Size = new System.Drawing.Size(270, 34);
+            this.toolBookStatus.Size = new System.Drawing.Size(229, 34);
             this.toolBookStatus.Text = "Book Status";
             this.toolBookStatus.Click += new System.EventHandler(this.BaoCaoTinhTrangSach);
             // 
             // toolStripSeparator6
             // 
             this.toolStripSeparator6.Name = "toolStripSeparator6";
-            this.toolStripSeparator6.Size = new System.Drawing.Size(267, 6);
+            this.toolStripSeparator6.Size = new System.Drawing.Size(226, 6);
             // 
             // toolReadersStatus
             // 
             this.toolReadersStatus.ForeColor = System.Drawing.Color.DodgerBlue;
             this.toolReadersStatus.Name = "toolReadersStatus";
-            this.toolReadersStatus.Size = new System.Drawing.Size(270, 34);
+            this.toolReadersStatus.Size = new System.Drawing.Size(229, 34);
             this.toolReadersStatus.Text = "Readers Status";
             this.toolReadersStatus.Click += new System.EventHandler(this.BaoCaoDocGia);
             // 
@@ -531,7 +531,7 @@
             // toolStripSeparator18
             // 
             this.toolStripSeparator18.Name = "toolStripSeparator18";
-            this.toolStripSeparator18.Size = new System.Drawing.Size(267, 6);
+            this.toolStripSeparator18.Size = new System.Drawing.Size(87, 6);
             // 
             // toolReader2
             // 
@@ -553,6 +553,7 @@
             // 
             // toolField2
             // 
+            this.toolField2.ForeColor = System.Drawing.Color.DodgerBlue;
             this.toolField2.Image = global::QuanLyThuVien2.Properties.Resources._126795;
             this.toolField2.Name = "toolField2";
             this.toolField2.Size = new System.Drawing.Size(89, 29);
@@ -561,6 +562,7 @@
             // 
             // toolPublisher2
             // 
+            this.toolPublisher2.ForeColor = System.Drawing.Color.DodgerBlue;
             this.toolPublisher2.Image = global::QuanLyThuVien2.Properties.Resources.printer;
             this.toolPublisher2.Name = "toolPublisher2";
             this.toolPublisher2.Size = new System.Drawing.Size(124, 29);
@@ -569,6 +571,7 @@
             // 
             // toolBrrowing2
             // 
+            this.toolBrrowing2.ForeColor = System.Drawing.Color.DodgerBlue;
             this.toolBrrowing2.Image = global::QuanLyThuVien2.Properties.Resources._11718026221094093993;
             this.toolBrrowing2.Name = "toolBrrowing2";
             this.toolBrrowing2.Size = new System.Drawing.Size(134, 29);
@@ -577,6 +580,7 @@
             // 
             // toolLibrary2
             // 
+            this.toolLibrary2.ForeColor = System.Drawing.Color.DodgerBlue;
             this.toolLibrary2.Image = global::QuanLyThuVien2.Properties.Resources.images;
             this.toolLibrary2.Name = "toolLibrary2";
             this.toolLibrary2.Size = new System.Drawing.Size(147, 29);

@@ -374,6 +374,7 @@
             this.txtSearch2.Name = "txtSearch2";
             this.txtSearch2.Size = new System.Drawing.Size(641, 26);
             this.txtSearch2.TabIndex = 0;
+            this.txtSearch2.TextChanged += new System.EventHandler(this.txtSearch2_TextChanged);
             // 
             // Column29
             // 

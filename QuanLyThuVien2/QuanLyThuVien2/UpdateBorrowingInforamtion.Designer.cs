@@ -55,29 +55,28 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtBookcode = new System.Windows.Forms.TextBox();
+            this.txtReadercode = new System.Windows.Forms.TextBox();
             this.cboPhieuMuon = new System.Windows.Forms.ComboBox();
             this.txtGHICHU = new System.Windows.Forms.TextBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.btnSearch = new System.Windows.Forms.Button();
             this.txtSearch2 = new System.Windows.Forms.TextBox();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
-
-
             this.Column1a = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2a = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3a = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4a = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5a = new System.Windows.Forms.DataGridViewTextBoxColumn();
-
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
             this.Column1b = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2b = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3b = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4b = new System.Windows.Forms.DataGridViewTextBoxColumn();
-
             this.dataGridView4 = new System.Windows.Forms.DataGridView();
             this.Column1c = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2c = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -88,9 +87,6 @@
             this.Column7c = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column8c = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column9c = new System.Windows.Forms.DataGridViewTextBoxColumn();
-
-            this.txtReadercode = new System.Windows.Forms.TextBox();
-            this.txtBookcode = new System.Windows.Forms.TextBox();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -367,6 +363,7 @@
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox2.Controls.Add(this.button1);
             this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Location = new System.Drawing.Point(18, 5);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -375,6 +372,18 @@
             this.groupBox2.Size = new System.Drawing.Size(1232, 80);
             this.groupBox2.TabIndex = 7;
             this.groupBox2.TabStop = false;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.White;
+            this.button1.BackgroundImage = global::QuanLyThuVien2.Properties.Resources._1486485553_ago_arrow_arrow_left_back_previous_direction_left_81160;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button1.Location = new System.Drawing.Point(32, 18);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(56, 56);
+            this.button1.TabIndex = 1;
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.UpdateBorrowingInforamtion_Load);
             // 
             // label1
             // 
@@ -441,6 +450,21 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Fill in all the information";
             // 
+            // txtBookcode
+            // 
+            this.txtBookcode.Location = new System.Drawing.Point(182, 107);
+            this.txtBookcode.Name = "txtBookcode";
+            this.txtBookcode.Size = new System.Drawing.Size(277, 26);
+            this.txtBookcode.TabIndex = 20;
+            // 
+            // txtReadercode
+            // 
+            this.txtReadercode.Location = new System.Drawing.Point(182, 27);
+            this.txtReadercode.Name = "txtReadercode";
+            this.txtReadercode.Size = new System.Drawing.Size(277, 26);
+            this.txtReadercode.TabIndex = 19;
+            this.txtReadercode.TextChanged += new System.EventHandler(this.txtReadercode_TextChanged);
+            // 
             // cboPhieuMuon
             // 
             this.cboPhieuMuon.FormattingEnabled = true;
@@ -491,9 +515,11 @@
             this.txtSearch2.Name = "txtSearch2";
             this.txtSearch2.Size = new System.Drawing.Size(854, 26);
             this.txtSearch2.TabIndex = 0;
+            this.txtSearch2.TextChanged += new System.EventHandler(this.txtSearch2_TextChanged);
             // 
             // dataGridView2
             // 
+            this.dataGridView2.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1a,
@@ -505,10 +531,9 @@
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.RowHeadersWidth = 62;
             this.dataGridView2.RowTemplate.Height = 28;
-            this.dataGridView2.Size = new System.Drawing.Size(932, 351);
+            this.dataGridView2.Size = new System.Drawing.Size(1016, 351);
             this.dataGridView2.TabIndex = 10;
             this.dataGridView2.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellClick);
-
             // 
             // Column1a
             // 
@@ -518,7 +543,6 @@
             this.Column1a.Name = "Column1a";
             this.Column1a.ReadOnly = true;
             this.Column1a.Width = 125;
-
             // 
             // Column2a
             // 
@@ -555,10 +579,10 @@
             this.Column5a.Name = "Column5a";
             this.Column5a.ReadOnly = true;
             this.Column5a.Width = 125;
-
             // 
             // dataGridView3
             // 
+            this.dataGridView3.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView3.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1b,
@@ -573,7 +597,6 @@
             this.dataGridView3.TabIndex = 29;
             this.dataGridView3.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView3_CellClick);
             this.dataGridView3.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView3_CellContentClick);
-
             // 
             // Column1b
             // 
@@ -583,7 +606,6 @@
             this.Column1b.Name = "Column1b";
             this.Column1b.ReadOnly = true;
             this.Column1b.Width = 125;
-
             // 
             // Column2b
             // 
@@ -611,7 +633,6 @@
             this.Column4b.Name = "Column4b";
             this.Column4b.ReadOnly = true;
             this.Column4b.Width = 125;
-
             // 
             // dataGridView4
             // 
@@ -635,8 +656,6 @@
             this.dataGridView4.TabIndex = 10;
             this.dataGridView4.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView4_CellClick);
             this.dataGridView4.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView4_CellContentClick);
-
-
             // 
             // Column1c
             // 
@@ -646,7 +665,6 @@
             this.Column1c.Name = "Column1c";
             this.Column1c.ReadOnly = true;
             this.Column1c.Width = 125;
-
             // 
             // Column2c
             // 
@@ -683,7 +701,6 @@
             this.Column5c.Name = "Column5c";
             this.Column5c.ReadOnly = true;
             this.Column5c.Width = 125;
-
             // 
             // Column6c
             // 
@@ -693,7 +710,6 @@
             this.Column6c.Name = "Column6c";
             this.Column6c.ReadOnly = true;
             this.Column6c.Width = 125;
-
             // 
             // Column7c
             // 
@@ -721,22 +737,6 @@
             this.Column9c.Name = "Column9c";
             this.Column9c.ReadOnly = true;
             this.Column9c.Width = 125;
-
-            // 
-            // txtReadercode
-            // 
-            this.txtReadercode.Location = new System.Drawing.Point(182, 27);
-            this.txtReadercode.Name = "txtReadercode";
-            this.txtReadercode.Size = new System.Drawing.Size(277, 26);
-            this.txtReadercode.TabIndex = 19;
-            this.txtReadercode.TextChanged += new System.EventHandler(this.txtReadercode_TextChanged);
-            // 
-            // txtBookcode
-            // 
-            this.txtBookcode.Location = new System.Drawing.Point(182, 107);
-            this.txtBookcode.Name = "txtBookcode";
-            this.txtBookcode.Size = new System.Drawing.Size(277, 26);
-            this.txtBookcode.TabIndex = 20;
             // 
             // UpdateBorrowingInforamtion
             // 
@@ -835,5 +835,6 @@
 
         private System.Windows.Forms.TextBox txtReadercode;
         private System.Windows.Forms.TextBox txtBookcode;
+        private System.Windows.Forms.Button button1;
     }
 }

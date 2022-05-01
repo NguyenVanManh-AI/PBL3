@@ -53,8 +53,8 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.txtSearch2 = new System.Windows.Forms.TextBox();
             this.btnSearch2 = new System.Windows.Forms.Button();
+            this.txtSearch2 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -71,7 +71,7 @@
             "Nam",
             "Nu"});
             this.cboGioiTinh.Location = new System.Drawing.Point(117, 126);
-            this.cboGioiTinh.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cboGioiTinh.Margin = new System.Windows.Forms.Padding(4);
             this.cboGioiTinh.Name = "cboGioiTinh";
             this.cboGioiTinh.Size = new System.Drawing.Size(252, 28);
             this.cboGioiTinh.TabIndex = 3;
@@ -87,7 +87,7 @@
             this.Column4,
             this.Column5});
             this.dataGridView1.Location = new System.Drawing.Point(12, 114);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.Size = new System.Drawing.Size(819, 400);
@@ -137,7 +137,7 @@
             // DiaChi
             // 
             this.DiaChi.Location = new System.Drawing.Point(117, 166);
-            this.DiaChi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.DiaChi.Margin = new System.Windows.Forms.Padding(4);
             this.DiaChi.Multiline = true;
             this.DiaChi.Name = "DiaChi";
             this.DiaChi.Size = new System.Drawing.Size(252, 26);
@@ -158,9 +158,9 @@
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.ForeColor = System.Drawing.Color.DodgerBlue;
             this.groupBox1.Location = new System.Drawing.Point(854, 114);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox1.Size = new System.Drawing.Size(411, 400);
             this.groupBox1.TabIndex = 16;
             this.groupBox1.TabStop = false;
@@ -169,7 +169,7 @@
             // txtNote
             // 
             this.txtNote.Location = new System.Drawing.Point(117, 202);
-            this.txtNote.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNote.Margin = new System.Windows.Forms.Padding(4);
             this.txtNote.Name = "txtNote";
             this.txtNote.Size = new System.Drawing.Size(252, 162);
             this.txtNote.TabIndex = 5;
@@ -188,7 +188,7 @@
             // TenTacGia
             // 
             this.TenTacGia.Location = new System.Drawing.Point(117, 89);
-            this.TenTacGia.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TenTacGia.Margin = new System.Windows.Forms.Padding(4);
             this.TenTacGia.Name = "TenTacGia";
             this.TenTacGia.Size = new System.Drawing.Size(252, 26);
             this.TenTacGia.TabIndex = 2;
@@ -196,7 +196,7 @@
             // MaTacGia
             // 
             this.MaTacGia.Location = new System.Drawing.Point(117, 51);
-            this.MaTacGia.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.MaTacGia.Margin = new System.Windows.Forms.Padding(4);
             this.MaTacGia.Name = "MaTacGia";
             this.MaTacGia.Size = new System.Drawing.Size(252, 26);
             this.MaTacGia.TabIndex = 1;
@@ -246,7 +246,7 @@
             this.btAdd.BackColor = System.Drawing.Color.White;
             this.btAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btAdd.Location = new System.Drawing.Point(37, 39);
-            this.btAdd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btAdd.Margin = new System.Windows.Forms.Padding(4);
             this.btAdd.Name = "btAdd";
             this.btAdd.Size = new System.Drawing.Size(99, 32);
             this.btAdd.TabIndex = 23;
@@ -259,7 +259,7 @@
             this.btDelete.BackColor = System.Drawing.Color.White;
             this.btDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btDelete.Location = new System.Drawing.Point(279, 39);
-            this.btDelete.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btDelete.Margin = new System.Windows.Forms.Padding(4);
             this.btDelete.Name = "btDelete";
             this.btDelete.Size = new System.Drawing.Size(99, 32);
             this.btDelete.TabIndex = 25;
@@ -272,7 +272,7 @@
             this.btEdit.BackColor = System.Drawing.Color.White;
             this.btEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btEdit.Location = new System.Drawing.Point(159, 39);
-            this.btEdit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btEdit.Margin = new System.Windows.Forms.Padding(4);
             this.btEdit.Name = "btEdit";
             this.btEdit.Size = new System.Drawing.Size(99, 32);
             this.btEdit.TabIndex = 24;
@@ -297,9 +297,9 @@
             this.groupBox2.BackColor = System.Drawing.Color.Transparent;
             this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Location = new System.Drawing.Point(12, 11);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox2.Size = new System.Drawing.Size(1152, 80);
             this.groupBox2.TabIndex = 23;
             this.groupBox2.TabStop = false;
@@ -312,9 +312,9 @@
             this.groupBox3.Controls.Add(this.btDelete);
             this.groupBox3.ForeColor = System.Drawing.Color.DodgerBlue;
             this.groupBox3.Location = new System.Drawing.Point(854, 539);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox3.Size = new System.Drawing.Size(408, 95);
             this.groupBox3.TabIndex = 26;
             this.groupBox3.TabStop = false;
@@ -333,15 +333,6 @@
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Search";
             // 
-            // txtSearch2
-            // 
-            this.txtSearch2.Location = new System.Drawing.Point(31, 39);
-            this.txtSearch2.Margin = new System.Windows.Forms.Padding(4);
-            this.txtSearch2.Multiline = true;
-            this.txtSearch2.Name = "txtSearch2";
-            this.txtSearch2.Size = new System.Drawing.Size(608, 26);
-            this.txtSearch2.TabIndex = 22;
-            // 
             // btnSearch2
             // 
             this.btnSearch2.BackColor = System.Drawing.Color.White;
@@ -356,6 +347,16 @@
             this.btnSearch2.UseVisualStyleBackColor = false;
             this.btnSearch2.Click += new System.EventHandler(this.btnSearch2_Click);
             // 
+            // txtSearch2
+            // 
+            this.txtSearch2.Location = new System.Drawing.Point(31, 39);
+            this.txtSearch2.Margin = new System.Windows.Forms.Padding(4);
+            this.txtSearch2.Multiline = true;
+            this.txtSearch2.Name = "txtSearch2";
+            this.txtSearch2.Size = new System.Drawing.Size(608, 26);
+            this.txtSearch2.TabIndex = 22;
+            this.txtSearch2.TextChanged += new System.EventHandler(this.txtSearch2_TextChanged);
+            // 
             // UpdateAuthorInformation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -369,7 +370,7 @@
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.groupBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "UpdateAuthorInformation";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Update Author Information";

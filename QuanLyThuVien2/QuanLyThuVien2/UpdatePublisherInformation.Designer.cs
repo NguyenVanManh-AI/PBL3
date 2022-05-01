@@ -53,8 +53,8 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.txtSearch2 = new System.Windows.Forms.TextBox();
             this.btnSearch2 = new System.Windows.Forms.Button();
+            this.txtSearch2 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -326,14 +326,6 @@
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Search";
             // 
-            // txtSearch2
-            // 
-            this.txtSearch2.Location = new System.Drawing.Point(7, 60);
-            this.txtSearch2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtSearch2.Name = "txtSearch2";
-            this.txtSearch2.Size = new System.Drawing.Size(609, 26);
-            this.txtSearch2.TabIndex = 20;
-            // 
             // btnSearch2
             // 
             this.btnSearch2.BackColor = System.Drawing.Color.White;
@@ -346,6 +338,15 @@
             this.btnSearch2.Text = "Search";
             this.btnSearch2.UseVisualStyleBackColor = false;
             this.btnSearch2.Click += new System.EventHandler(this.btnSearch2_Click);
+            // 
+            // txtSearch2
+            // 
+            this.txtSearch2.Location = new System.Drawing.Point(7, 60);
+            this.txtSearch2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtSearch2.Name = "txtSearch2";
+            this.txtSearch2.Size = new System.Drawing.Size(609, 26);
+            this.txtSearch2.TabIndex = 20;
+            this.txtSearch2.TextChanged += new System.EventHandler(this.txtSearch2_TextChanged);
             // 
             // UpdatePublisherInformation
             // 
