@@ -624,6 +624,7 @@
             this.txtSearch2.Name = "txtSearch2";
             this.txtSearch2.Size = new System.Drawing.Size(726, 26);
             this.txtSearch2.TabIndex = 13;
+            this.txtSearch2.TextChanged += new System.EventHandler(this.txtSearch2_TextChanged);
             // 
             // btnSearch2
             // 

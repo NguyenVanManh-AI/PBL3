@@ -87,6 +87,19 @@ namespace QuanLyThuVien2
 
         }
 
+        private void txtSearch2_TextChanged(object sender, EventArgs e)
+        {
+            cls.LoadData2DataGridView(dataGridView1, "select * from tblNhanVien where taikhoan like '%" + txtSearch2.Text + "%' OR QUYENHAN like '%" + txtSearch2.Text + "%' OR tennv like '%" + txtSearch2.Text + "%' OR diachi like '%" + txtSearch2.Text + "%' OR dienthoai like'%" + txtSearch2.Text + "%' OR email like '%" + txtSearch2.Text + "%' OR chucvu like '%" + txtSearch2.Text + "%' OR tuoi like '%" + txtSearch2.Text + "%'");
+            txtTenTaiKhoan.Text = "";
+            txtAr.Text = "";
+            txtTenNhanVien.Text = "";
+            txtDiaChi.Text = "";
+            txtDienThoai.Text = "";
+            txtEmail.Text = "";
+            txtChucVu.Text = "";
+            txtTuoi.Text = "";
+        }
+
         private void groupBox2_Enter(object sender, EventArgs e)
         {
 

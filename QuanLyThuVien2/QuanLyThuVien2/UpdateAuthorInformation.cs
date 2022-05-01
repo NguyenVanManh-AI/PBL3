@@ -134,6 +134,11 @@ namespace QuanLyThuVien2
             cls.LoadData2DataGridView(dataGridView1, "select * from tblTacGia where TENTG like '%" + txtSearch2.Text + "%' OR DIACHI like '%" + txtSearch2.Text + "%'");
         }
 
+        private void txtSearch2_TextChanged(object sender, EventArgs e)
+        {
+            cls.LoadData2DataGridView(dataGridView1, "select * from tblTacGia where TENTG like '%" + txtSearch2.Text + "%' OR DIACHI like '%" + txtSearch2.Text + "%'");
+        }
+
         string matg;
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {

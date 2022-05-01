@@ -47,8 +47,8 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.Search = new System.Windows.Forms.GroupBox();
-            this.txtSearch2 = new System.Windows.Forms.TextBox();
             this.btnSearch2 = new System.Windows.Forms.Button();
+            this.txtSearch2 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -65,7 +65,7 @@
             this.Column2,
             this.Column3});
             this.dataGridView1.Location = new System.Drawing.Point(12, 99);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.Size = new System.Drawing.Size(659, 264);
@@ -102,7 +102,7 @@
             this.btAdd.BackColor = System.Drawing.Color.White;
             this.btAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btAdd.Location = new System.Drawing.Point(8, 28);
-            this.btAdd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btAdd.Margin = new System.Windows.Forms.Padding(4);
             this.btAdd.Name = "btAdd";
             this.btAdd.Size = new System.Drawing.Size(108, 34);
             this.btAdd.TabIndex = 18;
@@ -115,7 +115,7 @@
             this.btDelete.BackColor = System.Drawing.Color.White;
             this.btDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btDelete.Location = new System.Drawing.Point(240, 27);
-            this.btDelete.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btDelete.Margin = new System.Windows.Forms.Padding(4);
             this.btDelete.Name = "btDelete";
             this.btDelete.Size = new System.Drawing.Size(108, 34);
             this.btDelete.TabIndex = 20;
@@ -128,7 +128,7 @@
             this.btEdit.BackColor = System.Drawing.Color.White;
             this.btEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btEdit.Location = new System.Drawing.Point(124, 27);
-            this.btEdit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btEdit.Margin = new System.Windows.Forms.Padding(4);
             this.btEdit.Name = "btEdit";
             this.btEdit.Size = new System.Drawing.Size(108, 34);
             this.btEdit.TabIndex = 19;
@@ -147,9 +147,9 @@
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.ForeColor = System.Drawing.Color.DodgerBlue;
             this.groupBox1.Location = new System.Drawing.Point(692, 112);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox1.Size = new System.Drawing.Size(370, 251);
             this.groupBox1.TabIndex = 16;
             this.groupBox1.TabStop = false;
@@ -158,7 +158,7 @@
             // GhiChuLinhVuc
             // 
             this.GhiChuLinhVuc.Location = new System.Drawing.Point(135, 122);
-            this.GhiChuLinhVuc.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.GhiChuLinhVuc.Margin = new System.Windows.Forms.Padding(4);
             this.GhiChuLinhVuc.Name = "GhiChuLinhVuc";
             this.GhiChuLinhVuc.Size = new System.Drawing.Size(218, 103);
             this.GhiChuLinhVuc.TabIndex = 3;
@@ -167,7 +167,7 @@
             // TenLinhVuc
             // 
             this.TenLinhVuc.Location = new System.Drawing.Point(135, 76);
-            this.TenLinhVuc.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TenLinhVuc.Margin = new System.Windows.Forms.Padding(4);
             this.TenLinhVuc.Name = "TenLinhVuc";
             this.TenLinhVuc.Size = new System.Drawing.Size(218, 26);
             this.TenLinhVuc.TabIndex = 2;
@@ -175,7 +175,7 @@
             // MaLinhVuc
             // 
             this.MaLinhVuc.Location = new System.Drawing.Point(135, 31);
-            this.MaLinhVuc.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.MaLinhVuc.Margin = new System.Windows.Forms.Padding(4);
             this.MaLinhVuc.Name = "MaLinhVuc";
             this.MaLinhVuc.Size = new System.Drawing.Size(218, 26);
             this.MaLinhVuc.TabIndex = 1;
@@ -231,9 +231,9 @@
             this.groupBox2.Controls.Add(this.btDelete);
             this.groupBox2.ForeColor = System.Drawing.Color.DodgerBlue;
             this.groupBox2.Location = new System.Drawing.Point(690, 372);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox2.Size = new System.Drawing.Size(372, 100);
             this.groupBox2.TabIndex = 23;
             this.groupBox2.TabStop = false;
@@ -244,9 +244,9 @@
             this.groupBox3.BackColor = System.Drawing.Color.Transparent;
             this.groupBox3.Controls.Add(this.label1);
             this.groupBox3.Location = new System.Drawing.Point(12, 11);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox3.Size = new System.Drawing.Size(994, 80);
             this.groupBox3.TabIndex = 24;
             this.groupBox3.TabStop = false;
@@ -264,14 +264,6 @@
             this.Search.TabStop = false;
             this.Search.Text = "Search";
             // 
-            // txtSearch2
-            // 
-            this.txtSearch2.Location = new System.Drawing.Point(20, 36);
-            this.txtSearch2.Margin = new System.Windows.Forms.Padding(4);
-            this.txtSearch2.Name = "txtSearch2";
-            this.txtSearch2.Size = new System.Drawing.Size(503, 26);
-            this.txtSearch2.TabIndex = 4;
-            // 
             // btnSearch2
             // 
             this.btnSearch2.BackColor = System.Drawing.Color.White;
@@ -286,6 +278,15 @@
             this.btnSearch2.UseVisualStyleBackColor = false;
             this.btnSearch2.Click += new System.EventHandler(this.btnSearch2_Click);
             // 
+            // txtSearch2
+            // 
+            this.txtSearch2.Location = new System.Drawing.Point(20, 36);
+            this.txtSearch2.Margin = new System.Windows.Forms.Padding(4);
+            this.txtSearch2.Name = "txtSearch2";
+            this.txtSearch2.Size = new System.Drawing.Size(503, 26);
+            this.txtSearch2.TabIndex = 4;
+            this.txtSearch2.TextChanged += new System.EventHandler(this.txtSearch2_TextChanged);
+            // 
             // UpdateFieldInformation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -299,7 +300,7 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dataGridView1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "UpdateFieldInformation";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Update Field Information";

@@ -468,6 +468,11 @@ namespace QuanLyThuVien2
         }
         public string undoMS, undoTS, undoMaLV, undoNXB, undoST, undoSL, undoSSH, undoGHICHU, undoNN, undoMaNXB, undoMaTG;
 
+        private void txtSearch2_TextChanged(object sender, EventArgs e)
+        {
+            cls.LoadData2DataGridView(dataGridView1, "select s.MASACH,s.TENSACH,s.MATG,s.MANXB,s.MaLv,lv.TenLv,nxb.TENNXB,tg.TENTG,s.NAMXB,s.SOTRANG,s.SOLUONG,s.SOSACHHONG,s.NGAYNHAP,s.GHICHU from tblSach as s left join tblLinhVuc as lv on s.MaLv = lv.MaLv left join tblNXB as nxb on s.MANXB = nxb.MANXB left join tblTacGia as tg on s.MATG = tg.MATG where s.MaLv like '%" + txtSearch2.Text + "%' OR s.TENSACH like '%" + txtSearch2.Text + "%'  OR lv.TenLv like '%" + txtSearch2.Text + "%' OR tg.TENTG like '%" + txtSearch2.Text + "%' OR nxb.TENNXB like '%" + txtSearch2.Text + "%'");
+        }
+
         private void cboMANXB_SelectedIndexChanged_1(object sender, EventArgs e)
         {
             object Q = layGiaTri("select MANXB  from tblNXB where  TENNXB = '" + cboTenNXB.Text + "'");

@@ -416,6 +416,7 @@
             this.txtSearch2.Name = "txtSearch2";
             this.txtSearch2.Size = new System.Drawing.Size(817, 26);
             this.txtSearch2.TabIndex = 19;
+            this.txtSearch2.TextChanged += new System.EventHandler(this.txtSearch2_TextChanged);
             // 
             // dataGridView1
             // 

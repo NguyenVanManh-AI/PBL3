@@ -43,6 +43,7 @@ namespace QuanLyThuVien2
 
         private void UpdateLoanSlip_Load(object sender, EventArgs e)
         {
+            button1.Hide();
             cls.LoadData2DataGridView(dataGridView1, "select *  from tblDocGia ORDER BY MADG");
             //cls.LoadData2DataGridView(dataGridView1, "SELECT * FROM tblDocGia AS dg Left JOIN tblPhieuMuon AS pm ON dg.MADG = pm.MADG");
             //cls.LoadData2DataGridView(dataGridView1, "SELECT * FROM tblPhieuMuon AS pm Left JOIN tblDocGia AS dg ON dg.MADG = pm.MADG Left JOIN tblSach AS sa ON pm.MASACH = sa.MASACH ORDER BY pm.MADG");
@@ -325,6 +326,15 @@ namespace QuanLyThuVien2
         }
 
         private void btnSearch2_Click(object sender, EventArgs e)
+        {
+            dataGridView2.Hide();
+            dataGridView1.Show();
+            cls.LoadData3DataGridView(dataGridView1, "select * from tblDocGia where MADG like '%" + txtSearch2.Text + "%' OR HOTEN like '%" + txtSearch2.Text + "%' OR LOP like '%" + txtSearch2.Text + "%' OR DIACHI like '%" + txtSearch2.Text + "%' OR EMAIL like '%" + txtSearch2.Text + "%'");
+        }
+
+         
+
+        private void txtSearch2_TextChanged(object sender, EventArgs e)
         {
             dataGridView2.Hide();
             dataGridView1.Show();
