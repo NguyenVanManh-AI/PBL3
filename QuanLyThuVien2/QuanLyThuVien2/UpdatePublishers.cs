@@ -66,7 +66,11 @@ namespace QuanLyThuVien2
         private void btAdd_Click(object sender, EventArgs e)
         {
             bug = 0;
-            
+            if (txtId.Text != "")
+            {
+                MessageBox.Show("Id is already exist!");
+                bug++;
+            }
             if (txtName.Text == "")
             {
                 MessageBox.Show("Publisher's Name can't be left blank!");

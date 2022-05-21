@@ -44,7 +44,7 @@ namespace QuanLyThuVien2
             string dd = input.Substring(0, 2);
             string mm = input.Substring(3, 2);
             string yyyy = input.Substring(6, 4);
-            input = mm + "-" + dd + "-" + yyyy;
+            input = mm + "/" + dd + "/" + yyyy;
             return input;
         }
 
@@ -132,6 +132,11 @@ namespace QuanLyThuVien2
         private void btnThem_Click(object sender, EventArgs e)
         {
             int bug = 0;
+            if(txtId.Text != "")
+            {
+                MessageBox.Show("Id is already exist!");
+                bug++;
+            }
             if(txtFName.Text == "")
             {
                 MessageBox.Show("First Name cann't be left blank");
@@ -272,7 +277,8 @@ namespace QuanLyThuVien2
                     string gender = "";
                     if (cbbGender.Text == "Nam") gender = "True";
                     else gender = "False";
-                    string strUpdate = "update readers set first_name =N'" + txtFName.Text + "',last_name =N'" + txtLName.Text + "',gender='" + gender + "',date_of_birth='" + LuuNgay(maskedDOB.Text) + "',email='" + txtEmail.Text + "',identity_card_number='" + txtCard.Text + "',phone='" + txtPhone.Text + "',address=N'" + txtAddress.Text + "',updated_at='" + ChangeDate(DateTime.Now.ToString()) + "' where id ='" + txtId.Text + "'";
+                    string strUpdate = "update readers set first_name =N'" + txtFName.Text + "',last_name =N'" + txtLName.Text + "',gender='" + gender + "',date_of_birth='" + maskedDOB.Text + "',email='" + txtEmail.Text + "',identity_card_number='" + txtCard.Text + "',phone='" + txtPhone.Text + "',address=N'" + txtAddress.Text + "',updated_at='" + ChangeDate(DateTime.Now.ToString()) + "' where id ='" + txtId.Text + "'";
+                    MessageBox.Show(strUpdate);
                     cls.ThucThiSQLTheoPKN(strUpdate);
                     cls.LoadData2DataGridView(dataGridView1, "select * from readers");
                     MessageBox.Show("Edit successfully!");

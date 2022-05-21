@@ -98,6 +98,12 @@
     <Compile Include="BorrowDetails.Designer.cs">
       <DependentUpon>BorrowDetails.cs</DependentUpon>
     </Compile>
+    <Compile Include="UpdateBooks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateBooks.Designer.cs">
+      <DependentUpon>UpdateBooks.cs</DependentUpon>
+    </Compile>
     <Compile Include="UpdateBookTitle.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -161,12 +167,6 @@
     <Compile Include="UpdateReaders.Designer.cs">
       <DependentUpon>UpdateReaders.cs</DependentUpon>
     </Compile>
-    <Compile Include="UpdatesBook.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UpdatesBook.Designer.cs">
-      <DependentUpon>UpdatesBook.cs</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="ForgotPassword.resx">
       <DependentUpon>ForgotPassword.cs</DependentUpon>
     </EmbeddedResource>
@@ -190,6 +190,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="BorrowDetails.resx">
       <DependentUpon>BorrowDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateBooks.resx">
+      <DependentUpon>UpdateBooks.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UpdateBookTitle.resx">
       <DependentUpon>UpdateBookTitle.cs</DependentUpon>
@@ -230,9 +233,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UpdateReaders.resx">
       <DependentUpon>UpdateReaders.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UpdatesBook.resx">
-      <DependentUpon>UpdatesBook.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
