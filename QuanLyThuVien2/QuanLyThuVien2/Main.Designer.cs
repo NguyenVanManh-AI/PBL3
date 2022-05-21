@@ -73,8 +73,6 @@
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.btSI = new System.Windows.Forms.Button();
             this.menuStrip2 = new System.Windows.Forms.MenuStrip();
-            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.toolBook2 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator18 = new System.Windows.Forms.ToolStripSeparator();
             this.toolReader2 = new System.Windows.Forms.ToolStripMenuItem();
@@ -187,7 +185,6 @@
             // menuStrip1
             // 
             this.menuStrip1.BackColor = System.Drawing.SystemColors.Window;
-            this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.dropdownSystemManagement,
@@ -197,7 +194,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(8, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(982, 36);
+            this.menuStrip1.Size = new System.Drawing.Size(982, 33);
             this.menuStrip1.TabIndex = 2;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -219,7 +216,7 @@
             this.dropdownSystemManagement.ForeColor = System.Drawing.SystemColors.Highlight;
             this.dropdownSystemManagement.Image = global::QuanLyThuVien2.Properties.Resources.system;
             this.dropdownSystemManagement.Name = "dropdownSystemManagement";
-            this.dropdownSystemManagement.Size = new System.Drawing.Size(231, 32);
+            this.dropdownSystemManagement.Size = new System.Drawing.Size(231, 29);
             this.dropdownSystemManagement.Text = "System Management";
             this.dropdownSystemManagement.Visible = false;
             // 
@@ -299,27 +296,27 @@
             this.dropdownReport.ForeColor = System.Drawing.SystemColors.Highlight;
             this.dropdownReport.Image = global::QuanLyThuVien2.Properties.Resources.report;
             this.dropdownReport.Name = "dropdownReport";
-            this.dropdownReport.Size = new System.Drawing.Size(111, 32);
+            this.dropdownReport.Size = new System.Drawing.Size(111, 29);
             this.dropdownReport.Text = "Report";
             // 
             // toolBookStatus
             // 
             this.toolBookStatus.ForeColor = System.Drawing.Color.DodgerBlue;
             this.toolBookStatus.Name = "toolBookStatus";
-            this.toolBookStatus.Size = new System.Drawing.Size(270, 34);
+            this.toolBookStatus.Size = new System.Drawing.Size(240, 34);
             this.toolBookStatus.Text = "Book Status";
             this.toolBookStatus.Click += new System.EventHandler(this.BaoCaoTinhTrangSach);
             // 
             // toolStripSeparator6
             // 
             this.toolStripSeparator6.Name = "toolStripSeparator6";
-            this.toolStripSeparator6.Size = new System.Drawing.Size(267, 6);
+            this.toolStripSeparator6.Size = new System.Drawing.Size(237, 6);
             // 
             // toolReadersStatus
             // 
             this.toolReadersStatus.ForeColor = System.Drawing.Color.DodgerBlue;
             this.toolReadersStatus.Name = "toolReadersStatus";
-            this.toolReadersStatus.Size = new System.Drawing.Size(270, 34);
+            this.toolReadersStatus.Size = new System.Drawing.Size(240, 34);
             this.toolReadersStatus.Text = "Readers Status";
             this.toolReadersStatus.Click += new System.EventHandler(this.BaoCaoDocGia);
             // 
@@ -329,7 +326,7 @@
             this.buttonHelp.ForeColor = System.Drawing.SystemColors.Highlight;
             this.buttonHelp.Image = global::QuanLyThuVien2.Properties.Resources.help;
             this.buttonHelp.Name = "buttonHelp";
-            this.buttonHelp.Size = new System.Drawing.Size(92, 32);
+            this.buttonHelp.Size = new System.Drawing.Size(92, 29);
             this.buttonHelp.Text = "Help";
             this.buttonHelp.Click += new System.EventHandler(this.buttonHelp_Click);
             // 
@@ -339,7 +336,7 @@
             this.buttonExit.ForeColor = System.Drawing.SystemColors.Highlight;
             this.buttonExit.Image = global::QuanLyThuVien2.Properties.Resources.exit;
             this.buttonExit.Name = "buttonExit";
-            this.buttonExit.Size = new System.Drawing.Size(84, 32);
+            this.buttonExit.Size = new System.Drawing.Size(84, 29);
             this.buttonExit.Text = "Exit";
             this.buttonExit.Click += new System.EventHandler(this.ThoatChuongTrinh);
             // 
@@ -439,38 +436,20 @@
             // menuStrip2
             // 
             this.menuStrip2.BackColor = System.Drawing.SystemColors.Window;
-            this.menuStrip2.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.menuStrip2.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.menuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripMenuItem1,
             this.toolBook2,
             this.toolReader2,
             this.toolAuthor2,
             this.toolField2,
             this.toolPublisher2,
             this.toolLibrary2});
-            this.menuStrip2.Location = new System.Drawing.Point(0, 36);
+            this.menuStrip2.Location = new System.Drawing.Point(0, 33);
             this.menuStrip2.Name = "menuStrip2";
             this.menuStrip2.Padding = new System.Windows.Forms.Padding(8, 2, 0, 2);
-            this.menuStrip2.Size = new System.Drawing.Size(982, 36);
+            this.menuStrip2.Size = new System.Drawing.Size(982, 33);
             this.menuStrip2.TabIndex = 9;
             this.menuStrip2.Text = "menuStrip2";
-            // 
-            // toolStripMenuItem1
-            // 
-            this.toolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripSeparator4});
-            this.toolStripMenuItem1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.toolStripMenuItem1.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.toolStripMenuItem1.Image = global::QuanLyThuVien2.Properties.Resources.Google_Play_Books_icon;
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(104, 32);
-            this.toolStripMenuItem1.Text = "Books";
-            // 
-            // toolStripSeparator4
-            // 
-            this.toolStripSeparator4.Name = "toolStripSeparator4";
-            this.toolStripSeparator4.Size = new System.Drawing.Size(267, 6);
             // 
             // toolBook2
             // 
@@ -480,7 +459,7 @@
             this.toolBook2.ForeColor = System.Drawing.SystemColors.Highlight;
             this.toolBook2.Image = global::QuanLyThuVien2.Properties.Resources.open_book;
             this.toolBook2.Name = "toolBook2";
-            this.toolBook2.Size = new System.Drawing.Size(147, 32);
+            this.toolBook2.Size = new System.Drawing.Size(147, 29);
             this.toolBook2.Text = "Book Titles";
             this.toolBook2.Click += new System.EventHandler(this.toolStripMenuItem21_Click);
             // 
@@ -495,7 +474,7 @@
             this.toolReader2.ForeColor = System.Drawing.SystemColors.Highlight;
             this.toolReader2.Image = global::QuanLyThuVien2.Properties.Resources._4213477;
             this.toolReader2.Name = "toolReader2";
-            this.toolReader2.Size = new System.Drawing.Size(120, 32);
+            this.toolReader2.Size = new System.Drawing.Size(120, 29);
             this.toolReader2.Text = "Readers";
             this.toolReader2.Click += new System.EventHandler(this.toolStripMenuItem24_Click);
             // 
@@ -505,7 +484,7 @@
             this.toolAuthor2.ForeColor = System.Drawing.SystemColors.Highlight;
             this.toolAuthor2.Image = global::QuanLyThuVien2.Properties.Resources._1995562;
             this.toolAuthor2.Name = "toolAuthor2";
-            this.toolAuthor2.Size = new System.Drawing.Size(120, 32);
+            this.toolAuthor2.Size = new System.Drawing.Size(120, 29);
             this.toolAuthor2.Text = "Authors";
             this.toolAuthor2.Click += new System.EventHandler(this.toolStripMenuItem25_Click);
             // 
@@ -515,7 +494,7 @@
             this.toolField2.ForeColor = System.Drawing.Color.DodgerBlue;
             this.toolField2.Image = global::QuanLyThuVien2.Properties.Resources._126795;
             this.toolField2.Name = "toolField2";
-            this.toolField2.Size = new System.Drawing.Size(138, 32);
+            this.toolField2.Size = new System.Drawing.Size(138, 29);
             this.toolField2.Text = "Categorys";
             this.toolField2.Click += new System.EventHandler(this.toolStripMenuItem26_Click);
             // 
@@ -525,7 +504,7 @@
             this.toolPublisher2.ForeColor = System.Drawing.Color.DodgerBlue;
             this.toolPublisher2.Image = global::QuanLyThuVien2.Properties.Resources.printer;
             this.toolPublisher2.Name = "toolPublisher2";
-            this.toolPublisher2.Size = new System.Drawing.Size(139, 32);
+            this.toolPublisher2.Size = new System.Drawing.Size(139, 29);
             this.toolPublisher2.Text = "Publishers";
             this.toolPublisher2.Click += new System.EventHandler(this.toolStripMenuItem27_Click);
             // 
@@ -535,7 +514,7 @@
             this.toolLibrary2.ForeColor = System.Drawing.Color.DodgerBlue;
             this.toolLibrary2.Image = global::QuanLyThuVien2.Properties.Resources.images;
             this.toolLibrary2.Name = "toolLibrary2";
-            this.toolLibrary2.Size = new System.Drawing.Size(122, 32);
+            this.toolLibrary2.Size = new System.Drawing.Size(122, 29);
             this.toolLibrary2.Text = "Borrows";
             this.toolLibrary2.Click += new System.EventHandler(this.libraryCardToolStripMenuItem_Click);
             // 
@@ -631,8 +610,6 @@
         private System.Windows.Forms.ToolStripMenuItem toolLibrary2;
         private System.Windows.Forms.PictureBox pictureBoxEye;
         private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
         //b  private System.Windows.Forms.GroupBox groupBox3;
     }
 }

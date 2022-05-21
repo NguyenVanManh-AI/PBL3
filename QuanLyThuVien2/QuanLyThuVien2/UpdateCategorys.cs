@@ -47,6 +47,10 @@ namespace QuanLyThuVien2
         private void btAdd_Click(object sender, EventArgs e)
         {
                     bug = 0;
+                    if(txtId.Text != "")
+                    {
+                        MessageBox.Show("Id is alredy exist!");
+                    }
                     if (txtId.Text != "")
                     {
                         MessageBox.Show("Category's Id is already exist!");

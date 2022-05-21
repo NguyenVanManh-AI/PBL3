@@ -62,7 +62,10 @@ namespace QuanLyThuVien2
         {
             bug = 0;
             string datetime = DateTime.Now.ToString();
-
+            if (txtId.Text != "")
+            {
+                MessageBox.Show("id is already exist!");
+            }
             if (txtFName.Text == "")
             {
                 MessageBox.Show("First Name cann't be left blank !");

@@ -190,11 +190,7 @@ namespace QuanLyThuVien2
         }
 
 
-        private void CapNhatSach(object sender, EventArgs e)
-        {
-            UpdatesBook cnsach = new UpdatesBook();
-            cnsach.Show();
-        }
+        
 
         private void CapNhatNguoiDoc(object sender, EventArgs e)
         {
@@ -234,12 +230,7 @@ namespace QuanLyThuVien2
             hl.Show();
         }
 
-        private void Sach(object sender, EventArgs e)
-        {
-            UpdatesBook updatesBook = new UpdatesBook();
-            updatesBook.Show();
-        }
-
+       
         private void NguoiDoc(object sender, EventArgs e)
         {
             UpdateReaders rd = new UpdateReaders();
