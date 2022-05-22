@@ -29,15 +29,13 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.pictureBoxEye = new System.Windows.Forms.PictureBox();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.txtPassword = new System.Windows.Forms.TextBox();
+            this.txtUsername = new System.Windows.Forms.TextBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.dropdownSystemManagement = new System.Windows.Forms.ToolStripMenuItem();
             this.toolCheckEmployeeInformation = new System.Windows.Forms.ToolStripMenuItem();
@@ -80,6 +78,7 @@
             this.toolField2 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolPublisher2 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolLibrary2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnLogin = new Guna.UI2.WinForms.Guna2GradientButton();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxEye)).BeginInit();
             this.menuStrip1.SuspendLayout();
@@ -94,9 +93,8 @@
             this.groupBox1.Controls.Add(this.linkLabel1);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.textBox2);
-            this.groupBox1.Controls.Add(this.textBox1);
-            this.groupBox1.Controls.Add(this.button1);
+            this.groupBox1.Controls.Add(this.txtPassword);
+            this.groupBox1.Controls.Add(this.txtUsername);
             this.groupBox1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.SystemColors.Highlight;
             this.groupBox1.Location = new System.Drawing.Point(355, 145);
@@ -155,32 +153,21 @@
             this.label2.Text = "    User name";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
-            // textBox2
+            // txtPassword
             // 
-            this.textBox2.Location = new System.Drawing.Point(99, 99);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(147, 30);
-            this.textBox2.TabIndex = 2;
-            this.textBox2.Text = "admin999";
+            this.txtPassword.Location = new System.Drawing.Point(99, 99);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.Size = new System.Drawing.Size(147, 30);
+            this.txtPassword.TabIndex = 2;
+            this.txtPassword.Text = "vanmanh123";
             // 
-            // textBox1
+            // txtUsername
             // 
-            this.textBox1.Location = new System.Drawing.Point(99, 54);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(147, 30);
-            this.textBox1.TabIndex = 1;
-            this.textBox1.Text = "admin";
-            // 
-            // button1
-            // 
-            this.button1.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(109, 152);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(74, 27);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Login";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.txtUsername.Location = new System.Drawing.Point(99, 54);
+            this.txtUsername.Name = "txtUsername";
+            this.txtUsername.Size = new System.Drawing.Size(147, 30);
+            this.txtUsername.TabIndex = 1;
+            this.txtUsername.Text = "vanmanh123";
             // 
             // menuStrip1
             // 
@@ -466,7 +453,7 @@
             // toolStripSeparator18
             // 
             this.toolStripSeparator18.Name = "toolStripSeparator18";
-            this.toolStripSeparator18.Size = new System.Drawing.Size(267, 6);
+            this.toolStripSeparator18.Size = new System.Drawing.Size(87, 6);
             // 
             // toolReader2
             // 
@@ -518,15 +505,35 @@
             this.toolLibrary2.Text = "Borrows";
             this.toolLibrary2.Click += new System.EventHandler(this.libraryCardToolStripMenuItem_Click);
             // 
+            // btnLogin
+            // 
+            this.btnLogin.BorderColor = System.Drawing.Color.Red;
+            this.btnLogin.BorderRadius = 6;
+            this.btnLogin.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnLogin.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnLogin.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnLogin.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnLogin.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnLogin.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.btnLogin.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btnLogin.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnLogin.ForeColor = System.Drawing.Color.White;
+            this.btnLogin.Location = new System.Drawing.Point(590, 430);
+            this.btnLogin.Name = "btnLogin";
+            this.btnLogin.Size = new System.Drawing.Size(180, 45);
+            this.btnLogin.TabIndex = 10;
+            this.btnLogin.Text = "Login";
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
+            // 
             // Main
             // 
-            this.AcceptButton = this.button1;
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.BackgroundImage = global::LibraryManagement.Properties.Resources.Backgroundmain;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(982, 564);
+            this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.menuStrip2);
             this.Controls.Add(this.btSI);
             this.Controls.Add(this.dateTimePicker1);
@@ -535,7 +542,6 @@
             this.Controls.Add(this.menuStrip1);
             this.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Main";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -561,8 +567,7 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox txtUsername;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem dropdownSystemManagement;
         private System.Windows.Forms.ToolStripMenuItem toolUpdateStaff;
@@ -609,7 +614,8 @@
         private System.Windows.Forms.ToolStripMenuItem toolPublisher2;
         private System.Windows.Forms.ToolStripMenuItem toolLibrary2;
         private System.Windows.Forms.PictureBox pictureBoxEye;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtPassword;
+        private Guna.UI2.WinForms.Guna2GradientButton btnLogin;
         //b  private System.Windows.Forms.GroupBox groupBox3;
     }
 }

@@ -11,7 +11,7 @@ namespace DAL
 {
     public class DataBase
     {
-        private static string stringConnectSql = @"Data Source=DESKTOP-QCOSLTK\VANMANH;Initial Catalog=cp;Integrated Security=True";
+        private static string stringConnectSql = @"Data Source=DESKTOP-QCOSLTK\VANMANH;Initial Catalog=System_Library;Integrated Security=True";
         public static SqlConnection GetSqlConnection()
         {
             return new SqlConnection(stringConnectSql);

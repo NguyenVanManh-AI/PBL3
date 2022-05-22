@@ -46,10 +46,10 @@ namespace LibraryManagement
             else
                     if (textBox2.Text != textBox3.Text)//kiểm tra mật khẩu mới và xác nhận mk co trung nha
                 MessageBox.Show("The new password does not match, please re-enter it");
-            else
-                        if (hasPass != Main.checkMatKhau)//kiểm tra mật khẩu cũ
+            //else
+                        //if (hasPass != Main.checkMatKhau)//kiểm tra mật khẩu cũ
 
-                MessageBox.Show("The old password is wrong, please re - enter the password");
+                //MessageBox.Show("The old password is wrong, please re - enter the password");
             else
             {
                 try//thục hiên cau lệnh để thay đổi mật khẩu
@@ -63,8 +63,8 @@ namespace LibraryManagement
                     {
                         hasPass2 += item;
                     }
-                    string strUpdate = "Update employees set password='" + hasPass2 + "'where password='" + Main.checkMatKhau + "'";
-                    cls.ThucThiSQLTheoKetNoi(strUpdate);
+                    //string strUpdate = "Update employees set password='" + hasPass2 + "'where password='" + Main.checkMatKhau + "'";
+                    //cls.ThucThiSQLTheoKetNoi(strUpdate);
                     MessageBox.Show("Change password successfully");
                     this.Close();
                 }

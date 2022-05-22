@@ -21,7 +21,7 @@ namespace LibraryManagement
         Class.clsDatabase cls = new LibraryManagement.Class.clsDatabase();
         private void capnhatnhanvien_Load(object sender, EventArgs e)
         {
-            cls.LoadData2DataGridView(dataGridView1, "select first_name ,last_name, address , phone , email , date_of_birth , created_at , updated_at  from employees where username='" + Main.TenDN + "'");
+            //cls.LoadData2DataGridView(dataGridView1, "select first_name ,last_name, address , phone , email , date_of_birth , created_at , updated_at  from employees where username='" + Main.TenDN + "'");
             txtFirstName.Text = dataGridView1.Rows[0].Cells[0].Value.ToString();
             txtLastName.Text = dataGridView1.Rows[0].Cells[1].Value.ToString();
             txtPhone.Text = dataGridView1.Rows[0].Cells[3].Value.ToString();
@@ -218,9 +218,9 @@ namespace LibraryManagement
                                                 {
                                                     try
                                                     {
-                                                        string strUpdate = "update employees set first_name=N'" + txtFirstName.Text + "',last_name=N'" + txtLastName.Text + "',address=N'" + txtAddress.Text + "',phone='" + txtPhone.Text + "',email='" + txtEmail.Text + "',date_of_birth='" + LuuNgay(mkDateOfBirth.Text) + "',updated_at='" + Date_Now() + "' where username='" + Main.TenDN + "'";
+                                                        //string strUpdate = "update employees set first_name=N'" + txtFirstName.Text + "',last_name=N'" + txtLastName.Text + "',address=N'" + txtAddress.Text + "',phone='" + txtPhone.Text + "',email='" + txtEmail.Text + "',date_of_birth='" + LuuNgay(mkDateOfBirth.Text) + "',updated_at='" + Date_Now() + "' where username='" + Main.TenDN + "'";
                                                         //MessageBox.Show(strUpdate);
-                                                        cls.ThucThiSQLTheoKetNoi(strUpdate);
+                                                        //cls.ThucThiSQLTheoKetNoi(strUpdate);
                                                         MessageBox.Show("Edit Successful");
                                                     }
                                                     catch
@@ -248,7 +248,7 @@ namespace LibraryManagement
                     }
                 }
             }
-            cls.LoadData2DataGridView(dataGridView1, "select first_name ,last_name, address , phone , email , date_of_birth , created_at , updated_at  from employees where username='" + Main.TenDN + "'");
+            //cls.LoadData2DataGridView(dataGridView1, "select first_name ,last_name, address , phone , email , date_of_birth , created_at , updated_at  from employees where username='" + Main.TenDN + "'");
 
         }
 
