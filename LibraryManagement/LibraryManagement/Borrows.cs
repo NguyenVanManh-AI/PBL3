@@ -50,12 +50,12 @@ namespace LibraryManagement
             }
             catch { }
             // +
-            object Q = layGiaTri("SELECT id FROM employees WHERE username = '" + Main.TenDN + "'");
-            id = Convert.ToString(Q);
-            Q = layGiaTri("SELECT first_name FROM employees WHERE username = '" + Main.TenDN + "'");
-            first_name = Convert.ToString(Q);
-            Q = layGiaTri("SELECT last_name FROM employees WHERE username = '" + Main.TenDN + "'");
-            last_name = Convert.ToString(Q);
+            //object Q = layGiaTri("SELECT id FROM employees WHERE username = '" + Main.TenDN + "'");
+            //id = Convert.ToString(Q);
+            //Q = layGiaTri("SELECT first_name FROM employees WHERE username = '" + Main.TenDN + "'");
+            //first_name = Convert.ToString(Q);
+            //Q = layGiaTri("SELECT last_name FROM employees WHERE username = '" + Main.TenDN + "'");
+            //last_name = Convert.ToString(Q);
 
             txtCreatorId.Text = id;
             txtCreatorName.Text = last_name + " " + first_name;

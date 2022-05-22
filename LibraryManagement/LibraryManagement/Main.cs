@@ -7,10 +7,10 @@ using System.Linq;
 using System.Text;
 using System.Data.SqlClient;
 using System.Windows.Forms;
+using BLL;
+using DTO;
 
-// mã hóa mật khẩu 
-using System.Security.Cryptography;
-//abc
+
 namespace LibraryManagement
 {
     public partial class Main : Form
@@ -19,83 +19,48 @@ namespace LibraryManagement
         {
             InitializeComponent();
         }
-        public static string TenDN, MatKhau, Quyen, checkMatKhau; // TenDN = tên đăng nhập 
-        SqlCommand sqlCommand;
-        public Object layGiaTri(string sql) //lay gia tri cua  cot dau tien trong bang 
+
+        private void btnLogin_Click(object sender, EventArgs e)
         {
-            sqlCommand = new SqlCommand();
-            sqlCommand.CommandText = sql;
-            sqlCommand.CommandType = CommandType.Text;
-            sqlCommand.Connection = Con;
+            string username = txtUsername.Text;
+            string password = txtPassword.Text;
 
-            //CHi can lay ve gia tri cua mot truong thoi thi dung pt nao ? - ExecuteScalar
-            Object obj = sqlCommand.ExecuteScalar(); //neu co loi thi phai xem lai cua lenh SQL o ben kia
-            return obj;
-            //Ket qua de dau ? - de trong obj
-        }
-        private void button1_Click(object sender, EventArgs e)
-        {
-            TenDN = textBox1.Text;
-            MatKhau = textBox2.Text;
-
-            byte[] temp = ASCIIEncoding.ASCII.GetBytes(textBox2.Text);
-            byte[] hasData = new MD5CryptoServiceProvider().ComputeHash(temp);
-
-            string hasPass = "";
-
-            foreach (byte item in hasData)
+            if (!EmployeesBLL.Instance.CheckLogin(username, password))
+                MessageBox.Show("Wrong account !!!");
+            else
             {
-                hasPass += item;
-            }
-            // MessageBox.Show(hasPass);
+                MessageBox.Show("Logged in successfully !");
 
-            checkMatKhau = hasPass;
-            if (TenDN != "")
-            {
-                object Q = layGiaTri("select role from employees where username='" + TenDN + "' and password='" + hasPass + "'");
-                if (Q == null)
+                MessageBox.Show(EmployeesBLL.Instance.CheckRole(username));
+                if (EmployeesBLL.Instance.CheckRole(username) == "admin")
                 {
-                    MessageBox.Show("Wrong account !!!");
+                    dropdownSystemManagement.Enabled = true;
+                    toolCheckEmployeeInformation.Enabled = true;
+                    dropdownReport.Enabled = true;
+                    toolCreateAccount.Enabled = true;
+                    toolUpdateStaff.Enabled = true;
+                    toolChangePassword.Enabled = true;
+                    toolLogout.Enabled = true;
                 }
                 else
                 {
-                    MessageBox.Show("Logged in successfully !");
-                    Quyen = Convert.ToString(Q);
-
-                    menuStrip2.Show();
-
-                    if (Quyen == "user")
-                    {
-                        dropdownSystemManagement.Enabled = true;
-                        dropdownReport.Enabled = true;
-                        toolCreateAccount.Enabled = false;
-                        toolUpdateStaff.Enabled = true;
-                        toolChangePassword.Enabled = true;
-                        toolLogout.Enabled = true;
-                        toolCreateAccount.Visible = false;
-                        toolCheckEmployeeInformation.Visible = false;
-
-
-                    }
-                    if (Quyen == "admin")
-                    {
-                        dropdownSystemManagement.Enabled = true;
-                        toolCheckEmployeeInformation.Enabled = true;
-                        dropdownReport.Enabled = true;
-                        toolCreateAccount.Enabled = true;
-                        toolUpdateStaff.Enabled = true;
-                        toolChangePassword.Enabled = true;
-                        toolLogout.Enabled = true;
-                    }
-                    textBox1.Text = "";
-                    textBox2.Text = "";
-                    groupBox1.Enabled = false;
-                    groupBox1.Visible = false;
-                    btSI.Visible = false;
-                    menuStrip1.Visible = true;
-                    label4.Text = "Welcome to Library Management";
-                    dropdownSystemManagement.Visible = true;
+                    dropdownSystemManagement.Enabled = true;
+                    dropdownReport.Enabled = true;
+                    toolCreateAccount.Enabled = false;
+                    toolUpdateStaff.Enabled = true;
+                    toolChangePassword.Enabled = true;
+                    toolLogout.Enabled = true;
+                    toolCreateAccount.Visible = false;
+                    toolCheckEmployeeInformation.Visible = false;
                 }
+                txtUsername.Text = "";
+                txtPassword.Text = "";
+                groupBox1.Enabled = false;
+                groupBox1.Visible = false;
+                btSI.Visible = false;
+                menuStrip1.Visible = true;
+                label4.Text = "Welcome to Library Management";
+                dropdownSystemManagement.Visible = true;
             }
         }
 
@@ -115,7 +80,7 @@ namespace LibraryManagement
         SqlConnection Con;
         private void Main_Load(object sender, EventArgs e)
         {
-            textBox2.UseSystemPasswordChar = true;
+            txtPassword.UseSystemPasswordChar = true;
             menuStrip2.Hide();
             try
             {
@@ -292,14 +257,14 @@ namespace LibraryManagement
 
         private void pictureBoxEye_Click(object sender, EventArgs e)
         {
-            if (textBox2.UseSystemPasswordChar == true)
+            if (txtPassword.UseSystemPasswordChar == true)
             {
-                textBox2.UseSystemPasswordChar = false;
+                txtPassword.UseSystemPasswordChar = false;
                 this.pictureBoxEye.BackgroundImage = global::LibraryManagement.Properties.Resources.eye_hide;
             }
             else
             {
-                textBox2.UseSystemPasswordChar = true;
+                txtPassword.UseSystemPasswordChar = true;
                 this.pictureBoxEye.BackgroundImage = global::LibraryManagement.Properties.Resources._103177_see_watch_view_eye_icon;
             }
         }
@@ -312,9 +277,7 @@ namespace LibraryManagement
             borrows.Show();
         }
 
-
-
-
+        
 
         private void label2_Click(object sender, EventArgs e)
         {

@@ -22,10 +22,10 @@ namespace DAL
             }
             set { }
         }
-        public bool CheckRole(string username)
+        public string CheckRole(string username)
         {
-            string query = "Select role from TBStaff where username = '" + username + "'";
-            return Convert.ToBoolean(LoadData(query).Rows[0][0].ToString().Trim());
+            string query = "Select role from employees where username = '" + username + "'";
+            return LoadData(query).Rows[0][0].ToString();
 
         }
         public bool CheckChangePass(string check)// by email or username
@@ -34,34 +34,34 @@ namespace DAL
             return Convert.ToBoolean(LoadData(query).Rows[0][0].ToString().Trim());
 
         }
-        public string CheckAdd(Employees account)
-        {
-            string query = "Select email from TBStaff where email = '" + account.Email + "'";
-            if (LoadData(query).Rows.Count != 0) return "Email address is already registered!";
-            query = "Select username from TBStaff where username = '" + account.Username + "'";
-            if (LoadData(query).Rows.Count != 0) return "Username is already being used!";
-            return "OK";
-        }
-        public string CheckUpdate(Employees account)
-        {
-            string query = "Select email from TBStaff where email = '" + account.Email + "' and id_number != " + account.ID;
-            if (LoadData(query).Rows.Count != 0) return "Email address is already registered!";
-            query = "Select username from TBStaff where username = '" + account.Username + "' and id_number != " + account.ID;
-            if (LoadData(query).Rows.Count != 0) return "Username is already being used!";
-            return "OK";
-        }
-        public string Add(Employees account)
-        {
-            string check = CheckAdd(account);
-            if (check != "OK") return check;
+        //public string CheckAdd(Employees account)
+        //{
+        //    string query = "Select email from TBStaff where email = '" + account.Email + "'";
+        //    if (LoadData(query).Rows.Count != 0) return "Email address is already registered!";
+        //    query = "Select username from TBStaff where username = '" + account.Username + "'";
+        //    if (LoadData(query).Rows.Count != 0) return "Username is already being used!";
+        //    return "OK";
+        //}
+        //public string CheckUpdate(Employees account)
+        //{
+        //    string query = "Select email from TBStaff where email = '" + account.Email + "' and id_number != " + account.ID;
+        //    if (LoadData(query).Rows.Count != 0) return "Email address is already registered!";
+        //    query = "Select username from TBStaff where username = '" + account.Username + "' and id_number != " + account.ID;
+        //    if (LoadData(query).Rows.Count != 0) return "Username is already being used!";
+        //    return "OK";
+        //}
+        //public string Add(Employees account)
+        //{
+        //    string check = CheckAdd(account);
+        //    if (check != "OK") return check;
 
-            // add
-            string query = "Insert into TBStaff(fullname, username, pwd, phone_number, email,role) values('"
-                          + account.Fullname + "','" + account.Username + "','" + account.Password + "','" + account.Phone + "','"
-                          + account.Email + "','" + account.Role + "')";
-            EditData(query);
-            return "OK";
-        }
+        //    // add
+        //    string query = "Insert into TBStaff(fullname, username, pwd, phone_number, email,role) values('"
+        //                  + account.Fullname + "','" + account.Username + "','" + account.Password + "','" + account.Phone + "','"
+        //                  + account.Email + "','" + account.Role + "')";
+        //    EditData(query);
+        //    return "OK";
+        //}
         public string GetEmailByUsername(string username)
         {
             string query = "SELECT email FROM TBStaff where username = '" + username + "';";
@@ -77,17 +77,17 @@ namespace DAL
             string query = "UPDATE TBStaff set changepwd = 'false' where email = '" + email + "'";
             EditData(query);
         }
-        public string Update(Employees account)
-        {
-            string check = CheckUpdate(account);
-            if (check != "OK") return check;
+        //public string Update(Employees account)
+        //{
+        //    string check = CheckUpdate(account);
+        //    if (check != "OK") return check;
 
-            // ud  
-            string query = "UPDATE TBStaff set fullname = '" + account.Fullname + "', username = '" + account.Username +
-              "', phone_number = '" + account.Phone + "', email = '" + account.Email + "', role = '" + account.Role + "' where id_number = " + account.ID;
-            EditData(query);
-            return "OK";
-        }
+        //    // ud  
+        //    string query = "UPDATE TBStaff set fullname = '" + account.Fullname + "', username = '" + account.Username +
+        //      "', phone_number = '" + account.Phone + "', email = '" + account.Email + "', role = '" + account.Role + "' where id_number = " + account.ID;
+        //    EditData(query);
+        //    return "OK";
+        //}
         public DataTable LoadAllAccount()
         {
             string query = "SELECT id_number,fullname,username,phone_number,email,role FROM TBStaff";
@@ -107,7 +107,7 @@ namespace DAL
         public bool CheckLogin(string username, string password)
         {
             bool check = false;
-            string query = "Select * from TBStaff Where username = '" + username + "'and pwd = '" + password + "'";
+            string query = "Select * from employees Where username = '" + username + "'and password = '" + password + "'";
             if (LoadData(query).Rows.Count > 0) check = true;
             return check;
         }
