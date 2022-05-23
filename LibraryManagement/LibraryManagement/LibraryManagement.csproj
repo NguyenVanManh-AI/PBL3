@@ -74,11 +74,23 @@
       <DependentUpon>CheckInfor.cs</DependentUpon>
     </Compile>
     <Compile Include="Class\clsDatabase.cs" />
-    <Compile Include="ForgotPassword.cs">
+    <Compile Include="FormForgotPassword.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ForgotPassword.Designer.cs">
-      <DependentUpon>ForgotPassword.cs</DependentUpon>
+    <Compile Include="FormForgotPassword.Designer.cs">
+      <DependentUpon>FormForgotPassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLogin.Designer.cs">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormWrongAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormWrongAccount.Designer.cs">
+      <DependentUpon>FormWrongAccount.cs</DependentUpon>
     </Compile>
     <Compile Include="Help.cs">
       <SubType>Form</SubType>
@@ -111,6 +123,12 @@
     </Compile>
     <Compile Include="ReportReaders.Designer.cs">
       <DependentUpon>ReportReaders.cs</DependentUpon>
+    </Compile>
+    <Compile Include="test.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="test.Designer.cs">
+      <DependentUpon>test.cs</DependentUpon>
     </Compile>
     <Compile Include="UpdateAuthors.cs">
       <SubType>Form</SubType>
@@ -154,6 +172,15 @@
     <Compile Include="UpdateReaders.Designer.cs">
       <DependentUpon>UpdateReaders.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="FormForgotPassword.resx">
+      <DependentUpon>FormForgotPassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLogin.resx">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormWrongAccount.resx">
+      <DependentUpon>FormWrongAccount.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>
@@ -167,6 +194,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="test.resx">
+      <DependentUpon>test.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -183,6 +213,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\103177_see_watch_view_eye_icon.png" />
+    <None Include="Resources\warning.gif" />
+    <None Include="Resources\user.png" />
     <None Include="Resources\update1.png" />
     <None Include="Resources\system1.png" />
     <None Include="Resources\search1.png" />
@@ -204,22 +236,44 @@
     <None Include="Resources\1267951.png" />
     <None Include="Resources\103177_see_watch_view_eye_icon1.png" />
     <Content Include="Resources\11718026221094093993.png" />
+    <None Include="Resources\1177568.png" />
     <Content Include="Resources\126795.png" />
     <Content Include="Resources\1486485553-ago-arrow-arrow-left-back-previous-direction-left_81160.png" />
     <Content Include="Resources\1995562.png" />
+    <None Include="Resources\2814245.png" />
     <Content Include="Resources\4213477.png" />
+    <None Include="Resources\722358.png" />
+    <None Include="Resources\7759.jpg" />
+    <None Include="Resources\77591.jpg" />
+    <None Include="Resources\alert.gif" />
     <Content Include="Resources\Backgroundmain.jpg" />
     <Content Include="Resources\book-app-icon-4.jpg" />
+    <None Include="Resources\DUT %282%29.png" />
+    <None Include="Resources\DUT %282%29.gif" />
+    <None Include="Resources\DUT %283%29.gif" />
+    <None Include="Resources\encryption.gif" />
     <Content Include="Resources\exit.png" />
     <Content Include="Resources\eye_hide.png" />
     <Content Include="Resources\Google-Play-Books-icon.png" />
     <Content Include="Resources\help.png" />
     <Content Include="Resources\images.png" />
     <Content Include="Resources\information.png" />
+    <None Include="Resources\logogdut.png" />
+    <None Include="Resources\Logo.PNG" />
+    <None Include="Resources\Logo-dut.png" />
+    <None Include="Resources\online-security.gif" />
+    <None Include="Resources\left-arrow.gif" />
+    <None Include="Resources\message.gif" />
     <Content Include="Resources\open-book.png" />
+    <None Include="Resources\password.gif" />
+    <None Include="Resources\pattern.gif" />
     <Content Include="Resources\printer.png" />
     <Content Include="Resources\report.png" />
+    <None Include="Resources\Reset password-amico %281%29.png" />
+    <None Include="Resources\resetpassword.gif" />
     <Content Include="Resources\search.png" />
+    <None Include="Resources\social-media.gif" />
+    <None Include="Resources\share.gif" />
     <Content Include="Resources\system.png" />
     <Content Include="Resources\update.png" />
   </ItemGroup>
@@ -236,6 +290,25 @@
       <Project>{83f81bb7-5926-4f5a-a824-702b62b09f80}</Project>
       <Name>DTO</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AxWMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="WMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
