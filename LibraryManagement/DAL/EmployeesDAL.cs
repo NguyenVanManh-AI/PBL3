@@ -22,18 +22,55 @@ namespace DAL
             }
             set { }
         }
+
+        public bool CheckLogin(string username, string password)
+        {
+            bool check = false;
+            string query = "Select * from employees Where username = '" + username + "'and password = '" + password + "'";
+            if (LoadData(query).Rows.Count > 0) check = true;
+            return check;
+        }
         public string CheckRole(string username)
         {
             string query = "Select role from employees where username = '" + username + "'";
             return LoadData(query).Rows[0][0].ToString();
-
         }
-        public bool CheckChangePass(string check)// by email or username
+
+        public bool CheckMailToReset(string email)
         {
-            string query = "Select changepwd from TBStaff where username = '" + check + "' or email = '" + check + "'";
-            return Convert.ToBoolean(LoadData(query).Rows[0][0].ToString().Trim());
-
+            string query = "Select * from employees where email = '" + email + "'";
+            if (LoadData(query).Rows.Count == 0) return false;
+            return true;
         }
+        public bool ChangePassword(string email,string new_password)
+        {
+            try
+            {
+                string query = "UPDATE employees set password = '" + new_password + "' where email = '" + email + "'";
+                EditData(query);
+                return true;
+            }
+            catch { return false; }
+            
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         //public string CheckAdd(Employees account)
         //{
         //    string query = "Select email from TBStaff where email = '" + account.Email + "'";
@@ -62,6 +99,16 @@ namespace DAL
         //    EditData(query);
         //    return "OK";
         //}
+
+
+        public bool CheckChangePass(string check)// by email or username
+        {
+            string query = "Select changepwd from TBStaff where username = '" + check + "' or email = '" + check + "'";
+            return Convert.ToBoolean(LoadData(query).Rows[0][0].ToString().Trim());
+
+        }
+
+
         public string GetEmailByUsername(string username)
         {
             string query = "SELECT email FROM TBStaff where username = '" + username + "';";
@@ -72,11 +119,7 @@ namespace DAL
         //    string query = "SELECT username  FROM TBStaff where email = '" + email + "';";
         //    return LoadData(query).Rows[0][0].ToString();
         //}
-        public void ChangedPass(string email)
-        {
-            string query = "UPDATE TBStaff set changepwd = 'false' where email = '" + email + "'";
-            EditData(query);
-        }
+        
         //public string Update(Employees account)
         //{
         //    string check = CheckUpdate(account);
@@ -104,26 +147,14 @@ namespace DAL
             string query = "SELECT id_number,fullname,username,phone_number,email,role FROM TBStaff WHERE id_number = " + id + ";";
             return LoadData(query).Rows[0];
         }
-        public bool CheckLogin(string username, string password)
-        {
-            bool check = false;
-            string query = "Select * from employees Where username = '" + username + "'and password = '" + password + "'";
-            if (LoadData(query).Rows.Count > 0) check = true;
-            return check;
-        }
-        public string CheckMailToReset(string email)
-        {
-            string query = "Select * from TBStaff where email = '" + email + "'";
-            if (LoadData(query).Rows.Count == 0) return "Invalid Email! Email address is not registered!";
-            return "OK";
-
-        }
-        public void ResetPass(string newpass, string email)
-        {
-            if (CheckChangePass(email)) ChangedPass(email);
-            string query = "Update TBStaff Set pwd = '" + newpass + "' Where email = '" + email + "';";
-            EditData(query);
-        }
+        
+        
+        //public void ResetPass(string newpass, string email)
+        //{
+        //    if (CheckChangePass(email)) ChangedPass(email);
+        //    string query = "Update TBStaff Set pwd = '" + newpass + "' Where email = '" + email + "';";
+        //    EditData(query);
+        //}
         public void Delete(int id)
         {
             string query = "DELETE FROM TBStaff WHERE id_number = " + id + ";";

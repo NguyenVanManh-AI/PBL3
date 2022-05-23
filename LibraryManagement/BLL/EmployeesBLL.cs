@@ -33,43 +33,12 @@ namespace BLL
             // username và password phải từ 10 đến 24 kí tự chỉ bao gồm kí tự chữ thường hoặc chữ hoa hoặc chữ số 
             return Regex.IsMatch(un, "^[a-zA-Z0-9]{10,24}$");
         }
+
         public bool CheckLogin(string username, string password)
         {
             if (!(CheckUsernamePass(username) && CheckUsernamePass(password))) return false;
             return EmployeesDAL.Instance.CheckLogin(username, HashPass(password));
         }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        private static readonly string _from = "g8cinestar.@gmail.com"; // Email của Sender (của bạn)
-        private static readonly string _pass = "quanlirapchieuphim"; // Mật khẩu Email của Sender (của bạn)
-        private static string content;
-        //private static string email_reset;
-        public string email_employee { get; set; }
-        
         public bool CheckEmail(string em)
         {
             return Regex.IsMatch(em, @"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$");
@@ -78,6 +47,93 @@ namespace BLL
         {
             return EmployeesDAL.Instance.CheckRole(username);
         }
+        public string HashPass(string password)
+        {
+            SHA1CryptoServiceProvider sha1 = new SHA1CryptoServiceProvider();
+            byte[] password_bytes = Encoding.ASCII.GetBytes(password);
+            byte[] encrypted_bytes = sha1.ComputeHash(password_bytes);
+            return Convert.ToBase64String(encrypted_bytes);
+        }
+
+        public bool CheckAndSendMailToReset(string email)
+        {
+            if (!CheckEmail(email)) return false;
+            bool check = EmployeesDAL.Instance.CheckMailToReset(email);
+            if (check == true)
+            {
+                email_employee = email;
+                codeText = RandomNumber(1000, 9999).ToString();
+                SendEmail(email_employee, codeText, "Send Verification Code to change password");
+            }
+            return check;
+        }
+        
+        public bool CheckOTP(string otp)
+        {
+            if (otp == codeText) return true;
+            return false;
+        }
+
+        public string email_employee { get; set; }
+        private static string codeText;
+        private static readonly string from_email = "strongtechmaster@gmail.com"; // Email của Sender (của bạn)
+        private static readonly string password_from_email = "strongtech2908"; // Mật khẩu Email của Sender (của bạn)
+        public void SendEmail(string email, string codeText, string content)
+        {
+            MailMessage mail = new MailMessage();
+            SmtpClient SmtpServer = new SmtpClient("smtp.gmail.com");
+
+            mail.From = new MailAddress(from_email);
+            mail.To.Add(email_employee);
+            mail.IsBodyHtml = true;
+            mail.Body = content;
+            mail.Subject = codeText;
+            mail.Priority = MailPriority.High;
+            SmtpServer.Port = 587;
+            SmtpServer.Credentials = new System.Net.NetworkCredential(from_email, password_from_email);
+            SmtpServer.EnableSsl = true;
+            SmtpServer.Send(mail);
+        }
+
+        public bool ConfirmPassword(string new_password,string confirm)
+        {
+            if (new_password == confirm) return true;
+            else return false;
+        }
+
+        public bool ChangePassword(string email,string new_password)
+        {
+            return EmployeesDAL.Instance.ChangePassword(email, HashPass(new_password));
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        //private static string email_reset;
+       
+        
+        
         public bool CheckChangePass(string username)
         {
             return EmployeesDAL.Instance.CheckChangePass(username);
@@ -139,13 +195,7 @@ namespace BLL
             builder.Append(RandomString(2, false));
             return builder.ToString();
         }
-        public string HashPass(string password)
-        {
-            SHA1CryptoServiceProvider sha1 = new SHA1CryptoServiceProvider();
-            byte[] password_bytes = Encoding.ASCII.GetBytes(password);
-            byte[] encrypted_bytes = sha1.ComputeHash(password_bytes);
-            return Convert.ToBase64String(encrypted_bytes);
-        }
+        
         //public string Add(Employees account)
         //{
         //    string check = CheckAccount(account);
@@ -187,62 +237,31 @@ namespace BLL
             return EmployeesDAL.Instance.LoadAccountByID(id);
         }
         
-        public string CheckAndSendMailToReset(string email)
-        {
-            if (!CheckEmail(email)) return "Invalid Email! Email address is not registered!";
-            string check = EmployeesDAL.Instance.CheckMailToReset(email);
-            if (check == "OK")
-            {
-                email_employee = email;
-                content = RandomNumber(99999, 1000000).ToString();
-                SendEmail(email_employee, content, "RESET PASSWORD");
-            }
-            return check;
-        }
+        
         public void CheckAndSendMailToFirstLogin(string username)
         {
-            content = RandomNumber(99999, 1000000).ToString();
-            SendEmail(GetEmailByUsername(username), content, "FIRST LOGIN");
+            codeText = RandomNumber(99999, 1000000).ToString();
+            SendEmail(GetEmailByUsername(username), codeText, "FIRST LOGIN");
         }
-        public void SendEmail(string email, string content, string subject)
-        {
-            MailMessage mail = new MailMessage();
-            SmtpClient SmtpServer = new SmtpClient("smtp.gmail.com");
+        
 
-            mail.From = new MailAddress(_from);
-            mail.To.Add(email_employee);
-            mail.IsBodyHtml = true;
-            mail.Body = content;
-            mail.Subject = subject;
-            mail.Priority = MailPriority.High;
-            SmtpServer.Port = 587;
-            SmtpServer.Credentials = new System.Net.NetworkCredential(_from, _pass);
-            SmtpServer.EnableSsl = true;
+        
+        //public string ResetPass(string newpass, string confirmpass)
+        //{
+        //    string check;
+        //    if (CheckUsernamePass(newpass))
+        //    {
+        //        if (confirmpass == newpass)
+        //        {
+        //            EmployeesDAL.Instance.ResetPass(HashPass(newpass), email_employee);
+        //            check = "OK";
+        //        }
+        //        else check = "Your confirm password doesn't match your new password";
 
-            SmtpServer.Send(mail);
-        }
-
-        public bool CheckOTP(string otp)
-        {
-            if (otp == content) return true;
-            return false;
-        }
-        public string ResetPass(string newpass, string confirmpass)
-        {
-            string check;
-            if (CheckUsernamePass(newpass))
-            {
-                if (confirmpass == newpass)
-                {
-                    EmployeesDAL.Instance.ResetPass(HashPass(newpass), email_employee);
-                    check = "OK";
-                }
-                else check = "Your confirm password doesn't match your new password";
-
-            }
-            else check = "Invalid Password! Minimum 10 characters.\r\nMust not contain symbols.";
-            return check;
-        }
+        //    }
+        //    else check = "Invalid Password! Minimum 10 characters.\r\nMust not contain symbols.";
+        //    return check;
+        //}
         //public void Delete(List<int> id)
         //{
         //    foreach (int i in id)

@@ -23,3 +23,12 @@ C:\Users\LAPTOP KIM ANH\source\repos\LibraryManagement\LibraryManagement\bin\Deb
 C:\Users\LAPTOP KIM ANH\source\repos\LibraryManagement\LibraryManagement\bin\Debug\ARSoft.Tools.Net.xml
 C:\Users\LAPTOP KIM ANH\source\repos\LibraryManagement\LibraryManagement\bin\Debug\BouncyCastle.Crypto.pdb
 C:\Users\LAPTOP KIM ANH\source\repos\LibraryManagement\LibraryManagement\obj\Debug\LibraryManagement.csproj.CopyComplete
+C:\Users\LAPTOP KIM ANH\source\repos\LibraryManagement\LibraryManagement\bin\Debug\Interop.WMPLib.dll
+C:\Users\LAPTOP KIM ANH\source\repos\LibraryManagement\LibraryManagement\bin\Debug\AxInterop.WMPLib.dll
+C:\Users\LAPTOP KIM ANH\source\repos\LibraryManagement\LibraryManagement\obj\Debug\Interop.WMPLib.dll
+C:\Users\LAPTOP KIM ANH\source\repos\LibraryManagement\LibraryManagement\obj\Debug\AxInterop.WMPLib.dll
+C:\Users\LAPTOP KIM ANH\source\repos\LibraryManagement\LibraryManagement\obj\Debug\LibraryManagement.csproj.ResolveComReference.cache
+C:\Users\LAPTOP KIM ANH\source\repos\LibraryManagement\LibraryManagement\obj\Debug\LibraryManagement.FormLogin.resources
+C:\Users\LAPTOP KIM ANH\source\repos\LibraryManagement\LibraryManagement\obj\Debug\LibraryManagement.FormWrongAccount.resources
+C:\Users\LAPTOP KIM ANH\source\repos\LibraryManagement\LibraryManagement\obj\Debug\LibraryManagement.FormForgotPassword.resources
+C:\Users\LAPTOP KIM ANH\source\repos\LibraryManagement\LibraryManagement\obj\Debug\LibraryManagement.test.resources
