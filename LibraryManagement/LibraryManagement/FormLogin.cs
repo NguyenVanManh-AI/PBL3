@@ -47,7 +47,7 @@ namespace LibraryManagement
             }
             else
             {
-                Main m = new Main(EmployeesBLL.Instance.CheckRole(username));
+                FormMain m = new FormMain(username);
                 m.Show();
                 Hide(); 
             }

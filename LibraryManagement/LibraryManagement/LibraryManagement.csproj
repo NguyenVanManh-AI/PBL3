@@ -61,12 +61,6 @@
     <Compile Include="Borrows.Designer.cs">
       <DependentUpon>Borrows.cs</DependentUpon>
     </Compile>
-    <Compile Include="ChangePassword.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ChangePassword.Designer.cs">
-      <DependentUpon>ChangePassword.cs</DependentUpon>
-    </Compile>
     <Compile Include="CheckInfor.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -74,17 +68,53 @@
       <DependentUpon>CheckInfor.cs</DependentUpon>
     </Compile>
     <Compile Include="Class\clsDatabase.cs" />
+    <Compile Include="FormChangePassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormChangePassword.Designer.cs">
+      <DependentUpon>FormChangePassword.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormForgotPassword.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormForgotPassword.Designer.cs">
       <DependentUpon>FormForgotPassword.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormInformationUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormInformationUser.Designer.cs">
+      <DependentUpon>FormInformationUser.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormLogin.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormLogin.Designer.cs">
       <DependentUpon>FormLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMain.Designer.cs">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMeesageBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMeesageBox.Designer.cs">
+      <DependentUpon>FormMeesageBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMessageBoxError.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMessageBoxError.Designer.cs">
+      <DependentUpon>FormMessageBoxError.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMessageBoxSuccess.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMessageBoxSuccess.Designer.cs">
+      <DependentUpon>FormMessageBoxSuccess.cs</DependentUpon>
     </Compile>
     <Compile Include="FormWrongAccount.cs">
       <SubType>Form</SubType>
@@ -172,11 +202,29 @@
     <Compile Include="UpdateReaders.Designer.cs">
       <DependentUpon>UpdateReaders.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="FormChangePassword.resx">
+      <DependentUpon>FormChangePassword.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormForgotPassword.resx">
       <DependentUpon>FormForgotPassword.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormInformationUser.resx">
+      <DependentUpon>FormInformationUser.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMain.resx">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMeesageBox.resx">
+      <DependentUpon>FormMeesageBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMessageBoxError.resx">
+      <DependentUpon>FormMessageBoxError.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMessageBoxSuccess.resx">
+      <DependentUpon>FormMessageBoxSuccess.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormWrongAccount.resx">
       <DependentUpon>FormWrongAccount.cs</DependentUpon>
@@ -213,6 +261,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\103177_see_watch_view_eye_icon.png" />
+    <None Include="Resources\user1.png" />
+    <None Include="Resources\wave.gif" />
+    <None Include="Resources\virus.gif" />
     <None Include="Resources\warning.gif" />
     <None Include="Resources\user.png" />
     <None Include="Resources\update1.png" />
@@ -252,7 +303,9 @@
     <None Include="Resources\DUT %282%29.gif" />
     <None Include="Resources\DUT %283%29.gif" />
     <None Include="Resources\encryption.gif" />
+    <None Include="Resources\down.png" />
     <Content Include="Resources\exit.png" />
+    <None Include="Resources\exit2.png" />
     <Content Include="Resources\eye_hide.png" />
     <Content Include="Resources\Google-Play-Books-icon.png" />
     <Content Include="Resources\help.png" />
@@ -264,17 +317,29 @@
     <None Include="Resources\online-security.gif" />
     <None Include="Resources\left-arrow.gif" />
     <None Include="Resources\message.gif" />
+    <None Include="Resources\meteor-rain.gif" />
+    <None Include="Resources\mouse.gif" />
+    <None Include="Resources\key.png" />
+    <None Include="Resources\information2.png" />
     <Content Include="Resources\open-book.png" />
     <None Include="Resources\password.gif" />
     <None Include="Resources\pattern.gif" />
+    <None Include="Resources\party.gif" />
     <Content Include="Resources\printer.png" />
+    <None Include="Resources\profile.png" />
     <Content Include="Resources\report.png" />
     <None Include="Resources\Reset password-amico %281%29.png" />
     <None Include="Resources\resetpassword.gif" />
+    <None Include="Resources\sad.gif" />
     <Content Include="Resources\search.png" />
     <None Include="Resources\social-media.gif" />
     <None Include="Resources\share.gif" />
+    <None Include="Resources\shield.gif" />
+    <None Include="Resources\smile.gif" />
     <Content Include="Resources\system.png" />
+    <None Include="Resources\target.gif" />
+    <None Include="Resources\Two factor authentication-rafiki.png" />
+    <None Include="Resources\Two factor authentication-rafiki %281%29.png" />
     <Content Include="Resources\update.png" />
   </ItemGroup>
   <ItemGroup>
