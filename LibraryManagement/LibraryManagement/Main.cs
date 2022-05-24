@@ -56,11 +56,7 @@ namespace LibraryManagement
             Register TAO = new Register();
             TAO.Show();
         }
-        private void DoiMatKhau(object sender, EventArgs e)
-        {
-            ChangePassword doimatkhau = new ChangePassword();
-            doimatkhau.Show();
-        }
+        
 
         private void DangXuat(object sender, EventArgs e)
         {

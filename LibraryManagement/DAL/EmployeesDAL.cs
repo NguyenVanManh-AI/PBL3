@@ -54,6 +54,46 @@ namespace DAL
             
         }
 
+        public bool ChangePasswordByUsername(string username, string new_password)
+        {
+            try
+            {
+                string query = "UPDATE employees set password = '" + new_password + "' where username = '" + username + "'";
+                EditData(query);
+                return true;
+            }
+            catch { return false; }
+
+        }
+
+        public string getName(string username)
+        {
+            try
+            {
+                string query1 = "select first_name from employees where username = '" + username + "'";
+                string query2 = "select last_name from employees where username = '" + username + "'";
+                return LoadData(query2).Rows[0][0].ToString() + " " + LoadData(query1).Rows[0][0].ToString(); ;
+            }
+            catch { return "Error" ; }
+        }
+
+        public string getOldPassword(string username)
+        {
+            try
+            {
+                string query = "select password from employees where username = '" + username + "'";
+                return LoadData(query).Rows[0][0].ToString();
+            }
+            catch { return "Error"; }
+        }
+
+
+
+
+
+
+
+
 
 
 

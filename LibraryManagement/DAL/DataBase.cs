@@ -41,26 +41,7 @@ namespace DAL
 
             }
         }
-        //public void CommandMovie(Movie movie, string query)
-        //{
-        //    using (SqlConnection sqlconnection = GetSqlConnection())
-        //    {
-        //        sqlconnection.Open();
-        //        SqlCommand sqlCommand = new SqlCommand(query, sqlconnection);
-        //        sqlCommand.Parameters.AddWithValue("@movie_name", movie.Name);
-        //        sqlCommand.Parameters.AddWithValue("@movie_id", movie.ID);
-        //        sqlCommand.Parameters.AddWithValue("@movie_genres", movie.Genres);
-               
-        //        //, , @movie_release, @movie_image
-        //        sqlCommand.Parameters.AddWithValue("@movie_description", movie.Description);
-        //        sqlCommand.Parameters.AddWithValue("@movie_length", movie.Length);
-        //        sqlCommand.Parameters.AddWithValue("@movie_release", movie.Release);
-        //        sqlCommand.Parameters.AddWithValue("@movie_image", movie.Image);
-        //        sqlCommand.ExecuteNonQuery(); //thực thi câu truy vấn
-        //        sqlconnection.Close();
-
-        //    }
-        //}
+        
     }
     
 }

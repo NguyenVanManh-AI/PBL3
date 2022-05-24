@@ -32,6 +32,8 @@ namespace LibraryManagement
             checkmail = EmployeesBLL.Instance.CheckAndSendMailToReset(email);
             if(checkmail == true)
             {
+                FormMessageBoxSuccess formMessageBoxSuccess = new FormMessageBoxSuccess("Sent verification code. Please check your email !");
+                formMessageBoxSuccess.Show();
                 groupboxEmail.Hide();
                 groupboxVeri.Show();
                 page = 2;
@@ -40,7 +42,8 @@ namespace LibraryManagement
             }
             else
             {
-                MessageBox.Show("Invalid Email !!!");
+                FormMessageBoxError formMessageBoxError = new FormMessageBoxError("Invalid Email !!!");
+                formMessageBoxError.Show();
             }
         }
 
@@ -48,33 +51,55 @@ namespace LibraryManagement
         {
             if(EmployeesBLL.Instance.CheckOTP(txtVericode.Text))
             {
-                MessageBox.Show("Success !");
+                FormMessageBoxSuccess formMessageBoxSuccess = new FormMessageBoxSuccess("Verification Code Success !");
+                formMessageBoxSuccess.Show();
+
                 txtVericode.Text = "";
                 groupboxVeri.Hide();
                 groupboxNewpassword.Show();
                 page = 3;
             }
             else
-                MessageBox.Show("Invalid Code !!!");
+            {
+                FormMessageBoxError formMessageBoxError = new FormMessageBoxError("Invalid Code !!!");
+                formMessageBoxError.Show();
+            }
         }
 
         private void btnNewPassword_Click(object sender, EventArgs e)
         {
             if(EmployeesBLL.Instance.ConfirmPassword(txtNewPassword.Text,txtConfirm.Text))
             {
-                if (EmployeesBLL.Instance.ChangePassword(email, txtNewPassword.Text))
+                if (EmployeesBLL.Instance.CheckUsernamePass(txtNewPassword.Text))
                 {
-                    groupLogin.Show();
-                    btnBack.Hide();
-                    groupboxNewpassword.Hide();
-                    txtNewPassword.Text = "";
-                    txtConfirm.Text = "";
+                    if (EmployeesBLL.Instance.ChangePassword(email, txtNewPassword.Text))
+                    {
+                        groupLogin.Show();
+                        btnBack.Hide();
+                        groupboxNewpassword.Hide();
+                        btnbacklogin.Hide();
+                        txtNewPassword.Text = "";
+                        txtConfirm.Text = "";
+                    }
+                    else
+                    {
+                        FormMessageBoxError formMessageBoxError = new FormMessageBoxError("Error !!!");
+                        formMessageBoxError.Show();
+                    }
                 }
                 else
-                    MessageBox.Show("Error !");
+                {
+                    FormMeessageBox formMeessageBox = new FormMeessageBox("Password minimum 10 characters and maximum " +
+                        "24 characters including letters and numbers !!!");
+                    formMeessageBox.Show();
+                }
+                
             }
             else
-                MessageBox.Show("Password Incorrect");
+            {
+                FormMessageBoxError formMessageBoxError = new FormMessageBoxError("Password Incorrect !!!");
+                formMessageBoxError.Show();
+            }
         }
 
         private void btnBack_Click(object sender, EventArgs e)
@@ -115,6 +140,13 @@ namespace LibraryManagement
         }
 
         private void btnSingin_Click(object sender, EventArgs e)
+        {
+            FormLogin formLogin = new FormLogin();
+            formLogin.Show();
+            Hide();
+        }
+
+        private void btnbacklogin_Click(object sender, EventArgs e)
         {
             FormLogin formLogin = new FormLogin();
             formLogin.Show();

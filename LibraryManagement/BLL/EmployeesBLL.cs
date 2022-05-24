@@ -106,6 +106,23 @@ namespace BLL
             return EmployeesDAL.Instance.ChangePassword(email, HashPass(new_password));
         }
 
+        public bool ChangePasswordByUsername(string username, string new_password)
+        {
+            return EmployeesDAL.Instance.ChangePasswordByUsername(username, HashPass(new_password));
+        }
+
+
+        // getName để hiển thị ra trong bảng FormMain
+        public string getName(string username)
+        {
+            return EmployeesDAL.Instance.getName(username);
+        }
+
+        public bool CheckOldPassword(string username,string oldpassword)
+        {
+            if (HashPass(oldpassword) == EmployeesDAL.Instance.getOldPassword(username)) return true;
+            return false;
+        }
 
 
 
@@ -131,9 +148,9 @@ namespace BLL
 
 
         //private static string email_reset;
-       
-        
-        
+
+
+
         public bool CheckChangePass(string username)
         {
             return EmployeesDAL.Instance.CheckChangePass(username);
