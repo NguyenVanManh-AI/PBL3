@@ -55,10 +55,18 @@ namespace LibraryManagement
             if (groupInforUser.Visible == true)
             {
                 groupInforUser.Visible = false;
+                if (guna2Panel1.Visible == false)
+                {
+                    guna2Panel1.Visible = true;
+                }
             }
             else
             {
                 groupInforUser.Visible = true;
+                if(guna2Panel1.Visible == true)
+                {
+                    guna2Panel1.Visible = false;
+                }
             }
         }
 
@@ -67,6 +75,10 @@ namespace LibraryManagement
             if (groupInforUser.Visible == true)
             {
                 groupInforUser.Visible = false;
+            }
+            if (guna2Panel1.Visible == false)
+            {
+                guna2Panel1.Visible = true;
             }
         }
 
@@ -86,6 +98,7 @@ namespace LibraryManagement
 
         private void btnInformation_Click(object sender, EventArgs e)
         {
+            this.Hide();
             FormInformationUser formInformationUser = new FormInformationUser(username);
             formInformationUser.Show();
         }

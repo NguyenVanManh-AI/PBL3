@@ -17,7 +17,7 @@ namespace DTO
         public string phone { get; set; }
         public string email { get; set; }
         public string address { get; set; }
-        public string date_of_birth { get; set; }
+        public DateTime date_of_birth { get; set; }
         public DateTime created_at { get; set; }
         public DateTime updated_at { get; set; }
     }

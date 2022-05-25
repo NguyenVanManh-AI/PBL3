@@ -46,11 +46,7 @@ namespace LibraryManagement
             CheckInfor K = new CheckInfor();
             K.Show();
         }
-        private void CapNhatThongTin(object sender, EventArgs e)
-        {
-            UpdateInfor cnnhanvien = new UpdateInfor();
-            cnnhanvien.Show();
-        }
+        
         private void TaoTaiKhoan(object sender, EventArgs e)
         {
             Register TAO = new Register();

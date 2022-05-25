@@ -184,12 +184,6 @@
     <Compile Include="UpdateCategorys.Designer.cs">
       <DependentUpon>UpdateCategorys.cs</DependentUpon>
     </Compile>
-    <Compile Include="UpdateInfor.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UpdateInfor.Designer.cs">
-      <DependentUpon>UpdateInfor.cs</DependentUpon>
-    </Compile>
     <Compile Include="UpdatePublishers.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -261,6 +255,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\103177_see_watch_view_eye_icon.png" />
+    <None Include="Resources\user.gif" />
+    <None Include="Resources\user2.png" />
     <None Include="Resources\user1.png" />
     <None Include="Resources\wave.gif" />
     <None Include="Resources\virus.gif" />
@@ -304,11 +300,18 @@
     <None Include="Resources\DUT %283%29.gif" />
     <None Include="Resources\encryption.gif" />
     <None Include="Resources\down.png" />
+    <None Include="Resources\diskette.png" />
+    <None Include="Resources\Data extraction-amico.png" />
+    <None Include="Resources\Data extraction-cuate.png" />
+    <None Include="Resources\calendar.gif" />
     <Content Include="Resources\exit.png" />
     <None Include="Resources\exit2.png" />
     <Content Include="Resources\eye_hide.png" />
+    <None Include="Resources\gear.png" />
+    <None Include="Resources\Fortune cookie-bro.png" />
     <Content Include="Resources\Google-Play-Books-icon.png" />
     <Content Include="Resources\help.png" />
+    <None Include="Resources\home.png" />
     <Content Include="Resources\images.png" />
     <Content Include="Resources\information.png" />
     <None Include="Resources\logogdut.png" />
@@ -321,12 +324,17 @@
     <None Include="Resources\mouse.gif" />
     <None Include="Resources\key.png" />
     <None Include="Resources\information2.png" />
+    <None Include="Resources\management.png" />
+    <None Include="Resources\Instant information-pana.png" />
+    <None Include="Resources\notebook.gif" />
     <Content Include="Resources\open-book.png" />
     <None Include="Resources\password.gif" />
     <None Include="Resources\pattern.gif" />
     <None Include="Resources\party.gif" />
     <Content Include="Resources\printer.png" />
     <None Include="Resources\profile.png" />
+    <None Include="Resources\Reading glasses-bro.png" />
+    <None Include="Resources\Reading glasses-bro1.png" />
     <Content Include="Resources\report.png" />
     <None Include="Resources\Reset password-amico %281%29.png" />
     <None Include="Resources\resetpassword.gif" />

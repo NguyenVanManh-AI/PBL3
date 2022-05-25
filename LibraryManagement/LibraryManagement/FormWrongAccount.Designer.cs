@@ -46,7 +46,7 @@
             this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel1.ForeColor = System.Drawing.Color.Red;
-            this.guna2HtmlLabel1.Location = new System.Drawing.Point(146, 23);
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(137, 23);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
             this.guna2HtmlLabel1.Size = new System.Drawing.Size(367, 48);
             this.guna2HtmlLabel1.TabIndex = 1;
@@ -58,11 +58,12 @@
             this.label1.BackColor = System.Drawing.Color.White;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.label1.Location = new System.Drawing.Point(154, 89);
+            this.label1.Location = new System.Drawing.Point(100, 85);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(336, 40);
+            this.label1.Size = new System.Drawing.Size(404, 40);
             this.label1.TabIndex = 2;
-            this.label1.Text = "You was login bad account or password. \r\n                    Please try again.";
+            this.label1.Text = "You was login bad account or email or password. \r\n                    Please try " +
+    "again.";
             // 
             // guna2HtmlLabel2
             // 
@@ -103,7 +104,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox2.Image = global::LibraryManagement.Properties.Resources.alert;
-            this.pictureBox2.Location = new System.Drawing.Point(35, 103);
+            this.pictureBox2.Location = new System.Drawing.Point(23, 103);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(70, 70);
@@ -118,7 +119,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox6.Image = global::LibraryManagement.Properties.Resources.warning;
-            this.pictureBox6.Location = new System.Drawing.Point(35, 23);
+            this.pictureBox6.Location = new System.Drawing.Point(23, 23);
             this.pictureBox6.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(70, 70);
@@ -133,7 +134,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.Image = global::LibraryManagement.Properties.Resources.encryption;
-            this.pictureBox1.Location = new System.Drawing.Point(530, 103);
+            this.pictureBox1.Location = new System.Drawing.Point(544, 103);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(70, 70);

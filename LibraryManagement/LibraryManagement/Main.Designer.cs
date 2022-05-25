@@ -175,7 +175,6 @@
             this.toolUpdateStaff.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.V)));
             this.toolUpdateStaff.Size = new System.Drawing.Size(427, 34);
             this.toolUpdateStaff.Text = "Update Staff";
-            this.toolUpdateStaff.Click += new System.EventHandler(this.CapNhatThongTin);
             // 
             // toolStripSeparator1
             // 

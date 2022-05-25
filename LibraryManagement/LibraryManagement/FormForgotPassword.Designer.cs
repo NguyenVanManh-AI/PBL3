@@ -327,9 +327,12 @@
             this.btnbacklogin.FillColor2 = System.Drawing.Color.DeepSkyBlue;
             this.btnbacklogin.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnbacklogin.ForeColor = System.Drawing.Color.White;
-            this.btnbacklogin.Location = new System.Drawing.Point(1103, 14);
+            this.btnbacklogin.Image = global::LibraryManagement.Properties.Resources.user2;
+            this.btnbacklogin.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnbacklogin.ImageSize = new System.Drawing.Size(30, 30);
+            this.btnbacklogin.Location = new System.Drawing.Point(1086, 14);
             this.btnbacklogin.Name = "btnbacklogin";
-            this.btnbacklogin.Size = new System.Drawing.Size(173, 75);
+            this.btnbacklogin.Size = new System.Drawing.Size(190, 75);
             this.btnbacklogin.TabIndex = 137;
             this.btnbacklogin.Text = "Back To LOGIN";
             this.btnbacklogin.Click += new System.EventHandler(this.btnbacklogin_Click);
