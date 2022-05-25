@@ -11,6 +11,8 @@ using System.Net.Mail;
 using System.Security.Cryptography;
 using DAL;
 using DTO;
+using System.Net;
+using System.Collections.Specialized;
 
 namespace BLL
 {
@@ -39,9 +41,9 @@ namespace BLL
             if (!(CheckUsernamePass(username) && CheckUsernamePass(password))) return false;
             return EmployeesDAL.Instance.CheckLogin(username, HashPass(password));
         }
-        public bool CheckEmail(string em)
+        public bool CheckEmail(string email)
         {
-            return Regex.IsMatch(em, @"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$");
+            return Regex.IsMatch(email, @"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$");
         }
         public string CheckRole(string username)
         {
@@ -124,6 +126,186 @@ namespace BLL
             return false;
         }
 
+        public DataTable LoadInforEmployee(string username)
+        {
+            return EmployeesDAL.Instance.LoadInforEmployee(username);
+        }
+
+        public bool CheckPhoneNumber(string phoneNumber)
+        {
+            return Regex.IsMatch(phoneNumber, "^[0-9]{10}$");
+        }
+
+        public bool VerifyEmail(string emailVerify) // kiểm tra tồn tại email  // k dùng hàm này vì lack 
+        {
+            using (WebClient webclient = new WebClient())
+            {
+                string url = "http://verify-email.org/";
+                NameValueCollection formData = new NameValueCollection();
+                formData["check"] = emailVerify;
+                byte[] responseBytes = webclient.UploadValues(url, "POST", formData);
+                string response = Encoding.ASCII.GetString(responseBytes);
+                if (response.Contains("Result: Ok"))
+                {
+                    return true;
+                }
+                return false;
+            }
+        }
+
+        public bool CheckEmailExist(string em) // kiểm tra tồn tại email
+        {
+            EmailValidator emailValidator = new EmailValidator();
+            EmailValidationResult result;
+
+            emailValidator.Validate(em, out result);
+            switch (result)
+            {
+                case EmailValidationResult.OK:
+                    return true;
+                case EmailValidationResult.MailboxUnavailable:
+                    return false;
+                default:
+                    return false;
+            }
+        }
+        public string SaveInforAccount(string username , string first_name,string last_name,string phone ,string email,string address,string date_of_birth)
+        {
+            if (first_name == "")
+                return "First Name cannot be blank !!!";
+            else if (!CheckPhoneNumber(phone))
+                return "Invalid phone number !!!";
+            else if (email == "")
+                return "Email cannot be blank !!!";
+            //else if (!VerifyEmail(email))     // => lack computer 
+            //    return "Email not found !!!"; 
+            //else if (!CheckEmailExist(email)) // => lack computer 
+            //    return "Email not found !!!";  
+            else if (!CheckEmail(email))
+                return "Invalid Email !!!";
+            else if (address == "")
+                return "Address cannot be blank !!!";
+            else if (!CheckDate(date_of_birth))
+                return "Incorrect date format !!!";
+            else if (!ExceedDate(date_of_birth))
+                return "Exceed the current date !!!";
+            else
+            {
+                if (EmployeesDAL.Instance.SaveInforAccount(username, first_name, last_name, phone, email, address, SaveDate(date_of_birth), Date_Now()))
+                    return "true";
+                else return "Error !!!";
+            }
+        }
+
+
+
+        // function Date 
+
+        public static string Date_Now()
+        {
+            string datetime = DateTime.Now.ToString();
+            if (datetime.Contains("CH") || datetime.Contains("SA"))
+            {
+                datetime = datetime.Replace("CH", "PM");
+                datetime = datetime.Replace("SA", "AM");
+                string[] arrListStr = datetime.Split(' ');
+                string date = arrListStr[0];
+                string time = arrListStr[1];
+                string pm = arrListStr[2];
+
+                string[] arrListStr2 = date.Split('/');
+
+                string dd = arrListStr2[0];
+                string mm = arrListStr2[1];
+                string yyyy = arrListStr2[2];
+
+                datetime = mm + "/" + dd + "/" + yyyy + " " + time + " " + pm;
+            }
+            return datetime;
+        }
+
+        public bool ExceedDate(string DateInput)
+        {
+            DateInput = SaveDate(DateInput);
+            DateTime Date_input = Convert.ToDateTime(DateInput);
+            string DateNow = DateTime.Now.Month.ToString().PadLeft(2, '0') + "/" + DateTime.Now.Day.ToString().PadLeft(2, '0')
+                + "/" + DateTime.Now.Year.ToString();
+            DateTime Date_now = Convert.ToDateTime(DateNow);
+            if (Date_input > Date_now) return false;
+            else return true;
+        }
+
+        public string ShowDate(string dateTime)
+        {
+            string[] arrListStr = dateTime.Split(' ');
+            string date = arrListStr[0];
+            return FullDayMonth(date);
+        }
+
+        public string FullDayMonth(string Date)
+        {
+            string[] arrListStr = Date.Split('/');
+            string one = arrListStr[0];
+            string two = arrListStr[1];
+            string three = arrListStr[2];
+            if(one.Length == 1)
+                one = "0" + one;
+            if (two.Length == 1)
+                two = "0" + two;
+            return one + "/" + two + "/" + three;
+        }
+        public bool CheckDate(string Date)
+        {
+            string datetime = DateTime.Now.ToString();
+
+            if (datetime.Contains("CH") || datetime.Contains("SA"))
+            {
+                try
+                {
+                    DateTime fromDateValue;
+                    var formats = new[] { "dd/MM/yyyy" };
+                    return DateTime.TryParseExact(FullDayMonth(Date), formats, System.Globalization.CultureInfo.InvariantCulture, System.Globalization.DateTimeStyles.None, out fromDateValue);
+                }
+                catch { return false; }
+            }
+            else
+            {
+                try
+                {
+                    DateTime fromDateValue;
+                    var formats = new[] { "MM/dd/yyyy" };
+                    return DateTime.TryParseExact(FullDayMonth(Date), formats, System.Globalization.CultureInfo.InvariantCulture, System.Globalization.DateTimeStyles.None, out fromDateValue);
+                }
+                catch { return false; }
+            }
+        }
+
+        public string SaveDate(string Date)
+        {
+            string datetime = DateTime.Now.ToString();
+
+            if (datetime.Contains("CH") || datetime.Contains("SA"))
+            {
+                string[] arrListStr = Date.Split('/');
+                string dd = arrListStr[0];
+                string mm = arrListStr[1];
+                string yyyy = arrListStr[2];
+                Date = mm + "/" + dd + "/" + yyyy;
+            }
+            return Date;
+        }
+
+        // function Date 
+
+        // login by Email 
+        public string getUsernamebyEmail(string email)
+        {
+            return EmployeesDAL.Instance.getUsernamebyEmail(email);
+        }
+
+
+
+
 
 
 
@@ -155,27 +337,8 @@ namespace BLL
         {
             return EmployeesDAL.Instance.CheckChangePass(username);
         }
-        public bool CheckPhoneNumber(string pn)
-        {
-            return Regex.IsMatch(pn, "^[0-9]{10}$");
-        }
-        public bool CheckEmailExist(string em)
-        {
-            EmailValidator emailValidator = new EmailValidator();
-            EmailValidationResult result;
-
-            emailValidator.Validate(em, out result);
-            switch (result)
-            {
-                case EmailValidationResult.OK:
-                    return true;
-                case EmailValidationResult.MailboxUnavailable:
-                    return false;
-                default:
-                    return false;
-            }
-        }
-
+        
+         
         //public string CheckAccount(Employees account)
         //{
         //    if (account.Fullname == "") return "Invalid Fullname. Please enter your fullname.";

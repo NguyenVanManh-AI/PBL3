@@ -28,9 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnbackHome = new Guna.UI2.WinForms.Guna2GradientButton();
             this.groupboxNewpassword = new Guna.UI2.WinForms.Guna2GroupBox();
+            this.btnNewPassword = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.guna2Separator5 = new Guna.UI2.WinForms.Guna2Separator();
+            this.guna2Separator6 = new Guna.UI2.WinForms.Guna2Separator();
             this.groupBackHome = new Guna.UI2.WinForms.Guna2GroupBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -38,37 +40,20 @@
             this.guna2Separator7 = new Guna.UI2.WinForms.Guna2Separator();
             this.guna2Separator8 = new Guna.UI2.WinForms.Guna2Separator();
             this.buttoneyes1 = new Guna.UI2.WinForms.Guna2Button();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.txtOldPassword = new Guna.UI2.WinForms.Guna2TextBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.txtConfirm = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtNewPassword = new Guna.UI2.WinForms.Guna2TextBox();
-            this.btnNewPassword = new Guna.UI2.WinForms.Guna2GradientButton();
-            this.guna2Separator5 = new Guna.UI2.WinForms.Guna2Separator();
-            this.guna2Separator6 = new Guna.UI2.WinForms.Guna2Separator();
-            this.txtOldPassword = new Guna.UI2.WinForms.Guna2TextBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupboxNewpassword.SuspendLayout();
             this.groupBackHome.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Image = global::LibraryManagement.Properties.Resources.Reset_password_amico__1_;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(685, 686);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 72;
-            this.pictureBox1.TabStop = false;
             // 
             // btnbackHome
             // 
@@ -86,11 +71,13 @@
             this.btnbackHome.FillColor2 = System.Drawing.Color.DeepSkyBlue;
             this.btnbackHome.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnbackHome.ForeColor = System.Drawing.Color.White;
-            this.btnbackHome.Location = new System.Drawing.Point(1103, 14);
+            this.btnbackHome.Image = global::LibraryManagement.Properties.Resources.home;
+            this.btnbackHome.ImageSize = new System.Drawing.Size(30, 30);
+            this.btnbackHome.Location = new System.Drawing.Point(1084, 14);
             this.btnbackHome.Name = "btnbackHome";
-            this.btnbackHome.Size = new System.Drawing.Size(173, 75);
+            this.btnbackHome.Size = new System.Drawing.Size(179, 75);
             this.btnbackHome.TabIndex = 138;
-            this.btnbackHome.Text = "HOME";
+            this.btnbackHome.Text = "  HOME";
             this.btnbackHome.Click += new System.EventHandler(this.btnbackHome_Click);
             // 
             // groupboxNewpassword
@@ -113,6 +100,43 @@
             this.groupboxNewpassword.Name = "groupboxNewpassword";
             this.groupboxNewpassword.Size = new System.Drawing.Size(500, 496);
             this.groupboxNewpassword.TabIndex = 139;
+            // 
+            // btnNewPassword
+            // 
+            this.btnNewPassword.Animated = true;
+            this.btnNewPassword.AnimatedGIF = true;
+            this.btnNewPassword.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.btnNewPassword.BorderRadius = 20;
+            this.btnNewPassword.BorderThickness = 1;
+            this.btnNewPassword.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnNewPassword.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnNewPassword.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnNewPassword.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnNewPassword.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnNewPassword.FillColor = System.Drawing.Color.DeepSkyBlue;
+            this.btnNewPassword.FillColor2 = System.Drawing.Color.DeepSkyBlue;
+            this.btnNewPassword.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNewPassword.ForeColor = System.Drawing.Color.White;
+            this.btnNewPassword.Location = new System.Drawing.Point(44, 340);
+            this.btnNewPassword.Name = "btnNewPassword";
+            this.btnNewPassword.Size = new System.Drawing.Size(417, 75);
+            this.btnNewPassword.TabIndex = 133;
+            this.btnNewPassword.Text = "Change Password";
+            this.btnNewPassword.Click += new System.EventHandler(this.btnNewPassword_Click);
+            // 
+            // guna2Separator5
+            // 
+            this.guna2Separator5.Location = new System.Drawing.Point(3, 438);
+            this.guna2Separator5.Name = "guna2Separator5";
+            this.guna2Separator5.Size = new System.Drawing.Size(500, 10);
+            this.guna2Separator5.TabIndex = 131;
+            // 
+            // guna2Separator6
+            // 
+            this.guna2Separator6.Location = new System.Drawing.Point(3, 3);
+            this.guna2Separator6.Name = "guna2Separator6";
+            this.guna2Separator6.Size = new System.Drawing.Size(500, 10);
+            this.guna2Separator6.TabIndex = 130;
             // 
             // groupBackHome
             // 
@@ -213,6 +237,47 @@
             this.buttoneyes1.TabIndex = 140;
             this.buttoneyes1.Click += new System.EventHandler(this.buttoneyes1_Click);
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox2.Image = global::LibraryManagement.Properties.Resources.password;
+            this.pictureBox2.Location = new System.Drawing.Point(53, 49);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(50, 50);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 141;
+            this.pictureBox2.TabStop = false;
+            // 
+            // txtOldPassword
+            // 
+            this.txtOldPassword.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.txtOldPassword.BorderRadius = 20;
+            this.txtOldPassword.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtOldPassword.DefaultText = "";
+            this.txtOldPassword.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtOldPassword.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtOldPassword.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtOldPassword.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtOldPassword.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtOldPassword.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtOldPassword.ForeColor = System.Drawing.Color.Black;
+            this.txtOldPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtOldPassword.IconLeft = global::LibraryManagement.Properties.Resources.social_media;
+            this.txtOldPassword.IconLeftSize = new System.Drawing.Size(30, 30);
+            this.txtOldPassword.Location = new System.Drawing.Point(44, 36);
+            this.txtOldPassword.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtOldPassword.Name = "txtOldPassword";
+            this.txtOldPassword.PasswordChar = '●';
+            this.txtOldPassword.PlaceholderText = "Old Password";
+            this.txtOldPassword.SelectedText = "";
+            this.txtOldPassword.Size = new System.Drawing.Size(417, 75);
+            this.txtOldPassword.TabIndex = 140;
+            this.txtOldPassword.UseSystemPasswordChar = true;
+            // 
             // pictureBox5
             // 
             this.pictureBox5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -295,83 +360,20 @@
             this.txtNewPassword.TabIndex = 132;
             this.txtNewPassword.UseSystemPasswordChar = true;
             // 
-            // btnNewPassword
+            // pictureBox1
             // 
-            this.btnNewPassword.Animated = true;
-            this.btnNewPassword.AnimatedGIF = true;
-            this.btnNewPassword.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.btnNewPassword.BorderRadius = 20;
-            this.btnNewPassword.BorderThickness = 1;
-            this.btnNewPassword.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnNewPassword.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnNewPassword.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnNewPassword.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnNewPassword.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnNewPassword.FillColor = System.Drawing.Color.DeepSkyBlue;
-            this.btnNewPassword.FillColor2 = System.Drawing.Color.DeepSkyBlue;
-            this.btnNewPassword.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNewPassword.ForeColor = System.Drawing.Color.White;
-            this.btnNewPassword.Location = new System.Drawing.Point(44, 340);
-            this.btnNewPassword.Name = "btnNewPassword";
-            this.btnNewPassword.Size = new System.Drawing.Size(417, 75);
-            this.btnNewPassword.TabIndex = 133;
-            this.btnNewPassword.Text = "Change Password";
-            this.btnNewPassword.Click += new System.EventHandler(this.btnNewPassword_Click);
-            // 
-            // guna2Separator5
-            // 
-            this.guna2Separator5.Location = new System.Drawing.Point(3, 438);
-            this.guna2Separator5.Name = "guna2Separator5";
-            this.guna2Separator5.Size = new System.Drawing.Size(500, 10);
-            this.guna2Separator5.TabIndex = 131;
-            // 
-            // guna2Separator6
-            // 
-            this.guna2Separator6.Location = new System.Drawing.Point(3, 3);
-            this.guna2Separator6.Name = "guna2Separator6";
-            this.guna2Separator6.Size = new System.Drawing.Size(500, 10);
-            this.guna2Separator6.TabIndex = 130;
-            // 
-            // txtOldPassword
-            // 
-            this.txtOldPassword.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.txtOldPassword.BorderRadius = 20;
-            this.txtOldPassword.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtOldPassword.DefaultText = "";
-            this.txtOldPassword.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtOldPassword.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtOldPassword.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtOldPassword.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtOldPassword.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtOldPassword.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtOldPassword.ForeColor = System.Drawing.Color.Black;
-            this.txtOldPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtOldPassword.IconLeft = global::LibraryManagement.Properties.Resources.social_media;
-            this.txtOldPassword.IconLeftSize = new System.Drawing.Size(30, 30);
-            this.txtOldPassword.Location = new System.Drawing.Point(44, 36);
-            this.txtOldPassword.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtOldPassword.Name = "txtOldPassword";
-            this.txtOldPassword.PasswordChar = '●';
-            this.txtOldPassword.PlaceholderText = "Old Password";
-            this.txtOldPassword.SelectedText = "";
-            this.txtOldPassword.Size = new System.Drawing.Size(417, 75);
-            this.txtOldPassword.TabIndex = 140;
-            this.txtOldPassword.UseSystemPasswordChar = true;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox2.Image = global::LibraryManagement.Properties.Resources.password;
-            this.pictureBox2.Location = new System.Drawing.Point(53, 49);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(50, 50);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 141;
-            this.pictureBox2.TabStop = false;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Image = global::LibraryManagement.Properties.Resources.Reset_password_amico__1_;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(685, 686);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 72;
+            this.pictureBox1.TabStop = false;
             // 
             // FormChangePassword
             // 
@@ -388,13 +390,13 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormChangePassword";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormChangePassword_FormClosing);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupboxNewpassword.ResumeLayout(false);
             this.groupBackHome.ResumeLayout(false);
             this.groupBackHome.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

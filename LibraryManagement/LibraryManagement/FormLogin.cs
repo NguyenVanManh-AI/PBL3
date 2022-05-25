@@ -35,11 +35,8 @@ namespace LibraryManagement
             }
         }
 
-        private void btnLogin_Click(object sender, EventArgs e)
+        public void Login(string username , string password)
         {
-            string username = txtUsername.Text;
-            string password = txtPassword.Text;
-
             if (!EmployeesBLL.Instance.CheckLogin(username, password))
             {
                 FormWrongAccount formWrongAccount = new FormWrongAccount();
@@ -49,8 +46,34 @@ namespace LibraryManagement
             {
                 FormMain m = new FormMain(username);
                 m.Show();
-                Hide(); 
+                Hide();
             }
+        }
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            string username = "";
+            string password = txtPassword.Text;
+
+            if (txtUsername.Text.Contains("@"))
+            {
+                username = EmployeesBLL.Instance.getUsernamebyEmail(txtUsername.Text);
+                if (username == "")
+                {
+                    FormMessageBoxError formMessageBoxError = new FormMessageBoxError("Email Not Found !!!");
+                    formMessageBoxError.Show();
+                }
+                else
+                {
+                    Login(username, password);
+                }
+            }
+            else
+            {
+                username = txtUsername.Text;
+                Login(username, password);
+            }
+
+
         }
         private void FormLogin_FormClosing(object sender, FormClosingEventArgs e)
         {

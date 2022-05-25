@@ -87,6 +87,38 @@ namespace DAL
             catch { return "Error"; }
         }
 
+        public DataTable LoadInforEmployee(string username)
+        {
+            string query = "select first_name ,last_name, address , phone , email , date_of_birth , created_at , " +
+                "updated_at  from employees where username='" + username + "'" ;
+            return LoadData(query);
+        }
+
+
+        
+
+        public bool SaveInforAccount(string username , string first_name, string last_name, string phone, string email, string address, string date_of_birth,string date_now)
+        {
+            try
+            {
+                string query = "update employees set first_name=N'" + first_name + "',last_name=N'" + last_name + "',address=N'" + address 
+                    + "',phone='" + phone + "',email='" + email + "',date_of_birth='" + date_of_birth + "',updated_at='" 
+                    + date_now + "' where username='" + username + "'";
+                EditData(query);
+                return true;
+            }
+            catch { return false; }
+        }
+
+        public string getUsernamebyEmail(string email)
+        {   try
+            {
+                string query = "select username from employees where email = '" + email + "'";
+                return LoadData(query).Rows[0][0].ToString();
+            }
+            catch { return ""; }
+            
+        }
 
 
 
