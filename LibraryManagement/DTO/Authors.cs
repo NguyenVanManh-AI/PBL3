@@ -16,6 +16,13 @@ namespace DTO
         public string description { get; set; }
         public DateTime created_at { get; set; }
         public DateTime updated_at { get; set; }
+
+        public Authors(string fname, string lname, bool gen,string des) {
+            first_name = fname;
+            last_name = lname;
+            gender = gen;   
+            description = des;
+        }
     }
 }
 

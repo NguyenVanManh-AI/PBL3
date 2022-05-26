@@ -16,5 +16,12 @@ namespace DTO
         public string country { get; set; }
         public DateTime created_at { get; set; }
         public DateTime updated_at { get; set; }
+        public Publishers (string namee, string dess, string countryy, string addr)
+        {
+            this.name = namee;
+            this.description = dess;
+            this.address = addr;
+            this.country = countryy;
+        }
     }
 }

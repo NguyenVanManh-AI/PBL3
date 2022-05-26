@@ -23,7 +23,6 @@ namespace DAL
             {
                 SqlCommand sqlCommand = new SqlCommand(query, sqlconnection);
                 sqlconnection.Open();
-
                 SqlDataAdapter adapter = new SqlDataAdapter(sqlCommand);
                 adapter.Fill(data);
                 sqlconnection.Close();
@@ -41,7 +40,42 @@ namespace DAL
 
             }
         }
-        
+        public Object GetValue(string query) //lay gia tri cua  cot dau tien trong bang 
+        {
+            Object obj;
+            using (SqlConnection sqlconnection = GetSqlConnection())
+            {
+                sqlconnection.Open();
+                SqlCommand sqlCommand = new SqlCommand();
+                sqlCommand = new SqlCommand();
+                sqlCommand.CommandText = query;
+                sqlCommand.CommandType = CommandType.Text;
+                sqlCommand.Connection = sqlconnection;
+                obj = sqlCommand.ExecuteScalar();
+                sqlconnection.Close();
+            }
+            return obj;
+        }
+        //public void CommandMovie(Movie movie, string query)
+        //{
+        //    using (SqlConnection sqlconnection = GetSqlConnection())
+        //    {
+        //        sqlconnection.Open();
+        //        SqlCommand sqlCommand = new SqlCommand(query, sqlconnection);
+        //        sqlCommand.Parameters.AddWithValue("@movie_name", movie.Name);
+        //        sqlCommand.Parameters.AddWithValue("@movie_id", movie.ID);
+        //        sqlCommand.Parameters.AddWithValue("@movie_genres", movie.Genres);
+
+        //        //, , @movie_release, @movie_image
+        //        sqlCommand.Parameters.AddWithValue("@movie_description", movie.Description);
+        //        sqlCommand.Parameters.AddWithValue("@movie_length", movie.Length);
+        //        sqlCommand.Parameters.AddWithValue("@movie_release", movie.Release);
+        //        sqlCommand.Parameters.AddWithValue("@movie_image", movie.Image);
+        //        sqlCommand.ExecuteNonQuery(); //thực thi câu truy vấn
+        //        sqlconnection.Close();
+
+        //    }
+        //}
     }
     
 }

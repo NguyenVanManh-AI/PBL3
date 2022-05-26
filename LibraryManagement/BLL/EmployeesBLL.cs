@@ -16,7 +16,7 @@ using System.Collections.Specialized;
 
 namespace BLL
 {
-    public class EmployeesBLL : FunctionBLL
+    public class EmployeesBLL : Function
     {
         private static EmployeesBLL _instance;
         public static EmployeesBLL Instance

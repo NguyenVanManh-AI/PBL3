@@ -20,5 +20,16 @@ namespace DTO
         public string address { get; set; }
         public DateTime created_at { get; set; }
         public DateTime updated_at { get; set; }
+        public Readers(string fname,string lname, bool gend,DateTime dob,string emai,string card, string phon,string addr)
+        {
+            first_name = fname;
+            last_name = lname;
+            gender = gend;
+            date_of_birth = dob;
+            email = emai;
+            identity_card_number = card;
+            phone = phon;
+            address = addr;
+        }
     }
 }
