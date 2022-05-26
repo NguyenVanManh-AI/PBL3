@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnbackHome = new Guna.UI2.WinForms.Guna2GradientButton();
             this.groupboxNewpassword = new Guna.UI2.WinForms.Guna2GroupBox();
             this.btnNewPassword = new Guna.UI2.WinForms.Guna2GradientButton();
             this.guna2Separator5 = new Guna.UI2.WinForms.Guna2Separator();
@@ -46,6 +45,7 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.txtConfirm = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtNewPassword = new Guna.UI2.WinForms.Guna2TextBox();
+            this.btnbackHome = new Guna.UI2.WinForms.Guna2GradientButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupboxNewpassword.SuspendLayout();
             this.groupBackHome.SuspendLayout();
@@ -54,31 +54,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // btnbackHome
-            // 
-            this.btnbackHome.Animated = true;
-            this.btnbackHome.AnimatedGIF = true;
-            this.btnbackHome.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.btnbackHome.BorderRadius = 20;
-            this.btnbackHome.BorderThickness = 1;
-            this.btnbackHome.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnbackHome.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnbackHome.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnbackHome.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnbackHome.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnbackHome.FillColor = System.Drawing.Color.DeepSkyBlue;
-            this.btnbackHome.FillColor2 = System.Drawing.Color.DeepSkyBlue;
-            this.btnbackHome.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnbackHome.ForeColor = System.Drawing.Color.White;
-            this.btnbackHome.Image = global::LibraryManagement.Properties.Resources.home;
-            this.btnbackHome.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnbackHome.Location = new System.Drawing.Point(1084, 14);
-            this.btnbackHome.Name = "btnbackHome";
-            this.btnbackHome.Size = new System.Drawing.Size(179, 75);
-            this.btnbackHome.TabIndex = 138;
-            this.btnbackHome.Text = "  HOME";
-            this.btnbackHome.Click += new System.EventHandler(this.btnbackHome_Click);
             // 
             // groupboxNewpassword
             // 
@@ -108,6 +83,7 @@
             this.btnNewPassword.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.btnNewPassword.BorderRadius = 20;
             this.btnNewPassword.BorderThickness = 1;
+            this.btnNewPassword.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnNewPassword.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnNewPassword.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnNewPassword.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -185,6 +161,7 @@
             this.btnHome.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.btnHome.BorderRadius = 20;
             this.btnHome.BorderThickness = 1;
+            this.btnHome.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnHome.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnHome.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnHome.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -359,6 +336,32 @@
             this.txtNewPassword.Size = new System.Drawing.Size(417, 75);
             this.txtNewPassword.TabIndex = 132;
             this.txtNewPassword.UseSystemPasswordChar = true;
+            // 
+            // btnbackHome
+            // 
+            this.btnbackHome.Animated = true;
+            this.btnbackHome.AnimatedGIF = true;
+            this.btnbackHome.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.btnbackHome.BorderRadius = 20;
+            this.btnbackHome.BorderThickness = 1;
+            this.btnbackHome.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnbackHome.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnbackHome.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnbackHome.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnbackHome.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnbackHome.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnbackHome.FillColor = System.Drawing.Color.DeepSkyBlue;
+            this.btnbackHome.FillColor2 = System.Drawing.Color.DeepSkyBlue;
+            this.btnbackHome.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnbackHome.ForeColor = System.Drawing.Color.White;
+            this.btnbackHome.Image = global::LibraryManagement.Properties.Resources.home;
+            this.btnbackHome.ImageSize = new System.Drawing.Size(30, 30);
+            this.btnbackHome.Location = new System.Drawing.Point(1084, 14);
+            this.btnbackHome.Name = "btnbackHome";
+            this.btnbackHome.Size = new System.Drawing.Size(179, 75);
+            this.btnbackHome.TabIndex = 138;
+            this.btnbackHome.Text = "  HOME";
+            this.btnbackHome.Click += new System.EventHandler(this.btnbackHome_Click);
             // 
             // pictureBox1
             // 

@@ -160,6 +160,18 @@
     <Compile Include="test.Designer.cs">
       <DependentUpon>test.cs</DependentUpon>
     </Compile>
+    <Compile Include="UC_Employees.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_Employees.Designer.cs">
+      <DependentUpon>UC_Employees.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_Help.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_Help.Designer.cs">
+      <DependentUpon>UC_Help.cs</DependentUpon>
+    </Compile>
     <Compile Include="UpdateAuthors.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -239,6 +251,12 @@
     <EmbeddedResource Include="test.resx">
       <DependentUpon>test.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UC_Employees.resx">
+      <DependentUpon>UC_Employees.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_Help.resx">
+      <DependentUpon>UC_Help.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -310,6 +328,8 @@
     <None Include="Resources\gear.png" />
     <None Include="Resources\Fortune cookie-bro.png" />
     <Content Include="Resources\Google-Play-Books-icon.png" />
+    <None Include="Resources\group-white.png" />
+    <None Include="Resources\group.png" />
     <Content Include="Resources\help.png" />
     <None Include="Resources\home.png" />
     <Content Include="Resources\images.png" />
@@ -327,10 +347,19 @@
     <None Include="Resources\management.png" />
     <None Include="Resources\Instant information-pana.png" />
     <None Include="Resources\notebook.gif" />
+    <None Include="Resources\management1.png" />
+    <None Include="Resources\management-w.png" />
+    <None Include="Resources\Instruction manual-cuate.png" />
+    <None Include="Resources\next.png" />
+    <None Include="Resources\next1.png" />
     <Content Include="Resources\open-book.png" />
     <None Include="Resources\password.gif" />
     <None Include="Resources\pattern.gif" />
     <None Include="Resources\party.gif" />
+    <None Include="Resources\previous.png" />
+    <None Include="Resources\previous %281%29.png" />
+    <None Include="Resources\previous %281%291.png" />
+    <None Include="Resources\previous1.png" />
     <Content Include="Resources\printer.png" />
     <None Include="Resources\profile.png" />
     <None Include="Resources\Reading glasses-bro.png" />
@@ -339,6 +368,8 @@
     <None Include="Resources\Reset password-amico %281%29.png" />
     <None Include="Resources\resetpassword.gif" />
     <None Include="Resources\sad.gif" />
+    <None Include="Resources\right-arrow.gif" />
+    <None Include="Resources\right.png" />
     <Content Include="Resources\search.png" />
     <None Include="Resources\social-media.gif" />
     <None Include="Resources\share.gif" />
@@ -348,6 +379,7 @@
     <None Include="Resources\target.gif" />
     <None Include="Resources\Two factor authentication-rafiki.png" />
     <None Include="Resources\Two factor authentication-rafiki %281%29.png" />
+    <None Include="Resources\Tiny people with guide instructions or handbooks.jpg" />
     <Content Include="Resources\update.png" />
   </ItemGroup>
   <ItemGroup>

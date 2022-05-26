@@ -38,3 +38,5 @@ C:\Users\LAPTOP KIM ANH\source\repos\LibraryManagement\LibraryManagement\obj\Deb
 C:\Users\LAPTOP KIM ANH\source\repos\LibraryManagement\LibraryManagement\obj\Debug\LibraryManagement.FormMeessageBox.resources
 C:\Users\LAPTOP KIM ANH\source\repos\LibraryManagement\LibraryManagement\obj\Debug\LibraryManagement.FormChangePassword.resources
 C:\Users\LAPTOP KIM ANH\source\repos\LibraryManagement\LibraryManagement\obj\Debug\LibraryManagement.FormInformationUser.resources
+C:\Users\LAPTOP KIM ANH\source\repos\LibraryManagement\LibraryManagement\obj\Debug\LibraryManagement.UC_Employees.resources
+C:\Users\LAPTOP KIM ANH\source\repos\LibraryManagement\LibraryManagement\obj\Debug\LibraryManagement.UC_Help.resources
