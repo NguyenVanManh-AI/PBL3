@@ -41,6 +41,7 @@ namespace LibraryManagement
         {
             btnInforUser.Text = EmployeesBLL.Instance.getName(username);
             groupInforUser.Visible = false;
+            guna2Panel1.Visible = false;
         }
 
         private void LogOut(object sender, EventArgs e)
@@ -101,6 +102,42 @@ namespace LibraryManagement
             this.Hide();
             FormInformationUser formInformationUser = new FormInformationUser(username);
             formInformationUser.Show();
+        }
+
+
+
+
+
+        // load UC 
+        public void AddUCPanel1(UserControl uc)
+        {
+            guna2Panel1.Controls.Clear();
+            uc.Dock = DockStyle.Fill;
+            uc.BringToFront();
+            guna2Panel1.Controls.Add(uc);
+        }
+        public void AddUCPanel2(UserControl uc)
+        {
+            guna2Panel2.Controls.Clear();
+            uc.Dock = DockStyle.Fill;
+            uc.BringToFront();
+            guna2Panel2.Controls.Add(uc);
+        }
+
+        private void btnManaEmployees_Click(object sender, EventArgs e)
+        {
+            UC_Employees uC_Employees = new UC_Employees();
+            AddUCPanel1(uC_Employees);
+        }
+
+        private void btnHelp_Click(object sender, EventArgs e)
+        {
+            UC_Help uC_Help = new UC_Help();
+            AddUCPanel2(uC_Help);
+            if(guna2Panel1.Visible == true)
+            {
+                guna2Panel2.Visible = false;
+            }
         }
     }
 }
