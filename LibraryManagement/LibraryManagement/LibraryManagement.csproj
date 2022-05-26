@@ -160,6 +160,18 @@
     <Compile Include="test.Designer.cs">
       <DependentUpon>test.cs</DependentUpon>
     </Compile>
+    <Compile Include="UC_Authors.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_Authors.designer.cs">
+      <DependentUpon>UC_Authors.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_Categorys.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_Categorys.designer.cs">
+      <DependentUpon>UC_Categorys.cs</DependentUpon>
+    </Compile>
     <Compile Include="UC_Employees.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -171,6 +183,12 @@
     </Compile>
     <Compile Include="UC_Help.Designer.cs">
       <DependentUpon>UC_Help.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_Publishers.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_Publishers.designer.cs">
+      <DependentUpon>UC_Publishers.cs</DependentUpon>
     </Compile>
     <Compile Include="UpdateAuthors.cs">
       <SubType>Form</SubType>
@@ -311,6 +329,10 @@
     <None Include="Resources\7759.jpg" />
     <None Include="Resources\77591.jpg" />
     <None Include="Resources\alert.gif" />
+    <None Include="Resources\add-friend-w.png" />
+    <None Include="Resources\add-friend.png" />
+    <None Include="Resources\author-w.png" />
+    <None Include="Resources\author.png" />
     <Content Include="Resources\Backgroundmain.jpg" />
     <Content Include="Resources\book-app-icon-4.jpg" />
     <None Include="Resources\DUT %282%29.png" />
@@ -322,16 +344,28 @@
     <None Include="Resources\Data extraction-amico.png" />
     <None Include="Resources\Data extraction-cuate.png" />
     <None Include="Resources\calendar.gif" />
+    <None Include="Resources\data-analytics-w.png" />
+    <None Include="Resources\data-analytics.png" />
+    <None Include="Resources\book-of-black-cover-closed-w.png" />
+    <None Include="Resources\book-of-black-cover-closed.png" />
+    <None Include="Resources\category-w.png" />
+    <None Include="Resources\category.png" />
+    <None Include="Resources\clock.png" />
+    <None Include="Resources\DUT.gif" />
     <Content Include="Resources\exit.png" />
     <None Include="Resources\exit2.png" />
     <Content Include="Resources\eye_hide.png" />
     <None Include="Resources\gear.png" />
     <None Include="Resources\Fortune cookie-bro.png" />
+    <None Include="Resources\followers.png" />
     <Content Include="Resources\Google-Play-Books-icon.png" />
     <None Include="Resources\group-white.png" />
     <None Include="Resources\group.png" />
     <Content Include="Resources\help.png" />
     <None Include="Resources\home.png" />
+    <None Include="Resources\id-card-w.png" />
+    <None Include="Resources\id-card.png" />
+    <None Include="Resources\home1.png" />
     <Content Include="Resources\images.png" />
     <Content Include="Resources\information.png" />
     <None Include="Resources\logogdut.png" />
@@ -352,6 +386,13 @@
     <None Include="Resources\Instruction manual-cuate.png" />
     <None Include="Resources\next.png" />
     <None Include="Resources\next1.png" />
+    <None Include="Resources\newspaper-w.png" />
+    <None Include="Resources\newspaper.png" />
+    <None Include="Resources\Instruction manual.gif" />
+    <None Include="Resources\Library-pana.png" />
+    <None Include="Resources\Library-rafiki.png" />
+    <None Include="Resources\Library-pana %281%29.png" />
+    <None Include="Resources\Library-pana %281%29 - Copy.png" />
     <Content Include="Resources\open-book.png" />
     <None Include="Resources\password.gif" />
     <None Include="Resources\pattern.gif" />
@@ -364,6 +405,9 @@
     <None Include="Resources\profile.png" />
     <None Include="Resources\Reading glasses-bro.png" />
     <None Include="Resources\Reading glasses-bro1.png" />
+    <None Include="Resources\printing-w.png" />
+    <None Include="Resources\printing.png" />
+    <None Include="Resources\question.png" />
     <Content Include="Resources\report.png" />
     <None Include="Resources\Reset password-amico %281%29.png" />
     <None Include="Resources\resetpassword.gif" />
@@ -380,6 +424,8 @@
     <None Include="Resources\Two factor authentication-rafiki.png" />
     <None Include="Resources\Two factor authentication-rafiki %281%29.png" />
     <None Include="Resources\Tiny people with guide instructions or handbooks.jpg" />
+    <None Include="Resources\tree1.png" />
+    <None Include="Resources\tree2.png" />
     <Content Include="Resources\update.png" />
   </ItemGroup>
   <ItemGroup>

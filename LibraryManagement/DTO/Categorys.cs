@@ -14,5 +14,10 @@ namespace DTO
         public string description { get; set; }
         public DateTime created_at { get; set; }
         public DateTime updated_at { get; set; }
+        public Categorys(string namee,string descriptionn)
+        {
+            name=namee; 
+            description=descriptionn;   
+        }
     }
 }

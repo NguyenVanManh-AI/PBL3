@@ -12,9 +12,16 @@ namespace DTO
         public int id { get; set; }
         public int book_title_id { get; set; }
         public DateTime imported_at { get; set; }
-        public string status { get; set; }
+        public bool status { get; set; }
         public DateTime created_at { get; set; }
         public DateTime updated_at { get; set; }
+        public Books(int title_id,DateTime import, bool statuss)
+        {
+
+            this.book_title_id = title_id;
+            this.imported_at = import;
+            this.status = statuss;
+        }
     }
 }
 
