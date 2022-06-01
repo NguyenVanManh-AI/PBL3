@@ -19,15 +19,14 @@ namespace DTO
         public int number_of_pages { get; set; }
         public DateTime created_at { get; set; }
         public DateTime updated_at { get; set; }
-        public BookTitles(string titlee, int auid, int cate_id,int pub_id, string des, DateTime pubdate,int page, DateTime cre, DateTime upd)
+        public BookTitles(string titlee, int auid, int cate_id,int pub_id, string des, DateTime pubdate,int page)
         {
             this.title = titlee;
             this.author_id = auid;
             this.category_id = cate_id;
+            this.publisher_id = pub_id;
             this.publication_date = pubdate;
             this.number_of_pages = page;
-            this.created_at = cre;
-            this.updated_at = upd;
             this.description = des;
             this.number_of_pages = page;
         }

@@ -155,6 +155,7 @@
             this.Controls.Add(this.pictureBox6);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.guna2HtmlLabel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "FormWrongAccount";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Wrong Account !!!";

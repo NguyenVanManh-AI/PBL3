@@ -47,10 +47,10 @@ namespace BLL
             if (r.phone == "") return "Phone Number cann't be left blank!";
             if (hasSpecialChar(r.first_name)) return "First Name cann't contain special char!";
             if (hasSpecialChar(r.last_name) && r.last_name != "") return "Last Name cann't contain special char or number!";
-            if (CheckEmail(r.email) && r.email != "") return "Invalid Email!";
+            if (!CheckEmail(r.email) && r.email != "") return "Invalid Email!";
             if (CheckPhone(r.phone)) return "Phone Number only contain number!";
             if (r.phone.Length != 10) return "Phone Number must contain 10 number ";
-            ReadersBLL.Instance.EditReader(r,id);
+            ReadersDAL.Instance.EditReader(r,id);
             return "OK";
         }
         public void DeleteReader(string id)

@@ -21,11 +21,9 @@ namespace BLL
                 string pm = arrListStr[2];
 
                 string[] arrListStr2 = date.Split('/');
-
                 string dd = arrListStr2[0];
                 string mm = arrListStr2[1];
                 string yyyy = arrListStr2[2];
-
                 datetime = mm + "/" + dd + "/" + yyyy + " " + time + " " + pm;
             }
             return datetime;
@@ -51,15 +49,23 @@ namespace BLL
 
         public string FullDayMonth(string Date)
         {
-            string[] arrListStr = Date.Split('/');
-            string one = arrListStr[0];
-            string two = arrListStr[1];
-            string three = arrListStr[2];
-            if (one.Length == 1)
-                one = "0" + one;
-            if (two.Length == 1)
-                two = "0" + two;
-            return one + "/" + two + "/" + three;
+            if(Date != "")
+            {
+                string[] arrListStr = Date.Split('/');
+                string one = arrListStr[0];
+                string two = arrListStr[1];
+                string three = arrListStr[2];
+                if (one.Length == 1)
+                    one = "0" + one;
+                if (two.Length == 1)
+                    two = "0" + two;
+                return one + "/" + two + "/" + three;
+            }
+            else
+            {
+                return "";
+            }
+            
         }
         public bool CheckDate(string Date)
         {
@@ -90,7 +96,6 @@ namespace BLL
         public string SaveDate(string Date)
         {
             string datetime = DateTime.Now.ToString();
-
             if (datetime.Contains("CH") || datetime.Contains("SA"))
             {
                 string[] arrListStr = Date.Split('/');
@@ -108,29 +113,33 @@ namespace BLL
             {
                 if (input.Contains(item)) return true;
             }
-
             return false;
         }
 
-        public static bool CheckPhone(string input)
+        public bool CheckPhone(string input)
         {
             string specialChar = @"~!@#$%^&*()_+`qwertyuiopasdfghjklzxcvbnm-=[]{}|\;':,./<>?";
             foreach (char item in specialChar)
             {
                 if (input.Contains(item)) return true;
             }
-
             return false;
         }
-        public static bool CheckEmail(string input)
+        public bool CheckEmail(string input)
         {
             string specialChar = @"@gmail.com";
             foreach (char item in specialChar)
             {
                 if (input.Contains(item)) return true;
             }
-
             return false;
         }
+        public int CheckInt(string txt)
+        {
+            if (txt != "")
+                return Int32.Parse(txt);
+            else return 0;
+        }
+
     }
 }

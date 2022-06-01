@@ -44,9 +44,12 @@
     <Compile Include="AuthorsDAL.cs" />
     <Compile Include="BooksDAL.cs" />
     <Compile Include="BookTitlesDAL.cs" />
+    <Compile Include="BorrowDetailsDAL.cs" />
+    <Compile Include="BorrowsDAL.cs" />
     <Compile Include="CategorysDAL.cs" />
     <Compile Include="DataBase.cs" />
     <Compile Include="EmployeesDAL.cs" />
+    <Compile Include="ManaEmployeesDAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="PublishersDAL.cs" />
     <Compile Include="ReadersDAL.cs" />

@@ -38,5 +38,12 @@ C:\Users\LAPTOP KIM ANH\source\repos\LibraryManagement\LibraryManagement\obj\Deb
 C:\Users\LAPTOP KIM ANH\source\repos\LibraryManagement\LibraryManagement\obj\Debug\LibraryManagement.FormMeessageBox.resources
 C:\Users\LAPTOP KIM ANH\source\repos\LibraryManagement\LibraryManagement\obj\Debug\LibraryManagement.FormChangePassword.resources
 C:\Users\LAPTOP KIM ANH\source\repos\LibraryManagement\LibraryManagement\obj\Debug\LibraryManagement.FormInformationUser.resources
-C:\Users\LAPTOP KIM ANH\source\repos\LibraryManagement\LibraryManagement\obj\Debug\LibraryManagement.UC_Employees.resources
 C:\Users\LAPTOP KIM ANH\source\repos\LibraryManagement\LibraryManagement\obj\Debug\LibraryManagement.UC_Help.resources
+C:\Users\LAPTOP KIM ANH\source\repos\LibraryManagement\LibraryManagement\obj\Debug\LibraryManagement.UC_ManagementEmployees.resources
+C:\Users\LAPTOP KIM ANH\source\repos\LibraryManagement\LibraryManagement\obj\Debug\LibraryManagement.UC_AddAccounts.resources
+C:\Users\LAPTOP KIM ANH\source\repos\LibraryManagement\LibraryManagement\obj\Debug\LibraryManagement.UC_Borrows.resources
+C:\Users\LAPTOP KIM ANH\source\repos\LibraryManagement\LibraryManagement\obj\Debug\LibraryManagement.UC_BorrowDetails.resources
+C:\Users\LAPTOP KIM ANH\source\repos\LibraryManagement\LibraryManagement\obj\Debug\LibraryManagement.BorrowDetails2.resources
+C:\Users\LAPTOP KIM ANH\source\repos\LibraryManagement\LibraryManagement\obj\Debug\LibraryManagement.UC_Authors.resources
+C:\Users\LAPTOP KIM ANH\source\repos\LibraryManagement\LibraryManagement\obj\Debug\LibraryManagement.UC_Books.resources
+C:\Users\LAPTOP KIM ANH\source\repos\LibraryManagement\LibraryManagement\obj\Debug\LibraryManagement.UC_BookTitles.resources

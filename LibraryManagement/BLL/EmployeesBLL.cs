@@ -57,6 +57,12 @@ namespace BLL
             return Convert.ToBase64String(encrypted_bytes);
         }
 
+        private int RandomNumber(int min, int max)
+        {
+            Random random = new Random();
+            return random.Next(min, max);
+        }
+
         public bool CheckAndSendMailToReset(string email)
         {
             if (!CheckEmail(email)) return false;
@@ -131,9 +137,11 @@ namespace BLL
             return EmployeesDAL.Instance.LoadInforEmployee(username);
         }
 
+        
+
         public bool CheckPhoneNumber(string phoneNumber)
         {
-            return Regex.IsMatch(phoneNumber, "^[0-9]{10}$");
+            return Regex.IsMatch(phoneNumber, "^[0-9]{9,11}$");
         }
 
         public bool VerifyEmail(string emailVerify) // kiểm tra tồn tại email  // k dùng hàm này vì lack 
@@ -206,152 +214,62 @@ namespace BLL
         {
             return EmployeesDAL.Instance.getUsernamebyEmail(email);
         }
+        // get Id by Username 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        //private static string email_reset;
-
-
-
-        public bool CheckChangePass(string username)
+        public string getIdByUsername(string username)
         {
-            return EmployeesDAL.Instance.CheckChangePass(username);
+            return EmployeesDAL.Instance.getIdByUsername(username);
         }
-        
-         
-        //public string CheckAccount(Employees account)
-        //{
-        //    if (account.Fullname == "") return "Invalid Fullname. Please enter your fullname.";
-        //    if (!CheckUsernamePass(account.Username)) return "Invalid Username! Minimum 10 characters.\nMust not contain symbols.";
-        //    if (!CheckPhoneNumber(account.Phone)) return "Invalid phone number! Your phone number.\nmust contain 10 characters.";
-        //    if (!CheckEmail(account.Email)) return "Invalid Email!\nThe format of the email address is:username@gmail.com.\nUsername must not contain symbols";
-        //    if (!CheckEmailExist(account.Email)) return "Email address does not exist!";
-        //    return "OK";
-        //}
-        private int RandomNumber(int min, int max)
+
+        public string getIdByEmail(string email)
         {
-            Random random = new Random();
-            return random.Next(min, max);
+            return EmployeesDAL.Instance.getIdByEmail(email);
         }
-        private string RandomString(int size, bool lowerCase)
+        // created Account 
+
+        public string CreatedAcount(string username , string password , string email)
         {
-            StringBuilder builder = new StringBuilder();
-            Random random = new Random();
-            char ch;
-            for (int i = 0; i < size; i++)
+            try
             {
-                ch = Convert.ToChar(Convert.ToInt32(Math.Floor(26 * random.NextDouble() + 65)));
-                builder.Append(ch);
+                if (!CheckUsernamePass(username))
+                    return "Username minimum 10 characters and maximum 24 characters including letters and numbers !!!";
+                else if (!CheckUsernamePass(password))
+                    return "Username minimum 10 characters and maximum 24 characters including letters and numbers !!!";
+                else if (getIdByUsername(username) != "")
+                    return "Username already exists !!!";
+                else if (!CheckEmail(email))
+                    return "Bad format email !!!";
+                else if (getUsernamebyEmail(email) != "")
+                    return "Email has been used by another user !!!";
+                else if (EmployeesDAL.Instance.CreatedAcount(username, HashPass(password), email, Date_Now()))
+                    return "true";
+                else
+                    return "false";
             }
-            if (lowerCase)
-                return builder.ToString().ToLower();
-            return builder.ToString();
+            catch
+            {
+                return "false";
+            }
         }
-        public string RandomPassword()
-        {
-            StringBuilder builder = new StringBuilder();
-            builder.Append(RandomString(4, true));
-            builder.Append(RandomNumber(1000, 9999));
-            builder.Append(RandomString(2, false));
-            return builder.ToString();
-        }
-        
-        //public string Add(Employees account)
-        //{
-        //    string check = CheckAccount(account);
-        //    if (check != "OK") return check;
-
-        //    string pwd = RandomPassword();
-        //    account.Password = HashPass(pwd);
-
-        //    check = EmployeesDAL.Instance.Add(account);
-        //    if (check == "OK")
-        //    {
-        //        email_employee = account.Email;
-        //        content = "Welcome to CINESTAR CINEMA.<br>We create a new account for you.<br>Username: " + account.Username + "<br>Password: " + pwd;
-        //        SendEmail(email_employee, content, "YOUR NEW ACCOUNT AT CINESTAR CINEMA.");
-        //    }
-        //    return check;
-        //}
-        public string GetEmailByUsername(string username)
-        {
-            email_employee = EmployeesDAL.Instance.GetEmailByUsername(username);
-            return email_employee;
-        }
-        //public string Update(Employees account)
-        //{
-        //    string check = CheckAccount(account);
-        //    if (check != "OK") return check;
-        //    return EmployeesDAL.Instance.Update(account);
-        //}
-        public DataTable LoadAllAccount()
-        {
-            return EmployeesDAL.Instance.LoadAllAccount();
-        }
-        public DataTable LoadSearchAccount(string txt)
-        {
-            return EmployeesDAL.Instance.LoadSearchAccount(txt);
-        }
-        public DataRow LoadAccountByID(int id)
-        {
-            return EmployeesDAL.Instance.LoadAccountByID(id);
-        }
-        
-        
-        public void CheckAndSendMailToFirstLogin(string username)
-        {
-            codeText = RandomNumber(99999, 1000000).ToString();
-            SendEmail(GetEmailByUsername(username), codeText, "FIRST LOGIN");
-        }
-        
 
         
-        //public string ResetPass(string newpass, string confirmpass)
-        //{
-        //    string check;
-        //    if (CheckUsernamePass(newpass))
-        //    {
-        //        if (confirmpass == newpass)
-        //        {
-        //            EmployeesDAL.Instance.ResetPass(HashPass(newpass), email_employee);
-        //            check = "OK";
-        //        }
-        //        else check = "Your confirm password doesn't match your new password";
 
-        //    }
-        //    else check = "Invalid Password! Minimum 10 characters.\r\nMust not contain symbols.";
-        //    return check;
-        //}
-        //public void Delete(List<int> id)
-        //{
-        //    foreach (int i in id)
-        //    {
-        //        AccountDAL.Instance.Delete(i);
-        //    }
-        //}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     }
 }

@@ -9,7 +9,7 @@ using DTO;
 
 namespace BLL
 {
-    public class BookTitlesBLL
+    public class BookTitlesBLL : Function
     {
         private static BookTitlesBLL _Instance;
         public static  BookTitlesBLL Instance
@@ -30,11 +30,13 @@ namespace BLL
         }
         public string AddTitle(BookTitles btt)
         {
-            BookTitlesBLL.Instance.AddTitle(btt);
+            if (btt.title == "") return "Title can't be left blank!";
+            BookTitlesDAL.Instance.AddTitle(btt);
             return "OK";
         }
         public string EditTitle(BookTitles btt, string id)
         {
+            if (btt.title == "") return "Title can't be left blank!";
             BookTitlesDAL.Instance.EditTitle(btt,id);
             return "OK";
         }
@@ -42,5 +44,7 @@ namespace BLL
         {
             BookTitlesDAL.Instance.DeleteTitle(id);
         }
+
+        
     }
 }
