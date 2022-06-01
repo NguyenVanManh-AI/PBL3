@@ -20,22 +20,18 @@ namespace DAL
             }
             set { }
         }
-        public DataTable LoadAllBooks()
-        {
-            return LoadData("select * from books");
-        }
         public DataTable LoadBooksFromIdTitle(string id)
         {
-            return LoadData("select * from books where book_title_id ='"+id+"'");
+            return LoadData("select b.*,btt.title from books as b left outer join book_titles as btt on b.book_title_id = btt.id where b.book_title_id='"+id+"'");
         }
         public DataTable SearchBooksWithStatus(string s,string ID,bool status)
-        {   if(s!="") return LoadData("select * from books where id ='" + s + "' and status ='" + status + "' and book_title_id='" + ID + "'");
-            else return LoadData("select * from books where status ='"+status+"' and book_title_id='"+ID+"'" );
+        {   if(s!="") return LoadData("select b.*,btt.title from books as b left outer join book_titles as btt on b.book_title_id = btt.id where id ='" + s + "' and status ='" + status + "' and book_title_id='" + ID + "'");
+            else return LoadData("select b.*,btt.title from books as b left outer join book_titles as btt on b.book_title_id = btt.id where status ='" + status+"' and book_title_id='"+ID+"'" );
         }
         public DataTable SearchAllBooks(string s, string ID)
         {
-            if (s != "") return LoadData("select * from books where id ='" + s + "' and book_title_id='" + ID + "'");
-            else return LoadData("select * from books where book_title_id='" + ID + "'");
+            if (s != "") return LoadData("select b.*,btt.title from books as b left outer join book_titles as btt on b.book_title_id = btt.id where id ='" + s + "' and book_title_id='" + ID + "'");
+            else return LoadData("select b.*,btt.title from books as b left outer join book_titles as btt on b.book_title_id = btt.id where book_title_id='" + ID + "'");
         }
         public void DeleteBook(string id)
         {
@@ -44,15 +40,36 @@ namespace DAL
         }
         public void AddBook(Books b)
         {
-            
+            EditData("insert into books (book_title_id, imported_at, status,created_at,updated_at) values ('"+b.book_title_id+"','"+ChangeDate(b.imported_at.ToString(),false)+"','"+b.status+"','"+ChangeDate(DateTime.Now.ToString(),true)+"','"+ ChangeDate(DateTime.Now.ToString(), true)+"')");
         }
         public void EditBook(Books b, string id)
         {
-
+            EditData("update books  set book_title_id = '" + b.book_title_id + "',imported_at = '"+ChangeDate(b.imported_at.ToString(),false)+"',status='"+b.status+"',updated_at='"+ChangeDate(DateTime.Now.ToString(),true)+"'where id ='"+id+"'");
         }
         public string GetTitleByBookTitleId(string id)
         {
             return Convert.ToString(GetValue("select title from book_titles where id='" + id + "'"));
+        }
+        public string ChangeDate(string datetime, bool check)
+        {
+            if (datetime.Contains("CH") || datetime.Contains("SA"))
+            {
+                datetime = datetime.Replace("CH", "PM");
+                datetime = datetime.Replace("SA", "AM");
+                string[] arrListStr = datetime.Split(' ');
+                string date = arrListStr[0];
+                string time = arrListStr[1];
+                string pm = arrListStr[2];
+
+                string[] arrListStr2 = date.Split('/');
+
+                string dd = arrListStr2[0];
+                string mm = arrListStr2[1];
+                string yyyy = arrListStr2[2];
+                if (check) datetime = mm + "/" + dd + "/" + yyyy + " " + time + " " + pm;
+                else datetime = mm + "/" + dd + "/" + yyyy;
+            }
+            return datetime;
         }
     }
 }

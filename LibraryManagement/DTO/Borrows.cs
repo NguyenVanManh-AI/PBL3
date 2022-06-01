@@ -16,5 +16,12 @@ namespace DTO
         public string reader_name { get; set; }
         public DateTime created_at { get; set; }
         public DateTime updated_at { get; set; }
+        public Borrows(int _creator_id,string _creator_name,int _reader_id,string _reader_name)
+        {
+            creator_id = _creator_id;
+            creator_name = _creator_name;
+            reader_id = _reader_id;
+            reader_name = _reader_name;
+        }
     }
 }

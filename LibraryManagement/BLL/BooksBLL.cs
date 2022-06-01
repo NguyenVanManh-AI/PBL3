@@ -9,7 +9,7 @@ using DTO;
 
 namespace BLL
 {
-    public class BooksBLL
+    public class BooksBLL : Function
     {
         private static BooksBLL _Instance;
         public static BooksBLL Instance
@@ -20,10 +20,6 @@ namespace BLL
                 return _Instance;
             }
             set { }
-        }
-        public DataTable LoadAllBooks()
-        {
-            return BooksDAL.Instance.LoadAllBooks();
         }
         public DataTable LoadBooksFromIdTitle(string id)
         {

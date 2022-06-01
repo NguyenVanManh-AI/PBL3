@@ -38,6 +38,10 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.groupInforUser = new Guna.UI2.WinForms.Guna2GroupBox();
+            this.btnLogout = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.btnChangePassword = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.btnInformation = new Guna.UI2.WinForms.Guna2GradientButton();
             this.btnHome = new Guna.UI2.WinForms.Guna2GradientButton();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.step3 = new System.Windows.Forms.PictureBox();
@@ -64,12 +68,9 @@
             this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.btnInforUser = new Guna.UI2.WinForms.Guna2GradientButton();
-            this.groupInforUser = new Guna.UI2.WinForms.Guna2GroupBox();
-            this.btnLogout = new Guna.UI2.WinForms.Guna2GradientButton();
-            this.btnChangePassword = new Guna.UI2.WinForms.Guna2GradientButton();
-            this.btnInformation = new Guna.UI2.WinForms.Guna2GradientButton();
             this.guna2GroupBox1.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
+            this.groupInforUser.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.step3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.step2)).BeginInit();
@@ -81,7 +82,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            this.groupInforUser.SuspendLayout();
             this.SuspendLayout();
             // 
             // guna2GroupBox1
@@ -208,8 +208,118 @@
             this.guna2Panel1.Controls.Add(this.guna2Panel2);
             this.guna2Panel1.Location = new System.Drawing.Point(117, 59);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(1094, 611);
+            this.guna2Panel1.Size = new System.Drawing.Size(1094, 607);
             this.guna2Panel1.TabIndex = 148;
+            // 
+            // groupInforUser
+            // 
+            this.groupInforUser.BackColor = System.Drawing.Color.Transparent;
+            this.groupInforUser.BorderColor = System.Drawing.Color.Transparent;
+            this.groupInforUser.BorderRadius = 10;
+            this.groupInforUser.Controls.Add(this.btnLogout);
+            this.groupInforUser.Controls.Add(this.btnChangePassword);
+            this.groupInforUser.Controls.Add(this.btnInformation);
+            this.groupInforUser.CustomBorderColor = System.Drawing.Color.Transparent;
+            this.groupInforUser.FillColor = System.Drawing.Color.Transparent;
+            this.groupInforUser.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.groupInforUser.ForeColor = System.Drawing.Color.White;
+            this.groupInforUser.Location = new System.Drawing.Point(905, 65);
+            this.groupInforUser.Name = "groupInforUser";
+            this.groupInforUser.Size = new System.Drawing.Size(302, 125);
+            this.groupInforUser.TabIndex = 146;
+            // 
+            // btnLogout
+            // 
+            this.btnLogout.AccessibleRole = System.Windows.Forms.AccessibleRole.Window;
+            this.btnLogout.Animated = true;
+            this.btnLogout.AnimatedGIF = true;
+            this.btnLogout.BorderColor = System.Drawing.Color.Gray;
+            this.btnLogout.BorderRadius = 20;
+            this.btnLogout.BorderThickness = 1;
+            this.btnLogout.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLogout.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnLogout.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnLogout.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnLogout.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnLogout.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnLogout.FillColor = System.Drawing.Color.White;
+            this.btnLogout.FillColor2 = System.Drawing.Color.White;
+            this.btnLogout.FocusedColor = System.Drawing.Color.White;
+            this.btnLogout.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogout.ForeColor = System.Drawing.Color.DimGray;
+            this.btnLogout.Image = global::LibraryManagement.Properties.Resources.exit1;
+            this.btnLogout.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnLogout.ImageSize = new System.Drawing.Size(25, 25);
+            this.btnLogout.Location = new System.Drawing.Point(0, 84);
+            this.btnLogout.Margin = new System.Windows.Forms.Padding(2);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.PressedColor = System.Drawing.Color.DeepSkyBlue;
+            this.btnLogout.Size = new System.Drawing.Size(300, 38);
+            this.btnLogout.TabIndex = 144;
+            this.btnLogout.Text = "Logout";
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
+            // 
+            // btnChangePassword
+            // 
+            this.btnChangePassword.AccessibleRole = System.Windows.Forms.AccessibleRole.Window;
+            this.btnChangePassword.Animated = true;
+            this.btnChangePassword.AnimatedGIF = true;
+            this.btnChangePassword.BorderColor = System.Drawing.Color.Gray;
+            this.btnChangePassword.BorderRadius = 20;
+            this.btnChangePassword.BorderThickness = 1;
+            this.btnChangePassword.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnChangePassword.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnChangePassword.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnChangePassword.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnChangePassword.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnChangePassword.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnChangePassword.FillColor = System.Drawing.Color.White;
+            this.btnChangePassword.FillColor2 = System.Drawing.Color.White;
+            this.btnChangePassword.FocusedColor = System.Drawing.Color.White;
+            this.btnChangePassword.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnChangePassword.ForeColor = System.Drawing.Color.DimGray;
+            this.btnChangePassword.Image = global::LibraryManagement.Properties.Resources.key;
+            this.btnChangePassword.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnChangePassword.ImageSize = new System.Drawing.Size(25, 25);
+            this.btnChangePassword.Location = new System.Drawing.Point(0, 42);
+            this.btnChangePassword.Margin = new System.Windows.Forms.Padding(2);
+            this.btnChangePassword.Name = "btnChangePassword";
+            this.btnChangePassword.PressedColor = System.Drawing.Color.DeepSkyBlue;
+            this.btnChangePassword.Size = new System.Drawing.Size(302, 38);
+            this.btnChangePassword.TabIndex = 143;
+            this.btnChangePassword.Text = "Change Password";
+            this.btnChangePassword.Click += new System.EventHandler(this.btnChangePassword_Click);
+            // 
+            // btnInformation
+            // 
+            this.btnInformation.AccessibleRole = System.Windows.Forms.AccessibleRole.Window;
+            this.btnInformation.Animated = true;
+            this.btnInformation.AnimatedGIF = true;
+            this.btnInformation.BorderColor = System.Drawing.Color.Gray;
+            this.btnInformation.BorderRadius = 20;
+            this.btnInformation.BorderThickness = 1;
+            this.btnInformation.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnInformation.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnInformation.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnInformation.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnInformation.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnInformation.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnInformation.FillColor = System.Drawing.Color.White;
+            this.btnInformation.FillColor2 = System.Drawing.Color.White;
+            this.btnInformation.FocusedColor = System.Drawing.Color.White;
+            this.btnInformation.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInformation.ForeColor = System.Drawing.Color.DimGray;
+            this.btnInformation.Image = global::LibraryManagement.Properties.Resources.information1;
+            this.btnInformation.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnInformation.ImageSize = new System.Drawing.Size(25, 25);
+            this.btnInformation.Location = new System.Drawing.Point(0, 0);
+            this.btnInformation.Margin = new System.Windows.Forms.Padding(2);
+            this.btnInformation.Name = "btnInformation";
+            this.btnInformation.PressedColor = System.Drawing.Color.DeepSkyBlue;
+            this.btnInformation.Size = new System.Drawing.Size(302, 38);
+            this.btnInformation.TabIndex = 142;
+            this.btnInformation.Text = "Information";
+            this.btnInformation.Click += new System.EventHandler(this.btnInformation_Click);
             // 
             // btnHome
             // 
@@ -248,7 +358,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox7.Image = global::LibraryManagement.Properties.Resources.DUT;
+            this.pictureBox7.Image = global::LibraryManagement.Properties.Resources.DUT1;
             this.pictureBox7.Location = new System.Drawing.Point(690, 62);
             this.pictureBox7.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox7.Name = "pictureBox7";
@@ -454,6 +564,7 @@
             this.btnReader.Size = new System.Drawing.Size(84, 51);
             this.btnReader.TabIndex = 154;
             this.btnReader.UseTransparentBackground = true;
+            this.btnReader.Click += new System.EventHandler(this.btnReader_Click);
             // 
             // btnBorrow
             // 
@@ -483,6 +594,7 @@
             this.btnBorrow.Size = new System.Drawing.Size(84, 51);
             this.btnBorrow.TabIndex = 153;
             this.btnBorrow.UseTransparentBackground = true;
+            this.btnBorrow.Click += new System.EventHandler(this.btnBorrow_Click);
             // 
             // btnBookTitle
             // 
@@ -512,6 +624,7 @@
             this.btnBookTitle.Size = new System.Drawing.Size(84, 51);
             this.btnBookTitle.TabIndex = 152;
             this.btnBookTitle.UseTransparentBackground = true;
+            this.btnBookTitle.Click += new System.EventHandler(this.btnBookTitle_Click);
             // 
             // btnCategory
             // 
@@ -692,6 +805,7 @@
             this.btnManaEmployees.Size = new System.Drawing.Size(84, 51);
             this.btnManaEmployees.TabIndex = 145;
             this.btnManaEmployees.UseTransparentBackground = true;
+            this.btnManaEmployees.Click += new System.EventHandler(this.btnManaEmployees_Click_1);
             // 
             // btnAddAccount
             // 
@@ -781,116 +895,6 @@
             this.btnInforUser.Text = "Name";
             this.btnInforUser.Click += new System.EventHandler(this.btnInforUser_Click);
             // 
-            // groupInforUser
-            // 
-            this.groupInforUser.BackColor = System.Drawing.Color.Transparent;
-            this.groupInforUser.BorderColor = System.Drawing.Color.Transparent;
-            this.groupInforUser.BorderRadius = 10;
-            this.groupInforUser.Controls.Add(this.btnLogout);
-            this.groupInforUser.Controls.Add(this.btnChangePassword);
-            this.groupInforUser.Controls.Add(this.btnInformation);
-            this.groupInforUser.CustomBorderColor = System.Drawing.Color.Transparent;
-            this.groupInforUser.FillColor = System.Drawing.Color.Transparent;
-            this.groupInforUser.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.groupInforUser.ForeColor = System.Drawing.Color.White;
-            this.groupInforUser.Location = new System.Drawing.Point(905, 65);
-            this.groupInforUser.Name = "groupInforUser";
-            this.groupInforUser.Size = new System.Drawing.Size(302, 125);
-            this.groupInforUser.TabIndex = 146;
-            // 
-            // btnLogout
-            // 
-            this.btnLogout.AccessibleRole = System.Windows.Forms.AccessibleRole.Window;
-            this.btnLogout.Animated = true;
-            this.btnLogout.AnimatedGIF = true;
-            this.btnLogout.BorderColor = System.Drawing.Color.Gray;
-            this.btnLogout.BorderRadius = 20;
-            this.btnLogout.BorderThickness = 1;
-            this.btnLogout.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnLogout.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnLogout.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnLogout.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnLogout.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnLogout.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnLogout.FillColor = System.Drawing.Color.White;
-            this.btnLogout.FillColor2 = System.Drawing.Color.White;
-            this.btnLogout.FocusedColor = System.Drawing.Color.White;
-            this.btnLogout.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogout.ForeColor = System.Drawing.Color.DimGray;
-            this.btnLogout.Image = global::LibraryManagement.Properties.Resources.exit1;
-            this.btnLogout.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnLogout.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnLogout.Location = new System.Drawing.Point(0, 84);
-            this.btnLogout.Margin = new System.Windows.Forms.Padding(2);
-            this.btnLogout.Name = "btnLogout";
-            this.btnLogout.PressedColor = System.Drawing.Color.DeepSkyBlue;
-            this.btnLogout.Size = new System.Drawing.Size(300, 38);
-            this.btnLogout.TabIndex = 144;
-            this.btnLogout.Text = "Logout";
-            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
-            // 
-            // btnChangePassword
-            // 
-            this.btnChangePassword.AccessibleRole = System.Windows.Forms.AccessibleRole.Window;
-            this.btnChangePassword.Animated = true;
-            this.btnChangePassword.AnimatedGIF = true;
-            this.btnChangePassword.BorderColor = System.Drawing.Color.Gray;
-            this.btnChangePassword.BorderRadius = 20;
-            this.btnChangePassword.BorderThickness = 1;
-            this.btnChangePassword.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnChangePassword.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnChangePassword.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnChangePassword.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnChangePassword.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnChangePassword.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnChangePassword.FillColor = System.Drawing.Color.White;
-            this.btnChangePassword.FillColor2 = System.Drawing.Color.White;
-            this.btnChangePassword.FocusedColor = System.Drawing.Color.White;
-            this.btnChangePassword.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnChangePassword.ForeColor = System.Drawing.Color.DimGray;
-            this.btnChangePassword.Image = global::LibraryManagement.Properties.Resources.key;
-            this.btnChangePassword.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnChangePassword.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnChangePassword.Location = new System.Drawing.Point(0, 42);
-            this.btnChangePassword.Margin = new System.Windows.Forms.Padding(2);
-            this.btnChangePassword.Name = "btnChangePassword";
-            this.btnChangePassword.PressedColor = System.Drawing.Color.DeepSkyBlue;
-            this.btnChangePassword.Size = new System.Drawing.Size(302, 38);
-            this.btnChangePassword.TabIndex = 143;
-            this.btnChangePassword.Text = "Change Password";
-            this.btnChangePassword.Click += new System.EventHandler(this.btnChangePassword_Click);
-            // 
-            // btnInformation
-            // 
-            this.btnInformation.AccessibleRole = System.Windows.Forms.AccessibleRole.Window;
-            this.btnInformation.Animated = true;
-            this.btnInformation.AnimatedGIF = true;
-            this.btnInformation.BorderColor = System.Drawing.Color.Gray;
-            this.btnInformation.BorderRadius = 20;
-            this.btnInformation.BorderThickness = 1;
-            this.btnInformation.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnInformation.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnInformation.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnInformation.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnInformation.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnInformation.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnInformation.FillColor = System.Drawing.Color.White;
-            this.btnInformation.FillColor2 = System.Drawing.Color.White;
-            this.btnInformation.FocusedColor = System.Drawing.Color.White;
-            this.btnInformation.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnInformation.ForeColor = System.Drawing.Color.DimGray;
-            this.btnInformation.Image = global::LibraryManagement.Properties.Resources.information1;
-            this.btnInformation.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnInformation.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnInformation.Location = new System.Drawing.Point(0, 0);
-            this.btnInformation.Margin = new System.Windows.Forms.Padding(2);
-            this.btnInformation.Name = "btnInformation";
-            this.btnInformation.PressedColor = System.Drawing.Color.DeepSkyBlue;
-            this.btnInformation.Size = new System.Drawing.Size(302, 38);
-            this.btnInformation.TabIndex = 142;
-            this.btnInformation.Text = "Information";
-            this.btnInformation.Click += new System.EventHandler(this.btnInformation_Click);
-            // 
             // FormMain
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
@@ -937,6 +941,7 @@
             this.guna2GroupBox1.ResumeLayout(false);
             this.guna2GroupBox1.PerformLayout();
             this.guna2Panel1.ResumeLayout(false);
+            this.groupInforUser.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.step3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.step2)).EndInit();
@@ -948,7 +953,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            this.groupInforUser.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 

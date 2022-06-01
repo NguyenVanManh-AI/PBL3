@@ -25,12 +25,7 @@ namespace LibraryManagement
             Categorys cate = new Categorys(txtName.Text, txtDes.Text);
             if (txtId.Text != "")
             {
-                txtCreate.Text = "";
-                txtDes.Text = "";
-                txtId.Text = "";
-                txtName.Text = "";
-                txtUpdate.Text = "";
-                dataGridView1.ClearSelection();
+                SetTxt();
             }
             else
             {
@@ -38,12 +33,7 @@ namespace LibraryManagement
                 {
                     new FormMessageBoxSuccess("Add successfully!").Show();
                     dataGridView1.DataSource = CategorysBLL.Instance.LoadAllCategorys();
-                    txtId.Text = "";
-                    txtName.Text = "";
-                    txtDes.Text = "";
-                    txtUpdate.Text = "";
-                    txtCreate.Text = "";
-                    dataGridView1.ClearSelection();
+                    SetTxt();
                 }
                 else
                 {
@@ -69,12 +59,7 @@ namespace LibraryManagement
                     }
                     new FormMessageBoxSuccess("Delete successfully!!").Show();
                     dataGridView1.DataSource = CategorysBLL.Instance.LoadAllCategorys();
-                    txtId.Text = "";
-                    txtName.Text = "";
-                    txtUpdate.Text = "";
-                    txtCreate.Text = "";
-                    txtDes.Text = "";
-                    dataGridView1.ClearSelection();
+                    SetTxt();
                 }
             }
 
@@ -113,18 +98,22 @@ namespace LibraryManagement
                 {
                     new FormMessageBoxSuccess("Edit successfully!").Show();
                     dataGridView1.DataSource = CategorysBLL.Instance.LoadAllCategorys();
-                    txtId.Text = "";
-                    txtName.Text = "";
-                    txtDes.Text = "";
-                    txtUpdate.Text = "";
-                    txtCreate.Text = "";
-                    dataGridView1.ClearSelection();
+                    SetTxt();
                 }
                 else
                 {
                     new FormMeessageBox(CategorysBLL.Instance.EditCategorys(cate, txtId.Text)).Show();
                 }
             }
+        }
+        public void SetTxt()
+        {
+            txtCreate.Text = "";
+            txtDes.Text = "";
+            txtId.Text = "";
+            txtName.Text = "";
+            txtUpdate.Text = "";
+            dataGridView1.ClearSelection();
         }
     }
 }

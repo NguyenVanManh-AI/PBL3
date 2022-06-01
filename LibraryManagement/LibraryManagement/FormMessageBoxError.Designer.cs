@@ -159,6 +159,7 @@
             this.Controls.Add(this.labelMessage);
             this.Controls.Add(this.btnOK);
             this.Controls.Add(this.guna2HtmlLabel2);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "FormMessageBoxError";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Message Box";

@@ -228,9 +228,12 @@
     <Compile Include="AuthorsBLL.cs" />
     <Compile Include="BooksBLL.cs" />
     <Compile Include="BookTitlesBLL.cs" />
+    <Compile Include="BorrowDetailsBLL.cs" />
+    <Compile Include="BorrowsBLL.cs" />
     <Compile Include="CategorysBLL.cs" />
     <Compile Include="EmployeesBLL.cs" />
     <Compile Include="Function.cs" />
+    <Compile Include="ManaEmployeesBLL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="PublishersBLL.cs" />
     <Compile Include="ReadersBLL.cs" />

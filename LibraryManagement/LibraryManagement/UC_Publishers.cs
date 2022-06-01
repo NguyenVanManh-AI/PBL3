@@ -24,14 +24,7 @@ namespace LibraryManagement
             Publishers pub = new Publishers(txtName.Text, txtDes.Text, txtCountry.Text, txtAddress.Text);
             if (txtId.Text != "")
             {
-                txtId.Text = "";
-                txtName.Text = "";
-                txtCountry.Text = "";
-                txtDes.Text = "";
-                txtAddress.Text = "";
-                txtCreate.Text = "";
-                txtUpdate.Text = "";
-                dataGridView1.ClearSelection();
+                SetTxt();
             }
             else if (txtId.Text == "")
             {
@@ -39,14 +32,7 @@ namespace LibraryManagement
                 {
                     new FormMessageBoxSuccess("Add successfully!").Show();
                     dataGridView1.DataSource = PublishersBLL.Instance.LoadAllPublishers();
-                    txtId.Text = "";
-                    txtName.Text = "";
-                    txtCountry.Text = "";
-                    txtDes.Text = "";
-                    txtAddress.Text = "";
-                    txtCreate.Text = "";
-                    txtUpdate.Text = "";
-                    dataGridView1.ClearSelection();
+                    SetTxt();
                 }
                 else
                     new FormMeessageBox(PublishersBLL.Instance.AddPublisher(pub)).Show();
@@ -74,14 +60,7 @@ namespace LibraryManagement
                     }
                     new FormMessageBoxSuccess("Delete successfully!!").Show();
                     dataGridView1.DataSource = PublishersBLL.Instance.LoadAllPublishers();
-                    txtId.Text = "";
-                    txtName.Text = "";
-                    txtCountry.Text = "";
-                    txtDes.Text = "";
-                    txtAddress.Text = "";
-                    txtCreate.Text = "";
-                    txtUpdate.Text = "";
-                    dataGridView1.ClearSelection();
+                    SetTxt();
                 }
             }
         }
@@ -117,20 +96,24 @@ namespace LibraryManagement
                 {
                     new FormMessageBoxSuccess("Edit successfully!").Show();
                     dataGridView1.DataSource = PublishersBLL.Instance.LoadAllPublishers();
-                    txtId.Text = "";
-                    txtName.Text = "";
-                    txtCountry.Text = "";
-                    txtDes.Text = "";
-                    txtAddress.Text = "";
-                    txtCreate.Text = "";
-                    txtUpdate.Text = "";
-                    dataGridView1.ClearSelection();
+                    SetTxt();
                 }
                 else
                 {
                     new FormMeessageBox(PublishersBLL.Instance.EditPublisher(pub, txtId.Text));
                 }
             }
+        }
+        public void SetTxt()
+        {
+            txtId.Text = "";
+            txtName.Text = "";
+            txtCountry.Text = "";
+            txtDes.Text = "";
+            txtAddress.Text = "";
+            txtCreate.Text = "";
+            txtUpdate.Text = "";
+            dataGridView1.ClearSelection();
         }
     }
 }

@@ -47,11 +47,7 @@ namespace LibraryManagement
             K.Show();
         }
         
-        private void TaoTaiKhoan(object sender, EventArgs e)
-        {
-            Register TAO = new Register();
-            TAO.Show();
-        }
+        
         
 
         private void DangXuat(object sender, EventArgs e)
@@ -84,11 +80,11 @@ namespace LibraryManagement
             cndocgia.Show();
 
         }
-        private void CapnhatPhieuMuon(object sender, EventArgs e)
-        {
-            Borrows library = new Borrows();
-            library.Show();
-        }
+        //private void CapnhatPhieuMuon(object sender, EventArgs e)
+        //{
+        //    Borrows library = new Borrows();
+        //    library.Show();
+        //}
         private void BaoCaoTinhTrangSach(object sender, EventArgs e)
         {
             ReportBookStatus reportBookStatus = new ReportBookStatus();
@@ -140,11 +136,11 @@ namespace LibraryManagement
             updatePublisherInformation.Show();
         }
         
-        private void libraryCardToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Borrows borrows = new Borrows();
-            borrows.Show();
-        }
+        //private void libraryCardToolStripMenuItem_Click(object sender, EventArgs e)
+        //{
+        //    Borrows borrows = new Borrows();
+        //    borrows.Show();
+        //}
         
         
     }

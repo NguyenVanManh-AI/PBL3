@@ -49,11 +49,22 @@ namespace LibraryManagement
                 Hide();
             }
         }
+
+        public void LoadName(string username)
+        {
+            if (EmployeesBLL.Instance.getName(username) == " ")
+            {
+                FormMessageBoxSuccess formMessageBoxSuccess = new FormMessageBoxSuccess("Welcome to the library management system. " +
+                    "Now go to Information function to update information.");
+                formMessageBoxSuccess.Show();
+            }
+        }
         private void btnLogin_Click(object sender, EventArgs e)
         {
             string username = "";
             string password = txtPassword.Text;
 
+            
             if (txtUsername.Text.Contains("@"))
             {
                 username = EmployeesBLL.Instance.getUsernamebyEmail(txtUsername.Text);
@@ -65,15 +76,15 @@ namespace LibraryManagement
                 else
                 {
                     Login(username, password);
+                    LoadName(username);
                 }
             }
             else
             {
                 username = txtUsername.Text;
                 Login(username, password);
+                LoadName(username);
             }
-
-
         }
         private void FormLogin_FormClosing(object sender, FormClosingEventArgs e)
         {

@@ -187,7 +187,6 @@
             this.toolCreateAccount.Name = "toolCreateAccount";
             this.toolCreateAccount.Size = new System.Drawing.Size(427, 34);
             this.toolCreateAccount.Text = "Create Account";
-            this.toolCreateAccount.Click += new System.EventHandler(this.TaoTaiKhoan);
             // 
             // toolStripSeparator2
             // 
@@ -656,7 +655,7 @@
             this.toolLibrary2.Name = "toolLibrary2";
             this.toolLibrary2.Size = new System.Drawing.Size(146, 29);
             this.toolLibrary2.Text = "Borrows";
-            this.toolLibrary2.Click += new System.EventHandler(this.libraryCardToolStripMenuItem_Click);
+            //this.toolLibrary2.Click += new System.EventHandler(this.libraryCardToolStripMenuItem_Click);
             // 
             // toolStripContainer1
             // 

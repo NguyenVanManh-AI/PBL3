@@ -29,6 +29,13 @@
         private void InitializeComponent()
         {
             this.groupboxNewpassword = new Guna.UI2.WinForms.Guna2GroupBox();
+            this.buttoneyes1 = new Guna.UI2.WinForms.Guna2Button();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.txtOldPassword = new Guna.UI2.WinForms.Guna2TextBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.txtConfirm = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtNewPassword = new Guna.UI2.WinForms.Guna2TextBox();
             this.btnNewPassword = new Guna.UI2.WinForms.Guna2GradientButton();
             this.guna2Separator5 = new Guna.UI2.WinForms.Guna2Separator();
             this.guna2Separator6 = new Guna.UI2.WinForms.Guna2Separator();
@@ -38,20 +45,13 @@
             this.btnHome = new Guna.UI2.WinForms.Guna2GradientButton();
             this.guna2Separator7 = new Guna.UI2.WinForms.Guna2Separator();
             this.guna2Separator8 = new Guna.UI2.WinForms.Guna2Separator();
-            this.buttoneyes1 = new Guna.UI2.WinForms.Guna2Button();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.txtOldPassword = new Guna.UI2.WinForms.Guna2TextBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.txtConfirm = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtNewPassword = new Guna.UI2.WinForms.Guna2TextBox();
             this.btnbackHome = new Guna.UI2.WinForms.Guna2GradientButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupboxNewpassword.SuspendLayout();
-            this.groupBackHome.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            this.groupBackHome.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -75,122 +75,6 @@
             this.groupboxNewpassword.Name = "groupboxNewpassword";
             this.groupboxNewpassword.Size = new System.Drawing.Size(500, 496);
             this.groupboxNewpassword.TabIndex = 139;
-            // 
-            // btnNewPassword
-            // 
-            this.btnNewPassword.Animated = true;
-            this.btnNewPassword.AnimatedGIF = true;
-            this.btnNewPassword.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.btnNewPassword.BorderRadius = 20;
-            this.btnNewPassword.BorderThickness = 1;
-            this.btnNewPassword.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnNewPassword.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnNewPassword.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnNewPassword.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnNewPassword.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnNewPassword.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnNewPassword.FillColor = System.Drawing.Color.DeepSkyBlue;
-            this.btnNewPassword.FillColor2 = System.Drawing.Color.DeepSkyBlue;
-            this.btnNewPassword.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNewPassword.ForeColor = System.Drawing.Color.White;
-            this.btnNewPassword.Location = new System.Drawing.Point(44, 340);
-            this.btnNewPassword.Name = "btnNewPassword";
-            this.btnNewPassword.Size = new System.Drawing.Size(417, 75);
-            this.btnNewPassword.TabIndex = 133;
-            this.btnNewPassword.Text = "Change Password";
-            this.btnNewPassword.Click += new System.EventHandler(this.btnNewPassword_Click);
-            // 
-            // guna2Separator5
-            // 
-            this.guna2Separator5.Location = new System.Drawing.Point(3, 438);
-            this.guna2Separator5.Name = "guna2Separator5";
-            this.guna2Separator5.Size = new System.Drawing.Size(500, 10);
-            this.guna2Separator5.TabIndex = 131;
-            // 
-            // guna2Separator6
-            // 
-            this.guna2Separator6.Location = new System.Drawing.Point(3, 3);
-            this.guna2Separator6.Name = "guna2Separator6";
-            this.guna2Separator6.Size = new System.Drawing.Size(500, 10);
-            this.guna2Separator6.TabIndex = 130;
-            // 
-            // groupBackHome
-            // 
-            this.groupBackHome.BorderColor = System.Drawing.Color.White;
-            this.groupBackHome.Controls.Add(this.label1);
-            this.groupBackHome.Controls.Add(this.label2);
-            this.groupBackHome.Controls.Add(this.btnHome);
-            this.groupBackHome.Controls.Add(this.guna2Separator7);
-            this.groupBackHome.Controls.Add(this.guna2Separator8);
-            this.groupBackHome.CustomBorderColor = System.Drawing.Color.White;
-            this.groupBackHome.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.groupBackHome.ForeColor = System.Drawing.Color.White;
-            this.groupBackHome.Location = new System.Drawing.Point(665, 134);
-            this.groupBackHome.Name = "groupBackHome";
-            this.groupBackHome.Size = new System.Drawing.Size(500, 395);
-            this.groupBackHome.TabIndex = 142;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Times New Roman", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.DeepSkyBlue;
-            this.label1.Location = new System.Drawing.Point(24, 72);
-            this.label1.Margin = new System.Windows.Forms.Padding(0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(443, 36);
-            this.label1.TabIndex = 136;
-            this.label1.Text = "Change password successfully !";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft JhengHei UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(134)))), ((int)(((byte)(146)))), ((int)(((byte)(166)))));
-            this.label2.Location = new System.Drawing.Point(84, 140);
-            this.label2.Margin = new System.Windows.Forms.Padding(0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(338, 50);
-            this.label2.TabIndex = 134;
-            this.label2.Text = "Your password has been changed. \r\n              Now back to Home.";
-            // 
-            // btnHome
-            // 
-            this.btnHome.Animated = true;
-            this.btnHome.AnimatedGIF = true;
-            this.btnHome.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.btnHome.BorderRadius = 20;
-            this.btnHome.BorderThickness = 1;
-            this.btnHome.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnHome.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnHome.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnHome.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnHome.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnHome.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnHome.FillColor = System.Drawing.Color.DeepSkyBlue;
-            this.btnHome.FillColor2 = System.Drawing.Color.DeepSkyBlue;
-            this.btnHome.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHome.ForeColor = System.Drawing.Color.White;
-            this.btnHome.Location = new System.Drawing.Point(35, 221);
-            this.btnHome.Name = "btnHome";
-            this.btnHome.Size = new System.Drawing.Size(417, 75);
-            this.btnHome.TabIndex = 133;
-            this.btnHome.Text = "HOME";
-            this.btnHome.Click += new System.EventHandler(this.btnbackHome_Click);
-            // 
-            // guna2Separator7
-            // 
-            this.guna2Separator7.Location = new System.Drawing.Point(0, 361);
-            this.guna2Separator7.Name = "guna2Separator7";
-            this.guna2Separator7.Size = new System.Drawing.Size(500, 10);
-            this.guna2Separator7.TabIndex = 131;
-            // 
-            // guna2Separator8
-            // 
-            this.guna2Separator8.Location = new System.Drawing.Point(-3, 18);
-            this.guna2Separator8.Name = "guna2Separator8";
-            this.guna2Separator8.Size = new System.Drawing.Size(500, 10);
-            this.guna2Separator8.TabIndex = 130;
             // 
             // buttoneyes1
             // 
@@ -337,6 +221,122 @@
             this.txtNewPassword.TabIndex = 132;
             this.txtNewPassword.UseSystemPasswordChar = true;
             // 
+            // btnNewPassword
+            // 
+            this.btnNewPassword.Animated = true;
+            this.btnNewPassword.AnimatedGIF = true;
+            this.btnNewPassword.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.btnNewPassword.BorderRadius = 20;
+            this.btnNewPassword.BorderThickness = 1;
+            this.btnNewPassword.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnNewPassword.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnNewPassword.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnNewPassword.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnNewPassword.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnNewPassword.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnNewPassword.FillColor = System.Drawing.Color.DeepSkyBlue;
+            this.btnNewPassword.FillColor2 = System.Drawing.Color.DeepSkyBlue;
+            this.btnNewPassword.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNewPassword.ForeColor = System.Drawing.Color.White;
+            this.btnNewPassword.Location = new System.Drawing.Point(44, 340);
+            this.btnNewPassword.Name = "btnNewPassword";
+            this.btnNewPassword.Size = new System.Drawing.Size(417, 75);
+            this.btnNewPassword.TabIndex = 133;
+            this.btnNewPassword.Text = "Change Password";
+            this.btnNewPassword.Click += new System.EventHandler(this.btnNewPassword_Click);
+            // 
+            // guna2Separator5
+            // 
+            this.guna2Separator5.Location = new System.Drawing.Point(3, 438);
+            this.guna2Separator5.Name = "guna2Separator5";
+            this.guna2Separator5.Size = new System.Drawing.Size(500, 10);
+            this.guna2Separator5.TabIndex = 131;
+            // 
+            // guna2Separator6
+            // 
+            this.guna2Separator6.Location = new System.Drawing.Point(3, 3);
+            this.guna2Separator6.Name = "guna2Separator6";
+            this.guna2Separator6.Size = new System.Drawing.Size(500, 10);
+            this.guna2Separator6.TabIndex = 130;
+            // 
+            // groupBackHome
+            // 
+            this.groupBackHome.BorderColor = System.Drawing.Color.White;
+            this.groupBackHome.Controls.Add(this.label1);
+            this.groupBackHome.Controls.Add(this.label2);
+            this.groupBackHome.Controls.Add(this.btnHome);
+            this.groupBackHome.Controls.Add(this.guna2Separator7);
+            this.groupBackHome.Controls.Add(this.guna2Separator8);
+            this.groupBackHome.CustomBorderColor = System.Drawing.Color.White;
+            this.groupBackHome.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.groupBackHome.ForeColor = System.Drawing.Color.White;
+            this.groupBackHome.Location = new System.Drawing.Point(665, 134);
+            this.groupBackHome.Name = "groupBackHome";
+            this.groupBackHome.Size = new System.Drawing.Size(500, 395);
+            this.groupBackHome.TabIndex = 142;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.DeepSkyBlue;
+            this.label1.Location = new System.Drawing.Point(24, 72);
+            this.label1.Margin = new System.Windows.Forms.Padding(0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(443, 36);
+            this.label1.TabIndex = 136;
+            this.label1.Text = "Change password successfully !";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft JhengHei UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(134)))), ((int)(((byte)(146)))), ((int)(((byte)(166)))));
+            this.label2.Location = new System.Drawing.Point(84, 140);
+            this.label2.Margin = new System.Windows.Forms.Padding(0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(338, 50);
+            this.label2.TabIndex = 134;
+            this.label2.Text = "Your password has been changed. \r\n              Now back to Home.";
+            // 
+            // btnHome
+            // 
+            this.btnHome.Animated = true;
+            this.btnHome.AnimatedGIF = true;
+            this.btnHome.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.btnHome.BorderRadius = 20;
+            this.btnHome.BorderThickness = 1;
+            this.btnHome.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnHome.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnHome.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnHome.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnHome.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnHome.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnHome.FillColor = System.Drawing.Color.DeepSkyBlue;
+            this.btnHome.FillColor2 = System.Drawing.Color.DeepSkyBlue;
+            this.btnHome.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHome.ForeColor = System.Drawing.Color.White;
+            this.btnHome.Location = new System.Drawing.Point(35, 221);
+            this.btnHome.Name = "btnHome";
+            this.btnHome.Size = new System.Drawing.Size(417, 75);
+            this.btnHome.TabIndex = 133;
+            this.btnHome.Text = "HOME";
+            this.btnHome.Click += new System.EventHandler(this.btnbackHome_Click);
+            // 
+            // guna2Separator7
+            // 
+            this.guna2Separator7.Location = new System.Drawing.Point(0, 361);
+            this.guna2Separator7.Name = "guna2Separator7";
+            this.guna2Separator7.Size = new System.Drawing.Size(500, 10);
+            this.guna2Separator7.TabIndex = 131;
+            // 
+            // guna2Separator8
+            // 
+            this.guna2Separator8.Location = new System.Drawing.Point(-3, 18);
+            this.guna2Separator8.Name = "guna2Separator8";
+            this.guna2Separator8.Size = new System.Drawing.Size(500, 10);
+            this.guna2Separator8.TabIndex = 130;
+            // 
             // btnbackHome
             // 
             this.btnbackHome.Animated = true;
@@ -394,11 +394,11 @@
             this.Text = "FormChangePassword";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormChangePassword_FormClosing);
             this.groupboxNewpassword.ResumeLayout(false);
-            this.groupBackHome.ResumeLayout(false);
-            this.groupBackHome.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            this.groupBackHome.ResumeLayout(false);
+            this.groupBackHome.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 

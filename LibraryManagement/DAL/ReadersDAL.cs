@@ -30,18 +30,18 @@ namespace DAL
         }
         public void AddReader(Readers r)
         {
-            EditData("insert into readers (first_name,last_name,gender,date_of_birth,address,email,phone,identity_card_number,created_at,updated_at) values (N'"+r.first_name+"',N'"+r.last_name+"','"+r.gender+"','"+r.date_of_birth.ToString()+"',N'"+r.address+"',N'"+r.email+"','"+r.phone+"','"+r.identity_card_number+"','"+ChangeDate(DateTime.Now.ToString())+"','" + ChangeDate(DateTime.Now.ToString())+"')");
+            EditData("insert into readers (first_name,last_name,gender,date_of_birth,address,email,phone,identity_card_number,created_at,updated_at) values (N'"+r.first_name+"',N'"+r.last_name+"','"+r.gender+"','"+ ChangeDate(r.date_of_birth.ToString(),false) + "',N'"+r.address+"',N'"+r.email+"','"+r.phone+"','"+r.identity_card_number+"','"+ChangeDate(DateTime.Now.ToString(),true)+"','" + ChangeDate(DateTime.Now.ToString(),true)+"')");
         }
         public void EditReader(Readers r, string id)
         {
-            EditData("update readers set first_name=N'" + r.first_name + "',last_name=N'" + r.last_name + "',gender='" + r.gender + "',date_of_birth='" + r.date_of_birth.ToString() + "',adress=N'" + r.address + "',phone='" + r.phone + "',identity_card_number='" + r.identity_card_number + "',update_at='" + ChangeDate(DateTime.Now.ToString()) + "' where id='" + id + "'");
+            EditData("update readers set first_name = N'" + r.first_name + "',last_name=N'" + r.last_name + "',gender='" + r.gender + "',date_of_birth='" + ChangeDate(r.date_of_birth.ToString(), false) + "',address=N'" + r.address + "',phone='" + r.phone + "',identity_card_number='" + r.identity_card_number + "',updated_at='" + ChangeDate(DateTime.Now.ToString(),true) + "' where id='" + id + "'");
         }
         public void DeleteReader(string id)
         {
             EditData("Update borrows set reader_id = NULL where reader_id='"+id+"'");
             EditData("Delete from readers where id ='" + id + "'");
         }
-        public string ChangeDate(string datetime)
+        public string ChangeDate(string datetime, bool check)
         {
             if (datetime.Contains("CH") || datetime.Contains("SA"))
             {
@@ -57,8 +57,8 @@ namespace DAL
                 string dd = arrListStr2[0];
                 string mm = arrListStr2[1];
                 string yyyy = arrListStr2[2];
-
-                datetime = mm + "/" + dd + "/" + yyyy + " " + time + " " + pm;
+                if (check) datetime = mm + "/" + dd + "/" + yyyy + " " + time + " " + pm;
+                else datetime = mm + "/" + dd + "/" + yyyy;
             }
             return datetime;
         }

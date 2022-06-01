@@ -40,9 +40,17 @@ namespace LibraryManagement
 
         private void Main_Load(object sender, EventArgs e)
         {
-            btnInforUser.Text = EmployeesBLL.Instance.getName(username);
             ShowHome();
             Step(page);
+            LoadName();
+        }
+
+        public void LoadName()
+        {
+            if (EmployeesBLL.Instance.getName(username) != " ")
+            {
+                btnInforUser.Text = EmployeesBLL.Instance.getName(username);
+            }
         }
 
         private void LogOut(object sender, EventArgs e)
@@ -63,6 +71,20 @@ namespace LibraryManagement
             guna2Panel1.Controls.Add(uc);
         }
 
+        public void AddUC_BorrowDetail_Panel1(string _id_borrow)
+        {
+            UC_BorrowDetails uC_BorrowDetails = new UC_BorrowDetails(_id_borrow);
+            AddUCPanel1(uC_BorrowDetails);
+            ShowPanel1();
+        }
+
+        public void AddUC_Books_Panel1(string _id_book_title)
+        {
+            UC_Books uC_Books = new UC_Books(_id_book_title);
+            AddUCPanel1(uC_Books);
+            ShowPanel1();
+        }
+
         // load UC 
 
 
@@ -73,7 +95,6 @@ namespace LibraryManagement
             groupInforUser.Visible = false;
             guna2Panel1.Visible = false;
         }
-
 
         public void ShowPanel1()
         {
@@ -127,9 +148,17 @@ namespace LibraryManagement
 
         private void btnManaEmployees_Click(object sender, EventArgs e)
         {
-            UC_Employees uC_Employees = new UC_Employees();
-            AddUCPanel1(uC_Employees);
-            ShowPanel1();
+            if(EmployeesBLL.Instance.CheckRole(username) == "admin")
+            {
+                UC_AddAccounts uC_AddAccounts = new UC_AddAccounts();
+                AddUCPanel1(uC_AddAccounts);
+                ShowPanel1();
+            }
+            else
+            {
+                FormMeessageBox formMeessageBox = new FormMeessageBox("Sorry , This feature is only for admins !");
+                formMeessageBox.Show();
+            }
         }
 
         int page = 1;
@@ -201,6 +230,40 @@ namespace LibraryManagement
         {
             UC_Categorys uC_Categorys = new UC_Categorys();
             AddUCPanel1(uC_Categorys);
+            ShowPanel1();
+        }
+
+        private void btnManaEmployees_Click_1(object sender, EventArgs e)
+        {
+            if (EmployeesBLL.Instance.CheckRole(username) == "admin")
+            {
+                UC_ManagementEmployees uC_ManagementEmployees = new UC_ManagementEmployees();
+                AddUCPanel1(uC_ManagementEmployees);
+                ShowPanel1();
+            }
+            else
+            {
+                FormMeessageBox formMeessageBox = new FormMeessageBox("Sorry , This feature is only for admins !");
+                formMeessageBox.Show();
+            }
+        }
+
+        private void btnBorrow_Click(object sender, EventArgs e)
+        {
+            UC_Borrows uC_Borrows = new UC_Borrows(Int32.Parse(EmployeesBLL.Instance.getIdByUsername(username)),this);
+            AddUCPanel1(uC_Borrows);
+            ShowPanel1();
+        }
+
+        private void btnReader_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnBookTitle_Click(object sender, EventArgs e)
+        {
+            UC_BookTitles uC_BookTitles = new UC_BookTitles(this);
+            AddUCPanel1(uC_BookTitles);
             ShowPanel1();
         }
     }

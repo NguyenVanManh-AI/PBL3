@@ -20,5 +20,18 @@ namespace DTO
         public DateTime date_of_birth { get; set; }
         public DateTime created_at { get; set; }
         public DateTime updated_at { get; set; }
+
+        public Employees(int _id , string _username , string _first_name, string _last_name,string _email, string _phone, string _address)
+        {
+            id = _id;
+            username = _username;
+            first_name = _first_name;
+            last_name = _last_name;
+            email = _email;
+            phone = _phone;
+            address = _address;
+        }
     }
+
+    
 }
