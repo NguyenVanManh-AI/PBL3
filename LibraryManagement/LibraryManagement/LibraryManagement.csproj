@@ -49,18 +49,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BorrowDetails2.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="BorrowDetails2.Designer.cs">
-      <DependentUpon>BorrowDetails2.cs</DependentUpon>
-    </Compile>
-    <Compile Include="CheckInfor.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CheckInfor.Designer.cs">
-      <DependentUpon>CheckInfor.cs</DependentUpon>
-    </Compile>
     <Compile Include="Class\clsDatabase.cs" />
     <Compile Include="FormChangePassword.cs">
       <SubType>Form</SubType>
@@ -116,18 +104,6 @@
     <Compile Include="FormWrongAccount.Designer.cs">
       <DependentUpon>FormWrongAccount.cs</DependentUpon>
     </Compile>
-    <Compile Include="Help.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Help.Designer.cs">
-      <DependentUpon>Help.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Main.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Main.Designer.cs">
-      <DependentUpon>Main.cs</DependentUpon>
-    </Compile>
     <Compile Include="UC_Books.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -160,18 +136,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ReportBookStatus.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ReportBookStatus.Designer.cs">
-      <DependentUpon>ReportBookStatus.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ReportReaders.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ReportReaders.Designer.cs">
-      <DependentUpon>ReportReaders.cs</DependentUpon>
-    </Compile>
     <Compile Include="test.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -214,45 +178,6 @@
     <Compile Include="UC_Readers.Designer.cs">
       <DependentUpon>UC_Readers.cs</DependentUpon>
     </Compile>
-    <Compile Include="UpdateAuthors.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UpdateAuthors.Designer.cs">
-      <DependentUpon>UpdateAuthors.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UpdateBooks.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UpdateBooks.Designer.cs">
-      <DependentUpon>UpdateBooks.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UpdateBookTitle.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UpdateBookTitle.Designer.cs">
-      <DependentUpon>UpdateBookTitle.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UpdateCategorys.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UpdateCategorys.Designer.cs">
-      <DependentUpon>UpdateCategorys.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UpdatePublishers.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UpdatePublishers.Designer.cs">
-      <DependentUpon>UpdatePublishers.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UpdateReaders.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UpdateReaders.Designer.cs">
-      <DependentUpon>UpdateReaders.cs</DependentUpon>
-    </Compile>
-    <EmbeddedResource Include="BorrowDetails2.resx">
-      <DependentUpon>BorrowDetails2.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FormChangePassword.resx">
       <DependentUpon>FormChangePassword.cs</DependentUpon>
     </EmbeddedResource>
@@ -280,9 +205,6 @@
     <EmbeddedResource Include="FormWrongAccount.resx">
       <DependentUpon>FormWrongAccount.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Main.resx">
-      <DependentUpon>Main.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="UC_Authors.resx">
       <DependentUpon>UC_Authors.cs</DependentUpon>
     </EmbeddedResource>
@@ -297,6 +219,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UC_Borrows.resx">
       <DependentUpon>UC_Borrows.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_Categorys.resx">
+      <DependentUpon>UC_Categorys.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UC_ManagementEmployees.resx">
       <DependentUpon>UC_ManagementEmployees.cs</DependentUpon>
@@ -319,6 +244,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UC_Help.resx">
       <DependentUpon>UC_Help.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_Publishers.resx">
+      <DependentUpon>UC_Publishers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_Readers.resx">
+      <DependentUpon>UC_Readers.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -385,6 +316,11 @@
     <None Include="Resources\Add User-rafiki.png" />
     <None Include="Resources\Add User-pana.png" />
     <Content Include="Resources\Backgroundmain.jpg" />
+    <None Include="Resources\Bibliophile-cuate.png" />
+    <None Include="Resources\Bibliophile-bro.png" />
+    <None Include="Resources\Bibliophile-amico.png" />
+    <None Include="Resources\Bibliophile-rafiki.png" />
+    <None Include="Resources\Bibliophile-pana.png" />
     <Content Include="Resources\book-app-icon-4.jpg" />
     <None Include="Resources\DUT %282%29.png" />
     <None Include="Resources\DUT %282%29.gif" />
@@ -415,6 +351,7 @@
     <None Include="Resources\Fill out-pana.png" />
     <None Include="Resources\Fill out-bro.png" />
     <None Include="Resources\Fill out-rafiki.png" />
+    <None Include="Resources\File searching-amico.png" />
     <Content Include="Resources\Google-Play-Books-icon.png" />
     <None Include="Resources\group-white.png" />
     <None Include="Resources\group.png" />
@@ -428,6 +365,8 @@
     <None Include="Resources\ID Card-cuate.png" />
     <None Include="Resources\ID Card-amico.png" />
     <Content Include="Resources\images.png" />
+    <None Include="Resources\Information tab-bro.png" />
+    <None Include="Resources\Information tab-pana %281%29.png" />
     <Content Include="Resources\information.png" />
     <None Include="Resources\logogdut.png" />
     <None Include="Resources\Logo.PNG" />
@@ -466,6 +405,8 @@
     <None Include="Resources\previous %281%291.png" />
     <None Include="Resources\previous1.png" />
     <None Include="Resources\plus.png" />
+    <None Include="Resources\Printer-amico.png" />
+    <None Include="Resources\Printer-amico1.png" />
     <Content Include="Resources\printer.png" />
     <None Include="Resources\profile.png" />
     <None Include="Resources\Reading glasses-bro.png" />
@@ -478,6 +419,9 @@
     <None Include="Resources\Reading glasses-cuate.png" />
     <None Include="Resources\Reading glasses-cuate1.png" />
     <None Include="Resources\Reading glasses-rafiki.png" />
+    <None Include="Resources\Publish article-amico.png" />
+    <None Include="Resources\Publish article-bro.png" />
+    <None Include="Resources\Publish article-rafiki.png" />
     <Content Include="Resources\report.png" />
     <None Include="Resources\Reset password-amico %281%29.png" />
     <None Include="Resources\resetpassword.gif" />

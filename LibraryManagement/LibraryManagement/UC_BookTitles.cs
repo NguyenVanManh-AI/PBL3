@@ -204,20 +204,33 @@ namespace LibraryManagement
 
         private void dataGridView2_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            txtPubId.Text = dataGridView2.Rows[e.RowIndex].Cells[0].Value.ToString();
-            txtPub.Text = dataGridView2.Rows[e.RowIndex].Cells[1].Value.ToString();
+            try
+            {
+                txtPubId.Text = dataGridView2.Rows[e.RowIndex].Cells[0].Value.ToString();
+                txtPub.Text = dataGridView2.Rows[e.RowIndex].Cells[1].Value.ToString();
+            } 
+            catch { }
+            
         }
 
         private void dataGridView3_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            txtAuId.Text = dataGridView3.Rows[e.RowIndex].Cells[0].Value.ToString();
-            txtAu.Text = dataGridView3.Rows[e.RowIndex].Cells[1].Value.ToString();
+            try
+            {
+                txtAuId.Text = dataGridView3.Rows[e.RowIndex].Cells[0].Value.ToString();
+                txtAu.Text = dataGridView3.Rows[e.RowIndex].Cells[1].Value.ToString();
+            }
+            catch { }
         }
 
         private void dataGridView4_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            txtCateId.Text = dataGridView4.Rows[e.RowIndex].Cells[0].Value.ToString();
-            txtCate.Text = dataGridView4.Rows[e.RowIndex].Cells[1].Value.ToString();
+            try
+            {
+                txtCateId.Text = dataGridView4.Rows[e.RowIndex].Cells[0].Value.ToString();
+                txtCate.Text = dataGridView4.Rows[e.RowIndex].Cells[1].Value.ToString();
+            }
+            catch { }
         }
 
         private void DTP_ValueChanged(object sender, EventArgs e)
