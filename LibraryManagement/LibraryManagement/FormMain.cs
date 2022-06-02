@@ -257,7 +257,9 @@ namespace LibraryManagement
 
         private void btnReader_Click(object sender, EventArgs e)
         {
-
+            UC_Readers uC_Readers = new UC_Readers();
+            AddUCPanel1(uC_Readers);
+            ShowPanel1();
         }
 
         private void btnBookTitle_Click(object sender, EventArgs e)

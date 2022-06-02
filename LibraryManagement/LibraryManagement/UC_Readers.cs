@@ -167,5 +167,10 @@ namespace LibraryManagement
             txtUpdate.Text = "";
             dataGridView1.ClearSelection();
         }
+
+        private void UC_Readers_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
