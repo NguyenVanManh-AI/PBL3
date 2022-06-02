@@ -80,7 +80,7 @@ namespace BLL
             try
             {
                 string return_at = BorrowDetailsDAL.Instance.PrevReturnDayNew(id_book);
-                if (borrow_at == "0") return true;
+                if (return_at == "0") return true;
                 else
                 {
                     borrow_at = SaveDate(borrow_at);
