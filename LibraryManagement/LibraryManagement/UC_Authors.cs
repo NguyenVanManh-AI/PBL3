@@ -34,7 +34,7 @@ namespace LibraryManagement
                     bool gender;
                     if (cbbGender.Text == "Male") gender = true;
                     else gender = false;
-                    Authors author = new Authors(txtFName.Text, txtLName.Text, gender, txtDes.Text);
+                    Authors author = new Authors(txtFName.Text, txtLName.Text, gender, txtCreate.Text);
                     if (AuthorsBLL.Instance.AddAuthors(author) == "OK")
                     {
                         new FormMessageBoxSuccess("Add successfully!").Show();
@@ -91,8 +91,8 @@ namespace LibraryManagement
                 txtLName.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
                 if (dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString() == "True") cbbGender.Text = "Male";
                 else cbbGender.Text = "FeMale";
-                txtDes.Text = dataGridView1.Rows[e.RowIndex].Cells[6].Value.ToString();
-                txtCreate.Text = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
+                txtCreate.Text = dataGridView1.Rows[e.RowIndex].Cells[6].Value.ToString();
+                txtDes.Text = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
                 txtUpdate.Text = dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString();
             }
             catch { };
@@ -114,7 +114,7 @@ namespace LibraryManagement
                     bool gender;
                     if (cbbGender.Text == "Male") gender = true;
                     else gender = false;
-                    Authors author = new Authors(txtFName.Text, txtLName.Text, gender, txtDes.Text);
+                    Authors author = new Authors(txtFName.Text, txtLName.Text, gender, txtCreate.Text);
                     if (AuthorsBLL.Instance.EditAuthors(author, txtId.Text) == "OK")
                     {
                         new FormMessageBoxSuccess("Edit successfully!").Show();
@@ -135,10 +135,10 @@ namespace LibraryManagement
             txtId.Text = "";
             txtFName.Text = "";
             txtLName.Text = "";
-            txtDes.Text = "";
+            txtCreate.Text = "";
             cbbGender.Text = "";
             txtUpdate.Text = "";
-            txtCreate.Text = "";
+            txtDes.Text = "";
             dataGridView1.ClearSelection();
         }
     }

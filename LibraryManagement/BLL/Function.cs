@@ -51,15 +51,19 @@ namespace BLL
 
         public string FullDayMonth(string Date)
         {
-            string[] arrListStr = Date.Split('/');
-            string one = arrListStr[0];
-            string two = arrListStr[1];
-            string three = arrListStr[2];
-            if (one.Length == 1)
-                one = "0" + one;
-            if (two.Length == 1)
-                two = "0" + two;
-            return one + "/" + two + "/" + three;
+            if(Date != "")
+            {
+                string[] arrListStr = Date.Split('/');
+                string one = arrListStr[0];
+                string two = arrListStr[1];
+                string three = arrListStr[2];
+                if (one.Length == 1)
+                    one = "0" + one;
+                if (two.Length == 1)
+                    two = "0" + two;
+                return one + "/" + two + "/" + three;
+            }
+            else { return ""; }
         }
         public bool CheckDate(string Date)
         {

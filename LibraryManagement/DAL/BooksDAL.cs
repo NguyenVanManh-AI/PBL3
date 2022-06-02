@@ -85,7 +85,7 @@ namespace DAL
         }
         public int GetBooksBorrow()
         {
-            return LoadData("select * from borrow_details").Rows.Count;
+            return LoadData("select * from borrow_details where return_at is null").Rows.Count;
         }
     }
 }
