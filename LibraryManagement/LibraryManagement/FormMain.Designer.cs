@@ -30,8 +30,13 @@
         {
             this.guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
             this.text3 = new System.Windows.Forms.Label();
+            this.step3 = new System.Windows.Forms.PictureBox();
+            this.btnNext = new Guna.UI2.WinForms.Guna2CircleButton();
+            this.btnBack = new Guna.UI2.WinForms.Guna2CircleButton();
             this.text2 = new System.Windows.Forms.Label();
+            this.step2 = new System.Windows.Forms.PictureBox();
             this.text1 = new System.Windows.Forms.Label();
+            this.step1 = new System.Windows.Forms.PictureBox();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2VSeparator1 = new Guna.UI2.WinForms.Guna2VSeparator();
             this.label2 = new System.Windows.Forms.Label();
@@ -44,11 +49,6 @@
             this.btnInformation = new Guna.UI2.WinForms.Guna2GradientButton();
             this.btnHome = new Guna.UI2.WinForms.Guna2GradientButton();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.step3 = new System.Windows.Forms.PictureBox();
-            this.btnNext = new Guna.UI2.WinForms.Guna2CircleButton();
-            this.btnBack = new Guna.UI2.WinForms.Guna2CircleButton();
-            this.step2 = new System.Windows.Forms.PictureBox();
-            this.step1 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -68,13 +68,14 @@
             this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.btnInforUser = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2GroupBox1.SuspendLayout();
-            this.guna2Panel1.SuspendLayout();
-            this.groupInforUser.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.step3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.step2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.step1)).BeginInit();
+            this.guna2Panel1.SuspendLayout();
+            this.groupInforUser.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -120,6 +121,53 @@
             this.text3.Text = "Step 3\r\nBorrowers come to return \r\nbooks,enter information \r\nabout the return dat" +
     "e";
             // 
+            // step3
+            // 
+            this.step3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(162)))), ((int)(((byte)(251)))));
+            this.step3.Location = new System.Drawing.Point(586, 1);
+            this.step3.Name = "step3";
+            this.step3.Size = new System.Drawing.Size(273, 86);
+            this.step3.TabIndex = 177;
+            this.step3.TabStop = false;
+            // 
+            // btnNext
+            // 
+            this.btnNext.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(162)))), ((int)(((byte)(251)))));
+            this.btnNext.BackgroundImage = global::LibraryManagement.Properties.Resources.next1;
+            this.btnNext.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnNext.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnNext.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnNext.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnNext.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnNext.FillColor = System.Drawing.Color.Transparent;
+            this.btnNext.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnNext.ForeColor = System.Drawing.Color.White;
+            this.btnNext.Location = new System.Drawing.Point(1011, 31);
+            this.btnNext.Name = "btnNext";
+            this.btnNext.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.btnNext.Size = new System.Drawing.Size(30, 30);
+            this.btnNext.TabIndex = 176;
+            this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
+            // 
+            // btnBack
+            // 
+            this.btnBack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(162)))), ((int)(((byte)(251)))));
+            this.btnBack.BackgroundImage = global::LibraryManagement.Properties.Resources.previous1;
+            this.btnBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnBack.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnBack.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnBack.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnBack.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnBack.FillColor = System.Drawing.Color.Transparent;
+            this.btnBack.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnBack.ForeColor = System.Drawing.Color.White;
+            this.btnBack.Location = new System.Drawing.Point(955, 31);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.btnBack.Size = new System.Drawing.Size(30, 30);
+            this.btnBack.TabIndex = 175;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
+            // 
             // text2
             // 
             this.text2.AutoSize = true;
@@ -134,6 +182,15 @@
             this.text2.Text = "Step 2\r\nEnter the information of the \r\nborrower,create a library \r\ncard and borro" +
     "w books";
             // 
+            // step2
+            // 
+            this.step2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(162)))), ((int)(((byte)(251)))));
+            this.step2.Location = new System.Drawing.Point(313, 1);
+            this.step2.Name = "step2";
+            this.step2.Size = new System.Drawing.Size(273, 86);
+            this.step2.TabIndex = 173;
+            this.step2.TabStop = false;
+            // 
             // text1
             // 
             this.text1.AutoSize = true;
@@ -146,6 +203,15 @@
             this.text1.TabIndex = 172;
             this.text1.Text = "Step 1\r\nEnter book-related information \r\nincluding publisher, author, field,\r\nboo" +
     "k title,...";
+            // 
+            // step1
+            // 
+            this.step1.BackColor = System.Drawing.Color.White;
+            this.step1.Location = new System.Drawing.Point(40, 1);
+            this.step1.Name = "step1";
+            this.step1.Size = new System.Drawing.Size(273, 86);
+            this.step1.TabIndex = 0;
+            this.step1.TabStop = false;
             // 
             // guna2Panel2
             // 
@@ -367,71 +433,6 @@
             this.pictureBox7.TabIndex = 180;
             this.pictureBox7.TabStop = false;
             // 
-            // step3
-            // 
-            this.step3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(162)))), ((int)(((byte)(251)))));
-            this.step3.Location = new System.Drawing.Point(586, 1);
-            this.step3.Name = "step3";
-            this.step3.Size = new System.Drawing.Size(273, 86);
-            this.step3.TabIndex = 177;
-            this.step3.TabStop = false;
-            // 
-            // btnNext
-            // 
-            this.btnNext.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(162)))), ((int)(((byte)(251)))));
-            this.btnNext.BackgroundImage = global::LibraryManagement.Properties.Resources.next1;
-            this.btnNext.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnNext.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnNext.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnNext.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnNext.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnNext.FillColor = System.Drawing.Color.Transparent;
-            this.btnNext.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnNext.ForeColor = System.Drawing.Color.White;
-            this.btnNext.Location = new System.Drawing.Point(1011, 31);
-            this.btnNext.Name = "btnNext";
-            this.btnNext.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.btnNext.Size = new System.Drawing.Size(30, 30);
-            this.btnNext.TabIndex = 176;
-            this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
-            // 
-            // btnBack
-            // 
-            this.btnBack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(162)))), ((int)(((byte)(251)))));
-            this.btnBack.BackgroundImage = global::LibraryManagement.Properties.Resources.previous1;
-            this.btnBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnBack.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnBack.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnBack.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnBack.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnBack.FillColor = System.Drawing.Color.Transparent;
-            this.btnBack.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnBack.ForeColor = System.Drawing.Color.White;
-            this.btnBack.Location = new System.Drawing.Point(955, 31);
-            this.btnBack.Name = "btnBack";
-            this.btnBack.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.btnBack.Size = new System.Drawing.Size(30, 30);
-            this.btnBack.TabIndex = 175;
-            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
-            // 
-            // step2
-            // 
-            this.step2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(162)))), ((int)(((byte)(251)))));
-            this.step2.Location = new System.Drawing.Point(313, 1);
-            this.step2.Name = "step2";
-            this.step2.Size = new System.Drawing.Size(273, 86);
-            this.step2.TabIndex = 173;
-            this.step2.TabStop = false;
-            // 
-            // step1
-            // 
-            this.step1.BackColor = System.Drawing.Color.White;
-            this.step1.Location = new System.Drawing.Point(40, 1);
-            this.step1.Name = "step1";
-            this.step1.Size = new System.Drawing.Size(273, 86);
-            this.step1.TabIndex = 0;
-            this.step1.TabStop = false;
-            // 
             // pictureBox6
             // 
             this.pictureBox6.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -535,6 +536,7 @@
             this.btnStatistics.Size = new System.Drawing.Size(84, 51);
             this.btnStatistics.TabIndex = 155;
             this.btnStatistics.UseTransparentBackground = true;
+            this.btnStatistics.Click += new System.EventHandler(this.btnStatistics_Click);
             // 
             // btnReader
             // 
@@ -895,11 +897,42 @@
             this.btnInforUser.Text = "Name";
             this.btnInforUser.Click += new System.EventHandler(this.btnInforUser_Click);
             // 
+            // guna2Button1
+            // 
+            this.guna2Button1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Button1.BorderColor = System.Drawing.Color.White;
+            this.guna2Button1.BorderRadius = 10;
+            this.guna2Button1.BorderThickness = 1;
+            this.guna2Button1.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.guna2Button1.CheckedState.BorderColor = System.Drawing.Color.White;
+            this.guna2Button1.CheckedState.CustomBorderColor = System.Drawing.Color.White;
+            this.guna2Button1.CheckedState.FillColor = System.Drawing.Color.White;
+            this.guna2Button1.CheckedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(66)))), ((int)(((byte)(110)))));
+            this.guna2Button1.CheckedState.Image = global::LibraryManagement.Properties.Resources.data_analytics;
+            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button1.FillColor = System.Drawing.Color.DeepSkyBlue;
+            this.guna2Button1.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.guna2Button1.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F);
+            this.guna2Button1.ForeColor = System.Drawing.Color.White;
+            this.guna2Button1.Image = global::LibraryManagement.Properties.Resources.data_analytics_w;
+            this.guna2Button1.ImageSize = new System.Drawing.Size(40, 40);
+            this.guna2Button1.Location = new System.Drawing.Point(13, 565);
+            this.guna2Button1.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2Button1.Name = "guna2Button1";
+            this.guna2Button1.Size = new System.Drawing.Size(84, 51);
+            this.guna2Button1.TabIndex = 182;
+            this.guna2Button1.UseTransparentBackground = true;
+            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
+            // 
             // FormMain
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1218, 688);
+            this.Controls.Add(this.guna2Button1);
             this.Controls.Add(this.groupInforUser);
             this.Controls.Add(this.btnHome);
             this.Controls.Add(this.guna2Panel1);
@@ -940,12 +973,12 @@
             this.Click += new System.EventHandler(this.FormMain_Click);
             this.guna2GroupBox1.ResumeLayout(false);
             this.guna2GroupBox1.PerformLayout();
-            this.guna2Panel1.ResumeLayout(false);
-            this.groupInforUser.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.step3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.step2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.step1)).EndInit();
+            this.guna2Panel1.ResumeLayout(false);
+            this.groupInforUser.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
@@ -999,6 +1032,7 @@
         private Guna.UI2.WinForms.Guna2GradientButton btnLogout;
         private Guna.UI2.WinForms.Guna2GradientButton btnChangePassword;
         private Guna.UI2.WinForms.Guna2GradientButton btnInformation;
+        private Guna.UI2.WinForms.Guna2Button guna2Button1;
     }
 }
 

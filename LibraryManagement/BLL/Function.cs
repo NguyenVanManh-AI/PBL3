@@ -8,7 +8,7 @@ namespace BLL
 {
     public class Function
     {
-        public static string Date_Now()
+        public string Date_Now()
         {
             string datetime = DateTime.Now.ToString();
             if (datetime.Contains("CH") || datetime.Contains("SA"))
@@ -21,9 +21,11 @@ namespace BLL
                 string pm = arrListStr[2];
 
                 string[] arrListStr2 = date.Split('/');
+
                 string dd = arrListStr2[0];
                 string mm = arrListStr2[1];
                 string yyyy = arrListStr2[2];
+
                 datetime = mm + "/" + dd + "/" + yyyy + " " + time + " " + pm;
             }
             return datetime;
@@ -49,23 +51,15 @@ namespace BLL
 
         public string FullDayMonth(string Date)
         {
-            if(Date != "")
-            {
-                string[] arrListStr = Date.Split('/');
-                string one = arrListStr[0];
-                string two = arrListStr[1];
-                string three = arrListStr[2];
-                if (one.Length == 1)
-                    one = "0" + one;
-                if (two.Length == 1)
-                    two = "0" + two;
-                return one + "/" + two + "/" + three;
-            }
-            else
-            {
-                return "";
-            }
-            
+            string[] arrListStr = Date.Split('/');
+            string one = arrListStr[0];
+            string two = arrListStr[1];
+            string three = arrListStr[2];
+            if (one.Length == 1)
+                one = "0" + one;
+            if (two.Length == 1)
+                two = "0" + two;
+            return one + "/" + two + "/" + three;
         }
         public bool CheckDate(string Date)
         {
@@ -96,6 +90,7 @@ namespace BLL
         public string SaveDate(string Date)
         {
             string datetime = DateTime.Now.ToString();
+
             if (datetime.Contains("CH") || datetime.Contains("SA"))
             {
                 string[] arrListStr = Date.Split('/');
@@ -106,13 +101,14 @@ namespace BLL
             }
             return Date;
         }
-        public static bool hasSpecialChar(string input)
+        public  bool hasSpecialChar(string input)
         {
             string specialChar = @"~!@#$%^&*()_+`1234567890-=[]\{}|;':,./<>?";
             foreach (char item in specialChar)
             {
                 if (input.Contains(item)) return true;
             }
+
             return false;
         }
 
@@ -132,6 +128,7 @@ namespace BLL
             {
                 if (input.Contains(item)) return true;
             }
+
             return false;
         }
         public int CheckInt(string txt)
@@ -139,6 +136,22 @@ namespace BLL
             if (txt != "")
                 return Int32.Parse(txt);
             else return 0;
+        }
+        public int GetMonth(string date)
+        {
+            string[] str = date.Split(' ');
+            string[] str1 = str[0].Split('/');
+            if (date.Contains("CH") || date.Contains("SA"))
+            {
+                return int.Parse(str1[1]);
+            }
+            return int.Parse(str1[0]);
+        }
+        public int GetYear(string date)
+        {
+            string[] str = date.Split(' ');
+            string[] str1 = str[0].Split('/');
+            return int.Parse(str1[2]);
         }
 
     }

@@ -71,5 +71,21 @@ namespace DAL
             }
             return datetime;
         }
+        public int  GetGoodBooks()
+        {
+            return LoadData("select * from books where status ='true'").Rows.Count;
+        }
+        public int GetBadBooks()
+        {
+            return LoadData("select * from books where status ='false'").Rows.Count;
+        }
+        public int GetAllBooks()
+        {
+            return LoadData("select * from books").Rows.Count;
+        }
+        public int GetBooksBorrow()
+        {
+            return LoadData("select * from borrow_details").Rows.Count;
+        }
     }
 }

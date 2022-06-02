@@ -268,5 +268,19 @@ namespace LibraryManagement
             AddUCPanel1(uC_BookTitles);
             ShowPanel1();
         }
+
+        private void btnStatistics_Click(object sender, EventArgs e)
+        {
+            UC_ReaderStatistical uC_ReaderStatistical = new UC_ReaderStatistical();
+            AddUCPanel1(uC_ReaderStatistical);
+            ShowPanel1();
+        }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            UC_BookStatistical uC_BookStatistical = new UC_BookStatistical();
+            AddUCPanel1(uC_BookStatistical);
+            ShowPanel1();
+        }
     }
 }
