@@ -51,5 +51,21 @@ namespace BLL
         {
             return BooksDAL.Instance.GetTitleByBookTitleId(id);
         }
+        public int GetGoodBooks()
+        {
+            return BooksDAL.Instance.GetGoodBooks();
+        }
+        public int GetBadBooks()
+        {
+            return BooksDAL.Instance.GetBadBooks();
+        }
+        public int GetAllBooks()
+        {
+            return BooksDAL.Instance.GetAllBooks();
+        }
+        public int GetBooksBorrow()
+        {
+            return BooksDAL.Instance.GetBooksBorrow();
+        }
     }
 }
