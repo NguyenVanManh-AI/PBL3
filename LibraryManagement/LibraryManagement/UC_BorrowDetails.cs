@@ -97,22 +97,30 @@ namespace LibraryManagement
                     }
                     else
                     {
-                        BorrowDetails bor = new BorrowDetails(Int32.Parse(id_borrow), Int32.Parse(txtId_Book.Text), txtBook_Title.Text);
-                        if (BorrowDetailsBLL.Instance.AddBorrowDetails(bor, txtBorrow_At.Text) == "true")
+                        if (Int32.Parse(BorrowDetailsBLL.Instance.getCOUNT(id_borrow)) == 10)
                         {
-                            FormMessageBoxSuccess formMessageBoxSuccess = new FormMessageBoxSuccess("Add Success !");
-                            formMessageBoxSuccess.Show();
-                            ReSet_txt();
-                        }
-                        else if (BorrowDetailsBLL.Instance.AddBorrowDetails(bor, txtBorrow_At.Text) == "false")
-                        {
-                            FormMessageBoxError formMessageBoxError = new FormMessageBoxError("Error !!!");
-                            formMessageBoxError.Show();
+                            FormMeessageBox formMeessageBox = new FormMeessageBox("Borrowing voucher has reached the maximum number of borrowings !!!");
+                            formMeessageBox.Show();
                         }
                         else
                         {
-                            FormMeessageBox formMeessageBox = new FormMeessageBox(BorrowDetailsBLL.Instance.AddBorrowDetails(bor, txtBorrow_At.Text));
-                            formMeessageBox.Show();
+                            BorrowDetails bor = new BorrowDetails(Int32.Parse(id_borrow), Int32.Parse(txtId_Book.Text), txtBook_Title.Text);
+                            if (BorrowDetailsBLL.Instance.AddBorrowDetails(bor, txtBorrow_At.Text) == "true")
+                            {
+                                FormMessageBoxSuccess formMessageBoxSuccess = new FormMessageBoxSuccess("Add Success !");
+                                formMessageBoxSuccess.Show();
+                                ReSet_txt();
+                            }
+                            else if (BorrowDetailsBLL.Instance.AddBorrowDetails(bor, txtBorrow_At.Text) == "false")
+                            {
+                                FormMessageBoxError formMessageBoxError = new FormMessageBoxError("Error !!!");
+                                formMessageBoxError.Show();
+                            }
+                            else
+                            {
+                                FormMeessageBox formMeessageBox = new FormMeessageBox(BorrowDetailsBLL.Instance.AddBorrowDetails(bor, txtBorrow_At.Text));
+                                formMeessageBox.Show();
+                            }
                         }
                     }
                 }

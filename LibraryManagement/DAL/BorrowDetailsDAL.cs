@@ -167,5 +167,18 @@ namespace DAL
                 return LoadData(sql_book);
             }
         }
+
+        public string getCOUNT(string borrow_id)
+        {
+            try
+            {
+                string query = "select COUNT(id) from borrow_details where borrow_id = "+borrow_id;
+                return LoadData(query).Rows[0][0].ToString();
+            }
+            catch
+            {
+                return "0";
+            }
+        }
     }
 }

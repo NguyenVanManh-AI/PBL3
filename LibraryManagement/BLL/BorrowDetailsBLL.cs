@@ -175,5 +175,16 @@ namespace BLL
             return BorrowDetailsDAL.Instance.SearchBooks(text);
         }
 
+        public string getCOUNT(string borrow_id)
+        {
+            try
+            {
+                return BorrowDetailsDAL.Instance.getCOUNT(borrow_id);
+            }
+            catch { return "0"; }
+        }
+
+        
+
     }
 }
