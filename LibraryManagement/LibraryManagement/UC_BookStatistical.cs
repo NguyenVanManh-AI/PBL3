@@ -14,6 +14,7 @@ namespace LibraryManagement
 {
     public partial class UC_BookStatistical : UserControl
     {
+
         FormMain formMain;
         public UC_BookStatistical(FormMain _formMain)
         {
@@ -24,17 +25,21 @@ namespace LibraryManagement
         }
         public void SetBookChart()
         {
-            chart1.Series[0].Points.AddXY("Hư hỏng", BooksBLL.Instance.GetBadBooks());
-            chart1.Series[0].Points.AddXY("Nguyên vẹn", BooksBLL.Instance.GetGoodBooks());
+            double tl = 100* (double)BooksBLL.Instance.GetBadBooks() / (double)(BooksBLL.Instance.GetBadBooks() + BooksBLL.Instance.GetGoodBooks());
+            chart1.Series[0].Points.AddXY("Depravity Books (" + tl+"%)",BooksBLL.Instance.GetBadBooks());
+            chart1.Series[0].Points.AddXY("Intact Books ("+(100-tl)+"%)", BooksBLL.Instance.GetGoodBooks());
+            chart1.Series[0]["DrawingStyle"] = "Cylinder";
+            chart1.ChartAreas["ChartArea1"].Area3DStyle.Enable3D = true;
         }
         public void SetBooksBorrowChart()
         {
-            chart2.Series[0].Points.AddXY("Sách đã mượn", BooksBLL.Instance.GetBooksBorrow());
-            chart2.Series[0].Points.AddXY("Sách còn lại", BooksBLL.Instance.GetAllBooks()- BooksBLL.Instance.GetBooksBorrow());
+            double tl = 100*(double)BooksBLL.Instance.GetBooksBorrow()/ (double)BooksBLL.Instance.GetAllBooks();
+            chart2.Series[0].Points.AddXY("Borowed Books ("+tl+"%)", BooksBLL.Instance.GetBooksBorrow());
+            chart2.Series[0].Points.AddXY("Remaining Books ("+(100-tl)+"%)", BooksBLL.Instance.GetAllBooks()- BooksBLL.Instance.GetBooksBorrow());
+            chart2.ChartAreas["ChartArea1"].Area3DStyle.Enable3D = true;
         }
 
-
-        private void btReaderStatis_Click(object sender, EventArgs e)
+        private void btnReaderStatis_Click(object sender, EventArgs e)
         {
             formMain.AddUC_ReaderStatis_Panel1();
         }

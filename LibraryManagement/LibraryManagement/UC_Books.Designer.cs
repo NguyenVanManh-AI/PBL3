@@ -234,8 +234,8 @@
             this.cbbStatus.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.cbbStatus.ItemHeight = 30;
             this.cbbStatus.Items.AddRange(new object[] {
-            "Hư hỏng",
-            "Nguyên vẹn"});
+            "Broken",
+            "Intact"});
             this.cbbStatus.Location = new System.Drawing.Point(624, 154);
             this.cbbStatus.Name = "cbbStatus";
             this.cbbStatus.Size = new System.Drawing.Size(245, 36);

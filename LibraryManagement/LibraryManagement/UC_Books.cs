@@ -20,7 +20,7 @@ namespace LibraryManagement
             dataGridView1.DataSource = BooksBLL.Instance.LoadBooksFromIdTitle(id);
             ID = id;
             cbbS.SelectedItem = "All";
-            cbbStatus.SelectedItem = "Nguyên vẹn";
+            cbbStatus.SelectedItem = "Intact";
             txtTitleId.Text = id;
             txtTitle.Text = BooksBLL.Instance.GetTitleByBookTitleID(id);
         }
@@ -36,7 +36,7 @@ namespace LibraryManagement
                 else if (txtBookId.Text == "")
                 {
                     bool status;
-                    if (cbbStatus.Text == "Nguyên vẹn") status = true;
+                    if (cbbStatus.Text == "Intact") status = true;
                     else status = false;
                     if (txtImportAt.Text == "") new FormMeessageBox("Imported At cann't not be left blank!");
                     else
@@ -71,7 +71,7 @@ namespace LibraryManagement
                 else
                 {
                     bool status;
-                    if (cbbStatus.Text == "Nguyên vẹn") status = true;
+                    if (cbbStatus.Text == "Intact") status = true;
                     else status = false;
                     if (txtImportAt.Text == "") new FormMeessageBox("Imported At cann't not be left blank!");
                     else
@@ -121,8 +121,8 @@ namespace LibraryManagement
 
         private void txtS_TextChanged(object sender, EventArgs e)
         {
-            if (cbbS.Text == "Nguyên vẹn") dataGridView1.DataSource = BooksBLL.Instance.SearchBooksWithStatus(txtSearch.Text, ID, true);
-            else if (cbbS.Text == "Hư hỏng") dataGridView1.DataSource = BooksBLL.Instance.SearchBooksWithStatus(txtSearch.Text, ID, false);
+            if (cbbS.Text == "Intact") dataGridView1.DataSource = BooksBLL.Instance.SearchBooksWithStatus(txtSearch.Text, ID, true);
+            else if (cbbS.Text == "Broken") dataGridView1.DataSource = BooksBLL.Instance.SearchBooksWithStatus(txtSearch.Text, ID, false);
             else dataGridView1.DataSource = BooksBLL.Instance.SearchAllBooks(txtSearch.Text, ID);
         }
 
@@ -134,8 +134,8 @@ namespace LibraryManagement
                 txtTitleId.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
                 txtTitle.Text = dataGridView1.Rows[e.RowIndex].Cells[6].Value.ToString();
                 txtImportAt.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
-                if (dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString() == "True") cbbStatus.SelectedItem = "Nguyên vẹn";
-                else cbbStatus.SelectedItem = "Hư hỏng";
+                if (dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString() == "True") cbbStatus.SelectedItem = "Intact";
+                else cbbStatus.SelectedItem = "Broken";
                 txtUpdate.Text = dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString();
                 txtCreate.Text = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
             }
@@ -144,8 +144,8 @@ namespace LibraryManagement
 
         private void cbbS_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (cbbS.Text == "Nguyên vẹn") dataGridView1.DataSource = BooksBLL.Instance.SearchBooksWithStatus(txtSearch.Text, ID, true);
-            else if (cbbS.Text == "Hư hỏng") dataGridView1.DataSource = BooksBLL.Instance.SearchBooksWithStatus(txtSearch.Text, ID, false);
+            if (cbbS.Text == "Intact") dataGridView1.DataSource = BooksBLL.Instance.SearchBooksWithStatus(txtSearch.Text, ID, true);
+            else if (cbbS.Text == "Broken") dataGridView1.DataSource = BooksBLL.Instance.SearchBooksWithStatus(txtSearch.Text, ID, false);
             else dataGridView1.DataSource = BooksBLL.Instance.SearchAllBooks(txtSearch.Text, ID);
         }
 

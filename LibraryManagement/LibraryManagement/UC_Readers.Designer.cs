@@ -600,7 +600,7 @@
             // 
             // guna2DateTimePicker1
             // 
-            this.guna2DateTimePicker1.Location = new System.Drawing.Point(657, 285);
+            this.guna2DateTimePicker1.Location = new System.Drawing.Point(657, 280);
             this.guna2DateTimePicker1.Name = "guna2DateTimePicker1";
             this.guna2DateTimePicker1.Size = new System.Drawing.Size(22, 26);
             this.guna2DateTimePicker1.TabIndex = 299;

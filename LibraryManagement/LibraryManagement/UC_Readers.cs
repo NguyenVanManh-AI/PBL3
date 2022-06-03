@@ -27,8 +27,8 @@ namespace LibraryManagement
                 txtId.Text = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
                 txtFName.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
                 txtLName.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
-                if (dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString() == "True") cbbGender.Text = "Nam";
-                else cbbGender.Text = "Nữ";
+                if (dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString() == "True") cbbGender.Text = "Male";
+                else cbbGender.Text = "FeMale";
                 if (dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString() != "")
                 {
                     txtDOB.Text = ReadersBLL.Instance.ShowDate(dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString());
@@ -54,7 +54,7 @@ namespace LibraryManagement
             try
             {
                 bool gender;
-                if (cbbGender.Text == "Nam") gender = true;
+                if (cbbGender.Text == "Male") gender = true;
                 else gender = false;
 
                 if (txtId.Text != "")
@@ -112,7 +112,7 @@ namespace LibraryManagement
             //try
             //{
                 bool gender;
-                if (cbbGender.Text == "Nam") gender = true;
+                if (cbbGender.Text == "Male") gender = true;
                 else gender = false;
                 if (dataGridView1.SelectedRows.Count == 0)
                 {
