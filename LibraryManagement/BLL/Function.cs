@@ -128,10 +128,7 @@ namespace BLL
         public bool CheckEmail(string input)
         {
             string specialChar = @"@gmail.com";
-            foreach (char item in specialChar)
-            {
-                if (input.Contains(item)) return true;
-            }
+            if (input.Contains(specialChar)) return true;
 
             return false;
         }
