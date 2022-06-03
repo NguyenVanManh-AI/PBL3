@@ -48,6 +48,24 @@
     <Reference Include="itextsharp, Version=5.5.13.3, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
       <HintPath>..\packages\iTextSharp.5.5.13.3\lib\itextsharp.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Windows.Forms.DataVisualization" />
@@ -122,6 +140,7 @@
     <Compile Include="FormWrongAccount.Designer.cs">
       <DependentUpon>FormWrongAccount.cs</DependentUpon>
     </Compile>
+    <Compile Include="SqlServerTypes\Loader.cs" />
     <Compile Include="UC_Books.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -297,6 +316,19 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\103177_see_watch_view_eye_icon.png" />
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <None Include="Resources\User research-bro.png" />
     <None Include="Resources\User research-amico %281%29.png" />
     <None Include="Resources\user.gif" />
@@ -438,6 +470,7 @@
     <None Include="Resources\Printer-amico.png" />
     <None Include="Resources\Printer-amico1.png" />
     <None Include="Resources\pdf.png" />
+    <None Include="Resources\pie-chart.png" />
     <Content Include="Resources\printer.png" />
     <None Include="Resources\profile.png" />
     <None Include="Resources\Reading glasses-bro.png" />
@@ -453,6 +486,7 @@
     <None Include="Resources\Publish article-amico.png" />
     <None Include="Resources\Publish article-bro.png" />
     <None Include="Resources\Publish article-rafiki.png" />
+    <None Include="Resources\profits.png" />
     <Content Include="Resources\report.png" />
     <None Include="Resources\Reset password-amico %281%29.png" />
     <None Include="Resources\resetpassword.gif" />
@@ -464,6 +498,7 @@
     <None Include="Resources\share.gif" />
     <None Include="Resources\shield.gif" />
     <None Include="Resources\smile.gif" />
+    <None Include="Resources\statistic.png" />
     <Content Include="Resources\system.png" />
     <None Include="Resources\target.gif" />
     <None Include="Resources\Two factor authentication-rafiki.png" />

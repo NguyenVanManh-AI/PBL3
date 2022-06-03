@@ -85,33 +85,40 @@ namespace BLL
 
         public string email_employee { get; set; }
         private static string codeText;
-        private static readonly string from_email = "systemlibrary@systemlibrary.com.vn"; // Email của Sender (của bạn)
-        private static readonly string password_from_email = "systemlibrary"; // Mật khẩu Email của Sender (của bạn)
+        private static readonly string from_email = "strongtechmaster@gmail.com "; // Email của Sender (của bạn)
+        private static readonly string password_from_email = "strongtech2908"; // Mật khẩu Email của Sender (của bạn)
         public void SendEmail(string email, string codeText, string content)
         {
-            // gưi bằng outlook / Microsoft 
-            outlook.Application app = new outlook.Application();
-            outlook.MailItem mail_lout_look = (outlook.MailItem)app.CreateItem(outlook.OlItemType.olMailItem);
-            mail_lout_look.To = email;
-            mail_lout_look.Subject = codeText;
-            mail_lout_look.Body = content;
-            mail_lout_look.Importance = outlook.OlImportance.olImportanceHigh;
-            ((outlook.MailItem)mail_lout_look).Send();
-
-            // gửi bằng Email của google 
-            //MailMessage mail = new MailMessage();
-            //SmtpClient SmtpServer = new SmtpClient("smtp.gmail.com");
-
-            //mail.From = new MailAddress(from_email);
-            //mail.To.Add(email_employee);
-            //mail.IsBodyHtml = true;
-            //mail.Body = content;
-            //mail.Subject = codeText;
-            //mail.Priority = MailPriority.High;
-            //SmtpServer.Port = 587;
-            //SmtpServer.Credentials = new System.Net.NetworkCredential(from_email, password_from_email);
-            //SmtpServer.EnableSsl = true;
-            //SmtpServer.Send(mail);
+            try
+            {
+                // gưi bằng outlook / Microsoft 
+                //outlook.Application app = new outlook.Application();
+                //outlook.MailItem mail_lout_look = (outlook.MailItem)app.CreateItem(outlook.OlItemType.olMailItem);
+                //mail_lout_look.To = email;
+                //mail_lout_look.Subject = codeText;
+                //mail_lout_look.Body = content;
+                //mail_lout_look.Importance = outlook.OlImportance.olImportanceHigh;
+                //((outlook.MailItem)mail_lout_look).Send();
+                
+                // gửi bằng Email của google 
+                MailMessage msg = new MailMessage();
+                msg.From = new MailAddress(from_email);
+                msg.To.Add(email);
+                msg.Subject = codeText;
+                msg.Body = content;
+                //msg.Priority = MailPriority.High;
+                using (SmtpClient client = new SmtpClient())
+                {
+                    client.EnableSsl = true;
+                    client.UseDefaultCredentials = false;
+                    client.Credentials = new NetworkCredential(from_email, password_from_email);
+                    client.Host = "smtp.gmail.com";
+                    client.Port = 587;
+                    client.DeliveryMethod = SmtpDeliveryMethod.Network;
+                    client.Send(msg);
+                }
+            }
+            catch { }
         }
 
         public bool ConfirmPassword(string new_password,string confirm)

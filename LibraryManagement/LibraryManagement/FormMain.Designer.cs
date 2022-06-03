@@ -68,7 +68,6 @@
             this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.btnInforUser = new Guna.UI2.WinForms.Guna2GradientButton();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2GroupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.step3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.step2)).BeginInit();
@@ -897,42 +896,11 @@
             this.btnInforUser.Text = "Name";
             this.btnInforUser.Click += new System.EventHandler(this.btnInforUser_Click);
             // 
-            // guna2Button1
-            // 
-            this.guna2Button1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Button1.BorderColor = System.Drawing.Color.White;
-            this.guna2Button1.BorderRadius = 10;
-            this.guna2Button1.BorderThickness = 1;
-            this.guna2Button1.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            this.guna2Button1.CheckedState.BorderColor = System.Drawing.Color.White;
-            this.guna2Button1.CheckedState.CustomBorderColor = System.Drawing.Color.White;
-            this.guna2Button1.CheckedState.FillColor = System.Drawing.Color.White;
-            this.guna2Button1.CheckedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(66)))), ((int)(((byte)(110)))));
-            this.guna2Button1.CheckedState.Image = global::LibraryManagement.Properties.Resources.data_analytics;
-            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button1.FillColor = System.Drawing.Color.DeepSkyBlue;
-            this.guna2Button1.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.guna2Button1.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F);
-            this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.Image = global::LibraryManagement.Properties.Resources.data_analytics_w;
-            this.guna2Button1.ImageSize = new System.Drawing.Size(40, 40);
-            this.guna2Button1.Location = new System.Drawing.Point(13, 565);
-            this.guna2Button1.Margin = new System.Windows.Forms.Padding(4);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(84, 51);
-            this.guna2Button1.TabIndex = 182;
-            this.guna2Button1.UseTransparentBackground = true;
-            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
-            // 
             // FormMain
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1218, 688);
-            this.Controls.Add(this.guna2Button1);
             this.Controls.Add(this.groupInforUser);
             this.Controls.Add(this.btnHome);
             this.Controls.Add(this.guna2Panel1);
@@ -1032,7 +1000,6 @@
         private Guna.UI2.WinForms.Guna2GradientButton btnLogout;
         private Guna.UI2.WinForms.Guna2GradientButton btnChangePassword;
         private Guna.UI2.WinForms.Guna2GradientButton btnInformation;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
     }
 }
 

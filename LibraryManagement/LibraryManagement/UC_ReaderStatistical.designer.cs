@@ -28,13 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea10 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend10 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series10 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.CbbYear = new Guna.UI2.WinForms.Guna2ComboBox();
             this.guna2HtmlLabel10 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.btBookStatis = new Guna.UI2.WinForms.Guna2GradientButton();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -43,18 +44,18 @@
             this.chart1.BackColor = System.Drawing.Color.MediumSlateBlue;
             this.chart1.BackGradientStyle = System.Windows.Forms.DataVisualization.Charting.GradientStyle.HorizontalCenter;
             this.chart1.BackSecondaryColor = System.Drawing.Color.SpringGreen;
-            chartArea10.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea10);
-            legend10.Name = "Legend1";
-            this.chart1.Legends.Add(legend10);
+            chartArea2.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.chart1.Legends.Add(legend2);
             this.chart1.Location = new System.Drawing.Point(28, 192);
             this.chart1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.chart1.Name = "chart1";
-            series10.ChartArea = "ChartArea1";
-            series10.LabelBackColor = System.Drawing.Color.DeepSkyBlue;
-            series10.Legend = "Legend1";
-            series10.Name = "Số lượng đọc giả mới";
-            this.chart1.Series.Add(series10);
+            series2.ChartArea = "ChartArea1";
+            series2.LabelBackColor = System.Drawing.Color.DeepSkyBlue;
+            series2.Legend = "Legend1";
+            series2.Name = "Số lượng đọc giả mới";
+            this.chart1.Series.Add(series2);
             this.chart1.Size = new System.Drawing.Size(1584, 671);
             this.chart1.TabIndex = 0;
             this.chart1.Text = "chart1";
@@ -109,12 +110,44 @@
             this.guna2HtmlLabel1.TabIndex = 230;
             this.guna2HtmlLabel1.Text = "Year";
             // 
+            // btBookStatis
+            // 
+            this.btBookStatis.AccessibleRole = System.Windows.Forms.AccessibleRole.Window;
+            this.btBookStatis.Animated = true;
+            this.btBookStatis.AnimatedGIF = true;
+            this.btBookStatis.BorderColor = System.Drawing.Color.Gray;
+            this.btBookStatis.BorderRadius = 15;
+            this.btBookStatis.BorderThickness = 1;
+            this.btBookStatis.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btBookStatis.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btBookStatis.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btBookStatis.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btBookStatis.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btBookStatis.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btBookStatis.FillColor = System.Drawing.Color.White;
+            this.btBookStatis.FillColor2 = System.Drawing.Color.DeepSkyBlue;
+            this.btBookStatis.FocusedColor = System.Drawing.Color.White;
+            this.btBookStatis.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btBookStatis.ForeColor = System.Drawing.Color.White;
+            this.btBookStatis.Image = global::LibraryManagement.Properties.Resources.pie_chart;
+            this.btBookStatis.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btBookStatis.ImageSize = new System.Drawing.Size(25, 25);
+            this.btBookStatis.Location = new System.Drawing.Point(1221, 11);
+            this.btBookStatis.Margin = new System.Windows.Forms.Padding(2);
+            this.btBookStatis.Name = "btBookStatis";
+            this.btBookStatis.PressedColor = System.Drawing.Color.DeepSkyBlue;
+            this.btBookStatis.Size = new System.Drawing.Size(352, 64);
+            this.btBookStatis.TabIndex = 231;
+            this.btBookStatis.Text = "Book Statistical";
+            this.btBookStatis.Click += new System.EventHandler(this.btBookStatis_Click);
+            // 
             // UC_ReaderStatistical
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Controls.Add(this.btBookStatis);
             this.Controls.Add(this.guna2HtmlLabel1);
             this.Controls.Add(this.guna2HtmlLabel10);
             this.Controls.Add(this.CbbYear);
@@ -133,5 +166,6 @@
         private Guna.UI2.WinForms.Guna2ComboBox CbbYear;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel10;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
+        private Guna.UI2.WinForms.Guna2GradientButton btBookStatis;
     }
 }

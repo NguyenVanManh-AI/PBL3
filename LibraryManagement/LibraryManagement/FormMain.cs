@@ -78,6 +78,20 @@ namespace LibraryManagement
             ShowPanel1();
         }
 
+        public void AddUC_BookStatis_Panel1()
+        {
+            UC_BookStatistical uC_BookStatistical = new UC_BookStatistical(this);
+            AddUCPanel1(uC_BookStatistical);
+            ShowPanel1();
+        }
+
+        public void AddUC_ReaderStatis_Panel1()
+        {
+            UC_ReaderStatistical uC_ReaderStatistical = new UC_ReaderStatistical(this);
+            AddUCPanel1(uC_ReaderStatistical);
+            ShowPanel1();
+        }
+
         public void AddUC_Books_Panel1(string _id_book_title)
         {
             UC_Books uC_Books = new UC_Books(_id_book_title);
@@ -271,16 +285,10 @@ namespace LibraryManagement
 
         private void btnStatistics_Click(object sender, EventArgs e)
         {
-            UC_ReaderStatistical uC_ReaderStatistical = new UC_ReaderStatistical();
+            UC_ReaderStatistical uC_ReaderStatistical = new UC_ReaderStatistical(this);
             AddUCPanel1(uC_ReaderStatistical);
             ShowPanel1();
         }
 
-        private void guna2Button1_Click(object sender, EventArgs e)
-        {
-            UC_BookStatistical uC_BookStatistical = new UC_BookStatistical();
-            AddUCPanel1(uC_BookStatistical);
-            ShowPanel1();
-        }
     }
 }

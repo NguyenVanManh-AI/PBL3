@@ -14,8 +14,10 @@ namespace LibraryManagement
 {
     public partial class UC_BookStatistical : UserControl
     {
-        public UC_BookStatistical()
+        FormMain formMain;
+        public UC_BookStatistical(FormMain _formMain)
         {
+            formMain = _formMain;
             InitializeComponent();
             SetBookChart();
             SetBooksBorrowChart();
@@ -29,6 +31,12 @@ namespace LibraryManagement
         {
             chart2.Series[0].Points.AddXY("Sách đã mượn", BooksBLL.Instance.GetBooksBorrow());
             chart2.Series[0].Points.AddXY("Sách còn lại", BooksBLL.Instance.GetAllBooks()- BooksBLL.Instance.GetBooksBorrow());
+        }
+
+
+        private void btReaderStatis_Click(object sender, EventArgs e)
+        {
+            formMain.AddUC_ReaderStatis_Panel1();
         }
     }
 }
