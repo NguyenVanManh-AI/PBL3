@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using DTO;
 using BLL;
 
+
 namespace LibraryManagement
 {
     public partial class UC_Borrows : UserControl
@@ -210,6 +211,31 @@ namespace LibraryManagement
                     dataGridView2.DataSource = BorrowsBLL.Instance.SearchReader(txtSearch.Text);
             }
             catch { }
+        }
+
+        private void guna2GradientButton1_Click(object sender, EventArgs e)
+        {
+            if(txtBorrow_id.Text == "")
+            {
+                FormMeessageBox formMeessageBox = new FormMeessageBox("Please slect a Borrow !!!");
+                formMeessageBox.Show();
+            }
+            else
+            {
+                string text = "\t\tLibrary Management\n" +
+                                "\tBorrow  ID   : " + txtBorrow_id.Text + "\n" +
+                                "\tReader  ID   : " + txtReader_id.Text + "\n" +
+                                "\tReader  Name : " + txtReader_Name.Text + "\n" +
+                                "\tCreator ID   : " + txtCreator_id.Text + "\n" +
+                                "\tCreator Name : " + txtCreator_Name.Text + "\n" +
+                                "\tCreate  At   : " + txtCreated_at.Text + "\n" +
+                                "\tUpdate  At   : " + txtUpdated_at.Text + "\n" +
+                                "\tPrint   At   : " + DateTime.Now.ToString() + "\n";
+
+                FormPDF formPDF = new FormPDF(text);
+                formPDF.Show();
+            }
+            
         }
     }
 

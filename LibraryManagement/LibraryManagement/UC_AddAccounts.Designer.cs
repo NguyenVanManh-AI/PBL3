@@ -249,7 +249,7 @@
             this.txtEmail.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.PasswordChar = '●';
-            this.txtEmail.PlaceholderText = "Email";
+            this.txtEmail.PlaceholderText = "Email using OutLook";
             this.txtEmail.SelectedText = "";
             this.txtEmail.Size = new System.Drawing.Size(417, 75);
             this.txtEmail.TabIndex = 137;
