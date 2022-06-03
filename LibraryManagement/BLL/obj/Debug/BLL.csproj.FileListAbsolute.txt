@@ -1396,3 +1396,4 @@ C:\Users\LAPTOP KIM ANH\Downloads\Kì 4\PBL 3 CN phần mềm\PBL3\PBL3\LibraryM
 C:\Users\LAPTOP KIM ANH\Downloads\Kì 4\PBL 3 CN phần mềm\PBL3\PBL3\LibraryManagement\BLL\obj\Debug\BLL.dll
 C:\Users\LAPTOP KIM ANH\Downloads\Kì 4\PBL 3 CN phần mềm\PBL3\PBL3\LibraryManagement\BLL\obj\Debug\BLL.pdb
 C:\Users\LAPTOP KIM ANH\source\repos\LibraryManagement\BLL\obj\Debug\BLL.csproj.ResolveComReference.cache
+C:\Users\LAPTOP KIM ANH\Downloads\Kì 4\PBL 3 CN phần mềm\PBL3\PBL3\LibraryManagement\BLL\obj\Debug\BLL.csproj.ResolveComReference.cache

@@ -58,7 +58,6 @@ C:\Users\LAPTOP KIM ANH\Downloads\Kì 4\PBL 3 CN phần mềm\PBL3\PBL3\LibraryM
 C:\Users\LAPTOP KIM ANH\Downloads\Kì 4\PBL 3 CN phần mềm\PBL3\PBL3\LibraryManagement\LibraryManagement\bin\Debug\DAL.pdb
 C:\Users\LAPTOP KIM ANH\Downloads\Kì 4\PBL 3 CN phần mềm\PBL3\PBL3\LibraryManagement\LibraryManagement\bin\Debug\DTO.pdb
 C:\Users\LAPTOP KIM ANH\Downloads\Kì 4\PBL 3 CN phần mềm\PBL3\PBL3\LibraryManagement\LibraryManagement\bin\Debug\ARSoft.Tools.Net.xml
-C:\Users\LAPTOP KIM ANH\Downloads\Kì 4\PBL 3 CN phần mềm\PBL3\PBL3\LibraryManagement\LibraryManagement\bin\Debug\BouncyCastle.Crypto.pdb
 C:\Users\LAPTOP KIM ANH\Downloads\Kì 4\PBL 3 CN phần mềm\PBL3\PBL3\LibraryManagement\LibraryManagement\bin\Debug\Interop.WMPLib.dll
 C:\Users\LAPTOP KIM ANH\Downloads\Kì 4\PBL 3 CN phần mềm\PBL3\PBL3\LibraryManagement\LibraryManagement\bin\Debug\AxInterop.WMPLib.dll
 C:\Users\LAPTOP KIM ANH\Downloads\Kì 4\PBL 3 CN phần mềm\PBL3\PBL3\LibraryManagement\LibraryManagement\obj\Debug\LibraryManagement.csproj.AssemblyReference.cache
@@ -110,3 +109,112 @@ C:\Users\LAPTOP KIM ANH\source\repos\LibraryManagement\LibraryManagement\obj\Deb
 C:\Users\LAPTOP KIM ANH\source\repos\LibraryManagement\LibraryManagement\bin\Debug\itextsharp.dll
 C:\Users\LAPTOP KIM ANH\source\repos\LibraryManagement\LibraryManagement\bin\Debug\itextsharp.xml
 C:\Users\LAPTOP KIM ANH\source\repos\LibraryManagement\LibraryManagement\obj\Debug\LibraryManagement.FormPDF.resources
+C:\Users\LAPTOP KIM ANH\source\repos\LibraryManagement\LibraryManagement\bin\Debug\SqlServerTypes\x64\msvcr120.dll
+C:\Users\LAPTOP KIM ANH\source\repos\LibraryManagement\LibraryManagement\bin\Debug\SqlServerTypes\x64\SqlServerSpatial140.dll
+C:\Users\LAPTOP KIM ANH\source\repos\LibraryManagement\LibraryManagement\bin\Debug\SqlServerTypes\x86\msvcr120.dll
+C:\Users\LAPTOP KIM ANH\source\repos\LibraryManagement\LibraryManagement\bin\Debug\SqlServerTypes\x86\SqlServerSpatial140.dll
+C:\Users\LAPTOP KIM ANH\source\repos\LibraryManagement\LibraryManagement\bin\Debug\Microsoft.ReportViewer.Common.dll
+C:\Users\LAPTOP KIM ANH\source\repos\LibraryManagement\LibraryManagement\bin\Debug\Microsoft.ReportViewer.DataVisualization.dll
+C:\Users\LAPTOP KIM ANH\source\repos\LibraryManagement\LibraryManagement\bin\Debug\Microsoft.ReportViewer.Design.dll
+C:\Users\LAPTOP KIM ANH\source\repos\LibraryManagement\LibraryManagement\bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.dll
+C:\Users\LAPTOP KIM ANH\source\repos\LibraryManagement\LibraryManagement\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+C:\Users\LAPTOP KIM ANH\source\repos\LibraryManagement\LibraryManagement\bin\Debug\Microsoft.SqlServer.Types.dll
+C:\Users\LAPTOP KIM ANH\source\repos\LibraryManagement\LibraryManagement\bin\Debug\EnvDTE.dll
+C:\Users\LAPTOP KIM ANH\source\repos\LibraryManagement\LibraryManagement\bin\Debug\stdole.dll
+C:\Users\LAPTOP KIM ANH\source\repos\LibraryManagement\LibraryManagement\bin\Debug\EnvDTE.xml
+C:\Users\LAPTOP KIM ANH\source\repos\LibraryManagement\LibraryManagement\bin\Debug\de\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\LAPTOP KIM ANH\source\repos\LibraryManagement\LibraryManagement\bin\Debug\es\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\LAPTOP KIM ANH\source\repos\LibraryManagement\LibraryManagement\bin\Debug\fr\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\LAPTOP KIM ANH\source\repos\LibraryManagement\LibraryManagement\bin\Debug\it\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\LAPTOP KIM ANH\source\repos\LibraryManagement\LibraryManagement\bin\Debug\ja\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\LAPTOP KIM ANH\source\repos\LibraryManagement\LibraryManagement\bin\Debug\ko\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\LAPTOP KIM ANH\source\repos\LibraryManagement\LibraryManagement\bin\Debug\pt\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\LAPTOP KIM ANH\source\repos\LibraryManagement\LibraryManagement\bin\Debug\ru\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\LAPTOP KIM ANH\source\repos\LibraryManagement\LibraryManagement\bin\Debug\zh-CHS\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\LAPTOP KIM ANH\source\repos\LibraryManagement\LibraryManagement\bin\Debug\zh-CHT\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\LAPTOP KIM ANH\source\repos\LibraryManagement\LibraryManagement\bin\Debug\de\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\LAPTOP KIM ANH\source\repos\LibraryManagement\LibraryManagement\bin\Debug\es\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\LAPTOP KIM ANH\source\repos\LibraryManagement\LibraryManagement\bin\Debug\fr\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\LAPTOP KIM ANH\source\repos\LibraryManagement\LibraryManagement\bin\Debug\it\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\LAPTOP KIM ANH\source\repos\LibraryManagement\LibraryManagement\bin\Debug\ja\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\LAPTOP KIM ANH\source\repos\LibraryManagement\LibraryManagement\bin\Debug\ko\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\LAPTOP KIM ANH\source\repos\LibraryManagement\LibraryManagement\bin\Debug\pt\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\LAPTOP KIM ANH\source\repos\LibraryManagement\LibraryManagement\bin\Debug\ru\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\LAPTOP KIM ANH\source\repos\LibraryManagement\LibraryManagement\bin\Debug\zh-CHS\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\LAPTOP KIM ANH\source\repos\LibraryManagement\LibraryManagement\bin\Debug\zh-CHT\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\LAPTOP KIM ANH\source\repos\LibraryManagement\LibraryManagement\bin\Debug\de\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\LAPTOP KIM ANH\source\repos\LibraryManagement\LibraryManagement\bin\Debug\es\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\LAPTOP KIM ANH\source\repos\LibraryManagement\LibraryManagement\bin\Debug\fr\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\LAPTOP KIM ANH\source\repos\LibraryManagement\LibraryManagement\bin\Debug\it\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\LAPTOP KIM ANH\source\repos\LibraryManagement\LibraryManagement\bin\Debug\ja\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\LAPTOP KIM ANH\source\repos\LibraryManagement\LibraryManagement\bin\Debug\ko\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\LAPTOP KIM ANH\source\repos\LibraryManagement\LibraryManagement\bin\Debug\pt\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\LAPTOP KIM ANH\source\repos\LibraryManagement\LibraryManagement\bin\Debug\ru\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\LAPTOP KIM ANH\source\repos\LibraryManagement\LibraryManagement\bin\Debug\zh-CHS\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\LAPTOP KIM ANH\source\repos\LibraryManagement\LibraryManagement\bin\Debug\zh-CHT\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\LAPTOP KIM ANH\source\repos\LibraryManagement\LibraryManagement\bin\Debug\de\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\LAPTOP KIM ANH\source\repos\LibraryManagement\LibraryManagement\bin\Debug\es\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\LAPTOP KIM ANH\source\repos\LibraryManagement\LibraryManagement\bin\Debug\fr\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\LAPTOP KIM ANH\source\repos\LibraryManagement\LibraryManagement\bin\Debug\it\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\LAPTOP KIM ANH\source\repos\LibraryManagement\LibraryManagement\bin\Debug\ja\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\LAPTOP KIM ANH\source\repos\LibraryManagement\LibraryManagement\bin\Debug\ko\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\LAPTOP KIM ANH\source\repos\LibraryManagement\LibraryManagement\bin\Debug\pt\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\LAPTOP KIM ANH\source\repos\LibraryManagement\LibraryManagement\bin\Debug\ru\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\LAPTOP KIM ANH\source\repos\LibraryManagement\LibraryManagement\bin\Debug\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\LAPTOP KIM ANH\source\repos\LibraryManagement\LibraryManagement\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\LAPTOP KIM ANH\Downloads\Kì 4\PBL 3 CN phần mềm\PBL3\PBL3\LibraryManagement\LibraryManagement\bin\Debug\SqlServerTypes\x64\msvcr120.dll
+C:\Users\LAPTOP KIM ANH\Downloads\Kì 4\PBL 3 CN phần mềm\PBL3\PBL3\LibraryManagement\LibraryManagement\bin\Debug\SqlServerTypes\x64\SqlServerSpatial140.dll
+C:\Users\LAPTOP KIM ANH\Downloads\Kì 4\PBL 3 CN phần mềm\PBL3\PBL3\LibraryManagement\LibraryManagement\bin\Debug\SqlServerTypes\x86\msvcr120.dll
+C:\Users\LAPTOP KIM ANH\Downloads\Kì 4\PBL 3 CN phần mềm\PBL3\PBL3\LibraryManagement\LibraryManagement\bin\Debug\SqlServerTypes\x86\SqlServerSpatial140.dll
+C:\Users\LAPTOP KIM ANH\Downloads\Kì 4\PBL 3 CN phần mềm\PBL3\PBL3\LibraryManagement\LibraryManagement\bin\Debug\itextsharp.dll
+C:\Users\LAPTOP KIM ANH\Downloads\Kì 4\PBL 3 CN phần mềm\PBL3\PBL3\LibraryManagement\LibraryManagement\bin\Debug\Microsoft.ReportViewer.Common.dll
+C:\Users\LAPTOP KIM ANH\Downloads\Kì 4\PBL 3 CN phần mềm\PBL3\PBL3\LibraryManagement\LibraryManagement\bin\Debug\Microsoft.ReportViewer.DataVisualization.dll
+C:\Users\LAPTOP KIM ANH\Downloads\Kì 4\PBL 3 CN phần mềm\PBL3\PBL3\LibraryManagement\LibraryManagement\bin\Debug\Microsoft.ReportViewer.Design.dll
+C:\Users\LAPTOP KIM ANH\Downloads\Kì 4\PBL 3 CN phần mềm\PBL3\PBL3\LibraryManagement\LibraryManagement\bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.dll
+C:\Users\LAPTOP KIM ANH\Downloads\Kì 4\PBL 3 CN phần mềm\PBL3\PBL3\LibraryManagement\LibraryManagement\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+C:\Users\LAPTOP KIM ANH\Downloads\Kì 4\PBL 3 CN phần mềm\PBL3\PBL3\LibraryManagement\LibraryManagement\bin\Debug\Microsoft.SqlServer.Types.dll
+C:\Users\LAPTOP KIM ANH\Downloads\Kì 4\PBL 3 CN phần mềm\PBL3\PBL3\LibraryManagement\LibraryManagement\bin\Debug\EnvDTE.dll
+C:\Users\LAPTOP KIM ANH\Downloads\Kì 4\PBL 3 CN phần mềm\PBL3\PBL3\LibraryManagement\LibraryManagement\bin\Debug\stdole.dll
+C:\Users\LAPTOP KIM ANH\Downloads\Kì 4\PBL 3 CN phần mềm\PBL3\PBL3\LibraryManagement\LibraryManagement\bin\Debug\itextsharp.xml
+C:\Users\LAPTOP KIM ANH\Downloads\Kì 4\PBL 3 CN phần mềm\PBL3\PBL3\LibraryManagement\LibraryManagement\bin\Debug\EnvDTE.xml
+C:\Users\LAPTOP KIM ANH\Downloads\Kì 4\PBL 3 CN phần mềm\PBL3\PBL3\LibraryManagement\LibraryManagement\bin\Debug\de\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\LAPTOP KIM ANH\Downloads\Kì 4\PBL 3 CN phần mềm\PBL3\PBL3\LibraryManagement\LibraryManagement\bin\Debug\es\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\LAPTOP KIM ANH\Downloads\Kì 4\PBL 3 CN phần mềm\PBL3\PBL3\LibraryManagement\LibraryManagement\bin\Debug\fr\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\LAPTOP KIM ANH\Downloads\Kì 4\PBL 3 CN phần mềm\PBL3\PBL3\LibraryManagement\LibraryManagement\bin\Debug\it\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\LAPTOP KIM ANH\Downloads\Kì 4\PBL 3 CN phần mềm\PBL3\PBL3\LibraryManagement\LibraryManagement\bin\Debug\ja\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\LAPTOP KIM ANH\Downloads\Kì 4\PBL 3 CN phần mềm\PBL3\PBL3\LibraryManagement\LibraryManagement\bin\Debug\ko\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\LAPTOP KIM ANH\Downloads\Kì 4\PBL 3 CN phần mềm\PBL3\PBL3\LibraryManagement\LibraryManagement\bin\Debug\pt\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\LAPTOP KIM ANH\Downloads\Kì 4\PBL 3 CN phần mềm\PBL3\PBL3\LibraryManagement\LibraryManagement\bin\Debug\ru\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\LAPTOP KIM ANH\Downloads\Kì 4\PBL 3 CN phần mềm\PBL3\PBL3\LibraryManagement\LibraryManagement\bin\Debug\zh-CHS\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\LAPTOP KIM ANH\Downloads\Kì 4\PBL 3 CN phần mềm\PBL3\PBL3\LibraryManagement\LibraryManagement\bin\Debug\zh-CHT\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\LAPTOP KIM ANH\Downloads\Kì 4\PBL 3 CN phần mềm\PBL3\PBL3\LibraryManagement\LibraryManagement\bin\Debug\de\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\LAPTOP KIM ANH\Downloads\Kì 4\PBL 3 CN phần mềm\PBL3\PBL3\LibraryManagement\LibraryManagement\bin\Debug\es\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\LAPTOP KIM ANH\Downloads\Kì 4\PBL 3 CN phần mềm\PBL3\PBL3\LibraryManagement\LibraryManagement\bin\Debug\fr\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\LAPTOP KIM ANH\Downloads\Kì 4\PBL 3 CN phần mềm\PBL3\PBL3\LibraryManagement\LibraryManagement\bin\Debug\it\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\LAPTOP KIM ANH\Downloads\Kì 4\PBL 3 CN phần mềm\PBL3\PBL3\LibraryManagement\LibraryManagement\bin\Debug\ja\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\LAPTOP KIM ANH\Downloads\Kì 4\PBL 3 CN phần mềm\PBL3\PBL3\LibraryManagement\LibraryManagement\bin\Debug\ko\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\LAPTOP KIM ANH\Downloads\Kì 4\PBL 3 CN phần mềm\PBL3\PBL3\LibraryManagement\LibraryManagement\bin\Debug\pt\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\LAPTOP KIM ANH\Downloads\Kì 4\PBL 3 CN phần mềm\PBL3\PBL3\LibraryManagement\LibraryManagement\bin\Debug\ru\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\LAPTOP KIM ANH\Downloads\Kì 4\PBL 3 CN phần mềm\PBL3\PBL3\LibraryManagement\LibraryManagement\bin\Debug\zh-CHS\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\LAPTOP KIM ANH\Downloads\Kì 4\PBL 3 CN phần mềm\PBL3\PBL3\LibraryManagement\LibraryManagement\bin\Debug\zh-CHT\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\LAPTOP KIM ANH\Downloads\Kì 4\PBL 3 CN phần mềm\PBL3\PBL3\LibraryManagement\LibraryManagement\bin\Debug\de\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\LAPTOP KIM ANH\Downloads\Kì 4\PBL 3 CN phần mềm\PBL3\PBL3\LibraryManagement\LibraryManagement\bin\Debug\es\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\LAPTOP KIM ANH\Downloads\Kì 4\PBL 3 CN phần mềm\PBL3\PBL3\LibraryManagement\LibraryManagement\bin\Debug\fr\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\LAPTOP KIM ANH\Downloads\Kì 4\PBL 3 CN phần mềm\PBL3\PBL3\LibraryManagement\LibraryManagement\bin\Debug\it\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\LAPTOP KIM ANH\Downloads\Kì 4\PBL 3 CN phần mềm\PBL3\PBL3\LibraryManagement\LibraryManagement\bin\Debug\ja\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\LAPTOP KIM ANH\Downloads\Kì 4\PBL 3 CN phần mềm\PBL3\PBL3\LibraryManagement\LibraryManagement\bin\Debug\ko\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\LAPTOP KIM ANH\Downloads\Kì 4\PBL 3 CN phần mềm\PBL3\PBL3\LibraryManagement\LibraryManagement\bin\Debug\pt\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\LAPTOP KIM ANH\Downloads\Kì 4\PBL 3 CN phần mềm\PBL3\PBL3\LibraryManagement\LibraryManagement\bin\Debug\ru\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\LAPTOP KIM ANH\Downloads\Kì 4\PBL 3 CN phần mềm\PBL3\PBL3\LibraryManagement\LibraryManagement\bin\Debug\zh-CHS\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\LAPTOP KIM ANH\Downloads\Kì 4\PBL 3 CN phần mềm\PBL3\PBL3\LibraryManagement\LibraryManagement\bin\Debug\zh-CHT\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\LAPTOP KIM ANH\Downloads\Kì 4\PBL 3 CN phần mềm\PBL3\PBL3\LibraryManagement\LibraryManagement\bin\Debug\de\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\LAPTOP KIM ANH\Downloads\Kì 4\PBL 3 CN phần mềm\PBL3\PBL3\LibraryManagement\LibraryManagement\bin\Debug\es\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\LAPTOP KIM ANH\Downloads\Kì 4\PBL 3 CN phần mềm\PBL3\PBL3\LibraryManagement\LibraryManagement\bin\Debug\fr\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\LAPTOP KIM ANH\Downloads\Kì 4\PBL 3 CN phần mềm\PBL3\PBL3\LibraryManagement\LibraryManagement\bin\Debug\it\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\LAPTOP KIM ANH\Downloads\Kì 4\PBL 3 CN phần mềm\PBL3\PBL3\LibraryManagement\LibraryManagement\bin\Debug\ja\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\LAPTOP KIM ANH\Downloads\Kì 4\PBL 3 CN phần mềm\PBL3\PBL3\LibraryManagement\LibraryManagement\bin\Debug\ko\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\LAPTOP KIM ANH\Downloads\Kì 4\PBL 3 CN phần mềm\PBL3\PBL3\LibraryManagement\LibraryManagement\bin\Debug\pt\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\LAPTOP KIM ANH\Downloads\Kì 4\PBL 3 CN phần mềm\PBL3\PBL3\LibraryManagement\LibraryManagement\bin\Debug\ru\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\LAPTOP KIM ANH\Downloads\Kì 4\PBL 3 CN phần mềm\PBL3\PBL3\LibraryManagement\LibraryManagement\bin\Debug\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\LAPTOP KIM ANH\Downloads\Kì 4\PBL 3 CN phần mềm\PBL3\PBL3\LibraryManagement\LibraryManagement\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\LAPTOP KIM ANH\Downloads\Kì 4\PBL 3 CN phần mềm\PBL3\PBL3\LibraryManagement\LibraryManagement\obj\Debug\LibraryManagement.FormPDF.resources

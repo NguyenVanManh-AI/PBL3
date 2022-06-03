@@ -41,45 +41,45 @@
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.guna2HtmlLabel10 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2HtmlLabel5 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.cbbStatus = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.guna2DateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.txtTitleId = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtCreate = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtTitle = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtUpdate = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtBookId = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.txtImportAt = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel6 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel7 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.txtBookId = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtCreate = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtUpdate = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtImportAt = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtTitle = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtTitleId = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2DateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.cbbStatus = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.cbbS = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
-            this.guna2GroupBox2 = new Guna.UI2.WinForms.Guna2GroupBox();
-            this.guna2GroupBox3 = new Guna.UI2.WinForms.Guna2GroupBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.guna2HtmlLabel5 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.label6 = new System.Windows.Forms.Label();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.btDel = new Guna.UI2.WinForms.Guna2GradientButton();
             this.btEdit = new Guna.UI2.WinForms.Guna2GradientButton();
             this.btNew = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.txtSearch = new Guna.UI2.WinForms.Guna2TextBox();
+            this.cbbS = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.guna2HtmlLabel10 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.guna2GroupBox2 = new Guna.UI2.WinForms.Guna2GroupBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.guna2GroupBox3 = new Guna.UI2.WinForms.Guna2GroupBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.guna2GroupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.guna2GroupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.guna2GroupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -221,71 +221,158 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Import information";
             // 
-            // label6
+            // cbbStatus
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Segoe UI Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.MediumBlue;
-            this.label6.Location = new System.Drawing.Point(543, 131);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(0, 28);
-            this.label6.TabIndex = 36;
+            this.cbbStatus.BackColor = System.Drawing.Color.Transparent;
+            this.cbbStatus.BorderColor = System.Drawing.SystemColors.MenuHighlight;
+            this.cbbStatus.BorderRadius = 12;
+            this.cbbStatus.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbbStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbStatus.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbbStatus.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbbStatus.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbbStatus.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.cbbStatus.ItemHeight = 30;
+            this.cbbStatus.Items.AddRange(new object[] {
+            "Hư hỏng",
+            "Nguyên vẹn"});
+            this.cbbStatus.Location = new System.Drawing.Point(624, 154);
+            this.cbbStatus.Name = "cbbStatus";
+            this.cbbStatus.Size = new System.Drawing.Size(245, 36);
+            this.cbbStatus.TabIndex = 233;
             // 
-            // groupBox3
+            // guna2DateTimePicker1
             // 
-            this.groupBox3.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox3.Controls.Add(this.btDel);
-            this.groupBox3.Controls.Add(this.btEdit);
-            this.groupBox3.Controls.Add(this.btNew);
-            this.groupBox3.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox3.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.groupBox3.Location = new System.Drawing.Point(958, 174);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.groupBox3.Size = new System.Drawing.Size(244, 218);
-            this.groupBox3.TabIndex = 46;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Feature";
+            this.guna2DateTimePicker1.Location = new System.Drawing.Point(440, 160);
+            this.guna2DateTimePicker1.Name = "guna2DateTimePicker1";
+            this.guna2DateTimePicker1.Size = new System.Drawing.Size(16, 33);
+            this.guna2DateTimePicker1.TabIndex = 235;
+            this.guna2DateTimePicker1.ValueChanged += new System.EventHandler(this.guna2DateTimePicker1_ValueChanged);
             // 
-            // groupBox4
+            // txtTitleId
             // 
-            this.groupBox4.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox4.Controls.Add(this.txtSearch);
-            this.groupBox4.Controls.Add(this.cbbS);
-            this.groupBox4.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox4.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.groupBox4.Location = new System.Drawing.Point(53, 422);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(1149, 91);
-            this.groupBox4.TabIndex = 45;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Search";
+            this.txtTitleId.BorderColor = System.Drawing.SystemColors.MenuHighlight;
+            this.txtTitleId.BorderRadius = 6;
+            this.txtTitleId.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtTitleId.DefaultText = "";
+            this.txtTitleId.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtTitleId.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtTitleId.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtTitleId.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtTitleId.Enabled = false;
+            this.txtTitleId.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtTitleId.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTitleId.ForeColor = System.Drawing.Color.Black;
+            this.txtTitleId.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtTitleId.Location = new System.Drawing.Point(160, 100);
+            this.txtTitleId.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtTitleId.Name = "txtTitleId";
+            this.txtTitleId.PasswordChar = '\0';
+            this.txtTitleId.PlaceholderForeColor = System.Drawing.Color.White;
+            this.txtTitleId.PlaceholderText = "";
+            this.txtTitleId.SelectedText = "";
+            this.txtTitleId.Size = new System.Drawing.Size(54, 36);
+            this.txtTitleId.TabIndex = 237;
             // 
-            // guna2HtmlLabel10
+            // txtCreate
             // 
-            this.guna2HtmlLabel10.AutoSize = false;
-            this.guna2HtmlLabel10.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel10.Font = new System.Drawing.Font("Times New Roman", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel10.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.guna2HtmlLabel10.Location = new System.Drawing.Point(493, 63);
-            this.guna2HtmlLabel10.Name = "guna2HtmlLabel10";
-            this.guna2HtmlLabel10.Size = new System.Drawing.Size(395, 49);
-            this.guna2HtmlLabel10.TabIndex = 226;
-            this.guna2HtmlLabel10.Text = "Book Information";
+            this.txtCreate.BorderColor = System.Drawing.SystemColors.MenuHighlight;
+            this.txtCreate.BorderRadius = 6;
+            this.txtCreate.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtCreate.DefaultText = "";
+            this.txtCreate.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtCreate.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtCreate.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtCreate.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtCreate.Enabled = false;
+            this.txtCreate.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtCreate.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCreate.ForeColor = System.Drawing.Color.Black;
+            this.txtCreate.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtCreate.Location = new System.Drawing.Point(624, 100);
+            this.txtCreate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCreate.Name = "txtCreate";
+            this.txtCreate.PasswordChar = '\0';
+            this.txtCreate.PlaceholderForeColor = System.Drawing.Color.White;
+            this.txtCreate.PlaceholderText = "";
+            this.txtCreate.SelectedText = "";
+            this.txtCreate.Size = new System.Drawing.Size(245, 36);
+            this.txtCreate.TabIndex = 233;
             // 
-            // guna2HtmlLabel5
+            // txtTitle
             // 
-            this.guna2HtmlLabel5.AutoSize = false;
-            this.guna2HtmlLabel5.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel5.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.guna2HtmlLabel5.Location = new System.Drawing.Point(26, 43);
-            this.guna2HtmlLabel5.Name = "guna2HtmlLabel5";
-            this.guna2HtmlLabel5.Size = new System.Drawing.Size(173, 41);
-            this.guna2HtmlLabel5.TabIndex = 227;
-            this.guna2HtmlLabel5.Text = "Book Id";
+            this.txtTitle.BorderColor = System.Drawing.SystemColors.MenuHighlight;
+            this.txtTitle.BorderRadius = 6;
+            this.txtTitle.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtTitle.DefaultText = "";
+            this.txtTitle.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtTitle.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtTitle.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtTitle.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtTitle.Enabled = false;
+            this.txtTitle.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtTitle.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTitle.ForeColor = System.Drawing.Color.Black;
+            this.txtTitle.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtTitle.Location = new System.Drawing.Point(222, 100);
+            this.txtTitle.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtTitle.Name = "txtTitle";
+            this.txtTitle.PasswordChar = '\0';
+            this.txtTitle.PlaceholderForeColor = System.Drawing.Color.White;
+            this.txtTitle.PlaceholderText = "";
+            this.txtTitle.SelectedText = "";
+            this.txtTitle.Size = new System.Drawing.Size(250, 36);
+            this.txtTitle.TabIndex = 236;
+            // 
+            // txtUpdate
+            // 
+            this.txtUpdate.BorderColor = System.Drawing.SystemColors.MenuHighlight;
+            this.txtUpdate.BorderRadius = 6;
+            this.txtUpdate.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtUpdate.DefaultText = "";
+            this.txtUpdate.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtUpdate.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtUpdate.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtUpdate.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtUpdate.Enabled = false;
+            this.txtUpdate.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtUpdate.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUpdate.ForeColor = System.Drawing.Color.Black;
+            this.txtUpdate.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtUpdate.Location = new System.Drawing.Point(624, 43);
+            this.txtUpdate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtUpdate.Name = "txtUpdate";
+            this.txtUpdate.PasswordChar = '\0';
+            this.txtUpdate.PlaceholderForeColor = System.Drawing.Color.White;
+            this.txtUpdate.PlaceholderText = "";
+            this.txtUpdate.SelectedText = "";
+            this.txtUpdate.Size = new System.Drawing.Size(245, 36);
+            this.txtUpdate.TabIndex = 234;
+            // 
+            // txtBookId
+            // 
+            this.txtBookId.BorderColor = System.Drawing.SystemColors.MenuHighlight;
+            this.txtBookId.BorderRadius = 6;
+            this.txtBookId.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtBookId.DefaultText = "";
+            this.txtBookId.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtBookId.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtBookId.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtBookId.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtBookId.Enabled = false;
+            this.txtBookId.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtBookId.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBookId.ForeColor = System.Drawing.Color.Black;
+            this.txtBookId.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtBookId.Location = new System.Drawing.Point(160, 43);
+            this.txtBookId.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtBookId.Name = "txtBookId";
+            this.txtBookId.PasswordChar = '\0';
+            this.txtBookId.PlaceholderForeColor = System.Drawing.Color.White;
+            this.txtBookId.PlaceholderText = "";
+            this.txtBookId.SelectedText = "";
+            this.txtBookId.Size = new System.Drawing.Size(312, 36);
+            this.txtBookId.TabIndex = 227;
             // 
             // guna2HtmlLabel2
             // 
@@ -298,6 +385,31 @@
             this.guna2HtmlLabel2.Size = new System.Drawing.Size(172, 36);
             this.guna2HtmlLabel2.TabIndex = 229;
             this.guna2HtmlLabel2.Text = "Status";
+            // 
+            // txtImportAt
+            // 
+            this.txtImportAt.BorderColor = System.Drawing.SystemColors.MenuHighlight;
+            this.txtImportAt.BorderRadius = 6;
+            this.txtImportAt.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtImportAt.DefaultText = "";
+            this.txtImportAt.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtImportAt.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtImportAt.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtImportAt.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtImportAt.Enabled = false;
+            this.txtImportAt.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtImportAt.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtImportAt.ForeColor = System.Drawing.Color.Black;
+            this.txtImportAt.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtImportAt.Location = new System.Drawing.Point(160, 154);
+            this.txtImportAt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtImportAt.Name = "txtImportAt";
+            this.txtImportAt.PasswordChar = '\0';
+            this.txtImportAt.PlaceholderForeColor = System.Drawing.Color.White;
+            this.txtImportAt.PlaceholderText = "";
+            this.txtImportAt.SelectedText = "";
+            this.txtImportAt.Size = new System.Drawing.Size(312, 43);
+            this.txtImportAt.TabIndex = 235;
             // 
             // guna2HtmlLabel3
             // 
@@ -347,286 +459,45 @@
             this.guna2HtmlLabel7.TabIndex = 232;
             this.guna2HtmlLabel7.Text = "BookTitle Id";
             // 
-            // txtBookId
+            // guna2HtmlLabel5
             // 
-            this.txtBookId.BorderColor = System.Drawing.SystemColors.MenuHighlight;
-            this.txtBookId.BorderRadius = 6;
-            this.txtBookId.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtBookId.DefaultText = "";
-            this.txtBookId.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtBookId.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtBookId.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtBookId.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtBookId.Enabled = false;
-            this.txtBookId.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtBookId.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBookId.ForeColor = System.Drawing.Color.Black;
-            this.txtBookId.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtBookId.Location = new System.Drawing.Point(160, 43);
-            this.txtBookId.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txtBookId.Name = "txtBookId";
-            this.txtBookId.PasswordChar = '\0';
-            this.txtBookId.PlaceholderForeColor = System.Drawing.Color.White;
-            this.txtBookId.PlaceholderText = "";
-            this.txtBookId.SelectedText = "";
-            this.txtBookId.Size = new System.Drawing.Size(312, 36);
-            this.txtBookId.TabIndex = 227;
+            this.guna2HtmlLabel5.AutoSize = false;
+            this.guna2HtmlLabel5.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel5.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.guna2HtmlLabel5.Location = new System.Drawing.Point(26, 43);
+            this.guna2HtmlLabel5.Name = "guna2HtmlLabel5";
+            this.guna2HtmlLabel5.Size = new System.Drawing.Size(173, 41);
+            this.guna2HtmlLabel5.TabIndex = 227;
+            this.guna2HtmlLabel5.Text = "Book Id";
             // 
-            // txtCreate
+            // label6
             // 
-            this.txtCreate.BorderColor = System.Drawing.SystemColors.MenuHighlight;
-            this.txtCreate.BorderRadius = 6;
-            this.txtCreate.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtCreate.DefaultText = "";
-            this.txtCreate.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtCreate.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtCreate.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtCreate.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtCreate.Enabled = false;
-            this.txtCreate.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtCreate.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCreate.ForeColor = System.Drawing.Color.Black;
-            this.txtCreate.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtCreate.Location = new System.Drawing.Point(624, 100);
-            this.txtCreate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txtCreate.Name = "txtCreate";
-            this.txtCreate.PasswordChar = '\0';
-            this.txtCreate.PlaceholderForeColor = System.Drawing.Color.White;
-            this.txtCreate.PlaceholderText = "";
-            this.txtCreate.SelectedText = "";
-            this.txtCreate.Size = new System.Drawing.Size(245, 36);
-            this.txtCreate.TabIndex = 233;
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Segoe UI Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.MediumBlue;
+            this.label6.Location = new System.Drawing.Point(543, 131);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(0, 28);
+            this.label6.TabIndex = 36;
             // 
-            // txtUpdate
+            // groupBox3
             // 
-            this.txtUpdate.BorderColor = System.Drawing.SystemColors.MenuHighlight;
-            this.txtUpdate.BorderRadius = 6;
-            this.txtUpdate.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtUpdate.DefaultText = "";
-            this.txtUpdate.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtUpdate.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtUpdate.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtUpdate.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtUpdate.Enabled = false;
-            this.txtUpdate.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtUpdate.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUpdate.ForeColor = System.Drawing.Color.Black;
-            this.txtUpdate.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtUpdate.Location = new System.Drawing.Point(624, 43);
-            this.txtUpdate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txtUpdate.Name = "txtUpdate";
-            this.txtUpdate.PasswordChar = '\0';
-            this.txtUpdate.PlaceholderForeColor = System.Drawing.Color.White;
-            this.txtUpdate.PlaceholderText = "";
-            this.txtUpdate.SelectedText = "";
-            this.txtUpdate.Size = new System.Drawing.Size(245, 36);
-            this.txtUpdate.TabIndex = 234;
-            // 
-            // txtImportAt
-            // 
-            this.txtImportAt.BorderColor = System.Drawing.SystemColors.MenuHighlight;
-            this.txtImportAt.BorderRadius = 6;
-            this.txtImportAt.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtImportAt.DefaultText = "";
-            this.txtImportAt.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtImportAt.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtImportAt.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtImportAt.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtImportAt.Enabled = false;
-            this.txtImportAt.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtImportAt.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtImportAt.ForeColor = System.Drawing.Color.Black;
-            this.txtImportAt.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtImportAt.Location = new System.Drawing.Point(160, 154);
-            this.txtImportAt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txtImportAt.Name = "txtImportAt";
-            this.txtImportAt.PasswordChar = '\0';
-            this.txtImportAt.PlaceholderForeColor = System.Drawing.Color.White;
-            this.txtImportAt.PlaceholderText = "";
-            this.txtImportAt.SelectedText = "";
-            this.txtImportAt.Size = new System.Drawing.Size(312, 43);
-            this.txtImportAt.TabIndex = 235;
-            // 
-            // txtTitle
-            // 
-            this.txtTitle.BorderColor = System.Drawing.SystemColors.MenuHighlight;
-            this.txtTitle.BorderRadius = 6;
-            this.txtTitle.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtTitle.DefaultText = "";
-            this.txtTitle.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtTitle.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtTitle.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtTitle.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtTitle.Enabled = false;
-            this.txtTitle.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtTitle.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTitle.ForeColor = System.Drawing.Color.Black;
-            this.txtTitle.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtTitle.Location = new System.Drawing.Point(222, 100);
-            this.txtTitle.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txtTitle.Name = "txtTitle";
-            this.txtTitle.PasswordChar = '\0';
-            this.txtTitle.PlaceholderForeColor = System.Drawing.Color.White;
-            this.txtTitle.PlaceholderText = "";
-            this.txtTitle.SelectedText = "";
-            this.txtTitle.Size = new System.Drawing.Size(250, 36);
-            this.txtTitle.TabIndex = 236;
-            // 
-            // txtTitleId
-            // 
-            this.txtTitleId.BorderColor = System.Drawing.SystemColors.MenuHighlight;
-            this.txtTitleId.BorderRadius = 6;
-            this.txtTitleId.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtTitleId.DefaultText = "";
-            this.txtTitleId.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtTitleId.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtTitleId.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtTitleId.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtTitleId.Enabled = false;
-            this.txtTitleId.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtTitleId.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTitleId.ForeColor = System.Drawing.Color.Black;
-            this.txtTitleId.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtTitleId.Location = new System.Drawing.Point(160, 100);
-            this.txtTitleId.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txtTitleId.Name = "txtTitleId";
-            this.txtTitleId.PasswordChar = '\0';
-            this.txtTitleId.PlaceholderForeColor = System.Drawing.Color.White;
-            this.txtTitleId.PlaceholderText = "";
-            this.txtTitleId.SelectedText = "";
-            this.txtTitleId.Size = new System.Drawing.Size(54, 36);
-            this.txtTitleId.TabIndex = 237;
-            // 
-            // guna2DateTimePicker1
-            // 
-            this.guna2DateTimePicker1.Location = new System.Drawing.Point(440, 160);
-            this.guna2DateTimePicker1.Name = "guna2DateTimePicker1";
-            this.guna2DateTimePicker1.Size = new System.Drawing.Size(16, 33);
-            this.guna2DateTimePicker1.TabIndex = 235;
-            this.guna2DateTimePicker1.ValueChanged += new System.EventHandler(this.guna2DateTimePicker1_ValueChanged);
-            // 
-            // cbbStatus
-            // 
-            this.cbbStatus.BackColor = System.Drawing.Color.Transparent;
-            this.cbbStatus.BorderColor = System.Drawing.SystemColors.MenuHighlight;
-            this.cbbStatus.BorderRadius = 12;
-            this.cbbStatus.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cbbStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbbStatus.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbbStatus.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbbStatus.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbbStatus.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.cbbStatus.ItemHeight = 30;
-            this.cbbStatus.Items.AddRange(new object[] {
-            "Hư hỏng",
-            "Nguyên vẹn"});
-            this.cbbStatus.Location = new System.Drawing.Point(624, 154);
-            this.cbbStatus.Name = "cbbStatus";
-            this.cbbStatus.Size = new System.Drawing.Size(245, 36);
-            this.cbbStatus.TabIndex = 233;
-            // 
-            // cbbS
-            // 
-            this.cbbS.BackColor = System.Drawing.Color.Transparent;
-            this.cbbS.BorderColor = System.Drawing.SystemColors.MenuHighlight;
-            this.cbbS.BorderRadius = 12;
-            this.cbbS.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cbbS.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbbS.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbbS.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbbS.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbbS.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.cbbS.ItemHeight = 30;
-            this.cbbS.Items.AddRange(new object[] {
-            "All",
-            "Hư hỏng",
-            "Nguyên vẹn"});
-            this.cbbS.Location = new System.Drawing.Point(835, 32);
-            this.cbbS.Name = "cbbS";
-            this.cbbS.Size = new System.Drawing.Size(278, 36);
-            this.cbbS.TabIndex = 238;
-            this.cbbS.Click += new System.EventHandler(this.cbbS_SelectedIndexChanged);
-            // 
-            // guna2GroupBox1
-            // 
-            this.guna2GroupBox1.BorderColor = System.Drawing.Color.White;
-            this.guna2GroupBox1.Controls.Add(this.pictureBox3);
-            this.guna2GroupBox1.CustomBorderThickness = new System.Windows.Forms.Padding(0);
-            this.guna2GroupBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2GroupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.guna2GroupBox1.Location = new System.Drawing.Point(1220, 21);
-            this.guna2GroupBox1.Name = "guna2GroupBox1";
-            this.guna2GroupBox1.Size = new System.Drawing.Size(458, 509);
-            this.guna2GroupBox1.TabIndex = 228;
-            // 
-            // guna2GroupBox2
-            // 
-            this.guna2GroupBox2.BorderColor = System.Drawing.Color.White;
-            this.guna2GroupBox2.Controls.Add(this.pictureBox1);
-            this.guna2GroupBox2.CustomBorderThickness = new System.Windows.Forms.Padding(0);
-            this.guna2GroupBox2.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2GroupBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.guna2GroupBox2.Location = new System.Drawing.Point(3, 12);
-            this.guna2GroupBox2.Name = "guna2GroupBox2";
-            this.guna2GroupBox2.Size = new System.Drawing.Size(370, 154);
-            this.guna2GroupBox2.TabIndex = 229;
-            // 
-            // guna2GroupBox3
-            // 
-            this.guna2GroupBox3.BorderColor = System.Drawing.Color.White;
-            this.guna2GroupBox3.Controls.Add(this.pictureBox2);
-            this.guna2GroupBox3.CustomBorderThickness = new System.Windows.Forms.Padding(0);
-            this.guna2GroupBox3.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2GroupBox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.guna2GroupBox3.Location = new System.Drawing.Point(1032, 21);
-            this.guna2GroupBox3.Name = "guna2GroupBox3";
-            this.guna2GroupBox3.Size = new System.Drawing.Size(202, 154);
-            this.guna2GroupBox3.TabIndex = 230;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox2.Image = global::LibraryManagement.Properties.Resources.Reading_glasses_rafiki;
-            this.pictureBox2.Location = new System.Drawing.Point(14, 9);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(167, 135);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 75;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Image = global::LibraryManagement.Properties.Resources.Reading_glasses_cuate1;
-            this.pictureBox1.Location = new System.Drawing.Point(14, 9);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(352, 135);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 75;
-            this.pictureBox1.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox3.Image = global::LibraryManagement.Properties.Resources.Reading_glasses_pana;
-            this.pictureBox3.Location = new System.Drawing.Point(14, 9);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(440, 495);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 75;
-            this.pictureBox3.TabStop = false;
+            this.groupBox3.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox3.Controls.Add(this.btDel);
+            this.groupBox3.Controls.Add(this.btEdit);
+            this.groupBox3.Controls.Add(this.btNew);
+            this.groupBox3.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox3.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.groupBox3.Location = new System.Drawing.Point(958, 174);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.groupBox3.Size = new System.Drawing.Size(244, 218);
+            this.groupBox3.TabIndex = 46;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Feature";
             // 
             // btDel
             // 
@@ -718,8 +589,22 @@
             this.btNew.PressedColor = System.Drawing.Color.DeepSkyBlue;
             this.btNew.Size = new System.Drawing.Size(197, 51);
             this.btNew.TabIndex = 227;
-            this.btNew.Text = "New";
+            this.btNew.Text = "Add";
             this.btNew.Click += new System.EventHandler(this.btAdd_Click);
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox4.Controls.Add(this.txtSearch);
+            this.groupBox4.Controls.Add(this.cbbS);
+            this.groupBox4.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox4.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.groupBox4.Location = new System.Drawing.Point(53, 422);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(1149, 91);
+            this.groupBox4.TabIndex = 45;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Search";
             // 
             // txtSearch
             // 
@@ -747,6 +632,121 @@
             this.txtSearch.TabIndex = 227;
             this.txtSearch.Click += new System.EventHandler(this.txtS_TextChanged);
             // 
+            // cbbS
+            // 
+            this.cbbS.BackColor = System.Drawing.Color.Transparent;
+            this.cbbS.BorderColor = System.Drawing.SystemColors.MenuHighlight;
+            this.cbbS.BorderRadius = 12;
+            this.cbbS.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbbS.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbS.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbbS.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbbS.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbbS.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.cbbS.ItemHeight = 30;
+            this.cbbS.Items.AddRange(new object[] {
+            "All",
+            "Hư hỏng",
+            "Nguyên vẹn"});
+            this.cbbS.Location = new System.Drawing.Point(835, 32);
+            this.cbbS.Name = "cbbS";
+            this.cbbS.Size = new System.Drawing.Size(278, 36);
+            this.cbbS.TabIndex = 238;
+            this.cbbS.Click += new System.EventHandler(this.cbbS_SelectedIndexChanged);
+            // 
+            // guna2HtmlLabel10
+            // 
+            this.guna2HtmlLabel10.AutoSize = false;
+            this.guna2HtmlLabel10.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel10.Font = new System.Drawing.Font("Times New Roman", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel10.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.guna2HtmlLabel10.Location = new System.Drawing.Point(493, 63);
+            this.guna2HtmlLabel10.Name = "guna2HtmlLabel10";
+            this.guna2HtmlLabel10.Size = new System.Drawing.Size(395, 49);
+            this.guna2HtmlLabel10.TabIndex = 226;
+            this.guna2HtmlLabel10.Text = "Book Information";
+            // 
+            // guna2GroupBox1
+            // 
+            this.guna2GroupBox1.BorderColor = System.Drawing.Color.White;
+            this.guna2GroupBox1.Controls.Add(this.pictureBox3);
+            this.guna2GroupBox1.CustomBorderThickness = new System.Windows.Forms.Padding(0);
+            this.guna2GroupBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2GroupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.guna2GroupBox1.Location = new System.Drawing.Point(1220, 21);
+            this.guna2GroupBox1.Name = "guna2GroupBox1";
+            this.guna2GroupBox1.Size = new System.Drawing.Size(458, 509);
+            this.guna2GroupBox1.TabIndex = 228;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox3.Image = global::LibraryManagement.Properties.Resources.Reading_glasses_pana;
+            this.pictureBox3.Location = new System.Drawing.Point(14, 9);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(440, 495);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 75;
+            this.pictureBox3.TabStop = false;
+            // 
+            // guna2GroupBox2
+            // 
+            this.guna2GroupBox2.BorderColor = System.Drawing.Color.White;
+            this.guna2GroupBox2.Controls.Add(this.pictureBox1);
+            this.guna2GroupBox2.CustomBorderThickness = new System.Windows.Forms.Padding(0);
+            this.guna2GroupBox2.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2GroupBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.guna2GroupBox2.Location = new System.Drawing.Point(3, 12);
+            this.guna2GroupBox2.Name = "guna2GroupBox2";
+            this.guna2GroupBox2.Size = new System.Drawing.Size(370, 154);
+            this.guna2GroupBox2.TabIndex = 229;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Image = global::LibraryManagement.Properties.Resources.Reading_glasses_cuate1;
+            this.pictureBox1.Location = new System.Drawing.Point(14, 9);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(352, 135);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 75;
+            this.pictureBox1.TabStop = false;
+            // 
+            // guna2GroupBox3
+            // 
+            this.guna2GroupBox3.BorderColor = System.Drawing.Color.White;
+            this.guna2GroupBox3.Controls.Add(this.pictureBox2);
+            this.guna2GroupBox3.CustomBorderThickness = new System.Windows.Forms.Padding(0);
+            this.guna2GroupBox3.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2GroupBox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.guna2GroupBox3.Location = new System.Drawing.Point(1032, 21);
+            this.guna2GroupBox3.Name = "guna2GroupBox3";
+            this.guna2GroupBox3.Size = new System.Drawing.Size(202, 154);
+            this.guna2GroupBox3.TabIndex = 230;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox2.Image = global::LibraryManagement.Properties.Resources.Reading_glasses_rafiki;
+            this.pictureBox2.Location = new System.Drawing.Point(14, 9);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(167, 135);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 75;
+            this.pictureBox2.TabStop = false;
+            // 
             // UC_Books
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -771,11 +771,11 @@
             this.groupBox3.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);
             this.guna2GroupBox1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.guna2GroupBox2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.guna2GroupBox3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
 
         }

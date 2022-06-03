@@ -13,8 +13,10 @@ namespace LibraryManagement
 {
     public partial class UC_ReaderStatistical : UserControl
     {
-        public UC_ReaderStatistical()
+        FormMain formMain;
+        public UC_ReaderStatistical(FormMain _formMain)
         {
+            formMain = _formMain;
             InitializeComponent();
             //CbbYear.Text = "2022";
             MonthChart(ReadersBLL.Instance.GetYear(DateTime.Now.ToString()));
@@ -45,6 +47,11 @@ namespace LibraryManagement
         {
             
             MonthChart(int.Parse(CbbYear.Text));
+        }
+
+        private void btBookStatis_Click(object sender, EventArgs e)
+        {
+            formMain.AddUC_BookStatis_Panel1();
         }
     }
 }
