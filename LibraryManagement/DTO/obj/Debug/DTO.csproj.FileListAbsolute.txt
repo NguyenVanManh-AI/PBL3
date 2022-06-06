@@ -1,0 +1,42 @@
+C:\Users\LENOVO\Documents\HK4\PBL3\G8CINESTAR\MOVIE MANAGEMENT\DTO\bin\Debug\DTO.dll
+C:\Users\LENOVO\Documents\HK4\PBL3\G8CINESTAR\MOVIE MANAGEMENT\DTO\bin\Debug\DTO.pdb
+C:\Users\LENOVO\Documents\HK4\PBL3\G8CINESTAR\MOVIE MANAGEMENT\DTO\obj\Debug\DTO.csproj.AssemblyReference.cache
+C:\Users\LENOVO\Documents\HK4\PBL3\G8CINESTAR\MOVIE MANAGEMENT\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
+C:\Users\LENOVO\Documents\HK4\PBL3\G8CINESTAR\MOVIE MANAGEMENT\DTO\obj\Debug\DTO.dll
+C:\Users\LENOVO\Documents\HK4\PBL3\G8CINESTAR\MOVIE MANAGEMENT\DTO\obj\Debug\DTO.pdb
+C:\Users\LENOVO\Downloads\MOVIE MANAGEMENT (2)\MOVIE MANAGEMENT\DTO\bin\Debug\DTO.dll
+C:\Users\LENOVO\Downloads\MOVIE MANAGEMENT (2)\MOVIE MANAGEMENT\DTO\bin\Debug\DTO.pdb
+C:\Users\LENOVO\Downloads\MOVIE MANAGEMENT (2)\MOVIE MANAGEMENT\DTO\obj\Debug\DTO.csproj.AssemblyReference.cache
+C:\Users\LENOVO\Downloads\MOVIE MANAGEMENT (2)\MOVIE MANAGEMENT\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
+C:\Users\LENOVO\Downloads\MOVIE MANAGEMENT (2)\MOVIE MANAGEMENT\DTO\obj\Debug\DTO.dll
+C:\Users\LENOVO\Downloads\MOVIE MANAGEMENT (2)\MOVIE MANAGEMENT\DTO\obj\Debug\DTO.pdb
+C:\Users\LENOVO\Documents\HK4\PBL3\G8CINESTAR\G8CINESTAR\MOVIE MANAGEMENT\DTO\bin\Debug\DTO.dll
+C:\Users\LENOVO\Documents\HK4\PBL3\G8CINESTAR\G8CINESTAR\MOVIE MANAGEMENT\DTO\bin\Debug\DTO.pdb
+C:\Users\LENOVO\Documents\HK4\PBL3\G8CINESTAR\G8CINESTAR\MOVIE MANAGEMENT\DTO\obj\Debug\DTO.csproj.AssemblyReference.cache
+C:\Users\LENOVO\Documents\HK4\PBL3\G8CINESTAR\G8CINESTAR\MOVIE MANAGEMENT\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
+C:\Users\LENOVO\Documents\HK4\PBL3\G8CINESTAR\G8CINESTAR\MOVIE MANAGEMENT\DTO\obj\Debug\DTO.dll
+C:\Users\LENOVO\Documents\HK4\PBL3\G8CINESTAR\G8CINESTAR\MOVIE MANAGEMENT\DTO\obj\Debug\DTO.pdb
+C:\Users\LENOVO\Desktop\pbl3\G8CINESTAR\MOVIE MANAGEMENT\DTO\bin\Debug\DTO.dll
+C:\Users\LENOVO\Desktop\pbl3\G8CINESTAR\MOVIE MANAGEMENT\DTO\bin\Debug\DTO.pdb
+C:\Users\LENOVO\Desktop\pbl3\G8CINESTAR\MOVIE MANAGEMENT\DTO\obj\Debug\DTO.csproj.AssemblyReference.cache
+C:\Users\LENOVO\Desktop\pbl3\G8CINESTAR\MOVIE MANAGEMENT\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
+C:\Users\LENOVO\Desktop\pbl3\G8CINESTAR\MOVIE MANAGEMENT\DTO\obj\Debug\DTO.dll
+C:\Users\LENOVO\Desktop\pbl3\G8CINESTAR\MOVIE MANAGEMENT\DTO\obj\Debug\DTO.pdb
+C:\Users\LAPTOP KIM ANH\Downloads\New folder\CP\G8CINESTAR-main\MOVIE MANAGEMENT\DTO\bin\Debug\DTO.dll
+C:\Users\LAPTOP KIM ANH\Downloads\New folder\CP\G8CINESTAR-main\MOVIE MANAGEMENT\DTO\bin\Debug\DTO.pdb
+C:\Users\LAPTOP KIM ANH\Downloads\New folder\CP\G8CINESTAR-main\MOVIE MANAGEMENT\DTO\obj\Debug\DTO.csproj.AssemblyReference.cache
+C:\Users\LAPTOP KIM ANH\Downloads\New folder\CP\G8CINESTAR-main\MOVIE MANAGEMENT\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
+C:\Users\LAPTOP KIM ANH\Downloads\New folder\CP\G8CINESTAR-main\MOVIE MANAGEMENT\DTO\obj\Debug\DTO.dll
+C:\Users\LAPTOP KIM ANH\Downloads\New folder\CP\G8CINESTAR-main\MOVIE MANAGEMENT\DTO\obj\Debug\DTO.pdb
+C:\Users\LAPTOP KIM ANH\source\repos\LibraryManagement\DTO\bin\Debug\DTO.dll
+C:\Users\LAPTOP KIM ANH\source\repos\LibraryManagement\DTO\bin\Debug\DTO.pdb
+C:\Users\LAPTOP KIM ANH\source\repos\LibraryManagement\DTO\obj\Debug\DTO.csproj.AssemblyReference.cache
+C:\Users\LAPTOP KIM ANH\source\repos\LibraryManagement\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
+C:\Users\LAPTOP KIM ANH\source\repos\LibraryManagement\DTO\obj\Debug\DTO.dll
+C:\Users\LAPTOP KIM ANH\source\repos\LibraryManagement\DTO\obj\Debug\DTO.pdb
+C:\GIT\PBL3\LibraryManagement\DTO\bin\Debug\DTO.dll
+C:\GIT\PBL3\LibraryManagement\DTO\bin\Debug\DTO.pdb
+C:\GIT\PBL3\LibraryManagement\DTO\obj\Debug\DTO.csproj.AssemblyReference.cache
+C:\GIT\PBL3\LibraryManagement\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
+C:\GIT\PBL3\LibraryManagement\DTO\obj\Debug\DTO.dll
+C:\GIT\PBL3\LibraryManagement\DTO\obj\Debug\DTO.pdb

@@ -1,0 +1,9 @@
+C:\Users\LAPTOP KIM ANH\source\repos\LibraryManagement\DAL\bin\Release\DAL.dll
+C:\Users\LAPTOP KIM ANH\source\repos\LibraryManagement\DAL\bin\Release\DAL.pdb
+C:\Users\LAPTOP KIM ANH\source\repos\LibraryManagement\DAL\bin\Release\DTO.dll
+C:\Users\LAPTOP KIM ANH\source\repos\LibraryManagement\DAL\bin\Release\DTO.pdb
+C:\Users\LAPTOP KIM ANH\source\repos\LibraryManagement\DAL\obj\Release\DAL.csproj.AssemblyReference.cache
+C:\Users\LAPTOP KIM ANH\source\repos\LibraryManagement\DAL\obj\Release\DAL.csproj.CoreCompileInputs.cache
+C:\Users\LAPTOP KIM ANH\source\repos\LibraryManagement\DAL\obj\Release\DAL.csproj.CopyComplete
+C:\Users\LAPTOP KIM ANH\source\repos\LibraryManagement\DAL\obj\Release\DAL.dll
+C:\Users\LAPTOP KIM ANH\source\repos\LibraryManagement\DAL\obj\Release\DAL.pdb
