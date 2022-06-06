@@ -1,0 +1,6 @@
+C:\Users\LAPTOP KIM ANH\source\repos\LibraryManagement\DTO\bin\Release\DTO.dll
+C:\Users\LAPTOP KIM ANH\source\repos\LibraryManagement\DTO\bin\Release\DTO.pdb
+C:\Users\LAPTOP KIM ANH\source\repos\LibraryManagement\DTO\obj\Release\DTO.csproj.AssemblyReference.cache
+C:\Users\LAPTOP KIM ANH\source\repos\LibraryManagement\DTO\obj\Release\DTO.csproj.CoreCompileInputs.cache
+C:\Users\LAPTOP KIM ANH\source\repos\LibraryManagement\DTO\obj\Release\DTO.dll
+C:\Users\LAPTOP KIM ANH\source\repos\LibraryManagement\DTO\obj\Release\DTO.pdb
