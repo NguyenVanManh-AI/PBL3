@@ -32,7 +32,7 @@ namespace DAL
                                                      + " left outer join authors as au on btt.author_id = au.id) as t1"
                                                      + " on b.book_title_id = t1.id) as t2 on brrdt.book_id = t2.id";
 
-        const string sql_book = "select b.id,t1.title,t1.publication_date,t1.name_category,t1.name_publisher,t1.address,t1.country,t1.first_name,t1.last_name from books as b"
+        const string sql_book = "select b.id,t1.title as title ,t1.publication_date,t1.name_category,t1.name_publisher,t1.address,t1.country,t1.first_name,t1.last_name from books as b"
                       + " left join (select btt.id, btt.title, btt.publication_date, ca.name as name_category ,pu.name as name_publisher,pu.address,pu.country ,au.first_name,au.last_name from book_titles as btt"
                       + " left outer join categorys as ca on btt.category_id = ca.id"
                       + " left outer join publishers as pu on btt.publisher_id = pu.id"
@@ -42,7 +42,7 @@ namespace DAL
                       + " left join"
                       + " (select* from borrow_details where return_at is not null) as t2"
                       + " on t1.book_id = t2.book_id"
-                      + " where t1.return_at is null)";
+                      + " where t1.return_at is null )  and title is not null ";
 
         public DataTable LoadAllBorrowDetails(string id_borrow)
         {

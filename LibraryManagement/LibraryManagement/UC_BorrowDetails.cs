@@ -136,24 +136,33 @@ namespace LibraryManagement
         {
             try
             {
-                BorrowDetails bor = new BorrowDetails(Int32.Parse(id_borrow), Int32.Parse(txtId_Book.Text), txtBook_Title.Text);
-                if (BorrowDetailsBLL.Instance.EditBorrowDetails(txtId_Borrow_Detail.Text,bor, txtBorrow_At.Text,txtReturn_At.Text) == "true")
+                if(txtId_Borrow_Detail.Text != "")
                 {
-                    FormMessageBoxSuccess formMessageBoxSuccess = new FormMessageBoxSuccess("Edit Success !");
-                    formMessageBoxSuccess.Show();
-                    ReSet_txt();
-                }
-                else if (BorrowDetailsBLL.Instance.EditBorrowDetails(txtId_Borrow_Detail.Text, bor, txtBorrow_At.Text, txtReturn_At.Text) == "false")
-                {
-                    FormMessageBoxError formMessageBoxError = new FormMessageBoxError("Error !!!");
-                    formMessageBoxError.Show();
+                    BorrowDetails bor = new BorrowDetails(Int32.Parse(id_borrow), Int32.Parse(txtId_Book.Text), txtBook_Title.Text);
+                    if (BorrowDetailsBLL.Instance.EditBorrowDetails(txtId_Borrow_Detail.Text, bor, txtBorrow_At.Text, txtReturn_At.Text) == "true")
+                    {
+                        FormMessageBoxSuccess formMessageBoxSuccess = new FormMessageBoxSuccess("Edit Success !");
+                        formMessageBoxSuccess.Show();
+                        ReSet_txt();
+                    }
+                    else if (BorrowDetailsBLL.Instance.EditBorrowDetails(txtId_Borrow_Detail.Text, bor, txtBorrow_At.Text, txtReturn_At.Text) == "false")
+                    {
+                        FormMessageBoxError formMessageBoxError = new FormMessageBoxError("Error !!!");
+                        formMessageBoxError.Show();
+                    }
+                    else
+                    {
+                        FormMeessageBox formMeessageBox = new FormMeessageBox(BorrowDetailsBLL.
+                            Instance.EditBorrowDetails(txtId_Borrow_Detail.Text, bor, txtBorrow_At.Text, txtReturn_At.Text));
+                        formMeessageBox.Show();
+                    }
                 }
                 else
                 {
-                    FormMeessageBox formMeessageBox = new FormMeessageBox(BorrowDetailsBLL.
-                        Instance.EditBorrowDetails(txtId_Borrow_Detail.Text, bor, txtBorrow_At.Text, txtReturn_At.Text));
+                    FormMeessageBox formMeessageBox = new FormMeessageBox("Please select a Borrow Details to Edit !!!");
                     formMeessageBox.Show();
                 }
+                
             }
             catch
             {
@@ -212,7 +221,7 @@ namespace LibraryManagement
             txtBorrow_At.Text = "";
             txtReturn_At.Text = "";
             txtSearch.Text = "";
-            comboBox1.Text = "Borrows";
+            comboBox1.Text = "Borrow Details";
             dataGridView1.DataSource = BorrowDetailsBLL.Instance.LoadAllBorrowDetails(id_borrow);
             dataGridView2.DataSource = BorrowDetailsBLL.Instance.LoadAllBooks();
             dataGridView1.Show();

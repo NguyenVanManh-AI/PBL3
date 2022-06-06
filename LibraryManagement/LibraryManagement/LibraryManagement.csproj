@@ -141,6 +141,12 @@
       <DependentUpon>FormWrongAccount.cs</DependentUpon>
     </Compile>
     <Compile Include="SqlServerTypes\Loader.cs" />
+    <Compile Include="UC_AboutUs.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_AboutUs.Designer.cs">
+      <DependentUpon>UC_AboutUs.cs</DependentUpon>
+    </Compile>
     <Compile Include="UC_Books.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -251,6 +257,9 @@
     <EmbeddedResource Include="FormWrongAccount.resx">
       <DependentUpon>FormWrongAccount.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UC_AboutUs.resx">
+      <DependentUpon>UC_AboutUs.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UC_Authors.resx">
       <DependentUpon>UC_Authors.cs</DependentUpon>
     </EmbeddedResource>
@@ -316,6 +325,15 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\103177_see_watch_view_eye_icon.png" />
+    <None Include="Resources\About us page-rafiki.png" />
+    <None Include="Resources\About us page-bro.png" />
+    <None Include="Resources\About us page-bro1.png" />
+    <None Include="Resources\z3470221285210_024ec077059b75187e6c0254aeb50118.jpg" />
+    <None Include="Resources\279901402_1366100040552527_1840782508522116131_n.jpg" />
+    <None Include="Resources\z3469432908785_4970b0a6bc77498c6bd777ea71677c68.jpg" />
+    <None Include="Resources\273218008_1210215113136703_9008351748464924341_n.jpg" />
+    <None Include="Resources\About us page-cuate.png" />
+    <None Include="Resources\276171199_1386682155109366_907830777075269427_n.jpg" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

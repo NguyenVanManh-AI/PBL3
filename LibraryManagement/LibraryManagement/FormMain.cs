@@ -251,7 +251,7 @@ namespace LibraryManagement
         {
             if (EmployeesBLL.Instance.CheckRole(username) == "admin")
             {
-                UC_ManagementEmployees uC_ManagementEmployees = new UC_ManagementEmployees();
+                UC_ManagementEmployees uC_ManagementEmployees = new UC_ManagementEmployees(this);
                 AddUCPanel1(uC_ManagementEmployees);
                 ShowPanel1();
             }
@@ -259,6 +259,14 @@ namespace LibraryManagement
             {
                 FormMeessageBox formMeessageBox = new FormMeessageBox("Sorry , This feature is only for admins !");
                 formMeessageBox.Show();
+            }
+        }
+
+        public void ChangeUsername(string _username,string _new_username)
+        {
+            if (_username == username)
+            {
+                username = _new_username;
             }
         }
 
@@ -290,5 +298,11 @@ namespace LibraryManagement
             ShowPanel1();
         }
 
+        private void btnAboutUs_Click(object sender, EventArgs e)
+        {
+            UC_AboutUs uC_AboutUs = new UC_AboutUs();
+            AddUCPanel1(uC_AboutUs);
+            ShowPanel1();
+        }
     }
 }

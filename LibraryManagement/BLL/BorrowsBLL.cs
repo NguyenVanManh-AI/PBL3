@@ -57,12 +57,19 @@ namespace BLL
             
         }
         
+        public bool CheckNotReturnList(int id_borrow)
+        {
+            if (Int32.Parse(BorrowsDAL.Instance.CheckNotReturnList(id_borrow)) > 0) return false;
+            else return true;
+        }
         public string DeleteBorrows(int id_borrow)
         {
             try
             {
                 if (id_borrow.ToString() == "")
                     return "Please select a Borrow !!!";
+                else if (!CheckNotReturnList(id_borrow))
+                    return "You can't delete the loan slip because there are some unpaid books !!!";
                 else if (BorrowsDAL.Instance.DeleteBorrows(id_borrow))
                     return "true";
                 else

@@ -35,11 +35,15 @@ namespace BLL
         }
         public string AddBook(Books b)
         {
+            //if (!CheckDate(b.imported_at.ToString())) return "Incorrect Imported Date format!!";
+            if (!ExceedDate(b.imported_at.ToString())) return "Exceed the current date !!!";
             BooksDAL.Instance.AddBook(b);
             return "OK";
         }
         public string EditBook(Books b, string id) 
         {
+            //if (!CheckDate(b.imported_at.ToString())) return "Incorrect Imported Date format!!";
+            if (!ExceedDate(b.imported_at.ToString())) return "Exceed the current date !!!";
             BooksDAL.Instance.EditBook(b, id);
             return "OK";
         }

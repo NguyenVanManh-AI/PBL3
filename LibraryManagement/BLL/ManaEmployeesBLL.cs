@@ -32,13 +32,17 @@ namespace BLL
         {
             if (em.first_name == "")
                 return "First Name cannot be blank !!!";
+            else if (!CheckName(em.first_name))
+                return "Incorrect First Name format !!!";
+            else if (em.last_name != "" && !CheckName(em.last_name))
+                return "Incorrect Last Name fomat !!!";
             else if (!CheckPhoneNumber(em.phone))
                 return "Invalid phone number !!!";
             else if (!CheckUsernamePass(em.username))
                 return "Username minimum 10 characters and maximum 24 characters including letters and numbers !!!";
             else if (em.email == "")
                 return "Email cannot be blank !!!";
-            else if (!CheckEmail(em.email))
+            else if (!CheckEmail2(em.email))
                 return "Invalid Email !!!";
             else if (getIdByUsername(em.username) != "" && getIdByUsername(em.username) != em.id.ToString())
                 return "Username already exists !!!";

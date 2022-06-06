@@ -35,9 +35,11 @@ namespace BLL
             if (r.phone == "") return "Phone Number cann't be left blank!";
             if (hasSpecialChar(r.first_name)) return "First Name cann't contain special char!";
             if (hasSpecialChar(r.last_name)) return "Last Name cann't contain special char or number!";
-            if (CheckEmail(r.email) && r.email!="") return "Invalid Email!";
+            if (!CheckEmail2(r.email) && r.email !="") return "Invalid Email!";
             if (CheckPhone(r.phone)) return "Phone Number only contain number!";
             if (r.phone.Length != 10) return "Phone Number must contain 10 number ";
+            //if (!CheckDate(r.date_of_birth.ToString())) return "Incorrect Date Of Birth format!!";
+            if (!ExceedDate(r.date_of_birth.ToString())) return "Exceed the current date !!!";
             ReadersDAL.Instance.AddReader(r);
             return "OK";
         }
@@ -47,9 +49,11 @@ namespace BLL
             if (r.phone == "") return "Phone Number cann't be left blank!";
             if (hasSpecialChar(r.first_name)) return "First Name cann't contain special char!";
             if (hasSpecialChar(r.last_name) && r.last_name != "") return "Last Name cann't contain special char or number!";
-            if (!CheckEmail(r.email) && r.email != "") return "Invalid Email!";
+            if (!CheckEmail2(r.email) && r.email != "") return "Invalid Email!";
             if (CheckPhone(r.phone)) return "Phone Number only contain number!";
             if (r.phone.Length != 10) return "Phone Number must contain 10 number ";
+            //if (!CheckDate(r.date_of_birth.ToString())) return "Incorrect Date Of Birth format!!";
+            if (!ExceedDate(r.date_of_birth.ToString())) return "Exceed the current date !!!";
             ReadersDAL.Instance.EditReader(r,id);
             return "OK";
         }

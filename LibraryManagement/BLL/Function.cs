@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace BLL
@@ -33,13 +34,42 @@ namespace BLL
 
         public bool ExceedDate(string DateInput)
         {
-            DateInput = SaveDate(DateInput);
+            //DateInput = SaveDate(DateInput);
             DateTime Date_input = Convert.ToDateTime(DateInput);
-            string DateNow = DateTime.Now.Month.ToString().PadLeft(2, '0') + "/" + DateTime.Now.Day.ToString().PadLeft(2, '0')
+            string datetime = DateTime.Now.ToString();
+            DateTime Date_now;
+            if (datetime.Contains("CH") || datetime.Contains("SA"))
+            {
+                string DateNow = DateTime.Now.Day.ToString().PadLeft(2, '0') + "/" + DateTime.Now.Month.ToString().PadLeft(2, '0')
                 + "/" + DateTime.Now.Year.ToString();
-            DateTime Date_now = Convert.ToDateTime(DateNow);
+                Date_now = Convert.ToDateTime(DateNow);
+            }
+            else
+            {
+                string DateNow = DateTime.Now.Month.ToString().PadLeft(2, '0') + "/" + DateTime.Now.Day.ToString().PadLeft(2, '0')
+                + "/" + DateTime.Now.Year.ToString();
+                Date_now = Convert.ToDateTime(DateNow);
+            }
+
             if (Date_input > Date_now) return false;
             else return true;
+        }
+
+        public string Date_Now_Return()
+        {
+            string datetime = DateTime.Now.ToString();
+            string DateNow_Return;
+            if (datetime.Contains("CH") || datetime.Contains("SA"))
+            {
+                DateNow_Return = DateTime.Now.Day.ToString().PadLeft(2, '0') + "/" + DateTime.Now.Month.ToString().PadLeft(2, '0')
+                + "/" + DateTime.Now.Year.ToString();
+            }
+            else
+            {
+                DateNow_Return = DateTime.Now.Month.ToString().PadLeft(2, '0') + "/" + DateTime.Now.Day.ToString().PadLeft(2, '0')
+                + "/" + DateTime.Now.Year.ToString();
+            }
+            return DateNow_Return;
         }
 
         public string ShowDate(string dateTime)
@@ -51,7 +81,7 @@ namespace BLL
 
         public string FullDayMonth(string Date)
         {
-            if(Date != "")
+            if (Date != "")
             {
                 string[] arrListStr = Date.Split('/');
                 string one = arrListStr[0];
@@ -71,13 +101,13 @@ namespace BLL
 
             if (datetime.Contains("CH") || datetime.Contains("SA"))
             {
-                try
-                {
-                    DateTime fromDateValue;
-                    var formats = new[] { "dd/MM/yyyy" };
-                    return DateTime.TryParseExact(FullDayMonth(Date), formats, System.Globalization.CultureInfo.InvariantCulture, System.Globalization.DateTimeStyles.None, out fromDateValue);
-                }
-                catch { return false; }
+                //try
+                //{
+                DateTime fromDateValue;
+                var formats = new[] { "dd/MM/yyyy" };
+                return DateTime.TryParseExact(FullDayMonth(Date), formats, System.Globalization.CultureInfo.InvariantCulture, System.Globalization.DateTimeStyles.None, out fromDateValue);
+                //}
+                //catch { return false; }
             }
             else
             {
@@ -105,7 +135,7 @@ namespace BLL
             }
             return Date;
         }
-        public  bool hasSpecialChar(string input)
+        public bool hasSpecialChar(string input)
         {
             string specialChar = @"~!@#$%^&*()_+`1234567890-=[]\{}|;':,./<>?";
             foreach (char item in specialChar)
@@ -154,6 +184,19 @@ namespace BLL
             string[] str1 = str[0].Split('/');
             return int.Parse(str1[2]);
         }
+        public bool CheckEmail2(string email)
+        {
+            if (email.Contains("@")) return true;
+            return false;
+        }
+        public bool CheckPhoneNumber(string phoneNumber)
+        {
+            return Regex.IsMatch(phoneNumber, "^[0-9]{9,11}$");
+        }
 
+        public bool CheckName(string un)
+        {
+            return Regex.IsMatch(un, @"^[A-ZÀÁẠẢÃÂẦẤẬẨẪĂẰẮẶẲẴÈÉẸẺẼÊỀẾỆỂỄÌÍỊỈĨÒÓỌỎÕÔỒỐỘỔỖƠỜỚỢỞỠÙÚỤỦŨƯỪỨỰỬỮỲÝỴỶỸĐ][a-zàáạảãâầấậẩẫăằắặẳẵèéẹẻẽêềếệểễìíịỉĩòóọỏõôồốộổỗơờớợởỡùúụủũưừứựửữỳýỵỷỹđ]*(?:[ ][A-ZÀÁẠẢÃÂẦẤẬẨẪĂẰẮẶẲẴÈÉẸẺẼÊỀẾỆỂỄÌÍỊỈĨÒÓỌỎÕÔỒỐỘỔỖƠỜỚỢỞỠÙÚỤỦŨƯỪỨỰỬỮỲÝỴỶỸĐ][a-zàáạảãâầấậẩẫăằắặẳẵèéẹẻẽêềếệểễìíịỉĩòóọỏõôồốộổỗơờớợởỡùúụủũưừứựửữỳýỵỷỹđ]*)*$");
+        }
     }
 }

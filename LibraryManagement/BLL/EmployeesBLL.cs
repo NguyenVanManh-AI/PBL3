@@ -155,13 +155,6 @@ namespace BLL
             return EmployeesDAL.Instance.LoadInforEmployee(username);
         }
 
-        
-
-        public bool CheckPhoneNumber(string phoneNumber)
-        {
-            return Regex.IsMatch(phoneNumber, "^[0-9]{9,11}$");
-        }
-
         public bool VerifyEmail(string emailVerify) // kiểm tra tồn tại email  // k dùng hàm này vì lack 
         {
             using (WebClient webclient = new WebClient())
@@ -199,6 +192,10 @@ namespace BLL
         {
             if (first_name == "")
                 return "First Name cannot be blank !!!";
+            else if (!CheckName(first_name))
+                return "Incorrect First Name format !!!";
+            else if (last_name != "" && !CheckName(last_name))
+                return "Incorrect Last Name fomat !!!";
             else if (!CheckPhoneNumber(phone))
                 return "Invalid phone number !!!";
             else if (email == "")
@@ -207,7 +204,7 @@ namespace BLL
             //    return "Email not found !!!"; 
             //else if (!CheckEmailExist(email)) // => lack computer 
             //    return "Email not found !!!";  
-            else if (!CheckEmail(email))
+            else if (!CheckEmail2(email))
                 return "Invalid Email !!!";
             else if (address == "")
                 return "Address cannot be blank !!!";

@@ -97,3 +97,21 @@ C:\Users\LAPTOP KIM ANH\Downloads\Kì 4\PBL 3 CN phần mềm\PBL3\PBL3\LibraryM
 C:\Users\LAPTOP KIM ANH\Downloads\Kì 4\PBL 3 CN phần mềm\PBL3\PBL3\LibraryManagement\DAL\obj\Debug\DAL.csproj.CopyComplete
 C:\Users\LAPTOP KIM ANH\Downloads\Kì 4\PBL 3 CN phần mềm\PBL3\PBL3\LibraryManagement\DAL\obj\Debug\DAL.dll
 C:\Users\LAPTOP KIM ANH\Downloads\Kì 4\PBL 3 CN phần mềm\PBL3\PBL3\LibraryManagement\DAL\obj\Debug\DAL.pdb
+C:\GIT\PBL3\LibraryManagement\DAL\bin\Debug\DAL.dll
+C:\GIT\PBL3\LibraryManagement\DAL\bin\Debug\DAL.pdb
+C:\GIT\PBL3\LibraryManagement\DAL\bin\Debug\DTO.dll
+C:\GIT\PBL3\LibraryManagement\DAL\bin\Debug\DTO.pdb
+C:\GIT\PBL3\LibraryManagement\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
+C:\GIT\PBL3\LibraryManagement\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+C:\GIT\PBL3\LibraryManagement\DAL\obj\Debug\DAL.csproj.CopyComplete
+C:\GIT\PBL3\LibraryManagement\DAL\obj\Debug\DAL.dll
+C:\GIT\PBL3\LibraryManagement\DAL\obj\Debug\DAL.pdb
+C:\Users\LAPTOP KIM ANH\source\repos\LibraryManagement\LibraryManagement\DAL\bin\Debug\DAL.dll
+C:\Users\LAPTOP KIM ANH\source\repos\LibraryManagement\LibraryManagement\DAL\bin\Debug\DAL.pdb
+C:\Users\LAPTOP KIM ANH\source\repos\LibraryManagement\LibraryManagement\DAL\bin\Debug\DTO.dll
+C:\Users\LAPTOP KIM ANH\source\repos\LibraryManagement\LibraryManagement\DAL\bin\Debug\DTO.pdb
+C:\Users\LAPTOP KIM ANH\source\repos\LibraryManagement\LibraryManagement\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
+C:\Users\LAPTOP KIM ANH\source\repos\LibraryManagement\LibraryManagement\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+C:\Users\LAPTOP KIM ANH\source\repos\LibraryManagement\LibraryManagement\DAL\obj\Debug\DAL.csproj.CopyComplete
+C:\Users\LAPTOP KIM ANH\source\repos\LibraryManagement\LibraryManagement\DAL\obj\Debug\DAL.dll
+C:\Users\LAPTOP KIM ANH\source\repos\LibraryManagement\LibraryManagement\DAL\obj\Debug\DAL.pdb

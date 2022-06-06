@@ -29,12 +29,14 @@ namespace BLL
         {
             if (au.first_name == "") return "First Name cann't be left blank!";
             if (hasSpecialChar(au.first_name)) return "First Name cann't contain special char!";
+            if (hasSpecialChar(au.last_name) && au.last_name != "") return "Last Name cann't contain special char!";
             AuthorsDAL.Instance.AddAuthors(au);
             return "OK";
         }
         public string EditAuthors(Authors au, string id)
         {   if (au.first_name == "") return "First Name cann't be left blank!";
             if (hasSpecialChar(au.first_name)) return "First Name cann't contain special char!";
+            if(hasSpecialChar(au.last_name) && au.last_name != "") return "Last Name cann't contain special char!";
             AuthorsDAL.Instance.EditAuthors(au, id);
             return "OK";
         }

@@ -157,23 +157,31 @@ namespace LibraryManagement
         {
             try
             {
-                if (MessageBox.Show("Are you sure to delete borrow information " + txtBorrow_id.Text.ToUpper(), "Delete Notice", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == DialogResult.OK)
+                if(txtBorrow_id.Text == "")
                 {
-                    if (BorrowsBLL.Instance.DeleteBorrows(Int32.Parse(txtBorrow_id.Text)) == "true")
+                    FormMeessageBox formMeessageBox = new FormMeessageBox("Please select a Borrow to delete !!!");
+                    formMeessageBox.Show();
+                }
+                else
+                {
+                    if (MessageBox.Show("Are you sure to delete borrow information " + txtBorrow_id.Text.ToUpper(), "Delete Notice", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == DialogResult.OK)
                     {
-                        FormMessageBoxSuccess formMessageBoxSuccess = new FormMessageBoxSuccess("Delete Success !");
-                        formMessageBoxSuccess.Show();
-                        ReSet_txt();
-                    }
-                    else if (BorrowsBLL.Instance.DeleteBorrows(Int32.Parse(txtBorrow_id.Text)) == "false")
-                    {
-                        FormMessageBoxError formMessageBoxError = new FormMessageBoxError("Error !!!");
-                        formMessageBoxError.Show();
-                    }
-                    else
-                    {
-                        FormMeessageBox formMeessageBox = new FormMeessageBox(BorrowsBLL.Instance.DeleteBorrows(Int32.Parse(txtBorrow_id.Text)));
-                        formMeessageBox.Show();
+                        if (BorrowsBLL.Instance.DeleteBorrows(Int32.Parse(txtBorrow_id.Text)) == "true")
+                        {
+                            FormMessageBoxSuccess formMessageBoxSuccess = new FormMessageBoxSuccess("Delete Success !");
+                            formMessageBoxSuccess.Show();
+                            ReSet_txt();
+                        }
+                        else if (BorrowsBLL.Instance.DeleteBorrows(Int32.Parse(txtBorrow_id.Text)) == "false")
+                        {
+                            FormMessageBoxError formMessageBoxError = new FormMessageBoxError("Error !!!");
+                            formMessageBoxError.Show();
+                        }
+                        else
+                        {
+                            FormMeessageBox formMeessageBox = new FormMeessageBox(BorrowsBLL.Instance.DeleteBorrows(Int32.Parse(txtBorrow_id.Text)));
+                            formMeessageBox.Show();
+                        }
                     }
                 }
             }

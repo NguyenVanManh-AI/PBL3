@@ -36,7 +36,7 @@ namespace DAL
         public void EditTitle(BookTitles btt, string id)
         {
             //return "update book_titles set title =N'" + btt.title + "',author_id=" + ChangeInt(btt.author_id) + ",category_id=" + ChangeInt(btt.category_id) + ",publisher_id=" + ChangeInt(btt.publisher_id) + ",description='" + btt.description + "',publication_date='" + ChangeDate(btt.publication_date.ToString(), false) + "',number_of_pages=" + ChangeInt(btt.number_of_pages) + ",updated_at='" + ChangeDate(DateTime.Now.ToString(), true) + "' where id='" + id + "'";
-            EditData("update book_titles set title =N'"+btt.title+"',author_id="+ ChangeInt(btt.author_id)+",category_id="+ ChangeInt(btt.category_id)+",publisher_id="+ ChangeInt(btt.publisher_id)+",description='"+btt.description+"',publication_date='"+ ChangeDate(btt.publication_date.ToString(), false) + "',number_of_pages="+ ChangeInt(btt.number_of_pages)+",updated_at='"+ChangeDate(DateTime.Now.ToString(), true)+"' where id='"+id+"'");
+            EditData("update book_titles set title =N'"+btt.title+"',author_id="+ ChangeInt(btt.author_id)+",category_id="+ ChangeInt(btt.category_id)+",publisher_id="+ ChangeInt(btt.publisher_id)+",description=N'"+btt.description+"',publication_date='"+ ChangeDate(btt.publication_date.ToString(), false) + "',number_of_pages="+ ChangeInt(btt.number_of_pages)+",updated_at='"+ChangeDate(DateTime.Now.ToString(), true)+"' where id='"+id+"'");
         }
         public void DeleteTitle(string id)
         {

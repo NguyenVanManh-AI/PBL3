@@ -14,8 +14,12 @@ namespace LibraryManagement
 {
     public partial class UC_ManagementEmployees : UserControl
     {
-        public UC_ManagementEmployees()
+        FormMain formMain;
+        string _username;
+        string _new_username;
+        public UC_ManagementEmployees(FormMain _formMain)
         {
+            formMain = _formMain;
             InitializeComponent();
         }
 
@@ -30,7 +34,7 @@ namespace LibraryManagement
             try
             {
                 id = Int32.Parse(dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString());
-                txtUserName.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
+                _username = txtUserName.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
                 txtFirstName.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
                 txtLastName.Text = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
                 txtPhone.Text = dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString();
@@ -51,47 +55,72 @@ namespace LibraryManagement
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            Employees employees = new Employees(id,txtUserName.Text, txtFirstName.Text, txtLastName.Text, txtEmail.Text, txtPhone.Text, txtAddress.Text);
-            if(ManaEmployeesBLL.Instance.EditEmployees(employees,txtDateOfBirth.Text) == "true")
+            if(txtUserName.Text == "")
             {
-                FormMessageBoxSuccess formMessageBoxSuccess = new FormMessageBoxSuccess("Edit Success !");
-                formMessageBoxSuccess.Show();
-                Reset_txt();
-            }
-            else if(ManaEmployeesBLL.Instance.EditEmployees(employees, txtDateOfBirth.Text) == "false")
-            {
-                FormMessageBoxError formMessageBoxError = new FormMessageBoxError("Error !!!");
-                formMessageBoxError.Show();
+                FormMeessageBox formMeessageBox = new FormMeessageBox("Please select a Employees to Edit !!!");
+                formMeessageBox.Show();
             }
             else
             {
-                FormMeessageBox formMeessageBox = new FormMeessageBox(ManaEmployeesBLL.Instance.EditEmployees(employees, txtDateOfBirth.Text));
-                formMeessageBox.Show();
-            }
-        }
-
-        private void btnDelete_Click(object sender, EventArgs e)
-        {
-            if (MessageBox.Show("Are you sure to delete employee information " + txtUserName.Text.ToUpper(), "Delete Notice", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == DialogResult.OK)
-            {
-                if (ManaEmployeesBLL.Instance.DeleteEmployees(id) == "true")
+                string _new_username = txtUserName.Text;
+                Employees employees = new Employees(id, txtUserName.Text, txtFirstName.Text, txtLastName.Text, txtEmail.Text, txtPhone.Text, txtAddress.Text);
+                if (ManaEmployeesBLL.Instance.EditEmployees(employees, txtDateOfBirth.Text) == "true")
                 {
-                    FormMessageBoxSuccess formMessageBoxSuccess = new FormMessageBoxSuccess("Delete Success !");
+                    FormMessageBoxSuccess formMessageBoxSuccess = new FormMessageBoxSuccess("Edit Success !");
                     formMessageBoxSuccess.Show();
+                    formMain.ChangeUsername(_username, _new_username);
                     Reset_txt();
                 }
-                else if (ManaEmployeesBLL.Instance.DeleteEmployees(id) == "false")
+                else if (ManaEmployeesBLL.Instance.EditEmployees(employees, txtDateOfBirth.Text) == "false")
                 {
                     FormMessageBoxError formMessageBoxError = new FormMessageBoxError("Error !!!");
                     formMessageBoxError.Show();
                 }
                 else
                 {
-                    FormMeessageBox formMeessageBox = new FormMeessageBox(ManaEmployeesBLL.Instance.DeleteEmployees(id));
+                    FormMeessageBox formMeessageBox = new FormMeessageBox(ManaEmployeesBLL.Instance.EditEmployees(employees, txtDateOfBirth.Text));
                     formMeessageBox.Show();
                 }
             }
-            
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            if(txtUserName.Text == "")
+            {
+                FormMeessageBox formMeessageBox = new FormMeessageBox("Please select a Employees to Delete !!!");
+                formMeessageBox.Show();
+            }
+            else
+            {
+                if (ManaEmployeesBLL.Instance.CheckRole(txtUserName.Text) == "admin")
+                {
+                    FormMeessageBox formMeessageBox = new FormMeessageBox("Can not Delete Account Admin !!!");
+                    formMeessageBox.Show();
+                }
+                else
+                {
+                    if (MessageBox.Show("Are you sure to delete employee information " + txtUserName.Text.ToUpper(), "Delete Notice", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == DialogResult.OK)
+                    {
+                        if (ManaEmployeesBLL.Instance.DeleteEmployees(id) == "true")
+                        {
+                            FormMessageBoxSuccess formMessageBoxSuccess = new FormMessageBoxSuccess("Delete Success !");
+                            formMessageBoxSuccess.Show();
+                            Reset_txt();
+                        }
+                        else if (ManaEmployeesBLL.Instance.DeleteEmployees(id) == "false")
+                        {
+                            FormMessageBoxError formMessageBoxError = new FormMessageBoxError("Error !!!");
+                            formMessageBoxError.Show();
+                        }
+                        else
+                        {
+                            FormMeessageBox formMeessageBox = new FormMeessageBox(ManaEmployeesBLL.Instance.DeleteEmployees(id));
+                            formMeessageBox.Show();
+                        }
+                    }
+                }
+            }
         }
 
         private void txtSearch_TextChanged(object sender, EventArgs e)
@@ -110,6 +139,8 @@ namespace LibraryManagement
             txtCreatedAt.Text = "";
             txtUpdatedAt.Text = "";
             txtPhone.Text = "";
+            _username = "";
+            _new_username = "";
             dataGridView1.DataSource = ManaEmployeesBLL.Instance.LoadAllEmployees();
         }
     }
