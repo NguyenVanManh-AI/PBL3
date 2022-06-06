@@ -746,6 +746,7 @@
             this.btnAboutUs.Size = new System.Drawing.Size(177, 38);
             this.btnAboutUs.TabIndex = 148;
             this.btnAboutUs.Text = "About Us";
+            this.btnAboutUs.Click += new System.EventHandler(this.btnAboutUs_Click);
             // 
             // btnHelp
             // 

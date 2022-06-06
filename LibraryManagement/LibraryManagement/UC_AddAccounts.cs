@@ -48,24 +48,24 @@ namespace LibraryManagement
 
         private void buttoneyes1_Click(object sender, EventArgs e)
         {
-            if (txtEmail.UseSystemPasswordChar == true)
+            if (txtPassword.UseSystemPasswordChar == true)
             {
-                txtEmail.UseSystemPasswordChar = false;
+                //txtEmail.UseSystemPasswordChar = false;
                 txtPassword.UseSystemPasswordChar = false;
-                txtUsername.UseSystemPasswordChar = false;
-                txtEmail.PasswordChar = '\0';
+                //txtUsername.UseSystemPasswordChar = false;
+                //txtEmail.PasswordChar = '\0';
                 txtPassword.PasswordChar = '\0';
-                txtUsername.PasswordChar = '\0';
+                //txtUsername.PasswordChar = '\0';
                 this.buttoneyes1.Image = global::LibraryManagement.Properties.Resources.eye_hide;
             }
             else
             {
-                txtEmail.UseSystemPasswordChar = true;
+                //txtEmail.UseSystemPasswordChar = true;
                 txtPassword.UseSystemPasswordChar = true;
-                txtUsername.UseSystemPasswordChar = true;
-                txtEmail.PasswordChar = '●';
+                //txtUsername.UseSystemPasswordChar = true;
+                //txtEmail.PasswordChar = '●';
                 txtPassword.PasswordChar = '●';
-                txtUsername.PasswordChar = '●';
+                //txtUsername.PasswordChar = '●';
                 this.buttoneyes1.Image = global::LibraryManagement.Properties.Resources._103177_see_watch_view_eye_icon;
             }
         }

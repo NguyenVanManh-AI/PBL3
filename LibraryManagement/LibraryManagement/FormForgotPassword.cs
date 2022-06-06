@@ -32,7 +32,7 @@ namespace LibraryManagement
             checkmail = EmployeesBLL.Instance.CheckAndSendMailToReset(email);
             if(checkmail == true)
             {
-                FormMessageBoxSuccess formMessageBoxSuccess = new FormMessageBoxSuccess("Sent verification code. Please check your email in OUTLOOK !");
+                FormMessageBoxSuccess formMessageBoxSuccess = new FormMessageBoxSuccess("Sent verification code. Please check your email !");
                 formMessageBoxSuccess.Show();
                 groupboxEmail.Hide();
                 groupboxVeri.Show();

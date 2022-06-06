@@ -41,9 +41,13 @@
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.guna2GroupBox4 = new Guna.UI2.WinForms.Guna2GroupBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.guna2GroupBox2 = new Guna.UI2.WinForms.Guna2GroupBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.guna2GroupBox3 = new Guna.UI2.WinForms.Guna2GroupBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.guna2VSeparator1 = new Guna.UI2.WinForms.Guna2VSeparator();
             this.guna2HtmlLabel7 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel6 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -64,19 +68,15 @@
             this.btEdit = new Guna.UI2.WinForms.Guna2GradientButton();
             this.btDel = new Guna.UI2.WinForms.Guna2GradientButton();
             this.btNew = new Guna.UI2.WinForms.Guna2GradientButton();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.guna2GroupBox4.SuspendLayout();
-            this.guna2GroupBox1.SuspendLayout();
-            this.guna2GroupBox2.SuspendLayout();
-            this.guna2GroupBox3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.guna2GroupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.guna2GroupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            this.guna2GroupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -122,8 +122,7 @@
             this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView1.EnableHeadersVisualStyles = false;
             this.dataGridView1.GridColor = System.Drawing.SystemColors.ControlText;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 525);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.dataGridView1.Location = new System.Drawing.Point(0, 341);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -136,7 +135,7 @@
             this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(1600, 307);
+            this.dataGridView1.Size = new System.Drawing.Size(1067, 200);
             this.dataGridView1.TabIndex = 45;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
@@ -196,10 +195,25 @@
             this.guna2GroupBox4.CustomBorderThickness = new System.Windows.Forms.Padding(0);
             this.guna2GroupBox4.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2GroupBox4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.guna2GroupBox4.Location = new System.Drawing.Point(887, 11);
+            this.guna2GroupBox4.Location = new System.Drawing.Point(591, 7);
+            this.guna2GroupBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.guna2GroupBox4.Name = "guna2GroupBox4";
-            this.guna2GroupBox4.Size = new System.Drawing.Size(295, 189);
+            this.guna2GroupBox4.Size = new System.Drawing.Size(197, 123);
             this.guna2GroupBox4.TabIndex = 46;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Image = global::LibraryManagement.Properties.Resources.Publish_article_rafiki;
+            this.pictureBox1.Location = new System.Drawing.Point(1, -5);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(193, 126);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 75;
+            this.pictureBox1.TabStop = false;
             // 
             // guna2GroupBox1
             // 
@@ -208,10 +222,25 @@
             this.guna2GroupBox1.CustomBorderThickness = new System.Windows.Forms.Padding(0);
             this.guna2GroupBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2GroupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.guna2GroupBox1.Location = new System.Drawing.Point(4, 3);
+            this.guna2GroupBox1.Location = new System.Drawing.Point(3, 2);
+            this.guna2GroupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.guna2GroupBox1.Name = "guna2GroupBox1";
-            this.guna2GroupBox1.Size = new System.Drawing.Size(250, 254);
+            this.guna2GroupBox1.Size = new System.Drawing.Size(167, 165);
             this.guna2GroupBox1.TabIndex = 76;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox2.Image = global::LibraryManagement.Properties.Resources.Publish_article_bro;
+            this.pictureBox2.Location = new System.Drawing.Point(1, -5);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(166, 168);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 75;
+            this.pictureBox2.TabStop = false;
             // 
             // guna2GroupBox2
             // 
@@ -220,10 +249,25 @@
             this.guna2GroupBox2.CustomBorderThickness = new System.Windows.Forms.Padding(0);
             this.guna2GroupBox2.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2GroupBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.guna2GroupBox2.Location = new System.Drawing.Point(3, 272);
+            this.guna2GroupBox2.Location = new System.Drawing.Point(2, 177);
+            this.guna2GroupBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.guna2GroupBox2.Name = "guna2GroupBox2";
-            this.guna2GroupBox2.Size = new System.Drawing.Size(250, 248);
+            this.guna2GroupBox2.Size = new System.Drawing.Size(167, 161);
             this.guna2GroupBox2.TabIndex = 76;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox3.Image = global::LibraryManagement.Properties.Resources.Printer_amico1;
+            this.pictureBox3.Location = new System.Drawing.Point(1, -5);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(166, 157);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 75;
+            this.pictureBox3.TabStop = false;
             // 
             // guna2GroupBox3
             // 
@@ -232,16 +276,32 @@
             this.guna2GroupBox3.CustomBorderThickness = new System.Windows.Forms.Padding(0);
             this.guna2GroupBox3.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2GroupBox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.guna2GroupBox3.Location = new System.Drawing.Point(1170, 3);
+            this.guna2GroupBox3.Location = new System.Drawing.Point(780, 2);
+            this.guna2GroupBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.guna2GroupBox3.Name = "guna2GroupBox3";
-            this.guna2GroupBox3.Size = new System.Drawing.Size(467, 507);
+            this.guna2GroupBox3.Size = new System.Drawing.Size(311, 330);
             this.guna2GroupBox3.TabIndex = 76;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox4.Image = global::LibraryManagement.Properties.Resources.Publish_article_amico;
+            this.pictureBox4.Location = new System.Drawing.Point(13, -5);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(296, 333);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox4.TabIndex = 75;
+            this.pictureBox4.TabStop = false;
             // 
             // guna2VSeparator1
             // 
-            this.guna2VSeparator1.Location = new System.Drawing.Point(952, 206);
+            this.guna2VSeparator1.Location = new System.Drawing.Point(635, 134);
+            this.guna2VSeparator1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.guna2VSeparator1.Name = "guna2VSeparator1";
-            this.guna2VSeparator1.Size = new System.Drawing.Size(12, 194);
+            this.guna2VSeparator1.Size = new System.Drawing.Size(8, 126);
             this.guna2VSeparator1.TabIndex = 273;
             // 
             // guna2HtmlLabel7
@@ -250,9 +310,10 @@
             this.guna2HtmlLabel7.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel7.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.guna2HtmlLabel7.Location = new System.Drawing.Point(260, 108);
+            this.guna2HtmlLabel7.Location = new System.Drawing.Point(173, 70);
+            this.guna2HtmlLabel7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.guna2HtmlLabel7.Name = "guna2HtmlLabel7";
-            this.guna2HtmlLabel7.Size = new System.Drawing.Size(157, 27);
+            this.guna2HtmlLabel7.Size = new System.Drawing.Size(105, 18);
             this.guna2HtmlLabel7.TabIndex = 269;
             this.guna2HtmlLabel7.Text = "Publisher Id";
             // 
@@ -262,9 +323,10 @@
             this.guna2HtmlLabel6.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel6.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.guna2HtmlLabel6.Location = new System.Drawing.Point(260, 185);
+            this.guna2HtmlLabel6.Location = new System.Drawing.Point(173, 120);
+            this.guna2HtmlLabel6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.guna2HtmlLabel6.Name = "guna2HtmlLabel6";
-            this.guna2HtmlLabel6.Size = new System.Drawing.Size(201, 27);
+            this.guna2HtmlLabel6.Size = new System.Drawing.Size(134, 18);
             this.guna2HtmlLabel6.TabIndex = 268;
             this.guna2HtmlLabel6.Text = "Publisher\'s Name";
             // 
@@ -274,9 +336,10 @@
             this.guna2HtmlLabel5.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel5.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.guna2HtmlLabel5.Location = new System.Drawing.Point(562, 109);
+            this.guna2HtmlLabel5.Location = new System.Drawing.Point(375, 71);
+            this.guna2HtmlLabel5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.guna2HtmlLabel5.Name = "guna2HtmlLabel5";
-            this.guna2HtmlLabel5.Size = new System.Drawing.Size(157, 27);
+            this.guna2HtmlLabel5.Size = new System.Drawing.Size(105, 18);
             this.guna2HtmlLabel5.TabIndex = 267;
             this.guna2HtmlLabel5.Text = "Country";
             // 
@@ -286,9 +349,10 @@
             this.guna2HtmlLabel4.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel4.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.guna2HtmlLabel4.Location = new System.Drawing.Point(562, 185);
+            this.guna2HtmlLabel4.Location = new System.Drawing.Point(375, 120);
+            this.guna2HtmlLabel4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.guna2HtmlLabel4.Name = "guna2HtmlLabel4";
-            this.guna2HtmlLabel4.Size = new System.Drawing.Size(157, 27);
+            this.guna2HtmlLabel4.Size = new System.Drawing.Size(105, 18);
             this.guna2HtmlLabel4.TabIndex = 266;
             this.guna2HtmlLabel4.Text = "Address";
             // 
@@ -298,9 +362,10 @@
             this.guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel3.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.guna2HtmlLabel3.Location = new System.Drawing.Point(260, 261);
+            this.guna2HtmlLabel3.Location = new System.Drawing.Point(173, 170);
+            this.guna2HtmlLabel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
-            this.guna2HtmlLabel3.Size = new System.Drawing.Size(157, 27);
+            this.guna2HtmlLabel3.Size = new System.Drawing.Size(105, 18);
             this.guna2HtmlLabel3.TabIndex = 265;
             this.guna2HtmlLabel3.Text = "Updated At";
             // 
@@ -310,9 +375,10 @@
             this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel2.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.guna2HtmlLabel2.Location = new System.Drawing.Point(260, 338);
+            this.guna2HtmlLabel2.Location = new System.Drawing.Point(173, 220);
+            this.guna2HtmlLabel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
-            this.guna2HtmlLabel2.Size = new System.Drawing.Size(157, 27);
+            this.guna2HtmlLabel2.Size = new System.Drawing.Size(105, 18);
             this.guna2HtmlLabel2.TabIndex = 264;
             this.guna2HtmlLabel2.Text = "Created At";
             // 
@@ -331,13 +397,12 @@
             this.txtId.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtId.ForeColor = System.Drawing.Color.Black;
             this.txtId.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtId.Location = new System.Drawing.Point(260, 142);
-            this.txtId.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtId.Location = new System.Drawing.Point(173, 92);
             this.txtId.Name = "txtId";
             this.txtId.PasswordChar = '\0';
             this.txtId.PlaceholderText = "";
             this.txtId.SelectedText = "";
-            this.txtId.Size = new System.Drawing.Size(252, 36);
+            this.txtId.Size = new System.Drawing.Size(168, 23);
             this.txtId.TabIndex = 263;
             // 
             // txtName
@@ -354,13 +419,12 @@
             this.txtName.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtName.ForeColor = System.Drawing.Color.Black;
             this.txtName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtName.Location = new System.Drawing.Point(260, 219);
-            this.txtName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtName.Location = new System.Drawing.Point(173, 142);
             this.txtName.Name = "txtName";
             this.txtName.PasswordChar = '\0';
             this.txtName.PlaceholderText = "";
             this.txtName.SelectedText = "";
-            this.txtName.Size = new System.Drawing.Size(252, 36);
+            this.txtName.Size = new System.Drawing.Size(168, 23);
             this.txtName.TabIndex = 262;
             // 
             // txtCountry
@@ -377,13 +441,12 @@
             this.txtCountry.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCountry.ForeColor = System.Drawing.Color.Black;
             this.txtCountry.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtCountry.Location = new System.Drawing.Point(562, 142);
-            this.txtCountry.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCountry.Location = new System.Drawing.Point(375, 92);
             this.txtCountry.Name = "txtCountry";
             this.txtCountry.PasswordChar = '\0';
             this.txtCountry.PlaceholderText = "";
             this.txtCountry.SelectedText = "";
-            this.txtCountry.Size = new System.Drawing.Size(318, 36);
+            this.txtCountry.Size = new System.Drawing.Size(212, 23);
             this.txtCountry.TabIndex = 261;
             // 
             // txtAddress
@@ -400,13 +463,12 @@
             this.txtAddress.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAddress.ForeColor = System.Drawing.Color.Black;
             this.txtAddress.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtAddress.Location = new System.Drawing.Point(562, 219);
-            this.txtAddress.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtAddress.Location = new System.Drawing.Point(375, 142);
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.PasswordChar = '\0';
             this.txtAddress.PlaceholderText = "";
             this.txtAddress.SelectedText = "";
-            this.txtAddress.Size = new System.Drawing.Size(318, 36);
+            this.txtAddress.Size = new System.Drawing.Size(212, 23);
             this.txtAddress.TabIndex = 260;
             // 
             // txtUpdate
@@ -419,17 +481,17 @@
             this.txtUpdate.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.txtUpdate.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtUpdate.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtUpdate.Enabled = false;
             this.txtUpdate.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtUpdate.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUpdate.ForeColor = System.Drawing.Color.Black;
             this.txtUpdate.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtUpdate.Location = new System.Drawing.Point(260, 295);
-            this.txtUpdate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtUpdate.Location = new System.Drawing.Point(173, 192);
             this.txtUpdate.Name = "txtUpdate";
             this.txtUpdate.PasswordChar = '\0';
             this.txtUpdate.PlaceholderText = "";
             this.txtUpdate.SelectedText = "";
-            this.txtUpdate.Size = new System.Drawing.Size(252, 36);
+            this.txtUpdate.Size = new System.Drawing.Size(168, 23);
             this.txtUpdate.TabIndex = 259;
             // 
             // txtCreate
@@ -442,17 +504,17 @@
             this.txtCreate.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.txtCreate.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtCreate.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtCreate.Enabled = false;
             this.txtCreate.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtCreate.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCreate.ForeColor = System.Drawing.Color.Black;
             this.txtCreate.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtCreate.Location = new System.Drawing.Point(260, 372);
-            this.txtCreate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCreate.Location = new System.Drawing.Point(173, 242);
             this.txtCreate.Name = "txtCreate";
             this.txtCreate.PasswordChar = '\0';
             this.txtCreate.PlaceholderText = "";
             this.txtCreate.SelectedText = "";
-            this.txtCreate.Size = new System.Drawing.Size(252, 36);
+            this.txtCreate.Size = new System.Drawing.Size(168, 23);
             this.txtCreate.TabIndex = 258;
             // 
             // txtDes
@@ -469,13 +531,12 @@
             this.txtDes.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDes.ForeColor = System.Drawing.Color.Black;
             this.txtDes.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtDes.Location = new System.Drawing.Point(562, 295);
-            this.txtDes.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtDes.Location = new System.Drawing.Point(375, 192);
             this.txtDes.Name = "txtDes";
             this.txtDes.PasswordChar = '\0';
             this.txtDes.PlaceholderText = "";
             this.txtDes.SelectedText = "";
-            this.txtDes.Size = new System.Drawing.Size(385, 113);
+            this.txtDes.Size = new System.Drawing.Size(257, 73);
             this.txtDes.TabIndex = 257;
             // 
             // guna2HtmlLabel10
@@ -484,9 +545,10 @@
             this.guna2HtmlLabel10.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel10.Font = new System.Drawing.Font("Times New Roman", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel10.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.guna2HtmlLabel10.Location = new System.Drawing.Point(481, 23);
+            this.guna2HtmlLabel10.Location = new System.Drawing.Point(321, 15);
+            this.guna2HtmlLabel10.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.guna2HtmlLabel10.Name = "guna2HtmlLabel10";
-            this.guna2HtmlLabel10.Size = new System.Drawing.Size(399, 47);
+            this.guna2HtmlLabel10.Size = new System.Drawing.Size(266, 31);
             this.guna2HtmlLabel10.TabIndex = 256;
             this.guna2HtmlLabel10.Text = "Publisher Information";
             // 
@@ -496,9 +558,10 @@
             this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel1.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.guna2HtmlLabel1.Location = new System.Drawing.Point(562, 262);
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(375, 170);
+            this.guna2HtmlLabel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            this.guna2HtmlLabel1.Size = new System.Drawing.Size(157, 27);
+            this.guna2HtmlLabel1.Size = new System.Drawing.Size(105, 18);
             this.guna2HtmlLabel1.TabIndex = 255;
             this.guna2HtmlLabel1.Text = "Description";
             // 
@@ -518,13 +581,13 @@
             this.txtSearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtSearch.IconLeft = global::LibraryManagement.Properties.Resources.magnifying_glass;
             this.txtSearch.IconLeftSize = new System.Drawing.Size(25, 25);
-            this.txtSearch.Location = new System.Drawing.Point(260, 441);
-            this.txtSearch.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtSearch.Location = new System.Drawing.Point(173, 287);
+            this.txtSearch.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.PasswordChar = '\0';
             this.txtSearch.PlaceholderText = "Search At Here";
             this.txtSearch.SelectedText = "";
-            this.txtSearch.Size = new System.Drawing.Size(904, 48);
+            this.txtSearch.Size = new System.Drawing.Size(603, 31);
             this.txtSearch.TabIndex = 274;
             this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
@@ -550,11 +613,11 @@
             this.btEdit.Image = global::LibraryManagement.Properties.Resources.diskette;
             this.btEdit.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btEdit.ImageSize = new System.Drawing.Size(25, 25);
-            this.btEdit.Location = new System.Drawing.Point(969, 283);
-            this.btEdit.Margin = new System.Windows.Forms.Padding(2);
+            this.btEdit.Location = new System.Drawing.Point(646, 184);
+            this.btEdit.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.btEdit.Name = "btEdit";
             this.btEdit.PressedColor = System.Drawing.Color.DeepSkyBlue;
-            this.btEdit.Size = new System.Drawing.Size(195, 51);
+            this.btEdit.Size = new System.Drawing.Size(130, 33);
             this.btEdit.TabIndex = 272;
             this.btEdit.Text = "Save";
             this.btEdit.Click += new System.EventHandler(this.btEdit_Click);
@@ -581,11 +644,11 @@
             this.btDel.Image = global::LibraryManagement.Properties.Resources.delete;
             this.btDel.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btDel.ImageSize = new System.Drawing.Size(25, 25);
-            this.btDel.Location = new System.Drawing.Point(969, 357);
-            this.btDel.Margin = new System.Windows.Forms.Padding(2);
+            this.btDel.Location = new System.Drawing.Point(646, 232);
+            this.btDel.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.btDel.Name = "btDel";
             this.btDel.PressedColor = System.Drawing.Color.DeepSkyBlue;
-            this.btDel.Size = new System.Drawing.Size(195, 51);
+            this.btDel.Size = new System.Drawing.Size(130, 33);
             this.btDel.TabIndex = 271;
             this.btDel.Text = "Delete";
             this.btDel.Click += new System.EventHandler(this.btDelete_Click);
@@ -612,78 +675,18 @@
             this.btNew.Image = global::LibraryManagement.Properties.Resources.plus;
             this.btNew.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btNew.ImageSize = new System.Drawing.Size(25, 25);
-            this.btNew.Location = new System.Drawing.Point(969, 206);
-            this.btNew.Margin = new System.Windows.Forms.Padding(2);
+            this.btNew.Location = new System.Drawing.Point(646, 134);
+            this.btNew.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.btNew.Name = "btNew";
             this.btNew.PressedColor = System.Drawing.Color.DeepSkyBlue;
-            this.btNew.Size = new System.Drawing.Size(195, 51);
+            this.btNew.Size = new System.Drawing.Size(130, 33);
             this.btNew.TabIndex = 270;
             this.btNew.Text = "New";
             this.btNew.Click += new System.EventHandler(this.btAdd_Click);
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox2.Image = global::LibraryManagement.Properties.Resources.Publish_article_bro;
-            this.pictureBox2.Location = new System.Drawing.Point(1, -7);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(249, 259);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 75;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox3.Image = global::LibraryManagement.Properties.Resources.Printer_amico1;
-            this.pictureBox3.Location = new System.Drawing.Point(1, -7);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(249, 242);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 75;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox4.Image = global::LibraryManagement.Properties.Resources.Publish_article_amico;
-            this.pictureBox4.Location = new System.Drawing.Point(19, -7);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(444, 512);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox4.TabIndex = 75;
-            this.pictureBox4.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Image = global::LibraryManagement.Properties.Resources.Publish_article_rafiki;
-            this.pictureBox1.Location = new System.Drawing.Point(1, -7);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(290, 194);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 75;
-            this.pictureBox1.TabStop = false;
-            // 
             // UC_Publishers
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -712,18 +715,17 @@
             this.Controls.Add(this.guna2GroupBox3);
             this.Controls.Add(this.guna2GroupBox4);
             this.Controls.Add(this.dataGridView1);
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "UC_Publishers";
-            this.Size = new System.Drawing.Size(1402, 728);
+            this.Size = new System.Drawing.Size(935, 473);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.guna2GroupBox4.ResumeLayout(false);
-            this.guna2GroupBox1.ResumeLayout(false);
-            this.guna2GroupBox2.ResumeLayout(false);
-            this.guna2GroupBox3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.guna2GroupBox1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.guna2GroupBox2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            this.guna2GroupBox3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);
 
         }

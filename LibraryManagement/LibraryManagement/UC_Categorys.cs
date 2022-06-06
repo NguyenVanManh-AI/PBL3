@@ -37,14 +37,14 @@ namespace LibraryManagement
                 }
                 else
                 {
-                    new FormMeessageBox(CategorysBLL.Instance.AddCategorys(cate));
+                    new FormMeessageBox(CategorysBLL.Instance.AddCategorys(cate)).Show();
                 }
             }
         }
 
         private void btDelete_Click(object sender, EventArgs e)
         {
-            if (dataGridView1.SelectedRows.Count == 0)
+            if (txtId.Text == "")
             {
                 new FormMeessageBox("Please select Category you want to delete !").Show();
             }
@@ -83,7 +83,7 @@ namespace LibraryManagement
 
         private void btEdit_Click(object sender, EventArgs e)
         {
-            if (dataGridView1.SelectedRows.Count == 0)
+            if (txtId.Text == "")
             {
                 new FormMeessageBox("Please select a Category you want to edit!").Show();
             }

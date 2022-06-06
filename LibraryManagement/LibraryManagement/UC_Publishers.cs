@@ -45,7 +45,7 @@ namespace LibraryManagement
 
         private void btDelete_Click(object sender, EventArgs e)
         {
-            if (dataGridView1.SelectedRows.Count == 0)
+            if (txtId.Text == "")
             {
                 new FormMeessageBox("Please select Publishers you want to delete !").Show();
             }
@@ -71,9 +71,9 @@ namespace LibraryManagement
             {
                 txtId.Text = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
                 txtName.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
-                txtCountry.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
+                txtCountry.Text = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
                 txtAddress.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
-                txtDes.Text = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
+                txtDes.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
                 txtCreate.Text = dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString();
                 txtUpdate.Text = dataGridView1.Rows[e.RowIndex].Cells[6].Value.ToString();
             }
@@ -81,7 +81,7 @@ namespace LibraryManagement
         }
         private void btEdit_Click(object sender, EventArgs e)
         {
-            if (dataGridView1.SelectedRows.Count == 0)
+            if (txtId.Text == "")
             {
                 new FormMeessageBox("Please select a Publisher you want to edit!").Show();
             }

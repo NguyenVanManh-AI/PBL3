@@ -25,14 +25,15 @@ namespace DAL
             return LoadData("select b.*,btt.title from books as b left outer join book_titles as btt on b.book_title_id = btt.id where b.book_title_id='"+id+"'");
         }
         public DataTable SearchBooksWithStatus(string s,string ID,bool status)
-        {   if(s!="") return LoadData("select b.*,btt.title from books as b left outer join book_titles as btt on b.book_title_id = btt.id where id ='" + s + "' and status ='" + status + "' and book_title_id='" + ID + "'");
+        {   if(s!="") return LoadData("select b.*,btt.title from books as b left outer join book_titles as btt on b.book_title_id = btt.id where b.id like '%" + s + "%' and status ='" + status + "' and book_title_id='" + ID + "'");
             else return LoadData("select b.*,btt.title from books as b left outer join book_titles as btt on b.book_title_id = btt.id where status ='" + status+"' and book_title_id='"+ID+"'" );
         }
         public DataTable SearchAllBooks(string s, string ID)
         {
-            if (s != "") return LoadData("select b.*,btt.title from books as b left outer join book_titles as btt on b.book_title_id = btt.id where id ='" + s + "' and book_title_id='" + ID + "'");
+            if (s != "") return LoadData("select b.*,btt.title from books as b left outer join book_titles as btt on b.book_title_id = btt.id where b.id like '%" + s + "%' and book_title_id ='" + ID + "'");
             else return LoadData("select b.*,btt.title from books as b left outer join book_titles as btt on b.book_title_id = btt.id where book_title_id='" + ID + "'");
         }
+
         public void DeleteBook(string id)
         {
             EditData("update borrow_details set book_id=null where book_id ='" + id + "'");

@@ -45,8 +45,10 @@ namespace DAL
         {
             try
             {
-                string query = ("delete from employees where id ='" + id + "'");
-                EditData(query);
+                string query1 = ("update borrows set creator_id = null where creator_id = '"+id+"'");
+                EditData(query1);
+                string query2 = ("delete from employees where id ='" + id + "'");
+                EditData(query2);
                 return true;
             }
             catch { return false; }

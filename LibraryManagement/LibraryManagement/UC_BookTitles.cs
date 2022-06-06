@@ -62,7 +62,7 @@ namespace LibraryManagement
             //        string strUpdate = "Update book_titles set title ='"+txtTitle.Text+"',author_id ='"+txtAu.Text+"',category_id='"+txtCate.Text+"',publisher_id='"+txtPub.Text+"',description='"+txtDes.Text+"',publication_date='"+txtDate.Text+"',number_of_pages ='"+txtPage.Text+"',updated_at='"+ChangeDate(DateTime.Now.ToString())+"'" + "where id='"+txtId.Text+"'";
             try
             {
-                if (dataGridView1.SelectedRows.Count == 0 || txtId.Text=="")
+                if (txtId.Text=="")
                 {
                     new FormMeessageBox("Please select a Book Title you want to edit!").Show();
                 }
@@ -86,7 +86,7 @@ namespace LibraryManagement
                         }
                         else
                         {
-                            new FormMeessageBox(BookTitlesBLL.Instance.EditTitle(btt, txtId.Text));
+                            new FormMeessageBox(BookTitlesBLL.Instance.EditTitle(btt, txtId.Text)).Show();
                         }
                     }
                 }
@@ -98,7 +98,7 @@ namespace LibraryManagement
         {
             try
             {
-                if (dataGridView1.SelectedRows.Count == 0)
+                if (txtId.Text == "")
                 {
                     new FormMeessageBox("Please select Book Titles you want to delete !").Show();
                 }

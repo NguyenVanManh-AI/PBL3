@@ -34,3 +34,9 @@ C:\Users\LAPTOP KIM ANH\source\repos\LibraryManagement\DTO\obj\Debug\DTO.csproj.
 C:\Users\LAPTOP KIM ANH\source\repos\LibraryManagement\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
 C:\Users\LAPTOP KIM ANH\source\repos\LibraryManagement\DTO\obj\Debug\DTO.dll
 C:\Users\LAPTOP KIM ANH\source\repos\LibraryManagement\DTO\obj\Debug\DTO.pdb
+C:\GIT\PBL3\LibraryManagement\DTO\bin\Debug\DTO.dll
+C:\GIT\PBL3\LibraryManagement\DTO\bin\Debug\DTO.pdb
+C:\GIT\PBL3\LibraryManagement\DTO\obj\Debug\DTO.csproj.AssemblyReference.cache
+C:\GIT\PBL3\LibraryManagement\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
+C:\GIT\PBL3\LibraryManagement\DTO\obj\Debug\DTO.dll
+C:\GIT\PBL3\LibraryManagement\DTO\obj\Debug\DTO.pdb

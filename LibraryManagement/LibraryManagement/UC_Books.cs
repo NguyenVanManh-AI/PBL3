@@ -38,7 +38,7 @@ namespace LibraryManagement
                     bool status;
                     if (cbbStatus.Text == "Intact") status = true;
                     else status = false;
-                    if (txtImportAt.Text == "") new FormMeessageBox("Imported At cann't not be left blank!");
+                    if (txtImportAt.Text == "") new FormMeessageBox("Imported At cann't not be left blank!").Show();
                     else
                     {
                         Books b = new Books(int.Parse(txtTitleId.Text), Convert.ToDateTime(txtImportAt.Text), status);
@@ -60,7 +60,7 @@ namespace LibraryManagement
         {
             try
             {
-                if (dataGridView1.SelectedRows.Count == 0)
+                if (txtBookId.Text == "")
                 {
                     new FormMeessageBox("Please select a Book you want to edit!").Show();
                 }
@@ -97,7 +97,7 @@ namespace LibraryManagement
         {
             try
             {
-                if (dataGridView1.SelectedRows.Count == 0)
+                if (txtBookId.Text =="")
                 {
                     new FormMeessageBox("Please select Books you want to delete !").Show();
                 }
@@ -133,7 +133,7 @@ namespace LibraryManagement
                 txtBookId.Text = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
                 txtTitleId.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
                 txtTitle.Text = dataGridView1.Rows[e.RowIndex].Cells[6].Value.ToString();
-                txtImportAt.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
+                txtImportAt.Text = BooksBLL.Instance.ShowDate(dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString());
                 if (dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString() == "True") cbbStatus.SelectedItem = "Intact";
                 else cbbStatus.SelectedItem = "Broken";
                 txtUpdate.Text = dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString();
@@ -161,11 +161,6 @@ namespace LibraryManagement
             txtCreate.Text = "";
             txtUpdate.Text = "";
             dataGridView1.ClearSelection();
-        }
-
-        private void UC_Books_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

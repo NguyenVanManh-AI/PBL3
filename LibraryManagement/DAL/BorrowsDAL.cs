@@ -63,7 +63,17 @@ namespace DAL
                 return false;
             }
         }
-        
+
+
+        public string CheckNotReturnList(int id_borrow)
+        {
+            try
+            {
+                string query = "select COUNT(id) from borrow_details where return_at is null and borrow_id = '"+id_borrow+"'";
+                return LoadData(query).Rows[0][0].ToString();
+            }
+            catch { return "0";}
+        }
         public bool DeleteBorrows(int id_borrow)
         {
             try

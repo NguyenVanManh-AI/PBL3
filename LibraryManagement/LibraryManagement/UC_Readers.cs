@@ -86,7 +86,7 @@ namespace LibraryManagement
         {
             try
             {
-                if (dataGridView1.SelectedRows.Count == 0)
+                if (txtId.Text == "")
                 {
                     new FormMeessageBox("Please select Readers you want to delete !").Show();
                 }
@@ -114,7 +114,7 @@ namespace LibraryManagement
                 bool gender;
                 if (cbbGender.Text == "Male") gender = true;
                 else gender = false;
-                if (dataGridView1.SelectedRows.Count == 0)
+                if (txtId.Text=="")
                 {
                     new FormMeessageBox("Please select Reader you want to edit!").Show();
                 }
@@ -165,6 +165,7 @@ namespace LibraryManagement
             txtCard.Text = "";
             txtCreate.Text = "";
             txtUpdate.Text = "";
+            dataGridView1.DataSource = ReadersBLL.Instance.LoadAllReaders();
             dataGridView1.ClearSelection();
         }
 

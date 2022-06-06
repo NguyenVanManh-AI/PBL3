@@ -34,7 +34,7 @@ namespace LibraryManagement
                     bool gender;
                     if (cbbGender.Text == "Male") gender = true;
                     else gender = false;
-                    Authors author = new Authors(txtFName.Text, txtLName.Text, gender, txtCreate.Text);
+                    Authors author = new Authors(txtFName.Text, txtLName.Text, gender, txtDess.Text);
                     if (AuthorsBLL.Instance.AddAuthors(author) == "OK")
                     {
                         new FormMessageBoxSuccess("Add successfully!").Show();
@@ -54,9 +54,9 @@ namespace LibraryManagement
         {
             try
             {
-                if (dataGridView1.SelectedRows.Count == 0)
+                if (txtId.Text=="")
                 {
-                    new FormMeessageBox("Please select Author you want to delete !").Show();
+                    new FormMeessageBox("Please select Authors you want to delete !").Show();
                 }
                 else
                 {
@@ -92,7 +92,7 @@ namespace LibraryManagement
                 if (dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString() == "True") cbbGender.Text = "Male";
                 else cbbGender.Text = "FeMale";
                 txtCreate.Text = dataGridView1.Rows[e.RowIndex].Cells[6].Value.ToString();
-                txtDes.Text = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
+                txtDess.Text = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
                 txtUpdate.Text = dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString();
             }
             catch { };
@@ -101,7 +101,7 @@ namespace LibraryManagement
         {
             try
             {
-                if (dataGridView1.SelectedRows.Count == 0)
+                if (txtId.Text == "")
                 {
                     new FormMeessageBox("Please select a Author you want to edit!").Show();
                 }
@@ -114,7 +114,7 @@ namespace LibraryManagement
                     bool gender;
                     if (cbbGender.Text == "Male") gender = true;
                     else gender = false;
-                    Authors author = new Authors(txtFName.Text, txtLName.Text, gender, txtCreate.Text);
+                    Authors author = new Authors(txtFName.Text, txtLName.Text, gender, txtDess.Text);
                     if (AuthorsBLL.Instance.EditAuthors(author, txtId.Text) == "OK")
                     {
                         new FormMessageBoxSuccess("Edit successfully!").Show();
@@ -123,7 +123,8 @@ namespace LibraryManagement
                     }
                     else
                     {
-                        MessageBox.Show(AuthorsBLL.Instance.EditAuthors(author, txtId.Text));
+                        FormMeessageBox formMeessageBox = new FormMeessageBox(AuthorsBLL.Instance.EditAuthors(author, txtId.Text));
+                        formMeessageBox.Show();
                     }
                 }
 
@@ -138,7 +139,7 @@ namespace LibraryManagement
             txtCreate.Text = "";
             cbbGender.Text = "";
             txtUpdate.Text = "";
-            txtDes.Text = "";
+            txtDess.Text = "";
             dataGridView1.ClearSelection();
         }
     }

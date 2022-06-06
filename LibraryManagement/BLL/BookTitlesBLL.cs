@@ -31,12 +31,16 @@ namespace BLL
         public string AddTitle(BookTitles btt)
         {
             if (btt.title == "") return "Title can't be left blank!";
+            //if (!CheckDate(btt.publication_date.ToString())) return "Incorrect publication date format";
+            if (!ExceedDate(btt.publication_date.ToString())) return "Exceed the current date !!!";
             BookTitlesDAL.Instance.AddTitle(btt);
             return "OK";
         }
         public string EditTitle(BookTitles btt, string id)
         {
             if (btt.title == "") return "Title can't be left blank!";
+            //if (!CheckDate(btt.publication_date.ToString())) return "Incorrect publication date format";
+            if (!ExceedDate(btt.publication_date.ToString())) return "Exceed the current date !!!";
             BookTitlesDAL.Instance.EditTitle(btt,id);
             return "OK";
         }
