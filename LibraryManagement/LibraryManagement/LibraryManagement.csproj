@@ -1,0 +1,609 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E1936C7C-9FDA-4AC7-88C1-EC4C1631AB92}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>LibraryManagement</RootNamespace>
+    <AssemblyName>LibraryManagement</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.9.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
+      <HintPath>..\packages\BouncyCastle.1.8.9\lib\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="FSharp.Charting, Version=2.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\FSharp.Charting.2.1.0\lib\net45\FSharp.Charting.dll</HintPath>
+    </Reference>
+    <Reference Include="FSharp.Core, Version=4.4.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\FSharp.Core.4.0.0.1\lib\net40\FSharp.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Guna.UI2, Version=2.0.3.2, Culture=neutral, PublicKeyToken=4015e4865bda28a4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Guna.UI2.WinForms.2.0.3.2\lib\net40\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.5.13.3, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\iTextSharp.5.5.13.3\lib\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FormChangePassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormChangePassword.Designer.cs">
+      <DependentUpon>FormChangePassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormForgotPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormForgotPassword.Designer.cs">
+      <DependentUpon>FormForgotPassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormInformationUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormInformationUser.Designer.cs">
+      <DependentUpon>FormInformationUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLogin.Designer.cs">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMain.Designer.cs">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMeesageBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMeesageBox.Designer.cs">
+      <DependentUpon>FormMeesageBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMessageBoxError.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMessageBoxError.Designer.cs">
+      <DependentUpon>FormMessageBoxError.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMessageBoxSuccess.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMessageBoxSuccess.Designer.cs">
+      <DependentUpon>FormMessageBoxSuccess.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPDF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPDF.Designer.cs">
+      <DependentUpon>FormPDF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormWrongAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormWrongAccount.Designer.cs">
+      <DependentUpon>FormWrongAccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PrintPDF\DataSet1.cs">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PrintPDF\DataSet1.Designer.cs">
+      <DependentUpon>DataSet1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SqlServerTypes\Loader.cs" />
+    <Compile Include="UC_AboutUs.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_AboutUs.Designer.cs">
+      <DependentUpon>UC_AboutUs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_Books.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_Books.Designer.cs">
+      <DependentUpon>UC_Books.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_BookStatistical.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_BookStatistical.designer.cs">
+      <DependentUpon>UC_BookStatistical.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_BookTitles.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_BookTitles.Designer.cs">
+      <DependentUpon>UC_BookTitles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_BorrowDetails.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_BorrowDetails.Designer.cs">
+      <DependentUpon>UC_BorrowDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_Borrows.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_Borrows.Designer.cs">
+      <DependentUpon>UC_Borrows.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_ManagementEmployees.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_ManagementEmployees.Designer.cs">
+      <DependentUpon>UC_ManagementEmployees.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UC_Authors.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_Authors.designer.cs">
+      <DependentUpon>UC_Authors.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_Categorys.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_Categorys.designer.cs">
+      <DependentUpon>UC_Categorys.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_AddAccounts.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_AddAccounts.Designer.cs">
+      <DependentUpon>UC_AddAccounts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_Help.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_Help.Designer.cs">
+      <DependentUpon>UC_Help.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_Publishers.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_Publishers.designer.cs">
+      <DependentUpon>UC_Publishers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_Readers.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_Readers.Designer.cs">
+      <DependentUpon>UC_Readers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_ReaderStatistical.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_ReaderStatistical.designer.cs">
+      <DependentUpon>UC_ReaderStatistical.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="FormChangePassword.resx">
+      <DependentUpon>FormChangePassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormForgotPassword.resx">
+      <DependentUpon>FormForgotPassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormInformationUser.resx">
+      <DependentUpon>FormInformationUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLogin.resx">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMain.resx">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMeesageBox.resx">
+      <DependentUpon>FormMeesageBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMessageBoxError.resx">
+      <DependentUpon>FormMessageBoxError.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMessageBoxSuccess.resx">
+      <DependentUpon>FormMessageBoxSuccess.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPDF.resx">
+      <DependentUpon>FormPDF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormWrongAccount.resx">
+      <DependentUpon>FormWrongAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrintPDF\Report1.rdlc" />
+    <EmbeddedResource Include="UC_AboutUs.resx">
+      <DependentUpon>UC_AboutUs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_Authors.resx">
+      <DependentUpon>UC_Authors.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_Books.resx">
+      <DependentUpon>UC_Books.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_BookStatistical.resx">
+      <DependentUpon>UC_BookStatistical.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_BookTitles.resx">
+      <DependentUpon>UC_BookTitles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_BorrowDetails.resx">
+      <DependentUpon>UC_BorrowDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_Borrows.resx">
+      <DependentUpon>UC_Borrows.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_Categorys.resx">
+      <DependentUpon>UC_Categorys.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_ManagementEmployees.resx">
+      <DependentUpon>UC_ManagementEmployees.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="UC_AddAccounts.resx">
+      <DependentUpon>UC_AddAccounts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_Help.resx">
+      <DependentUpon>UC_Help.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_Publishers.resx">
+      <DependentUpon>UC_Publishers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_Readers.resx">
+      <DependentUpon>UC_Readers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_ReaderStatistical.resx">
+      <DependentUpon>UC_ReaderStatistical.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="PrintPDF\DataSet1.xsc">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="PrintPDF\DataSet1.xsd" />
+    <None Include="PrintPDF\DataSet1.xss">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\DataSources\DTO.Borrows.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\103177_see_watch_view_eye_icon.png" />
+    <None Include="Resources\About us page-rafiki.png" />
+    <None Include="Resources\About us page-bro.png" />
+    <None Include="Resources\About us page-bro1.png" />
+    <None Include="Resources\z3470221285210_024ec077059b75187e6c0254aeb50118.jpg" />
+    <None Include="Resources\279901402_1366100040552527_1840782508522116131_n.jpg" />
+    <None Include="Resources\z3469432908785_4970b0a6bc77498c6bd777ea71677c68.jpg" />
+    <None Include="Resources\273218008_1210215113136703_9008351748464924341_n.jpg" />
+    <None Include="Resources\About us page-cuate.png" />
+    <None Include="Resources\276171199_1386682155109366_907830777075269427_n.jpg" />
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="Resources\User research-bro.png" />
+    <None Include="Resources\User research-amico %281%29.png" />
+    <None Include="Resources\user.gif" />
+    <None Include="Resources\user2.png" />
+    <None Include="Resources\user1.png" />
+    <None Include="Resources\wave.gif" />
+    <None Include="Resources\virus.gif" />
+    <None Include="Resources\warning.gif" />
+    <None Include="Resources\user.png" />
+    <None Include="Resources\update1.png" />
+    <None Include="Resources\system1.png" />
+    <None Include="Resources\search1.png" />
+    <None Include="Resources\report1.png" />
+    <None Include="Resources\printer1.png" />
+    <None Include="Resources\open-book1.png" />
+    <None Include="Resources\information1.png" />
+    <None Include="Resources\images1.png" />
+    <None Include="Resources\help1.png" />
+    <None Include="Resources\Google-Play-Books-icon1.png" />
+    <None Include="Resources\eye_hide1.png" />
+    <None Include="Resources\exit1.png" />
+    <None Include="Resources\book-app-icon-41.jpg" />
+    <None Include="Resources\Backgroundmain1.jpg" />
+    <None Include="Resources\117180262210940939931.png" />
+    <None Include="Resources\1486485553-ago-arrow-arrow-left-back-previous-direction-left_811601.png" />
+    <None Include="Resources\42134771.png" />
+    <None Include="Resources\19955621.png" />
+    <None Include="Resources\1267951.png" />
+    <None Include="Resources\103177_see_watch_view_eye_icon1.png" />
+    <Content Include="Resources\11718026221094093993.png" />
+    <None Include="Resources\1177568.png" />
+    <Content Include="Resources\126795.png" />
+    <Content Include="Resources\1486485553-ago-arrow-arrow-left-back-previous-direction-left_81160.png" />
+    <Content Include="Resources\1995562.png" />
+    <None Include="Resources\2814245.png" />
+    <Content Include="Resources\4213477.png" />
+    <None Include="Resources\722358.png" />
+    <None Include="Resources\7759.jpg" />
+    <None Include="Resources\77591.jpg" />
+    <None Include="Resources\alert.gif" />
+    <None Include="Resources\add-friend-w.png" />
+    <None Include="Resources\add-friend.png" />
+    <None Include="Resources\author-w.png" />
+    <None Include="Resources\author.png" />
+    <None Include="Resources\Add User-cuate.png" />
+    <None Include="Resources\Add User-amico.png" />
+    <None Include="Resources\Add User-rafiki.png" />
+    <None Include="Resources\Add User-pana.png" />
+    <Content Include="Resources\Backgroundmain.jpg" />
+    <None Include="Resources\Bibliophile-cuate.png" />
+    <None Include="Resources\Bibliophile-bro.png" />
+    <None Include="Resources\Bibliophile-amico.png" />
+    <None Include="Resources\Bibliophile-rafiki.png" />
+    <None Include="Resources\Bibliophile-pana.png" />
+    <Content Include="Resources\book-app-icon-4.jpg" />
+    <None Include="Resources\DUT %282%29.png" />
+    <None Include="Resources\DUT %282%29.gif" />
+    <None Include="Resources\DUT %283%29.gif" />
+    <None Include="Resources\encryption.gif" />
+    <None Include="Resources\down.png" />
+    <None Include="Resources\diskette.png" />
+    <None Include="Resources\Data extraction-amico.png" />
+    <None Include="Resources\Data extraction-cuate.png" />
+    <None Include="Resources\calendar.gif" />
+    <None Include="Resources\data-analytics-w.png" />
+    <None Include="Resources\data-analytics.png" />
+    <None Include="Resources\book-of-black-cover-closed-w.png" />
+    <None Include="Resources\book-of-black-cover-closed.png" />
+    <None Include="Resources\category-w.png" />
+    <None Include="Resources\category.png" />
+    <None Include="Resources\clock.png" />
+    <None Include="Resources\DUT.gif" />
+    <None Include="Resources\DUT1.gif" />
+    <None Include="Resources\delete.png" />
+    <Content Include="Resources\exit.png" />
+    <None Include="Resources\exit2.png" />
+    <Content Include="Resources\eye_hide.png" />
+    <None Include="Resources\gear.png" />
+    <None Include="Resources\Fortune cookie-bro.png" />
+    <None Include="Resources\followers.png" />
+    <None Include="Resources\Fill out-amico.png" />
+    <None Include="Resources\Fill out-pana.png" />
+    <None Include="Resources\Fill out-bro.png" />
+    <None Include="Resources\Fill out-rafiki.png" />
+    <None Include="Resources\File searching-amico.png" />
+    <Content Include="Resources\Google-Play-Books-icon.png" />
+    <None Include="Resources\group-white.png" />
+    <None Include="Resources\group.png" />
+    <None Include="Resources\Hand holding pen-bro.png" />
+    <None Include="Resources\Hand holding pen-amico.png" />
+    <Content Include="Resources\help.png" />
+    <None Include="Resources\home.png" />
+    <None Include="Resources\id-card-w.png" />
+    <None Include="Resources\id-card.png" />
+    <None Include="Resources\home1.png" />
+    <None Include="Resources\ID Card-cuate.png" />
+    <None Include="Resources\ID Card-amico.png" />
+    <Content Include="Resources\images.png" />
+    <None Include="Resources\Information tab-bro.png" />
+    <None Include="Resources\Information tab-pana %281%29.png" />
+    <Content Include="Resources\information.png" />
+    <None Include="Resources\logogdut.png" />
+    <None Include="Resources\Logo.PNG" />
+    <None Include="Resources\Logo-dut.png" />
+    <None Include="Resources\online-security.gif" />
+    <None Include="Resources\left-arrow.gif" />
+    <None Include="Resources\message.gif" />
+    <None Include="Resources\meteor-rain.gif" />
+    <None Include="Resources\mouse.gif" />
+    <None Include="Resources\key.png" />
+    <None Include="Resources\information2.png" />
+    <None Include="Resources\management.png" />
+    <None Include="Resources\Instant information-pana.png" />
+    <None Include="Resources\notebook.gif" />
+    <None Include="Resources\management1.png" />
+    <None Include="Resources\management-w.png" />
+    <None Include="Resources\Instruction manual-cuate.png" />
+    <None Include="Resources\next.png" />
+    <None Include="Resources\next1.png" />
+    <None Include="Resources\newspaper-w.png" />
+    <None Include="Resources\newspaper.png" />
+    <None Include="Resources\Instruction manual.gif" />
+    <None Include="Resources\Library-pana.png" />
+    <None Include="Resources\Library-rafiki.png" />
+    <None Include="Resources\Library-pana %281%29.png" />
+    <None Include="Resources\Library-pana %281%29 - Copy.png" />
+    <None Include="Resources\magnifying-glass.png" />
+    <None Include="Resources\Online Review-amico.png" />
+    <None Include="Resources\Novelist writing-bro.png" />
+    <Content Include="Resources\open-book.png" />
+    <None Include="Resources\password.gif" />
+    <None Include="Resources\pattern.gif" />
+    <None Include="Resources\party.gif" />
+    <None Include="Resources\previous.png" />
+    <None Include="Resources\previous %281%29.png" />
+    <None Include="Resources\previous %281%291.png" />
+    <None Include="Resources\previous1.png" />
+    <None Include="Resources\plus.png" />
+    <None Include="Resources\Printer-amico.png" />
+    <None Include="Resources\Printer-amico1.png" />
+    <None Include="Resources\pdf.png" />
+    <None Include="Resources\pie-chart.png" />
+    <Content Include="Resources\printer.png" />
+    <None Include="Resources\profile.png" />
+    <None Include="Resources\Reading glasses-bro.png" />
+    <None Include="Resources\Reading glasses-bro1.png" />
+    <None Include="Resources\printing-w.png" />
+    <None Include="Resources\printing.png" />
+    <None Include="Resources\question.png" />
+    <None Include="Resources\remove-user.png" />
+    <None Include="Resources\Reading glasses-pana.png" />
+    <None Include="Resources\Reading glasses-cuate.png" />
+    <None Include="Resources\Reading glasses-cuate1.png" />
+    <None Include="Resources\Reading glasses-rafiki.png" />
+    <None Include="Resources\Publish article-amico.png" />
+    <None Include="Resources\Publish article-bro.png" />
+    <None Include="Resources\Publish article-rafiki.png" />
+    <None Include="Resources\profits.png" />
+    <Content Include="Resources\report.png" />
+    <None Include="Resources\Reset password-amico %281%29.png" />
+    <None Include="Resources\resetpassword.gif" />
+    <None Include="Resources\sad.gif" />
+    <None Include="Resources\right-arrow.gif" />
+    <None Include="Resources\right.png" />
+    <Content Include="Resources\search.png" />
+    <None Include="Resources\social-media.gif" />
+    <None Include="Resources\share.gif" />
+    <None Include="Resources\shield.gif" />
+    <None Include="Resources\smile.gif" />
+    <None Include="Resources\statistic.png" />
+    <Content Include="Resources\system.png" />
+    <None Include="Resources\target.gif" />
+    <None Include="Resources\Two factor authentication-rafiki.png" />
+    <None Include="Resources\Two factor authentication-rafiki %281%29.png" />
+    <None Include="Resources\Tiny people with guide instructions or handbooks.jpg" />
+    <None Include="Resources\tree1.png" />
+    <None Include="Resources\tree2.png" />
+    <None Include="Resources\tree3.png" />
+    <Content Include="Resources\update.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BLL\BLL.csproj">
+      <Project>{95b70da4-39d0-4f5f-b731-f17d65ef2e9f}</Project>
+      <Name>BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DAL\DAL.csproj">
+      <Project>{87bfa072-0066-479f-a51b-9bd5b5819dbe}</Project>
+      <Name>DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DTO\DTO.csproj">
+      <Project>{83f81bb7-5926-4f5a-a824-702b62b09f80}</Project>
+      <Name>DTO</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AxWMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>8</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Outlook">
+      <Guid>{00062FFF-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>9</VersionMajor>
+      <VersionMinor>6</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="stdole">
+      <Guid>{00020430-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="WMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
