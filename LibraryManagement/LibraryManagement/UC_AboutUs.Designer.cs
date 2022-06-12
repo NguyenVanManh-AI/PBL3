@@ -374,9 +374,9 @@
             this.guna2HtmlLabel4.ForeColor = System.Drawing.Color.DodgerBlue;
             this.guna2HtmlLabel4.Location = new System.Drawing.Point(163, 30);
             this.guna2HtmlLabel4.Name = "guna2HtmlLabel4";
-            this.guna2HtmlLabel4.Size = new System.Drawing.Size(289, 55);
+            this.guna2HtmlLabel4.Size = new System.Drawing.Size(385, 55);
             this.guna2HtmlLabel4.TabIndex = 131;
-            this.guna2HtmlLabel4.Text = "Nguyễn Nghĩa";
+            this.guna2HtmlLabel4.Text = "Nguyễn Văn Nghĩa";
             // 
             // label5
             // 

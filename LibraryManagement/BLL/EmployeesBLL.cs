@@ -14,6 +14,13 @@ using DTO;
 using System.Net;
 using System.Collections.Specialized;
 using outlook = Microsoft.Office.Interop.Outlook;
+using System;
+using System.Net.Mail;
+using System.Net.Mime;
+using System;
+using System.Collections.Generic;
+using System.Text;
+using EASendMail; //add EASendMail namespace
 
 namespace BLL
 {
@@ -72,7 +79,7 @@ namespace BLL
             {
                 email_employee = email;
                 codeText = RandomNumber(1000, 9999).ToString();
-                SendEmail(email_employee, codeText, "Send Verification Code to change password");
+                check = SendEmail(email_employee, codeText, "Send Verification Code to change password");
             }
             return check;
         }
@@ -85,40 +92,75 @@ namespace BLL
 
         public string email_employee { get; set; }
         private static string codeText;
-        private static readonly string from_email = "strongtechmaster@gmail.com "; // Email của Sender (của bạn)
+        private static readonly string from_email = "strongtechmaster@gmail.com"; // Email của Sender (của bạn)
         private static readonly string password_from_email = "strongtech2908"; // Mật khẩu Email của Sender (của bạn)
-        public void SendEmail(string email, string codeText, string content)
+        public bool SendEmail(string email, string codeText, string content)
         {
             try
             {
-                // gưi bằng outlook / Microsoft 
-                //outlook.Application app = new outlook.Application();
-                //outlook.MailItem mail_lout_look = (outlook.MailItem)app.CreateItem(outlook.OlItemType.olMailItem);
-                //mail_lout_look.To = email;
-                //mail_lout_look.Subject = codeText;
-                //mail_lout_look.Body = content;
-                //mail_lout_look.Importance = outlook.OlImportance.olImportanceHigh;
-                //((outlook.MailItem)mail_lout_look).Send();
-                
-                // gửi bằng Email của google 
-                MailMessage msg = new MailMessage();
-                msg.From = new MailAddress(from_email);
-                msg.To.Add(email);
-                msg.Subject = codeText;
-                msg.Body = content;
-                //msg.Priority = MailPriority.High;
-                using (SmtpClient client = new SmtpClient())
-                {
-                    client.EnableSsl = true;
-                    client.UseDefaultCredentials = false;
-                    client.Credentials = new NetworkCredential(from_email, password_from_email);
-                    client.Host = "smtp.gmail.com";
-                    client.Port = 587;
-                    client.DeliveryMethod = SmtpDeliveryMethod.Network;
-                    client.Send(msg);
-                }
+                SmtpMail oMail = new SmtpMail("TryIt");
+                // Your email address
+                oMail.From = from_email;
+                // Set recipient email address
+                // oMail.To = "102200024@sv1.dut.udn.vn";
+                oMail.To = email;
+                // Set email subject
+                oMail.Subject = codeText;
+                // Set email body
+                oMail.TextBody = content;
+                // Hotmail/Outlook SMTP server address
+                SmtpServer oServer = new SmtpServer("smtp.office365.com");
+                // If your account is office 365, please change to Office 365 SMTP server
+                // SmtpServer oServer = new SmtpServer("smtp.office365.com");
+                // User authentication should use your
+                // email address as the user name.
+                oServer.User = from_email;
+                // If you got authentication error, try to create an app password instead of your user password.
+                // https://support.microsoft.com/en-us/account-billing/using-app-passwords-with-apps-that-don-t-support-two-step-verification-5896ed9b-4263-e681-128a-a6f2979a7944
+                oServer.Password = password_from_email;
+                // use 587 TLS port
+                oServer.Port = 587;
+                // detect SSL/TLS connection automatically
+                oServer.ConnectType = SmtpConnectType.ConnectSSLAuto;
+                Console.WriteLine("start to send email over TLS...");
+                EASendMail.SmtpClient oSmtp = new EASendMail.SmtpClient();
+                oSmtp.SendMail(oServer, oMail);
+                Console.WriteLine("email was sent successfully!");
+                return true;
             }
-            catch { }
+            catch (Exception ep)
+            {
+                Console.WriteLine("failed to send email with the following error:");
+                Console.WriteLine(ep.Message);
+                return false;
+            }
+
+            // gưi bằng outlook / Microsoft (bằng App trên máy hiện tại) 
+            //outlook.Application app = new outlook.Application();
+            //outlook.MailItem mail_lout_look = (outlook.MailItem)app.CreateItem(outlook.OlItemType.olMailItem);
+            //mail_lout_look.To = email;
+            //mail_lout_look.Subject = codeText;
+            //mail_lout_look.Body = content;
+            //mail_lout_look.Importance = outlook.OlImportance.olImportanceHigh;
+            //((outlook.MailItem)mail_lout_look).Send();
+
+            // gửi bằng Email của google 
+            //MailMessage msg = new MailMessage();
+            //msg.From = new MailAddress(from_email);
+            //msg.To.Add(email);
+            //msg.Subject = codeText;
+            //msg.Body = content;
+            ////msg.Priority = MailPriority.High;
+            //using (SmtpClient client = new SmtpClient())
+            //{
+            //    client.EnableSsl = true;
+            //    client.UseDefaultCredentials = false;
+            //    client.Credentials = new NetworkCredential(from_email, password_from_email);
+            //    client.Host = "smtp.gmail.com";
+            //    client.Port = 587;
+            //    client.DeliveryMethod = SmtpDeliveryMethod.Network;
+            //    client.Send(msg);
+            //}
         }
 
         public bool ConfirmPassword(string new_password,string confirm)

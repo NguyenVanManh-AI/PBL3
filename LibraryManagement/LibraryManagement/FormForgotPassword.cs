@@ -41,7 +41,7 @@ namespace LibraryManagement
             }
             else
             {
-                FormMessageBoxError formMessageBoxError = new FormMessageBoxError("Invalid Email !!!");
+                FormMessageBoxError formMessageBoxError = new FormMessageBoxError("Erorr !!!");
                 formMessageBoxError.Show();
             }
         }
