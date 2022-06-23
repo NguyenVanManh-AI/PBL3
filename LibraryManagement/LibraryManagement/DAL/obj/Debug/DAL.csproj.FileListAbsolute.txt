@@ -1,0 +1,135 @@
+C:\Users\LENOVO\Documents\HK4\PBL3\G8CINESTAR\MOVIE MANAGEMENT\DAL\bin\Debug\DAL.dll
+C:\Users\LENOVO\Documents\HK4\PBL3\G8CINESTAR\MOVIE MANAGEMENT\DAL\bin\Debug\DAL.pdb
+C:\Users\LENOVO\Documents\HK4\PBL3\G8CINESTAR\MOVIE MANAGEMENT\DAL\bin\Debug\DTO.dll
+C:\Users\LENOVO\Documents\HK4\PBL3\G8CINESTAR\MOVIE MANAGEMENT\DAL\bin\Debug\DTO.pdb
+C:\Users\LENOVO\Documents\HK4\PBL3\G8CINESTAR\MOVIE MANAGEMENT\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
+C:\Users\LENOVO\Documents\HK4\PBL3\G8CINESTAR\MOVIE MANAGEMENT\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+C:\Users\LENOVO\Documents\HK4\PBL3\G8CINESTAR\MOVIE MANAGEMENT\DAL\obj\Debug\DAL.csproj.CopyComplete
+C:\Users\LENOVO\Documents\HK4\PBL3\G8CINESTAR\MOVIE MANAGEMENT\DAL\obj\Debug\DAL.dll
+C:\Users\LENOVO\Documents\HK4\PBL3\G8CINESTAR\MOVIE MANAGEMENT\DAL\obj\Debug\DAL.pdb
+C:\Users\PC\Downloads\MOVIE MANAGEMENT\MOVIE MANAGEMENT\DAL\bin\Debug\DAL.dll
+C:\Users\PC\Downloads\MOVIE MANAGEMENT\MOVIE MANAGEMENT\DAL\bin\Debug\DAL.pdb
+C:\Users\PC\Downloads\MOVIE MANAGEMENT\MOVIE MANAGEMENT\DAL\bin\Debug\DTO.dll
+C:\Users\PC\Downloads\MOVIE MANAGEMENT\MOVIE MANAGEMENT\DAL\bin\Debug\DTO.pdb
+C:\Users\PC\Downloads\MOVIE MANAGEMENT\MOVIE MANAGEMENT\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
+C:\Users\PC\Downloads\MOVIE MANAGEMENT\MOVIE MANAGEMENT\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+C:\Users\PC\Downloads\MOVIE MANAGEMENT\MOVIE MANAGEMENT\DAL\obj\Debug\DAL.csproj.CopyComplete
+C:\Users\PC\Downloads\MOVIE MANAGEMENT\MOVIE MANAGEMENT\DAL\obj\Debug\DAL.dll
+C:\Users\PC\Downloads\MOVIE MANAGEMENT\MOVIE MANAGEMENT\DAL\obj\Debug\DAL.pdb
+C:\Users\LENOVO\Documents\HK4\PBL3\MOVIE MANAGEMENT\DAL\bin\Debug\DAL.dll
+C:\Users\LENOVO\Documents\HK4\PBL3\MOVIE MANAGEMENT\DAL\bin\Debug\DAL.pdb
+C:\Users\LENOVO\Documents\HK4\PBL3\MOVIE MANAGEMENT\DAL\bin\Debug\DTO.dll
+C:\Users\LENOVO\Documents\HK4\PBL3\MOVIE MANAGEMENT\DAL\bin\Debug\DTO.pdb
+C:\Users\LENOVO\Documents\HK4\PBL3\MOVIE MANAGEMENT\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
+C:\Users\LENOVO\Documents\HK4\PBL3\MOVIE MANAGEMENT\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+C:\Users\LENOVO\Documents\HK4\PBL3\MOVIE MANAGEMENT\DAL\obj\Debug\DAL.csproj.CopyComplete
+C:\Users\LENOVO\Documents\HK4\PBL3\MOVIE MANAGEMENT\DAL\obj\Debug\DAL.dll
+C:\Users\LENOVO\Documents\HK4\PBL3\MOVIE MANAGEMENT\DAL\obj\Debug\DAL.pdb
+C:\Users\LENOVO\Downloads\MOVIE MANAGEMENT (2)\MOVIE MANAGEMENT\DAL\bin\Debug\DAL.dll
+C:\Users\LENOVO\Downloads\MOVIE MANAGEMENT (2)\MOVIE MANAGEMENT\DAL\bin\Debug\DAL.pdb
+C:\Users\LENOVO\Downloads\MOVIE MANAGEMENT (2)\MOVIE MANAGEMENT\DAL\bin\Debug\DTO.dll
+C:\Users\LENOVO\Downloads\MOVIE MANAGEMENT (2)\MOVIE MANAGEMENT\DAL\bin\Debug\DTO.pdb
+C:\Users\LENOVO\Downloads\MOVIE MANAGEMENT (2)\MOVIE MANAGEMENT\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
+C:\Users\LENOVO\Downloads\MOVIE MANAGEMENT (2)\MOVIE MANAGEMENT\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+C:\Users\LENOVO\Downloads\MOVIE MANAGEMENT (2)\MOVIE MANAGEMENT\DAL\obj\Debug\DAL.csproj.CopyComplete
+C:\Users\LENOVO\Downloads\MOVIE MANAGEMENT (2)\MOVIE MANAGEMENT\DAL\obj\Debug\DAL.dll
+C:\Users\LENOVO\Downloads\MOVIE MANAGEMENT (2)\MOVIE MANAGEMENT\DAL\obj\Debug\DAL.pdb
+C:\Users\PC\Downloads\MOVIE MANAGEMENT (4)\MOVIE MANAGEMENT (2)\MOVIE MANAGEMENT\DAL\bin\Debug\DAL.dll
+C:\Users\PC\Downloads\MOVIE MANAGEMENT (4)\MOVIE MANAGEMENT (2)\MOVIE MANAGEMENT\DAL\bin\Debug\DAL.pdb
+C:\Users\PC\Downloads\MOVIE MANAGEMENT (4)\MOVIE MANAGEMENT (2)\MOVIE MANAGEMENT\DAL\bin\Debug\DTO.dll
+C:\Users\PC\Downloads\MOVIE MANAGEMENT (4)\MOVIE MANAGEMENT (2)\MOVIE MANAGEMENT\DAL\bin\Debug\DTO.pdb
+C:\Users\PC\Downloads\MOVIE MANAGEMENT (4)\MOVIE MANAGEMENT (2)\MOVIE MANAGEMENT\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
+C:\Users\PC\Downloads\MOVIE MANAGEMENT (4)\MOVIE MANAGEMENT (2)\MOVIE MANAGEMENT\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+C:\Users\PC\Downloads\MOVIE MANAGEMENT (4)\MOVIE MANAGEMENT (2)\MOVIE MANAGEMENT\DAL\obj\Debug\DAL.csproj.CopyComplete
+C:\Users\PC\Downloads\MOVIE MANAGEMENT (4)\MOVIE MANAGEMENT (2)\MOVIE MANAGEMENT\DAL\obj\Debug\DAL.dll
+C:\Users\PC\Downloads\MOVIE MANAGEMENT (4)\MOVIE MANAGEMENT (2)\MOVIE MANAGEMENT\DAL\obj\Debug\DAL.pdb
+C:\Users\LENOVO\Documents\HK4\PBL3\G8CINESTAR\G8CINESTAR\MOVIE MANAGEMENT\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
+C:\Users\LENOVO\Documents\HK4\PBL3\G8CINESTAR\G8CINESTAR\MOVIE MANAGEMENT\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+C:\Users\LENOVO\Documents\HK4\PBL3\G8CINESTAR\G8CINESTAR\MOVIE MANAGEMENT\DAL\obj\Debug\DAL.dll
+C:\Users\LENOVO\Documents\HK4\PBL3\G8CINESTAR\G8CINESTAR\MOVIE MANAGEMENT\DAL\obj\Debug\DAL.pdb
+C:\Users\LENOVO\Documents\HK4\PBL3\G8CINESTAR\G8CINESTAR\MOVIE MANAGEMENT\DAL\bin\Debug\DAL.dll
+C:\Users\LENOVO\Documents\HK4\PBL3\G8CINESTAR\G8CINESTAR\MOVIE MANAGEMENT\DAL\bin\Debug\DAL.pdb
+C:\Users\LENOVO\Documents\HK4\PBL3\G8CINESTAR\G8CINESTAR\MOVIE MANAGEMENT\DAL\bin\Debug\DTO.dll
+C:\Users\LENOVO\Documents\HK4\PBL3\G8CINESTAR\G8CINESTAR\MOVIE MANAGEMENT\DAL\bin\Debug\DTO.pdb
+C:\Users\LENOVO\Documents\HK4\PBL3\G8CINESTAR\G8CINESTAR\MOVIE MANAGEMENT\DAL\obj\Debug\DAL.csproj.CopyComplete
+C:\Users\LENOVO\Desktop\pbl3\G8CINESTAR\MOVIE MANAGEMENT\DAL\bin\Debug\DAL.dll
+C:\Users\LENOVO\Desktop\pbl3\G8CINESTAR\MOVIE MANAGEMENT\DAL\bin\Debug\DAL.pdb
+C:\Users\LENOVO\Desktop\pbl3\G8CINESTAR\MOVIE MANAGEMENT\DAL\bin\Debug\DTO.dll
+C:\Users\LENOVO\Desktop\pbl3\G8CINESTAR\MOVIE MANAGEMENT\DAL\bin\Debug\DTO.pdb
+C:\Users\LENOVO\Desktop\pbl3\G8CINESTAR\MOVIE MANAGEMENT\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
+C:\Users\LENOVO\Desktop\pbl3\G8CINESTAR\MOVIE MANAGEMENT\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+C:\Users\LENOVO\Desktop\pbl3\G8CINESTAR\MOVIE MANAGEMENT\DAL\obj\Debug\DAL.csproj.CopyComplete
+C:\Users\LENOVO\Desktop\pbl3\G8CINESTAR\MOVIE MANAGEMENT\DAL\obj\Debug\DAL.dll
+C:\Users\LENOVO\Desktop\pbl3\G8CINESTAR\MOVIE MANAGEMENT\DAL\obj\Debug\DAL.pdb
+C:\Users\PC\Downloads\MOVIE MANAGEMENT (3)\MOVIE MANAGEMENT\DAL\bin\Debug\DAL.dll
+C:\Users\PC\Downloads\MOVIE MANAGEMENT (3)\MOVIE MANAGEMENT\DAL\bin\Debug\DAL.pdb
+C:\Users\PC\Downloads\MOVIE MANAGEMENT (3)\MOVIE MANAGEMENT\DAL\bin\Debug\DTO.dll
+C:\Users\PC\Downloads\MOVIE MANAGEMENT (3)\MOVIE MANAGEMENT\DAL\bin\Debug\DTO.pdb
+C:\Users\PC\Downloads\MOVIE MANAGEMENT (3)\MOVIE MANAGEMENT\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
+C:\Users\PC\Downloads\MOVIE MANAGEMENT (3)\MOVIE MANAGEMENT\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+C:\Users\PC\Downloads\MOVIE MANAGEMENT (3)\MOVIE MANAGEMENT\DAL\obj\Debug\DAL.csproj.CopyComplete
+C:\Users\PC\Downloads\MOVIE MANAGEMENT (3)\MOVIE MANAGEMENT\DAL\obj\Debug\DAL.dll
+C:\Users\PC\Downloads\MOVIE MANAGEMENT (3)\MOVIE MANAGEMENT\DAL\obj\Debug\DAL.pdb
+C:\Users\LAPTOP KIM ANH\Downloads\New folder\CP\G8CINESTAR-main\MOVIE MANAGEMENT\DAL\bin\Debug\DAL.dll
+C:\Users\LAPTOP KIM ANH\Downloads\New folder\CP\G8CINESTAR-main\MOVIE MANAGEMENT\DAL\bin\Debug\DAL.pdb
+C:\Users\LAPTOP KIM ANH\Downloads\New folder\CP\G8CINESTAR-main\MOVIE MANAGEMENT\DAL\bin\Debug\DTO.dll
+C:\Users\LAPTOP KIM ANH\Downloads\New folder\CP\G8CINESTAR-main\MOVIE MANAGEMENT\DAL\bin\Debug\DTO.pdb
+C:\Users\LAPTOP KIM ANH\Downloads\New folder\CP\G8CINESTAR-main\MOVIE MANAGEMENT\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
+C:\Users\LAPTOP KIM ANH\Downloads\New folder\CP\G8CINESTAR-main\MOVIE MANAGEMENT\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+C:\Users\LAPTOP KIM ANH\Downloads\New folder\CP\G8CINESTAR-main\MOVIE MANAGEMENT\DAL\obj\Debug\DAL.csproj.CopyComplete
+C:\Users\LAPTOP KIM ANH\Downloads\New folder\CP\G8CINESTAR-main\MOVIE MANAGEMENT\DAL\obj\Debug\DAL.dll
+C:\Users\LAPTOP KIM ANH\Downloads\New folder\CP\G8CINESTAR-main\MOVIE MANAGEMENT\DAL\obj\Debug\DAL.pdb
+C:\Users\LAPTOP KIM ANH\source\repos\LibraryManagement\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
+C:\Users\LAPTOP KIM ANH\source\repos\LibraryManagement\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+C:\Users\LAPTOP KIM ANH\source\repos\LibraryManagement\DAL\obj\Debug\DAL.dll
+C:\Users\LAPTOP KIM ANH\source\repos\LibraryManagement\DAL\obj\Debug\DAL.pdb
+C:\Users\LAPTOP KIM ANH\source\repos\LibraryManagement\DAL\bin\Debug\DAL.dll
+C:\Users\LAPTOP KIM ANH\source\repos\LibraryManagement\DAL\bin\Debug\DAL.pdb
+C:\Users\LAPTOP KIM ANH\source\repos\LibraryManagement\DAL\bin\Debug\DTO.dll
+C:\Users\LAPTOP KIM ANH\source\repos\LibraryManagement\DAL\bin\Debug\DTO.pdb
+C:\Users\LAPTOP KIM ANH\source\repos\LibraryManagement\DAL\obj\Debug\DAL.csproj.CopyComplete
+C:\Users\LAPTOP KIM ANH\Downloads\Kì 4\PBL 3 CN phần mềm\PBL3\PBL3\LibraryManagement\DAL\bin\Debug\DAL.dll
+C:\Users\LAPTOP KIM ANH\Downloads\Kì 4\PBL 3 CN phần mềm\PBL3\PBL3\LibraryManagement\DAL\bin\Debug\DAL.pdb
+C:\Users\LAPTOP KIM ANH\Downloads\Kì 4\PBL 3 CN phần mềm\PBL3\PBL3\LibraryManagement\DAL\bin\Debug\DTO.dll
+C:\Users\LAPTOP KIM ANH\Downloads\Kì 4\PBL 3 CN phần mềm\PBL3\PBL3\LibraryManagement\DAL\bin\Debug\DTO.pdb
+C:\Users\LAPTOP KIM ANH\Downloads\Kì 4\PBL 3 CN phần mềm\PBL3\PBL3\LibraryManagement\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
+C:\Users\LAPTOP KIM ANH\Downloads\Kì 4\PBL 3 CN phần mềm\PBL3\PBL3\LibraryManagement\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+C:\Users\LAPTOP KIM ANH\Downloads\Kì 4\PBL 3 CN phần mềm\PBL3\PBL3\LibraryManagement\DAL\obj\Debug\DAL.csproj.CopyComplete
+C:\Users\LAPTOP KIM ANH\Downloads\Kì 4\PBL 3 CN phần mềm\PBL3\PBL3\LibraryManagement\DAL\obj\Debug\DAL.dll
+C:\Users\LAPTOP KIM ANH\Downloads\Kì 4\PBL 3 CN phần mềm\PBL3\PBL3\LibraryManagement\DAL\obj\Debug\DAL.pdb
+C:\GIT\PBL3\LibraryManagement\DAL\bin\Debug\DAL.dll
+C:\GIT\PBL3\LibraryManagement\DAL\bin\Debug\DAL.pdb
+C:\GIT\PBL3\LibraryManagement\DAL\bin\Debug\DTO.dll
+C:\GIT\PBL3\LibraryManagement\DAL\bin\Debug\DTO.pdb
+C:\GIT\PBL3\LibraryManagement\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
+C:\GIT\PBL3\LibraryManagement\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+C:\GIT\PBL3\LibraryManagement\DAL\obj\Debug\DAL.csproj.CopyComplete
+C:\GIT\PBL3\LibraryManagement\DAL\obj\Debug\DAL.dll
+C:\GIT\PBL3\LibraryManagement\DAL\obj\Debug\DAL.pdb
+C:\Users\LAPTOP KIM ANH\source\repos\LibraryManagement\LibraryManagement\DAL\bin\Debug\DAL.dll
+C:\Users\LAPTOP KIM ANH\source\repos\LibraryManagement\LibraryManagement\DAL\bin\Debug\DAL.pdb
+C:\Users\LAPTOP KIM ANH\source\repos\LibraryManagement\LibraryManagement\DAL\bin\Debug\DTO.dll
+C:\Users\LAPTOP KIM ANH\source\repos\LibraryManagement\LibraryManagement\DAL\bin\Debug\DTO.pdb
+C:\Users\LAPTOP KIM ANH\source\repos\LibraryManagement\LibraryManagement\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
+C:\Users\LAPTOP KIM ANH\source\repos\LibraryManagement\LibraryManagement\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+C:\Users\LAPTOP KIM ANH\source\repos\LibraryManagement\LibraryManagement\DAL\obj\Debug\DAL.csproj.CopyComplete
+C:\Users\LAPTOP KIM ANH\source\repos\LibraryManagement\LibraryManagement\DAL\obj\Debug\DAL.dll
+C:\Users\LAPTOP KIM ANH\source\repos\LibraryManagement\LibraryManagement\DAL\obj\Debug\DAL.pdb
+C:\Users\LAPTOP KIM ANH\Downloads\PBL3 GROUP 9\LibraryManagement\DAL\bin\Debug\DAL.dll
+C:\Users\LAPTOP KIM ANH\Downloads\PBL3 GROUP 9\LibraryManagement\DAL\bin\Debug\DAL.pdb
+C:\Users\LAPTOP KIM ANH\Downloads\PBL3 GROUP 9\LibraryManagement\DAL\bin\Debug\DTO.dll
+C:\Users\LAPTOP KIM ANH\Downloads\PBL3 GROUP 9\LibraryManagement\DAL\bin\Debug\DTO.pdb
+C:\Users\LAPTOP KIM ANH\Downloads\PBL3 GROUP 9\LibraryManagement\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
+C:\Users\LAPTOP KIM ANH\Downloads\PBL3 GROUP 9\LibraryManagement\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+C:\Users\LAPTOP KIM ANH\Downloads\PBL3 GROUP 9\LibraryManagement\DAL\obj\Debug\DAL.csproj.CopyComplete
+C:\Users\LAPTOP KIM ANH\Downloads\PBL3 GROUP 9\LibraryManagement\DAL\obj\Debug\DAL.dll
+C:\Users\LAPTOP KIM ANH\Downloads\PBL3 GROUP 9\LibraryManagement\DAL\obj\Debug\DAL.pdb
+C:\Users\LAPTOP KIM ANH\Downloads\PBL3 GROUP 9\LibraryManagement\LibraryManagement\DAL\bin\Debug\DAL.dll
+C:\Users\LAPTOP KIM ANH\Downloads\PBL3 GROUP 9\LibraryManagement\LibraryManagement\DAL\bin\Debug\DAL.pdb
+C:\Users\LAPTOP KIM ANH\Downloads\PBL3 GROUP 9\LibraryManagement\LibraryManagement\DAL\bin\Debug\DTO.dll
+C:\Users\LAPTOP KIM ANH\Downloads\PBL3 GROUP 9\LibraryManagement\LibraryManagement\DAL\bin\Debug\DTO.pdb
+C:\Users\LAPTOP KIM ANH\Downloads\PBL3 GROUP 9\LibraryManagement\LibraryManagement\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
+C:\Users\LAPTOP KIM ANH\Downloads\PBL3 GROUP 9\LibraryManagement\LibraryManagement\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+C:\Users\LAPTOP KIM ANH\Downloads\PBL3 GROUP 9\LibraryManagement\LibraryManagement\DAL\obj\Debug\DAL.csproj.CopyComplete
+C:\Users\LAPTOP KIM ANH\Downloads\PBL3 GROUP 9\LibraryManagement\LibraryManagement\DAL\obj\Debug\DAL.dll
+C:\Users\LAPTOP KIM ANH\Downloads\PBL3 GROUP 9\LibraryManagement\LibraryManagement\DAL\obj\Debug\DAL.pdb
